@@ -2037,14 +2037,20 @@ h1.category-title {
 }
 
 .quantity-value-display {
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 1rem;
+  border-left: 1px solid #d1d5db;
+  border-right: 1px solid #d1d5db;
+  background: #f9fafb;
   font-weight: 600;
+  min-width: 3rem;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: #111827;
   font-family: inherit;
-  line-height: 1;
-  min-width: 2rem;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .remove-btn {

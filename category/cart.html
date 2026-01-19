@@ -138,21 +138,7 @@
                       <!-- Количество -->
                       <div class="quantity-input">
                         <button @click="updateQuantity(item.id, item.quantity - 1)" class="quantity-btn" :disabled="item.quantity <= 1">−</button>
-                        <div class="quantity-display-wrapper" @dblclick="item.editing = true" x-show="!item.editing">
-                          <span class="quantity-value-display" x-text="item.quantity"></span>
-                        </div>
-                        <input 
-                          x-show="item.editing"
-                          type="number" 
-                          :value="item.quantity" 
-                          @input="updateQuantity(item.id, parseInt($event.target.value) || 1)"
-                          @blur="item.editing = false"
-                          @keydown.enter="item.editing = false"
-                          @keydown.escape="item.editing = false"
-                          class="quantity-value-input"
-                          min="1"
-                          max="999"
-                        >
+                        <span class="quantity-value-display" x-text="item.quantity"></span>
                         <button @click="updateQuantity(item.id, item.quantity + 1)" class="quantity-btn">+</button>
                       </div>
                       
@@ -217,10 +203,7 @@
             
             // Слушаем изменения корзины
             window.addEventListener('cartChanged', (event) => {
-              this.items = event.detail.items.map(item => ({
-                ...item,
-                editing: false
-              }));
+              this.items = event.detail.items;
               this.totalItems = event.detail.totalItems;
               this.totalPrice = event.detail.totalPrice;
             });
@@ -228,10 +211,7 @@
 
           loadCart() {
             if (window.cart) {
-              this.items = window.cart.getItems().map(item => ({
-                ...item,
-                editing: false
-              }));
+              this.items = window.cart.getItems();
               this.totalItems = window.cart.getTotalItems();
               this.totalPrice = window.cart.getTotalPrice();
             }
