@@ -139,6 +139,7 @@ document.addEventListener('alpine:init', () => {
         manufacturer_brand: [],
         inputs_count: []
       },
+      cartQuantity: 0, // Количество этого товара в корзине
       
       
       async init() {
@@ -170,6 +171,9 @@ document.addEventListener('alpine:init', () => {
         
         // Затем загружаем товар
         await this.loadProduct();
+        
+        // Инициализируем корзину
+        this.initCart();
       },
       
       async loadAvailableOptions() {
@@ -302,6 +306,7 @@ document.addEventListener('alpine:init', () => {
         if (this.loading || !this.isOptionAvailable('nominal_current', value)) return;
         this.nominalCurrent = value;
         await this.loadProduct();
+        this.updateCartQuantity(); // Обновляем количество в корзине
       },
       
       // Метод для обновления типа коммутации
@@ -326,6 +331,7 @@ document.addEventListener('alpine:init', () => {
           }
           
           await this.loadProduct();
+          this.updateCartQuantity(); // Обновляем количество в корзине
         } finally {
           this.loading = false;
         }
@@ -362,6 +368,7 @@ document.addEventListener('alpine:init', () => {
           }
           
           await this.loadProduct();
+          this.updateCartQuantity(); // Обновляем количество в корзине
         } finally {
           this.loading = false;
         }
@@ -385,6 +392,7 @@ document.addEventListener('alpine:init', () => {
           }
           
           await this.loadProduct();
+          this.updateCartQuantity(); // Обновляем количество в корзине
         } finally {
           this.loading = false;
         }
@@ -403,6 +411,18 @@ document.addEventListener('alpine:init', () => {
         }
         
         return price * this.quantity;
+      },
+
+      // Обновляем подключение кабеля
+      updateCableConnection(value) {
+        this.cableConnection = value;
+        this.updateCartQuantity();
+      },
+
+      // Обновляем климатическое исполнение
+      updateClimateVersion(value) {
+        this.climateVersion = value;
+        this.updateCartQuantity();
       },
       
       // Динамическое название товара
@@ -460,6 +480,62 @@ document.addEventListener('alpine:init', () => {
         }).catch(err => {
           console.error('Ошибка копирования:', err);
         });
+      },
+
+      // Инициализация корзины
+      initCart() {
+        this.updateCartQuantity();
+        
+        // Слушаем изменения корзины
+        window.addEventListener('cartChanged', () => {
+          this.updateCartQuantity();
+        });
+      },
+
+      // Обновляем количество текущего товара в корзине
+      updateCartQuantity() {
+        if (window.cart) {
+          const currentProduct = this.getCurrentProduct();
+          this.cartQuantity = window.cart.hasItem(currentProduct);
+        }
+      },
+
+      // Получаем текущий товар со всеми характеристиками
+      getCurrentProduct() {
+        return {
+          article: this.article,
+          manufacturerBrand: this.manufacturerBrand,
+          commutationType: this.commutationType,
+          nominalCurrent: this.nominalCurrent,
+          inputsCount: this.inputsCount,
+          cableConnection: this.cableConnection,
+          climateVersion: this.climateVersion,
+          basePrice: this.basePrice,
+          totalPrice: this.totalPrice,
+          images: this.images,
+          productSpecs: this.productSpecs,
+          productTitle: this.productTitle
+        };
+      },
+
+      // Добавляем товар в корзину
+      addToCart() {
+        if (window.cart) {
+          const currentProduct = this.getCurrentProduct();
+          window.cart.addItem(currentProduct, this.quantity);
+          
+          // Показываем уведомление
+          this.showCartNotification();
+          
+          // Сбрасываем количество
+          this.quantity = 1;
+        }
+      },
+
+      // Показываем уведомление о добавлении в корзину
+      showCartNotification() {
+        // Простое уведомление, можно заменить на более красивое
+        alert(`Товар добавлен в корзину!\nВ корзине: ${this.cartQuantity + this.quantity} шт.`);
       },
       
       // Получение описания в зависимости от типа коммутации
