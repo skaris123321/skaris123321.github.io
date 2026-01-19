@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>РОСЭК — Шкафы АВР, ВРУ, ГРЩ и ИБП</title>
+  <meta name="description" content="Производство и продажа шкафов автоматического ввода резерва, вводных устройств, главных распределительных щитов и систем бесперебойного питания">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <script>
+    if (typeof window.solveSimpleChallenge === 'undefined') {
+      window.solveSimpleChallenge = () => null;
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="bg-light text-dark">
+  <header class="header">
+    <div class="container flex-wrap justify-between items-center">
+      <a href="index.html" class="logo">РОСЭК</a>
+
+      <div class="header-controls">
+        <div class="search-wrapper">
+          <input type="search" placeholder="Поиск по товарам..." class="search-input">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+
+        <div class="relative" x-data="{ open: false }">
+          <button @click="open = !open" class="btn-catalog">
+            Каталог
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+
+          <div x-show="open" @click.away="open = false" class="dropdown-menu" x-transition>
+            <a href="category/avr.html" class="dropdown-item">АВР</a>
+            <a href="#" class="dropdown-item">ВРУ</a>
+            <a href="#" class="dropdown-item">ГРЩ</a>
+            <a href="#" class="dropdown-item">ИБП</a>
+            <a href="#" class="dropdown-item">Шкафы управления</a>
+            <a href="#" class="dropdown-item">Стабилизаторы напряжения</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <a href="tel:+780055118939" class="phone hidden sm:block">8 (800) 511-89-39</a>
+        <a href="mailto:zakaz@rosek.tech" class="email hidden md:block">zakaz@rosek.tech</a>
+        <button class="btn-login">Войти</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container py-12 md:py-16">
+    <h1 class="page-title">Каталог шкафов АВР</h1>
+
+    <div class="grid-catalog">
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

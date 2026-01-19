@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>АВР — РОСЭК</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <script>
+    if (typeof window.solveSimpleChallenge === 'undefined') {
+      window.solveSimpleChallenge = () => null;
+    }
+  </script>
+
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="bg-light text-dark">
+  <header class="header">
+    <div class="container flex-wrap justify-between items-center">
+      <a href="../index.html" class="logo">РОСЭК</a>
+
+      <div class="header-controls">
+        <div class="search-wrapper">
+          <input type="search" placeholder="Поиск по товарам..." class="search-input">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+
+        <div class="relative" x-data="{ open: false }">
+          <button @click="open = !open" class="btn-catalog">
+            Каталог
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+
+          <div x-show="open" @click.away="open = false" class="dropdown-menu" x-transition>
+            <a href="avr.html" class="dropdown-item">АВР</a>
+            <a href="#" class="dropdown-item">ВРУ</a>
+            <a href="#" class="dropdown-item">ГРЩ</a>
+            <a href="#" class="dropdown-item">ИБП</a>
+            <a href="#" class="dropdown-item">Шкафы управления</a>
+            <a href="#" class="dropdown-item">Стабилизаторы напряжения</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <a href="tel:+780055118939" class="phone hidden sm:block">8 (800) 511-89-39</a>
+        <a href="mailto:zakaz@rosek.tech" class="email hidden md:block">zakaz@rosek.tech</a>
+        <button class="btn-login">Войти</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <span>»</span>
+        <span>Каталог</span>
+        <span>»</span>
+        <span class="breadcrumbs-current">АВР</span>
+      </div>
+
+      <h1 class="category-title">
+        Автоматический ввод резерва (АВР)
+      </h1>
+    </div>
+  </section>
+
+  <div x-data="avrCatalog()" x-init="init()">
+  <section class="section">
+    <div class="container">
+      <div class="subcategories-grid">
+        <a href="#" class="subcategory-card" @click.prevent="filterByInputs('2')" :class="{ 'active': selectedInputs === '2' }">
+          <div class="subcategory-image-wrapper" :style="selectedInputs === '2' ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
+            <img src="../images/sub-2-vvoda.jpg" alt="Шкафы АВР на 2 ввода" class="subcategory-image">
+          </div>
+          <p class="subcategory-name" :style="selectedInputs === '2' ? 'color: #dc2626; font-weight: 600;' : ''">Шкафы АВР на 2 ввода</p>
+        </a>
+
+        <a href="#" class="subcategory-card" @click.prevent="filterByInputs('3')" :class="{ 'active': selectedInputs === '3' }">
+          <div class="subcategory-image-wrapper" :style="selectedInputs === '3' ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
+            <img src="../images/sub-3-vvoda.jpg" alt="Шкафы АВР на 3 ввода" class="subcategory-image">
+          </div>
+          <p class="subcategory-name" :style="selectedInputs === '3' ? 'color: #dc2626; font-weight: 600;' : ''">Шкафы АВР на 3 ввода</p>
+        </a>
+
+        <a href="#" class="subcategory-card">
+          <div class="subcategory-image-wrapper">
+            <img src="../images/sub-sekcionnyj.jpg" alt="АВР с секционным выключателем" class="subcategory-image">
+          </div>
+          <p class="subcategory-name">АВР с секционным выключателем</p>
+        </a>
+
+        <a href="#" class="subcategory-card">
+          <div class="subcategory-image-wrapper">
+            <img src="../images/sub-kontaktor-2.jpg" alt="АВР на 2 ввода на контакторах" class="subcategory-image">
+          </div>
+          <p class="subcategory-name">АВР на 2 ввода на контакторах</p>
+        </a>
+
+        <a href="#" class="subcategory-card">
+          <div class="subcategory-image-wrapper">
+            <img src="../images/sub-odnofaznyj.jpg" alt="Однофазные АВР на контакторах" class="subcategory-image">
+          </div>
+          <p class="subcategory-name">Однофазные АВР на контакторах</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sort-section">
+    <div class="container sort-controls">
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <!-- Кнопки фильтрации по брендам -->
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <template x-for="brand in uniqueBrands" :key="brand">
+            <button 
+              @click="filterByBrand(brand)"
+              :class="{ active: selectedBrand === brand }"
+              class="brand-filter-btn"
+              x-text="brand"
+            ></button>
+          </template>
+        </div>
+        <!-- Сортировка по цене -->
+        <div style="display: flex; gap: 0.5rem; margin-left: auto;">
+          <button 
+            @click="sortBy = 'price_asc'; applyFilters()"
+            :class="{ active: sortBy === 'price_asc' }"
+            class="sort-btn"
+          >
+            По цене ↑
+          </button>
+          <button 
+            @click="sortBy = 'price_desc'; applyFilters()"
+            :class="{ active: sortBy === 'price_desc' }"
+            class="sort-btn"
+          >
+            По цене ↓
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container" style="padding: 3rem 0;">
+    <div x-show="loading" style="text-align: center; padding: 3rem;">
+      <p style="color: #6b7280;">Загрузка товаров...</p>
+    </div>
+    
+    <div x-show="!loading && filteredProducts.length === 0" style="text-align: center; padding: 3rem;">
+      <p style="color: #6b7280;">Товары не найдены</p>
+    </div>
+
+    <div class="products-grid" x-show="!loading && filteredProducts.length > 0">
+      <template x-for="product in filteredProducts" :key="product.id">
+        <a :href="getProductUrl(product)" class="product-card" style="text-decoration: none; color: inherit;">
+          <div class="product-image-wrapper">
+            <img :src="'../' + (product.main_image || product.images?.[0] || 'images/avr-100.jpg')" :alt="product.description" class="product-image">
+          </div>
+          <div class="product-info">
+            <h2 class="product-title" x-text="product.article"></h2>
+            <p class="product-description" x-text="product.description"></p>
+            <p class="product-price" x-text="formatPrice(product.base_price)"></p>
+            <p class="product-delivery">Под заказ от 12 дней</p>
+          </div>
+        </a>
+      </template>
+    </div>
+  </main>
+  </div>
+
+  <script src="../js/products-api.js"></script>
+  <script src="../js/avr-page.js"></script>
+
+</body>
+</html>
