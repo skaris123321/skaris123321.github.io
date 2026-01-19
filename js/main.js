@@ -543,46 +543,77 @@ document.addEventListener('alpine:init', () => {
         } else {
           message = `Количество обновлено!<br><small>В корзине: ${newQuantity} шт.</small>`;
         }
-        this.showToast(message, 'success');
+        this.showModal({
+          type: 'success',
+          title: 'Успешно!',
+          message: message,
+          showCancel: false,
+          confirmText: 'ОК'
+        });
       },
 
-      // Красивое уведомление (toast)
-      showToast(message, type = 'info') {
-        // Удаляем предыдущие уведомления
-        const existingToasts = document.querySelectorAll('.toast-notification');
-        existingToasts.forEach(toast => toast.remove());
+      // Универсальная система модальных окон
+      showModal(options) {
+        const {
+          type = 'info',
+          title = 'Подтверждение',
+          message = '',
+          showCancel = true,
+          confirmText = 'Подтвердить',
+          cancelText = 'Отмена',
+          onConfirm = null,
+          onCancel = null
+        } = options;
 
-        // Создаем элемент уведомления
-        const toast = document.createElement('div');
-        toast.className = `toast-notification toast-${type}`;
-        toast.innerHTML = `
-          <div class="toast-content">
-            <div class="toast-icon">
-              ${type === 'success' ? 
-                '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>' :
-                '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>'
-              }
+        // Удаляем предыдущие модальные окна
+        const existingModals = document.querySelectorAll('.universal-modal');
+        existingModals.forEach(modal => modal.remove());
+
+        // Создаем модальное окно
+        const modal = document.createElement('div');
+        modal.className = 'universal-modal modal-overlay show';
+        
+        const iconSvg = type === 'success' ? 
+          '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>' :
+          type === 'warning' ?
+          '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>' :
+          '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
+
+        modal.innerHTML = `
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-icon modal-icon-${type}">
+                ${iconSvg}
+              </div>
+              <h3 class="modal-title">${title}</h3>
             </div>
-            <div class="toast-message">${message}</div>
-            <button class="toast-close" onclick="this.parentElement.parentElement.remove()">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-            </button>
+            <div class="modal-message">${message}</div>
+            <div class="modal-actions">
+              ${showCancel ? `<button class="modal-btn modal-btn-cancel" onclick="this.closest('.universal-modal').remove(); ${onCancel ? onCancel : ''}">${cancelText}</button>` : ''}
+              <button class="modal-btn modal-btn-confirm" onclick="this.closest('.universal-modal').remove(); ${onConfirm ? onConfirm : ''}">${confirmText}</button>
+            </div>
           </div>
         `;
 
+        // Закрытие по клику вне окна
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.remove();
+            if (onCancel) onCancel();
+          }
+        });
+
         // Добавляем в body
-        document.body.appendChild(toast);
+        document.body.appendChild(modal);
 
-        // Показываем с анимацией
-        setTimeout(() => toast.classList.add('toast-show'), 100);
-
-        // Автоматически скрываем через 3 секунды
-        setTimeout(() => {
-          toast.classList.remove('toast-show');
-          setTimeout(() => toast.remove(), 300);
-        }, 3000);
+        // Автоматически закрываем уведомления (не подтверждения) через 3 секунды
+        if (!showCancel) {
+          setTimeout(() => {
+            if (modal.parentNode) {
+              modal.remove();
+            }
+          }, 3000);
+        }
       },
       
       // Получение описания в зависимости от типа коммутации

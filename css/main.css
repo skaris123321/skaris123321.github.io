@@ -2328,13 +2328,26 @@ h1.category-title {
 .modal-icon {
   width: 3rem;
   height: 3rem;
-  background: #fef2f2;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #dc2626;
   flex-shrink: 0;
+}
+
+.modal-icon-success {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.modal-icon-warning {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.modal-icon-info {
+  background: #eff6ff;
+  color: #2563eb;
 }
 
 .modal-title {

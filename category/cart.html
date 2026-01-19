@@ -182,7 +182,7 @@
           </div>
           
           <div class="cart-actions">
-            <button @click="showClearConfirm = true" class="btn-clear-cart">
+            <button @click="confirmClearCart()" class="btn-clear-cart">
               Очистить корзину
             </button>
             <button class="btn-checkout">
@@ -192,68 +192,19 @@
         </div>
       </div>
     </main>
-
-    <!-- Модальное окно подтверждения очистки корзины -->
-    <div class="modal-overlay" :class="{ show: showClearConfirm }" @click.self="showClearConfirm = false">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-icon">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-            </svg>
-          </div>
-          <h3 class="modal-title">Очистить корзину?</h3>
-        </div>
-        <p class="modal-message">
-          Вы уверены, что хотите удалить все товары из корзины? Это действие нельзя отменить.
-        </p>
-        <div class="modal-actions">
-          <button @click="showClearConfirm = false" class="modal-btn modal-btn-cancel">
-            Отмена
-          </button>
-          <button @click="confirmClearCart()" class="modal-btn modal-btn-confirm">
-            Очистить корзину
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Модальное окно подтверждения удаления товара -->
-    <div class="modal-overlay" :class="{ show: itemToRemove !== null }" @click.self="itemToRemove = null">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="modal-icon">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
-            </svg>
-          </div>
-          <h3 class="modal-title">Удалить товар?</h3>
-        </div>
-        <p class="modal-message">
-          Вы уверены, что хотите удалить "<span x-text="itemToRemove?.productTitle"></span>" из корзины?
-        </p>
-        <div class="modal-actions">
-          <button @click="itemToRemove = null" class="modal-btn modal-btn-cancel">
-            Отмена
-          </button>
-          <button @click="executeRemoveItem()" class="modal-btn modal-btn-confirm">
-            Удалить
-          </button>
-        </div>
-      </div>
-    </div>
   </div>
 
   <script src="../js/cart.js"></script>
   <script>
+    // Глобальная ссылка на данные корзины для использования в модальных окнах
+    window.cartData = null;
+    
     document.addEventListener('alpine:init', () => {
       Alpine.data('cartData', () => {
-        return {
+        const data = {
           items: [],
           totalItems: 0,
           totalPrice: 0,
-          showClearConfirm: false,
-          itemToRemove: null,
 
           init() {
             this.loadCart();
@@ -289,14 +240,13 @@
           },
 
           confirmRemoveItem(item) {
-            this.itemToRemove = item;
-          },
-
-          executeRemoveItem() {
-            if (this.itemToRemove && window.cart) {
-              window.cart.removeItem(this.itemToRemove.id);
-              this.itemToRemove = null;
-            }
+            this.showModal({
+              type: 'warning',
+              title: 'Удалить товар?',
+              message: `Вы уверены, что хотите удалить "${item.productTitle}" из корзины?`,
+              confirmText: 'Удалить',
+              onConfirm: `window.cartData.removeItem('${item.id}')`
+            });
           },
 
           clearCart() {
@@ -306,14 +256,87 @@
           },
 
           confirmClearCart() {
-            this.clearCart();
-            this.showClearConfirm = false;
+            this.showModal({
+              type: 'warning',
+              title: 'Очистить корзину?',
+              message: 'Вы уверены, что хотите удалить все товары из корзины? Это действие нельзя отменить.',
+              confirmText: 'Очистить корзину',
+              onConfirm: 'window.cartData.clearCart()'
+            });
+          },
+
+          // Универсальная система модальных окон (копия из main.js)
+          showModal(options) {
+            const {
+              type = 'info',
+              title = 'Подтверждение',
+              message = '',
+              showCancel = true,
+              confirmText = 'Подтвердить',
+              cancelText = 'Отмена',
+              onConfirm = null,
+              onCancel = null
+            } = options;
+
+            // Удаляем предыдущие модальные окна
+            const existingModals = document.querySelectorAll('.universal-modal');
+            existingModals.forEach(modal => modal.remove());
+
+            // Создаем модальное окно
+            const modal = document.createElement('div');
+            modal.className = 'universal-modal modal-overlay show';
+            
+            const iconSvg = type === 'success' ? 
+              '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>' :
+              type === 'warning' ?
+              '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>' :
+              '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
+
+            modal.innerHTML = `
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="modal-icon modal-icon-${type}">
+                    ${iconSvg}
+                  </div>
+                  <h3 class="modal-title">${title}</h3>
+                </div>
+                <div class="modal-message">${message}</div>
+                <div class="modal-actions">
+                  ${showCancel ? `<button class="modal-btn modal-btn-cancel" onclick="this.closest('.universal-modal').remove(); ${onCancel ? onCancel : ''}">${cancelText}</button>` : ''}
+                  <button class="modal-btn modal-btn-confirm" onclick="this.closest('.universal-modal').remove(); ${onConfirm ? onConfirm : ''}">${confirmText}</button>
+                </div>
+              </div>
+            `;
+
+            // Закрытие по клику вне окна
+            modal.addEventListener('click', (e) => {
+              if (e.target === modal) {
+                modal.remove();
+                if (onCancel) onCancel();
+              }
+            });
+
+            // Добавляем в body
+            document.body.appendChild(modal);
+
+            // Автоматически закрываем уведомления (не подтверждения) через 3 секунды
+            if (!showCancel) {
+              setTimeout(() => {
+                if (modal.parentNode) {
+                  modal.remove();
+                }
+              }, 3000);
+            }
           },
 
           formatPrice(price) {
             return new Intl.NumberFormat('ru-RU').format(price) + ' ₽';
           }
         };
+        
+        // Сохраняем глобальную ссылку для использования в модальных окнах
+        window.cartData = data;
+        return data;
       });
     });
   </script>
