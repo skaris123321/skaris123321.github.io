@@ -589,17 +589,41 @@ document.addEventListener('alpine:init', () => {
             </div>
             <div class="modal-message">${message}</div>
             <div class="modal-actions">
-              ${showCancel ? `<button class="modal-btn modal-btn-cancel" onclick="this.closest('.universal-modal').remove(); ${onCancel ? onCancel : ''}">${cancelText}</button>` : ''}
-              <button class="modal-btn modal-btn-confirm" onclick="this.closest('.universal-modal').remove(); ${onConfirm ? onConfirm : ''}">${confirmText}</button>
+              ${showCancel ? `<button class="modal-btn modal-btn-cancel">${cancelText}</button>` : ''}
+              <button class="modal-btn modal-btn-confirm">${confirmText}</button>
             </div>
           </div>
         `;
+
+        // Добавляем обработчики событий
+        const cancelBtn = modal.querySelector('.modal-btn-cancel');
+        const confirmBtn = modal.querySelector('.modal-btn-confirm');
+
+        if (cancelBtn) {
+          cancelBtn.addEventListener('click', () => {
+            modal.remove();
+            if (onCancel && typeof onCancel === 'function') {
+              onCancel();
+            }
+          });
+        }
+
+        if (confirmBtn) {
+          confirmBtn.addEventListener('click', () => {
+            modal.remove();
+            if (onConfirm && typeof onConfirm === 'function') {
+              onConfirm();
+            }
+          });
+        }
 
         // Закрытие по клику вне окна
         modal.addEventListener('click', (e) => {
           if (e.target === modal) {
             modal.remove();
-            if (onCancel) onCancel();
+            if (onCancel && typeof onCancel === 'function') {
+              onCancel();
+            }
           }
         });
 
