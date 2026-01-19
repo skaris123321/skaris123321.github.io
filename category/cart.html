@@ -137,15 +137,14 @@
                     <div class="cart-quantity-controls">
                       <!-- Количество -->
                       <div class="quantity-selector">
-                        <button @click="updateQuantity(item.id, item.quantity - 1)" class="qty-btn qty-minus" :disabled="item.quantity <= 1">−</button>
+                        <button @click="changeQuantity(item, -1)" class="qty-btn qty-minus" :disabled="item.quantity <= 1">−</button>
                         <input type="number" 
-                               :value="item.quantity" 
-                               @input="updateQuantity(item.id, parseInt($event.target.value) || 1)"
-                               @blur="$event.target.value = item.quantity"
+                               x-model.number="item.quantity"
+                               @change="saveQuantityChange(item)"
                                class="qty-display" 
                                min="1" 
                                max="999">
-                        <button @click="updateQuantity(item.id, item.quantity + 1)" class="qty-btn qty-plus">+</button>
+                        <button @click="changeQuantity(item, 1)" class="qty-btn qty-plus">+</button>
                       </div>
                       
                       <!-- Кнопка удаления -->
@@ -228,7 +227,30 @@
               // Убеждаемся что количество корректное
               const validQuantity = Math.max(1, Math.min(999, parseInt(quantity) || 1));
               window.cart.updateQuantity(itemId, validQuantity);
+              
+              // Принудительно обновляем локальные данные
+              this.loadCart();
             }
+          },
+
+          changeQuantity(item, delta) {
+            const newQuantity = Math.max(1, item.quantity + delta);
+            item.quantity = newQuantity;
+            this.saveQuantityChange(item);
+          },
+
+          saveQuantityChange(item) {
+            if (window.cart) {
+              const validQuantity = Math.max(1, Math.min(999, parseInt(item.quantity) || 1));
+              item.quantity = validQuantity;
+              window.cart.updateQuantity(item.id, validQuantity);
+              this.updateTotals();
+            }
+          },
+
+          updateTotals() {
+            this.totalItems = this.items.reduce((total, item) => total + item.quantity, 0);
+            this.totalPrice = this.items.reduce((total, item) => total + (item.totalPrice * item.quantity), 0);
           },
 
           removeItem(itemId) {
