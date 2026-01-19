@@ -151,7 +151,7 @@
                       </div>
                       
                       <!-- Кнопка удаления -->
-                      <button @click="removeItem(item.id)" class="remove-btn">
+                      <button @click="confirmRemoveItem(item)" class="remove-btn">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
                         </svg>
@@ -182,7 +182,7 @@
           </div>
           
           <div class="cart-actions">
-            <button @click="clearCart()" class="btn-clear-cart">
+            <button @click="showClearConfirm = true" class="btn-clear-cart">
               Очистить корзину
             </button>
             <button class="btn-checkout">
@@ -192,6 +192,56 @@
         </div>
       </div>
     </main>
+
+    <!-- Модальное окно подтверждения очистки корзины -->
+    <div class="modal-overlay" :class="{ show: showClearConfirm }" @click.self="showClearConfirm = false">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-icon">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+          </div>
+          <h3 class="modal-title">Очистить корзину?</h3>
+        </div>
+        <p class="modal-message">
+          Вы уверены, что хотите удалить все товары из корзины? Это действие нельзя отменить.
+        </p>
+        <div class="modal-actions">
+          <button @click="showClearConfirm = false" class="modal-btn modal-btn-cancel">
+            Отмена
+          </button>
+          <button @click="confirmClearCart()" class="modal-btn modal-btn-confirm">
+            Очистить корзину
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно подтверждения удаления товара -->
+    <div class="modal-overlay" :class="{ show: itemToRemove !== null }" @click.self="itemToRemove = null">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-icon">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+          </div>
+          <h3 class="modal-title">Удалить товар?</h3>
+        </div>
+        <p class="modal-message">
+          Вы уверены, что хотите удалить "<span x-text="itemToRemove?.productTitle"></span>" из корзины?
+        </p>
+        <div class="modal-actions">
+          <button @click="itemToRemove = null" class="modal-btn modal-btn-cancel">
+            Отмена
+          </button>
+          <button @click="executeRemoveItem()" class="modal-btn modal-btn-confirm">
+            Удалить
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="../js/cart.js"></script>
@@ -202,6 +252,8 @@
           items: [],
           totalItems: 0,
           totalPrice: 0,
+          showClearConfirm: false,
+          itemToRemove: null,
 
           init() {
             this.loadCart();
@@ -231,15 +283,31 @@
           },
 
           removeItem(itemId) {
-            if (window.cart && confirm('Удалить товар из корзины?')) {
+            if (window.cart) {
               window.cart.removeItem(itemId);
             }
           },
 
+          confirmRemoveItem(item) {
+            this.itemToRemove = item;
+          },
+
+          executeRemoveItem() {
+            if (this.itemToRemove && window.cart) {
+              window.cart.removeItem(this.itemToRemove.id);
+              this.itemToRemove = null;
+            }
+          },
+
           clearCart() {
-            if (window.cart && confirm('Очистить корзину?')) {
+            if (window.cart) {
               window.cart.clear();
             }
+          },
+
+          confirmClearCart() {
+            this.clearCart();
+            this.showClearConfirm = false;
           },
 
           formatPrice(price) {

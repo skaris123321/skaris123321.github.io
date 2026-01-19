@@ -1993,23 +1993,26 @@ h1.category-title {
 }
 
 .quantity-value-input {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   border: none;
   border-left: 1px solid #d1d5db;
   border-right: 1px solid #d1d5db;
-  background: #f9fafb;
+  background: white;
   font-weight: 500;
-  min-width: 3rem;
+  min-width: 3.5rem;
   max-width: 4rem;
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 1rem;
+  color: #111827;
   outline: none;
+  font-family: inherit;
 }
 
 .quantity-value-input:focus {
   background: white;
   border-left-color: var(--red-main);
   border-right-color: var(--red-main);
+  box-shadow: 0 0 0 1px var(--red-main);
 }
 
 .remove-btn {
@@ -2277,4 +2280,130 @@ h1.category-title {
 .btn-add-to-cart:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+/* Стили для модального окна подтверждения */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.show .modal-content {
+  transform: scale(1);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-icon {
+  width: 3rem;
+  height: 3rem;
+  background: #fef2f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dc2626;
+  flex-shrink: 0;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.modal-message {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.modal-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-size: 0.875rem;
+}
+
+.modal-btn-cancel {
+  background: #f9fafb;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.modal-btn-cancel:hover {
+  background: #f3f4f6;
+}
+
+.modal-btn-confirm {
+  background: var(--red-main);
+  color: white;
+}
+
+.modal-btn-confirm:hover {
+  background: var(--red-dark);
+}
+
+/* Анимация для модального окна */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
 }
