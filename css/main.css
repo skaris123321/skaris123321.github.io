@@ -1965,12 +1965,12 @@ h1.category-title {
 .quantity-btn {
   background: #f3f4f6;
   border: none;
-  padding: 1rem 1.25rem;
+  padding: 0.75rem 1rem;
   color: #374151;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 600;
   line-height: 1;
   min-width: 48px;
   min-height: 48px;
@@ -2040,21 +2040,22 @@ h1.category-title {
 }
 
 .quantity-value-display {
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1rem;
   background: white;
-  font-weight: 700;
-  min-width: 4rem;
+  font-weight: 600;
+  min-width: 3rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   color: #111827;
   font-family: 'Inter', system-ui, sans-serif;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-left: 2px solid #e5e7eb;
-  border-right: 2px solid #e5e7eb;
-  min-height: 44px;
+  border-left: 1px solid #d1d5db;
+  border-right: 1px solid #d1d5db;
+  min-height: 48px;
+  user-select: none;
 }
 
 .remove-btn {

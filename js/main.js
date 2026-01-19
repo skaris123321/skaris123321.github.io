@@ -125,7 +125,6 @@ document.addEventListener('alpine:init', () => {
       inputsCount: '2', // "2" или "3"
       cableConnection: 'poles', // 'poles' или 'terminals'
       climateVersion: 'UXL4', // 'UXL4' или 'U2'
-      quantity: 1,
       basePrice: 87900,
       article: 'АВР-100-CHINT-2',
       loading: false,
@@ -140,7 +139,6 @@ document.addEventListener('alpine:init', () => {
         inputs_count: []
       },
       cartQuantity: 0, // Количество этого товара в корзине
-      editingQuantity: false, // Режим редактирования количества
       
       
       async init() {
@@ -306,7 +304,6 @@ document.addEventListener('alpine:init', () => {
       async updateNominalCurrent(value) {
         if (this.loading || !this.isOptionAvailable('nominal_current', value)) return;
         this.nominalCurrent = value;
-        this.editingQuantity = false; // Сбрасываем режим редактирования
         await this.loadProduct();
         this.updateCartQuantity(); // Обновляем количество в корзине
       },
@@ -316,7 +313,6 @@ document.addEventListener('alpine:init', () => {
         if (this.loading || !this.isOptionAvailable('commutation_type', value)) return;
         this.loading = true;
         this.commutationType = value;
-        this.editingQuantity = false; // Сбрасываем режим редактирования
         
         try {
           // Перезагружаем доступные опции с учетом нового типа коммутации
@@ -419,14 +415,12 @@ document.addEventListener('alpine:init', () => {
       // Обновляем подключение кабеля
       updateCableConnection(value) {
         this.cableConnection = value;
-        this.editingQuantity = false; // Сбрасываем режим редактирования
         this.updateCartQuantity();
       },
 
       // Обновляем климатическое исполнение
       updateClimateVersion(value) {
         this.climateVersion = value;
-        this.editingQuantity = false; // Сбрасываем режим редактирования
         this.updateCartQuantity();
       },
       
@@ -467,16 +461,6 @@ document.addEventListener('alpine:init', () => {
         if (this.thumbnailScroll < this.maxScroll) {
           this.thumbnailScroll++;
         }
-      },
-      
-      decreaseQuantity() {
-        if (this.quantity > 1) {
-          this.quantity--;
-        }
-      },
-      
-      increaseQuantity() {
-        this.quantity++;
       },
       
       copyArticle() {
@@ -529,14 +513,11 @@ document.addEventListener('alpine:init', () => {
           const currentProduct = this.getCurrentProduct();
           const oldQuantity = window.cart.hasItem(currentProduct);
           
-          window.cart.addItem(currentProduct, this.quantity);
+          window.cart.addItem(currentProduct, 1);
           
           // Показываем уведомление с правильным количеством
           const newQuantity = window.cart.hasItem(currentProduct);
           this.showCartNotification(newQuantity, oldQuantity);
-          
-          // Сбрасываем количество
-          this.quantity = 1;
         }
       },
 
