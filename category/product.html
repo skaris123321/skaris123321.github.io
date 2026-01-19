@@ -454,38 +454,46 @@
             <div class="description-article" x-text="'Артикул: ' + (article || '')"></div>
           </div>
 
-          <div class="purpose-compact">
-            <h3 class="description-subtitle">Общее назначение</h3>
-            <p class="purpose-text" x-text="getCommutationDescription().purpose">
-            </p>
-            <ul class="purpose-compact-list">
-              <template x-for="item in getCommutationDescription().purposeList" :key="item">
-                <li x-text="item"></li>
+          <!-- Показываем сообщение если описание не добавлено -->
+          <div x-show="getCommutationDescription().isEmpty" style="color: #6b7280; line-height: 1.7; padding: 2rem 0; text-align: center;">
+            <p x-text="getCommutationDescription().message"></p>
+          </div>
+
+          <!-- Показываем полное описание если оно есть -->
+          <div x-show="!getCommutationDescription().isEmpty">
+            <div class="purpose-compact">
+              <h3 class="description-subtitle">Общее назначение</h3>
+              <p class="purpose-text" x-text="getCommutationDescription().purpose">
+              </p>
+              <ul class="purpose-compact-list">
+                <template x-for="item in getCommutationDescription().purposeList" :key="item">
+                  <li x-text="item"></li>
+                </template>
+              </ul>
+            </div>
+
+            <h3 class="description-subtitle">
+              Принцип работы
+            </h3>
+            
+            <div class="workflow-text">
+              <template x-for="workflowItem in getCommutationDescription().workflow" :key="workflowItem.title">
+                <div class="workflow-item">
+                  <h4 class="workflow-item-title" x-text="workflowItem.title"></h4>
+                  <p class="workflow-item-text" x-html="workflowItem.text"></p>
+                </div>
               </template>
-            </ul>
-          </div>
+            </div>
 
-          <h3 class="description-subtitle">
-            Принцип работы
-          </h3>
-          
-          <div class="workflow-text">
-            <template x-for="workflowItem in getCommutationDescription().workflow" :key="workflowItem.title">
-              <div class="workflow-item">
-                <h4 class="workflow-item-title" x-text="workflowItem.title"></h4>
-                <p class="workflow-item-text" x-html="workflowItem.text"></p>
-              </div>
-            </template>
-          </div>
-
-          <h3 class="description-subtitle">Особенности и преимущества</h3>
-          <div class="features-list-compact">
-            <template x-for="feature in getCommutationDescription().features" :key="feature.name">
-              <div class="feature-item-compact">
-                <strong class="feature-name" x-text="feature.name"></strong>
-                <span class="feature-desc" x-text="feature.desc"></span>
-              </div>
-            </template>
+            <h3 class="description-subtitle">Особенности и преимущества</h3>
+            <div class="features-list-compact">
+              <template x-for="feature in getCommutationDescription().features" :key="feature.name">
+                <div class="feature-item-compact">
+                  <strong class="feature-name" x-text="feature.name"></strong>
+                  <span class="feature-desc" x-text="feature.desc"></span>
+                </div>
+              </template>
+            </div>
           </div>
         </div>
       </div>
