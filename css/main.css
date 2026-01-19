@@ -2015,6 +2015,31 @@ h1.category-title {
   box-shadow: 0 0 0 1px var(--red-main);
 }
 
+.quantity-display-wrapper {
+  border-left: 1px solid #d1d5db;
+  border-right: 1px solid #d1d5db;
+  background: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.quantity-display-wrapper:hover {
+  background: #f9fafb;
+}
+
+.quantity-value-display {
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  min-width: 3.5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #111827;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .remove-btn {
   background: none;
   border: none;
