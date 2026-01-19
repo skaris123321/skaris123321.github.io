@@ -1950,112 +1950,69 @@ h1.category-title {
   align-items: center;
   gap: 1rem;
 }
-
-.quantity-input {
+.quantity-selector {
   display: flex;
   align-items: center;
-  border: 2px solid #d1d5db;
-  border-radius: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
   overflow: hidden;
   background: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  min-height: 48px;
 }
 
-.quantity-btn {
-  background: #f3f4f6;
+.qty-btn {
+  background: #f8f9fa;
   border: none;
-  padding: 0.75rem 1rem;
-  color: #374151;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1;
-  min-width: 48px;
-  min-height: 48px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
 }
 
-.quantity-btn:hover:not(:disabled) {
+.qty-btn:hover:not(:disabled) {
   background: #e5e7eb;
   color: #111827;
-  transform: scale(1.05);
 }
 
-.quantity-btn:disabled {
-  opacity: 0.4;
+.qty-btn:disabled {
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
-.quantity-value {
-  padding: 0.5rem 1rem;
-  border-left: 1px solid #d1d5db;
-  border-right: 1px solid #d1d5db;
-  background: #f9fafb;
-  font-weight: 500;
-  min-width: 3rem;
-  text-align: center;
-}
-
-.quantity-value-input {
-  padding: 0.5rem 0.75rem;
+.qty-display {
   border: none;
-  border-left: 1px solid #d1d5db;
-  border-right: 1px solid #d1d5db;
-  background: white;
-  font-weight: 500;
-  min-width: 3.5rem;
-  max-width: 4rem;
+  width: 60px;
+  height: 40px;
   text-align: center;
-  font-size: 1rem;
-  color: #111827;
-  outline: none;
-  font-family: inherit;
-}
-
-.quantity-value-input:focus {
-  background: white;
-  border-left-color: var(--red-main);
-  border-right-color: var(--red-main);
-  box-shadow: 0 0 0 1px var(--red-main);
-}
-
-.quantity-display-wrapper {
-  border-left: 1px solid #d1d5db;
-  border-right: 1px solid #d1d5db;
-  background: white;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  min-width: 3.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.quantity-display-wrapper:hover {
-  background: #f9fafb;
-}
-
-.quantity-value-display {
-  padding: 0.75rem 1rem;
-  background: white;
+  font-size: 16px;
   font-weight: 600;
-  min-width: 3rem;
-  text-align: center;
-  font-size: 1.125rem;
   color: #111827;
-  font-family: 'Inter', system-ui, sans-serif;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-left: 1px solid #d1d5db;
-  border-right: 1px solid #d1d5db;
-  min-height: 48px;
-  user-select: none;
+  background: white;
+  outline: none;
+  border-left: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+}
+
+.qty-display:focus {
+  background: #f8f9fa;
+}
+
+/* Убираем стрелки у input number */
+.qty-display::-webkit-outer-spin-button,
+.qty-display::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.qty-display[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .remove-btn {
