@@ -138,7 +138,15 @@
                       <!-- Количество -->
                       <div class="quantity-input">
                         <button @click="updateQuantity(item.id, item.quantity - 1)" class="quantity-btn" :disabled="item.quantity <= 1">−</button>
-                        <span class="quantity-value" x-text="item.quantity"></span>
+                        <input 
+                          type="number" 
+                          :value="item.quantity" 
+                          @input="updateQuantity(item.id, parseInt($event.target.value) || 1)"
+                          @blur="if (!$event.target.value || $event.target.value < 1) updateQuantity(item.id, 1)"
+                          class="quantity-value-input"
+                          min="1"
+                          max="999"
+                        >
                         <button @click="updateQuantity(item.id, item.quantity + 1)" class="quantity-btn">+</button>
                       </div>
                       
@@ -216,7 +224,9 @@
 
           updateQuantity(itemId, quantity) {
             if (window.cart) {
-              window.cart.updateQuantity(itemId, quantity);
+              // Убеждаемся что количество корректное
+              const validQuantity = Math.max(1, Math.min(999, parseInt(quantity) || 1));
+              window.cart.updateQuantity(itemId, validQuantity);
             }
           },
 

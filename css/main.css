@@ -1992,6 +1992,26 @@ h1.category-title {
   text-align: center;
 }
 
+.quantity-value-input {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-left: 1px solid #d1d5db;
+  border-right: 1px solid #d1d5db;
+  background: #f9fafb;
+  font-weight: 500;
+  min-width: 3rem;
+  max-width: 4rem;
+  text-align: center;
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.quantity-value-input:focus {
+  background: white;
+  border-left-color: var(--red-main);
+  border-right-color: var(--red-main);
+}
+
 .remove-btn {
   background: none;
   border: none;
