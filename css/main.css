@@ -1958,27 +1958,32 @@ h1.category-title {
   border-radius: 0.5rem;
   overflow: hidden;
   background: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .quantity-btn {
   background: white;
   border: none;
   padding: 0.5rem 0.75rem;
-  color: #6b7280;
+  color: #374151;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 600;
   line-height: 1;
+  min-width: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.quantity-btn:hover {
+.quantity-btn:hover:not(:disabled) {
   background: #f3f4f6;
   color: #111827;
 }
 
 .quantity-btn:disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
@@ -2021,6 +2026,10 @@ h1.category-title {
   background: white;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  min-width: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .quantity-display-wrapper:hover {
@@ -2029,15 +2038,13 @@ h1.category-title {
 
 .quantity-value-display {
   padding: 0.5rem 0.75rem;
-  font-weight: 500;
-  min-width: 3.5rem;
+  font-weight: 600;
   text-align: center;
   font-size: 1rem;
   color: #111827;
   font-family: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  line-height: 1;
+  min-width: 2rem;
 }
 
 .remove-btn {

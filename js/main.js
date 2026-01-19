@@ -401,7 +401,7 @@ document.addEventListener('alpine:init', () => {
         }
       },
       
-      // Итоговая цена = (базовая цена + дополнительные опции) * количество
+      // Итоговая цена = базовая цена + дополнительные опции (БЕЗ умножения на количество)
       get totalPrice() {
         let price = this.basePrice;
         
@@ -413,7 +413,7 @@ document.addEventListener('alpine:init', () => {
           price += 23000;
         }
         
-        return price * this.quantity;
+        return price; // Убрали умножение на quantity
       },
 
       // Обновляем подключение кабеля
@@ -516,7 +516,7 @@ document.addEventListener('alpine:init', () => {
           cableConnection: this.cableConnection,
           climateVersion: this.climateVersion,
           basePrice: this.basePrice,
-          totalPrice: this.totalPrice,
+          totalPrice: this.totalPrice, // Цена за единицу (без количества)
           images: this.images,
           productSpecs: this.productSpecs,
           productTitle: this.productTitle
