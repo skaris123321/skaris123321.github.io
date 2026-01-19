@@ -396,6 +396,30 @@
         </div>
       </div>
 
+      <!-- Выбор количества -->
+      <div class="product-quantity-section">
+        <label class="quantity-label">Количество:</label>
+        <div class="quantity-input">
+          <button @click="quantity = Math.max(1, quantity - 1)" class="quantity-btn" :disabled="quantity <= 1">−</button>
+          <div class="quantity-display-wrapper" @dblclick="editingQuantity = true" x-show="!editingQuantity">
+            <span class="quantity-value-display" x-text="quantity"></span>
+          </div>
+          <input 
+            x-show="editingQuantity"
+            type="number" 
+            x-model="quantity" 
+            @blur="editingQuantity = false; quantity = Math.max(1, Math.min(999, parseInt(quantity) || 1))"
+            @keydown.enter="editingQuantity = false; quantity = Math.max(1, Math.min(999, parseInt(quantity) || 1))"
+            @keydown.escape="editingQuantity = false"
+            class="quantity-value-input"
+            min="1"
+            max="999"
+            x-init="if (editingQuantity) { $nextTick(() => $el.focus()) }"
+          >
+          <button @click="quantity = Math.min(999, quantity + 1)" class="quantity-btn">+</button>
+        </div>
+      </div>
+
       <button class="btn-add-to-cart" @click="addToCart()">
         <span x-show="cartQuantity === 0">В корзину</span>
         <span x-show="cartQuantity > 0" x-text="'Добавить еще (' + cartQuantity + ' в корзине)'"></span>

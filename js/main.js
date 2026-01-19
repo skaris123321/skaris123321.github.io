@@ -140,6 +140,7 @@ document.addEventListener('alpine:init', () => {
         inputs_count: []
       },
       cartQuantity: 0, // Количество этого товара в корзине
+      editingQuantity: false, // Режим редактирования количества
       
       
       async init() {
@@ -305,6 +306,7 @@ document.addEventListener('alpine:init', () => {
       async updateNominalCurrent(value) {
         if (this.loading || !this.isOptionAvailable('nominal_current', value)) return;
         this.nominalCurrent = value;
+        this.editingQuantity = false; // Сбрасываем режим редактирования
         await this.loadProduct();
         this.updateCartQuantity(); // Обновляем количество в корзине
       },
@@ -314,6 +316,7 @@ document.addEventListener('alpine:init', () => {
         if (this.loading || !this.isOptionAvailable('commutation_type', value)) return;
         this.loading = true;
         this.commutationType = value;
+        this.editingQuantity = false; // Сбрасываем режим редактирования
         
         try {
           // Перезагружаем доступные опции с учетом нового типа коммутации
@@ -416,12 +419,14 @@ document.addEventListener('alpine:init', () => {
       // Обновляем подключение кабеля
       updateCableConnection(value) {
         this.cableConnection = value;
+        this.editingQuantity = false; // Сбрасываем режим редактирования
         this.updateCartQuantity();
       },
 
       // Обновляем климатическое исполнение
       updateClimateVersion(value) {
         this.climateVersion = value;
+        this.editingQuantity = false; // Сбрасываем режим редактирования
         this.updateCartQuantity();
       },
       
