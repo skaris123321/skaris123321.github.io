@@ -522,10 +522,13 @@ document.addEventListener('alpine:init', () => {
       addToCart() {
         if (window.cart) {
           const currentProduct = this.getCurrentProduct();
+          const oldQuantity = window.cart.hasItem(currentProduct);
+          
           window.cart.addItem(currentProduct, this.quantity);
           
-          // Показываем уведомление
-          this.showCartNotification();
+          // Показываем уведомление с правильным количеством
+          const newQuantity = window.cart.hasItem(currentProduct);
+          this.showCartNotification(newQuantity, oldQuantity);
           
           // Сбрасываем количество
           this.quantity = 1;
@@ -533,9 +536,53 @@ document.addEventListener('alpine:init', () => {
       },
 
       // Показываем уведомление о добавлении в корзину
-      showCartNotification() {
-        // Простое уведомление, можно заменить на более красивое
-        alert(`Товар добавлен в корзину!\nВ корзине: ${this.cartQuantity + this.quantity} шт.`);
+      showCartNotification(newQuantity, oldQuantity) {
+        let message;
+        if (oldQuantity === 0) {
+          message = `Товар добавлен в корзину!<br><small>В корзине: ${newQuantity} шт.</small>`;
+        } else {
+          message = `Количество обновлено!<br><small>В корзине: ${newQuantity} шт.</small>`;
+        }
+        this.showToast(message, 'success');
+      },
+
+      // Красивое уведомление (toast)
+      showToast(message, type = 'info') {
+        // Удаляем предыдущие уведомления
+        const existingToasts = document.querySelectorAll('.toast-notification');
+        existingToasts.forEach(toast => toast.remove());
+
+        // Создаем элемент уведомления
+        const toast = document.createElement('div');
+        toast.className = `toast-notification toast-${type}`;
+        toast.innerHTML = `
+          <div class="toast-content">
+            <div class="toast-icon">
+              ${type === 'success' ? 
+                '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>' :
+                '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>'
+              }
+            </div>
+            <div class="toast-message">${message}</div>
+            <button class="toast-close" onclick="this.parentElement.parentElement.remove()">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+        `;
+
+        // Добавляем в body
+        document.body.appendChild(toast);
+
+        // Показываем с анимацией
+        setTimeout(() => toast.classList.add('toast-show'), 100);
+
+        // Автоматически скрываем через 3 секунды
+        setTimeout(() => {
+          toast.classList.remove('toast-show');
+          setTimeout(() => toast.remove(), 300);
+        }, 3000);
       },
       
       // Получение описания в зависимости от типа коммутации
