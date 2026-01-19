@@ -52,14 +52,17 @@
       </div>
 
       <div class="contact-group">
-        <a href="cart.html" class="relative inline-flex items-center p-2 text-gray-600 hover:text-blue-600 mr-4" x-data="{ cartCount: 0 }" x-init="
+        <a href="cart.html" class="cart-link" x-data="{ cartCount: 0 }" x-init="
           cartCount = window.cart ? window.cart.getTotalItems() : 0;
           window.addEventListener('cartChanged', (e) => cartCount = e.detail.totalItems);
         ">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5-6m0 0h15M17 21a2 2 0 100-4 2 2 0 000 4zM9 21a2 2 0 100-4 2 2 0 000 4z"/>
-          </svg>
-          <span x-show="cartCount > 0" x-text="cartCount" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"></span>
+          <div class="cart-icon-wrapper">
+            <svg class="cart-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5-6m0 0h15M17 21a2 2 0 100-4 2 2 0 000 4zM9 21a2 2 0 100-4 2 2 0 000 4z"/>
+            </svg>
+            <span x-show="cartCount > 0" x-text="cartCount" class="cart-badge"></span>
+          </div>
+          <span class="cart-text">Корзина</span>
         </a>
         <a href="tel:+780055118939" class="phone hidden sm:block">8 (800) 511-89-39</a>
         <a href="mailto:zakaz@rosek.tech" class="email hidden md:block">zakaz@rosek.tech</a>
@@ -82,59 +85,76 @@
 
     <main class="container" style="min-height: 60vh;">
       <!-- Пустая корзина -->
-      <div x-show="items.length === 0" class="text-center py-16">
-        <svg class="w-24 h-24 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div x-show="items.length === 0" class="empty-cart">
+        <svg class="empty-cart-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5-6m0 0h15M17 21a2 2 0 100-4 2 2 0 000 4zM9 21a2 2 0 100-4 2 2 0 000 4z"/>
         </svg>
-        <h2 class="text-2xl font-semibold mb-2">Корзина пуста</h2>
-        <p class="text-gray-600 mb-6">Добавьте товары в корзину, чтобы оформить заказ</p>
-        <a href="avr.html" class="btn-add-to-cart inline-block">Перейти к каталогу</a>
+        <h2 class="empty-cart-title">Корзина пуста</h2>
+        <p class="empty-cart-text">Добавьте товары в корзину, чтобы оформить заказ</p>
+        <a href="avr.html" class="btn-add-to-cart">Перейти к каталогу</a>
       </div>
 
       <!-- Товары в корзине -->
       <div x-show="items.length > 0">
-        <div class="grid gap-6">
+        <div class="cart-items">
           <template x-for="item in items" :key="item.id">
-            <div class="bg-white rounded-lg border border-gray-200 p-6">
-              <div class="flex flex-col lg:flex-row gap-6">
+            <div class="cart-item">
+              <div class="cart-item-content">
                 <!-- Изображение товара -->
-                <div class="flex-shrink-0">
-                  <img :src="item.images?.[0] || '../images/avr-100.jpg'" :alt="item.productTitle" class="w-32 h-32 object-cover rounded-lg">
+                <div class="cart-item-image">
+                  <img :src="item.images?.[0] || '../images/avr-100.jpg'" :alt="item.productTitle">
                 </div>
 
                 <!-- Информация о товаре -->
-                <div class="flex-grow">
-                  <h3 class="text-xl font-semibold mb-2" x-text="item.productTitle"></h3>
-                  <p class="text-gray-600 mb-2" x-text="'Артикул: ' + item.article"></p>
+                <div class="cart-item-info">
+                  <h3 class="cart-item-title" x-text="item.productTitle"></h3>
+                  <p class="cart-item-article" x-text="'Артикул: ' + item.article"></p>
                   
-                  <div class="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
-                    <div>Производитель: <span x-text="item.manufacturerBrand"></span></div>
-                    <div>Тип коммутации: <span x-text="item.commutationType === 'monoblock' ? 'Моноблочный АВР' : 'Контакторы'"></span></div>
-                    <div>Количество вводов: <span x-text="item.inputsCount"></span></div>
-                    <div>Подключение: <span x-text="item.cableConnection === 'poles' ? 'К полюсам автомата' : 'На дополнительные клеммы'"></span></div>
+                  <div class="cart-item-specs">
+                    <div class="cart-item-spec">
+                      <span>Производитель:</span>
+                      <span class="cart-item-spec-value" x-text="item.manufacturerBrand"></span>
+                    </div>
+                    <div class="cart-item-spec">
+                      <span>Тип коммутации:</span>
+                      <span class="cart-item-spec-value" x-text="item.commutationType === 'monoblock' ? 'Моноблочный АВР' : 'Контакторы'"></span>
+                    </div>
+                    <div class="cart-item-spec">
+                      <span>Количество вводов:</span>
+                      <span class="cart-item-spec-value" x-text="item.inputsCount"></span>
+                    </div>
+                    <div class="cart-item-spec">
+                      <span>Подключение кабеля:</span>
+                      <span class="cart-item-spec-value" x-text="item.cableConnection === 'poles' ? 'К полюсам автомата' : 'На дополнительные клеммы'"></span>
+                    </div>
+                    <div class="cart-item-spec">
+                      <span>Климатическое исполнение:</span>
+                      <span class="cart-item-spec-value" x-text="item.climateVersion === 'UXL4' ? 'УХЛ4 - сухие теплые помещения' : 'У2 - уличное с обогревом'"></span>
+                    </div>
                   </div>
 
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-4">
+                  <div class="cart-item-actions">
+                    <div class="cart-quantity-controls">
                       <!-- Количество -->
-                      <div class="flex items-center border border-gray-300 rounded">
-                        <button @click="updateQuantity(item.id, item.quantity - 1)" class="px-3 py-1 hover:bg-gray-100">-</button>
-                        <span class="px-3 py-1 border-x border-gray-300" x-text="item.quantity"></span>
-                        <button @click="updateQuantity(item.id, item.quantity + 1)" class="px-3 py-1 hover:bg-gray-100">+</button>
+                      <div class="quantity-input">
+                        <button @click="updateQuantity(item.id, item.quantity - 1)" class="quantity-btn" :disabled="item.quantity <= 1">−</button>
+                        <span class="quantity-value" x-text="item.quantity"></span>
+                        <button @click="updateQuantity(item.id, item.quantity + 1)" class="quantity-btn">+</button>
                       </div>
                       
                       <!-- Кнопка удаления -->
-                      <button @click="removeItem(item.id)" class="text-red-600 hover:text-red-800">
+                      <button @click="removeItem(item.id)" class="remove-btn">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
                         </svg>
+                        Удалить
                       </button>
                     </div>
 
                     <!-- Цена -->
-                    <div class="text-right">
-                      <div class="text-lg font-semibold" x-text="formatPrice(item.totalPrice * item.quantity)"></div>
-                      <div class="text-sm text-gray-600" x-text="formatPrice(item.totalPrice) + ' за шт.'"></div>
+                    <div class="cart-item-price">
+                      <div class="cart-item-total" x-text="formatPrice(item.totalPrice * item.quantity)"></div>
+                      <div class="cart-item-unit-price" x-text="formatPrice(item.totalPrice) + ' за шт.'"></div>
                     </div>
                   </div>
                 </div>
@@ -144,20 +164,20 @@
         </div>
 
         <!-- Итого -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6 mt-6">
-          <div class="flex justify-between items-center text-xl font-semibold">
+        <div class="cart-summary">
+          <div class="cart-summary-row">
+            <span class="cart-summary-items" x-text="'Товаров: ' + totalItems + ' шт.'"></span>
+          </div>
+          <div class="cart-summary-row cart-summary-total">
             <span>Итого:</span>
             <span x-text="formatPrice(totalPrice)"></span>
           </div>
-          <div class="text-gray-600 mt-2">
-            <span x-text="'Товаров: ' + totalItems + ' шт.'"></span>
-          </div>
           
-          <div class="flex gap-4 mt-6">
-            <button @click="clearCart()" class="px-6 py-2 border border-gray-300 rounded hover:bg-gray-50">
+          <div class="cart-actions">
+            <button @click="clearCart()" class="btn-clear-cart">
               Очистить корзину
             </button>
-            <button class="btn-add-to-cart flex-grow">
+            <button class="btn-checkout">
               Оформить заказ
             </button>
           </div>
