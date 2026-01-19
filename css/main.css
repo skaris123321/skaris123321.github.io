@@ -1954,32 +1954,35 @@ h1.category-title {
 .quantity-input {
   display: flex;
   align-items: center;
-  border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
+  border: 2px solid #d1d5db;
+  border-radius: 0.75rem;
   overflow: hidden;
   background: white;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 48px;
 }
 
 .quantity-btn {
-  background: white;
+  background: #f3f4f6;
   border: none;
-  padding: 0.5rem 0.75rem;
+  padding: 1rem 1.25rem;
   color: #374151;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
   line-height: 1;
-  min-width: 2.5rem;
+  min-width: 48px;
+  min-height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .quantity-btn:hover:not(:disabled) {
-  background: #f3f4f6;
+  background: #e5e7eb;
   color: #111827;
+  transform: scale(1.05);
 }
 
 .quantity-btn:disabled {
@@ -2037,20 +2040,21 @@ h1.category-title {
 }
 
 .quantity-value-display {
-  padding: 0.5rem 1rem;
-  border-left: 1px solid #d1d5db;
-  border-right: 1px solid #d1d5db;
-  background: #f9fafb;
-  font-weight: 600;
-  min-width: 3rem;
+  padding: 1rem 1.5rem;
+  background: white;
+  font-weight: 700;
+  min-width: 4rem;
   text-align: center;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   color: #111827;
-  font-family: inherit;
-  line-height: 1.2;
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-left: 2px solid #e5e7eb;
+  border-right: 2px solid #e5e7eb;
+  min-height: 44px;
 }
 
 .remove-btn {
