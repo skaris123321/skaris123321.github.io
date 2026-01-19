@@ -456,14 +456,12 @@
 
           <div class="purpose-compact">
             <h3 class="description-subtitle">Общее назначение</h3>
-            <p class="purpose-text">
-              Шкаф АВР (автоматического ввода резерва) на базе моноблочного устройства предназначен для бесперебойного электроснабжения потребителей. Он обеспечивает:
+            <p class="purpose-text" x-text="getCommutationDescription().purpose">
             </p>
             <ul class="purpose-compact-list">
-              <li>автоматический переход на резервный источник питания при пропадании или недопустимых отклонениях напряжения на основном вводе;</li>
-              <li>возврат на основной ввод при восстановлении его параметров;</li>
-              <li>защиту электрооборудования от перегрузок и коротких замыканий;</li>
-              <li>визуальный контроль состояния вводов и режимов работы.</li>
+              <template x-for="item in getCommutationDescription().purposeList" :key="item">
+                <li x-text="item"></li>
+              </template>
             </ul>
           </div>
 
@@ -472,54 +470,22 @@
           </h3>
           
           <div class="workflow-text">
-            <div class="workflow-item">
-              <h4 class="workflow-item-title">Нормальный режим (основной ввод в норме)</h4>
-              <p class="workflow-item-text">
-                Питание нагрузки идёт через основной ввод; резервный ввод отключён; горит индикатор <strong>«Основной ввод»</strong>.
-              </p>
-            </div>
-
-            <div class="workflow-item">
-              <h4 class="workflow-item-title">Аварийный режим (пропадание или сбой на основном вводе)</h4>
-              <p class="workflow-item-text">
-                АВР фиксирует отклонение параметров (например, падение напряжения ниже уставки); через заданную выдержку времени отключает основной ввод; включает резервный ввод; загорается индикатор <strong>«Резервный ввод»</strong>.
-              </p>
-            </div>
-
-            <div class="workflow-item">
-              <h4 class="workflow-item-title">Возврат в нормальный режим (восстановление основного ввода)</h4>
-              <p class="workflow-item-text">
-                После стабилизации напряжения на основном вводе АВР с выдержкой времени переключает нагрузку обратно; отключает резервный ввод; восстанавливает индикацию <strong>«Основной ввод»</strong>.
-              </p>
-            </div>
+            <template x-for="workflowItem in getCommutationDescription().workflow" :key="workflowItem.title">
+              <div class="workflow-item">
+                <h4 class="workflow-item-title" x-text="workflowItem.title"></h4>
+                <p class="workflow-item-text" x-html="workflowItem.text"></p>
+              </div>
+            </template>
           </div>
 
           <h3 class="description-subtitle">Особенности и преимущества</h3>
           <div class="features-list-compact">
-            <div class="feature-item-compact">
-              <strong class="feature-name">Моноблочное исполнение</strong>
-              <span class="feature-desc">— Компактность, простота монтажа и обслуживания</span>
-            </div>
-            <div class="feature-item-compact">
-              <strong class="feature-name">Встроенная логика контроля</strong>
-              <span class="feature-desc">— Не требует внешних реле и контроллеров</span>
-            </div>
-            <div class="feature-item-compact">
-              <strong class="feature-name">Настраиваемые уставки</strong>
-              <span class="feature-desc">— Гибкость под конкретные требования сети</span>
-            </div>
-            <div class="feature-item-compact">
-              <strong class="feature-name">Механическая блокировка</strong>
-              <span class="feature-desc">— Исключает одновременное включение вводов</span>
-            </div>
-            <div class="feature-item-compact">
-              <strong class="feature-name">Индикация и диагностика</strong>
-              <span class="feature-desc">— Удобство эксплуатации и поиска неисправностей</span>
-            </div>
-            <div class="feature-item-compact">
-              <strong class="feature-name">Совместимость</strong>
-              <span class="feature-desc">— Работает с генераторами, ИБП и сетевыми вводами</span>
-            </div>
+            <template x-for="feature in getCommutationDescription().features" :key="feature.name">
+              <div class="feature-item-compact">
+                <strong class="feature-name" x-text="feature.name"></strong>
+                <span class="feature-desc" x-text="feature.desc"></span>
+              </div>
+            </template>
           </div>
         </div>
       </div>
