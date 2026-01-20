@@ -2588,8 +2588,8 @@
       "commutation_type": "contactors",
       "inputs_count": "3",
       "base_price": 300000,
-      "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
       "description": "Шкаф АВР 800А на базе IEK (контакторы), 3 ввода",
       "full_description": "Трёхфазный АВР 800А на 3 ввода, выполнен на базе контакторов IEK 800А.",
       "documentation": [],
@@ -2598,6 +2598,386 @@
         "Номинальный ток": "800А",
         "Номинальное рабочее напряжение": "380 В",
         "Степень защиты корпуса": "IP54"
+      }
+    },
+    {
+      "id": 123,
+      "article": "АВР-25-CHINT-2-K",
+      "nominal_current": 25,
+      "brand": "CHINT",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 45000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 25А на базе CHINT (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 25А на 2 ввода, выполнен на базе контакторов CHINT 25А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "600х500х250 мм",
+        "Номинальный ток": "25А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 124,
+      "article": "АВР-32-CHINT-2-K",
+      "nominal_current": 32,
+      "brand": "CHINT",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 48000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 32А на базе CHINT (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 32А на 2 ввода, выполнен на базе контакторов CHINT 32А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "600х500х250 мм",
+        "Номинальный ток": "32А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 125,
+      "article": "АВР-40-CHINT-2-K",
+      "nominal_current": 40,
+      "brand": "CHINT",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 52000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 40А на базе CHINT (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 40А на 2 ввода, выполнен на базе контакторов CHINT 40А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "600х500х250 мм",
+        "Номинальный ток": "40А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 126,
+      "article": "АВР-63-CHINT-2-K",
+      "nominal_current": 63,
+      "brand": "CHINT",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 62000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 63А на базе CHINT (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 63А на 2 ввода, выполнен на базе контакторов CHINT 63А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "700х550х250 мм",
+        "Номинальный ток": "63А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 127,
+      "article": "АВР-80-CHINT-2-K",
+      "nominal_current": 80,
+      "brand": "CHINT",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 72000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 80А на базе CHINT (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 80А на 2 ввода, выполнен на базе контакторов CHINT 80А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "700х550х250 мм",
+        "Номинальный ток": "80А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 128,
+      "article": "АВР-100-CHINT-2-K",
+      "nominal_current": 100,
+      "brand": "CHINT",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 87900,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 100А на базе CHINT (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 100А на 2 ввода, выполнен на базе контакторов CHINT 100А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "800х600х300 мм",
+        "Номинальный ток": "100А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 129,
+      "article": "АВР-125-CHINT-2-K",
+      "nominal_current": 125,
+      "brand": "CHINT",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 95000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 125А на базе CHINT (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе контакторов CHINT 125А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "800х600х300 мм",
+        "Номинальный ток": "125А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 130,
+      "article": "АВР-160-CHINT-2-K",
+      "nominal_current": 160,
+      "brand": "CHINT",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 105000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 160А на базе CHINT (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов CHINT 160А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "850х650х300 мм",
+        "Номинальный ток": "160А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 131,
+      "article": "АВР-200-CHINT-2-K",
+      "nominal_current": 200,
+      "brand": "CHINT",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 115000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 200А на базе CHINT (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов CHINT 200А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "850х650х300 мм",
+        "Номинальный ток": "200А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 132,
+      "article": "АВР-250-CHINT-2-K",
+      "nominal_current": 250,
+      "brand": "CHINT",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 130000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 250А на базе CHINT (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов CHINT 250А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "900х650х350 мм",
+        "Номинальный ток": "250А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 133,
+      "article": "АВР-400-CHINT-2-K",
+      "nominal_current": 400,
+      "brand": "CHINT",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 170000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 400А на базе CHINT (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов CHINT 400А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "950х700х350 мм",
+        "Номинальный ток": "400А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP54"
+      }
+    },
+    {
+      "id": 134,
+      "article": "АВР-630-CHINT-2-K",
+      "nominal_current": 630,
+      "brand": "CHINT",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 220000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 630А на базе CHINT (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов CHINT 630А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "1000х800х400 мм",
+        "Номинальный ток": "630А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP54"
+      }
+    },
+    {
+      "id": 135,
+      "article": "АВР-800-CHINT-2-K",
+      "nominal_current": 800,
+      "brand": "CHINT",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 280000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 800А на базе CHINT (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе контакторов CHINT 800А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "1100х850х450 мм",
+        "Номинальный ток": "800А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP54"
+      }
+    },
+    {
+      "id": 136,
+      "article": "АВР-25-EKF-2-K",
+      "nominal_current": 25,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 42000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 25А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 25А на 2 ввода, выполнен на базе контакторов EKF 25А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "600х500х250 мм",
+        "Номинальный ток": "25А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 137,
+      "article": "АВР-100-EKF-2-K",
+      "nominal_current": 100,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 82000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 100А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 100А на 2 ввода, выполнен на базе контакторов EKF 100А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "800х600х300 мм",
+        "Номинальный ток": "100А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 138,
+      "article": "АВР-25-Dekraft-2-K",
+      "nominal_current": 25,
+      "brand": "Dekraft",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 40000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 25А на базе Dekraft (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 25А на 2 ввода, выполнен на базе контакторов Dekraft 25А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "600х500х250 мм",
+        "Номинальный ток": "25А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 139,
+      "article": "АВР-100-Dekraft-2-K",
+      "nominal_current": 100,
+      "brand": "Dekraft",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 79000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 100А на базе Dekraft (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 100А на 2 ввода, выполнен на базе контакторов Dekraft 100А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "800х600х300 мм",
+        "Номинальный ток": "100А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 140,
+      "article": "АВР-25-TDM-2-K",
+      "nominal_current": 25,
+      "brand": "TDM",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 38000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 25А на базе TDM (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 25А на 2 ввода, выполнен на базе контакторов TDM 25А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "600х500х250 мм",
+        "Номинальный ток": "25А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 141,
+      "article": "АВР-100-TDM-2-K",
+      "nominal_current": 100,
+      "brand": "TDM",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 75000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 100А на базе TDM (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 100А на 2 ввода, выполнен на базе контакторов TDM 100А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "800х600х300 мм",
+        "Номинальный ток": "100А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
       }
     }
   ]
