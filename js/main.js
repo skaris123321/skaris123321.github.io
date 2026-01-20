@@ -168,17 +168,13 @@ document.addEventListener('alpine:init', () => {
           }
         }
         
-        // Затем загружаем товар
         await this.loadProduct();
         
-        // Устанавливаем правильное подключение кабеля после загрузки товара
         const current = parseInt(this.nominalCurrent);
         if (current >= 100 && current <= 800) {
-          // Для токов 100-800А принудительно ставим "terminals"
           this.cableConnection = 'terminals';
         }
         
-        // Инициализируем корзину
         this.initCart();
       },
       
@@ -283,19 +279,15 @@ document.addEventListener('alpine:init', () => {
               return doc.startsWith('docs/') ? '../' + doc : doc;
             });
             
-            // Обновляем текущие значения из загруженного товара
             this.nominalCurrent = String(product.nominal_current);
             this.commutationType = product.commutation_type;
             this.manufacturerBrand = product.manufacturer_brand;
             this.inputsCount = product.inputs_count;
             
-            // Автоматически переключаем подключение кабеля в зависимости от тока
             const current = parseInt(product.nominal_current);
             if (current >= 100 && current <= 800) {
-              // Для токов 100-800А принудительно ставим "terminals"
               this.cableConnection = 'terminals';
             }
-            // Для токов 25-80А оставляем текущий выбор пользователя
             
             // Сбрасываем индекс изображения
             this.currentIndex = 0;
@@ -320,16 +312,13 @@ document.addEventListener('alpine:init', () => {
         if (this.loading || !this.isOptionAvailable('nominal_current', value)) return;
         this.nominalCurrent = value;
         
-        // Автоматически переключаем подключение кабеля в зависимости от тока
         const current = parseInt(value);
         if (current >= 100 && current <= 800) {
-          // Для токов 100-800А принудительно ставим "terminals"
           this.cableConnection = 'terminals';
         }
-        // Для токов 25-80А оставляем текущий выбор пользователя
         
         await this.loadProduct();
-        this.updateCartQuantity(); // Обновляем количество в корзине
+        this.updateCartQuantity();
       },
       
       // Метод для обновления типа коммутации
@@ -339,66 +328,57 @@ document.addEventListener('alpine:init', () => {
         this.commutationType = value;
         
         try {
-          // Если выбираем контакторы, принудительно ставим 2 ввода
           if (value === 'contactors') {
             this.inputsCount = '2';
           }
           
-          // Перезагружаем доступные опции с учетом нового типа коммутации
           await this.loadAvailableOptions();
           
-          // Выбираем первое доступное количество вводов (если не контакторы)
           if (value !== 'contactors' && this.availableOptions.inputs_count && this.availableOptions.inputs_count.length > 0) {
             if (!this.availableOptions.inputs_count.includes(this.inputsCount)) {
               this.inputsCount = this.availableOptions.inputs_count[0];
             }
-            await this.loadAvailableOptions(); // Перезагружаем опции с учетом количества вводов
+            await this.loadAvailableOptions();
           }
           
-          // Выбираем первый доступный ток
           if (this.availableOptions.nominal_current && this.availableOptions.nominal_current.length > 0) {
             this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
           }
           
           await this.loadProduct();
-          this.updateCartQuantity(); // Обновляем количество в корзине
+          this.updateCartQuantity();
         } finally {
           this.loading = false;
         }
       },
       
-      // Метод для обновления бренда (все бренды всегда доступны)
+      // Метод для обновления бренда
       async updateManufacturerBrand(value) {
         if (this.loading) return;
         this.loading = true;
         this.manufacturerBrand = value;
         
         try {
-          // При смене бренда перезагружаем опции и выбираем первые доступные
           await this.loadAvailableOptions();
           
-          // Выбираем первый доступный тип коммутации для нового бренда
           if (this.availableOptions.commutation_type && this.availableOptions.commutation_type.length > 0) {
             this.commutationType = this.availableOptions.commutation_type[0];
-            await this.loadAvailableOptions(); // Перезагружаем опции с учетом типа коммутации
+            await this.loadAvailableOptions();
           } else {
-            // Если нет доступных типов коммутации, оставляем текущий
             await this.loadAvailableOptions();
           }
           
-          // Выбираем первое доступное количество вводов
           if (this.availableOptions.inputs_count && this.availableOptions.inputs_count.length > 0) {
             this.inputsCount = this.availableOptions.inputs_count[0];
-            await this.loadAvailableOptions(); // Перезагружаем опции с учетом количества вводов
+            await this.loadAvailableOptions();
           }
           
-          // Выбираем первый доступный номинальный ток
           if (this.availableOptions.nominal_current && this.availableOptions.nominal_current.length > 0) {
             this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
           }
           
           await this.loadProduct();
-          this.updateCartQuantity(); // Обновляем количество в корзине
+          this.updateCartQuantity();
         } finally {
           this.loading = false;
         }
@@ -406,7 +386,6 @@ document.addEventListener('alpine:init', () => {
       
       // Метод для обновления количества вводов
       async updateInputsCount(value) {
-        // Запрещаем 3 ввода для контакторов
         if (this.commutationType === 'contactors' && value === '3') {
           return;
         }
@@ -416,10 +395,8 @@ document.addEventListener('alpine:init', () => {
         this.inputsCount = value;
         
         try {
-          // Перезагружаем доступные опции с учетом нового количества вводов
           await this.loadAvailableOptions();
           
-          // Если текущий ток недоступен, выбираем первый доступный
           if (!this.isOptionAvailable('nominal_current', this.nominalCurrent)) {
             if (this.availableOptions.nominal_current && this.availableOptions.nominal_current.length > 0) {
               this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
@@ -427,19 +404,16 @@ document.addEventListener('alpine:init', () => {
           }
           
           await this.loadProduct();
-          this.updateCartQuantity(); // Обновляем количество в корзине
+          this.updateCartQuantity();
         } finally {
           this.loading = false;
         }
       },
       
-      // Итоговая цена = базовая цена + дополнительные опции (БЕЗ умножения на количество)
+      // Итоговая цена = базовая цена + дополнительные опции
       get totalPrice() {
         let price = this.basePrice;
         
-        // Добавляем стоимость дополнительных опций
-        // Для токов 25-80А: доплата за дополнительные клеммы
-        // Для токов 100-800А: доплата не взимается
         if (this.cableConnection === 'terminals' && this.shouldChargeForTerminals) {
           price += 1000;
         }
@@ -447,24 +421,20 @@ document.addEventListener('alpine:init', () => {
           price += 23000;
         }
         
-        return price; // Убрали умножение на quantity
+        return price;
       },
 
-      // Проверяем, нужно ли брать доплату за дополнительные клеммы
       get shouldChargeForTerminals() {
         const current = parseInt(this.nominalCurrent);
         return current >= 25 && current <= 80;
       },
 
-      // Проверяем, доступна ли кнопка "К полюсам автомата"
       get isPolesToAvailable() {
         const current = parseInt(this.nominalCurrent);
         return current >= 25 && current <= 80;
       },
 
-      // Обновляем подключение кабеля
       updateCableConnection(value) {
-        // Запрещаем выбор "poles" для токов 100-800А
         if (value === 'poles' && !this.isPolesToAvailable) {
           return;
         }
@@ -473,25 +443,18 @@ document.addEventListener('alpine:init', () => {
         this.updateCartQuantity();
       },
 
-      // Обновляем климатическое исполнение
       updateClimateVersion(value) {
         this.climateVersion = value;
         this.updateCartQuantity();
       },
       
-      // Динамическое название товара
       get productTitle() {
         return `Шкаф АВР ${this.nominalCurrent || '100'}А на ${this.inputsCount || '2'} ввода`;
       },
       
-      // Все выбранные характеристики для отображения
-      // ВАЖНО: Все характеристики берутся из products.json -> specs
-      // Редактируйте только products.json, здесь только добавляются динамические параметры выбора
       get allSelectedSpecs() {
-        // Начинаем с характеристик из JSON (products.json -> specs)
         const specs = this.productSpecs ? { ...this.productSpecs } : {};
         
-        // Добавляем только динамические параметры, которые зависят от выбора пользователя
         specs['Артикул'] = this.article || '';
         specs['Производитель'] = this.manufacturerBrand || '';
         specs['Количество вводов'] = `${this.inputsCount}`;
@@ -526,17 +489,14 @@ document.addEventListener('alpine:init', () => {
         });
       },
 
-      // Инициализация корзины
       initCart() {
         this.updateCartQuantity();
         
-        // Слушаем изменения корзины
         window.addEventListener('cartChanged', () => {
           this.updateCartQuantity();
         });
       },
 
-      // Обновляем количество текущего товара в корзине
       updateCartQuantity() {
         if (window.cart) {
           const currentProduct = this.getCurrentProduct();
@@ -544,7 +504,6 @@ document.addEventListener('alpine:init', () => {
         }
       },
 
-      // Получаем текущий товар со всеми характеристиками
       getCurrentProduct() {
         return {
           article: this.article,
@@ -555,14 +514,13 @@ document.addEventListener('alpine:init', () => {
           cableConnection: this.cableConnection,
           climateVersion: this.climateVersion,
           basePrice: this.basePrice,
-          totalPrice: this.totalPrice, // Цена за единицу (без количества)
+          totalPrice: this.totalPrice,
           images: this.images,
           productSpecs: this.productSpecs,
           productTitle: this.productTitle
         };
       },
 
-      // Добавляем товар в корзину
       addToCart() {
         if (window.cart) {
           const currentProduct = this.getCurrentProduct();
@@ -570,13 +528,11 @@ document.addEventListener('alpine:init', () => {
           
           window.cart.addItem(currentProduct, 1);
           
-          // Показываем уведомление с правильным количеством
           const newQuantity = window.cart.hasItem(currentProduct);
           this.showCartNotification(newQuantity, oldQuantity);
         }
       },
 
-      // Показываем уведомление о добавлении в корзину
       showCartNotification(newQuantity, oldQuantity) {
         let message;
         if (oldQuantity === 0) {
@@ -593,7 +549,6 @@ document.addEventListener('alpine:init', () => {
         });
       },
 
-      // Универсальная система модальных окон
       showModal(options) {
         const {
           type = 'info',

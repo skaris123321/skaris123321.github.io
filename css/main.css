@@ -1052,6 +1052,12 @@ h1.category-title {
   gap: 0.25rem;
 }
 
+/* Фиксированная высота для кнопок подключения кабеля */
+.spec-option-cable {
+  min-height: 3.5rem;
+  height: 3.5rem;
+}
+
 /* Для кнопок токов - одинаковый размер */
 .product-spec-options-currents .spec-option {
   min-width: 60px;

@@ -350,7 +350,7 @@
         <div class="product-spec-label">Подключение кабеля</div>
         <div class="product-spec-options">
           <button 
-            class="spec-option"
+            class="spec-option spec-option-cable"
             :class="{ 
               active: cableConnection === 'poles', 
               'opacity-50': !isPolesToAvailable, 
@@ -360,7 +360,7 @@
             @click="updateCableConnection('poles')"
           >К полюсам автомата</button>
           <button 
-            class="spec-option"
+            class="spec-option spec-option-cable"
             :class="{ active: cableConnection === 'terminals' }"
             @click="updateCableConnection('terminals')"
           >
