@@ -3,8 +3,11 @@ chcp 65001 >nul
 echo ⚡ Быстрое обновление сайта...
 echo.
 
+echo 📁 Добавляем файлы...
 git add .
-git commit -m "Быстрое обновление"
+
+echo 💾 Создаем коммит...
+git commit -m "Быстрое обновление %date% %time%"
 
 if %errorlevel% neq 0 (
     echo ❌ Нет изменений для отправки
@@ -12,7 +15,13 @@ if %errorlevel% neq 0 (
     exit /b
 )
 
-git push origin master
+echo 🚀 Отправляем на GitHub...
+git push origin main
+
+if %errorlevel% neq 0 (
+    echo 🔄 Пробуем отправить на master...
+    git push origin master
+)
 
 if %errorlevel% equ 0 (
     echo.
@@ -22,6 +31,7 @@ if %errorlevel% equ 0 (
     echo Изменения появятся через 1-2 минуты
 ) else (
     echo ❌ Ошибка при отправке!
+    echo 💡 Проверьте подключение к интернету и настройки Git
 )
 
 timeout /t 5

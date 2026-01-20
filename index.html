@@ -27,7 +27,7 @@
 
       <div class="header-controls">
         <div class="search-wrapper">
-          <input type="search" placeholder="Поиск по товарам..." class="search-input">
+          <input type="search" placeholder="Поиск по товарам..." class="search-input" id="searchInput">
           <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
           </svg>
@@ -53,6 +53,18 @@
       </div>
 
       <div class="contact-group">
+        <a href="category/cart.html" class="cart-link" x-data="{ cartCount: 0 }" x-init="
+          cartCount = window.cart ? window.cart.getTotalItems() : 0;
+          window.addEventListener('cartChanged', (e) => cartCount = e.detail.totalItems);
+        ">
+          <div class="cart-icon-wrapper">
+            <svg class="cart-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5-6m0 0h15M17 21a2 2 0 100-4 2 2 0 000 4zM9 21a2 2 0 100-4 2 2 0 000 4z"/>
+            </svg>
+            <span x-show="cartCount > 0" x-text="cartCount" class="cart-badge"></span>
+          </div>
+          <span class="cart-text">Корзина</span>
+        </a>
         <a href="tel:+780055118939" class="phone hidden sm:block">8 (800) 511-89-39</a>
         <a href="mailto:zakaz@rosek.tech" class="email hidden md:block">zakaz@rosek.tech</a>
         <button class="btn-login">Войти</button>
@@ -64,9 +76,38 @@
     <h1 class="page-title">Каталог шкафов АВР</h1>
 
     <div class="grid-catalog">
+      <a href="category/avr.html" class="product-card">
+        <div class="product-image-wrapper">
+          <img src="images/avr-100.jpg" alt="Шкафы АВР" class="product-image">
+        </div>
+        <div class="product-info">
+          <h2 class="product-title">Шкафы АВР</h2>
+          <p class="product-description">Автоматический ввод резерва различных номиналов</p>
+          <p class="product-price">от 38 000 ₽</p>
+          <p class="product-delivery">Под заказ от 12 дней</p>
+        </div>
+      </a>
     </div>
   </main>
 
+  <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    // Простая функциональность поиска для главной страницы
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.getElementById('searchInput');
+      if (searchInput) {
+        searchInput.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter') {
+            const query = this.value.trim();
+            if (query) {
+              // Перенаправляем на страницу каталога с поисковым запросом
+              window.location.href = `category/avr.html?search=${encodeURIComponent(query)}`;
+            }
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>

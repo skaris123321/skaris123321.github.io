@@ -14,10 +14,25 @@ document.addEventListener('alpine:init', () => {
       selectedInputs: null,
       sortBy: 'price_asc',
       loading: true,
+      searchQuery: '',
       
       async init() {
         await this.loadProducts();
+        this.checkUrlParams();
         this.applyFilters();
+      },
+      
+      checkUrlParams() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('search');
+        if (searchQuery) {
+          this.searchQuery = searchQuery;
+          // Обновляем поле поиска в хедере
+          const searchInput = document.querySelector('.search-input');
+          if (searchInput) {
+            searchInput.value = searchQuery;
+          }
+        }
       },
       
       async loadProducts() {
