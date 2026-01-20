@@ -593,6 +593,42 @@ document.addEventListener('alpine:init', () => {
         });
       },
 
+      // Форматирование размера файла
+      formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+      },
+
+      // Предварительный просмотр документа
+      previewDocument(url) {
+        // Создаем модальное окно для просмотра PDF
+        const modal = document.createElement('div');
+        modal.className = 'document-modal';
+        modal.innerHTML = `
+            <div class="document-modal-content">
+                <div class="document-modal-header">
+                    <h3>Просмотр документа</h3>
+                    <button class="document-modal-close" onclick="this.closest('.document-modal').remove()">×</button>
+                </div>
+                <div class="document-modal-body">
+                    <iframe src="${url}" width="100%" height="600px" frameborder="0"></iframe>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        // Закрытие по клику вне модального окна
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.remove();
+            }
+        });
+      },
+
       showModal(options) {
         const {
           type = 'info',

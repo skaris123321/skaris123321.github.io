@@ -2456,38 +2456,12 @@ h1.category-title {
   }
 }
 
-/* Стили для секции документов */
-.documents-section {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid #e5e7eb;
-}
-
-.documents-section h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--gray-dark);
-  margin: 0 0 1.5rem 0;
-  line-height: 1.4;
-}
-
-.documents-container {
+/* Стили для вкладки документов */
+.documents-list-tab {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-
-.documents-loading {
-  text-align: center;
-  padding: 2rem;
-  color: #6b7280;
-  font-size: 0.875rem;
-}
-
-.documents-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  padding: 2rem 0;
 }
 
 .document-item {

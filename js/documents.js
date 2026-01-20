@@ -2,63 +2,25 @@
 
 class DocumentsManager {
     constructor() {
-        this.documentsContainer = null;
         this.currentDocuments = [];
     }
 
     // Инициализация менеджера документов
     init() {
-        // Ждем загрузки Alpine.js и создания продукта
+        // Ждем загрузки Alpine.js
         document.addEventListener('alpine:initialized', () => {
-            this.createDocumentsSection();
+            console.log('DocumentsManager инициализирован');
         });
-    }
-
-    // Создание секции для документов
-    createDocumentsSection() {
-        // Ищем контейнер для характеристик продукта
-        const productSpecsColumn = document.querySelector('.product-specs-column');
-        if (!productSpecsColumn) return;
-
-        // Создаем контейнер для документов
-        const documentsSection = document.createElement('div');
-        documentsSection.className = 'documents-section';
-        documentsSection.innerHTML = `
-            <h3>Техническая документация</h3>
-            <div class="documents-container" id="documents-container">
-                <div class="documents-loading" style="display: none;">
-                    <p>Загрузка документов...</p>
-                </div>
-                <div class="documents-list" id="documents-list"></div>
-                <div class="documents-message" id="documents-message"></div>
-            </div>
-        `;
-
-        // Добавляем секцию в конец колонки характеристик
-        productSpecsColumn.appendChild(documentsSection);
-
-        this.documentsContainer = document.getElementById('documents-container');
     }
 
     // Загрузка документов для текущего продукта
     async loadDocuments(productData) {
-        if (!this.documentsContainer) return;
-
-        const loadingElement = this.documentsContainer.querySelector('.documents-loading');
-        const listElement = this.documentsContainer.querySelector('.documents-list');
-        const messageElement = this.documentsContainer.querySelector('.documents-message');
-
-        // Показываем индикатор загрузки
-        loadingElement.style.display = 'block';
-        listElement.innerHTML = '';
-        messageElement.innerHTML = '';
-
         try {
             // Определяем параметры для поиска документов
             const params = this.getDocumentParams(productData);
             
             if (!params) {
-                this.showMessage('Документы для данного типа продукта пока недоступны');
+                this.updateAlpineDocumentation([]);
                 return;
             }
 
@@ -66,18 +28,43 @@ class DocumentsManager {
             const response = await fetch(`api/get_documents.php?${new URLSearchParams(params)}`);
             const data = await response.json();
 
-            loadingElement.style.display = 'none';
-
             if (data.success && data.documents.length > 0) {
-                this.displayDocuments(data.documents);
+                // Преобразуем документы в формат для Alpine.js
+                const alpineDocuments = data.documents.map(doc => ({
+                    name: doc.name,
+                    url: doc.url,
+                    size: doc.size,
+                    current: doc.current
+                }));
+                
+                this.updateAlpineDocumentation(alpineDocuments);
+                console.log('Документы загружены:', alpineDocuments);
             } else {
-                this.showMessage(data.message || 'Документы не найдены');
+                this.updateAlpineDocumentation([]);
+                console.log('Документы не найдены:', data.message);
             }
 
         } catch (error) {
-            loadingElement.style.display = 'none';
-            this.showMessage('Ошибка при загрузке документов');
-            console.error('Ошибка загрузки документов:', error);
+            this.updateAlpineDocumentation([]);
+            console.error('Ошибка при загрузке документов:', error);
+        }
+    }
+
+    // Обновление документов в Alpine.js
+    updateAlpineDocumentation(documents) {
+        // Находим Alpine компонент и обновляем документы
+        const productElement = document.querySelector('[x-data*="productData"]');
+        if (productElement && productElement._x_dataStack) {
+            const alpineData = productElement._x_dataStack[0];
+            if (alpineData) {
+                alpineData.documentation = documents;
+                // Принудительно обновляем Alpine
+                if (window.Alpine) {
+                    window.Alpine.nextTick(() => {
+                        console.log('Alpine документы обновлены:', documents);
+                    });
+                }
+            }
         }
     }
 
@@ -128,80 +115,6 @@ class DocumentsManager {
             current,
             manufacturer
         };
-    }
-
-    // Отображение списка документов
-    displayDocuments(documents) {
-        const listElement = this.documentsContainer.querySelector('.documents-list');
-        
-        if (documents.length === 0) {
-            listElement.innerHTML = '';
-            return;
-        }
-        
-        listElement.innerHTML = documents.map(doc => `
-            <div class="document-item">
-                <div class="document-info">
-                    <h4 class="document-name">${doc.name}</h4>
-                    <div class="document-details">
-                        <span class="document-size">${this.formatFileSize(doc.size)}</span>
-                        ${doc.current ? `<span class="document-current">Для тока: ${doc.current}А</span>` : ''}
-                    </div>
-                </div>
-                <div class="document-actions">
-                    <a href="${doc.url}" target="_blank" class="btn btn-primary btn-sm">
-                        <i class="icon-download"></i> Скачать PDF
-                    </a>
-                    <button onclick="documentsManager.previewDocument('${doc.url}')" class="btn btn-secondary btn-sm">
-                        <i class="icon-eye"></i> Просмотр
-                    </button>
-                </div>
-            </div>
-        `).join('');
-
-        this.currentDocuments = documents;
-    }
-
-    // Показ сообщения
-    showMessage(message) {
-        const messageElement = this.documentsContainer.querySelector('.documents-message');
-        messageElement.innerHTML = `<p class="documents-info">${message}</p>`;
-    }
-
-    // Форматирование размера файла
-    formatFileSize(bytes) {
-        if (bytes === 0) return '0 Bytes';
-        const k = 1024;
-        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-        const i = Math.floor(Math.log(bytes) / Math.log(k));
-        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-    }
-
-    // Предварительный просмотр документа
-    previewDocument(url) {
-        // Создаем модальное окно для просмотра PDF
-        const modal = document.createElement('div');
-        modal.className = 'document-modal';
-        modal.innerHTML = `
-            <div class="document-modal-content">
-                <div class="document-modal-header">
-                    <h3>Просмотр документа</h3>
-                    <button class="document-modal-close" onclick="this.closest('.document-modal').remove()">×</button>
-                </div>
-                <div class="document-modal-body">
-                    <iframe src="${url}" width="100%" height="600px" frameborder="0"></iframe>
-                </div>
-            </div>
-        `;
-
-        document.body.appendChild(modal);
-
-        // Закрытие по клику вне модального окна
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.remove();
-            }
-        });
     }
 }
 

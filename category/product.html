@@ -524,21 +524,25 @@
             <p>Документация для данного товара пока не добавлена.</p>
           </div>
           
-          <div x-show="documentation && documentation.length > 0" class="documentation-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; padding: 2rem 0;">
+          <div x-show="documentation && documentation.length > 0" class="documents-list-tab">
             <template x-for="(doc, index) in (documentation || [])" :key="index">
-              <a 
-                :href="doc" 
-                target="_blank" 
-                class="documentation-item"
-                style="display: flex; flex-direction: column; align-items: center; padding: 1.5rem; border: 2px solid #e5e7eb; border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.2s;"
-                style:hover="border-color: #3b82f6; background-color: #f9fafb;"
-              >
-                <svg style="width: 48px; height: 48px; margin-bottom: 1rem; color: #ef4444;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                </svg>
-                <span style="font-weight: 500; text-align: center;" x-text="'Документ ' + (index + 1)"></span>
-                <span style="font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem;">PDF</span>
-              </a>
+              <div class="document-item">
+                <div class="document-info">
+                  <h4 class="document-name" x-text="doc.name"></h4>
+                  <div class="document-details">
+                    <span class="document-size" x-text="formatFileSize(doc.size)"></span>
+                    <span x-show="doc.current" class="document-current" x-text="'Для тока: ' + doc.current + 'А'"></span>
+                  </div>
+                </div>
+                <div class="document-actions">
+                  <a :href="doc.url" target="_blank" class="btn btn-primary btn-sm">
+                    <i class="icon-download"></i> Скачать PDF
+                  </a>
+                  <button @click="previewDocument(doc.url)" class="btn btn-secondary btn-sm">
+                    <i class="icon-eye"></i> Просмотр
+                  </button>
+                </div>
+              </div>
             </template>
           </div>
         </div>
