@@ -147,8 +147,8 @@
         <div class="product-spec-group compact">
         <div class="product-spec-row">
           <span class="product-spec-label-inline">Артикул:</span>
-          <span class="product-spec-value-inline" x-text="article"></span>
-          <button class="copy-article-btn" type="button" title="Копировать артикул" @click="copyArticle()">
+          <span class="product-spec-value-inline" x-text="dynamicArticle"></span>
+          <button class="copy-article-btn" type="button" title="Копировать артикул" @click="copyArticle()">>
             <svg class="copy-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
             </svg>
@@ -350,7 +350,7 @@
         <div class="product-spec-label">Подключение кабеля</div>
         <div class="product-spec-options">
           <button 
-            class="spec-option spec-option-cable"
+            class="spec-option"
             :class="{ 
               active: cableConnection === 'poles', 
               'opacity-50': !isPolesToAvailable, 
@@ -360,7 +360,7 @@
             @click="updateCableConnection('poles')"
           >К полюсам автомата</button>
           <button 
-            class="spec-option spec-option-cable"
+            class="spec-option"
             :class="{ active: cableConnection === 'terminals' }"
             @click="updateCableConnection('terminals')"
           >
@@ -549,6 +549,7 @@
 
   <script src="../js/cart.js"></script>
   <script src="../js/products-api.js"></script>
+  <script src="../js/documents.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

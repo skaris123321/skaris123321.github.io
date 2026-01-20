@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест фильтрации по току</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-result { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .success { background-color: #d4edda; border: 1px solid #c3e6cb; }
+        .error { background-color: #f8d7da; border: 1px solid #f5c6cb; }
+        .info { background-color: #d1ecf1; border: 1px solid #bee5eb; }
+        button { margin: 5px; padding: 10px 15px; }
+    </style>
+</head>
+<body>
+    <h1>Тест фильтрации документов по току</h1>
+    
+    <div>
+        <button onclick="testCurrent(25)">Тест 25А</button>
+        <button onclick="testCurrent(32)">Тест 32А</button>
+        <button onclick="testCurrent(40)">Тест 40А</button>
+        <button onclick="testCurrent(63)">Тест 63А</button>
+        <button onclick="testCurrent(80)">Тест 80А</button>
+        <button onclick="testCurrent(100)">Тест 100А</button>
+    </div>
+    
+    <div id="results"></div>
+
+    <script>
+        async function testCurrent(current) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `<div class="info">Тестирование для тока ${current}А...</div>`;
+            
+            try {
+                const response = await fetch('api/get_documents.php?' + new URLSearchParams({
+                    switching_type: 'monoblock-avr',
+                    inputs: '2',
+                    current: current.toString(),
+                    manufacturer: 'CHINT'
+                }));
+                
+                const data = await response.json();
+                
+                let html = `<h2>Результат для тока ${current}А:</h2>`;
+                
+                if (data.success && data.documents.length > 0) {
+                    html += `<div class="success">
+                        <strong>УСПЕХ!</strong><br>
+                        Найдено документов: ${data.documents.length}<br>
+                        Сообщение: ${data.message}
+                    </div>`;
+                    
+                    html += '<h3>Найденные документы:</h3><ul>';
+                    data.documents.forEach(doc => {
+                        html += `<li>
+                            <strong>${doc.name}</strong><br>
+                            Файл: ${doc.filename}<br>
+                            Размер: ${formatFileSize(doc.size)}<br>
+                            ${doc.current ? `Ток в файле: ${doc.current}А` : 'Ток не указан'}
+                        </li>`;
+                    });
+                    html += '</ul>';
+                } else {
+                    html += `<div class="error">
+                        <strong>НЕТ ДОКУМЕНТОВ</strong><br>
+                        Сообщение: ${data.message}
+                    </div>`;
+                }
+                
+                resultsDiv.innerHTML = html;
+                
+            } catch (error) {
+                resultsDiv.innerHTML = `<div class="error">
+                    <strong>Ошибка:</strong><br>
+                    ${error.message}
+                </div>`;
+            }
+        }
+        
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+    </script>
+</body>
+</html>

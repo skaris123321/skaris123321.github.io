@@ -296,6 +296,18 @@ document.addEventListener('alpine:init', () => {
             // Перезагружаем доступные опции после загрузки товара для актуализации доступных значений
             await this.loadAvailableOptions();
             
+            // Загружаем документы для текущего продукта
+            if (window.documentsManager) {
+              const productData = {
+                name: this.productTitle,
+                manufacturer: this.manufacturerBrand,
+                current: parseInt(this.nominalCurrent),
+                inputs: parseInt(this.inputsCount),
+                commutation_type: this.commutationType
+              };
+              await window.documentsManager.loadDocuments(productData);
+            }
+            
             console.log('Товар загружен:', product);
           } else {
             console.error('Ошибка загрузки товара:', data.message);
@@ -318,6 +330,7 @@ document.addEventListener('alpine:init', () => {
         }
         
         await this.loadProduct();
+        await this.loadDocumentsForCurrentProduct();
         this.updateCartQuantity();
       },
       
@@ -346,6 +359,7 @@ document.addEventListener('alpine:init', () => {
           }
           
           await this.loadProduct();
+          await this.loadDocumentsForCurrentProduct();
           this.updateCartQuantity();
         } finally {
           this.loading = false;
@@ -378,6 +392,7 @@ document.addEventListener('alpine:init', () => {
           }
           
           await this.loadProduct();
+          await this.loadDocumentsForCurrentProduct();
           this.updateCartQuantity();
         } finally {
           this.loading = false;
@@ -404,6 +419,7 @@ document.addEventListener('alpine:init', () => {
           }
           
           await this.loadProduct();
+          await this.loadDocumentsForCurrentProduct();
           this.updateCartQuantity();
         } finally {
           this.loading = false;
@@ -455,7 +471,11 @@ document.addEventListener('alpine:init', () => {
       get allSelectedSpecs() {
         const specs = this.productSpecs ? { ...this.productSpecs } : {};
         
-        specs['Артикул'] = this.article || '';
+        // Генерируем новый артикул по формуле АВР-[ВВОДЫ]-[ТОК]-[К/М]-РОСЭК
+        const typeCode = this.commutationType === 'contactors' ? 'К' : 'М';
+        const newArticle = `АВР-${this.inputsCount}-${this.nominalCurrent}-${typeCode}-РОСЭК`;
+        
+        specs['Артикул'] = newArticle;
         specs['Производитель'] = this.manufacturerBrand || '';
         specs['Количество вводов'] = `${this.inputsCount}`;
         specs['Тип коммутации'] = this.commutationType === 'monoblock' ? 'Моноблочный АВР' : 'Контакторы';
@@ -463,6 +483,12 @@ document.addEventListener('alpine:init', () => {
         specs['Климатическое исполнение'] = this.climateVersion === 'UXL4' ? 'УХЛ4 - сухие теплые помещения' : 'У2 - уличное с обогревом';
         
         return specs;
+      },
+
+      // Генерируем новый артикул по формуле
+      get dynamicArticle() {
+        const typeCode = this.commutationType === 'contactors' ? 'К' : 'М';
+        return `АВР-${this.inputsCount}-${this.nominalCurrent}-${typeCode}-РОСЭК`;
       },
       
       get maxScroll() {
@@ -497,6 +523,20 @@ document.addEventListener('alpine:init', () => {
         });
       },
 
+      // Загрузка документов для текущего продукта
+      async loadDocumentsForCurrentProduct() {
+        if (window.documentsManager) {
+          const productData = {
+            name: this.productTitle,
+            manufacturer: this.manufacturerBrand,
+            current: parseInt(this.nominalCurrent),
+            inputs: parseInt(this.inputsCount),
+            commutation_type: this.commutationType
+          };
+          await window.documentsManager.loadDocuments(productData);
+        }
+      },
+
       updateCartQuantity() {
         if (window.cart) {
           const currentProduct = this.getCurrentProduct();
@@ -505,8 +545,12 @@ document.addEventListener('alpine:init', () => {
       },
 
       getCurrentProduct() {
+        // Генерируем новый артикул по формуле АВР-[ВВОДЫ]-[ТОК]-[К/М]-РОСЭК
+        const typeCode = this.commutationType === 'contactors' ? 'К' : 'М';
+        const newArticle = `АВР-${this.inputsCount}-${this.nominalCurrent}-${typeCode}-РОСЭК`;
+        
         return {
-          article: this.article,
+          article: newArticle,
           manufacturerBrand: this.manufacturerBrand,
           commutationType: this.commutationType,
           nominalCurrent: this.nominalCurrent,

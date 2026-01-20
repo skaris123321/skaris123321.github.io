@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "article": "АВР-25-CHINT-2",
+      "article": "АВР-2-25-М-РОСЭК",
       "nominal_current": 25,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -22,7 +22,7 @@
     },
     {
       "id": 2,
-      "article": "АВР-25-CHINT-3",
+      "article": "АВР-3-25-М-РОСЭК",
       "nominal_current": 25,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -42,7 +42,7 @@
     },
     {
       "id": 3,
-      "article": "АВР-32-CHINT-2",
+      "article": "АВР-2-32-М-РОСЭК",
       "nominal_current": 32,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -62,7 +62,7 @@
     },
     {
       "id": 4,
-      "article": "АВР-32-CHINT-3",
+      "article": "АВР-3-32-М-РОСЭК",
       "nominal_current": 32,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -82,7 +82,7 @@
     },
     {
       "id": 5,
-      "article": "АВР-40-CHINT-2",
+      "article": "АВР-2-40-М-РОСЭК",
       "nominal_current": 40,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -102,7 +102,7 @@
     },
     {
       "id": 6,
-      "article": "АВР-40-CHINT-3",
+      "article": "АВР-3-40-М-РОСЭК",
       "nominal_current": 40,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -122,7 +122,7 @@
     },
     {
       "id": 7,
-      "article": "АВР-63-CHINT-2",
+      "article": "АВР-2-63-М-РОСЭК",
       "nominal_current": 63,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -142,7 +142,7 @@
     },
     {
       "id": 8,
-      "article": "АВР-63-CHINT-3",
+      "article": "АВР-3-63-М-РОСЭК",
       "nominal_current": 63,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -162,7 +162,7 @@
     },
     {
       "id": 9,
-      "article": "АВР-80-CHINT-2",
+      "article": "АВР-2-80-М-РОСЭК",
       "nominal_current": 80,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -182,7 +182,7 @@
     },
     {
       "id": 10,
-      "article": "АВР-80-CHINT-3",
+      "article": "АВР-3-80-М-РОСЭК",
       "nominal_current": 80,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -202,7 +202,7 @@
     },
     {
       "id": 11,
-      "article": "АВР-100-CHINT-2",
+      "article": "АВР-2-100-М-РОСЭК",
       "nominal_current": 100,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -222,7 +222,7 @@
     },
     {
       "id": 12,
-      "article": "АВР-100-CHINT-3",
+      "article": "АВР-3-100-М-РОСЭК",
       "nominal_current": 100,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -242,7 +242,7 @@
     },
     {
       "id": 13,
-      "article": "АВР-125-CHINT-2",
+      "article": "АВР-2-125-М-РОСЭК",
       "nominal_current": 125,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -262,7 +262,7 @@
     },
     {
       "id": 14,
-      "article": "АВР-125-CHINT-3",
+      "article": "АВР-3-125-М-РОСЭК",
       "nominal_current": 125,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -282,7 +282,7 @@
     },
     {
       "id": 15,
-      "article": "АВР-160-CHINT-2",
+      "article": "АВР-2-160-М-РОСЭК",
       "nominal_current": 160,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -302,7 +302,7 @@
     },
     {
       "id": 16,
-      "article": "АВР-160-CHINT-3",
+      "article": "АВР-3-160-М-РОСЭК",
       "nominal_current": 160,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -322,7 +322,7 @@
     },
     {
       "id": 17,
-      "article": "АВР-200-CHINT-2",
+      "article": "АВР-2-200-М-РОСЭК",
       "nominal_current": 200,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -342,7 +342,7 @@
     },
     {
       "id": 18,
-      "article": "АВР-200-CHINT-3",
+      "article": "АВР-3-200-М-РОСЭК",
       "nominal_current": 200,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -362,7 +362,7 @@
     },
     {
       "id": 19,
-      "article": "АВР-250-CHINT-2",
+      "article": "АВР-2-250-М-РОСЭК",
       "nominal_current": 250,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -382,7 +382,7 @@
     },
     {
       "id": 20,
-      "article": "АВР-250-CHINT-3",
+      "article": "АВР-3-250-М-РОСЭК",
       "nominal_current": 250,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -402,7 +402,7 @@
     },
     {
       "id": 21,
-      "article": "АВР-400-CHINT-2",
+      "article": "АВР-2-400-М-РОСЭК",
       "nominal_current": 400,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -422,7 +422,7 @@
     },
     {
       "id": 22,
-      "article": "АВР-400-CHINT-3",
+      "article": "АВР-3-400-М-РОСЭК",
       "nominal_current": 400,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -442,7 +442,7 @@
     },
     {
       "id": 23,
-      "article": "АВР-630-CHINT-2",
+      "article": "АВР-2-630-М-РОСЭК",
       "nominal_current": 630,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -462,7 +462,7 @@
     },
     {
       "id": 24,
-      "article": "АВР-630-CHINT-3",
+      "article": "АВР-3-630-М-РОСЭК",
       "nominal_current": 630,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -482,7 +482,7 @@
     },
     {
       "id": 25,
-      "article": "АВР-800-CHINT-2",
+      "article": "АВР-2-800-М-РОСЭК",
       "nominal_current": 800,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -502,7 +502,7 @@
     },
     {
       "id": 26,
-      "article": "АВР-800-CHINT-3",
+      "article": "АВР-3-800-М-РОСЭК",
       "nominal_current": 800,
       "brand": "CHINT",
       "commutation_type": "monoblock",
@@ -522,7 +522,7 @@
     },
     {
       "id": 27,
-      "article": "АВР-25-EKF-2",
+      "article": "АВР-2-25-М-РОСЭК",
       "nominal_current": 25,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -542,7 +542,7 @@
     },
     {
       "id": 28,
-      "article": "АВР-25-EKF-3",
+      "article": "АВР-3-25-М-РОСЭК",
       "nominal_current": 25,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -562,7 +562,7 @@
     },
     {
       "id": 29,
-      "article": "АВР-32-EKF-2",
+      "article": "АВР-2-32-М-РОСЭК",
       "nominal_current": 32,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -582,7 +582,7 @@
     },
     {
       "id": 30,
-      "article": "АВР-32-EKF-3",
+      "article": "АВР-3-32-М-РОСЭК",
       "nominal_current": 32,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -602,7 +602,7 @@
     },
     {
       "id": 31,
-      "article": "АВР-40-EKF-2",
+      "article": "АВР-2-40-М-РОСЭК",
       "nominal_current": 40,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -622,7 +622,7 @@
     },
     {
       "id": 32,
-      "article": "АВР-40-EKF-3",
+      "article": "АВР-3-40-М-РОСЭК",
       "nominal_current": 40,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -642,7 +642,7 @@
     },
     {
       "id": 33,
-      "article": "АВР-63-EKF-2",
+      "article": "АВР-2-63-М-РОСЭК",
       "nominal_current": 63,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -662,7 +662,7 @@
     },
     {
       "id": 34,
-      "article": "АВР-63-EKF-3",
+      "article": "АВР-3-63-М-РОСЭК",
       "nominal_current": 63,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -682,7 +682,7 @@
     },
     {
       "id": 35,
-      "article": "АВР-80-EKF-2",
+      "article": "АВР-2-80-М-РОСЭК",
       "nominal_current": 80,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -702,7 +702,7 @@
     },
     {
       "id": 36,
-      "article": "АВР-80-EKF-3",
+      "article": "АВР-3-80-М-РОСЭК",
       "nominal_current": 80,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -722,7 +722,7 @@
     },
     {
       "id": 37,
-      "article": "АВР-100-EKF-2",
+      "article": "АВР-2-100-М-РОСЭК",
       "nominal_current": 100,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -742,7 +742,7 @@
     },
     {
       "id": 38,
-      "article": "АВР-100-EKF-3",
+      "article": "АВР-3-100-М-РОСЭК",
       "nominal_current": 100,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -762,7 +762,7 @@
     },
     {
       "id": 39,
-      "article": "АВР-125-EKF-2",
+      "article": "АВР-2-125-М-РОСЭК",
       "nominal_current": 125,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -782,7 +782,7 @@
     },
     {
       "id": 40,
-      "article": "АВР-125-EKF-3",
+      "article": "АВР-3-125-М-РОСЭК",
       "nominal_current": 125,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -802,7 +802,7 @@
     },
     {
       "id": 41,
-      "article": "АВР-160-EKF-2",
+      "article": "АВР-2-160-М-РОСЭК",
       "nominal_current": 160,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -822,7 +822,7 @@
     },
     {
       "id": 42,
-      "article": "АВР-160-EKF-3",
+      "article": "АВР-3-160-М-РОСЭК",
       "nominal_current": 160,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -842,7 +842,7 @@
     },
     {
       "id": 43,
-      "article": "АВР-200-EKF-2",
+      "article": "АВР-2-200-М-РОСЭК",
       "nominal_current": 200,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -862,7 +862,7 @@
     },
     {
       "id": 44,
-      "article": "АВР-200-EKF-3",
+      "article": "АВР-3-200-М-РОСЭК",
       "nominal_current": 200,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -882,7 +882,7 @@
     },
     {
       "id": 45,
-      "article": "АВР-250-EKF-2",
+      "article": "АВР-2-250-М-РОСЭК",
       "nominal_current": 250,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -902,7 +902,7 @@
     },
     {
       "id": 46,
-      "article": "АВР-250-EKF-3",
+      "article": "АВР-3-250-М-РОСЭК",
       "nominal_current": 250,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -922,7 +922,7 @@
     },
     {
       "id": 47,
-      "article": "АВР-400-EKF-2",
+      "article": "АВР-2-400-М-РОСЭК",
       "nominal_current": 400,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -942,7 +942,7 @@
     },
     {
       "id": 48,
-      "article": "АВР-400-EKF-3",
+      "article": "АВР-3-400-М-РОСЭК",
       "nominal_current": 400,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -962,7 +962,7 @@
     },
     {
       "id": 49,
-      "article": "АВР-630-EKF-2",
+      "article": "АВР-2-630-М-РОСЭК",
       "nominal_current": 630,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -982,7 +982,7 @@
     },
     {
       "id": 50,
-      "article": "АВР-630-EKF-3",
+      "article": "АВР-3-630-М-РОСЭК",
       "nominal_current": 630,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -1002,7 +1002,7 @@
     },
     {
       "id": 51,
-      "article": "АВР-800-EKF-2",
+      "article": "АВР-2-800-М-РОСЭК",
       "nominal_current": 800,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -1022,7 +1022,7 @@
     },
     {
       "id": 52,
-      "article": "АВР-800-EKF-3",
+      "article": "АВР-3-800-М-РОСЭК",
       "nominal_current": 800,
       "brand": "EKF",
       "commutation_type": "monoblock",
@@ -1042,7 +1042,7 @@
     },
     {
       "id": 53,
-      "article": "АВР-25-Dekraft-2",
+      "article": "АВР-2-25-М-РОСЭК",
       "nominal_current": 25,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1062,7 +1062,7 @@
     },
     {
       "id": 54,
-      "article": "АВР-25-Dekraft-3",
+      "article": "АВР-3-25-М-РОСЭК",
       "nominal_current": 25,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1082,7 +1082,7 @@
     },
     {
       "id": 55,
-      "article": "АВР-32-Dekraft-2",
+      "article": "АВР-2-32-М-РОСЭК",
       "nominal_current": 32,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1102,7 +1102,7 @@
     },
     {
       "id": 56,
-      "article": "АВР-32-Dekraft-3",
+      "article": "АВР-3-32-М-РОСЭК",
       "nominal_current": 32,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1122,7 +1122,7 @@
     },
     {
       "id": 57,
-      "article": "АВР-40-Dekraft-2",
+      "article": "АВР-2-40-М-РОСЭК",
       "nominal_current": 40,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1142,7 +1142,7 @@
     },
     {
       "id": 58,
-      "article": "АВР-40-Dekraft-3",
+      "article": "АВР-3-40-М-РОСЭК",
       "nominal_current": 40,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1162,7 +1162,7 @@
     },
     {
       "id": 59,
-      "article": "АВР-63-Dekraft-2",
+      "article": "АВР-2-63-М-РОСЭК",
       "nominal_current": 63,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1182,7 +1182,7 @@
     },
     {
       "id": 60,
-      "article": "АВР-63-Dekraft-3",
+      "article": "АВР-3-63-М-РОСЭК",
       "nominal_current": 63,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1202,7 +1202,7 @@
     },
     {
       "id": 61,
-      "article": "АВР-80-Dekraft-2",
+      "article": "АВР-2-80-М-РОСЭК",
       "nominal_current": 80,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1222,7 +1222,7 @@
     },
     {
       "id": 62,
-      "article": "АВР-80-Dekraft-3",
+      "article": "АВР-3-80-М-РОСЭК",
       "nominal_current": 80,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1242,7 +1242,7 @@
     },
     {
       "id": 63,
-      "article": "АВР-100-Dekraft-2",
+      "article": "АВР-2-100-М-РОСЭК",
       "nominal_current": 100,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1262,7 +1262,7 @@
     },
     {
       "id": 64,
-      "article": "АВР-100-Dekraft-3",
+      "article": "АВР-3-100-М-РОСЭК",
       "nominal_current": 100,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1282,7 +1282,7 @@
     },
     {
       "id": 65,
-      "article": "АВР-125-Dekraft-2",
+      "article": "АВР-2-125-М-РОСЭК",
       "nominal_current": 125,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1302,7 +1302,7 @@
     },
     {
       "id": 66,
-      "article": "АВР-125-Dekraft-3",
+      "article": "АВР-3-125-М-РОСЭК",
       "nominal_current": 125,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1322,7 +1322,7 @@
     },
     {
       "id": 67,
-      "article": "АВР-160-Dekraft-2",
+      "article": "АВР-2-160-М-РОСЭК",
       "nominal_current": 160,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1342,7 +1342,7 @@
     },
     {
       "id": 68,
-      "article": "АВР-160-Dekraft-3",
+      "article": "АВР-3-160-М-РОСЭК",
       "nominal_current": 160,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1362,7 +1362,7 @@
     },
     {
       "id": 69,
-      "article": "АВР-200-Dekraft-2",
+      "article": "АВР-2-200-М-РОСЭК",
       "nominal_current": 200,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1382,7 +1382,7 @@
     },
     {
       "id": 70,
-      "article": "АВР-200-Dekraft-3",
+      "article": "АВР-3-200-М-РОСЭК",
       "nominal_current": 200,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1402,7 +1402,7 @@
     },
     {
       "id": 71,
-      "article": "АВР-250-Dekraft-2",
+      "article": "АВР-2-250-М-РОСЭК",
       "nominal_current": 250,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1422,7 +1422,7 @@
     },
     {
       "id": 72,
-      "article": "АВР-250-Dekraft-3",
+      "article": "АВР-3-250-М-РОСЭК",
       "nominal_current": 250,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1442,7 +1442,7 @@
     },
     {
       "id": 73,
-      "article": "АВР-400-Dekraft-2",
+      "article": "АВР-2-400-М-РОСЭК",
       "nominal_current": 400,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1462,7 +1462,7 @@
     },
     {
       "id": 74,
-      "article": "АВР-400-Dekraft-3",
+      "article": "АВР-3-400-М-РОСЭК",
       "nominal_current": 400,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1482,7 +1482,7 @@
     },
     {
       "id": 75,
-      "article": "АВР-630-Dekraft-2",
+      "article": "АВР-2-630-М-РОСЭК",
       "nominal_current": 630,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1502,7 +1502,7 @@
     },
     {
       "id": 76,
-      "article": "АВР-630-Dekraft-3",
+      "article": "АВР-3-630-М-РОСЭК",
       "nominal_current": 630,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1522,7 +1522,7 @@
     },
     {
       "id": 77,
-      "article": "АВР-800-Dekraft-2",
+      "article": "АВР-2-800-М-РОСЭК",
       "nominal_current": 800,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1542,7 +1542,7 @@
     },
     {
       "id": 78,
-      "article": "АВР-800-Dekraft-3",
+      "article": "АВР-3-800-М-РОСЭК",
       "nominal_current": 800,
       "brand": "Dekraft",
       "commutation_type": "monoblock",
@@ -1562,7 +1562,7 @@
     },
     {
       "id": 79,
-      "article": "АВР-25-TDM-2",
+      "article": "АВР-2-25-М-РОСЭК",
       "nominal_current": 25,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1582,7 +1582,7 @@
     },
     {
       "id": 80,
-      "article": "АВР-25-TDM-3",
+      "article": "АВР-3-25-М-РОСЭК",
       "nominal_current": 25,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1602,7 +1602,7 @@
     },
     {
       "id": 81,
-      "article": "АВР-32-TDM-2",
+      "article": "АВР-2-32-М-РОСЭК",
       "nominal_current": 32,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1622,7 +1622,7 @@
     },
     {
       "id": 82,
-      "article": "АВР-32-TDM-3",
+      "article": "АВР-3-32-М-РОСЭК",
       "nominal_current": 32,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1642,7 +1642,7 @@
     },
     {
       "id": 83,
-      "article": "АВР-40-TDM-2",
+      "article": "АВР-2-40-М-РОСЭК",
       "nominal_current": 40,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1662,7 +1662,7 @@
     },
     {
       "id": 84,
-      "article": "АВР-40-TDM-3",
+      "article": "АВР-3-40-М-РОСЭК",
       "nominal_current": 40,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1682,7 +1682,7 @@
     },
     {
       "id": 85,
-      "article": "АВР-63-TDM-2",
+      "article": "АВР-2-63-М-РОСЭК",
       "nominal_current": 63,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1702,7 +1702,7 @@
     },
     {
       "id": 86,
-      "article": "АВР-63-TDM-3",
+      "article": "АВР-3-63-М-РОСЭК",
       "nominal_current": 63,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1722,7 +1722,7 @@
     },
     {
       "id": 87,
-      "article": "АВР-80-TDM-2",
+      "article": "АВР-2-80-М-РОСЭК",
       "nominal_current": 80,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1742,7 +1742,7 @@
     },
     {
       "id": 88,
-      "article": "АВР-80-TDM-3",
+      "article": "АВР-3-80-М-РОСЭК",
       "nominal_current": 80,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1762,7 +1762,7 @@
     },
     {
       "id": 89,
-      "article": "АВР-100-TDM-2",
+      "article": "АВР-2-100-М-РОСЭК",
       "nominal_current": 100,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1782,7 +1782,7 @@
     },
     {
       "id": 90,
-      "article": "АВР-100-TDM-3",
+      "article": "АВР-3-100-М-РОСЭК",
       "nominal_current": 100,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1802,7 +1802,7 @@
     },
     {
       "id": 91,
-      "article": "АВР-125-TDM-2",
+      "article": "АВР-2-125-М-РОСЭК",
       "nominal_current": 125,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1822,7 +1822,7 @@
     },
     {
       "id": 92,
-      "article": "АВР-125-TDM-3",
+      "article": "АВР-3-125-М-РОСЭК",
       "nominal_current": 125,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1842,7 +1842,7 @@
     },
     {
       "id": 93,
-      "article": "АВР-160-TDM-2",
+      "article": "АВР-2-160-М-РОСЭК",
       "nominal_current": 160,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1862,7 +1862,7 @@
     },
     {
       "id": 94,
-      "article": "АВР-160-TDM-3",
+      "article": "АВР-3-160-М-РОСЭК",
       "nominal_current": 160,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1882,7 +1882,7 @@
     },
     {
       "id": 95,
-      "article": "АВР-200-TDM-2",
+      "article": "АВР-2-200-М-РОСЭК",
       "nominal_current": 200,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1902,7 +1902,7 @@
     },
     {
       "id": 96,
-      "article": "АВР-200-TDM-3",
+      "article": "АВР-3-200-М-РОСЭК",
       "nominal_current": 200,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1922,7 +1922,7 @@
     },
     {
       "id": 97,
-      "article": "АВР-250-TDM-2",
+      "article": "АВР-2-250-М-РОСЭК",
       "nominal_current": 250,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1942,7 +1942,7 @@
     },
     {
       "id": 98,
-      "article": "АВР-250-TDM-3",
+      "article": "АВР-3-250-М-РОСЭК",
       "nominal_current": 250,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1962,7 +1962,7 @@
     },
     {
       "id": 99,
-      "article": "АВР-400-TDM-2",
+      "article": "АВР-2-400-М-РОСЭК",
       "nominal_current": 400,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -1982,7 +1982,7 @@
     },
     {
       "id": 100,
-      "article": "АВР-400-TDM-3",
+      "article": "АВР-3-400-М-РОСЭК",
       "nominal_current": 400,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -2002,7 +2002,7 @@
     },
     {
       "id": 101,
-      "article": "АВР-630-TDM-2",
+      "article": "АВР-2-630-М-РОСЭК",
       "nominal_current": 630,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -2022,7 +2022,7 @@
     },
     {
       "id": 102,
-      "article": "АВР-630-TDM-3",
+      "article": "АВР-3-630-М-РОСЭК",
       "nominal_current": 630,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -2042,7 +2042,7 @@
     },
     {
       "id": 103,
-      "article": "АВР-800-TDM-2",
+      "article": "АВР-2-800-М-РОСЭК",
       "nominal_current": 800,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -2062,7 +2062,7 @@
     },
     {
       "id": 104,
-      "article": "АВР-800-TDM-3",
+      "article": "АВР-3-800-М-РОСЭК",
       "nominal_current": 800,
       "brand": "TDM",
       "commutation_type": "monoblock",
@@ -2082,7 +2082,7 @@
     },
     {
       "id": 105,
-      "article": "АВР-25-IEK-2-K",
+      "article": "АВР-2-25-К-РОСЭК",
       "nominal_current": 25,
       "brand": "IEK",
       "commutation_type": "contactors",
@@ -2102,7 +2102,7 @@
     },
     {
       "id": 107,
-      "article": "АВР-32-IEK-2-K",
+      "article": "АВР-2-32-К-РОСЭК",
       "nominal_current": 32,
       "brand": "IEK",
       "commutation_type": "contactors",
@@ -2122,7 +2122,7 @@
     },
     {
       "id": 109,
-      "article": "АВР-40-IEK-2-K",
+      "article": "АВР-2-40-К-РОСЭК",
       "nominal_current": 40,
       "brand": "IEK",
       "commutation_type": "contactors",
@@ -2142,7 +2142,7 @@
     },
     {
       "id": 111,
-      "article": "АВР-63-IEK-2-K",
+      "article": "АВР-2-63-К-РОСЭК",
       "nominal_current": 63,
       "brand": "IEK",
       "commutation_type": "contactors",
@@ -2162,7 +2162,7 @@
     },
     {
       "id": 113,
-      "article": "АВР-80-IEK-2-K",
+      "article": "АВР-2-80-К-РОСЭК",
       "nominal_current": 80,
       "brand": "IEK",
       "commutation_type": "contactors",
@@ -2182,7 +2182,7 @@
     },
     {
       "id": 115,
-      "article": "АВР-100-IEK-2-K",
+      "article": "АВР-2-100-К-РОСЭК",
       "nominal_current": 100,
       "brand": "IEK",
       "commutation_type": "contactors",
@@ -2202,7 +2202,7 @@
     },
     {
       "id": 117,
-      "article": "АВР-125-IEK-2-K",
+      "article": "АВР-2-125-К-РОСЭК",
       "nominal_current": 125,
       "brand": "IEK",
       "commutation_type": "contactors",
@@ -2222,7 +2222,7 @@
     },
     {
       "id": 119,
-      "article": "АВР-160-IEK-2-K",
+      "article": "АВР-2-160-К-РОСЭК",
       "nominal_current": 160,
       "brand": "IEK",
       "commutation_type": "contactors",
@@ -2242,7 +2242,7 @@
     },
     {
       "id": 121,
-      "article": "АВР-200-IEK-2-K",
+      "article": "АВР-2-200-К-РОСЭК",
       "nominal_current": 200,
       "brand": "IEK",
       "commutation_type": "contactors",
@@ -2262,7 +2262,7 @@
     },
     {
       "id": 123,
-      "article": "АВР-250-IEK-2-K",
+      "article": "АВР-2-250-К-РОСЭК",
       "nominal_current": 250,
       "brand": "IEK",
       "commutation_type": "contactors",
@@ -2282,7 +2282,7 @@
     },
     {
       "id": 125,
-      "article": "АВР-400-IEK-2-K",
+      "article": "АВР-2-400-К-РОСЭК",
       "nominal_current": 400,
       "brand": "IEK",
       "commutation_type": "contactors",
@@ -2302,7 +2302,7 @@
     },
     {
       "id": 127,
-      "article": "АВР-630-IEK-2-K",
+      "article": "АВР-2-630-К-РОСЭК",
       "nominal_current": 630,
       "brand": "IEK",
       "commutation_type": "contactors",
@@ -2322,7 +2322,7 @@
     },
     {
       "id": 129,
-      "article": "АВР-800-IEK-2-K",
+      "article": "АВР-2-800-К-РОСЭК",
       "nominal_current": 800,
       "brand": "IEK",
       "commutation_type": "contactors",
@@ -2342,7 +2342,7 @@
     },
     {
       "id": 123,
-      "article": "АВР-25-CHINT-2-K",
+      "article": "АВР-2-25-К-РОСЭК",
       "nominal_current": 25,
       "brand": "CHINT",
       "commutation_type": "contactors",
@@ -2362,7 +2362,7 @@
     },
     {
       "id": 124,
-      "article": "АВР-32-CHINT-2-K",
+      "article": "АВР-2-32-К-РОСЭК",
       "nominal_current": 32,
       "brand": "CHINT",
       "commutation_type": "contactors",
@@ -2382,7 +2382,7 @@
     },
     {
       "id": 125,
-      "article": "АВР-40-CHINT-2-K",
+      "article": "АВР-2-40-К-РОСЭК",
       "nominal_current": 40,
       "brand": "CHINT",
       "commutation_type": "contactors",
@@ -2402,7 +2402,7 @@
     },
     {
       "id": 126,
-      "article": "АВР-63-CHINT-2-K",
+      "article": "АВР-2-63-К-РОСЭК",
       "nominal_current": 63,
       "brand": "CHINT",
       "commutation_type": "contactors",
@@ -2422,7 +2422,7 @@
     },
     {
       "id": 127,
-      "article": "АВР-80-CHINT-2-K",
+      "article": "АВР-2-80-К-РОСЭК",
       "nominal_current": 80,
       "brand": "CHINT",
       "commutation_type": "contactors",
@@ -2442,7 +2442,7 @@
     },
     {
       "id": 128,
-      "article": "АВР-100-CHINT-2-K",
+      "article": "АВР-2-100-К-РОСЭК",
       "nominal_current": 100,
       "brand": "CHINT",
       "commutation_type": "contactors",
@@ -2462,7 +2462,7 @@
     },
     {
       "id": 129,
-      "article": "АВР-125-CHINT-2-K",
+      "article": "АВР-2-125-К-РОСЭК",
       "nominal_current": 125,
       "brand": "CHINT",
       "commutation_type": "contactors",
@@ -2482,7 +2482,7 @@
     },
     {
       "id": 130,
-      "article": "АВР-160-CHINT-2-K",
+      "article": "АВР-2-160-К-РОСЭК",
       "nominal_current": 160,
       "brand": "CHINT",
       "commutation_type": "contactors",
@@ -2502,7 +2502,7 @@
     },
     {
       "id": 131,
-      "article": "АВР-200-CHINT-2-K",
+      "article": "АВР-2-200-К-РОСЭК",
       "nominal_current": 200,
       "brand": "CHINT",
       "commutation_type": "contactors",
@@ -2522,7 +2522,7 @@
     },
     {
       "id": 132,
-      "article": "АВР-250-CHINT-2-K",
+      "article": "АВР-2-250-К-РОСЭК",
       "nominal_current": 250,
       "brand": "CHINT",
       "commutation_type": "contactors",
@@ -2542,7 +2542,7 @@
     },
     {
       "id": 133,
-      "article": "АВР-400-CHINT-2-K",
+      "article": "АВР-2-400-К-РОСЭК",
       "nominal_current": 400,
       "brand": "CHINT",
       "commutation_type": "contactors",
@@ -2562,7 +2562,7 @@
     },
     {
       "id": 134,
-      "article": "АВР-630-CHINT-2-K",
+      "article": "АВР-2-630-К-РОСЭК",
       "nominal_current": 630,
       "brand": "CHINT",
       "commutation_type": "contactors",
@@ -2582,7 +2582,7 @@
     },
     {
       "id": 135,
-      "article": "АВР-800-CHINT-2-K",
+      "article": "АВР-2-800-К-РОСЭК",
       "nominal_current": 800,
       "brand": "CHINT",
       "commutation_type": "contactors",
@@ -2602,7 +2602,7 @@
     },
     {
       "id": 136,
-      "article": "АВР-25-EKF-2-K",
+      "article": "АВР-2-25-К-РОСЭК",
       "nominal_current": 25,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -2622,7 +2622,7 @@
     },
     {
       "id": 137,
-      "article": "АВР-100-EKF-2-K",
+      "article": "АВР-2-100-К-РОСЭК",
       "nominal_current": 100,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -2642,7 +2642,7 @@
     },
     {
       "id": 138,
-      "article": "АВР-25-Dekraft-2-K",
+      "article": "АВР-2-25-К-РОСЭК",
       "nominal_current": 25,
       "brand": "Dekraft",
       "commutation_type": "contactors",
@@ -2662,7 +2662,7 @@
     },
     {
       "id": 139,
-      "article": "АВР-100-Dekraft-2-K",
+      "article": "АВР-2-100-К-РОСЭК",
       "nominal_current": 100,
       "brand": "Dekraft",
       "commutation_type": "contactors",
@@ -2682,7 +2682,7 @@
     },
     {
       "id": 140,
-      "article": "АВР-25-TDM-2-K",
+      "article": "АВР-2-25-К-РОСЭК",
       "nominal_current": 25,
       "brand": "TDM",
       "commutation_type": "contactors",
@@ -2702,7 +2702,7 @@
     },
     {
       "id": 141,
-      "article": "АВР-100-TDM-2-K",
+      "article": "АВР-2-100-К-РОСЭК",
       "nominal_current": 100,
       "brand": "TDM",
       "commutation_type": "contactors",
@@ -2722,7 +2722,7 @@
     },
     {
       "id": 142,
-      "article": "АВР-32-EKF-2-K",
+      "article": "АВР-2-32-К-РОСЭК",
       "nominal_current": 32,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -2742,7 +2742,7 @@
     },
     {
       "id": 143,
-      "article": "АВР-40-EKF-2-K",
+      "article": "АВР-2-40-К-РОСЭК",
       "nominal_current": 40,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -2762,7 +2762,7 @@
     },
     {
       "id": 144,
-      "article": "АВР-63-EKF-2-K",
+      "article": "АВР-2-63-К-РОСЭК",
       "nominal_current": 63,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -2782,7 +2782,7 @@
     },
     {
       "id": 145,
-      "article": "АВР-80-EKF-2-K",
+      "article": "АВР-2-80-К-РОСЭК",
       "nominal_current": 80,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -2802,7 +2802,7 @@
     },
     {
       "id": 146,
-      "article": "АВР-125-EKF-2-K",
+      "article": "АВР-2-125-К-РОСЭК",
       "nominal_current": 125,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -2822,7 +2822,7 @@
     },
     {
       "id": 147,
-      "article": "АВР-160-EKF-2-K",
+      "article": "АВР-2-160-К-РОСЭК",
       "nominal_current": 160,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -2842,7 +2842,7 @@
     },
     {
       "id": 148,
-      "article": "АВР-200-EKF-2-K",
+      "article": "АВР-2-200-К-РОСЭК",
       "nominal_current": 200,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -2862,7 +2862,7 @@
     },
     {
       "id": 149,
-      "article": "АВР-250-EKF-2-K",
+      "article": "АВР-2-250-К-РОСЭК",
       "nominal_current": 250,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -2882,7 +2882,7 @@
     },
     {
       "id": 150,
-      "article": "АВР-400-EKF-2-K",
+      "article": "АВР-2-400-К-РОСЭК",
       "nominal_current": 400,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -2902,7 +2902,7 @@
     },
     {
       "id": 151,
-      "article": "АВР-630-EKF-2-K",
+      "article": "АВР-2-630-К-РОСЭК",
       "nominal_current": 630,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -2922,7 +2922,7 @@
     },
     {
       "id": 152,
-      "article": "АВР-800-EKF-2-K",
+      "article": "АВР-2-800-К-РОСЭК",
       "nominal_current": 800,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -2942,7 +2942,7 @@
     },
     {
       "id": 153,
-      "article": "АВР-160-EKF-2-K",
+      "article": "АВР-2-160-К-РОСЭК",
       "nominal_current": 160,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -2962,7 +2962,7 @@
     },
     {
       "id": 154,
-      "article": "АВР-200-EKF-2-K",
+      "article": "АВР-2-200-К-РОСЭК",
       "nominal_current": 200,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -2982,7 +2982,7 @@
     },
     {
       "id": 155,
-      "article": "АВР-250-EKF-2-K",
+      "article": "АВР-2-250-К-РОСЭК",
       "nominal_current": 250,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -3002,7 +3002,7 @@
     },
     {
       "id": 156,
-      "article": "АВР-400-EKF-2-K",
+      "article": "АВР-2-400-К-РОСЭК",
       "nominal_current": 400,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -3022,7 +3022,7 @@
     },
     {
       "id": 157,
-      "article": "АВР-630-EKF-2-K",
+      "article": "АВР-2-630-К-РОСЭК",
       "nominal_current": 630,
       "brand": "EKF",
       "commutation_type": "contactors",
@@ -3042,7 +3042,7 @@
     },
     {
       "id": 158,
-      "article": "АВР-32-Dekraft-2-K",
+      "article": "АВР-2-32-К-РОСЭК",
       "nominal_current": 32,
       "brand": "Dekraft",
       "commutation_type": "contactors",
@@ -3062,7 +3062,7 @@
     },
     {
       "id": 159,
-      "article": "АВР-40-Dekraft-2-K",
+      "article": "АВР-2-40-К-РОСЭК",
       "nominal_current": 40,
       "brand": "Dekraft",
       "commutation_type": "contactors",
@@ -3082,7 +3082,7 @@
     },
     {
       "id": 160,
-      "article": "АВР-63-Dekraft-2-K",
+      "article": "АВР-2-63-К-РОСЭК",
       "nominal_current": 63,
       "brand": "Dekraft",
       "commutation_type": "contactors",
@@ -3102,7 +3102,7 @@
     },
     {
       "id": 161,
-      "article": "АВР-80-Dekraft-2-K",
+      "article": "АВР-2-80-К-РОСЭК",
       "nominal_current": 80,
       "brand": "Dekraft",
       "commutation_type": "contactors",
@@ -3122,7 +3122,7 @@
     },
     {
       "id": 162,
-      "article": "АВР-125-Dekraft-2-K",
+      "article": "АВР-2-125-К-РОСЭК",
       "nominal_current": 125,
       "brand": "Dekraft",
       "commutation_type": "contactors",
@@ -3142,7 +3142,7 @@
     },
     {
       "id": 163,
-      "article": "АВР-160-Dekraft-2-K",
+      "article": "АВР-2-160-К-РОСЭК",
       "nominal_current": 160,
       "brand": "Dekraft",
       "commutation_type": "contactors",
@@ -3162,7 +3162,7 @@
     },
     {
       "id": 164,
-      "article": "АВР-200-Dekraft-2-K",
+      "article": "АВР-2-200-К-РОСЭК",
       "nominal_current": 200,
       "brand": "Dekraft",
       "commutation_type": "contactors",
@@ -3182,7 +3182,7 @@
     },
     {
       "id": 165,
-      "article": "АВР-250-Dekraft-2-K",
+      "article": "АВР-2-250-К-РОСЭК",
       "nominal_current": 250,
       "brand": "Dekraft",
       "commutation_type": "contactors",
@@ -3202,7 +3202,7 @@
     },
     {
       "id": 166,
-      "article": "АВР-400-Dekraft-2-K",
+      "article": "АВР-2-400-К-РОСЭК",
       "nominal_current": 400,
       "brand": "Dekraft",
       "commutation_type": "contactors",
@@ -3222,7 +3222,7 @@
     },
     {
       "id": 167,
-      "article": "АВР-630-Dekraft-2-K",
+      "article": "АВР-2-630-К-РОСЭК",
       "nominal_current": 630,
       "brand": "Dekraft",
       "commutation_type": "contactors",
@@ -3242,7 +3242,7 @@
     },
     {
       "id": 168,
-      "article": "АВР-800-Dekraft-2-K",
+      "article": "АВР-2-800-К-РОСЭК",
       "nominal_current": 800,
       "brand": "Dekraft",
       "commutation_type": "contactors",
@@ -3262,7 +3262,7 @@
     },
     {
       "id": 169,
-      "article": "АВР-32-TDM-2-K",
+      "article": "АВР-2-32-К-РОСЭК",
       "nominal_current": 32,
       "brand": "TDM",
       "commutation_type": "contactors",
@@ -3282,7 +3282,7 @@
     },
     {
       "id": 170,
-      "article": "АВР-40-TDM-2-K",
+      "article": "АВР-2-40-К-РОСЭК",
       "nominal_current": 40,
       "brand": "TDM",
       "commutation_type": "contactors",
@@ -3302,7 +3302,7 @@
     },
     {
       "id": 171,
-      "article": "АВР-63-TDM-2-K",
+      "article": "АВР-2-63-К-РОСЭК",
       "nominal_current": 63,
       "brand": "TDM",
       "commutation_type": "contactors",
@@ -3322,7 +3322,7 @@
     },
     {
       "id": 172,
-      "article": "АВР-80-TDM-2-K",
+      "article": "АВР-2-80-К-РОСЭК",
       "nominal_current": 80,
       "brand": "TDM",
       "commutation_type": "contactors",
@@ -3342,7 +3342,7 @@
     },
     {
       "id": 173,
-      "article": "АВР-125-TDM-2-K",
+      "article": "АВР-2-125-К-РОСЭК",
       "nominal_current": 125,
       "brand": "TDM",
       "commutation_type": "contactors",
@@ -3362,7 +3362,7 @@
     },
     {
       "id": 174,
-      "article": "АВР-160-TDM-2-K",
+      "article": "АВР-2-160-К-РОСЭК",
       "nominal_current": 160,
       "brand": "TDM",
       "commutation_type": "contactors",
@@ -3382,7 +3382,7 @@
     },
     {
       "id": 175,
-      "article": "АВР-200-TDM-2-K",
+      "article": "АВР-2-200-К-РОСЭК",
       "nominal_current": 200,
       "brand": "TDM",
       "commutation_type": "contactors",
@@ -3402,7 +3402,7 @@
     },
     {
       "id": 176,
-      "article": "АВР-250-TDM-2-K",
+      "article": "АВР-2-250-К-РОСЭК",
       "nominal_current": 250,
       "brand": "TDM",
       "commutation_type": "contactors",
@@ -3422,7 +3422,7 @@
     },
     {
       "id": 177,
-      "article": "АВР-400-TDM-2-K",
+      "article": "АВР-2-400-К-РОСЭК",
       "nominal_current": 400,
       "brand": "TDM",
       "commutation_type": "contactors",
@@ -3442,7 +3442,7 @@
     },
     {
       "id": 178,
-      "article": "АВР-630-TDM-2-K",
+      "article": "АВР-2-630-К-РОСЭК",
       "nominal_current": 630,
       "brand": "TDM",
       "commutation_type": "contactors",
@@ -3462,7 +3462,7 @@
     },
     {
       "id": 179,
-      "article": "АВР-800-TDM-2-K",
+      "article": "АВР-2-800-К-РОСЭК",
       "nominal_current": 800,
       "brand": "TDM",
       "commutation_type": "contactors",
