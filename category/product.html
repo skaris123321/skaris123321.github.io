@@ -522,6 +522,7 @@
         <div class="tab-content-wrapper">
           <div x-show="!documentation || documentation.length === 0" style="color: #6b7280; line-height: 1.7; padding: 2rem 0;">
             <p>Документация для данного товара пока не добавлена.</p>
+            <p style="font-size: 0.75rem; color: #999;">Отладка: <span x-text="'Документов: ' + (documentation ? documentation.length : 'undefined')"></span></p>
           </div>
           
           <div x-show="documentation && documentation.length > 0" class="documents-list-tab">

@@ -274,10 +274,7 @@ document.addEventListener('alpine:init', () => {
             });
             this.productSpecs = product.specs || {};
             this.fullDescription = product.full_description || product.description || '';
-            this.documentation = (product.documentation || []).map(doc => {
-              // Если путь относительный, добавляем ../
-              return doc.startsWith('docs/') ? '../' + doc : doc;
-            });
+            this.documentation = product.documentation || [];
             
             this.nominalCurrent = String(product.nominal_current);
             this.commutationType = product.commutation_type;
