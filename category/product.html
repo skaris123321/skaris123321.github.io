@@ -469,13 +469,8 @@
             <div class="description-article" x-text="'Артикул: ' + (article || '')"></div>
           </div>
 
-          <!-- Показываем сообщение если описание не добавлено -->
-          <div x-show="getCommutationDescription().isEmpty" style="color: #6b7280; line-height: 1.7; padding: 2rem 0; text-align: center;">
-            <p x-text="getCommutationDescription().message"></p>
-          </div>
-
-          <!-- Показываем полное описание если оно есть -->
-          <div x-show="!getCommutationDescription().isEmpty">
+          <!-- Показываем полное описание -->
+          <div>
             <div class="purpose-compact">
               <h3 class="description-subtitle">Общее назначение</h3>
               <p class="purpose-text" x-text="getCommutationDescription().purpose">
