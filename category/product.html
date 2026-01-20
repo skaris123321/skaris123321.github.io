@@ -225,9 +225,9 @@
           >2 ввода</button>
           <button 
             class="spec-option"
-            :class="{ active: inputsCount === '3', 'opacity-50': loading || !isOptionAvailable('inputs_count', '3'), disabled: loading || !isOptionAvailable('inputs_count', '3') }"
+            :class="{ active: inputsCount === '3', 'opacity-50': loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors', disabled: loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors' }"
             @click="updateInputsCount('3')"
-            :disabled="loading || !isOptionAvailable('inputs_count', '3')"
+            :disabled="loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors'"
           >3 ввода</button>
         </div>
       </div>

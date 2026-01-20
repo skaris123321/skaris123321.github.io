@@ -315,12 +315,19 @@ document.addEventListener('alpine:init', () => {
         this.commutationType = value;
         
         try {
+          // Если выбираем контакторы, принудительно ставим 2 ввода
+          if (value === 'contactors') {
+            this.inputsCount = '2';
+          }
+          
           // Перезагружаем доступные опции с учетом нового типа коммутации
           await this.loadAvailableOptions();
           
-          // Выбираем первое доступное количество вводов
-          if (this.availableOptions.inputs_count && this.availableOptions.inputs_count.length > 0) {
-            this.inputsCount = this.availableOptions.inputs_count[0];
+          // Выбираем первое доступное количество вводов (если не контакторы)
+          if (value !== 'contactors' && this.availableOptions.inputs_count && this.availableOptions.inputs_count.length > 0) {
+            if (!this.availableOptions.inputs_count.includes(this.inputsCount)) {
+              this.inputsCount = this.availableOptions.inputs_count[0];
+            }
             await this.loadAvailableOptions(); // Перезагружаем опции с учетом количества вводов
           }
           
@@ -375,6 +382,11 @@ document.addEventListener('alpine:init', () => {
       
       // Метод для обновления количества вводов
       async updateInputsCount(value) {
+        // Запрещаем 3 ввода для контакторов
+        if (this.commutationType === 'contactors' && value === '3') {
+          return;
+        }
+        
         if (this.loading || !this.isOptionAvailable('inputs_count', value)) return;
         this.loading = true;
         this.inputsCount = value;
