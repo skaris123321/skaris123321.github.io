@@ -2101,26 +2101,6 @@
       }
     },
     {
-      "id": 106,
-      "article": "АВР-25-IEK-3-K",
-      "nominal_current": 25,
-      "brand": "IEK",
-      "commutation_type": "contactors",
-      "inputs_count": "3",
-      "base_price": 45000,
-      "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
-      "description": "Шкаф АВР 25А на базе IEK (контакторы), 3 ввода",
-      "full_description": "Трёхфазный АВР 25А на 3 ввода, выполнен на базе контакторов IEK 25А.",
-      "documentation": [],
-      "specs": {
-        "Габариты": "600х500х250 мм",
-        "Номинальный ток": "25А",
-        "Номинальное рабочее напряжение": "380 В",
-        "Степень защиты корпуса": "IP31"
-      }
-    },
-    {
       "id": 107,
       "article": "АВР-32-IEK-2-K",
       "nominal_current": 32,
@@ -2141,26 +2121,6 @@
       }
     },
     {
-      "id": 108,
-      "article": "АВР-32-IEK-3-K",
-      "nominal_current": 32,
-      "brand": "IEK",
-      "commutation_type": "contactors",
-      "inputs_count": "3",
-      "base_price": 48000,
-      "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
-      "description": "Шкаф АВР 32А на базе IEK (контакторы), 3 ввода",
-      "full_description": "Трёхфазный АВР 32А на 3 ввода, выполнен на базе контакторов IEK 32А.",
-      "documentation": [],
-      "specs": {
-        "Габариты": "600х500х250 мм",
-        "Номинальный ток": "32А",
-        "Номинальное рабочее напряжение": "380 В",
-        "Степень защиты корпуса": "IP31"
-      }
-    },
-    {
       "id": 109,
       "article": "АВР-40-IEK-2-K",
       "nominal_current": 40,
@@ -2172,26 +2132,6 @@
       "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
       "description": "Шкаф АВР 40А на базе IEK (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 40А на 2 ввода, выполнен на базе контакторов IEK 40А.",
-      "documentation": [],
-      "specs": {
-        "Габариты": "600х500х250 мм",
-        "Номинальный ток": "40А",
-        "Номинальное рабочее напряжение": "380 В",
-        "Степень защиты корпуса": "IP31"
-      }
-    },
-    {
-      "id": 110,
-      "article": "АВР-40-IEK-3-K",
-      "nominal_current": 40,
-      "brand": "IEK",
-      "commutation_type": "contactors",
-      "inputs_count": "3",
-      "base_price": 52000,
-      "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
-      "description": "Шкаф АВР 40А на базе IEK (контакторы), 3 ввода",
-      "full_description": "Трёхфазный АВР 40А на 3 ввода, выполнен на базе контакторов IEK 40А.",
       "documentation": [],
       "specs": {
         "Габариты": "600х500х250 мм",
@@ -2252,26 +2192,6 @@
       "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
       "description": "Шкаф АВР 80А на базе IEK (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 80А на 2 ввода, выполнен на базе контакторов IEK 80А.",
-      "documentation": [],
-      "specs": {
-        "Габариты": "600х500х250 мм",
-        "Номинальный ток": "80А",
-        "Номинальное рабочее напряжение": "380 В",
-        "Степень защиты корпуса": "IP31"
-      }
-    },
-    {
-      "id": 114,
-      "article": "АВР-80-IEK-3-K",
-      "nominal_current": 80,
-      "brand": "IEK",
-      "commutation_type": "contactors",
-      "inputs_count": "3",
-      "base_price": 65000,
-      "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
-      "description": "Шкаф АВР 80А на базе IEK (контакторы), 3 ввода",
-      "full_description": "Трёхфазный АВР 80А на 3 ввода, выполнен на базе контакторов IEK 80А.",
       "documentation": [],
       "specs": {
         "Габариты": "600х500х250 мм",
@@ -2978,6 +2898,766 @@
         "Номинальный ток": "100А",
         "Номинальное рабочее напряжение": "380 В",
         "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 142,
+      "article": "АВР-32-EKF-2-K",
+      "nominal_current": 32,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 45000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 32А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 32А на 2 ввода, выполнен на базе контакторов EKF 32А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "600х500х250 мм",
+        "Номинальный ток": "32А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 143,
+      "article": "АВР-40-EKF-2-K",
+      "nominal_current": 40,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 49000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 40А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 40А на 2 ввода, выполнен на базе контакторов EKF 40А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "600х500х250 мм",
+        "Номинальный ток": "40А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 144,
+      "article": "АВР-63-EKF-2-K",
+      "nominal_current": 63,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 58000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 63А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 63А на 2 ввода, выполнен на базе контакторов EKF 63А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "700х550х250 мм",
+        "Номинальный ток": "63А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 145,
+      "article": "АВР-80-EKF-2-K",
+      "nominal_current": 80,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 68000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 80А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 80А на 2 ввода, выполнен на базе контакторов EKF 80А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "700х550х250 мм",
+        "Номинальный ток": "80А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 146,
+      "article": "АВР-125-EKF-2-K",
+      "nominal_current": 125,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 89000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 125А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе контакторов EKF 125А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "800х600х300 мм",
+        "Номинальный ток": "125А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 147,
+      "article": "АВР-160-EKF-2-K",
+      "nominal_current": 160,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 98000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 160А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов EKF 160А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "850х650х300 мм",
+        "Номинальный ток": "160А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 148,
+      "article": "АВР-200-EKF-2-K",
+      "nominal_current": 200,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 108000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 200А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов EKF 200А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "850х650х300 мм",
+        "Номинальный ток": "200А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 149,
+      "article": "АВР-250-EKF-2-K",
+      "nominal_current": 250,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 122000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 250А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов EKF 250А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "900х650х350 мм",
+        "Номинальный ток": "250А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 150,
+      "article": "АВР-400-EKF-2-K",
+      "nominal_current": 400,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 160000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 400А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов EKF 400А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "950х700х350 мм",
+        "Номинальный ток": "400А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP54"
+      }
+    },
+    {
+      "id": 151,
+      "article": "АВР-630-EKF-2-K",
+      "nominal_current": 630,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 205000,
+      "main_image": "images/avr-100.jpg",
+      "images": ["images/avr-100.jpg"],
+      "description": "Шкаф АВР 630А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов EKF 630А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "1000х800х400 мм",
+        "Номинальный ток": "630А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP54"
+      }
+    },
+    {
+      "id": 152,
+      "article": "АВР-800-EKF-2-K",
+      "nominal_current": 800,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 260000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 800А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе контакторов EKF 800А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "1100х850х450 мм",
+        "Номинальный ток": "800А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP54"
+      }
+    },
+    {
+      "id": 153,
+      "article": "АВР-160-EKF-2-K",
+      "nominal_current": 160,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 98000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 160А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов EKF 160А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "850х650х300 мм",
+        "Номинальный ток": "160А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 154,
+      "article": "АВР-200-EKF-2-K",
+      "nominal_current": 200,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 108000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 200А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов EKF 200А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "850х650х300 мм",
+        "Номинальный ток": "200А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 155,
+      "article": "АВР-250-EKF-2-K",
+      "nominal_current": 250,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 122000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 250А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов EKF 250А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "900х650х350 мм",
+        "Номинальный ток": "250А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 156,
+      "article": "АВР-400-EKF-2-K",
+      "nominal_current": 400,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 160000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 400А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов EKF 400А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "950х700х350 мм",
+        "Номинальный ток": "400А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP54"
+      }
+    },
+    {
+      "id": 157,
+      "article": "АВР-630-EKF-2-K",
+      "nominal_current": 630,
+      "brand": "EKF",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 205000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 630А на базе EKF (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов EKF 630А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "1000х800х400 мм",
+        "Номинальный ток": "630А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP54"
+      }
+    },
+    {
+      "id": 158,
+      "article": "АВР-32-Dekraft-2-K",
+      "nominal_current": 32,
+      "brand": "Dekraft",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 43000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 32А на базе Dekraft (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 32А на 2 ввода, выполнен на базе контакторов Dekraft 32А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "600х500х250 мм",
+        "Номинальный ток": "32А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 159,
+      "article": "АВР-40-Dekraft-2-K",
+      "nominal_current": 40,
+      "brand": "Dekraft",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 47000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 40А на базе Dekraft (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 40А на 2 ввода, выполнен на базе контакторов Dekraft 40А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "600х500х250 мм",
+        "Номинальный ток": "40А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 160,
+      "article": "АВР-63-Dekraft-2-K",
+      "nominal_current": 63,
+      "brand": "Dekraft",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 55000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 63А на базе Dekraft (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 63А на 2 ввода, выполнен на базе контакторов Dekraft 63А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "700х550х250 мм",
+        "Номинальный ток": "63А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 161,
+      "article": "АВР-80-Dekraft-2-K",
+      "nominal_current": 80,
+      "brand": "Dekraft",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 65000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 80А на базе Dekraft (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 80А на 2 ввода, выполнен на базе контакторов Dekraft 80А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "700х550х250 мм",
+        "Номинальный ток": "80А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 162,
+      "article": "АВР-125-Dekraft-2-K",
+      "nominal_current": 125,
+      "brand": "Dekraft",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 86000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 125А на базе Dekraft (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе контакторов Dekraft 125А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "800х600х300 мм",
+        "Номинальный ток": "125А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 163,
+      "article": "АВР-160-Dekraft-2-K",
+      "nominal_current": 160,
+      "brand": "Dekraft",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 95000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 160А на базе Dekraft (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов Dekraft 160А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "850х650х300 мм",
+        "Номинальный ток": "160А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 164,
+      "article": "АВР-200-Dekraft-2-K",
+      "nominal_current": 200,
+      "brand": "Dekraft",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 105000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 200А на базе Dekraft (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов Dekraft 200А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "850х650х300 мм",
+        "Номинальный ток": "200А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 165,
+      "article": "АВР-250-Dekraft-2-K",
+      "nominal_current": 250,
+      "brand": "Dekraft",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 118000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 250А на базе Dekraft (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов Dekraft 250А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "900х650х350 мм",
+        "Номинальный ток": "250А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 166,
+      "article": "АВР-400-Dekraft-2-K",
+      "nominal_current": 400,
+      "brand": "Dekraft",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 155000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 400А на базе Dekraft (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов Dekraft 400А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "950х700х350 мм",
+        "Номинальный ток": "400А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP54"
+      }
+    },
+    {
+      "id": 167,
+      "article": "АВР-630-Dekraft-2-K",
+      "nominal_current": 630,
+      "brand": "Dekraft",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 198000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 630А на базе Dekraft (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов Dekraft 630А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "1000х800х400 мм",
+        "Номинальный ток": "630А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP54"
+      }
+    },
+    {
+      "id": 168,
+      "article": "АВР-800-Dekraft-2-K",
+      "nominal_current": 800,
+      "brand": "Dekraft",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 250000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 800А на базе Dekraft (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе контакторов Dekraft 800А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "1100х850х450 мм",
+        "Номинальный ток": "800А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP54"
+      }
+    },
+    {
+      "id": 169,
+      "article": "АВР-32-TDM-2-K",
+      "nominal_current": 32,
+      "brand": "TDM",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 41000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 32А на базе TDM (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 32А на 2 ввода, выполнен на базе контакторов TDM 32А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "600х500х250 мм",
+        "Номинальный ток": "32А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 170,
+      "article": "АВР-40-TDM-2-K",
+      "nominal_current": 40,
+      "brand": "TDM",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 45000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 40А на базе TDM (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 40А на 2 ввода, выполнен на базе контакторов TDM 40А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "600х500х250 мм",
+        "Номинальный ток": "40А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 171,
+      "article": "АВР-63-TDM-2-K",
+      "nominal_current": 63,
+      "brand": "TDM",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 52000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 63А на базе TDM (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 63А на 2 ввода, выполнен на базе контакторов TDM 63А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "700х550х250 мм",
+        "Номинальный ток": "63А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 172,
+      "article": "АВР-80-TDM-2-K",
+      "nominal_current": 80,
+      "brand": "TDM",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 62000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 80А на базе TDM (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 80А на 2 ввода, выполнен на базе контакторов TDM 80А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "700х550х250 мм",
+        "Номинальный ток": "80А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 173,
+      "article": "АВР-125-TDM-2-K",
+      "nominal_current": 125,
+      "brand": "TDM",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 82000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 125А на базе TDM (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе контакторов TDM 125А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "800х600х300 мм",
+        "Номинальный ток": "125А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 174,
+      "article": "АВР-160-TDM-2-K",
+      "nominal_current": 160,
+      "brand": "TDM",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 90000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 160А на базе TDM (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов TDM 160А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "850х650х300 мм",
+        "Номинальный ток": "160А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 175,
+      "article": "АВР-200-TDM-2-K",
+      "nominal_current": 200,
+      "brand": "TDM",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 100000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 200А на базе TDM (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов TDM 200А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "850х650х300 мм",
+        "Номинальный ток": "200А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 176,
+      "article": "АВР-250-TDM-2-K",
+      "nominal_current": 250,
+      "brand": "TDM",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 112000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 250А на базе TDM (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов TDM 250А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "900х650х350 мм",
+        "Номинальный ток": "250А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP31"
+      }
+    },
+    {
+      "id": 177,
+      "article": "АВР-400-TDM-2-K",
+      "nominal_current": 400,
+      "brand": "TDM",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 148000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 400А на базе TDM (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов TDM 400А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "950х700х350 мм",
+        "Номинальный ток": "400А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP54"
+      }
+    },
+    {
+      "id": 178,
+      "article": "АВР-630-TDM-2-K",
+      "nominal_current": 630,
+      "brand": "TDM",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 188000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 630А на базе TDM (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов TDM 630А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "1000х800х400 мм",
+        "Номинальный ток": "630А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP54"
+      }
+    },
+    {
+      "id": 179,
+      "article": "АВР-800-TDM-2-K",
+      "nominal_current": 800,
+      "brand": "TDM",
+      "commutation_type": "contactors",
+      "inputs_count": "2",
+      "base_price": 238000,
+      "main_image": "images/avr-kont.jpg",
+      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "description": "Шкаф АВР 800А на базе TDM (контакторы), 2 ввода",
+      "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе контакторов TDM 800А.",
+      "documentation": [],
+      "specs": {
+        "Габариты": "1100х850х450 мм",
+        "Номинальный ток": "800А",
+        "Номинальное рабочее напряжение": "380 В",
+        "Степень защиты корпуса": "IP54"
       }
     }
   ]
