@@ -330,7 +330,6 @@ document.addEventListener('alpine:init', () => {
         }
         
         await this.loadProduct();
-        await this.loadDocumentsForCurrentProduct();
         this.updateCartQuantity();
       },
       
@@ -359,7 +358,6 @@ document.addEventListener('alpine:init', () => {
           }
           
           await this.loadProduct();
-          await this.loadDocumentsForCurrentProduct();
           this.updateCartQuantity();
         } finally {
           this.loading = false;
@@ -392,7 +390,6 @@ document.addEventListener('alpine:init', () => {
           }
           
           await this.loadProduct();
-          await this.loadDocumentsForCurrentProduct();
           this.updateCartQuantity();
         } finally {
           this.loading = false;
@@ -419,7 +416,6 @@ document.addEventListener('alpine:init', () => {
           }
           
           await this.loadProduct();
-          await this.loadDocumentsForCurrentProduct();
           this.updateCartQuantity();
         } finally {
           this.loading = false;
@@ -521,20 +517,6 @@ document.addEventListener('alpine:init', () => {
         window.addEventListener('cartChanged', () => {
           this.updateCartQuantity();
         });
-      },
-
-      // Загрузка документов для текущего продукта
-      async loadDocumentsForCurrentProduct() {
-        if (window.documentsManager) {
-          const productData = {
-            name: this.productTitle,
-            manufacturer: this.manufacturerBrand,
-            current: parseInt(this.nominalCurrent),
-            inputs: parseInt(this.inputsCount),
-            commutation_type: this.commutationType
-          };
-          await window.documentsManager.loadDocuments(productData);
-        }
       },
 
       updateCartQuantity() {

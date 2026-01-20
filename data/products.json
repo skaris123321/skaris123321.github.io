@@ -12,7 +12,14 @@
       "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
       "description": "Шкаф АВР 25А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 25А на 2 ввода, выполнен на базе моноблочного АВР CHINT 25А.",
-      "documentation": [],
+      "documentation": [
+        {
+          "name": "Комплект чертежей шкафа АВР 25А на 2 ввода",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 25А на 2 ввода.pdf",
+          "size": 2048000,
+          "type": "pdf"
+        }
+      ],
       "specs": {
         "Габариты": "600х500х250 мм",
         "Номинальный ток": "25А",
@@ -52,7 +59,14 @@
       "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
       "description": "Шкаф АВР 32А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 32А на 2 ввода, выполнен на базе моноблочного АВР CHINT 32А.",
-      "documentation": [],
+      "documentation": [
+        {
+          "name": "Комплект чертежей шкафа АВР 32А на 2 ввода",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 32А на 2 ввода.pdf",
+          "size": 2048000,
+          "type": "pdf"
+        }
+      ],
       "specs": {
         "Габариты": "600х500х250 мм",
         "Номинальный ток": "32А",
@@ -92,7 +106,14 @@
       "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
       "description": "Шкаф АВР 40А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 40А на 2 ввода, выполнен на базе моноблочного АВР CHINT 40А.",
-      "documentation": [],
+      "documentation": [
+        {
+          "name": "Комплект чертежей шкафа АВР 40А на 2 ввода",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 40А на 2 ввода.pdf",
+          "size": 2048000,
+          "type": "pdf"
+        }
+      ],
       "specs": {
         "Габариты": "600х500х250 мм",
         "Номинальный ток": "40А",
@@ -132,7 +153,14 @@
       "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
       "description": "Шкаф АВР 63А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 63А на 2 ввода, выполнен на базе моноблочного АВР CHINT 63А.",
-      "documentation": [],
+      "documentation": [
+        {
+          "name": "Комплект чертежей шкафа АВР 63А на 2 ввода",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 63А на 2 ввода.pdf",
+          "size": 2048000,
+          "type": "pdf"
+        }
+      ],
       "specs": {
         "Габариты": "700х550х250 мм",
         "Номинальный ток": "63А",
@@ -172,7 +200,14 @@
       "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
       "description": "Шкаф АВР 80А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 80А на 2 ввода, выполнен на базе моноблочного АВР CHINT 80А.",
-      "documentation": [],
+      "documentation": [
+        {
+          "name": "Комплект чертежей шкафа АВР 80А на 2 ввода",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 80А на 2 ввода.pdf",
+          "size": 2048000,
+          "type": "pdf"
+        }
+      ],
       "specs": {
         "Габариты": "700х550х250 мм",
         "Номинальный ток": "80А",
@@ -212,7 +247,14 @@
       "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
       "description": "Шкаф АВР 100А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 100А на 2 ввода, выполнен на базе моноблочного АВР CHINT 100А.",
-      "documentation": [],
+      "documentation": [
+        {
+          "name": "Комплект чертежей шкафа АВР 100А на 2 ввода",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 100А на 2 ввода.pdf",
+          "size": 2048000,
+          "type": "pdf"
+        }
+      ],
       "specs": {
         "Габариты": "800х600х300 мм",
         "Номинальный ток": "100А",
