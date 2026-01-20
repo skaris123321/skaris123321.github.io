@@ -171,6 +171,13 @@ document.addEventListener('alpine:init', () => {
         // Затем загружаем товар
         await this.loadProduct();
         
+        // Устанавливаем правильное подключение кабеля после загрузки товара
+        const current = parseInt(this.nominalCurrent);
+        if (current >= 100 && current <= 800) {
+          // Для токов 100-800А принудительно ставим "terminals"
+          this.cableConnection = 'terminals';
+        }
+        
         // Инициализируем корзину
         this.initCart();
       },
@@ -282,6 +289,14 @@ document.addEventListener('alpine:init', () => {
             this.manufacturerBrand = product.manufacturer_brand;
             this.inputsCount = product.inputs_count;
             
+            // Автоматически переключаем подключение кабеля в зависимости от тока
+            const current = parseInt(product.nominal_current);
+            if (current >= 100 && current <= 800) {
+              // Для токов 100-800А принудительно ставим "terminals"
+              this.cableConnection = 'terminals';
+            }
+            // Для токов 25-80А оставляем текущий выбор пользователя
+            
             // Сбрасываем индекс изображения
             this.currentIndex = 0;
             this.thumbnailScroll = 0;
@@ -304,6 +319,15 @@ document.addEventListener('alpine:init', () => {
       async updateNominalCurrent(value) {
         if (this.loading || !this.isOptionAvailable('nominal_current', value)) return;
         this.nominalCurrent = value;
+        
+        // Автоматически переключаем подключение кабеля в зависимости от тока
+        const current = parseInt(value);
+        if (current >= 100 && current <= 800) {
+          // Для токов 100-800А принудительно ставим "terminals"
+          this.cableConnection = 'terminals';
+        }
+        // Для токов 25-80А оставляем текущий выбор пользователя
+        
         await this.loadProduct();
         this.updateCartQuantity(); // Обновляем количество в корзине
       },
@@ -414,7 +438,9 @@ document.addEventListener('alpine:init', () => {
         let price = this.basePrice;
         
         // Добавляем стоимость дополнительных опций
-        if (this.cableConnection === 'terminals') {
+        // Для токов 25-80А: доплата за дополнительные клеммы
+        // Для токов 100-800А: доплата не взимается
+        if (this.cableConnection === 'terminals' && this.shouldChargeForTerminals) {
           price += 1000;
         }
         if (this.climateVersion === 'U2') {
@@ -424,8 +450,25 @@ document.addEventListener('alpine:init', () => {
         return price; // Убрали умножение на quantity
       },
 
+      // Проверяем, нужно ли брать доплату за дополнительные клеммы
+      get shouldChargeForTerminals() {
+        const current = parseInt(this.nominalCurrent);
+        return current >= 25 && current <= 80;
+      },
+
+      // Проверяем, доступна ли кнопка "К полюсам автомата"
+      get isPolesToAvailable() {
+        const current = parseInt(this.nominalCurrent);
+        return current >= 25 && current <= 80;
+      },
+
       // Обновляем подключение кабеля
       updateCableConnection(value) {
+        // Запрещаем выбор "poles" для токов 100-800А
+        if (value === 'poles' && !this.isPolesToAvailable) {
+          return;
+        }
+        
         this.cableConnection = value;
         this.updateCartQuantity();
       },

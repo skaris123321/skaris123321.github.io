@@ -351,7 +351,12 @@
         <div class="product-spec-options">
           <button 
             class="spec-option"
-            :class="{ active: cableConnection === 'poles' }"
+            :class="{ 
+              active: cableConnection === 'poles', 
+              'opacity-50': !isPolesToAvailable, 
+              disabled: !isPolesToAvailable 
+            }"
+            :disabled="!isPolesToAvailable"
             @click="updateCableConnection('poles')"
           >К полюсам автомата</button>
           <button 
@@ -360,7 +365,7 @@
             @click="updateCableConnection('terminals')"
           >
             На дополнительные клеммы
-            <span class="option-price-add">+1 000 ₽</span>
+            <span class="option-price-add" x-show="shouldChargeForTerminals">+1 000 ₽</span>
           </button>
         </div>
       </div>
