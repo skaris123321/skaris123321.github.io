@@ -1696,16 +1696,6 @@
       "base_price": 38000,
       "main_image": "images/avr-100.jpg",
       "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
-    {
-      "id": 79,
-      "article": "АВР-2-25-М-РОСЭК",
-      "nominal_current": 25,
-      "brand": "TDM",
-      "commutation_type": "monoblock",
-      "inputs_count": "2",
-      "base_price": 38000,
-      "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
       "description": "Шкаф АВР 25А на базе TDM, 2 ввода",
       "full_description": "Трёхфазный АВР 25А на 2 ввода, выполнен на базе моноблочного АВР TDM 25А.",
       "documentation": [
