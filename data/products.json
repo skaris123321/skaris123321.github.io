@@ -9,13 +9,17 @@
       "inputs_count": "2",
       "base_price": 45000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 25А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 25А на 2 ввода, выполнен на базе моноблочного АВР CHINT 25А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 25А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 25А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-25a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -36,7 +40,11 @@
       "inputs_count": "3",
       "base_price": 58500,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 25А на базе CHINT, 3 ввода",
       "full_description": "Трёхфазный АВР 25А на 3 ввода, выполнен на базе моноблочного АВР CHINT 25А.",
       "documentation": [],
@@ -56,13 +64,17 @@
       "inputs_count": "2",
       "base_price": 48000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 32А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 32А на 2 ввода, выполнен на базе моноблочного АВР CHINT 32А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 32А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 32А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-32a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -83,7 +95,11 @@
       "inputs_count": "3",
       "base_price": 62400,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 32А на базе CHINT, 3 ввода",
       "full_description": "Трёхфазный АВР 32А на 3 ввода, выполнен на базе моноблочного АВР CHINT 32А.",
       "documentation": [],
@@ -103,13 +119,17 @@
       "inputs_count": "2",
       "base_price": 52000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 40А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 40А на 2 ввода, выполнен на базе моноблочного АВР CHINT 40А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 40А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 40А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-40a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -130,7 +150,11 @@
       "inputs_count": "3",
       "base_price": 67600,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 40А на базе CHINT, 3 ввода",
       "full_description": "Трёхфазный АВР 40А на 3 ввода, выполнен на базе моноблочного АВР CHINT 40А.",
       "documentation": [],
@@ -150,13 +174,17 @@
       "inputs_count": "2",
       "base_price": 62000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 63А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 63А на 2 ввода, выполнен на базе моноблочного АВР CHINT 63А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 63А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 63А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-63a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -177,7 +205,11 @@
       "inputs_count": "3",
       "base_price": 80600,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 63А на базе CHINT, 3 ввода",
       "full_description": "Трёхфазный АВР 63А на 3 ввода, выполнен на базе моноблочного АВР CHINT 63А.",
       "documentation": [],
@@ -197,13 +229,17 @@
       "inputs_count": "2",
       "base_price": 72000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 80А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 80А на 2 ввода, выполнен на базе моноблочного АВР CHINT 80А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 80А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 80А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-80a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -224,7 +260,11 @@
       "inputs_count": "3",
       "base_price": 93600,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 80А на базе CHINT, 3 ввода",
       "full_description": "Трёхфазный АВР 80А на 3 ввода, выполнен на базе моноблочного АВР CHINT 80А.",
       "documentation": [],
@@ -244,13 +284,17 @@
       "inputs_count": "2",
       "base_price": 87900,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 100А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 100А на 2 ввода, выполнен на базе моноблочного АВР CHINT 100А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 100А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 100А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-100a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -271,7 +315,11 @@
       "inputs_count": "3",
       "base_price": 114300,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 100А на базе CHINT, 3 ввода",
       "full_description": "Трёхфазный АВР 100А на 3 ввода, выполнен на базе моноблочного АВР CHINT 100А.",
       "documentation": [],
@@ -291,7 +339,11 @@
       "inputs_count": "2",
       "base_price": 95000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 125А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе моноблочного АВР CHINT 125А.",
       "documentation": [],
@@ -311,7 +363,11 @@
       "inputs_count": "3",
       "base_price": 123500,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 125А на базе CHINT, 3 ввода",
       "full_description": "Трёхфазный АВР 125А на 3 ввода, выполнен на базе моноблочного АВР CHINT 125А.",
       "documentation": [],
@@ -331,7 +387,11 @@
       "inputs_count": "2",
       "base_price": 105000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 160А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе моноблочного АВР CHINT 160А.",
       "documentation": [],
@@ -351,7 +411,11 @@
       "inputs_count": "3",
       "base_price": 136500,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 160А на базе CHINT, 3 ввода",
       "full_description": "Трёхфазный АВР 160А на 3 ввода, выполнен на базе моноблочного АВР CHINT 160А.",
       "documentation": [],
@@ -371,7 +435,11 @@
       "inputs_count": "2",
       "base_price": 115000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 200А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе моноблочного АВР CHINT 200А.",
       "documentation": [],
@@ -391,7 +459,11 @@
       "inputs_count": "3",
       "base_price": 149500,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 200А на базе CHINT, 3 ввода",
       "full_description": "Трёхфазный АВР 200А на 3 ввода, выполнен на базе моноблочного АВР CHINT 200А.",
       "documentation": [],
@@ -411,7 +483,11 @@
       "inputs_count": "2",
       "base_price": 130000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 250А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе моноблочного АВР CHINT 250А.",
       "documentation": [],
@@ -431,7 +507,11 @@
       "inputs_count": "3",
       "base_price": 169000,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 250А на базе CHINT, 3 ввода",
       "full_description": "Трёхфазный АВР 250А на 3 ввода, выполнен на базе моноблочного АВР CHINT 250А.",
       "documentation": [],
@@ -451,7 +531,11 @@
       "inputs_count": "2",
       "base_price": 170000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 400А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе моноблочного АВР CHINT 400А.",
       "documentation": [],
@@ -471,7 +555,11 @@
       "inputs_count": "3",
       "base_price": 221000,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 400А на базе CHINT, 3 ввода",
       "full_description": "Трёхфазный АВР 400А на 3 ввода, выполнен на базе моноблочного АВР CHINT 400А.",
       "documentation": [],
@@ -491,7 +579,11 @@
       "inputs_count": "2",
       "base_price": 220000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 630А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе моноблочного АВР CHINT 630А.",
       "documentation": [],
@@ -511,7 +603,11 @@
       "inputs_count": "3",
       "base_price": 286000,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 630А на базе CHINT, 3 ввода",
       "full_description": "Трёхфазный АВР 630А на 3 ввода, выполнен на базе моноблочного АВР CHINT 630А.",
       "documentation": [],
@@ -531,7 +627,11 @@
       "inputs_count": "2",
       "base_price": 280000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 800А на базе CHINT, 2 ввода",
       "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе моноблочного АВР CHINT 800А.",
       "documentation": [],
@@ -551,7 +651,11 @@
       "inputs_count": "3",
       "base_price": 364000,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 800А на базе CHINT, 3 ввода",
       "full_description": "Трёхфазный АВР 800А на 3 ввода, выполнен на базе моноблочного АВР CHINT 800А.",
       "documentation": [],
@@ -571,13 +675,17 @@
       "inputs_count": "2",
       "base_price": 42000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 25А на базе EKF, 2 ввода",
       "full_description": "Трёхфазный АВР 25А на 2 ввода, выполнен на базе моноблочного АВР EKF 25А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 25А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 25А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-25a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -598,7 +706,11 @@
       "inputs_count": "3",
       "base_price": 54600,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 25А на базе EKF, 3 ввода",
       "full_description": "Трёхфазный АВР 25А на 3 ввода, выполнен на базе моноблочного АВР EKF 25А.",
       "documentation": [],
@@ -618,13 +730,17 @@
       "inputs_count": "2",
       "base_price": 45000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 32А на базе EKF, 2 ввода",
       "full_description": "Трёхфазный АВР 32А на 2 ввода, выполнен на базе моноблочного АВР EKF 32А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 32А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 32А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-32a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -645,7 +761,11 @@
       "inputs_count": "3",
       "base_price": 58500,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 32А на базе EKF, 3 ввода",
       "full_description": "Трёхфазный АВР 32А на 3 ввода, выполнен на базе моноблочного АВР EKF 32А.",
       "documentation": [],
@@ -665,13 +785,17 @@
       "inputs_count": "2",
       "base_price": 49000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 40А на базе EKF, 2 ввода",
       "full_description": "Трёхфазный АВР 40А на 2 ввода, выполнен на базе моноблочного АВР EKF 40А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 40А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 40А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-40a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -692,7 +816,11 @@
       "inputs_count": "3",
       "base_price": 63700,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 40А на базе EKF, 3 ввода",
       "full_description": "Трёхфазный АВР 40А на 3 ввода, выполнен на базе моноблочного АВР EKF 40А.",
       "documentation": [],
@@ -712,13 +840,17 @@
       "inputs_count": "2",
       "base_price": 58000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 63А на базе EKF, 2 ввода",
       "full_description": "Трёхфазный АВР 63А на 2 ввода, выполнен на базе моноблочного АВР EKF 63А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 63А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 63А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-63a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -739,7 +871,11 @@
       "inputs_count": "3",
       "base_price": 75400,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 63А на базе EKF, 3 ввода",
       "full_description": "Трёхфазный АВР 63А на 3 ввода, выполнен на базе моноблочного АВР EKF 63А.",
       "documentation": [],
@@ -759,13 +895,17 @@
       "inputs_count": "2",
       "base_price": 68000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 80А на базе EKF, 2 ввода",
       "full_description": "Трёхфазный АВР 80А на 2 ввода, выполнен на базе моноблочного АВР EKF 80А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 80А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 80А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-80a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -786,7 +926,11 @@
       "inputs_count": "3",
       "base_price": 88400,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 80А на базе EKF, 3 ввода",
       "full_description": "Трёхфазный АВР 80А на 3 ввода, выполнен на базе моноблочного АВР EKF 80А.",
       "documentation": [],
@@ -806,13 +950,17 @@
       "inputs_count": "2",
       "base_price": 82000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 100А на базе EKF, 2 ввода",
       "full_description": "Трёхфазный АВР 100А на 2 ввода, выполнен на базе моноблочного АВР EKF 100А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 100А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 100А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-100a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -833,7 +981,11 @@
       "inputs_count": "3",
       "base_price": 106600,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 100А на базе EKF, 3 ввода",
       "full_description": "Трёхфазный АВР 100А на 3 ввода, выполнен на базе моноблочного АВР EKF 100А.",
       "documentation": [],
@@ -853,7 +1005,11 @@
       "inputs_count": "2",
       "base_price": 89000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 125А на базе EKF, 2 ввода",
       "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе моноблочного АВР EKF 125А.",
       "documentation": [],
@@ -873,7 +1029,11 @@
       "inputs_count": "3",
       "base_price": 115700,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 125А на базе EKF, 3 ввода",
       "full_description": "Трёхфазный АВР 125А на 3 ввода, выполнен на базе моноблочного АВР EKF 125А.",
       "documentation": [],
@@ -893,7 +1053,11 @@
       "inputs_count": "2",
       "base_price": 98000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 160А на базе EKF, 2 ввода",
       "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе моноблочного АВР EKF 160А.",
       "documentation": [],
@@ -913,7 +1077,11 @@
       "inputs_count": "3",
       "base_price": 127400,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 160А на базе EKF, 3 ввода",
       "full_description": "Трёхфазный АВР 160А на 3 ввода, выполнен на базе моноблочного АВР EKF 160А.",
       "documentation": [],
@@ -933,7 +1101,11 @@
       "inputs_count": "2",
       "base_price": 108000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 200А на базе EKF, 2 ввода",
       "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе моноблочного АВР EKF 200А.",
       "documentation": [],
@@ -953,7 +1125,11 @@
       "inputs_count": "3",
       "base_price": 140400,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 200А на базе EKF, 3 ввода",
       "full_description": "Трёхфазный АВР 200А на 3 ввода, выполнен на базе моноблочного АВР EKF 200А.",
       "documentation": [],
@@ -973,7 +1149,11 @@
       "inputs_count": "2",
       "base_price": 122000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 250А на базе EKF, 2 ввода",
       "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе моноблочного АВР EKF 250А.",
       "documentation": [],
@@ -993,7 +1173,11 @@
       "inputs_count": "3",
       "base_price": 158600,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 250А на базе EKF, 3 ввода",
       "full_description": "Трёхфазный АВР 250А на 3 ввода, выполнен на базе моноблочного АВР EKF 250А.",
       "documentation": [],
@@ -1013,7 +1197,11 @@
       "inputs_count": "2",
       "base_price": 160000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 400А на базе EKF, 2 ввода",
       "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе моноблочного АВР EKF 400А.",
       "documentation": [],
@@ -1033,7 +1221,11 @@
       "inputs_count": "3",
       "base_price": 208000,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 400А на базе EKF, 3 ввода",
       "full_description": "Трёхфазный АВР 400А на 3 ввода, выполнен на базе моноблочного АВР EKF 400А.",
       "documentation": [],
@@ -1053,7 +1245,11 @@
       "inputs_count": "2",
       "base_price": 205000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 630А на базе EKF, 2 ввода",
       "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе моноблочного АВР EKF 630А.",
       "documentation": [],
@@ -1073,7 +1269,11 @@
       "inputs_count": "3",
       "base_price": 266500,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 630А на базе EKF, 3 ввода",
       "full_description": "Трёхфазный АВР 630А на 3 ввода, выполнен на базе моноблочного АВР EKF 630А.",
       "documentation": [],
@@ -1093,7 +1293,11 @@
       "inputs_count": "2",
       "base_price": 260000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 800А на базе EKF, 2 ввода",
       "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе моноблочного АВР EKF 800А.",
       "documentation": [],
@@ -1113,7 +1317,11 @@
       "inputs_count": "3",
       "base_price": 338000,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 800А на базе EKF, 3 ввода",
       "full_description": "Трёхфазный АВР 800А на 3 ввода, выполнен на базе моноблочного АВР EKF 800А.",
       "documentation": [],
@@ -1133,13 +1341,17 @@
       "inputs_count": "2",
       "base_price": 40000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 25А на базе Dekraft, 2 ввода",
       "full_description": "Трёхфазный АВР 25А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 25А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 25А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 25А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-25a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -1160,7 +1372,11 @@
       "inputs_count": "3",
       "base_price": 52000,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 25А на базе Dekraft, 3 ввода",
       "full_description": "Трёхфазный АВР 25А на 3 ввода, выполнен на базе моноблочного АВР Dekraft 25А.",
       "documentation": [],
@@ -1180,13 +1396,17 @@
       "inputs_count": "2",
       "base_price": 43000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 32А на базе Dekraft, 2 ввода",
       "full_description": "Трёхфазный АВР 32А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 32А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 32А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 32А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-32a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -1207,7 +1427,11 @@
       "inputs_count": "3",
       "base_price": 55900,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 32А на базе Dekraft, 3 ввода",
       "full_description": "Трёхфазный АВР 32А на 3 ввода, выполнен на базе моноблочного АВР Dekraft 32А.",
       "documentation": [],
@@ -1227,13 +1451,17 @@
       "inputs_count": "2",
       "base_price": 47000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 40А на базе Dekraft, 2 ввода",
       "full_description": "Трёхфазный АВР 40А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 40А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 40А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 40А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-40a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -1254,7 +1482,11 @@
       "inputs_count": "3",
       "base_price": 61100,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 40А на базе Dekraft, 3 ввода",
       "full_description": "Трёхфазный АВР 40А на 3 ввода, выполнен на базе моноблочного АВР Dekraft 40А.",
       "documentation": [],
@@ -1274,13 +1506,17 @@
       "inputs_count": "2",
       "base_price": 55000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 63А на базе Dekraft, 2 ввода",
       "full_description": "Трёхфазный АВР 63А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 63А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 63А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 63А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-63a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -1301,7 +1537,11 @@
       "inputs_count": "3",
       "base_price": 71500,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 63А на базе Dekraft, 3 ввода",
       "full_description": "Трёхфазный АВР 63А на 3 ввода, выполнен на базе моноблочного АВР Dekraft 63А.",
       "documentation": [],
@@ -1321,13 +1561,17 @@
       "inputs_count": "2",
       "base_price": 65000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 80А на базе Dekraft, 2 ввода",
       "full_description": "Трёхфазный АВР 80А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 80А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 80А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 80А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-80a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -1348,7 +1592,11 @@
       "inputs_count": "3",
       "base_price": 84500,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 80А на базе Dekraft, 3 ввода",
       "full_description": "Трёхфазный АВР 80А на 3 ввода, выполнен на базе моноблочного АВР Dekraft 80А.",
       "documentation": [],
@@ -1368,13 +1616,17 @@
       "inputs_count": "2",
       "base_price": 79000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 100А на базе Dekraft, 2 ввода",
       "full_description": "Трёхфазный АВР 100А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 100А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 100А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 100А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-100a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -1395,7 +1647,11 @@
       "inputs_count": "3",
       "base_price": 102700,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 100А на базе Dekraft, 3 ввода",
       "full_description": "Трёхфазный АВР 100А на 3 ввода, выполнен на базе моноблочного АВР Dekraft 100А.",
       "documentation": [],
@@ -1415,7 +1671,11 @@
       "inputs_count": "2",
       "base_price": 86000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 125А на базе Dekraft, 2 ввода",
       "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 125А.",
       "documentation": [],
@@ -1435,7 +1695,11 @@
       "inputs_count": "3",
       "base_price": 111800,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 125А на базе Dekraft, 3 ввода",
       "full_description": "Трёхфазный АВР 125А на 3 ввода, выполнен на базе моноблочного АВР Dekraft 125А.",
       "documentation": [],
@@ -1455,7 +1719,11 @@
       "inputs_count": "2",
       "base_price": 95000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 160А на базе Dekraft, 2 ввода",
       "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 160А.",
       "documentation": [],
@@ -1475,7 +1743,11 @@
       "inputs_count": "3",
       "base_price": 123500,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 160А на базе Dekraft, 3 ввода",
       "full_description": "Трёхфазный АВР 160А на 3 ввода, выполнен на базе моноблочного АВР Dekraft 160А.",
       "documentation": [],
@@ -1495,7 +1767,11 @@
       "inputs_count": "2",
       "base_price": 105000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 200А на базе Dekraft, 2 ввода",
       "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 200А.",
       "documentation": [],
@@ -1515,7 +1791,11 @@
       "inputs_count": "3",
       "base_price": 136500,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 200А на базе Dekraft, 3 ввода",
       "full_description": "Трёхфазный АВР 200А на 3 ввода, выполнен на базе моноблочного АВР Dekraft 200А.",
       "documentation": [],
@@ -1535,7 +1815,11 @@
       "inputs_count": "2",
       "base_price": 118000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 250А на базе Dekraft, 2 ввода",
       "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 250А.",
       "documentation": [],
@@ -1555,7 +1839,11 @@
       "inputs_count": "3",
       "base_price": 153400,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 250А на базе Dekraft, 3 ввода",
       "full_description": "Трёхфазный АВР 250А на 3 ввода, выполнен на базе моноблочного АВР Dekraft 250А.",
       "documentation": [],
@@ -1575,7 +1863,11 @@
       "inputs_count": "2",
       "base_price": 155000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 400А на базе Dekraft, 2 ввода",
       "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 400А.",
       "documentation": [],
@@ -1595,7 +1887,11 @@
       "inputs_count": "3",
       "base_price": 201500,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 400А на базе Dekraft, 3 ввода",
       "full_description": "Трёхфазный АВР 400А на 3 ввода, выполнен на базе моноблочного АВР Dekraft 400А.",
       "documentation": [],
@@ -1615,7 +1911,11 @@
       "inputs_count": "2",
       "base_price": 198000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 630А на базе Dekraft, 2 ввода",
       "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 630А.",
       "documentation": [],
@@ -1635,7 +1935,11 @@
       "inputs_count": "3",
       "base_price": 257400,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 630А на базе Dekraft, 3 ввода",
       "full_description": "Трёхфазный АВР 630А на 3 ввода, выполнен на базе моноблочного АВР Dekraft 630А.",
       "documentation": [],
@@ -1655,7 +1959,11 @@
       "inputs_count": "2",
       "base_price": 250000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 800А на базе Dekraft, 2 ввода",
       "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 800А.",
       "documentation": [],
@@ -1675,7 +1983,11 @@
       "inputs_count": "3",
       "base_price": 325000,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 800А на базе Dekraft, 3 ввода",
       "full_description": "Трёхфазный АВР 800А на 3 ввода, выполнен на базе моноблочного АВР Dekraft 800А.",
       "documentation": [],
@@ -1695,13 +2007,17 @@
       "inputs_count": "2",
       "base_price": 38000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 25А на базе TDM, 2 ввода",
       "full_description": "Трёхфазный АВР 25А на 2 ввода, выполнен на базе моноблочного АВР TDM 25А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 25А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 25А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-25a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -1722,7 +2038,11 @@
       "inputs_count": "3",
       "base_price": 49400,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 25А на базе TDM, 3 ввода",
       "full_description": "Трёхфазный АВР 25А на 3 ввода, выполнен на базе моноблочного АВР TDM 25А.",
       "documentation": [],
@@ -1742,13 +2062,17 @@
       "inputs_count": "2",
       "base_price": 41000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 32А на базе TDM, 2 ввода",
       "full_description": "Трёхфазный АВР 32А на 2 ввода, выполнен на базе моноблочного АВР TDM 32А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 32А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 32А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-32a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -1769,7 +2093,11 @@
       "inputs_count": "3",
       "base_price": 53300,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 32А на базе TDM, 3 ввода",
       "full_description": "Трёхфазный АВР 32А на 3 ввода, выполнен на базе моноблочного АВР TDM 32А.",
       "documentation": [],
@@ -1789,13 +2117,17 @@
       "inputs_count": "2",
       "base_price": 45000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 40А на базе TDM, 2 ввода",
       "full_description": "Трёхфазный АВР 40А на 2 ввода, выполнен на базе моноблочного АВР TDM 40А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 40А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 40А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-40a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -1816,7 +2148,11 @@
       "inputs_count": "3",
       "base_price": 58500,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 40А на базе TDM, 3 ввода",
       "full_description": "Трёхфазный АВР 40А на 3 ввода, выполнен на базе моноблочного АВР TDM 40А.",
       "documentation": [],
@@ -1836,13 +2172,17 @@
       "inputs_count": "2",
       "base_price": 52000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 63А на базе TDM, 2 ввода",
       "full_description": "Трёхфазный АВР 63А на 2 ввода, выполнен на базе моноблочного АВР TDM 63А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 63А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 63А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-63a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -1863,7 +2203,11 @@
       "inputs_count": "3",
       "base_price": 67600,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 63А на базе TDM, 3 ввода",
       "full_description": "Трёхфазный АВР 63А на 3 ввода, выполнен на базе моноблочного АВР TDM 63А.",
       "documentation": [],
@@ -1883,13 +2227,17 @@
       "inputs_count": "2",
       "base_price": 62000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 80А на базе TDM, 2 ввода",
       "full_description": "Трёхфазный АВР 80А на 2 ввода, выполнен на базе моноблочного АВР TDM 80А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 80А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 80А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-80a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -1910,7 +2258,11 @@
       "inputs_count": "3",
       "base_price": 80600,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 80А на базе TDM, 3 ввода",
       "full_description": "Трёхфазный АВР 80А на 3 ввода, выполнен на базе моноблочного АВР TDM 80А.",
       "documentation": [],
@@ -1930,13 +2282,17 @@
       "inputs_count": "2",
       "base_price": 75000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 100А на базе TDM, 2 ввода",
       "full_description": "Трёхфазный АВР 100А на 2 ввода, выполнен на базе моноблочного АВР TDM 100А.",
       "documentation": [
         {
           "name": "Комплект чертежей шкафа АВР 100А на 2 ввода",
-          "url": "documents/monoblock-avr/2-inputs/25-100A/Комплект чертежей шкафа АВР 100А на 2 ввода.pdf",
+          "url": "documents/monoblock-avr/2-inputs/25-100A/avr-100a-2inputs-drawings.pdf",
           "size": 2048000,
           "type": "pdf"
         }
@@ -1957,7 +2313,11 @@
       "inputs_count": "3",
       "base_price": 97500,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 100А на базе TDM, 3 ввода",
       "full_description": "Трёхфазный АВР 100А на 3 ввода, выполнен на базе моноблочного АВР TDM 100А.",
       "documentation": [],
@@ -1977,7 +2337,11 @@
       "inputs_count": "2",
       "base_price": 82000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 125А на базе TDM, 2 ввода",
       "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе моноблочного АВР TDM 125А.",
       "documentation": [],
@@ -1997,7 +2361,11 @@
       "inputs_count": "3",
       "base_price": 106600,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 125А на базе TDM, 3 ввода",
       "full_description": "Трёхфазный АВР 125А на 3 ввода, выполнен на базе моноблочного АВР TDM 125А.",
       "documentation": [],
@@ -2017,7 +2385,11 @@
       "inputs_count": "2",
       "base_price": 90000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 160А на базе TDM, 2 ввода",
       "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе моноблочного АВР TDM 160А.",
       "documentation": [],
@@ -2037,7 +2409,11 @@
       "inputs_count": "3",
       "base_price": 117000,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 160А на базе TDM, 3 ввода",
       "full_description": "Трёхфазный АВР 160А на 3 ввода, выполнен на базе моноблочного АВР TDM 160А.",
       "documentation": [],
@@ -2057,7 +2433,11 @@
       "inputs_count": "2",
       "base_price": 100000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 200А на базе TDM, 2 ввода",
       "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе моноблочного АВР TDM 200А.",
       "documentation": [],
@@ -2077,7 +2457,11 @@
       "inputs_count": "3",
       "base_price": 130000,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 200А на базе TDM, 3 ввода",
       "full_description": "Трёхфазный АВР 200А на 3 ввода, выполнен на базе моноблочного АВР TDM 200А.",
       "documentation": [],
@@ -2097,7 +2481,11 @@
       "inputs_count": "2",
       "base_price": 112000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 250А на базе TDM, 2 ввода",
       "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе моноблочного АВР TDM 250А.",
       "documentation": [],
@@ -2117,7 +2505,11 @@
       "inputs_count": "3",
       "base_price": 145600,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 250А на базе TDM, 3 ввода",
       "full_description": "Трёхфазный АВР 250А на 3 ввода, выполнен на базе моноблочного АВР TDM 250А.",
       "documentation": [],
@@ -2137,7 +2529,11 @@
       "inputs_count": "2",
       "base_price": 148000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 400А на базе TDM, 2 ввода",
       "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе моноблочного АВР TDM 400А.",
       "documentation": [],
@@ -2157,7 +2553,11 @@
       "inputs_count": "3",
       "base_price": 192400,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 400А на базе TDM, 3 ввода",
       "full_description": "Трёхфазный АВР 400А на 3 ввода, выполнен на базе моноблочного АВР TDM 400А.",
       "documentation": [],
@@ -2177,7 +2577,11 @@
       "inputs_count": "2",
       "base_price": 190000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 630А на базе TDM, 2 ввода",
       "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе моноблочного АВР TDM 630А.",
       "documentation": [],
@@ -2197,7 +2601,11 @@
       "inputs_count": "3",
       "base_price": 247000,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 630А на базе TDM, 3 ввода",
       "full_description": "Трёхфазный АВР 630А на 3 ввода, выполнен на базе моноблочного АВР TDM 630А.",
       "documentation": [],
@@ -2217,7 +2625,11 @@
       "inputs_count": "2",
       "base_price": 240000,
       "main_image": "images/avr-100.jpg",
-      "images": ["images/avr-100.jpg", "images/avr-1002.jpg", "images/avr-1003.jpg"],
+      "images": [
+        "images/avr-100.jpg",
+        "images/avr-1002.jpg",
+        "images/avr-1003.jpg"
+      ],
       "description": "Шкаф АВР 800А на базе TDM, 2 ввода",
       "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе моноблочного АВР TDM 800А.",
       "documentation": [],
@@ -2237,7 +2649,11 @@
       "inputs_count": "3",
       "base_price": 312000,
       "main_image": "images/avr-3v.jpg",
-      "images": ["images/avr-3v.jpg", "images/avr-3v2.jpg", "images/avr-3v3.jpg"],
+      "images": [
+        "images/avr-3v.jpg",
+        "images/avr-3v2.jpg",
+        "images/avr-3v3.jpg"
+      ],
       "description": "Шкаф АВР 800А на базе TDM, 3 ввода",
       "full_description": "Трёхфазный АВР 800А на 3 ввода, выполнен на базе моноблочного АВР TDM 800А.",
       "documentation": [],
@@ -2257,7 +2673,10 @@
       "inputs_count": "2",
       "base_price": 45000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 25А на базе IEK (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 25А на 2 ввода, выполнен на базе контакторов IEK 25А.",
       "documentation": [],
@@ -2277,7 +2696,10 @@
       "inputs_count": "2",
       "base_price": 48000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 32А на базе IEK (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 32А на 2 ввода, выполнен на базе контакторов IEK 32А.",
       "documentation": [],
@@ -2297,7 +2719,10 @@
       "inputs_count": "2",
       "base_price": 52000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 40А на базе IEK (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 40А на 2 ввода, выполнен на базе контакторов IEK 40А.",
       "documentation": [],
@@ -2317,7 +2742,10 @@
       "inputs_count": "2",
       "base_price": 58000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 63А на базе IEK (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 63А на 2 ввода, выполнен на базе контакторов IEK 63А.",
       "documentation": [],
@@ -2337,7 +2765,10 @@
       "inputs_count": "2",
       "base_price": 65000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 80А на базе IEK (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 80А на 2 ввода, выполнен на базе контакторов IEK 80А.",
       "documentation": [],
@@ -2357,7 +2788,10 @@
       "inputs_count": "2",
       "base_price": 87900,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 100А на базе IEK (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 100А на 2 ввода, выполнен на базе контакторов IEK 100А.",
       "documentation": [],
@@ -2377,7 +2811,10 @@
       "inputs_count": "2",
       "base_price": 95000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 125А на базе IEK (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе контакторов IEK 125А.",
       "documentation": [],
@@ -2397,7 +2834,10 @@
       "inputs_count": "2",
       "base_price": 110000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 160А на базе IEK (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов IEK 160А.",
       "documentation": [],
@@ -2417,7 +2857,10 @@
       "inputs_count": "2",
       "base_price": 130000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 200А на базе IEK (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов IEK 200А.",
       "documentation": [],
@@ -2437,7 +2880,10 @@
       "inputs_count": "2",
       "base_price": 150000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 250А на базе IEK (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов IEK 250А.",
       "documentation": [],
@@ -2456,8 +2902,11 @@
       "commutation_type": "contactors",
       "inputs_count": "2",
       "base_price": 200000,
-     "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "main_image": "images/avr-kont.jpg",
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 400А на базе IEK (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов IEK 400А.",
       "documentation": [],
@@ -2477,7 +2926,10 @@
       "inputs_count": "2",
       "base_price": 250000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 630А на базе IEK (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов IEK 630А.",
       "documentation": [],
@@ -2497,7 +2949,10 @@
       "inputs_count": "2",
       "base_price": 300000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 800А на базе IEK (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе контакторов IEK 800А.",
       "documentation": [],
@@ -2517,7 +2972,10 @@
       "inputs_count": "2",
       "base_price": 45000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 25А на базе CHINT (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 25А на 2 ввода, выполнен на базе контакторов CHINT 25А.",
       "documentation": [],
@@ -2537,7 +2995,10 @@
       "inputs_count": "2",
       "base_price": 48000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 32А на базе CHINT (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 32А на 2 ввода, выполнен на базе контакторов CHINT 32А.",
       "documentation": [],
@@ -2557,7 +3018,10 @@
       "inputs_count": "2",
       "base_price": 52000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 40А на базе CHINT (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 40А на 2 ввода, выполнен на базе контакторов CHINT 40А.",
       "documentation": [],
@@ -2577,7 +3041,10 @@
       "inputs_count": "2",
       "base_price": 62000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 63А на базе CHINT (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 63А на 2 ввода, выполнен на базе контакторов CHINT 63А.",
       "documentation": [],
@@ -2597,7 +3064,10 @@
       "inputs_count": "2",
       "base_price": 72000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 80А на базе CHINT (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 80А на 2 ввода, выполнен на базе контакторов CHINT 80А.",
       "documentation": [],
@@ -2617,7 +3087,10 @@
       "inputs_count": "2",
       "base_price": 87900,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 100А на базе CHINT (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 100А на 2 ввода, выполнен на базе контакторов CHINT 100А.",
       "documentation": [],
@@ -2637,7 +3110,10 @@
       "inputs_count": "2",
       "base_price": 95000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 125А на базе CHINT (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе контакторов CHINT 125А.",
       "documentation": [],
@@ -2657,7 +3133,10 @@
       "inputs_count": "2",
       "base_price": 105000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 160А на базе CHINT (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов CHINT 160А.",
       "documentation": [],
@@ -2677,7 +3156,10 @@
       "inputs_count": "2",
       "base_price": 115000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 200А на базе CHINT (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов CHINT 200А.",
       "documentation": [],
@@ -2697,7 +3179,10 @@
       "inputs_count": "2",
       "base_price": 130000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 250А на базе CHINT (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов CHINT 250А.",
       "documentation": [],
@@ -2717,7 +3202,10 @@
       "inputs_count": "2",
       "base_price": 170000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 400А на базе CHINT (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов CHINT 400А.",
       "documentation": [],
@@ -2737,7 +3225,10 @@
       "inputs_count": "2",
       "base_price": 220000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 630А на базе CHINT (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов CHINT 630А.",
       "documentation": [],
@@ -2757,7 +3248,10 @@
       "inputs_count": "2",
       "base_price": 280000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 800А на базе CHINT (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе контакторов CHINT 800А.",
       "documentation": [],
@@ -2777,7 +3271,10 @@
       "inputs_count": "2",
       "base_price": 42000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 25А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 25А на 2 ввода, выполнен на базе контакторов EKF 25А.",
       "documentation": [],
@@ -2797,7 +3294,10 @@
       "inputs_count": "2",
       "base_price": 82000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 100А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 100А на 2 ввода, выполнен на базе контакторов EKF 100А.",
       "documentation": [],
@@ -2817,7 +3317,10 @@
       "inputs_count": "2",
       "base_price": 40000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 25А на базе Dekraft (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 25А на 2 ввода, выполнен на базе контакторов Dekraft 25А.",
       "documentation": [],
@@ -2837,7 +3340,10 @@
       "inputs_count": "2",
       "base_price": 79000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 100А на базе Dekraft (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 100А на 2 ввода, выполнен на базе контакторов Dekraft 100А.",
       "documentation": [],
@@ -2857,7 +3363,10 @@
       "inputs_count": "2",
       "base_price": 38000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 25А на базе TDM (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 25А на 2 ввода, выполнен на базе контакторов TDM 25А.",
       "documentation": [],
@@ -2877,7 +3386,10 @@
       "inputs_count": "2",
       "base_price": 75000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 100А на базе TDM (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 100А на 2 ввода, выполнен на базе контакторов TDM 100А.",
       "documentation": [],
@@ -2897,7 +3409,10 @@
       "inputs_count": "2",
       "base_price": 45000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 32А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 32А на 2 ввода, выполнен на базе контакторов EKF 32А.",
       "documentation": [],
@@ -2917,7 +3432,10 @@
       "inputs_count": "2",
       "base_price": 49000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 40А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 40А на 2 ввода, выполнен на базе контакторов EKF 40А.",
       "documentation": [],
@@ -2937,7 +3455,10 @@
       "inputs_count": "2",
       "base_price": 58000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 63А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 63А на 2 ввода, выполнен на базе контакторов EKF 63А.",
       "documentation": [],
@@ -2957,7 +3478,10 @@
       "inputs_count": "2",
       "base_price": 68000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 80А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 80А на 2 ввода, выполнен на базе контакторов EKF 80А.",
       "documentation": [],
@@ -2977,7 +3501,10 @@
       "inputs_count": "2",
       "base_price": 89000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 125А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе контакторов EKF 125А.",
       "documentation": [],
@@ -2997,7 +3524,10 @@
       "inputs_count": "2",
       "base_price": 98000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 160А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов EKF 160А.",
       "documentation": [],
@@ -3017,7 +3547,10 @@
       "inputs_count": "2",
       "base_price": 108000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 200А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов EKF 200А.",
       "documentation": [],
@@ -3037,7 +3570,10 @@
       "inputs_count": "2",
       "base_price": 122000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 250А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов EKF 250А.",
       "documentation": [],
@@ -3057,7 +3593,10 @@
       "inputs_count": "2",
       "base_price": 160000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 400А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов EKF 400А.",
       "documentation": [],
@@ -3077,7 +3616,10 @@
       "inputs_count": "2",
       "base_price": 205000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 630А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов EKF 630А.",
       "documentation": [],
@@ -3097,7 +3639,10 @@
       "inputs_count": "2",
       "base_price": 260000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 800А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе контакторов EKF 800А.",
       "documentation": [],
@@ -3117,7 +3662,10 @@
       "inputs_count": "2",
       "base_price": 98000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 160А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов EKF 160А.",
       "documentation": [],
@@ -3137,7 +3685,10 @@
       "inputs_count": "2",
       "base_price": 108000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 200А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов EKF 200А.",
       "documentation": [],
@@ -3157,7 +3708,10 @@
       "inputs_count": "2",
       "base_price": 122000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 250А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов EKF 250А.",
       "documentation": [],
@@ -3177,7 +3731,10 @@
       "inputs_count": "2",
       "base_price": 160000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 400А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов EKF 400А.",
       "documentation": [],
@@ -3197,7 +3754,10 @@
       "inputs_count": "2",
       "base_price": 205000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 630А на базе EKF (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов EKF 630А.",
       "documentation": [],
@@ -3217,7 +3777,10 @@
       "inputs_count": "2",
       "base_price": 43000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 32А на базе Dekraft (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 32А на 2 ввода, выполнен на базе контакторов Dekraft 32А.",
       "documentation": [],
@@ -3237,7 +3800,10 @@
       "inputs_count": "2",
       "base_price": 47000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 40А на базе Dekraft (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 40А на 2 ввода, выполнен на базе контакторов Dekraft 40А.",
       "documentation": [],
@@ -3257,7 +3823,10 @@
       "inputs_count": "2",
       "base_price": 55000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 63А на базе Dekraft (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 63А на 2 ввода, выполнен на базе контакторов Dekraft 63А.",
       "documentation": [],
@@ -3277,7 +3846,10 @@
       "inputs_count": "2",
       "base_price": 65000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 80А на базе Dekraft (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 80А на 2 ввода, выполнен на базе контакторов Dekraft 80А.",
       "documentation": [],
@@ -3297,7 +3869,10 @@
       "inputs_count": "2",
       "base_price": 86000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 125А на базе Dekraft (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе контакторов Dekraft 125А.",
       "documentation": [],
@@ -3317,7 +3892,10 @@
       "inputs_count": "2",
       "base_price": 95000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 160А на базе Dekraft (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов Dekraft 160А.",
       "documentation": [],
@@ -3337,7 +3915,10 @@
       "inputs_count": "2",
       "base_price": 105000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 200А на базе Dekraft (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов Dekraft 200А.",
       "documentation": [],
@@ -3357,7 +3938,10 @@
       "inputs_count": "2",
       "base_price": 118000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 250А на базе Dekraft (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов Dekraft 250А.",
       "documentation": [],
@@ -3377,7 +3961,10 @@
       "inputs_count": "2",
       "base_price": 155000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 400А на базе Dekraft (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов Dekraft 400А.",
       "documentation": [],
@@ -3397,7 +3984,10 @@
       "inputs_count": "2",
       "base_price": 198000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 630А на базе Dekraft (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов Dekraft 630А.",
       "documentation": [],
@@ -3417,7 +4007,10 @@
       "inputs_count": "2",
       "base_price": 250000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 800А на базе Dekraft (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе контакторов Dekraft 800А.",
       "documentation": [],
@@ -3437,7 +4030,10 @@
       "inputs_count": "2",
       "base_price": 41000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 32А на базе TDM (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 32А на 2 ввода, выполнен на базе контакторов TDM 32А.",
       "documentation": [],
@@ -3457,7 +4053,10 @@
       "inputs_count": "2",
       "base_price": 45000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 40А на базе TDM (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 40А на 2 ввода, выполнен на базе контакторов TDM 40А.",
       "documentation": [],
@@ -3477,7 +4076,10 @@
       "inputs_count": "2",
       "base_price": 52000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 63А на базе TDM (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 63А на 2 ввода, выполнен на базе контакторов TDM 63А.",
       "documentation": [],
@@ -3497,7 +4099,10 @@
       "inputs_count": "2",
       "base_price": 62000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 80А на базе TDM (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 80А на 2 ввода, выполнен на базе контакторов TDM 80А.",
       "documentation": [],
@@ -3517,7 +4122,10 @@
       "inputs_count": "2",
       "base_price": 82000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 125А на базе TDM (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе контакторов TDM 125А.",
       "documentation": [],
@@ -3537,7 +4145,10 @@
       "inputs_count": "2",
       "base_price": 90000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 160А на базе TDM (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов TDM 160А.",
       "documentation": [],
@@ -3557,7 +4168,10 @@
       "inputs_count": "2",
       "base_price": 100000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 200А на базе TDM (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов TDM 200А.",
       "documentation": [],
@@ -3577,7 +4191,10 @@
       "inputs_count": "2",
       "base_price": 112000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 250А на базе TDM (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов TDM 250А.",
       "documentation": [],
@@ -3597,7 +4214,10 @@
       "inputs_count": "2",
       "base_price": 148000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 400А на базе TDM (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов TDM 400А.",
       "documentation": [],
@@ -3617,7 +4237,10 @@
       "inputs_count": "2",
       "base_price": 188000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 630А на базе TDM (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов TDM 630А.",
       "documentation": [],
@@ -3637,7 +4260,10 @@
       "inputs_count": "2",
       "base_price": 238000,
       "main_image": "images/avr-kont.jpg",
-      "images": ["images/avr-kont.jpg", "images/avr-kont2.jpg"],
+      "images": [
+        "images/avr-kont.jpg",
+        "images/avr-kont2.jpg"
+      ],
       "description": "Шкаф АВР 800А на базе TDM (контакторы), 2 ввода",
       "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе контакторов TDM 800А.",
       "documentation": [],
