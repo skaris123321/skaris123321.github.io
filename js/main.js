@@ -583,29 +583,8 @@ document.addEventListener('alpine:init', () => {
 
       // Предварительный просмотр документа
       previewDocument(url) {
-        // Создаем модальное окно для просмотра PDF
-        const modal = document.createElement('div');
-        modal.className = 'document-modal';
-        modal.innerHTML = `
-            <div class="document-modal-content">
-                <div class="document-modal-header">
-                    <h3>Просмотр документа</h3>
-                    <button class="document-modal-close" onclick="this.closest('.document-modal').remove()">×</button>
-                </div>
-                <div class="document-modal-body">
-                    <iframe src="${url}" width="100%" height="600px" frameborder="0"></iframe>
-                </div>
-            </div>
-        `;
-
-        document.body.appendChild(modal);
-
-        // Закрытие по клику вне модального окна
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.remove();
-            }
-        });
+        // Открываем PDF в новой вкладке
+        window.open(url, '_blank');
       },
 
       showModal(options) {
