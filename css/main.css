@@ -2644,15 +2644,6 @@ h1.category-title {
   border: none;
 }
 
-/* Иконки для кнопок */
-.icon-download::before {
-  content: "⬇";
-}
-
-.icon-eye::before {
-  content: "👁";
-}
-
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
   .document-item {
