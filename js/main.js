@@ -356,8 +356,6 @@ document.addEventListener('alpine:init', () => {
       async loadProductById(productId) {
         this.loading = true;
         
-        console.log('Загружаем товар по ID:', productId);
-        
         try {
           if (!productsAPI) {
             throw new Error('ProductsAPI не инициализирован');
@@ -365,25 +363,14 @@ document.addEventListener('alpine:init', () => {
 
           const data = await productsAPI.getProduct({ id: productId });
           
-          console.log('Ответ API для товара ID', productId, ':', data);
-          
           if (data.success && data.product) {
             const product = data.product;
-            
-            console.log('Найден товар:', product);
             
             // Устанавливаем параметры товара
             this.manufacturerBrand = product.manufacturer_brand;
             this.commutationType = product.commutation_type;
             this.nominalCurrent = String(product.nominal_current);
             this.inputsCount = product.inputs_count;
-            
-            console.log('Установлены характеристики:', {
-              manufacturerBrand: this.manufacturerBrand,
-              commutationType: this.commutationType,
-              nominalCurrent: this.nominalCurrent,
-              inputsCount: this.inputsCount
-            });
             
             // Обновляем данные товара
             this.basePrice = product.base_price;
@@ -416,15 +403,7 @@ document.addEventListener('alpine:init', () => {
             // Загружаем доступные опции для этого товара ПОСЛЕ установки всех параметров
             await this.loadAvailableOptions();
             
-            console.log('Товар загружен по ID. Финальное состояние:', {
-              manufacturerBrand: this.manufacturerBrand,
-              commutationType: this.commutationType,
-              nominalCurrent: this.nominalCurrent,
-              inputsCount: this.inputsCount,
-              basePrice: this.basePrice,
-              article: this.article,
-              productTitle: this.productTitle
-            });
+            console.log('Товар загружен по ID:', product.id, product.article);
           } else {
             console.error('Ошибка загрузки товара по ID:', data.message);
           }
@@ -639,13 +618,7 @@ document.addEventListener('alpine:init', () => {
       },
       
       get productTitle() {
-        const title = `Шкаф АВР ${this.nominalCurrent || '100'}А на ${this.inputsCount || '2'} ввода`;
-        console.log('productTitle вызван:', {
-          nominalCurrent: this.nominalCurrent,
-          inputsCount: this.inputsCount,
-          title: title
-        });
-        return title;
+        return `Шкаф АВР ${this.nominalCurrent || '100'}А на ${this.inputsCount || '2'} ввода`;
       },
       
       get allSelectedSpecs() {

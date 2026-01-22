@@ -110,6 +110,55 @@ class ProductsAPI {
 
   async getProduct(filters) {
     const data = await this.loadProducts();
+    
+    // Если передан ID, ищем по ID
+    if (filters.id) {
+      const foundProduct = data.products.find(product => product.id === parseInt(filters.id));
+      
+      if (!foundProduct) {
+        return {
+          success: false,
+          message: 'Товар не найден'
+        };
+      }
+
+      // Формируем ответ для поиска по ID
+      let images = [];
+      if (foundProduct.images && Array.isArray(foundProduct.images) && foundProduct.images.length > 0) {
+        images = foundProduct.images;
+      } else if (foundProduct.main_image) {
+        images = [foundProduct.main_image];
+      }
+
+      const documentation = foundProduct.documentation && Array.isArray(foundProduct.documentation)
+        ? foundProduct.documentation
+        : [];
+
+      const specs = foundProduct.specs && typeof foundProduct.specs === 'object'
+        ? foundProduct.specs
+        : {};
+
+      return {
+        success: true,
+        product: {
+          id: foundProduct.id || null,
+          article: foundProduct.article || '',
+          nominal_current: parseInt(foundProduct.nominal_current),
+          commutation_type: foundProduct.commutation_type || null,
+          manufacturer_brand: foundProduct.brand || null,
+          inputs_count: foundProduct.inputs_count || null,
+          base_price: parseInt(foundProduct.base_price || 0),
+          main_image: foundProduct.main_image || (images[0] || null),
+          images: images,
+          description: foundProduct.description || '',
+          full_description: foundProduct.full_description || foundProduct.description || '',
+          documentation: documentation,
+          specs: specs
+        }
+      };
+    }
+    
+    // Иначе ищем по фильтрам (старая логика)
     const { nominal_current, commutation_type, manufacturer_brand, inputs_count } = filters;
 
     if (!nominal_current) {
