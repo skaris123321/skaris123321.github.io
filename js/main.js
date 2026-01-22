@@ -115,6 +115,22 @@ if (typeof ProductsAPI !== 'undefined') {
 
       console.log('🔥 DEBUG API: КОНЕЦ getAvailableOptions, возвращаем:', opts);
       
+      // ПРИНУДИТЕЛЬНОЕ ИСПРАВЛЕНИЕ: Если это однофазные АВР, добавляем поля
+      if (commutation_type === 'single_phase_contactors') {
+        console.log('🔥 ПРИНУДИТЕЛЬНОЕ ИСПРАВЛЕНИЕ для однофазных АВР');
+        
+        let singlePhaseProducts = data.products.filter(p => p.commutation_type === 'single_phase_contactors');
+        if (manufacturer_brand) singlePhaseProducts = singlePhaseProducts.filter(p => p.brand === manufacturer_brand);
+        
+        opts.enclosure_type = [...new Set(singlePhaseProducts.map(p => p.enclosure_type).filter(Boolean))].sort();
+        opts.connection_type = [...new Set(singlePhaseProducts.map(p => p.connection_type).filter(Boolean))].sort();
+        opts.climate_type = [...new Set(singlePhaseProducts.map(p => p.climate_type).filter(Boolean))].sort();
+        
+        console.log('🔥 ИСПРАВЛЕНО: enclosure_type =', opts.enclosure_type);
+        console.log('🔥 ИСПРАВЛЕНО: connection_type =', opts.connection_type);
+        console.log('🔥 ИСПРАВЛЕНО: climate_type =', opts.climate_type);
+      }
+      
       return { success: true, available_options: opts };
     }
 
