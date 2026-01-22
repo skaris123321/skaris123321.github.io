@@ -36,13 +36,8 @@ if (typeof ProductsAPI !== 'undefined') {
     }
 
     async getAvailableOptions(filters = {}) {
-      console.log('🔥 DEBUG API: getAvailableOptions НАЧАЛО, filters:', filters);
-      
       const data = await this.loadProducts();
       const { manufacturer_brand, commutation_type, inputs_count, enclosure_type, connection_type, climate_type } = filters;
-
-      console.log('DEBUG API getAvailableOptions вызван с фильтрами:', filters);
-      console.log('DEBUG API commutation_type:', commutation_type, 'manufacturer_brand:', manufacturer_brand);
 
       let filtered = data.products;
       if (manufacturer_brand) filtered = filtered.filter(p => p.brand === manufacturer_brand);
@@ -80,28 +75,15 @@ if (typeof ProductsAPI !== 'undefined') {
       if (climate_type) currentProducts = currentProducts.filter(p => p.climate_type === climate_type);
       opts.nominal_current = [...new Set(currentProducts.map(p => parseInt(p.nominal_current)).filter(Boolean))].sort((a, b) => a - b);
 
-      console.log('🔥 DEBUG API: Перед проверкой однофазных АВР. commutation_type =', JSON.stringify(commutation_type));
-      console.log('🔥 DEBUG API: typeof commutation_type =', typeof commutation_type);
-      console.log('🔥 DEBUG API: commutation_type === "single_phase_contactors"?', commutation_type === 'single_phase_contactors');
-
       // Опции для однофазных АВР - только если выбран тип single_phase_contactors
       if (commutation_type === 'single_phase_contactors') {
-        console.log('🔥 DEBUG API: ВОШЛИ в условие для однофазных АВР!');
-        console.log('DEBUG API: Обрабатываем однофазные АВР для бренда:', manufacturer_brand);
-        
         let singlePhaseProducts = data.products.filter(p => p.commutation_type === 'single_phase_contactors');
-        console.log('DEBUG API: Всего однофазных продуктов:', singlePhaseProducts.length);
-        
-        if (manufacturer_brand) {
-          singlePhaseProducts = singlePhaseProducts.filter(p => p.brand === manufacturer_brand);
-          console.log('DEBUG API: Однофазных продуктов для бренда', manufacturer_brand + ':', singlePhaseProducts.length);
-        }
+        if (manufacturer_brand) singlePhaseProducts = singlePhaseProducts.filter(p => p.brand === manufacturer_brand);
         
         // Для enclosure_type не фильтруем по connection_type и climate_type
         let enclosureProducts = singlePhaseProducts;
         const enclosureTypes = [...new Set(enclosureProducts.map(p => p.enclosure_type).filter(Boolean))].sort();
         opts.enclosure_type = enclosureTypes;
-        console.log('DEBUG API: Доступные корпуса для', manufacturer_brand + ':', enclosureTypes);
         
         // Для connection_type не фильтруем по enclosure_type и climate_type
         let connectionProducts = singlePhaseProducts;
@@ -113,24 +95,6 @@ if (typeof ProductsAPI !== 'undefined') {
         opts.climate_type = [...new Set(climateProducts.map(p => p.climate_type).filter(Boolean))].sort();
       }
 
-      console.log('🔥 DEBUG API: КОНЕЦ getAvailableOptions, возвращаем:', opts);
-      
-      // ПРИНУДИТЕЛЬНОЕ ИСПРАВЛЕНИЕ: Если это однофазные АВР, добавляем поля
-      if (commutation_type === 'single_phase_contactors') {
-        console.log('🔥 ПРИНУДИТЕЛЬНОЕ ИСПРАВЛЕНИЕ для однофазных АВР');
-        
-        let singlePhaseProducts = data.products.filter(p => p.commutation_type === 'single_phase_contactors');
-        if (manufacturer_brand) singlePhaseProducts = singlePhaseProducts.filter(p => p.brand === manufacturer_brand);
-        
-        opts.enclosure_type = [...new Set(singlePhaseProducts.map(p => p.enclosure_type).filter(Boolean))].sort();
-        opts.connection_type = [...new Set(singlePhaseProducts.map(p => p.connection_type).filter(Boolean))].sort();
-        opts.climate_type = [...new Set(singlePhaseProducts.map(p => p.climate_type).filter(Boolean))].sort();
-        
-        console.log('🔥 ИСПРАВЛЕНО: enclosure_type =', opts.enclosure_type);
-        console.log('🔥 ИСПРАВЛЕНО: connection_type =', opts.connection_type);
-        console.log('🔥 ИСПРАВЛЕНО: climate_type =', opts.climate_type);
-      }
-      
       return { success: true, available_options: opts };
     }
 
@@ -299,11 +263,6 @@ document.addEventListener('alpine:init', () => {
       },
       
       async loadAvailableOptions() {
-        console.log('DEBUG loadAvailableOptions ВЫЗВАН для:', {
-          manufacturerBrand: this.manufacturerBrand,
-          commutationType: this.commutationType
-        });
-        
         try {
           if (!productsAPI) {
             throw new Error('ProductsAPI не инициализирован');
@@ -312,8 +271,6 @@ document.addEventListener('alpine:init', () => {
           const filters = {};
           if (this.manufacturerBrand) filters.manufacturer_brand = this.manufacturerBrand;
           if (this.commutationType) filters.commutation_type = this.commutationType;
-          
-          console.log('DEBUG loadAvailableOptions: передаем фильтры в API:', filters);
           
           // Для однофазных АВР передаем только базовые фильтры
           if (this.commutationType !== 'single_phase_contactors') {
@@ -324,9 +281,6 @@ document.addEventListener('alpine:init', () => {
           }
 
           const data = await productsAPI.getAvailableOptions(filters);
-          
-          console.log('DEBUG loadAvailableOptions: получен ответ от API:', data);
-          console.log('DEBUG loadAvailableOptions: available_options полностью:', JSON.stringify(data.available_options, null, 2));
           
           if (data.success && data.available_options) {
             this.availableOptions = {
@@ -341,19 +295,11 @@ document.addEventListener('alpine:init', () => {
             
             // ПРИНУДИТЕЛЬНОЕ ИСПРАВЛЕНИЕ для однофазных АВР
             if (this.commutationType === 'single_phase_contactors') {
-              console.log('🔥 ПРИНУДИТЕЛЬНОЕ ИСПРАВЛЕНИЕ в компоненте для TDM');
-              
               // Для TDM однофазных АВР принудительно устанавливаем доступные опции
               if (this.manufacturerBrand === 'TDM') {
                 this.availableOptions.enclosure_type = ['19inch'];
                 this.availableOptions.connection_type = ['poles', 'terminals'];
                 this.availableOptions.climate_type = ['UHL4', 'U2'];
-                
-                console.log('🔥 ИСПРАВЛЕНО для TDM:', {
-                  enclosure_type: this.availableOptions.enclosure_type,
-                  connection_type: this.availableOptions.connection_type,
-                  climate_type: this.availableOptions.climate_type
-                });
               }
               // Для других брендов (CHINT, EKF, etc.)
               else {
@@ -361,18 +307,6 @@ document.addEventListener('alpine:init', () => {
                 this.availableOptions.connection_type = ['poles', 'terminals'];
                 this.availableOptions.climate_type = ['UHL4', 'U2'];
               }
-            }
-            
-            // Временная отладка для однофазных АВР
-            if (this.commutationType === 'single_phase_contactors') {
-              console.log('DEBUG loadAvailableOptions результат:', {
-                manufacturerBrand: this.manufacturerBrand,
-                commutationType: this.commutationType,
-                enclosure_type_array: [...this.availableOptions.enclosure_type],
-                enclosure_type_length: this.availableOptions.enclosure_type.length,
-                connection_type_array: [...this.availableOptions.connection_type],
-                climate_type_array: [...this.availableOptions.climate_type]
-              });
             }
 
           } else {
@@ -402,20 +336,6 @@ document.addEventListener('alpine:init', () => {
       
       // Проверка доступности опции
       isOptionAvailable(optionType, value) {
-        // Временная отладка для корпуса
-        if (optionType === 'enclosure_type') {
-          console.log('DEBUG isOptionAvailable:', {
-            optionType,
-            value,
-            availableOptionsArray: [...this.availableOptions.enclosure_type],
-            arrayLength: this.availableOptions.enclosure_type.length,
-            includes19inch: this.availableOptions.enclosure_type.includes('19inch'),
-            includesWall: this.availableOptions.enclosure_type.includes('wall'),
-            manufacturerBrand: this.manufacturerBrand,
-            commutationType: this.commutationType
-          });
-        }
-        
         // Бренды всегда доступны
         if (optionType === 'manufacturer_brand') return true;
         
