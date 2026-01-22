@@ -82,9 +82,9 @@
         <span>»</span>
         <a href="avr.html">АВР</a>
         <span>»</span>
-        <span x-text="commutationType === 'single_phase_contactors' ? 'Однофазные АВР на контакторах' : 'Шкафы АВР на 2 ввода'" class="breadcrumbs-current"></span>
+        <span class="breadcrumbs-current">АВР</span>
       </div>
-      <h1 class="category-title" x-text="commutationType === 'single_phase_contactors' ? 'Однофазный АВР ' + (nominalCurrent || '12') + 'А на контакторах' : productTitle"></h1>
+      <h1 class="category-title" x-text="productTitle"></h1>
     </div>
   </section>
 
@@ -196,8 +196,7 @@
         </div>
       </div>
 
-      <!-- Показываем тип коммутации и количество вводов только для трехфазных АВР -->
-      <div x-show="commutationType !== 'single_phase_contactors'" class="product-spec-group">
+      <div class="product-spec-group">
         <div class="product-spec-label">Тип коммутации</div>
         <div class="product-spec-options">
           <button 
@@ -211,11 +210,17 @@
             :class="{ active: commutationType === 'contactors', 'opacity-50': loading || !isOptionAvailable('commutation_type', 'contactors'), disabled: !isOptionAvailable('commutation_type', 'contactors') }"
             @click="updateCommutationType('contactors')"
             :disabled="loading || !isOptionAvailable('commutation_type', 'contactors')"
-          >контакторы</button>
+          >Контакторы</button>
+          <button 
+            class="spec-option"
+            :class="{ active: commutationType === 'single_phase_contactors', 'opacity-50': loading || !isOptionAvailable('commutation_type', 'single_phase_contactors'), disabled: !isOptionAvailable('commutation_type', 'single_phase_contactors') }"
+            @click="updateCommutationType('single_phase_contactors')"
+            :disabled="loading || !isOptionAvailable('commutation_type', 'single_phase_contactors')"
+          >Контакторы малых токов</button>
         </div>
       </div>
 
-      <div x-show="commutationType !== 'single_phase_contactors'" class="product-spec-group">
+      <div class="product-spec-group">
         <div class="product-spec-label">Количество вводов</div>
         <div class="product-spec-options">
           <button 
@@ -226,17 +231,36 @@
           >2 ввода</button>
           <button 
             class="spec-option"
-            :class="{ active: inputsCount === '3', 'opacity-50': loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors', disabled: loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors' }"
+            :class="{ active: inputsCount === '3', 'opacity-50': loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors' || commutationType === 'single_phase_contactors', disabled: loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors' || commutationType === 'single_phase_contactors' }"
             @click="updateInputsCount('3')"
-            :disabled="loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors'"
+            :disabled="loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors' || commutationType === 'single_phase_contactors'"
           >3 ввода</button>
         </div>
       </div>
 
-      <!-- Номинальный ток для трехфазных АВР -->
-      <div x-show="commutationType !== 'single_phase_contactors'" class="product-spec-group">
+      <div class="product-spec-group">
         <div class="product-spec-label">Номинальный ток</div>
         <div class="product-spec-options product-spec-options-currents">
+          <!-- Токи для однофазных АВР -->
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '12', 'opacity-50': loading || !isOptionAvailable('nominal_current', '12'), disabled: loading || !isOptionAvailable('nominal_current', '12') }"
+            @click="updateNominalCurrent('12')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '12')"
+          >12 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '16', 'opacity-50': loading || !isOptionAvailable('nominal_current', '16'), disabled: loading || !isOptionAvailable('nominal_current', '16') }"
+            @click="updateNominalCurrent('16')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '16')"
+          >16 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '20', 'opacity-50': loading || !isOptionAvailable('nominal_current', '20'), disabled: loading || !isOptionAvailable('nominal_current', '20') }"
+            @click="updateNominalCurrent('20')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '20')"
+          >20 A</button>
+          <!-- Токи для трехфазных АВР -->
           <button 
             class="spec-option"
             :class="{ active: nominalCurrent === '25', 'opacity-50': loading || !isOptionAvailable('nominal_current', '25'), disabled: loading || !isOptionAvailable('nominal_current', '25') }"
@@ -255,6 +279,12 @@
             @click="updateNominalCurrent('40')"
             :disabled="loading || !isOptionAvailable('nominal_current', '40')"
           >40 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '50', 'opacity-50': loading || !isOptionAvailable('nominal_current', '50'), disabled: loading || !isOptionAvailable('nominal_current', '50') }"
+            @click="updateNominalCurrent('50')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '50')"
+          >50 A</button>
           <button 
             class="spec-option"
             :class="{ active: nominalCurrent === '63', 'opacity-50': loading || !isOptionAvailable('nominal_current', '63'), disabled: loading || !isOptionAvailable('nominal_current', '63') }"
@@ -348,62 +378,7 @@
         </div>
       </div>
 
-      <!-- Номинальный ток для однофазных АВР -->
-      <div x-show="commutationType === 'single_phase_contactors'" class="product-spec-group">
-        <div class="product-spec-label">Номинальный ток</div>
-        <div class="product-spec-options product-spec-options-currents">
-          <button 
-            class="spec-option"
-            :class="{ active: nominalCurrent === '12', 'opacity-50': loading || !isOptionAvailable('nominal_current', '12'), disabled: loading || !isOptionAvailable('nominal_current', '12') }"
-            @click="updateNominalCurrent('12')"
-            :disabled="loading || !isOptionAvailable('nominal_current', '12')"
-          >12 A</button>
-          <button 
-            class="spec-option"
-            :class="{ active: nominalCurrent === '16', 'opacity-50': loading || !isOptionAvailable('nominal_current', '16'), disabled: loading || !isOptionAvailable('nominal_current', '16') }"
-            @click="updateNominalCurrent('16')"
-            :disabled="loading || !isOptionAvailable('nominal_current', '16')"
-          >16 A</button>
-          <button 
-            class="spec-option"
-            :class="{ active: nominalCurrent === '20', 'opacity-50': loading || !isOptionAvailable('nominal_current', '20'), disabled: loading || !isOptionAvailable('nominal_current', '20') }"
-            @click="updateNominalCurrent('20')"
-            :disabled="loading || !isOptionAvailable('nominal_current', '20')"
-          >20 A</button>
-          <button 
-            class="spec-option"
-            :class="{ active: nominalCurrent === '25', 'opacity-50': loading || !isOptionAvailable('nominal_current', '25'), disabled: loading || !isOptionAvailable('nominal_current', '25') }"
-            @click="updateNominalCurrent('25')"
-            :disabled="loading || !isOptionAvailable('nominal_current', '25')"
-          >25 A</button>
-          <button 
-            class="spec-option"
-            :class="{ active: nominalCurrent === '32', 'opacity-50': loading || !isOptionAvailable('nominal_current', '32'), disabled: loading || !isOptionAvailable('nominal_current', '32') }"
-            @click="updateNominalCurrent('32')"
-            :disabled="loading || !isOptionAvailable('nominal_current', '32')"
-          >32 A</button>
-          <button 
-            class="spec-option"
-            :class="{ active: nominalCurrent === '40', 'opacity-50': loading || !isOptionAvailable('nominal_current', '40'), disabled: loading || !isOptionAvailable('nominal_current', '40') }"
-            @click="updateNominalCurrent('40')"
-            :disabled="loading || !isOptionAvailable('nominal_current', '40')"
-          >40 A</button>
-          <button 
-            class="spec-option"
-            :class="{ active: nominalCurrent === '50', 'opacity-50': loading || !isOptionAvailable('nominal_current', '50'), disabled: loading || !isOptionAvailable('nominal_current', '50') }"
-            @click="updateNominalCurrent('50')"
-            :disabled="loading || !isOptionAvailable('nominal_current', '50')"
-          >50 A</button>
-          <button 
-            class="spec-option"
-            :class="{ active: nominalCurrent === '63', 'opacity-50': loading || !isOptionAvailable('nominal_current', '63'), disabled: loading || !isOptionAvailable('nominal_current', '63') }"
-            @click="updateNominalCurrent('63')"
-            :disabled="loading || !isOptionAvailable('nominal_current', '63')"
-          >63 A</button>
-        </div>
-      </div>
-
-      <!-- Корпус для однофазных АВР -->
+      <!-- Корпус - показываем только для однофазных АВР -->
       <div x-show="commutationType === 'single_phase_contactors'" class="product-spec-group">
         <div class="product-spec-label">Корпус</div>
         <div class="product-spec-options">
@@ -422,92 +397,47 @@
         </div>
       </div>
 
-      <!-- Подключение кабеля для трехфазных АВР -->
-      <div x-show="commutationType !== 'single_phase_contactors'" class="product-spec-group">
+      <div class="product-spec-group">
         <div class="product-spec-label">Подключение кабеля</div>
         <div class="product-spec-options">
           <button 
             class="spec-option"
             :class="{ 
-              active: cableConnection === 'poles', 
-              'opacity-50': !isPolesToAvailable, 
-              disabled: !isPolesToAvailable 
+              active: (commutationType === 'single_phase_contactors' ? connectionType === 'poles' : cableConnection === 'poles'), 
+              'opacity-50': commutationType !== 'single_phase_contactors' && !isPolesToAvailable, 
+              disabled: commutationType !== 'single_phase_contactors' && !isPolesToAvailable 
             }"
-            :disabled="!isPolesToAvailable"
-            @click="updateCableConnection('poles')"
+            :disabled="commutationType !== 'single_phase_contactors' && !isPolesToAvailable"
+            @click="commutationType === 'single_phase_contactors' ? updateConnectionType('poles') : updateCableConnection('poles')"
           >К полюсам автомата</button>
           <button 
             class="spec-option"
-            :class="{ active: cableConnection === 'terminals' }"
-            @click="updateCableConnection('terminals')"
+            :class="{ active: commutationType === 'single_phase_contactors' ? connectionType === 'terminals' : cableConnection === 'terminals' }"
+            @click="commutationType === 'single_phase_contactors' ? updateConnectionType('terminals') : updateCableConnection('terminals')"
           >
             На дополнительные клеммы
-            <span class="option-price-add" x-show="shouldChargeForTerminals">+1 000 ₽</span>
+            <span class="option-price-add" x-show="(commutationType === 'single_phase_contactors' && connectionType === 'terminals') || (commutationType !== 'single_phase_contactors' && shouldChargeForTerminals)">+1 000 ₽</span>
           </button>
         </div>
       </div>
 
-      <!-- Подключение кабеля для однофазных АВР -->
-      <div x-show="commutationType === 'single_phase_contactors'" class="product-spec-group">
-        <div class="product-spec-label">Подключение кабеля</div>
-        <div class="product-spec-options">
-          <button 
-            class="spec-option"
-            :class="{ active: connectionType === 'poles', 'opacity-50': loading || !isOptionAvailable('connection_type', 'poles'), disabled: loading || !isOptionAvailable('connection_type', 'poles') }"
-            @click="updateConnectionType('poles')"
-            :disabled="loading || !isOptionAvailable('connection_type', 'poles')"
-          >К полюсам автомата</button>
-          <button 
-            class="spec-option"
-            :class="{ active: connectionType === 'terminals', 'opacity-50': loading || !isOptionAvailable('connection_type', 'terminals'), disabled: loading || !isOptionAvailable('connection_type', 'terminals') }"
-            @click="updateConnectionType('terminals')"
-            :disabled="loading || !isOptionAvailable('connection_type', 'terminals')"
-          >
-            На дополнительные клеммы
-            <span class="option-price-add">+1 000 ₽</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Климатическое исполнение для трехфазных АВР -->
-      <div x-show="commutationType !== 'single_phase_contactors'" class="product-spec-group">
-        <div class="product-spec-label">Климатическое исполнение</div>
-        <div class="product-spec-options">
-          <button 
-            class="spec-option"
-            :class="{ active: climateVersion === 'UXL4' }"
-            @click="updateClimateVersion('UXL4')"
-          >УХЛ4 - сухие теплые помещения</button>
-          <button 
-            class="spec-option"
-            :class="{ active: climateVersion === 'U2' }"
-            @click="updateClimateVersion('U2')"
-          >
-            У2 - уличное с обогревом
-            <span class="option-price-add">+23 000 ₽</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Климатическое исполнение для однофазных АВР -->
-      <div x-show="commutationType === 'single_phase_contactors'" class="product-spec-group">
+      <div class="product-spec-group">
         <div class="product-spec-label">Климатическое исполнение</div>
         <div class="product-spec-options">
           <button 
             class="spec-option"
             :class="{ 
-              active: climateType === 'UHL4', 
-              'opacity-50': loading || !isOptionAvailable('climate_type', 'UHL4') || (enclosureType !== '19inch'), 
-              disabled: loading || !isOptionAvailable('climate_type', 'UHL4') || (enclosureType !== '19inch')
+              active: commutationType === 'single_phase_contactors' ? climateType === 'UHL4' : climateVersion === 'UXL4',
+              'opacity-50': commutationType === 'single_phase_contactors' && (loading || !isOptionAvailable('climate_type', 'UHL4') || (enclosureType !== '19inch')), 
+              disabled: commutationType === 'single_phase_contactors' && (loading || !isOptionAvailable('climate_type', 'UHL4') || (enclosureType !== '19inch'))
             }"
-            @click="updateClimateType('UHL4')"
-            :disabled="loading || !isOptionAvailable('climate_type', 'UHL4') || (enclosureType !== '19inch')"
+            @click="commutationType === 'single_phase_contactors' ? updateClimateType('UHL4') : updateClimateVersion('UXL4')"
+            :disabled="commutationType === 'single_phase_contactors' && (loading || !isOptionAvailable('climate_type', 'UHL4') || (enclosureType !== '19inch'))"
           >УХЛ4 - сухие теплые помещения</button>
           <button 
             class="spec-option"
-            :class="{ active: climateType === 'U2', 'opacity-50': loading || !isOptionAvailable('climate_type', 'U2'), disabled: loading || !isOptionAvailable('climate_type', 'U2') }"
-            @click="updateClimateType('U2')"
-            :disabled="loading || !isOptionAvailable('climate_type', 'U2')"
+            :class="{ active: commutationType === 'single_phase_contactors' ? climateType === 'U2' : climateVersion === 'U2' }"
+            @click="commutationType === 'single_phase_contactors' ? updateClimateType('U2') : updateClimateVersion('U2')"
           >
             У2 - уличное с обогревом
             <span class="option-price-add">+23 000 ₽</span>
