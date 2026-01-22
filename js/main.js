@@ -77,12 +77,21 @@ if (typeof ProductsAPI !== 'undefined') {
 
       // Опции для однофазных АВР - только если выбран тип single_phase_contactors
       if (commutation_type === 'single_phase_contactors') {
+        console.log('DEBUG API: Обрабатываем однофазные АВР для бренда:', manufacturer_brand);
+        
         let singlePhaseProducts = data.products.filter(p => p.commutation_type === 'single_phase_contactors');
-        if (manufacturer_brand) singlePhaseProducts = singlePhaseProducts.filter(p => p.brand === manufacturer_brand);
+        console.log('DEBUG API: Всего однофазных продуктов:', singlePhaseProducts.length);
+        
+        if (manufacturer_brand) {
+          singlePhaseProducts = singlePhaseProducts.filter(p => p.brand === manufacturer_brand);
+          console.log('DEBUG API: Однофазных продуктов для бренда', manufacturer_brand + ':', singlePhaseProducts.length);
+        }
         
         // Для enclosure_type не фильтруем по connection_type и climate_type
         let enclosureProducts = singlePhaseProducts;
-        opts.enclosure_type = [...new Set(enclosureProducts.map(p => p.enclosure_type).filter(Boolean))].sort();
+        const enclosureTypes = [...new Set(enclosureProducts.map(p => p.enclosure_type).filter(Boolean))].sort();
+        opts.enclosure_type = enclosureTypes;
+        console.log('DEBUG API: Доступные корпуса для', manufacturer_brand + ':', enclosureTypes);
         
         // Для connection_type не фильтруем по enclosure_type и climate_type
         let connectionProducts = singlePhaseProducts;
