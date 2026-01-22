@@ -20,10 +20,6 @@ document.addEventListener('alpine:init', () => {
       async init() {
         await this.loadProducts();
         this.checkUrlParams();
-        // Автоматически выбираем первый бренд только при первой загрузке
-        if (this.uniqueBrands.length > 0 && !this.selectedBrand) {
-          this.selectedBrand = this.uniqueBrands[0];
-        }
         this.applyFilters();
       },
       
@@ -76,14 +72,6 @@ document.addEventListener('alpine:init', () => {
         if (type === 'contactors') {
           this.selectedInputs = '2';
         }
-        this.applyFilters();
-      },
-      
-      clearAllFilters() {
-        this.selectedBrand = null;
-        this.selectedInputs = null;
-        this.selectedCommutationType = null;
-        this.sortBy = 'price_asc';
         this.applyFilters();
       },
       

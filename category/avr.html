@@ -124,24 +124,9 @@
 
   <section class="sort-section">
     <div class="container sort-controls">
-      <!-- Индикатор активных фильтров -->
-      <div x-show="selectedInputs || selectedCommutationType || selectedBrand" style="margin-bottom: 1rem; padding: 0.5rem; background: #f3f4f6; border-radius: 0.5rem; font-size: 0.875rem;">
-        <span style="font-weight: 600;">Активные фильтры:</span>
-        <span x-show="selectedInputs" x-text="selectedInputs + ' ввода'" style="margin-left: 0.5rem; padding: 0.25rem 0.5rem; background: #dc2626; color: white; border-radius: 0.25rem;"></span>
-        <span x-show="selectedCommutationType === 'contactors'" style="margin-left: 0.5rem; padding: 0.25rem 0.5rem; background: #dc2626; color: white; border-radius: 0.25rem;">Контакторы</span>
-        <span x-show="selectedBrand" x-text="selectedBrand" style="margin-left: 0.5rem; padding: 0.25rem 0.5rem; background: #dc2626; color: white; border-radius: 0.25rem;"></span>
-      </div>
-      
       <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
         <!-- Кнопки фильтрации по брендам -->
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
-          <button 
-            @click="clearAllFilters()"
-            class="brand-filter-btn"
-            style="background: #6b7280; color: white;"
-          >
-            Сбросить фильтры
-          </button>
           <template x-for="brand in uniqueBrands" :key="brand">
             <button 
               @click="filterByBrand(brand)"
