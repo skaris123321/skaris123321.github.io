@@ -12,6 +12,7 @@ document.addEventListener('alpine:init', () => {
       filteredProducts: [],
       selectedBrand: null,
       selectedInputs: null,
+      selectedCommutationType: null,
       sortBy: 'price_asc',
       loading: true,
       searchQuery: '',
@@ -19,7 +20,7 @@ document.addEventListener('alpine:init', () => {
       async init() {
         await this.loadProducts();
         this.checkUrlParams();
-        // Автоматически выбираем первый бренд при загрузке
+        // Автоматически выбираем первый бренд только при первой загрузке
         if (this.uniqueBrands.length > 0 && !this.selectedBrand) {
           this.selectedBrand = this.uniqueBrands[0];
         }
@@ -62,6 +63,27 @@ document.addEventListener('alpine:init', () => {
       
       filterByInputs(inputs) {
         this.selectedInputs = this.selectedInputs === inputs ? null : inputs;
+        // Если убираем фильтр по вводам и был выбран тип контакторов, убираем и его
+        if (!inputs && this.selectedCommutationType === 'contactors') {
+          this.selectedCommutationType = null;
+        }
+        this.applyFilters();
+      },
+      
+      filterByCommutationType(type) {
+        this.selectedCommutationType = this.selectedCommutationType === type ? null : type;
+        // При выборе контакторов автоматически фильтруем по 2 вводам
+        if (type === 'contactors') {
+          this.selectedInputs = '2';
+        }
+        this.applyFilters();
+      },
+      
+      clearAllFilters() {
+        this.selectedBrand = null;
+        this.selectedInputs = null;
+        this.selectedCommutationType = null;
+        this.sortBy = 'price_asc';
         this.applyFilters();
       },
       
@@ -78,31 +100,31 @@ document.addEventListener('alpine:init', () => {
           filtered = filtered.filter(p => p.inputs_count === this.selectedInputs);
         }
         
+        // Фильтр по типу коммутации
+        if (this.selectedCommutationType) {
+          filtered = filtered.filter(p => p.commutation_type === this.selectedCommutationType);
+        }
+        
         // Сортировка
         filtered.sort((a, b) => {
           switch (this.sortBy) {
             case 'price_asc':
-              // Сначала по номинальному току, потом по цене
-              if (a.nominal_current !== b.nominal_current) {
-                return a.nominal_current - b.nominal_current;
-              }
               return a.base_price - b.base_price;
             case 'price_desc':
-              // Сначала по номинальному току, потом по цене убывание
-              if (a.nominal_current !== b.nominal_current) {
-                return a.nominal_current - b.nominal_current;
-              }
               return b.base_price - a.base_price;
             case 'article_asc':
               return (a.article || '').localeCompare(b.article || '');
             case 'article_desc':
               return (b.article || '').localeCompare(a.article || '');
             default:
-              // По умолчанию сортируем по номинальному току, потом по количеству вводов
+              // По умолчанию сортируем по номинальному току, потом по количеству вводов, потом по бренду
               if (a.nominal_current !== b.nominal_current) {
                 return a.nominal_current - b.nominal_current;
               }
-              return a.inputs_count.localeCompare(b.inputs_count);
+              if (a.inputs_count !== b.inputs_count) {
+                return a.inputs_count.localeCompare(b.inputs_count);
+              }
+              return (a.brand || '').localeCompare(b.brand || '');
           }
         });
         
