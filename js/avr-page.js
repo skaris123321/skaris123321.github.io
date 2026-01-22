@@ -59,18 +59,26 @@ document.addEventListener('alpine:init', () => {
       },
       
       filterByInputs(inputs) {
-        this.selectedInputs = this.selectedInputs === inputs ? null : inputs;
-        // Если убираем фильтр по вводам и был выбран тип контакторов, убираем и его
-        if (!this.selectedInputs && this.selectedCommutationType === 'contactors') {
+        // Если уже выбраны такие же вводы, убираем фильтр
+        if (this.selectedInputs === inputs && this.selectedCommutationType === 'monoblock') {
+          this.selectedInputs = null;
           this.selectedCommutationType = null;
+        } else {
+          // Иначе устанавливаем фильтр на моноблочные АВР с нужным количеством вводов
+          this.selectedInputs = inputs;
+          this.selectedCommutationType = 'monoblock';
         }
         this.applyFilters();
       },
       
       filterByCommutationType(type) {
-        this.selectedCommutationType = this.selectedCommutationType === type ? null : type;
-        // При выборе контакторов автоматически фильтруем по 2 вводам
-        if (type === 'contactors') {
+        // Если уже выбран такой же тип коммутации и 2 ввода, убираем фильтр
+        if (this.selectedCommutationType === type && this.selectedInputs === '2') {
+          this.selectedCommutationType = null;
+          this.selectedInputs = null;
+        } else {
+          // Иначе устанавливаем фильтр на контакторы с 2 вводами
+          this.selectedCommutationType = type;
           this.selectedInputs = '2';
         }
         this.applyFilters();

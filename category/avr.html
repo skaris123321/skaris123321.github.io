@@ -91,18 +91,18 @@
   <section class="section">
     <div class="container">
       <div class="subcategories-grid">
-        <a href="#" class="subcategory-card" @click.prevent="filterByInputs('2')" :class="{ 'active': selectedInputs === '2' }">
-          <div class="subcategory-image-wrapper" :style="selectedInputs === '2' ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
+        <a href="#" class="subcategory-card" @click.prevent="filterByInputs('2')" :class="{ 'active': selectedInputs === '2' && selectedCommutationType === 'monoblock' }">
+          <div class="subcategory-image-wrapper" :style="(selectedInputs === '2' && selectedCommutationType === 'monoblock') ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
             <img src="../images/sub-2-vvoda.jpg" alt="Шкафы АВР на 2 ввода" class="subcategory-image">
           </div>
-          <p class="subcategory-name" :style="selectedInputs === '2' ? 'color: #dc2626; font-weight: 600;' : ''">Шкафы АВР на 2 ввода</p>
+          <p class="subcategory-name" :style="(selectedInputs === '2' && selectedCommutationType === 'monoblock') ? 'color: #dc2626; font-weight: 600;' : ''">Шкафы АВР на 2 ввода</p>
         </a>
 
-        <a href="#" class="subcategory-card" @click.prevent="filterByInputs('3')" :class="{ 'active': selectedInputs === '3' }">
-          <div class="subcategory-image-wrapper" :style="selectedInputs === '3' ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
+        <a href="#" class="subcategory-card" @click.prevent="filterByInputs('3')" :class="{ 'active': selectedInputs === '3' && selectedCommutationType === 'monoblock' }">
+          <div class="subcategory-image-wrapper" :style="(selectedInputs === '3' && selectedCommutationType === 'monoblock') ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
             <img src="../images/sub-3-vvoda.jpg" alt="Шкафы АВР на 3 ввода" class="subcategory-image">
           </div>
-          <p class="subcategory-name" :style="selectedInputs === '3' ? 'color: #dc2626; font-weight: 600;' : ''">Шкафы АВР на 3 ввода</p>
+          <p class="subcategory-name" :style="(selectedInputs === '3' && selectedCommutationType === 'monoblock') ? 'color: #dc2626; font-weight: 600;' : ''">Шкафы АВР на 3 ввода</p>
         </a>
 
         <a href="#" class="subcategory-card" @click.prevent="filterByCommutationType('contactors')" :class="{ 'active': selectedCommutationType === 'contactors' }">
