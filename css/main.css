@@ -2670,3 +2670,125 @@ h1.category-title {
     padding: 0.5rem;
   }
 }
+/* Стили для однофазных АВР */
+.price-addon {
+  color: #059669;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.price-summary {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.price-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.price-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0;
+}
+
+.price-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  margin-top: 0.5rem;
+  border-top: 2px solid #e2e8f0;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #1f2937;
+}
+
+.selected-config {
+  background: #f1f5f9;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.selected-config p {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.selected-config strong {
+  color: #374151;
+}
+
+.config-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f3f4f6;
+  color: #9ca3af;
+}
+
+.config-btn:disabled:hover {
+  background: #f3f4f6;
+  transform: none;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.action-buttons .btn {
+  flex: 1;
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.product-description h4 {
+  color: #1f2937;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem 0;
+}
+
+.product-description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-description li {
+  padding: 0.25rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.product-description li:before {
+  content: "•";
+  color: #3b82f6;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .price-line {
+    font-size: 0.9em;
+  }
+  
+  .selected-config p {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
