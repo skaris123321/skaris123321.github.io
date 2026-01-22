@@ -412,6 +412,64 @@ document.addEventListener('alpine:init', () => {
         }
       },
       
+      // Новый метод для загрузки товара по характеристикам (без смены URL)
+      async loadProductByCharacteristics() {
+        this.loading = true;
+        
+        try {
+          if (!productsAPI) {
+            throw new Error('ProductsAPI не инициализирован');
+          }
+
+          const filters = {
+            manufacturer_brand: this.manufacturerBrand,
+            commutation_type: this.commutationType,
+            nominal_current: this.nominalCurrent,
+            inputs_count: this.inputsCount
+          };
+
+          const data = await productsAPI.getProduct(filters);
+          
+          if (data.success && data.product) {
+            const product = data.product;
+            
+            // Обновляем данные товара, но НЕ меняем характеристики
+            this.basePrice = product.base_price;
+            this.article = product.article;
+            
+            // Формируем массив изображений
+            const imageList = product.images && product.images.length > 0 
+              ? product.images 
+              : (product.main_image ? [product.main_image] : []);
+            
+            this.images = imageList.map(img => {
+              return img.startsWith('images/') ? '../' + img : img;
+            });
+            
+            this.productSpecs = product.specs || {};
+            this.fullDescription = product.full_description || product.description || '';
+            this.documentation = product.documentation || [];
+            
+            const current = parseInt(product.nominal_current);
+            if (current >= 100 && current <= 800) {
+              this.cableConnection = 'terminals';
+            }
+            
+            // Сбрасываем индекс изображения
+            this.currentIndex = 0;
+            this.thumbnailScroll = 0;
+            
+            console.log('Товар загружен по характеристикам:', product);
+          } else {
+            console.error('Ошибка загрузки товара по характеристикам:', data.message);
+          }
+        } catch (error) {
+          console.error('Ошибка при загрузке товара по характеристикам:', error);
+        } finally {
+          this.loading = false;
+        }
+      },
+      
       // Метод для обновления номинального тока
       async updateNominalCurrent(value) {
         if (this.loading || !this.isOptionAvailable('nominal_current', value)) return;
@@ -422,7 +480,7 @@ document.addEventListener('alpine:init', () => {
           this.cableConnection = 'terminals';
         }
         
-        await this.loadProduct();
+        await this.loadProductByCharacteristics();
         this.updateCartQuantity();
       },
       
@@ -452,7 +510,7 @@ document.addEventListener('alpine:init', () => {
             this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
           }
           
-          await this.loadProduct();
+          await this.loadProductByCharacteristics();
           this.updateCartQuantity();
         } finally {
           this.loading = false;
@@ -485,7 +543,7 @@ document.addEventListener('alpine:init', () => {
             this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
           }
           
-          await this.loadProduct();
+          await this.loadProductByCharacteristics();
           this.updateCartQuantity();
         } finally {
           this.loading = false;
@@ -512,7 +570,7 @@ document.addEventListener('alpine:init', () => {
             }
           }
           
-          await this.loadProduct();
+          await this.loadProductByCharacteristics();
           this.updateCartQuantity();
         } finally {
           this.loading = false;
