@@ -295,18 +295,10 @@ document.addEventListener('alpine:init', () => {
             
             // ПРИНУДИТЕЛЬНОЕ ИСПРАВЛЕНИЕ для однофазных АВР
             if (this.commutationType === 'single_phase_contactors') {
-              // Для TDM однофазных АВР принудительно устанавливаем доступные опции
-              if (this.manufacturerBrand === 'TDM') {
-                this.availableOptions.enclosure_type = ['19inch'];
-                this.availableOptions.connection_type = ['poles', 'terminals'];
-                this.availableOptions.climate_type = ['UHL4', 'U2'];
-              }
-              // Для других брендов (CHINT, EKF, etc.)
-              else {
-                this.availableOptions.enclosure_type = ['19inch', 'wall'];
-                this.availableOptions.connection_type = ['poles', 'terminals'];
-                this.availableOptions.climate_type = ['UHL4', 'U2'];
-              }
+              // Для всех брендов однофазных АВР устанавливаем все доступные опции
+              this.availableOptions.enclosure_type = ['19inch', 'wall'];
+              this.availableOptions.connection_type = ['poles', 'terminals'];
+              this.availableOptions.climate_type = ['UHL4', 'U2'];
             }
 
           } else {
