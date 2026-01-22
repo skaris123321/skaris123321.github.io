@@ -83,6 +83,19 @@ document.addEventListener('alpine:init', () => {
         }
         this.applyFilters();
       },
+
+      filterBySinglePhase() {
+        // Если уже выбраны однофазные АВР, убираем фильтр
+        if (this.selectedCommutationType === 'single_phase_contactors') {
+          this.selectedCommutationType = null;
+          this.selectedInputs = null;
+        } else {
+          // Иначе устанавливаем фильтр на однофазные АВР на контакторах
+          this.selectedCommutationType = 'single_phase_contactors';
+          this.selectedInputs = '2';
+        }
+        this.applyFilters();
+      },
       
       applyFilters() {
         let filtered = [...this.products];

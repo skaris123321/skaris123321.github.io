@@ -112,11 +112,11 @@
           <p class="subcategory-name" :style="selectedCommutationType === 'contactors' ? 'color: #dc2626; font-weight: 600;' : ''">АВР на 2 ввода на контакторах</p>
         </a>
 
-        <a href="#" class="subcategory-card">
-          <div class="subcategory-image-wrapper">
+        <a href="#" class="subcategory-card" @click.prevent="filterBySinglePhase()" :class="{ 'active': selectedCommutationType === 'single_phase_contactors' }">
+          <div class="subcategory-image-wrapper" :style="selectedCommutationType === 'single_phase_contactors' ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
             <img src="../images/sub-odnofaznyj.jpg" alt="Однофазные АВР на контакторах" class="subcategory-image">
           </div>
-          <p class="subcategory-name">Однофазные АВР на контакторах</p>
+          <p class="subcategory-name" :style="selectedCommutationType === 'single_phase_contactors' ? 'color: #dc2626; font-weight: 600;' : ''">Однофазные АВР на контакторах</p>
         </a>
       </div>
     </div>

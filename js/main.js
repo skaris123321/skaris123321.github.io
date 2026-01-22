@@ -37,18 +37,24 @@ if (typeof ProductsAPI !== 'undefined') {
 
     async getAvailableOptions(filters = {}) {
       const data = await this.loadProducts();
-      const { manufacturer_brand, commutation_type, inputs_count } = filters;
+      const { manufacturer_brand, commutation_type, inputs_count, enclosure_type, connection_type, climate_type } = filters;
 
       let filtered = data.products;
       if (manufacturer_brand) filtered = filtered.filter(p => p.brand === manufacturer_brand);
       if (commutation_type) filtered = filtered.filter(p => p.commutation_type === commutation_type);
       if (inputs_count) filtered = filtered.filter(p => p.inputs_count === inputs_count);
+      if (enclosure_type) filtered = filtered.filter(p => p.enclosure_type === enclosure_type);
+      if (connection_type) filtered = filtered.filter(p => p.connection_type === connection_type);
+      if (climate_type) filtered = filtered.filter(p => p.climate_type === climate_type);
 
       const opts = {
         manufacturer_brand: [...new Set(data.products.map(p => p.brand).filter(Boolean))].sort(),
         commutation_type: [],
         inputs_count: [],
-        nominal_current: []
+        nominal_current: [],
+        enclosure_type: [],
+        connection_type: [],
+        climate_type: []
       };
 
       let typeProducts = data.products;
@@ -64,7 +70,21 @@ if (typeof ProductsAPI !== 'undefined') {
       if (manufacturer_brand) currentProducts = currentProducts.filter(p => p.brand === manufacturer_brand);
       if (commutation_type) currentProducts = currentProducts.filter(p => p.commutation_type === commutation_type);
       if (inputs_count) currentProducts = currentProducts.filter(p => p.inputs_count === inputs_count);
+      if (enclosure_type) currentProducts = currentProducts.filter(p => p.enclosure_type === enclosure_type);
+      if (connection_type) currentProducts = currentProducts.filter(p => p.connection_type === connection_type);
+      if (climate_type) currentProducts = currentProducts.filter(p => p.climate_type === climate_type);
       opts.nominal_current = [...new Set(currentProducts.map(p => parseInt(p.nominal_current)).filter(Boolean))].sort((a, b) => a - b);
+
+      // Опции для однофазных АВР
+      let singlePhaseProducts = data.products.filter(p => p.commutation_type === 'single_phase_contactors');
+      if (manufacturer_brand) singlePhaseProducts = singlePhaseProducts.filter(p => p.brand === manufacturer_brand);
+      if (inputs_count) singlePhaseProducts = singlePhaseProducts.filter(p => p.inputs_count === inputs_count);
+      if (connection_type) singlePhaseProducts = singlePhaseProducts.filter(p => p.connection_type === connection_type);
+      if (climate_type) singlePhaseProducts = singlePhaseProducts.filter(p => p.climate_type === climate_type);
+      
+      opts.enclosure_type = [...new Set(singlePhaseProducts.map(p => p.enclosure_type).filter(Boolean))].sort();
+      opts.connection_type = [...new Set(singlePhaseProducts.map(p => p.connection_type).filter(Boolean))].sort();
+      opts.climate_type = [...new Set(singlePhaseProducts.map(p => p.climate_type).filter(Boolean))].sort();
 
       return { success: true, available_options: opts };
     }
@@ -86,6 +106,9 @@ if (typeof ProductsAPI !== 'undefined') {
             commutation_type: product.commutation_type,
             manufacturer_brand: product.brand,
             inputs_count: product.inputs_count,
+            enclosure_type: product.enclosure_type || null,
+            connection_type: product.connection_type || null,
+            climate_type: product.climate_type || null,
             base_price: parseInt(product.base_price || 0),
             main_image: product.main_image || (product.images?.[0] || null),
             images: product.images || (product.main_image ? [product.main_image] : []),
@@ -98,7 +121,7 @@ if (typeof ProductsAPI !== 'undefined') {
       }
       
       // Иначе ищем по фильтрам (старая логика)
-      const { nominal_current, commutation_type, manufacturer_brand, inputs_count } = filters;
+      const { nominal_current, commutation_type, manufacturer_brand, inputs_count, enclosure_type, connection_type, climate_type } = filters;
 
       if (!nominal_current) throw new Error('nominal_current required');
 
@@ -107,6 +130,9 @@ if (typeof ProductsAPI !== 'undefined') {
         if (commutation_type && p.commutation_type !== commutation_type) return false;
         if (manufacturer_brand && p.brand !== manufacturer_brand) return false;
         if (inputs_count && p.inputs_count !== inputs_count) return false;
+        if (enclosure_type && p.enclosure_type !== enclosure_type) return false;
+        if (connection_type && p.connection_type !== connection_type) return false;
+        if (climate_type && p.climate_type !== climate_type) return false;
         return true;
       });
 
@@ -121,6 +147,9 @@ if (typeof ProductsAPI !== 'undefined') {
           commutation_type: product.commutation_type,
           manufacturer_brand: product.brand,
           inputs_count: product.inputs_count,
+          enclosure_type: product.enclosure_type || null,
+          connection_type: product.connection_type || null,
+          climate_type: product.climate_type || null,
           base_price: parseInt(product.base_price || 0),
           main_image: product.main_image || (product.images?.[0] || null),
           images: product.images || (product.main_image ? [product.main_image] : []),
@@ -152,6 +181,10 @@ document.addEventListener('alpine:init', () => {
       inputsCount: '2', // "2" или "3"
       cableConnection: 'poles', // 'poles' или 'terminals'
       climateVersion: 'UXL4', // 'UXL4' или 'U2'
+      // Новые параметры для однофазных АВР
+      enclosureType: '19inch', // '19inch' или 'wall'
+      connectionType: 'poles', // 'poles' или 'terminals'
+      climateType: 'UHL4', // 'UHL4' или 'U2'
       basePrice: 87900,
       article: 'АВР-100-CHINT-2',
       loading: false,
@@ -163,7 +196,10 @@ document.addEventListener('alpine:init', () => {
         nominal_current: [],
         commutation_type: [],
         manufacturer_brand: [],
-        inputs_count: []
+        inputs_count: [],
+        enclosure_type: [],
+        connection_type: [],
+        climate_type: []
       },
       cartQuantity: 0, // Количество этого товара в корзине
       
@@ -206,9 +242,12 @@ document.addEventListener('alpine:init', () => {
           await this.loadProduct();
         }
         
-        const current = parseInt(this.nominalCurrent);
-        if (current >= 100 && current <= 800) {
-          this.cableConnection = 'terminals';
+        // Устанавливаем подключение кабеля в зависимости от тока для трехфазных АВР
+        if (this.commutationType !== 'single_phase_contactors') {
+          const current = parseInt(this.nominalCurrent);
+          if (current >= 100 && current <= 800) {
+            this.cableConnection = 'terminals';
+          }
         }
         
         this.initCart();
@@ -224,6 +263,9 @@ document.addEventListener('alpine:init', () => {
           if (this.manufacturerBrand) filters.manufacturer_brand = this.manufacturerBrand;
           if (this.commutationType) filters.commutation_type = this.commutationType;
           if (this.inputsCount) filters.inputs_count = this.inputsCount;
+          if (this.enclosureType) filters.enclosure_type = this.enclosureType;
+          if (this.connectionType) filters.connection_type = this.connectionType;
+          if (this.climateType) filters.climate_type = this.climateType;
 
           const data = await productsAPI.getAvailableOptions(filters);
           
@@ -232,7 +274,10 @@ document.addEventListener('alpine:init', () => {
               nominal_current: data.available_options.nominal_current || [],
               commutation_type: data.available_options.commutation_type || [],
               manufacturer_brand: data.available_options.manufacturer_brand || [],
-              inputs_count: data.available_options.inputs_count || []
+              inputs_count: data.available_options.inputs_count || [],
+              enclosure_type: data.available_options.enclosure_type || [],
+              connection_type: data.available_options.connection_type || [],
+              climate_type: data.available_options.climate_type || []
             };
             console.log('Доступные опции загружены:', this.availableOptions);
           } else {
@@ -240,7 +285,10 @@ document.addEventListener('alpine:init', () => {
               nominal_current: [],
               commutation_type: [],
               manufacturer_brand: [],
-              inputs_count: []
+              inputs_count: [],
+              enclosure_type: [],
+              connection_type: [],
+              climate_type: []
             };
           }
         } catch (error) {
@@ -249,7 +297,10 @@ document.addEventListener('alpine:init', () => {
             nominal_current: [],
             commutation_type: [],
             manufacturer_brand: [],
-            inputs_count: []
+            inputs_count: [],
+            enclosure_type: [],
+            connection_type: [],
+            climate_type: []
           };
         }
       },
@@ -290,6 +341,13 @@ document.addEventListener('alpine:init', () => {
             nominal_current: this.nominalCurrent,
             inputs_count: this.inputsCount
           };
+          
+          // Добавляем фильтры для однофазных АВР
+          if (this.commutationType === 'single_phase_contactors') {
+            filters.enclosure_type = this.enclosureType;
+            filters.connection_type = this.connectionType;
+            filters.climate_type = this.climateType;
+          }
 
           const data = await productsAPI.getProduct(filters);
           
@@ -372,6 +430,13 @@ document.addEventListener('alpine:init', () => {
             this.nominalCurrent = String(product.nominal_current);
             this.inputsCount = product.inputs_count;
             
+            // Устанавливаем параметры для однофазных АВР
+            if (product.commutation_type === 'single_phase_contactors') {
+              this.enclosureType = product.enclosure_type || '19inch';
+              this.connectionType = product.connection_type || 'poles';
+              this.climateType = product.climate_type || 'UHL4';
+            }
+            
             // Обновляем данные товара
             this.basePrice = product.base_price;
             this.article = product.article;
@@ -390,10 +455,12 @@ document.addEventListener('alpine:init', () => {
             this.documentation = product.documentation || [];
             
             const current = parseInt(product.nominal_current);
-            if (current >= 100 && current <= 800) {
-              this.cableConnection = 'terminals';
-            } else {
-              this.cableConnection = 'poles';
+            if (product.commutation_type !== 'single_phase_contactors') {
+              if (current >= 100 && current <= 800) {
+                this.cableConnection = 'terminals';
+              } else {
+                this.cableConnection = 'poles';
+              }
             }
             
             // Сбрасываем индекс изображения
@@ -429,6 +496,13 @@ document.addEventListener('alpine:init', () => {
             nominal_current: this.nominalCurrent,
             inputs_count: this.inputsCount
           };
+          
+          // Добавляем фильтры для однофазных АВР
+          if (this.commutationType === 'single_phase_contactors') {
+            filters.enclosure_type = this.enclosureType;
+            filters.connection_type = this.connectionType;
+            filters.climate_type = this.climateType;
+          }
 
           const data = await productsAPI.getProduct(filters);
           
@@ -583,11 +657,22 @@ document.addEventListener('alpine:init', () => {
       get totalPrice() {
         let price = this.basePrice;
         
-        if (this.cableConnection === 'terminals' && this.shouldChargeForTerminals) {
-          price += 1000;
-        }
-        if (this.climateVersion === 'U2') {
-          price += 23000;
+        if (this.commutationType === 'single_phase_contactors') {
+          // Для однофазных АВР
+          if (this.connectionType === 'terminals') {
+            price += 1000;
+          }
+          if (this.climateType === 'U2') {
+            price += 23000;
+          }
+        } else {
+          // Для трехфазных АВР
+          if (this.cableConnection === 'terminals' && this.shouldChargeForTerminals) {
+            price += 1000;
+          }
+          if (this.climateVersion === 'U2') {
+            price += 23000;
+          }
         }
         
         return price;
@@ -617,23 +702,80 @@ document.addEventListener('alpine:init', () => {
         this.updateCartQuantity();
       },
       
+      // Новые методы для однофазных АВР
+      async updateEnclosureType(value) {
+        if (this.loading || !this.isOptionAvailable('enclosure_type', value)) return;
+        this.loading = true;
+        this.enclosureType = value;
+        
+        try {
+          await this.loadAvailableOptions();
+          
+          // Если выбран навесной корпус, сбрасываем климатическое исполнение на У2
+          if (value === 'wall') {
+            this.climateType = 'U2';
+          } else if (value === '19inch') {
+            // Для 19" доступны оба варианта, выбираем первый доступный
+            if (this.availableOptions.climate_type && this.availableOptions.climate_type.length > 0) {
+              if (!this.availableOptions.climate_type.includes(this.climateType)) {
+                this.climateType = this.availableOptions.climate_type[0];
+              }
+            }
+          }
+          
+          await this.loadProductByCharacteristics();
+          this.updateCartQuantity();
+        } finally {
+          this.loading = false;
+        }
+      },
+      
+      async updateConnectionType(value) {
+        if (this.loading || !this.isOptionAvailable('connection_type', value)) return;
+        this.connectionType = value;
+        await this.loadProductByCharacteristics();
+        this.updateCartQuantity();
+      },
+      
+      async updateClimateType(value) {
+        if (this.loading || !this.isOptionAvailable('climate_type', value)) return;
+        this.climateType = value;
+        await this.loadProductByCharacteristics();
+        this.updateCartQuantity();
+      },
+      
       get productTitle() {
+        if (this.commutationType === 'single_phase_contactors') {
+          return `Однофазный АВР ${this.nominalCurrent || '12'}А на контакторах`;
+        }
         return `Шкаф АВР ${this.nominalCurrent || '100'}А на ${this.inputsCount || '2'} ввода`;
       },
       
       get allSelectedSpecs() {
         const specs = this.productSpecs ? { ...this.productSpecs } : {};
         
-        // Генерируем новый артикул по формуле АВР-[ВВОДЫ]-[ТОК]-[К/М]-РОСЭК
-        const typeCode = this.commutationType === 'contactors' ? 'К' : 'М';
-        const newArticle = `АВР-${this.inputsCount}-${this.nominalCurrent}-${typeCode}-РОСЭК`;
-        
-        specs['Артикул'] = newArticle;
-        specs['Производитель'] = this.manufacturerBrand || '';
-        specs['Количество вводов'] = `${this.inputsCount}`;
-        specs['Тип коммутации'] = this.commutationType === 'monoblock' ? 'Моноблочный АВР' : 'Контакторы';
-        specs['Подключение кабеля'] = this.cableConnection === 'poles' ? 'К полюсам автомата' : 'На дополнительные клеммы';
-        specs['Климатическое исполнение'] = this.climateVersion === 'UXL4' ? 'УХЛ4 - сухие теплые помещения' : 'У2 - уличное с обогревом';
+        if (this.commutationType === 'single_phase_contactors') {
+          // Для однофазных АВР
+          specs['Артикул'] = this.article || '';
+          specs['Производитель'] = this.manufacturerBrand || '';
+          specs['Количество вводов'] = `${this.inputsCount}`;
+          specs['Тип коммутации'] = 'Однофазные контакторы';
+          specs['Корпус'] = this.enclosureType === '19inch' ? '19 дюймов' : 'Навесной';
+          specs['Подключение кабеля'] = this.connectionType === 'poles' ? 'К полюсам автомата' : 'На дополнительные клеммы';
+          specs['Климатическое исполнение'] = this.climateType === 'UHL4' ? 'УХЛ4 - сухие теплые помещения' : 'У2 - уличное с обогревом';
+        } else {
+          // Для трехфазных АВР
+          // Генерируем новый артикул по формуле АВР-[ВВОДЫ]-[ТОК]-[К/М]-РОСЭК
+          const typeCode = this.commutationType === 'contactors' ? 'К' : 'М';
+          const newArticle = `АВР-${this.inputsCount}-${this.nominalCurrent}-${typeCode}-РОСЭК`;
+          
+          specs['Артикул'] = newArticle;
+          specs['Производитель'] = this.manufacturerBrand || '';
+          specs['Количество вводов'] = `${this.inputsCount}`;
+          specs['Тип коммутации'] = this.commutationType === 'monoblock' ? 'Моноблочный АВР' : 'Контакторы';
+          specs['Подключение кабеля'] = this.cableConnection === 'poles' ? 'К полюсам автомата' : 'На дополнительные клеммы';
+          specs['Климатическое исполнение'] = this.climateVersion === 'UXL4' ? 'УХЛ4 - сухие теплые помещения' : 'У2 - уличное с обогревом';
+        }
         
         return specs;
       },
@@ -684,24 +826,44 @@ document.addEventListener('alpine:init', () => {
       },
 
       getCurrentProduct() {
-        // Генерируем новый артикул по формуле АВР-[ВВОДЫ]-[ТОК]-[К/М]-РОСЭК
-        const typeCode = this.commutationType === 'contactors' ? 'К' : 'М';
-        const newArticle = `АВР-${this.inputsCount}-${this.nominalCurrent}-${typeCode}-РОСЭК`;
-        
-        return {
-          article: newArticle,
-          manufacturerBrand: this.manufacturerBrand,
-          commutationType: this.commutationType,
-          nominalCurrent: this.nominalCurrent,
-          inputsCount: this.inputsCount,
-          cableConnection: this.cableConnection,
-          climateVersion: this.climateVersion,
-          basePrice: this.basePrice,
-          totalPrice: this.totalPrice,
-          images: this.images,
-          productSpecs: this.productSpecs,
-          productTitle: this.productTitle
-        };
+        if (this.commutationType === 'single_phase_contactors') {
+          // Для однофазных АВР
+          return {
+            article: this.article,
+            manufacturerBrand: this.manufacturerBrand,
+            commutationType: this.commutationType,
+            nominalCurrent: this.nominalCurrent,
+            inputsCount: this.inputsCount,
+            enclosureType: this.enclosureType,
+            connectionType: this.connectionType,
+            climateType: this.climateType,
+            basePrice: this.basePrice,
+            totalPrice: this.totalPrice,
+            images: this.images,
+            productSpecs: this.productSpecs,
+            productTitle: this.productTitle
+          };
+        } else {
+          // Для трехфазных АВР
+          // Генерируем новый артикул по формуле АВР-[ВВОДЫ]-[ТОК]-[К/М]-РОСЭК
+          const typeCode = this.commutationType === 'contactors' ? 'К' : 'М';
+          const newArticle = `АВР-${this.inputsCount}-${this.nominalCurrent}-${typeCode}-РОСЭК`;
+          
+          return {
+            article: newArticle,
+            manufacturerBrand: this.manufacturerBrand,
+            commutationType: this.commutationType,
+            nominalCurrent: this.nominalCurrent,
+            inputsCount: this.inputsCount,
+            cableConnection: this.cableConnection,
+            climateVersion: this.climateVersion,
+            basePrice: this.basePrice,
+            totalPrice: this.totalPrice,
+            images: this.images,
+            productSpecs: this.productSpecs,
+            productTitle: this.productTitle
+          };
+        }
       },
 
       addToCart() {
@@ -836,7 +998,62 @@ document.addEventListener('alpine:init', () => {
       
       // Получение описания в зависимости от типа коммутации
       getCommutationDescription() {
-        if (this.commutationType === 'contactors') {
+        if (this.commutationType === 'single_phase_contactors') {
+          return {
+            purpose: `Однофазный АВР (автоматический ввод резерва) на базе контакторов предназначен для обеспечения бесперебойного электроснабжения однофазных потребителей путём автоматического переключения между основным и резервным вводами. Основные функции:`,
+            purposeList: [
+              'автоматическое переключение на резервный источник при пропадании или недопустимых отклонениях напряжения на основном вводе;',
+              'возврат на основной ввод при восстановлении его параметров;',
+              'защита электрооборудования от перегрузок и коротких замыканий;',
+              'визуальный контроль состояния вводов и режимов работы;',
+              'возможность ручного управления в аварийных ситуациях.'
+            ],
+            workflow: [
+              {
+                title: 'Нормальный режим (основной ввод в норме)',
+                text: 'Питание нагрузки идёт через основной ввод; контактор резервного ввода отключён; горит индикатор <strong>«Основной ввод»</strong>; реле контроля напряжения отслеживает параметры сети.'
+              },
+              {
+                title: 'Аварийный режим (пропадание или сбой на основном вводе)',
+                text: 'Реле контроля фиксирует отклонение параметров (падение напряжения, обрыв фазы); через заданную выдержку времени отключается контактор основного ввода; включается контактор резервного ввода; загорается индикатор <strong>«Резервный ввод»</strong>.'
+              },
+              {
+                title: 'Возврат в нормальный режим (восстановление основного ввода)',
+                text: 'После стабилизации напряжения на основном вводе реле даёт команду на переключение; с выдержкой времени отключается контактор резервного ввода; включается контактор основного ввода; восстанавливается индикация <strong>«Основной ввод»</strong>.'
+              }
+            ],
+            features: [
+              {
+                name: 'Компактность',
+                desc: '— Малые габариты для однофазных нагрузок'
+              },
+              {
+                name: 'Надёжность',
+                desc: '— Контакторы с высоким ресурсом, защита от одновременного включения вводов'
+              },
+              {
+                name: 'Простота монтажа',
+                desc: '— 19" и навесное исполнение для различных условий установки'
+              },
+              {
+                name: 'Экономичность',
+                desc: '— Оптимальное решение для небольших однофазных нагрузок'
+              },
+              {
+                name: 'Универсальность',
+                desc: '— Работа с сетью, генераторами, ИБП'
+              },
+              {
+                name: 'Климатическое исполнение',
+                desc: '— УХЛ4 для помещений, У2 для уличной установки'
+              },
+              {
+                name: 'Скорость переключения',
+                desc: '— Переключение за 0,1–0,5 с'
+              }
+            ]
+          };
+        } else if (this.commutationType === 'contactors') {
           return {
             purpose: `Шкаф АВР (автоматического ввода резерва) на базе контакторов предназначен для обеспечения бесперебойного электроснабжения потребителей путём автоматического переключения между основным и резервным вводами. Основные функции:`,
             purposeList: [
