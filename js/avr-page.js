@@ -129,13 +129,7 @@ document.addEventListener('alpine:init', () => {
       },
       
       getProductUrl(product) {
-        const params = new URLSearchParams({
-          brand: product.brand,
-          commutation_type: product.commutation_type,
-          nominal_current: product.nominal_current,
-          inputs_count: product.inputs_count
-        });
-        return `product.html?${params.toString()}`;
+        return `product.html?id=${product.id}`;
       },
       
       formatPrice(price) {

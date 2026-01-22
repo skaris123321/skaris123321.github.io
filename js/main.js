@@ -71,6 +71,33 @@ if (typeof ProductsAPI !== 'undefined') {
 
     async getProduct(filters) {
       const data = await this.loadProducts();
+      
+      // Если передан ID, ищем по ID
+      if (filters.id) {
+        const product = data.products.find(p => p.id === parseInt(filters.id));
+        if (!product) return { success: false, message: 'Товар не найден' };
+        
+        return {
+          success: true,
+          product: {
+            id: product.id,
+            article: product.article || '',
+            nominal_current: parseInt(product.nominal_current),
+            commutation_type: product.commutation_type,
+            manufacturer_brand: product.brand,
+            inputs_count: product.inputs_count,
+            base_price: parseInt(product.base_price || 0),
+            main_image: product.main_image || (product.images?.[0] || null),
+            images: product.images || (product.main_image ? [product.main_image] : []),
+            description: product.description || '',
+            full_description: product.full_description || product.description || '',
+            documentation: product.documentation || [],
+            specs: product.specs || {}
+          }
+        };
+      }
+      
+      // Иначе ищем по фильтрам (старая логика)
       const { nominal_current, commutation_type, manufacturer_brand, inputs_count } = filters;
 
       if (!nominal_current) throw new Error('nominal_current required');
@@ -142,33 +169,42 @@ document.addEventListener('alpine:init', () => {
       
       
       async init() {
-        // Загружаем доступные опции с учетом выбранного бренда по умолчанию
-        await this.loadAvailableOptions();
+        // Проверяем URL параметры
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
         
-        // Убеждаемся, что тип коммутации доступен для выбранного бренда
-        if (!this.isOptionAvailable('commutation_type', this.commutationType)) {
-          if (this.availableOptions.commutation_type?.[0]) {
-            this.commutationType = this.availableOptions.commutation_type[0];
-            await this.loadAvailableOptions();
+        if (productId) {
+          // Если есть ID в URL, загружаем товар по ID
+          await this.loadProductById(productId);
+        } else {
+          // Иначе используем старую логику с параметрами по умолчанию
+          await this.loadAvailableOptions();
+          
+          // Убеждаемся, что тип коммутации доступен для выбранного бренда
+          if (!this.isOptionAvailable('commutation_type', this.commutationType)) {
+            if (this.availableOptions.commutation_type?.[0]) {
+              this.commutationType = this.availableOptions.commutation_type[0];
+              await this.loadAvailableOptions();
+            }
           }
-        }
-        
-        // Убеждаемся, что количество вводов доступно
-        if (!this.isOptionAvailable('inputs_count', this.inputsCount)) {
-          if (this.availableOptions.inputs_count?.[0]) {
-            this.inputsCount = this.availableOptions.inputs_count[0];
-            await this.loadAvailableOptions();
+          
+          // Убеждаемся, что количество вводов доступно
+          if (!this.isOptionAvailable('inputs_count', this.inputsCount)) {
+            if (this.availableOptions.inputs_count?.[0]) {
+              this.inputsCount = this.availableOptions.inputs_count[0];
+              await this.loadAvailableOptions();
+            }
           }
-        }
-        
-        // Убеждаемся, что номинальный ток доступен
-        if (!this.isOptionAvailable('nominal_current', this.nominalCurrent)) {
-          if (this.availableOptions.nominal_current?.[0]) {
-            this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
+          
+          // Убеждаемся, что номинальный ток доступен
+          if (!this.isOptionAvailable('nominal_current', this.nominalCurrent)) {
+            if (this.availableOptions.nominal_current?.[0]) {
+              this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
+            }
           }
+          
+          await this.loadProduct();
         }
-        
-        await this.loadProduct();
         
         const current = parseInt(this.nominalCurrent);
         if (current >= 100 && current <= 800) {
@@ -316,6 +352,66 @@ document.addEventListener('alpine:init', () => {
         }
       },
       
+      // Новый метод для загрузки товара по ID
+      async loadProductById(productId) {
+        this.loading = true;
+        
+        try {
+          if (!productsAPI) {
+            throw new Error('ProductsAPI не инициализирован');
+          }
+
+          const data = await productsAPI.getProduct({ id: productId });
+          
+          if (data.success && data.product) {
+            const product = data.product;
+            
+            // Устанавливаем параметры товара
+            this.manufacturerBrand = product.manufacturer_brand;
+            this.commutationType = product.commutation_type;
+            this.nominalCurrent = String(product.nominal_current);
+            this.inputsCount = product.inputs_count;
+            
+            // Обновляем данные товара
+            this.basePrice = product.base_price;
+            this.article = product.article;
+            
+            // Формируем массив изображений
+            const imageList = product.images && product.images.length > 0 
+              ? product.images 
+              : (product.main_image ? [product.main_image] : []);
+            
+            this.images = imageList.map(img => {
+              return img.startsWith('images/') ? '../' + img : img;
+            });
+            
+            this.productSpecs = product.specs || {};
+            this.fullDescription = product.full_description || product.description || '';
+            this.documentation = product.documentation || [];
+            
+            const current = parseInt(product.nominal_current);
+            if (current >= 100 && current <= 800) {
+              this.cableConnection = 'terminals';
+            }
+            
+            // Сбрасываем индекс изображения
+            this.currentIndex = 0;
+            this.thumbnailScroll = 0;
+            
+            // Загружаем доступные опции для этого товара
+            await this.loadAvailableOptions();
+            
+            console.log('Товар загружен по ID:', product);
+          } else {
+            console.error('Ошибка загрузки товара по ID:', data.message);
+          }
+        } catch (error) {
+          console.error('Ошибка при загрузке товара по ID:', error);
+        } finally {
+          this.loading = false;
+        }
+      },
+      
       // Метод для обновления номинального тока
       async updateNominalCurrent(value) {
         if (this.loading || !this.isOptionAvailable('nominal_current', value)) return;
@@ -343,6 +439,7 @@ document.addEventListener('alpine:init', () => {
           
           await this.loadAvailableOptions();
           
+          // Если тип не контакторы, выбираем первое доступное количество вводов
           if (value !== 'contactors' && this.availableOptions.inputs_count && this.availableOptions.inputs_count.length > 0) {
             if (!this.availableOptions.inputs_count.includes(this.inputsCount)) {
               this.inputsCount = this.availableOptions.inputs_count[0];
@@ -350,6 +447,7 @@ document.addEventListener('alpine:init', () => {
             await this.loadAvailableOptions();
           }
           
+          // Выбираем первый доступный номинальный ток
           if (this.availableOptions.nominal_current && this.availableOptions.nominal_current.length > 0) {
             this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
           }
@@ -370,18 +468,19 @@ document.addEventListener('alpine:init', () => {
         try {
           await this.loadAvailableOptions();
           
+          // Выбираем первый доступный тип коммутации
           if (this.availableOptions.commutation_type && this.availableOptions.commutation_type.length > 0) {
             this.commutationType = this.availableOptions.commutation_type[0];
             await this.loadAvailableOptions();
-          } else {
-            await this.loadAvailableOptions();
           }
           
+          // Выбираем первое доступное количество вводов
           if (this.availableOptions.inputs_count && this.availableOptions.inputs_count.length > 0) {
             this.inputsCount = this.availableOptions.inputs_count[0];
             await this.loadAvailableOptions();
           }
           
+          // Выбираем первый доступный номинальный ток
           if (this.availableOptions.nominal_current && this.availableOptions.nominal_current.length > 0) {
             this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
           }
@@ -406,6 +505,7 @@ document.addEventListener('alpine:init', () => {
         try {
           await this.loadAvailableOptions();
           
+          // Выбираем первый доступный номинальный ток
           if (!this.isOptionAvailable('nominal_current', this.nominalCurrent)) {
             if (this.availableOptions.nominal_current && this.availableOptions.nominal_current.length > 0) {
               this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
