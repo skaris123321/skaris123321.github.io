@@ -20,7 +20,8 @@ document.addEventListener('alpine:init', () => {
       async init() {
         await this.loadProducts();
         this.checkUrlParams();
-        this.applyFilters();
+        // Изначально показываем все товары
+        this.filteredProducts = [...this.products];
       },
       
       checkUrlParams() {
@@ -60,7 +61,7 @@ document.addEventListener('alpine:init', () => {
       filterByInputs(inputs) {
         this.selectedInputs = this.selectedInputs === inputs ? null : inputs;
         // Если убираем фильтр по вводам и был выбран тип контакторов, убираем и его
-        if (!inputs && this.selectedCommutationType === 'contactors') {
+        if (!this.selectedInputs && this.selectedCommutationType === 'contactors') {
           this.selectedCommutationType = null;
         }
         this.applyFilters();
