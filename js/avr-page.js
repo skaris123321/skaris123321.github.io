@@ -19,6 +19,10 @@ document.addEventListener('alpine:init', () => {
       async init() {
         await this.loadProducts();
         this.checkUrlParams();
+        // Автоматически выбираем первый бренд при загрузке
+        if (this.uniqueBrands.length > 0 && !this.selectedBrand) {
+          this.selectedBrand = this.uniqueBrands[0];
+        }
         this.applyFilters();
       },
       
@@ -78,15 +82,27 @@ document.addEventListener('alpine:init', () => {
         filtered.sort((a, b) => {
           switch (this.sortBy) {
             case 'price_asc':
+              // Сначала по номинальному току, потом по цене
+              if (a.nominal_current !== b.nominal_current) {
+                return a.nominal_current - b.nominal_current;
+              }
               return a.base_price - b.base_price;
             case 'price_desc':
+              // Сначала по номинальному току, потом по цене убывание
+              if (a.nominal_current !== b.nominal_current) {
+                return a.nominal_current - b.nominal_current;
+              }
               return b.base_price - a.base_price;
             case 'article_asc':
               return (a.article || '').localeCompare(b.article || '');
             case 'article_desc':
               return (b.article || '').localeCompare(a.article || '');
             default:
-              return 0;
+              // По умолчанию сортируем по номинальному току, потом по количеству вводов
+              if (a.nominal_current !== b.nominal_current) {
+                return a.nominal_current - b.nominal_current;
+              }
+              return a.inputs_count.localeCompare(b.inputs_count);
           }
         });
         
@@ -108,6 +124,9 @@ document.addEventListener('alpine:init', () => {
       },
       
       get uniqueBrands() {
+        if (!this.products || this.products.length === 0) {
+          return [];
+        }
         const brands = [...new Set(this.products.map(p => p.brand).filter(Boolean))];
         return brands.sort();
       }
