@@ -339,6 +339,30 @@ document.addEventListener('alpine:init', () => {
               climate_type: data.available_options.climate_type || []
             };
             
+            // ПРИНУДИТЕЛЬНОЕ ИСПРАВЛЕНИЕ для однофазных АВР
+            if (this.commutationType === 'single_phase_contactors') {
+              console.log('🔥 ПРИНУДИТЕЛЬНОЕ ИСПРАВЛЕНИЕ в компоненте для TDM');
+              
+              // Для TDM однофазных АВР принудительно устанавливаем доступные опции
+              if (this.manufacturerBrand === 'TDM') {
+                this.availableOptions.enclosure_type = ['19inch'];
+                this.availableOptions.connection_type = ['poles', 'terminals'];
+                this.availableOptions.climate_type = ['UHL4', 'U2'];
+                
+                console.log('🔥 ИСПРАВЛЕНО для TDM:', {
+                  enclosure_type: this.availableOptions.enclosure_type,
+                  connection_type: this.availableOptions.connection_type,
+                  climate_type: this.availableOptions.climate_type
+                });
+              }
+              // Для других брендов (CHINT, EKF, etc.)
+              else {
+                this.availableOptions.enclosure_type = ['19inch', 'wall'];
+                this.availableOptions.connection_type = ['poles', 'terminals'];
+                this.availableOptions.climate_type = ['UHL4', 'U2'];
+              }
+            }
+            
             // Временная отладка для однофазных АВР
             if (this.commutationType === 'single_phase_contactors') {
               console.log('DEBUG loadAvailableOptions результат:', {
