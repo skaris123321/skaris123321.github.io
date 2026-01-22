@@ -225,13 +225,21 @@
         <div class="product-spec-options">
           <button 
             class="spec-option"
-            :class="{ active: inputsCount === '2', 'opacity-50': loading || !isOptionAvailable('inputs_count', '2'), disabled: loading || !isOptionAvailable('inputs_count', '2') }"
+            :class="{ 
+              active: inputsCount === '2', 
+              'opacity-50': loading || !isOptionAvailable('inputs_count', '2') || commutationType === 'single_phase_contactors', 
+              disabled: loading || !isOptionAvailable('inputs_count', '2') || commutationType === 'single_phase_contactors'
+            }"
             @click="updateInputsCount('2')"
-            :disabled="loading || !isOptionAvailable('inputs_count', '2')"
+            :disabled="loading || !isOptionAvailable('inputs_count', '2') || commutationType === 'single_phase_contactors'"
           >2 ввода</button>
           <button 
             class="spec-option"
-            :class="{ active: inputsCount === '3', 'opacity-50': loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors' || commutationType === 'single_phase_contactors', disabled: loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors' || commutationType === 'single_phase_contactors' }"
+            :class="{ 
+              active: inputsCount === '3', 
+              'opacity-50': loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors' || commutationType === 'single_phase_contactors', 
+              disabled: loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors' || commutationType === 'single_phase_contactors'
+            }"
             @click="updateInputsCount('3')"
             :disabled="loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors' || commutationType === 'single_phase_contactors'"
           >3 ввода</button>
