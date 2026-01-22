@@ -45,6 +45,24 @@ document.addEventListener('alpine:init', () => {
           if (data && Array.isArray(data.products)) {
             this.products = data.products;
             console.log(`Загружено ${this.products.length} товаров`);
+            
+            // Проверим товары с контакторами
+            const contactorProducts = this.products.filter(p => p.commutation_type === 'contactors');
+            console.log(`Товаров с контакторами: ${contactorProducts.length}`);
+            
+            // Проверим товары с контакторами и 2 вводами
+            const contactorTwoInputs = this.products.filter(p => p.commutation_type === 'contactors' && p.inputs_count === '2');
+            console.log(`Товаров с контакторами и 2 вводами: ${contactorTwoInputs.length}`);
+            
+            if (contactorTwoInputs.length > 0) {
+              console.log('Первые 3 товара с контакторами и 2 вводами:', contactorTwoInputs.slice(0, 3).map(p => ({
+                id: p.id,
+                article: p.article,
+                inputs_count: p.inputs_count,
+                commutation_type: p.commutation_type,
+                brand: p.brand
+              })));
+            }
           }
         } catch (error) {
           console.error('Ошибка загрузки товаров:', error);
@@ -72,6 +90,12 @@ document.addEventListener('alpine:init', () => {
       },
       
       filterByCommutationType(type) {
+        console.log('filterByCommutationType вызван с:', type);
+        console.log('Текущее состояние:', {
+          selectedCommutationType: this.selectedCommutationType,
+          selectedInputs: this.selectedInputs
+        });
+        
         // Если уже выбран такой же тип коммутации и 2 ввода, убираем фильтр
         if (this.selectedCommutationType === type && this.selectedInputs === '2') {
           this.selectedCommutationType = null;
@@ -81,25 +105,52 @@ document.addEventListener('alpine:init', () => {
           this.selectedCommutationType = type;
           this.selectedInputs = '2';
         }
+        
+        console.log('Новое состояние:', {
+          selectedCommutationType: this.selectedCommutationType,
+          selectedInputs: this.selectedInputs
+        });
+        
         this.applyFilters();
       },
       
       applyFilters() {
         let filtered = [...this.products];
         
+        console.log('applyFilters - начальное количество товаров:', filtered.length);
+        console.log('Фильтры:', {
+          selectedBrand: this.selectedBrand,
+          selectedInputs: this.selectedInputs,
+          selectedCommutationType: this.selectedCommutationType
+        });
+        
         // Фильтр по бренду
         if (this.selectedBrand) {
           filtered = filtered.filter(p => p.brand === this.selectedBrand);
+          console.log('После фильтра по бренду:', filtered.length);
         }
         
         // Фильтр по количеству вводов
         if (this.selectedInputs) {
           filtered = filtered.filter(p => p.inputs_count === this.selectedInputs);
+          console.log('После фильтра по вводам:', filtered.length);
         }
         
         // Фильтр по типу коммутации
         if (this.selectedCommutationType) {
           filtered = filtered.filter(p => p.commutation_type === this.selectedCommutationType);
+          console.log('После фильтра по коммутации:', filtered.length);
+          
+          // Покажем первые несколько товаров для отладки
+          if (filtered.length > 0) {
+            console.log('Первые 3 отфильтрованных товара:', filtered.slice(0, 3).map(p => ({
+              id: p.id,
+              article: p.article,
+              inputs_count: p.inputs_count,
+              commutation_type: p.commutation_type,
+              brand: p.brand
+            })));
+          }
         }
         
         // Сортировка
