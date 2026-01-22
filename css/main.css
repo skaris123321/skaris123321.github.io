@@ -2480,31 +2480,6 @@ h1.category-title {
   background: #fef2f2;
 }
 
-/* Стили для сертификатов */
-.document-item.certificate {
-  border-color: #10b981;
-  background: #f0fdf4;
-  position: relative;
-}
-
-.document-item.certificate:hover {
-  border-color: #059669;
-  background: #ecfdf5;
-}
-
-.document-item.certificate::before {
-  content: "🏆";
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  font-size: 1.2rem;
-}
-
-.document-item.certificate .document-name {
-  color: #065f46;
-  font-weight: 600;
-}
-
 .document-info {
   flex: 1;
   min-width: 0;
