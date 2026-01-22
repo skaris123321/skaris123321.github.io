@@ -117,19 +117,23 @@
                     </div>
                     <div class="cart-item-spec">
                       <span>Тип коммутации:</span>
-                      <span class="cart-item-spec-value" x-text="item.commutationType === 'monoblock' ? 'Моноблочный АВР' : 'Контакторы'"></span>
+                      <span class="cart-item-spec-value" x-text="item.commutationType === 'monoblock' ? 'Моноблочный АВР' : (item.commutationType === 'single_phase_contactors' ? 'Однофазные контакторы' : 'Контакторы')"></span>
                     </div>
-                    <div class="cart-item-spec">
+                    <div x-show="item.commutationType !== 'single_phase_contactors'" class="cart-item-spec">
                       <span>Количество вводов:</span>
                       <span class="cart-item-spec-value" x-text="item.inputsCount"></span>
                     </div>
+                    <div x-show="item.commutationType === 'single_phase_contactors'" class="cart-item-spec">
+                      <span>Корпус:</span>
+                      <span class="cart-item-spec-value" x-text="item.enclosureType === '19inch' ? '19 дюймов' : 'Навесной'"></span>
+                    </div>
                     <div class="cart-item-spec">
                       <span>Подключение кабеля:</span>
-                      <span class="cart-item-spec-value" x-text="item.cableConnection === 'poles' ? 'К полюсам автомата' : 'На дополнительные клеммы'"></span>
+                      <span class="cart-item-spec-value" x-text="item.commutationType === 'single_phase_contactors' ? (item.connectionType === 'poles' ? 'К полюсам автомата' : 'На дополнительные клеммы') : (item.cableConnection === 'poles' ? 'К полюсам автомата' : 'На дополнительные клеммы')"></span>
                     </div>
                     <div class="cart-item-spec">
                       <span>Климатическое исполнение:</span>
-                      <span class="cart-item-spec-value" x-text="item.climateVersion === 'UXL4' ? 'УХЛ4 - сухие теплые помещения' : 'У2 - уличное с обогревом'"></span>
+                      <span class="cart-item-spec-value" x-text="item.commutationType === 'single_phase_contactors' ? (item.climateType === 'UHL4' ? 'УХЛ4 - сухие теплые помещения' : 'У2 - уличное с обогревом') : (item.climateVersion === 'UXL4' ? 'УХЛ4 - сухие теплые помещения' : 'У2 - уличное с обогревом')"></span>
                     </div>
                   </div>
 

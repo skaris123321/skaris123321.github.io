@@ -220,28 +220,28 @@
         </div>
       </div>
 
-      <div class="product-spec-group">
+      <div x-show="commutationType !== 'single_phase_contactors'" class="product-spec-group">
         <div class="product-spec-label">Количество вводов</div>
         <div class="product-spec-options">
           <button 
             class="spec-option"
             :class="{ 
               active: inputsCount === '2', 
-              'opacity-50': loading || !isOptionAvailable('inputs_count', '2') || commutationType === 'single_phase_contactors', 
-              disabled: loading || !isOptionAvailable('inputs_count', '2') || commutationType === 'single_phase_contactors'
+              'opacity-50': loading || !isOptionAvailable('inputs_count', '2'), 
+              disabled: loading || !isOptionAvailable('inputs_count', '2')
             }"
             @click="updateInputsCount('2')"
-            :disabled="loading || !isOptionAvailable('inputs_count', '2') || commutationType === 'single_phase_contactors'"
+            :disabled="loading || !isOptionAvailable('inputs_count', '2')"
           >2 ввода</button>
           <button 
             class="spec-option"
             :class="{ 
               active: inputsCount === '3', 
-              'opacity-50': loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors' || commutationType === 'single_phase_contactors', 
-              disabled: loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors' || commutationType === 'single_phase_contactors'
+              'opacity-50': loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors', 
+              disabled: loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors'
             }"
             @click="updateInputsCount('3')"
-            :disabled="loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors' || commutationType === 'single_phase_contactors'"
+            :disabled="loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors'"
           >3 ввода</button>
         </div>
       </div>

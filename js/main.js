@@ -78,7 +78,6 @@ if (typeof ProductsAPI !== 'undefined') {
       // Опции для однофазных АВР
       let singlePhaseProducts = data.products.filter(p => p.commutation_type === 'single_phase_contactors');
       if (manufacturer_brand) singlePhaseProducts = singlePhaseProducts.filter(p => p.brand === manufacturer_brand);
-      if (inputs_count) singlePhaseProducts = singlePhaseProducts.filter(p => p.inputs_count === inputs_count);
       
       // Для enclosure_type не фильтруем по connection_type и climate_type
       let enclosureProducts = singlePhaseProducts;
@@ -269,10 +268,14 @@ document.addEventListener('alpine:init', () => {
           const filters = {};
           if (this.manufacturerBrand) filters.manufacturer_brand = this.manufacturerBrand;
           if (this.commutationType) filters.commutation_type = this.commutationType;
-          if (this.inputsCount) filters.inputs_count = this.inputsCount;
-          if (this.enclosureType) filters.enclosure_type = this.enclosureType;
-          if (this.connectionType) filters.connection_type = this.connectionType;
-          if (this.climateType) filters.climate_type = this.climateType;
+          
+          // Для однофазных АВР передаем только базовые фильтры
+          if (this.commutationType !== 'single_phase_contactors') {
+            if (this.inputsCount) filters.inputs_count = this.inputsCount;
+            if (this.enclosureType) filters.enclosure_type = this.enclosureType;
+            if (this.connectionType) filters.connection_type = this.connectionType;
+            if (this.climateType) filters.climate_type = this.climateType;
+          }
 
           const data = await productsAPI.getAvailableOptions(filters);
           
