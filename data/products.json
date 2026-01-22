@@ -2964,7 +2964,7 @@
       }
     },
     {
-      "id": 123,
+      "id": 420,
       "article": "АВР-2-25-К-РОСЭК",
       "nominal_current": 25,
       "brand": "CHINT",
@@ -3010,7 +3010,7 @@
       }
     },
     {
-      "id": 125,
+      "id": 421,
       "article": "АВР-2-40-К-РОСЭК",
       "nominal_current": 40,
       "brand": "CHINT",
@@ -3056,7 +3056,7 @@
       }
     },
     {
-      "id": 127,
+      "id": 422,
       "article": "АВР-2-80-К-РОСЭК",
       "nominal_current": 80,
       "brand": "CHINT",
@@ -3102,7 +3102,7 @@
       }
     },
     {
-      "id": 129,
+      "id": 423,
       "article": "АВР-2-125-К-РОСЭК",
       "nominal_current": 125,
       "brand": "CHINT",

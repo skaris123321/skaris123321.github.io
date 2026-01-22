@@ -22,6 +22,7 @@ document.addEventListener('alpine:init', () => {
         this.checkUrlParams();
         // Изначально показываем все товары
         this.filteredProducts = [...this.products];
+        this.applyFilters();
       },
       
       checkUrlParams() {
@@ -45,23 +46,6 @@ document.addEventListener('alpine:init', () => {
           if (data && Array.isArray(data.products)) {
             this.products = data.products;
             console.log(`Загружено ${this.products.length} товаров`);
-            
-            // Проверим, есть ли товары с contactors
-            const contactorsProducts = this.products.filter(p => p.commutation_type === 'contactors');
-            console.log(`Товаров с commutation_type "contactors":`, contactorsProducts.length);
-            
-            const contactors2Inputs = this.products.filter(p => p.commutation_type === 'contactors' && p.inputs_count === '2');
-            console.log(`Товаров с commutation_type "contactors" и inputs_count "2":`, contactors2Inputs.length);
-            
-            if (contactors2Inputs.length > 0) {
-              console.log('Примеры товаров:', contactors2Inputs.slice(0, 3).map(p => ({
-                id: p.id,
-                article: p.article,
-                brand: p.brand,
-                commutation_type: p.commutation_type,
-                inputs_count: p.inputs_count
-              })));
-            }
           }
         } catch (error) {
           console.error('Ошибка загрузки товаров:', error);
@@ -89,22 +73,16 @@ document.addEventListener('alpine:init', () => {
       },
       
       filterByCommutationType(type) {
-        console.log('filterByCommutationType вызван с типом:', type);
-        console.log('Текущее состояние - selectedCommutationType:', this.selectedCommutationType, 'selectedInputs:', this.selectedInputs);
-        
         // Если уже выбран такой же тип коммутации и 2 ввода, убираем фильтр
         if (this.selectedCommutationType === type && this.selectedInputs === '2') {
-          console.log('Убираем фильтр');
           this.selectedCommutationType = null;
           this.selectedInputs = null;
         } else {
           // Иначе устанавливаем фильтр на контакторы с 2 вводами
-          console.log('Устанавливаем фильтр на', type, 'с 2 вводами');
           this.selectedCommutationType = type;
           this.selectedInputs = '2';
         }
         
-        console.log('Новое состояние - selectedCommutationType:', this.selectedCommutationType, 'selectedInputs:', this.selectedInputs);
         this.applyFilters();
       },
 
@@ -122,31 +100,22 @@ document.addEventListener('alpine:init', () => {
       },
       
       applyFilters() {
-        console.log('applyFilters вызван');
-        console.log('Фильтры - selectedBrand:', this.selectedBrand, 'selectedInputs:', this.selectedInputs, 'selectedCommutationType:', this.selectedCommutationType);
-        console.log('Всего товаров:', this.products.length);
-        
         let filtered = [...this.products];
         
         // Фильтр по бренду
         if (this.selectedBrand) {
           filtered = filtered.filter(p => p.brand === this.selectedBrand);
-          console.log('После фильтра по бренду:', filtered.length);
         }
         
         // Фильтр по количеству вводов
         if (this.selectedInputs) {
           filtered = filtered.filter(p => p.inputs_count === this.selectedInputs);
-          console.log('После фильтра по вводам:', filtered.length);
         }
         
         // Фильтр по типу коммутации
         if (this.selectedCommutationType) {
           filtered = filtered.filter(p => p.commutation_type === this.selectedCommutationType);
-          console.log('После фильтра по типу коммутации:', filtered.length);
         }
-        
-        console.log('Итого отфильтрованных товаров:', filtered.length);
         
         // Сортировка
         filtered.sort((a, b) => {
@@ -172,7 +141,6 @@ document.addEventListener('alpine:init', () => {
         });
         
         this.filteredProducts = filtered;
-        console.log('Финальный результат:', this.filteredProducts.length, 'товаров');
       },
       
       getProductUrl(product) {
