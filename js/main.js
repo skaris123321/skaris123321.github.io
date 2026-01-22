@@ -297,9 +297,10 @@ document.addEventListener('alpine:init', () => {
               console.log('DEBUG loadAvailableOptions результат:', {
                 manufacturerBrand: this.manufacturerBrand,
                 commutationType: this.commutationType,
-                enclosure_type: this.availableOptions.enclosure_type,
-                connection_type: this.availableOptions.connection_type,
-                climate_type: this.availableOptions.climate_type
+                enclosure_type_array: [...this.availableOptions.enclosure_type],
+                enclosure_type_length: this.availableOptions.enclosure_type.length,
+                connection_type_array: [...this.availableOptions.connection_type],
+                climate_type_array: [...this.availableOptions.climate_type]
               });
             }
 
@@ -335,7 +336,10 @@ document.addEventListener('alpine:init', () => {
           console.log('DEBUG isOptionAvailable:', {
             optionType,
             value,
-            availableOptions: this.availableOptions.enclosure_type,
+            availableOptionsArray: [...this.availableOptions.enclosure_type],
+            arrayLength: this.availableOptions.enclosure_type.length,
+            includes19inch: this.availableOptions.enclosure_type.includes('19inch'),
+            includesWall: this.availableOptions.enclosure_type.includes('wall'),
             manufacturerBrand: this.manufacturerBrand,
             commutationType: this.commutationType
           });
