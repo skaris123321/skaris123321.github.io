@@ -36,6 +36,8 @@ if (typeof ProductsAPI !== 'undefined') {
     }
 
     async getAvailableOptions(filters = {}) {
+      console.log('🔥 DEBUG API: getAvailableOptions НАЧАЛО, filters:', filters);
+      
       const data = await this.loadProducts();
       const { manufacturer_brand, commutation_type, inputs_count, enclosure_type, connection_type, climate_type } = filters;
 
@@ -304,6 +306,7 @@ document.addEventListener('alpine:init', () => {
           const data = await productsAPI.getAvailableOptions(filters);
           
           console.log('DEBUG loadAvailableOptions: получен ответ от API:', data);
+          console.log('DEBUG loadAvailableOptions: available_options полностью:', JSON.stringify(data.available_options, null, 2));
           
           if (data.success && data.available_options) {
             this.availableOptions = {
