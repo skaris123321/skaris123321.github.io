@@ -79,12 +79,19 @@ if (typeof ProductsAPI !== 'undefined') {
       let singlePhaseProducts = data.products.filter(p => p.commutation_type === 'single_phase_contactors');
       if (manufacturer_brand) singlePhaseProducts = singlePhaseProducts.filter(p => p.brand === manufacturer_brand);
       if (inputs_count) singlePhaseProducts = singlePhaseProducts.filter(p => p.inputs_count === inputs_count);
-      if (connection_type) singlePhaseProducts = singlePhaseProducts.filter(p => p.connection_type === connection_type);
-      if (climate_type) singlePhaseProducts = singlePhaseProducts.filter(p => p.climate_type === climate_type);
       
-      opts.enclosure_type = [...new Set(singlePhaseProducts.map(p => p.enclosure_type).filter(Boolean))].sort();
-      opts.connection_type = [...new Set(singlePhaseProducts.map(p => p.connection_type).filter(Boolean))].sort();
-      opts.climate_type = [...new Set(singlePhaseProducts.map(p => p.climate_type).filter(Boolean))].sort();
+      // Для enclosure_type не фильтруем по connection_type и climate_type
+      let enclosureProducts = singlePhaseProducts;
+      opts.enclosure_type = [...new Set(enclosureProducts.map(p => p.enclosure_type).filter(Boolean))].sort();
+      
+      // Для connection_type не фильтруем по enclosure_type и climate_type
+      let connectionProducts = singlePhaseProducts;
+      opts.connection_type = [...new Set(connectionProducts.map(p => p.connection_type).filter(Boolean))].sort();
+      
+      // Для climate_type фильтруем по enclosure_type (УХЛ4 только для 19")
+      let climateProducts = singlePhaseProducts;
+      if (enclosure_type) climateProducts = climateProducts.filter(p => p.enclosure_type === enclosure_type);
+      opts.climate_type = [...new Set(climateProducts.map(p => p.climate_type).filter(Boolean))].sort();
 
       return { success: true, available_options: opts };
     }
@@ -571,10 +578,42 @@ document.addEventListener('alpine:init', () => {
             this.inputsCount = '2';
           }
           
+          // Если переключаемся на однофазные АВР, устанавливаем доступные значения по умолчанию
+          if (value === 'single_phase_contactors') {
+            this.inputsCount = '2'; // Однофазные всегда 2 ввода
+          }
+          
           await this.loadAvailableOptions();
           
+          // Для однофазных АВР устанавливаем первые доступные значения
+          if (value === 'single_phase_contactors') {
+            // Устанавливаем первый доступный тип корпуса
+            if (this.availableOptions.enclosure_type && this.availableOptions.enclosure_type.length > 0) {
+              if (!this.availableOptions.enclosure_type.includes(this.enclosureType)) {
+                this.enclosureType = this.availableOptions.enclosure_type[0];
+              }
+            }
+            
+            // Устанавливаем первый доступный тип подключения
+            if (this.availableOptions.connection_type && this.availableOptions.connection_type.length > 0) {
+              if (!this.availableOptions.connection_type.includes(this.connectionType)) {
+                this.connectionType = this.availableOptions.connection_type[0];
+              }
+            }
+            
+            // Устанавливаем первый доступный тип климата
+            if (this.availableOptions.climate_type && this.availableOptions.climate_type.length > 0) {
+              if (!this.availableOptions.climate_type.includes(this.climateType)) {
+                this.climateType = this.availableOptions.climate_type[0];
+              }
+            }
+            
+            // Перезагружаем опции с учетом новых параметров
+            await this.loadAvailableOptions();
+          }
+          
           // Если тип не контакторы, выбираем первое доступное количество вводов
-          if (value !== 'contactors' && this.availableOptions.inputs_count && this.availableOptions.inputs_count.length > 0) {
+          if (value !== 'contactors' && value !== 'single_phase_contactors' && this.availableOptions.inputs_count && this.availableOptions.inputs_count.length > 0) {
             if (!this.availableOptions.inputs_count.includes(this.inputsCount)) {
               this.inputsCount = this.availableOptions.inputs_count[0];
             }
@@ -611,6 +650,27 @@ document.addEventListener('alpine:init', () => {
           // Выбираем первое доступное количество вводов
           if (this.availableOptions.inputs_count && this.availableOptions.inputs_count.length > 0) {
             this.inputsCount = this.availableOptions.inputs_count[0];
+            await this.loadAvailableOptions();
+          }
+          
+          // Если это однофазные АВР, устанавливаем доступные параметры
+          if (this.commutationType === 'single_phase_contactors') {
+            // Устанавливаем первый доступный тип корпуса
+            if (this.availableOptions.enclosure_type && this.availableOptions.enclosure_type.length > 0) {
+              this.enclosureType = this.availableOptions.enclosure_type[0];
+            }
+            
+            // Устанавливаем первый доступный тип подключения
+            if (this.availableOptions.connection_type && this.availableOptions.connection_type.length > 0) {
+              this.connectionType = this.availableOptions.connection_type[0];
+            }
+            
+            // Устанавливаем первый доступный тип климата
+            if (this.availableOptions.climate_type && this.availableOptions.climate_type.length > 0) {
+              this.climateType = this.availableOptions.climate_type[0];
+            }
+            
+            // Перезагружаем опции с учетом новых параметров
             await this.loadAvailableOptions();
           }
           
