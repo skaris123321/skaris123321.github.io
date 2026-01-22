@@ -75,22 +75,24 @@ if (typeof ProductsAPI !== 'undefined') {
       if (climate_type) currentProducts = currentProducts.filter(p => p.climate_type === climate_type);
       opts.nominal_current = [...new Set(currentProducts.map(p => parseInt(p.nominal_current)).filter(Boolean))].sort((a, b) => a - b);
 
-      // Опции для однофазных АВР
-      let singlePhaseProducts = data.products.filter(p => p.commutation_type === 'single_phase_contactors');
-      if (manufacturer_brand) singlePhaseProducts = singlePhaseProducts.filter(p => p.brand === manufacturer_brand);
-      
-      // Для enclosure_type не фильтруем по connection_type и climate_type
-      let enclosureProducts = singlePhaseProducts;
-      opts.enclosure_type = [...new Set(enclosureProducts.map(p => p.enclosure_type).filter(Boolean))].sort();
-      
-      // Для connection_type не фильтруем по enclosure_type и climate_type
-      let connectionProducts = singlePhaseProducts;
-      opts.connection_type = [...new Set(connectionProducts.map(p => p.connection_type).filter(Boolean))].sort();
-      
-      // Для climate_type фильтруем по enclosure_type (УХЛ4 только для 19")
-      let climateProducts = singlePhaseProducts;
-      if (enclosure_type) climateProducts = climateProducts.filter(p => p.enclosure_type === enclosure_type);
-      opts.climate_type = [...new Set(climateProducts.map(p => p.climate_type).filter(Boolean))].sort();
+      // Опции для однофазных АВР - только если выбран тип single_phase_contactors
+      if (commutation_type === 'single_phase_contactors') {
+        let singlePhaseProducts = data.products.filter(p => p.commutation_type === 'single_phase_contactors');
+        if (manufacturer_brand) singlePhaseProducts = singlePhaseProducts.filter(p => p.brand === manufacturer_brand);
+        
+        // Для enclosure_type не фильтруем по connection_type и climate_type
+        let enclosureProducts = singlePhaseProducts;
+        opts.enclosure_type = [...new Set(enclosureProducts.map(p => p.enclosure_type).filter(Boolean))].sort();
+        
+        // Для connection_type не фильтруем по enclosure_type и climate_type
+        let connectionProducts = singlePhaseProducts;
+        opts.connection_type = [...new Set(connectionProducts.map(p => p.connection_type).filter(Boolean))].sort();
+        
+        // Для climate_type фильтруем по enclosure_type (УХЛ4 только для 19")
+        let climateProducts = singlePhaseProducts;
+        if (enclosure_type) climateProducts = climateProducts.filter(p => p.enclosure_type === enclosure_type);
+        opts.climate_type = [...new Set(climateProducts.map(p => p.climate_type).filter(Boolean))].sort();
+      }
 
       return { success: true, available_options: opts };
     }
@@ -289,7 +291,7 @@ document.addEventListener('alpine:init', () => {
               connection_type: data.available_options.connection_type || [],
               climate_type: data.available_options.climate_type || []
             };
-            console.log('Доступные опции загружены:', this.availableOptions);
+
           } else {
             this.availableOptions = {
               nominal_current: [],
@@ -409,7 +411,7 @@ document.addEventListener('alpine:init', () => {
               await window.documentsManager.loadDocuments(productData);
             }
             
-            console.log('Товар загружен:', product);
+
           } else {
             console.error('Ошибка загрузки товара:', data.message);
           }
@@ -480,7 +482,7 @@ document.addEventListener('alpine:init', () => {
             // Загружаем доступные опции для этого товара ПОСЛЕ установки всех параметров
             await this.loadAvailableOptions();
             
-            console.log('Товар загружен по ID:', product.id, product.article);
+
           } else {
             console.error('Ошибка загрузки товара по ID:', data.message);
           }
@@ -545,7 +547,7 @@ document.addEventListener('alpine:init', () => {
             this.currentIndex = 0;
             this.thumbnailScroll = 0;
             
-            console.log('Товар загружен по характеристикам:', product);
+
           } else {
             console.error('Ошибка загрузки товара по характеристикам:', data.message);
           }
