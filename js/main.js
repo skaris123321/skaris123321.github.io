@@ -291,6 +291,17 @@ document.addEventListener('alpine:init', () => {
               connection_type: data.available_options.connection_type || [],
               climate_type: data.available_options.climate_type || []
             };
+            
+            // Временная отладка для однофазных АВР
+            if (this.commutationType === 'single_phase_contactors') {
+              console.log('DEBUG loadAvailableOptions результат:', {
+                manufacturerBrand: this.manufacturerBrand,
+                commutationType: this.commutationType,
+                enclosure_type: this.availableOptions.enclosure_type,
+                connection_type: this.availableOptions.connection_type,
+                climate_type: this.availableOptions.climate_type
+              });
+            }
 
           } else {
             this.availableOptions = {
@@ -319,6 +330,17 @@ document.addEventListener('alpine:init', () => {
       
       // Проверка доступности опции
       isOptionAvailable(optionType, value) {
+        // Временная отладка для корпуса
+        if (optionType === 'enclosure_type') {
+          console.log('DEBUG isOptionAvailable:', {
+            optionType,
+            value,
+            availableOptions: this.availableOptions.enclosure_type,
+            manufacturerBrand: this.manufacturerBrand,
+            commutationType: this.commutationType
+          });
+        }
+        
         // Бренды всегда доступны
         if (optionType === 'manufacturer_brand') return true;
         
