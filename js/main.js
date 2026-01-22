@@ -80,11 +80,13 @@ if (typeof ProductsAPI !== 'undefined') {
       if (climate_type) currentProducts = currentProducts.filter(p => p.climate_type === climate_type);
       opts.nominal_current = [...new Set(currentProducts.map(p => parseInt(p.nominal_current)).filter(Boolean))].sort((a, b) => a - b);
 
-      console.log('DEBUG API: Перед проверкой однофазных АВР. commutation_type =', commutation_type);
-      console.log('DEBUG API: commutation_type === "single_phase_contactors"?', commutation_type === 'single_phase_contactors');
+      console.log('🔥 DEBUG API: Перед проверкой однофазных АВР. commutation_type =', JSON.stringify(commutation_type));
+      console.log('🔥 DEBUG API: typeof commutation_type =', typeof commutation_type);
+      console.log('🔥 DEBUG API: commutation_type === "single_phase_contactors"?', commutation_type === 'single_phase_contactors');
 
       // Опции для однофазных АВР - только если выбран тип single_phase_contactors
       if (commutation_type === 'single_phase_contactors') {
+        console.log('🔥 DEBUG API: ВОШЛИ в условие для однофазных АВР!');
         console.log('DEBUG API: Обрабатываем однофазные АВР для бренда:', manufacturer_brand);
         
         let singlePhaseProducts = data.products.filter(p => p.commutation_type === 'single_phase_contactors');
@@ -111,6 +113,8 @@ if (typeof ProductsAPI !== 'undefined') {
         opts.climate_type = [...new Set(climateProducts.map(p => p.climate_type).filter(Boolean))].sort();
       }
 
+      console.log('🔥 DEBUG API: КОНЕЦ getAvailableOptions, возвращаем:', opts);
+      
       return { success: true, available_options: opts };
     }
 
