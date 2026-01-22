@@ -167,7 +167,7 @@
     </div>
 
     <div class="products-grid" x-show="!loading && filteredProducts.length > 0">
-      <template x-for="product in filteredProducts" :key="product.article + '_' + product.brand + '_' + product.inputs_count">
+      <template x-for="product in filteredProducts" :key="product.id">
         <a :href="getProductUrl(product)" class="product-card" style="text-decoration: none; color: inherit;">
           <div class="product-image-wrapper">
             <img :src="'../' + (product.main_image || product.images?.[0] || 'images/avr-100.jpg')" :alt="product.description" class="product-image">
