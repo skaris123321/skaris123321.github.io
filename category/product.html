@@ -527,12 +527,13 @@
           
           <div x-show="documentation && documentation.length > 0" class="documents-list-tab">
             <template x-for="(doc, index) in (documentation || [])" :key="index">
-              <div class="document-item">
+              <div class="document-item" :class="{ 'certificate': doc.category === 'certificate' }">
                 <div class="document-info">
                   <h4 class="document-name" x-text="doc.name"></h4>
                   <div class="document-details">
                     <span class="document-size" x-text="formatFileSize(doc.size)"></span>
                     <span x-show="doc.current" class="document-current" x-text="'Для тока: ' + doc.current + 'А'"></span>
+                    <span x-show="doc.category === 'certificate'" class="document-current" style="color: #059669;">Сертификат</span>
                   </div>
                 </div>
                 <div class="document-actions">
