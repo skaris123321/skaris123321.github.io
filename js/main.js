@@ -274,6 +274,11 @@ document.addEventListener('alpine:init', () => {
       },
       
       async loadAvailableOptions() {
+        console.log('DEBUG loadAvailableOptions ВЫЗВАН для:', {
+          manufacturerBrand: this.manufacturerBrand,
+          commutationType: this.commutationType
+        });
+        
         try {
           if (!productsAPI) {
             throw new Error('ProductsAPI не инициализирован');
@@ -294,6 +299,8 @@ document.addEventListener('alpine:init', () => {
           }
 
           const data = await productsAPI.getAvailableOptions(filters);
+          
+          console.log('DEBUG loadAvailableOptions: получен ответ от API:', data);
           
           if (data.success && data.available_options) {
             this.availableOptions = {
