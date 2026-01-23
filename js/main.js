@@ -819,7 +819,13 @@ document.addEventListener('alpine:init', () => {
       },
       
       get productTitle() {
-        return `АВР ${this.nominalCurrent || '100'}А на ${this.inputsCount || '2'} ввода`;
+        if (this.commutationType === 'single_phase_contactors') {
+          // Для однофазных АВР: "Шкаф АВР 25А"
+          return `Шкаф АВР ${this.nominalCurrent || '100'}А`;
+        } else {
+          // Для трехфазных АВР: "Шкаф АВР 100А на 2 ввода"
+          return `Шкаф АВР ${this.nominalCurrent || '100'}А на ${this.inputsCount || '2'} ввода`;
+        }
       },
       
       get allSelectedSpecs() {
@@ -829,7 +835,6 @@ document.addEventListener('alpine:init', () => {
           // Для однофазных АВР
           specs['Артикул'] = this.article || '';
           specs['Производитель'] = this.manufacturerBrand || '';
-          specs['Количество вводов'] = `${this.inputsCount}`;
           specs['Тип коммутации'] = 'Контакторы';
           specs['Корпус'] = this.enclosureType === '19inch' ? '19 дюймов' : 'Навесной';
           specs['Подключение кабеля'] = this.connectionType === 'poles' ? 'К полюсам автомата' : 'На дополнительные клеммы';

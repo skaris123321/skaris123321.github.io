@@ -534,7 +534,9 @@
       >
         <div class="product-description-content">
           <div class="description-header">
-            <h2 class="description-title" x-text="'Трёхфазный АВР ' + (nominalCurrent || '100') + 'А на ' + (inputsCount || '2') + ' ввода' + (article ? ' (' + article + ')' : '')"></h2>
+            <h2 class="description-title" x-text="commutationType === 'single_phase_contactors' ? 
+              'Однофазный шкаф АВР ' + (nominalCurrent || '100') + 'А' + (article ? ' (' + article + ')' : '') :
+              'Трёхфазный шкаф АВР ' + (nominalCurrent || '100') + 'А на ' + (inputsCount || '2') + ' ввода' + (article ? ' (' + article + ')' : '')"></h2>
             <div class="description-article" x-text="'Артикул: ' + (article || '')"></div>
           </div>
 
