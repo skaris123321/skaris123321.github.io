@@ -835,7 +835,7 @@ document.addEventListener('alpine:init', () => {
           // Для однофазных АВР
           specs['Артикул'] = this.article || '';
           specs['Производитель'] = this.manufacturerBrand || '';
-          specs['Тип коммутации'] = 'Контакторы';
+          specs['Тип коммутации'] = 'Контакторы малых токов';
           specs['Корпус'] = this.enclosureType === '19inch' ? '19 дюймов' : 'Навесной';
           specs['Подключение кабеля'] = this.connectionType === 'poles' ? 'К полюсам автомата' : 'На дополнительные клеммы';
           specs['Климатическое исполнение'] = this.climateType === 'U2' ? 'У2 - уличное с обогревом' : 'УХЛ4 - сухие теплые помещения';
