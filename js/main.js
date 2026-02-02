@@ -772,11 +772,12 @@ document.addEventListener('alpine:init', () => {
       },
       
       get productTitle() {
-        if (false) {
-          // Для однофазных АВР: "Шкаф АВР 25А"
-          return `Шкаф АВР ${this.nominalCurrent || '100'}А`;
+        if (this.commutationType === 'contactors') {
+          // Для контакторов: "Шкаф АВР 25А однофазный" или "Шкаф АВР 25А трёхфазный"
+          const phaseType = this.polesCount === 'single_phase' ? 'однофазный' : 'трёхфазный';
+          return `Шкаф АВР ${this.nominalCurrent || '100'}А ${phaseType}`;
         } else {
-          // Для трехфазных АВР: "Шкаф АВР 100А на 2 ввода"
+          // Для моноблочных АВР: "Шкаф АВР 100А на 2 ввода"
           return `Шкаф АВР ${this.nominalCurrent || '100'}А на ${this.inputsCount || '2'} ввода`;
         }
       },
