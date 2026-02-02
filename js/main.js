@@ -785,24 +785,27 @@ document.addEventListener('alpine:init', () => {
       get allSelectedSpecs() {
         const specs = this.productSpecs ? { ...this.productSpecs } : {};
         
-        if (false) {
-          // Для однофазных АВР
-          specs['Артикул'] = this.article || '';
+        if (this.commutationType === 'contactors') {
+          // Для контакторов
+          const typeCode = 'К';
+          const phaseType = this.polesCount === 'single_phase' ? 'однофазный' : 'трёхфазный';
+          const newArticle = `АВР-${this.nominalCurrent}-${typeCode}-${phaseType}-РОСЭК`;
+          
+          specs['Артикул'] = newArticle;
           specs['Производитель'] = this.manufacturerBrand || '';
-          specs['Тип коммутации'] = 'Контакторы малых токов';
-          specs['Корпус'] = this.enclosureType === '19inch' ? '19 дюймов' : 'Навесной';
-          specs['Подключение кабеля'] = this.connectionType === 'poles' ? 'К полюсам автомата' : 'На дополнительные клеммы';
-          specs['Климатическое исполнение'] = this.climateType === 'U2' ? 'У2 - уличное с обогревом' : 'УХЛ4 - сухие теплые помещения';
+          specs['Тип коммутации'] = 'Контакторы';
+          specs['Количество полюсов'] = this.polesCount === 'single_phase' ? 'Однофазные' : 'Трёхфазные';
+          specs['Подключение кабеля'] = this.cableConnection === 'poles' ? 'К полюсам автомата' : 'На дополнительные клеммы';
+          specs['Климатическое исполнение'] = this.climateVersion === 'UXL4' ? 'УХЛ4 - сухие теплые помещения' : 'У2 - уличное с обогревом';
         } else {
-          // Для трехфазных АВР
-          // Генерируем новый артикул по формуле АВР-[ВВОДЫ]-[ТОК]-[К/М]-РОСЭК
-          const typeCode = this.commutationType === 'contactors' ? 'К' : 'М';
+          // Для моноблочных АВР
+          const typeCode = 'М';
           const newArticle = `АВР-${this.inputsCount}-${this.nominalCurrent}-${typeCode}-РОСЭК`;
           
           specs['Артикул'] = newArticle;
           specs['Производитель'] = this.manufacturerBrand || '';
           specs['Количество вводов'] = `${this.inputsCount}`;
-          specs['Тип коммутации'] = this.commutationType === 'monoblock' ? 'Моноблочный АВР' : 'Контакторы';
+          specs['Тип коммутации'] = 'Моноблочный АВР';
           specs['Подключение кабеля'] = this.cableConnection === 'poles' ? 'К полюсам автомата' : 'На дополнительные клеммы';
           specs['Климатическое исполнение'] = this.climateVersion === 'UXL4' ? 'УХЛ4 - сухие теплые помещения' : 'У2 - уличное с обогревом';
         }
@@ -812,8 +815,13 @@ document.addEventListener('alpine:init', () => {
 
       // Генерируем новый артикул по формуле
       get dynamicArticle() {
-        const typeCode = this.commutationType === 'contactors' ? 'К' : 'М';
-        return `АВР-${this.inputsCount}-${this.nominalCurrent}-${typeCode}-РОСЭК`;
+        if (this.commutationType === 'contactors') {
+          const phaseType = this.polesCount === 'single_phase' ? 'однофазный' : 'трёхфазный';
+          return `АВР-${this.nominalCurrent}-К-${phaseType}-РОСЭК`;
+        } else {
+          const typeCode = 'М';
+          return `АВР-${this.inputsCount}-${this.nominalCurrent}-${typeCode}-РОСЭК`;
+        }
       },
       
       get maxScroll() {
