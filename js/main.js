@@ -104,6 +104,7 @@ if (typeof ProductsAPI !== 'undefined') {
             commutation_type: product.commutation_type,
             manufacturer_brand: product.brand,
             inputs_count: product.inputs_count,
+            poles_count: product.poles_count,
             enclosure_type: product.enclosure_type || null,
             connection_type: product.connection_type || null,
             climate_type: product.climate_type || null,
@@ -113,7 +114,8 @@ if (typeof ProductsAPI !== 'undefined') {
             description: product.description || '',
             full_description: product.full_description || product.description || '',
             documentation: product.documentation || [],
-            specs: product.specs || {}
+            specs: product.specs || {},
+            options: product.options || []
           }
         };
       }
@@ -145,6 +147,7 @@ if (typeof ProductsAPI !== 'undefined') {
           commutation_type: product.commutation_type,
           manufacturer_brand: product.brand,
           inputs_count: product.inputs_count,
+          poles_count: product.poles_count,
           enclosure_type: product.enclosure_type || null,
           connection_type: product.connection_type || null,
           climate_type: product.climate_type || null,
@@ -154,7 +157,8 @@ if (typeof ProductsAPI !== 'undefined') {
           description: product.description || '',
           full_description: product.full_description || product.description || '',
           documentation: product.documentation || [],
-          specs: product.specs || {}
+          specs: product.specs || {},
+          options: product.options || []
         }
       };
     }
@@ -188,6 +192,7 @@ document.addEventListener('alpine:init', () => {
       article: 'АВР-100-CHINT-2',
       loading: false,
       productSpecs: {},
+      productOptions: [], // Опции товара из базы данных
       fullDescription: '',
       documentation: [],
       activeTab: 'specs',
@@ -209,8 +214,14 @@ document.addEventListener('alpine:init', () => {
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('id');
         
+        console.log('=== ОТЛАДКА ЗАГРУЗКИ ТОВАРА ===');
+        console.log('URL:', window.location.href);
+        console.log('Параметры URL:', window.location.search);
+        console.log('ID товара:', productId);
+        
         if (productId) {
           // Если есть ID в URL, загружаем товар по ID
+          console.log('Загружаем товар по ID:', productId);
           await this.loadProductById(productId);
         } else {
           // Иначе используем старую логику с параметрами по умолчанию
@@ -376,6 +387,7 @@ document.addEventListener('alpine:init', () => {
               return img.startsWith('images/') ? '../' + img : img;
             });
             this.productSpecs = product.specs || {};
+            this.productOptions = product.options || [];
             this.fullDescription = product.full_description || product.description || '';
             this.documentation = product.documentation || [];
             
@@ -423,6 +435,9 @@ document.addEventListener('alpine:init', () => {
       async loadProductById(productId) {
         this.loading = true;
         
+        console.log('=== ЗАГРУЗКА ТОВАРА ПО ID ===');
+        console.log('ID:', productId);
+        
         try {
           if (!productsAPI) {
             throw new Error('ProductsAPI не инициализирован');
@@ -430,8 +445,12 @@ document.addEventListener('alpine:init', () => {
 
           const data = await productsAPI.getProduct({ id: productId });
           
+          console.log('Результат API:', data);
+          
           if (data.success && data.product) {
             const product = data.product;
+            
+            console.log('Загруженный товар:', product);
             
             // Устанавливаем параметры товара
             this.manufacturerBrand = product.manufacturer_brand;
@@ -461,6 +480,7 @@ document.addEventListener('alpine:init', () => {
             });
             
             this.productSpecs = product.specs || {};
+            this.productOptions = product.options || [];
             this.fullDescription = product.full_description || product.description || '';
             this.documentation = product.documentation || [];
             
@@ -539,6 +559,7 @@ document.addEventListener('alpine:init', () => {
             });
             
             this.productSpecs = product.specs || {};
+            this.productOptions = product.options || [];
             this.fullDescription = product.full_description || product.description || '';
             this.documentation = product.documentation || [];
             
@@ -712,11 +733,25 @@ document.addEventListener('alpine:init', () => {
       },
 
       get shouldChargeForTerminals() {
+        // Для контакторов проверяем опции из загруженного товара
+        if (this.commutationType === 'contactors' && this.productOptions) {
+          const terminalsOption = this.productOptions.find(opt => opt.name === 'Дополнительные клеммы');
+          return terminalsOption && terminalsOption.price > 0;
+        }
+        
+        // Для моноблочных АВР используем старую логику
         const current = parseInt(this.nominalCurrent);
         return current >= 25 && current <= 80;
       },
 
       get isPolesToAvailable() {
+        // Для контакторов проверяем опции из загруженного товара
+        if (this.commutationType === 'contactors' && this.productOptions) {
+          const cableOption = this.productOptions.find(opt => opt.name === 'Подключение кабеля');
+          return cableOption !== undefined;
+        }
+        
+        // Для моноблочных АВР используем старую логику
         const current = parseInt(this.nominalCurrent);
         return current >= 25 && current <= 80;
       },
