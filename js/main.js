@@ -121,7 +121,7 @@ if (typeof ProductsAPI !== 'undefined') {
       }
       
       // Иначе ищем по фильтрам (старая логика)
-      const { nominal_current, commutation_type, manufacturer_brand, inputs_count, enclosure_type, connection_type, climate_type } = filters;
+      const { nominal_current, commutation_type, manufacturer_brand, inputs_count, poles_count, enclosure_type, connection_type, climate_type } = filters;
 
       if (!nominal_current) throw new Error('nominal_current required');
 
@@ -130,6 +130,7 @@ if (typeof ProductsAPI !== 'undefined') {
         if (commutation_type && p.commutation_type !== commutation_type) return false;
         if (manufacturer_brand && p.brand !== manufacturer_brand) return false;
         if (inputs_count && p.inputs_count !== inputs_count) return false;
+        if (poles_count && p.poles_count !== poles_count) return false;
         if (enclosure_type && p.enclosure_type !== enclosure_type) return false;
         if (connection_type && p.connection_type !== connection_type) return false;
         if (climate_type && p.climate_type !== climate_type) return false;
@@ -352,9 +353,15 @@ document.addEventListener('alpine:init', () => {
           const filters = {
             manufacturer_brand: this.manufacturerBrand,
             commutation_type: this.commutationType,
-            nominal_current: this.nominalCurrent,
-            inputs_count: this.inputsCount, poles_count: this.polesCount
+            nominal_current: this.nominalCurrent
           };
+          
+          // Для контакторов используем poles_count, для остальных - inputs_count
+          if (this.commutationType === 'contactors') {
+            filters.poles_count = this.polesCount;
+          } else {
+            filters.inputs_count = this.inputsCount;
+          }
           
           // Добавляем фильтры для однофазных АВР
           if (false) {
@@ -516,9 +523,15 @@ document.addEventListener('alpine:init', () => {
           const filters = {
             manufacturer_brand: this.manufacturerBrand,
             commutation_type: this.commutationType,
-            nominal_current: this.nominalCurrent,
-            inputs_count: this.inputsCount, poles_count: this.polesCount
+            nominal_current: this.nominalCurrent
           };
+          
+          // Для контакторов используем poles_count, для остальных - inputs_count
+          if (this.commutationType === 'contactors') {
+            filters.poles_count = this.polesCount;
+          } else {
+            filters.inputs_count = this.inputsCount;
+          }
           
           // Добавляем фильтры для однофазных АВР
           if (false) {
@@ -698,17 +711,14 @@ document.addEventListener('alpine:init', () => {
       get totalPrice() {
         let price = this.basePrice;
         
-        if (this.commutationType === 'contactors' && this.productOptions) {
-          // Для контакторов используем опции из базы данных
+        if (this.commutationType === 'contactors') {
+          // Для контакторов всегда +1000₽ за дополнительные клеммы
           if (this.cableConnection === 'terminals') {
-            const terminalsOption = this.productOptions.find(opt => opt.name === 'Дополнительные клеммы');
-            if (terminalsOption) {
-              price += terminalsOption.price;
-            }
+            price += 1000;
           }
           
           if (this.climateVersion === 'U2') {
-            price += 23000; // Пока оставляем фиксированную цену для климата
+            price += 23000;
           }
         } else {
           // Для моноблочных АВР используем старую логику
@@ -735,10 +745,9 @@ document.addEventListener('alpine:init', () => {
       },
 
       get shouldChargeForTerminals() {
-        // Для контакторов проверяем опции из загруженного товара
-        if (this.commutationType === 'contactors' && this.productOptions) {
-          const terminalsOption = this.productOptions.find(opt => opt.name === 'Дополнительные клеммы');
-          return terminalsOption && terminalsOption.price > 0;
+        // Для контакторов всегда показываем +1000₽ за дополнительные клеммы
+        if (this.commutationType === 'contactors') {
+          return true;
         }
         
         // Для моноблочных АВР используем старую логику
@@ -747,10 +756,9 @@ document.addEventListener('alpine:init', () => {
       },
 
       get isPolesToAvailable() {
-        // Для контакторов проверяем опции из загруженного товара
-        if (this.commutationType === 'contactors' && this.productOptions) {
-          const cableOption = this.productOptions.find(opt => opt.name === 'Подключение кабеля');
-          return cableOption !== undefined;
+        // Для контакторов всегда доступно подключение к полюсам
+        if (this.commutationType === 'contactors') {
+          return true;
         }
         
         // Для моноблочных АВР используем старую логику
