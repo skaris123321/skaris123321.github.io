@@ -92,7 +92,16 @@ if (typeof ProductsAPI !== 'undefined') {
       
       // Если передан ID, ищем по ID
       if (filters.id) {
-        const product = data.products.find(p => p.id === parseInt(filters.id));
+        console.log('=== ПОИСК ТОВАРА ПО ID В API ===');
+        console.log('Ищем ID:', filters.id, 'тип:', typeof filters.id);
+        console.log('Всего товаров в базе:', data.products.length);
+        
+        const product = data.products.find(p => {
+          console.log('Проверяем товар ID:', p.id, 'тип:', typeof p.id, 'равно?', p.id === parseInt(filters.id));
+          return p.id === parseInt(filters.id);
+        });
+        
+        console.log('Найденный товар:', product);
         if (!product) return { success: false, message: 'Товар не найден' };
         
         return {
@@ -214,6 +223,10 @@ document.addEventListener('alpine:init', () => {
         // Проверяем URL параметры
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('id');
+        
+        console.log('=== ОТЛАДКА ЗАГРУЗКИ ТОВАРА ===');
+        console.log('URL:', window.location.href);
+        console.log('ID товара из URL:', productId);
         
         if (productId) {
           // Если есть ID в URL, загружаем товар по ID
@@ -436,6 +449,9 @@ document.addEventListener('alpine:init', () => {
       async loadProductById(productId) {
         this.loading = true;
         
+        console.log('=== ЗАГРУЗКА ТОВАРА ПО ID ===');
+        console.log('Ищем товар с ID:', productId);
+        
         try {
           if (!productsAPI) {
             throw new Error('ProductsAPI не инициализирован');
@@ -443,8 +459,17 @@ document.addEventListener('alpine:init', () => {
 
           const data = await productsAPI.getProduct({ id: productId });
           
+          console.log('Результат поиска:', data);
+          
           if (data.success && data.product) {
             const product = data.product;
+            
+            console.log('Найденный товар:', product);
+            console.log('Артикул:', product.article);
+            console.log('Ток:', product.nominal_current);
+            console.log('Бренд:', product.manufacturer_brand);
+            console.log('Тип коммутации:', product.commutation_type);
+            console.log('Полюса:', product.poles_count);
             
             // Устанавливаем параметры товара
             this.manufacturerBrand = product.manufacturer_brand;
