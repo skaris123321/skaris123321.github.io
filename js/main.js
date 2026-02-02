@@ -214,14 +214,8 @@ document.addEventListener('alpine:init', () => {
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('id');
         
-        console.log('=== ОТЛАДКА ЗАГРУЗКИ ТОВАРА ===');
-        console.log('URL:', window.location.href);
-        console.log('Параметры URL:', window.location.search);
-        console.log('ID товара:', productId);
-        
         if (productId) {
           // Если есть ID в URL, загружаем товар по ID
-          console.log('Загружаем товар по ID:', productId);
           await this.loadProductById(productId);
         } else {
           // Иначе используем старую логику с параметрами по умолчанию
@@ -435,9 +429,6 @@ document.addEventListener('alpine:init', () => {
       async loadProductById(productId) {
         this.loading = true;
         
-        console.log('=== ЗАГРУЗКА ТОВАРА ПО ID ===');
-        console.log('ID:', productId);
-        
         try {
           if (!productsAPI) {
             throw new Error('ProductsAPI не инициализирован');
@@ -445,12 +436,8 @@ document.addEventListener('alpine:init', () => {
 
           const data = await productsAPI.getProduct({ id: productId });
           
-          console.log('Результат API:', data);
-          
           if (data.success && data.product) {
             const product = data.product;
-            
-            console.log('Загруженный товар:', product);
             
             // Устанавливаем параметры товара
             this.manufacturerBrand = product.manufacturer_brand;
