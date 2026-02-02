@@ -698,21 +698,36 @@ document.addEventListener('alpine:init', () => {
       get totalPrice() {
         let price = this.basePrice;
         
-        if (false) {
-          // Для однофазных АВР
-          if (this.connectionType === 'terminals') {
-            price += 1000;
+        if (this.commutationType === 'contactors' && this.productOptions) {
+          // Для контакторов используем опции из базы данных
+          if (this.cableConnection === 'terminals') {
+            const terminalsOption = this.productOptions.find(opt => opt.name === 'Дополнительные клеммы');
+            if (terminalsOption) {
+              price += terminalsOption.price;
+            }
           }
-          if (this.climateType === 'U2') {
-            price += 23000;
+          
+          if (this.climateVersion === 'U2') {
+            price += 23000; // Пока оставляем фиксированную цену для климата
           }
         } else {
-          // Для трехфазных АВР
-          if (this.cableConnection === 'terminals' && this.shouldChargeForTerminals) {
-            price += 1000;
-          }
-          if (this.climateVersion === 'U2') {
-            price += 23000;
+          // Для моноблочных АВР используем старую логику
+          if (false) {
+            // Для однофазных АВР
+            if (this.connectionType === 'terminals') {
+              price += 1000;
+            }
+            if (this.climateType === 'U2') {
+              price += 23000;
+            }
+          } else {
+            // Для трехфазных АВР
+            if (this.cableConnection === 'terminals' && this.shouldChargeForTerminals) {
+              price += 1000;
+            }
+            if (this.climateVersion === 'U2') {
+              price += 23000;
+            }
           }
         }
         
