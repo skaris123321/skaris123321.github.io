@@ -261,10 +261,12 @@ document.addEventListener('alpine:init', () => {
           await this.loadProduct();
         }
         
-        // Устанавливаем подключение кабеля в зависимости от тока для трехфазных АВР
-        const current = parseInt(this.nominalCurrent);
-        if (current >= 100 && current <= 800) {
-          this.cableConnection = 'terminals';
+        // Устанавливаем подключение кабеля в зависимости от тока только для моноблочных АВР
+        if (this.commutationType !== 'contactors') {
+          const current = parseInt(this.nominalCurrent);
+          if (current >= 100 && current <= 800) {
+            this.cableConnection = 'terminals';
+          }
         }
         
         this.initCart();
@@ -503,8 +505,13 @@ document.addEventListener('alpine:init', () => {
             this.fullDescription = product.full_description || product.description || '';
             this.documentation = product.documentation || [];
             
-            const current = parseInt(product.nominal_current);
-            if (true) {
+            // Устанавливаем подключение кабеля
+            if (this.commutationType === 'contactors') {
+              // Для контакторов по умолчанию "К полюсам автомата"
+              this.cableConnection = 'poles';
+            } else {
+              // Для моноблочных АВР используем логику по току
+              const current = parseInt(product.nominal_current);
               if (current >= 100 && current <= 800) {
                 this.cableConnection = 'terminals';
               } else {
