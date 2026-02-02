@@ -788,8 +788,8 @@ document.addEventListener('alpine:init', () => {
         if (this.commutationType === 'contactors') {
           // Для контакторов
           const typeCode = 'К';
-          const phaseType = this.polesCount === 'single_phase' ? 'однофазный' : 'трёхфазный';
-          const newArticle = `АВР-${this.nominalCurrent}-${typeCode}-${phaseType}-РОСЭК`;
+          const phaseCode = this.polesCount === 'single_phase' ? '1Ф' : '3Ф';
+          const newArticle = `АВР-${this.nominalCurrent}-${typeCode}-${phaseCode}-РОСЭК`;
           
           specs['Артикул'] = newArticle;
           specs['Производитель'] = this.manufacturerBrand || '';
@@ -816,8 +816,8 @@ document.addEventListener('alpine:init', () => {
       // Генерируем новый артикул по формуле
       get dynamicArticle() {
         if (this.commutationType === 'contactors') {
-          const phaseType = this.polesCount === 'single_phase' ? 'однофазный' : 'трёхфазный';
-          return `АВР-${this.nominalCurrent}-К-${phaseType}-РОСЭК`;
+          const phaseCode = this.polesCount === 'single_phase' ? '1Ф' : '3Ф';
+          return `АВР-${this.nominalCurrent}-К-${phaseCode}-РОСЭК`;
         } else {
           const typeCode = 'М';
           return `АВР-${this.inputsCount}-${this.nominalCurrent}-${typeCode}-РОСЭК`;
