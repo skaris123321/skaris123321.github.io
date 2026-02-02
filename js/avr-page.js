@@ -167,7 +167,10 @@ document.addEventListener('alpine:init', () => {
       },
       
       getProductUrl(product) {
-        return `product.html?id=${product.id}`;
+        console.log('Генерируем URL для товара:', product);
+        const url = `product.html?id=${product.id}`;
+        console.log('Сгенерированный URL:', url);
+        return url;
       },
       
       formatPrice(price) {
