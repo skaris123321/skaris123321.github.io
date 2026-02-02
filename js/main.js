@@ -380,10 +380,23 @@ document.addEventListener('alpine:init', () => {
             // Обновляем данные товара
             this.basePrice = product.base_price;
             this.article = product.article;
-            // Формируем массив изображений: используем images, если есть, иначе main_image
-            const imageList = product.images && product.images.length > 0 
-              ? product.images 
-              : (product.main_image ? [product.main_image] : []);
+            // Формируем массив изображений: main_image первым, затем дополнительные images
+            let imageList = [];
+            if (product.main_image) {
+              imageList.push(product.main_image);
+            }
+            if (product.images && product.images.length > 0) {
+              // Добавляем дополнительные изображения, исключая дубликаты
+              product.images.forEach(img => {
+                if (img && img !== product.main_image) {
+                  imageList.push(img);
+                }
+              });
+            }
+            // Если нет изображений вообще, используем пустой массив
+            if (imageList.length === 0) {
+              imageList = [];
+            }
             
             this.images = imageList.map(img => {
               // Если путь относительный, добавляем ../
@@ -466,10 +479,23 @@ document.addEventListener('alpine:init', () => {
             this.basePrice = product.base_price;
             this.article = product.article;
             
-            // Формируем массив изображений
-            const imageList = product.images && product.images.length > 0 
-              ? product.images 
-              : (product.main_image ? [product.main_image] : []);
+            // Формируем массив изображений: main_image первым, затем дополнительные images
+            let imageList = [];
+            if (product.main_image) {
+              imageList.push(product.main_image);
+            }
+            if (product.images && product.images.length > 0) {
+              // Добавляем дополнительные изображения, исключая дубликаты
+              product.images.forEach(img => {
+                if (img && img !== product.main_image) {
+                  imageList.push(img);
+                }
+              });
+            }
+            // Если нет изображений вообще, используем пустой массив
+            if (imageList.length === 0) {
+              imageList = [];
+            }
             
             this.images = imageList.map(img => {
               return img.startsWith('images/') ? '../' + img : img;
@@ -556,10 +582,23 @@ document.addEventListener('alpine:init', () => {
             this.basePrice = product.base_price;
             this.article = product.article;
             
-            // Формируем массив изображений
-            const imageList = product.images && product.images.length > 0 
-              ? product.images 
-              : (product.main_image ? [product.main_image] : []);
+            // Формируем массив изображений: main_image первым, затем дополнительные images
+            let imageList = [];
+            if (product.main_image) {
+              imageList.push(product.main_image);
+            }
+            if (product.images && product.images.length > 0) {
+              // Добавляем дополнительные изображения, исключая дубликаты
+              product.images.forEach(img => {
+                if (img && img !== product.main_image) {
+                  imageList.push(img);
+                }
+              });
+            }
+            // Если нет изображений вообще, используем пустой массив
+            if (imageList.length === 0) {
+              imageList = [];
+            }
             
             this.images = imageList.map(img => {
               return img.startsWith('images/') ? '../' + img : img;
