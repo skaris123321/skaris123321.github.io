@@ -92,9 +92,7 @@ if (typeof ProductsAPI !== 'undefined') {
       
       // Если передан ID, ищем по ID
       if (filters.id) {
-        console.log('Ищем товар по ID:', filters.id);
         const product = data.products.find(p => p.id === parseInt(filters.id));
-        console.log('Найденный товар:', product);
         if (!product) return { success: false, message: 'Товар не найден' };
         
         return {
@@ -210,9 +208,6 @@ document.addEventListener('alpine:init', () => {
         // Проверяем URL параметры
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('id');
-        
-        console.log('URL параметры:', window.location.search);
-        console.log('ID товара из URL:', productId);
         
         if (productId) {
           // Если есть ID в URL, загружаем товар по ID
@@ -428,8 +423,6 @@ document.addEventListener('alpine:init', () => {
       async loadProductById(productId) {
         this.loading = true;
         
-        console.log('Загружаем товар по ID:', productId);
-        
         try {
           if (!productsAPI) {
             throw new Error('ProductsAPI не инициализирован');
@@ -437,12 +430,8 @@ document.addEventListener('alpine:init', () => {
 
           const data = await productsAPI.getProduct({ id: productId });
           
-          console.log('Результат загрузки товара:', data);
-          
           if (data.success && data.product) {
             const product = data.product;
-            
-            console.log('Найден товар:', product);
             
             // Устанавливаем параметры товара
             this.manufacturerBrand = product.manufacturer_brand;
