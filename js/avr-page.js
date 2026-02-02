@@ -60,6 +60,11 @@ document.addEventListener('alpine:init', () => {
         this.applyFilters();
       },
       
+      filterByPolesCount(polesCount) {
+        this.selectedPolesCount = this.selectedPolesCount === polesCount ? null : polesCount;
+        this.applyFilters();
+      },
+      
       filterByInputs(inputs) {
         // Если уже выбраны такие же вводы, убираем фильтр
         if (this.selectedInputs === inputs && this.selectedCommutationType === 'monoblock') {
@@ -78,14 +83,17 @@ document.addEventListener('alpine:init', () => {
         if (this.selectedCommutationType === type) {
           this.selectedCommutationType = null;
           this.selectedInputs = null;
+          this.selectedPolesCount = null;
         } else {
           // Устанавливаем фильтр на выбранный тип коммутации
           this.selectedCommutationType = type;
           // Для контакторов не устанавливаем inputs_count, так как у них poles_count
           if (type !== 'contactors') {
             this.selectedInputs = '2';
+            this.selectedPolesCount = null;
           } else {
             this.selectedInputs = null;
+            // Не сбрасываем selectedPolesCount для контакторов
           }
         }
         
@@ -127,16 +135,30 @@ document.addEventListener('alpine:init', () => {
             case 'article_desc':
               return (b.article || '').localeCompare(a.article || '');
             default:
-              // По умолчанию сортируем по номинальному току, потом по количеству вводов/полюсов, потом по бренду
+              // По умолчанию сортируем по номинальному току
               if (a.nominal_current !== b.nominal_current) {
                 return a.nominal_current - b.nominal_current;
               }
-              // Для сортировки используем inputs_count или poles_count в зависимости от типа
-              const aSort = a.inputs_count || a.poles_count || '';
-              const bSort = b.inputs_count || b.poles_count || '';
-              if (aSort !== bSort) {
-                return String(aSort).localeCompare(String(bSort));
+              
+              // Для контакторов сортируем по полюсам (однофазные первые)
+              if (a.commutation_type === 'contactors' && b.commutation_type === 'contactors') {
+                const aPhase = a.poles_count === 'single_phase' ? 1 : 3;
+                const bPhase = b.poles_count === 'single_phase' ? 1 : 3;
+                if (aPhase !== bPhase) {
+                  return aPhase - bPhase;
+                }
               }
+              
+              // Для моноблочных АВР сортируем по количеству вводов
+              if (a.commutation_type === 'monoblock' && b.commutation_type === 'monoblock') {
+                const aInputs = parseInt(a.inputs_count) || 0;
+                const bInputs = parseInt(b.inputs_count) || 0;
+                if (aInputs !== bInputs) {
+                  return aInputs - bInputs;
+                }
+              }
+              
+              // В конце сортируем по бренду
               return (a.brand || '').localeCompare(b.brand || '');
           }
         });

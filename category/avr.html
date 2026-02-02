@@ -129,6 +129,25 @@
             ></button>
           </template>
         </div>
+        
+        <!-- Кнопки фильтрации по полюсам (только для контакторов) -->
+        <div x-show="selectedCommutationType === 'contactors'" style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+          <button 
+            @click="filterByPolesCount('single_phase')"
+            :class="{ active: selectedPolesCount === 'single_phase' }"
+            class="brand-filter-btn"
+          >
+            Однофазные
+          </button>
+          <button 
+            @click="filterByPolesCount('three_phase')"
+            :class="{ active: selectedPolesCount === 'three_phase' }"
+            class="brand-filter-btn"
+          >
+            Трёхфазные
+          </button>
+        </div>
+        
         <!-- Сортировка по цене -->
         <div style="display: flex; gap: 0.5rem; margin-left: auto;">
           <button 
