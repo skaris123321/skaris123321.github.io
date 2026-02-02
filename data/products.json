@@ -2826,7 +2826,7 @@
                      },
                      {
                          "id":  105,
-                         "article":  "АВР-2-25-К-РОСЭК",
+                         "article":  "АВР-1Ф-25-К-РОСЭК",
                          "nominal_current":  25,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -2835,8 +2835,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 25А на базе IEK (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 25А на 2 ввода, выполнен на базе контакторов IEK 25А.",
+                         "description":  "Однофазный контактор 25А IEK",
+                         "full_description":  "Однофазный контактор 25А, выполнен на базе контакторов IEK 25А.",
                          "documentation":  [
 
                                            ],
@@ -2849,8 +2849,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  107,
-                         "article":  "АВР-2-32-К-РОСЭК",
+                         "id":  106,
+                         "article":  "АВР-1Ф-32-К-РОСЭК",
                          "nominal_current":  32,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -2859,8 +2859,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 32А на базе IEK (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 32А на 2 ввода, выполнен на базе контакторов IEK 32А.",
+                         "description":  "Однофазный контактор 32А IEK",
+                         "full_description":  "Однофазный контактор 32А, выполнен на базе контакторов IEK 32А.",
                          "documentation":  [
 
                                            ],
@@ -2873,8 +2873,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  109,
-                         "article":  "АВР-2-40-К-РОСЭК",
+                         "id":  107,
+                         "article":  "АВР-1Ф-40-К-РОСЭК",
                          "nominal_current":  40,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -2883,8 +2883,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 40А на базе IEK (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 40А на 2 ввода, выполнен на базе контакторов IEK 40А.",
+                         "description":  "Однофазный контактор 40А IEK",
+                         "full_description":  "Однофазный контактор 40А, выполнен на базе контакторов IEK 40А.",
                          "documentation":  [
 
                                            ],
@@ -2897,8 +2897,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  111,
-                         "article":  "АВР-2-63-К-РОСЭК",
+                         "id":  108,
+                         "article":  "АВР-1Ф-63-К-РОСЭК",
                          "nominal_current":  63,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -2907,8 +2907,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 63А на базе IEK (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 63А на 2 ввода, выполнен на базе контакторов IEK 63А.",
+                         "description":  "Однофазный контактор 63А IEK",
+                         "full_description":  "Однофазный контактор 63А, выполнен на базе контакторов IEK 63А.",
                          "documentation":  [
 
                                            ],
@@ -2921,8 +2921,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  113,
-                         "article":  "АВР-2-80-К-РОСЭК",
+                         "id":  109,
+                         "article":  "АВР-3Ф-80-К-РОСЭК",
                          "nominal_current":  80,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -2931,8 +2931,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 80А на базе IEK (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 80А на 2 ввода, выполнен на базе контакторов IEK 80А.",
+                         "description":  "Трёхфазный контактор 80А IEK",
+                         "full_description":  "Трёхфазный контактор 80А, выполнен на базе контакторов IEK 80А.",
                          "documentation":  [
 
                                            ],
@@ -2945,8 +2945,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  115,
-                         "article":  "АВР-2-100-К-РОСЭК",
+                         "id":  110,
+                         "article":  "АВР-3Ф-100-К-РОСЭК",
                          "nominal_current":  100,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -2955,8 +2955,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 100А на базе IEK (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 100А на 2 ввода, выполнен на базе контакторов IEK 100А.",
+                         "description":  "Трёхфазный контактор 100А IEK",
+                         "full_description":  "Трёхфазный контактор 100А, выполнен на базе контакторов IEK 100А.",
                          "documentation":  [
 
                                            ],
@@ -2969,8 +2969,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  117,
-                         "article":  "АВР-2-125-К-РОСЭК",
+                         "id":  111,
+                         "article":  "АВР-3Ф-125-К-РОСЭК",
                          "nominal_current":  125,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -2979,8 +2979,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 125А на базе IEK (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 125А на 2 ввода, выполнен на базе контакторов IEK 125А.",
+                         "description":  "Трёхфазный контактор 125А IEK",
+                         "full_description":  "Трёхфазный контактор 125А, выполнен на базе контакторов IEK 125А.",
                          "documentation":  [
 
                                            ],
@@ -2993,8 +2993,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  119,
-                         "article":  "АВР-2-160-К-РОСЭК",
+                         "id":  112,
+                         "article":  "АВР-3Ф-160-К-РОСЭК",
                          "nominal_current":  160,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -3003,8 +3003,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 160А на базе IEK (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов IEK 160А.",
+                         "description":  "Трёхфазный контактор 160А IEK",
+                         "full_description":  "Трёхфазный контактор 160А, выполнен на базе контакторов IEK 160А.",
                          "documentation":  [
 
                                            ],
@@ -3017,8 +3017,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  121,
-                         "article":  "АВР-2-200-К-РОСЭК",
+                         "id":  113,
+                         "article":  "АВР-3Ф-200-К-РОСЭК",
                          "nominal_current":  200,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -3027,8 +3027,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 200А на базе IEK (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов IEK 200А.",
+                         "description":  "Трёхфазный контактор 200А IEK",
+                         "full_description":  "Трёхфазный контактор 200А, выполнен на базе контакторов IEK 200А.",
                          "documentation":  [
 
                                            ],
@@ -3041,8 +3041,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  123,
-                         "article":  "АВР-2-250-К-РОСЭК",
+                         "id":  114,
+                         "article":  "АВР-3Ф-250-К-РОСЭК",
                          "nominal_current":  250,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -3051,8 +3051,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 250А на базе IEK (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов IEK 250А.",
+                         "description":  "Трёхфазный контактор 250А IEK",
+                         "full_description":  "Трёхфазный контактор 250А, выполнен на базе контакторов IEK 250А.",
                          "documentation":  [
 
                                            ],
@@ -3065,8 +3065,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  125,
-                         "article":  "АВР-2-400-К-РОСЭК",
+                         "id":  115,
+                         "article":  "АВР-3Ф-400-К-РОСЭК",
                          "nominal_current":  400,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -3075,8 +3075,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 400А на базе IEK (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов IEK 400А.",
+                         "description":  "Трёхфазный контактор 400А IEK",
+                         "full_description":  "Трёхфазный контактор 400А, выполнен на базе контакторов IEK 400А.",
                          "documentation":  [
 
                                            ],
@@ -3089,8 +3089,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  127,
-                         "article":  "АВР-2-630-К-РОСЭК",
+                         "id":  116,
+                         "article":  "АВР-3Ф-630-К-РОСЭК",
                          "nominal_current":  630,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -3099,8 +3099,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 630А на базе IEK (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов IEK 630А.",
+                         "description":  "Трёхфазный контактор 630А IEK",
+                         "full_description":  "Трёхфазный контактор 630А, выполнен на базе контакторов IEK 630А.",
                          "documentation":  [
 
                                            ],
@@ -3113,8 +3113,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  129,
-                         "article":  "АВР-2-800-К-РОСЭК",
+                         "id":  117,
+                         "article":  "АВР-3Ф-800-К-РОСЭК",
                          "nominal_current":  800,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -3123,8 +3123,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 800А на базе IEK (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 800А на 2 ввода, выполнен на базе контакторов IEK 800А.",
+                         "description":  "Трёхфазный контактор 800А IEK",
+                         "full_description":  "Трёхфазный контактор 800А, выполнен на базе контакторов IEK 800А.",
                          "documentation":  [
 
                                            ],
@@ -3137,8 +3137,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  420,
-                         "article":  "АВР-2-25-К-РОСЭК",
+                         "id":  118,
+                         "article":  "АВР-1Ф-25-К-РОСЭК",
                          "nominal_current":  25,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -3147,8 +3147,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 25А на базе CHINT (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 25А на 2 ввода, выполнен на базе контакторов CHINT 25А.",
+                         "description":  "Однофазный контактор 25А CHINT",
+                         "full_description":  "Однофазный контактор 25А, выполнен на базе контакторов CHINT 25А.",
                          "documentation":  [
 
                                            ],
@@ -3161,8 +3161,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  124,
-                         "article":  "АВР-2-32-К-РОСЭК",
+                         "id":  119,
+                         "article":  "АВР-1Ф-32-К-РОСЭК",
                          "nominal_current":  32,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -3171,8 +3171,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 32А на базе CHINT (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 32А на 2 ввода, выполнен на базе контакторов CHINT 32А.",
+                         "description":  "Однофазный контактор 32А CHINT",
+                         "full_description":  "Однофазный контактор 32А, выполнен на базе контакторов CHINT 32А.",
                          "documentation":  [
 
                                            ],
@@ -3185,8 +3185,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  421,
-                         "article":  "АВР-2-40-К-РОСЭК",
+                         "id":  120,
+                         "article":  "АВР-1Ф-40-К-РОСЭК",
                          "nominal_current":  40,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -3195,8 +3195,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 40А на базе CHINT (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 40А на 2 ввода, выполнен на базе контакторов CHINT 40А.",
+                         "description":  "Однофазный контактор 40А CHINT",
+                         "full_description":  "Однофазный контактор 40А, выполнен на базе контакторов CHINT 40А.",
                          "documentation":  [
 
                                            ],
@@ -3209,8 +3209,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  126,
-                         "article":  "АВР-2-63-К-РОСЭК",
+                         "id":  121,
+                         "article":  "АВР-1Ф-63-К-РОСЭК",
                          "nominal_current":  63,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -3219,8 +3219,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 63А на базе CHINT (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 63А на 2 ввода, выполнен на базе контакторов CHINT 63А.",
+                         "description":  "Однофазный контактор 63А CHINT",
+                         "full_description":  "Однофазный контактор 63А, выполнен на базе контакторов CHINT 63А.",
                          "documentation":  [
 
                                            ],
@@ -3233,8 +3233,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  422,
-                         "article":  "АВР-2-80-К-РОСЭК",
+                         "id":  122,
+                         "article":  "АВР-3Ф-80-К-РОСЭК",
                          "nominal_current":  80,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -3243,8 +3243,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 80А на базе CHINT (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 80А на 2 ввода, выполнен на базе контакторов CHINT 80А.",
+                         "description":  "Трёхфазный контактор 80А CHINT",
+                         "full_description":  "Трёхфазный контактор 80А, выполнен на базе контакторов CHINT 80А.",
                          "documentation":  [
 
                                            ],
@@ -3257,8 +3257,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  128,
-                         "article":  "АВР-2-100-К-РОСЭК",
+                         "id":  123,
+                         "article":  "АВР-3Ф-100-К-РОСЭК",
                          "nominal_current":  100,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -3267,8 +3267,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 100А на базе CHINT (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 100А на 2 ввода, выполнен на базе контакторов CHINT 100А.",
+                         "description":  "Трёхфазный контактор 100А CHINT",
+                         "full_description":  "Трёхфазный контактор 100А, выполнен на базе контакторов CHINT 100А.",
                          "documentation":  [
 
                                            ],
@@ -3281,8 +3281,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  423,
-                         "article":  "АВР-2-125-К-РОСЭК",
+                         "id":  124,
+                         "article":  "АВР-3Ф-125-К-РОСЭК",
                          "nominal_current":  125,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -3291,8 +3291,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 125А на базе CHINT (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 125А на 2 ввода, выполнен на базе контакторов CHINT 125А.",
+                         "description":  "Трёхфазный контактор 125А CHINT",
+                         "full_description":  "Трёхфазный контактор 125А, выполнен на базе контакторов CHINT 125А.",
                          "documentation":  [
 
                                            ],
@@ -3305,8 +3305,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  130,
-                         "article":  "АВР-2-160-К-РОСЭК",
+                         "id":  125,
+                         "article":  "АВР-3Ф-160-К-РОСЭК",
                          "nominal_current":  160,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -3315,8 +3315,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 160А на базе CHINT (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов CHINT 160А.",
+                         "description":  "Трёхфазный контактор 160А CHINT",
+                         "full_description":  "Трёхфазный контактор 160А, выполнен на базе контакторов CHINT 160А.",
                          "documentation":  [
 
                                            ],
@@ -3329,8 +3329,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  131,
-                         "article":  "АВР-2-200-К-РОСЭК",
+                         "id":  126,
+                         "article":  "АВР-3Ф-200-К-РОСЭК",
                          "nominal_current":  200,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -3339,8 +3339,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 200А на базе CHINT (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов CHINT 200А.",
+                         "description":  "Трёхфазный контактор 200А CHINT",
+                         "full_description":  "Трёхфазный контактор 200А, выполнен на базе контакторов CHINT 200А.",
                          "documentation":  [
 
                                            ],
@@ -3353,8 +3353,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  132,
-                         "article":  "АВР-2-250-К-РОСЭК",
+                         "id":  127,
+                         "article":  "АВР-3Ф-250-К-РОСЭК",
                          "nominal_current":  250,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -3363,8 +3363,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 250А на базе CHINT (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов CHINT 250А.",
+                         "description":  "Трёхфазный контактор 250А CHINT",
+                         "full_description":  "Трёхфазный контактор 250А, выполнен на базе контакторов CHINT 250А.",
                          "documentation":  [
 
                                            ],
@@ -3377,8 +3377,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  133,
-                         "article":  "АВР-2-400-К-РОСЭК",
+                         "id":  128,
+                         "article":  "АВР-3Ф-400-К-РОСЭК",
                          "nominal_current":  400,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -3387,8 +3387,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 400А на базе CHINT (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов CHINT 400А.",
+                         "description":  "Трёхфазный контактор 400А CHINT",
+                         "full_description":  "Трёхфазный контактор 400А, выполнен на базе контакторов CHINT 400А.",
                          "documentation":  [
 
                                            ],
@@ -3401,8 +3401,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  134,
-                         "article":  "АВР-2-630-К-РОСЭК",
+                         "id":  129,
+                         "article":  "АВР-3Ф-630-К-РОСЭК",
                          "nominal_current":  630,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -3411,8 +3411,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 630А на базе CHINT (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов CHINT 630А.",
+                         "description":  "Трёхфазный контактор 630А CHINT",
+                         "full_description":  "Трёхфазный контактор 630А, выполнен на базе контакторов CHINT 630А.",
                          "documentation":  [
 
                                            ],
@@ -3425,8 +3425,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  135,
-                         "article":  "АВР-2-800-К-РОСЭК",
+                         "id":  130,
+                         "article":  "АВР-3Ф-800-К-РОСЭК",
                          "nominal_current":  800,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -3435,8 +3435,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 800А на базе CHINT (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 800А на 2 ввода, выполнен на базе контакторов CHINT 800А.",
+                         "description":  "Трёхфазный контактор 800А CHINT",
+                         "full_description":  "Трёхфазный контактор 800А, выполнен на базе контакторов CHINT 800А.",
                          "documentation":  [
 
                                            ],
@@ -3449,8 +3449,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  136,
-                         "article":  "АВР-2-25-К-РОСЭК",
+                         "id":  131,
+                         "article":  "АВР-1Ф-25-К-РОСЭК",
                          "nominal_current":  25,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3459,8 +3459,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 25А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 25А на 2 ввода, выполнен на базе контакторов EKF 25А.",
+                         "description":  "Однофазный контактор 25А EKF",
+                         "full_description":  "Однофазный контактор 25А, выполнен на базе контакторов EKF 25А.",
                          "documentation":  [
 
                                            ],
@@ -3473,8 +3473,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  137,
-                         "article":  "АВР-2-100-К-РОСЭК",
+                         "id":  132,
+                         "article":  "АВР-3Ф-100-К-РОСЭК",
                          "nominal_current":  100,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3483,8 +3483,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 100А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 100А на 2 ввода, выполнен на базе контакторов EKF 100А.",
+                         "description":  "Трёхфазный контактор 100А EKF",
+                         "full_description":  "Трёхфазный контактор 100А, выполнен на базе контакторов EKF 100А.",
                          "documentation":  [
 
                                            ],
@@ -3497,8 +3497,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  138,
-                         "article":  "АВР-2-25-К-РОСЭК",
+                         "id":  133,
+                         "article":  "АВР-1Ф-25-К-РОСЭК",
                          "nominal_current":  25,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -3507,8 +3507,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 25А на базе Dekraft (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 25А на 2 ввода, выполнен на базе контакторов Dekraft 25А.",
+                         "description":  "Однофазный контактор 25А Dekraft",
+                         "full_description":  "Однофазный контактор 25А, выполнен на базе контакторов Dekraft 25А.",
                          "documentation":  [
 
                                            ],
@@ -3521,8 +3521,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  139,
-                         "article":  "АВР-2-100-К-РОСЭК",
+                         "id":  134,
+                         "article":  "АВР-3Ф-100-К-РОСЭК",
                          "nominal_current":  100,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -3531,8 +3531,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 100А на базе Dekraft (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 100А на 2 ввода, выполнен на базе контакторов Dekraft 100А.",
+                         "description":  "Трёхфазный контактор 100А Dekraft",
+                         "full_description":  "Трёхфазный контактор 100А, выполнен на базе контакторов Dekraft 100А.",
                          "documentation":  [
 
                                            ],
@@ -3545,8 +3545,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  140,
-                         "article":  "АВР-2-25-К-РОСЭК",
+                         "id":  135,
+                         "article":  "АВР-1Ф-25-К-РОСЭК",
                          "nominal_current":  25,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -3555,8 +3555,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 25А на базе TDM (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 25А на 2 ввода, выполнен на базе контакторов TDM 25А.",
+                         "description":  "Однофазный контактор 25А TDM",
+                         "full_description":  "Однофазный контактор 25А, выполнен на базе контакторов TDM 25А.",
                          "documentation":  [
 
                                            ],
@@ -3569,8 +3569,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  141,
-                         "article":  "АВР-2-100-К-РОСЭК",
+                         "id":  136,
+                         "article":  "АВР-3Ф-100-К-РОСЭК",
                          "nominal_current":  100,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -3579,8 +3579,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 100А на базе TDM (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 100А на 2 ввода, выполнен на базе контакторов TDM 100А.",
+                         "description":  "Трёхфазный контактор 100А TDM",
+                         "full_description":  "Трёхфазный контактор 100А, выполнен на базе контакторов TDM 100А.",
                          "documentation":  [
 
                                            ],
@@ -3593,8 +3593,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  142,
-                         "article":  "АВР-2-32-К-РОСЭК",
+                         "id":  137,
+                         "article":  "АВР-1Ф-32-К-РОСЭК",
                          "nominal_current":  32,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3603,8 +3603,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 32А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 32А на 2 ввода, выполнен на базе контакторов EKF 32А.",
+                         "description":  "Однофазный контактор 32А EKF",
+                         "full_description":  "Однофазный контактор 32А, выполнен на базе контакторов EKF 32А.",
                          "documentation":  [
 
                                            ],
@@ -3617,8 +3617,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  143,
-                         "article":  "АВР-2-40-К-РОСЭК",
+                         "id":  138,
+                         "article":  "АВР-1Ф-40-К-РОСЭК",
                          "nominal_current":  40,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3627,8 +3627,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 40А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 40А на 2 ввода, выполнен на базе контакторов EKF 40А.",
+                         "description":  "Однофазный контактор 40А EKF",
+                         "full_description":  "Однофазный контактор 40А, выполнен на базе контакторов EKF 40А.",
                          "documentation":  [
 
                                            ],
@@ -3641,8 +3641,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  144,
-                         "article":  "АВР-2-63-К-РОСЭК",
+                         "id":  139,
+                         "article":  "АВР-1Ф-63-К-РОСЭК",
                          "nominal_current":  63,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3651,8 +3651,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 63А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 63А на 2 ввода, выполнен на базе контакторов EKF 63А.",
+                         "description":  "Однофазный контактор 63А EKF",
+                         "full_description":  "Однофазный контактор 63А, выполнен на базе контакторов EKF 63А.",
                          "documentation":  [
 
                                            ],
@@ -3665,8 +3665,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  145,
-                         "article":  "АВР-2-80-К-РОСЭК",
+                         "id":  140,
+                         "article":  "АВР-3Ф-80-К-РОСЭК",
                          "nominal_current":  80,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3675,8 +3675,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 80А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 80А на 2 ввода, выполнен на базе контакторов EKF 80А.",
+                         "description":  "Трёхфазный контактор 80А EKF",
+                         "full_description":  "Трёхфазный контактор 80А, выполнен на базе контакторов EKF 80А.",
                          "documentation":  [
 
                                            ],
@@ -3689,8 +3689,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  146,
-                         "article":  "АВР-2-125-К-РОСЭК",
+                         "id":  141,
+                         "article":  "АВР-3Ф-125-К-РОСЭК",
                          "nominal_current":  125,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3699,8 +3699,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 125А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 125А на 2 ввода, выполнен на базе контакторов EKF 125А.",
+                         "description":  "Трёхфазный контактор 125А EKF",
+                         "full_description":  "Трёхфазный контактор 125А, выполнен на базе контакторов EKF 125А.",
                          "documentation":  [
 
                                            ],
@@ -3713,8 +3713,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  147,
-                         "article":  "АВР-2-160-К-РОСЭК",
+                         "id":  142,
+                         "article":  "АВР-3Ф-160-К-РОСЭК",
                          "nominal_current":  160,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3723,8 +3723,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 160А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов EKF 160А.",
+                         "description":  "Трёхфазный контактор 160А EKF",
+                         "full_description":  "Трёхфазный контактор 160А, выполнен на базе контакторов EKF 160А.",
                          "documentation":  [
 
                                            ],
@@ -3737,8 +3737,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  148,
-                         "article":  "АВР-2-200-К-РОСЭК",
+                         "id":  143,
+                         "article":  "АВР-3Ф-200-К-РОСЭК",
                          "nominal_current":  200,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3747,8 +3747,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 200А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов EKF 200А.",
+                         "description":  "Трёхфазный контактор 200А EKF",
+                         "full_description":  "Трёхфазный контактор 200А, выполнен на базе контакторов EKF 200А.",
                          "documentation":  [
 
                                            ],
@@ -3761,8 +3761,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  149,
-                         "article":  "АВР-2-250-К-РОСЭК",
+                         "id":  144,
+                         "article":  "АВР-3Ф-250-К-РОСЭК",
                          "nominal_current":  250,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3771,8 +3771,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 250А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов EKF 250А.",
+                         "description":  "Трёхфазный контактор 250А EKF",
+                         "full_description":  "Трёхфазный контактор 250А, выполнен на базе контакторов EKF 250А.",
                          "documentation":  [
 
                                            ],
@@ -3785,8 +3785,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  150,
-                         "article":  "АВР-2-400-К-РОСЭК",
+                         "id":  145,
+                         "article":  "АВР-3Ф-400-К-РОСЭК",
                          "nominal_current":  400,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3795,8 +3795,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 400А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов EKF 400А.",
+                         "description":  "Трёхфазный контактор 400А EKF",
+                         "full_description":  "Трёхфазный контактор 400А, выполнен на базе контакторов EKF 400А.",
                          "documentation":  [
 
                                            ],
@@ -3809,8 +3809,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  151,
-                         "article":  "АВР-2-630-К-РОСЭК",
+                         "id":  146,
+                         "article":  "АВР-3Ф-630-К-РОСЭК",
                          "nominal_current":  630,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3819,8 +3819,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 630А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов EKF 630А.",
+                         "description":  "Трёхфазный контактор 630А EKF",
+                         "full_description":  "Трёхфазный контактор 630А, выполнен на базе контакторов EKF 630А.",
                          "documentation":  [
 
                                            ],
@@ -3833,8 +3833,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  152,
-                         "article":  "АВР-2-800-К-РОСЭК",
+                         "id":  147,
+                         "article":  "АВР-3Ф-800-К-РОСЭК",
                          "nominal_current":  800,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3843,8 +3843,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 800А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 800А на 2 ввода, выполнен на базе контакторов EKF 800А.",
+                         "description":  "Трёхфазный контактор 800А EKF",
+                         "full_description":  "Трёхфазный контактор 800А, выполнен на базе контакторов EKF 800А.",
                          "documentation":  [
 
                                            ],
@@ -3857,8 +3857,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  153,
-                         "article":  "АВР-2-160-К-РОСЭК",
+                         "id":  148,
+                         "article":  "АВР-3Ф-160-К-РОСЭК",
                          "nominal_current":  160,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3867,8 +3867,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 160А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов EKF 160А.",
+                         "description":  "Трёхфазный контактор 160А EKF",
+                         "full_description":  "Трёхфазный контактор 160А, выполнен на базе контакторов EKF 160А.",
                          "documentation":  [
 
                                            ],
@@ -3881,8 +3881,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  154,
-                         "article":  "АВР-2-200-К-РОСЭК",
+                         "id":  149,
+                         "article":  "АВР-3Ф-200-К-РОСЭК",
                          "nominal_current":  200,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3891,8 +3891,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 200А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов EKF 200А.",
+                         "description":  "Трёхфазный контактор 200А EKF",
+                         "full_description":  "Трёхфазный контактор 200А, выполнен на базе контакторов EKF 200А.",
                          "documentation":  [
 
                                            ],
@@ -3905,8 +3905,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  155,
-                         "article":  "АВР-2-250-К-РОСЭК",
+                         "id":  150,
+                         "article":  "АВР-3Ф-250-К-РОСЭК",
                          "nominal_current":  250,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3915,8 +3915,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 250А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов EKF 250А.",
+                         "description":  "Трёхфазный контактор 250А EKF",
+                         "full_description":  "Трёхфазный контактор 250А, выполнен на базе контакторов EKF 250А.",
                          "documentation":  [
 
                                            ],
@@ -3929,8 +3929,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  156,
-                         "article":  "АВР-2-400-К-РОСЭК",
+                         "id":  151,
+                         "article":  "АВР-3Ф-400-К-РОСЭК",
                          "nominal_current":  400,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3939,8 +3939,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 400А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов EKF 400А.",
+                         "description":  "Трёхфазный контактор 400А EKF",
+                         "full_description":  "Трёхфазный контактор 400А, выполнен на базе контакторов EKF 400А.",
                          "documentation":  [
 
                                            ],
@@ -3953,8 +3953,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  157,
-                         "article":  "АВР-2-630-К-РОСЭК",
+                         "id":  152,
+                         "article":  "АВР-3Ф-630-К-РОСЭК",
                          "nominal_current":  630,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -3963,8 +3963,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 630А на базе EKF (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов EKF 630А.",
+                         "description":  "Трёхфазный контактор 630А EKF",
+                         "full_description":  "Трёхфазный контактор 630А, выполнен на базе контакторов EKF 630А.",
                          "documentation":  [
 
                                            ],
@@ -3977,8 +3977,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  158,
-                         "article":  "АВР-2-32-К-РОСЭК",
+                         "id":  153,
+                         "article":  "АВР-1Ф-32-К-РОСЭК",
                          "nominal_current":  32,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -3987,8 +3987,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 32А на базе Dekraft (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 32А на 2 ввода, выполнен на базе контакторов Dekraft 32А.",
+                         "description":  "Однофазный контактор 32А Dekraft",
+                         "full_description":  "Однофазный контактор 32А, выполнен на базе контакторов Dekraft 32А.",
                          "documentation":  [
 
                                            ],
@@ -4001,8 +4001,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  159,
-                         "article":  "АВР-2-40-К-РОСЭК",
+                         "id":  154,
+                         "article":  "АВР-1Ф-40-К-РОСЭК",
                          "nominal_current":  40,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -4011,8 +4011,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 40А на базе Dekraft (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 40А на 2 ввода, выполнен на базе контакторов Dekraft 40А.",
+                         "description":  "Однофазный контактор 40А Dekraft",
+                         "full_description":  "Однофазный контактор 40А, выполнен на базе контакторов Dekraft 40А.",
                          "documentation":  [
 
                                            ],
@@ -4025,8 +4025,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  160,
-                         "article":  "АВР-2-63-К-РОСЭК",
+                         "id":  155,
+                         "article":  "АВР-1Ф-63-К-РОСЭК",
                          "nominal_current":  63,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -4035,8 +4035,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 63А на базе Dekraft (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 63А на 2 ввода, выполнен на базе контакторов Dekraft 63А.",
+                         "description":  "Однофазный контактор 63А Dekraft",
+                         "full_description":  "Однофазный контактор 63А, выполнен на базе контакторов Dekraft 63А.",
                          "documentation":  [
 
                                            ],
@@ -4049,8 +4049,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  161,
-                         "article":  "АВР-2-80-К-РОСЭК",
+                         "id":  156,
+                         "article":  "АВР-3Ф-80-К-РОСЭК",
                          "nominal_current":  80,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -4059,8 +4059,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 80А на базе Dekraft (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 80А на 2 ввода, выполнен на базе контакторов Dekraft 80А.",
+                         "description":  "Трёхфазный контактор 80А Dekraft",
+                         "full_description":  "Трёхфазный контактор 80А, выполнен на базе контакторов Dekraft 80А.",
                          "documentation":  [
 
                                            ],
@@ -4073,8 +4073,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  162,
-                         "article":  "АВР-2-125-К-РОСЭК",
+                         "id":  157,
+                         "article":  "АВР-3Ф-125-К-РОСЭК",
                          "nominal_current":  125,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -4083,8 +4083,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 125А на базе Dekraft (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 125А на 2 ввода, выполнен на базе контакторов Dekraft 125А.",
+                         "description":  "Трёхфазный контактор 125А Dekraft",
+                         "full_description":  "Трёхфазный контактор 125А, выполнен на базе контакторов Dekraft 125А.",
                          "documentation":  [
 
                                            ],
@@ -4097,8 +4097,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  163,
-                         "article":  "АВР-2-160-К-РОСЭК",
+                         "id":  158,
+                         "article":  "АВР-3Ф-160-К-РОСЭК",
                          "nominal_current":  160,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -4107,8 +4107,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 160А на базе Dekraft (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов Dekraft 160А.",
+                         "description":  "Трёхфазный контактор 160А Dekraft",
+                         "full_description":  "Трёхфазный контактор 160А, выполнен на базе контакторов Dekraft 160А.",
                          "documentation":  [
 
                                            ],
@@ -4121,8 +4121,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  164,
-                         "article":  "АВР-2-200-К-РОСЭК",
+                         "id":  159,
+                         "article":  "АВР-3Ф-200-К-РОСЭК",
                          "nominal_current":  200,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -4131,8 +4131,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 200А на базе Dekraft (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов Dekraft 200А.",
+                         "description":  "Трёхфазный контактор 200А Dekraft",
+                         "full_description":  "Трёхфазный контактор 200А, выполнен на базе контакторов Dekraft 200А.",
                          "documentation":  [
 
                                            ],
@@ -4145,8 +4145,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  165,
-                         "article":  "АВР-2-250-К-РОСЭК",
+                         "id":  160,
+                         "article":  "АВР-3Ф-250-К-РОСЭК",
                          "nominal_current":  250,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -4155,8 +4155,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 250А на базе Dekraft (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов Dekraft 250А.",
+                         "description":  "Трёхфазный контактор 250А Dekraft",
+                         "full_description":  "Трёхфазный контактор 250А, выполнен на базе контакторов Dekraft 250А.",
                          "documentation":  [
 
                                            ],
@@ -4169,8 +4169,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  166,
-                         "article":  "АВР-2-400-К-РОСЭК",
+                         "id":  161,
+                         "article":  "АВР-3Ф-400-К-РОСЭК",
                          "nominal_current":  400,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -4179,8 +4179,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 400А на базе Dekraft (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов Dekraft 400А.",
+                         "description":  "Трёхфазный контактор 400А Dekraft",
+                         "full_description":  "Трёхфазный контактор 400А, выполнен на базе контакторов Dekraft 400А.",
                          "documentation":  [
 
                                            ],
@@ -4193,8 +4193,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  167,
-                         "article":  "АВР-2-630-К-РОСЭК",
+                         "id":  162,
+                         "article":  "АВР-3Ф-630-К-РОСЭК",
                          "nominal_current":  630,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -4203,8 +4203,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 630А на базе Dekraft (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов Dekraft 630А.",
+                         "description":  "Трёхфазный контактор 630А Dekraft",
+                         "full_description":  "Трёхфазный контактор 630А, выполнен на базе контакторов Dekraft 630А.",
                          "documentation":  [
 
                                            ],
@@ -4217,8 +4217,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  168,
-                         "article":  "АВР-2-800-К-РОСЭК",
+                         "id":  163,
+                         "article":  "АВР-3Ф-800-К-РОСЭК",
                          "nominal_current":  800,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -4227,8 +4227,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 800А на базе Dekraft (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 800А на 2 ввода, выполнен на базе контакторов Dekraft 800А.",
+                         "description":  "Трёхфазный контактор 800А Dekraft",
+                         "full_description":  "Трёхфазный контактор 800А, выполнен на базе контакторов Dekraft 800А.",
                          "documentation":  [
 
                                            ],
@@ -4241,8 +4241,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  169,
-                         "article":  "АВР-2-32-К-РОСЭК",
+                         "id":  164,
+                         "article":  "АВР-1Ф-32-К-РОСЭК",
                          "nominal_current":  32,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -4251,8 +4251,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 32А на базе TDM (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 32А на 2 ввода, выполнен на базе контакторов TDM 32А.",
+                         "description":  "Однофазный контактор 32А TDM",
+                         "full_description":  "Однофазный контактор 32А, выполнен на базе контакторов TDM 32А.",
                          "documentation":  [
 
                                            ],
@@ -4265,8 +4265,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  170,
-                         "article":  "АВР-2-40-К-РОСЭК",
+                         "id":  165,
+                         "article":  "АВР-1Ф-40-К-РОСЭК",
                          "nominal_current":  40,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -4275,8 +4275,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 40А на базе TDM (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 40А на 2 ввода, выполнен на базе контакторов TDM 40А.",
+                         "description":  "Однофазный контактор 40А TDM",
+                         "full_description":  "Однофазный контактор 40А, выполнен на базе контакторов TDM 40А.",
                          "documentation":  [
 
                                            ],
@@ -4289,8 +4289,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  171,
-                         "article":  "АВР-2-63-К-РОСЭК",
+                         "id":  166,
+                         "article":  "АВР-1Ф-63-К-РОСЭК",
                          "nominal_current":  63,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -4299,8 +4299,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Шкаф АВР 63А на базе TDM (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 63А на 2 ввода, выполнен на базе контакторов TDM 63А.",
+                         "description":  "Однофазный контактор 63А TDM",
+                         "full_description":  "Однофазный контактор 63А, выполнен на базе контакторов TDM 63А.",
                          "documentation":  [
 
                                            ],
@@ -4313,8 +4313,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  172,
-                         "article":  "АВР-2-80-К-РОСЭК",
+                         "id":  167,
+                         "article":  "АВР-3Ф-80-К-РОСЭК",
                          "nominal_current":  80,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -4323,8 +4323,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 80А на базе TDM (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 80А на 2 ввода, выполнен на базе контакторов TDM 80А.",
+                         "description":  "Трёхфазный контактор 80А TDM",
+                         "full_description":  "Трёхфазный контактор 80А, выполнен на базе контакторов TDM 80А.",
                          "documentation":  [
 
                                            ],
@@ -4337,8 +4337,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  173,
-                         "article":  "АВР-2-125-К-РОСЭК",
+                         "id":  168,
+                         "article":  "АВР-3Ф-125-К-РОСЭК",
                          "nominal_current":  125,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -4347,8 +4347,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 125А на базе TDM (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 125А на 2 ввода, выполнен на базе контакторов TDM 125А.",
+                         "description":  "Трёхфазный контактор 125А TDM",
+                         "full_description":  "Трёхфазный контактор 125А, выполнен на базе контакторов TDM 125А.",
                          "documentation":  [
 
                                            ],
@@ -4361,8 +4361,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  174,
-                         "article":  "АВР-2-160-К-РОСЭК",
+                         "id":  169,
+                         "article":  "АВР-3Ф-160-К-РОСЭК",
                          "nominal_current":  160,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -4371,8 +4371,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 160А на базе TDM (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 160А на 2 ввода, выполнен на базе контакторов TDM 160А.",
+                         "description":  "Трёхфазный контактор 160А TDM",
+                         "full_description":  "Трёхфазный контактор 160А, выполнен на базе контакторов TDM 160А.",
                          "documentation":  [
 
                                            ],
@@ -4385,8 +4385,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  175,
-                         "article":  "АВР-2-200-К-РОСЭК",
+                         "id":  170,
+                         "article":  "АВР-3Ф-200-К-РОСЭК",
                          "nominal_current":  200,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -4395,8 +4395,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 200А на базе TDM (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 200А на 2 ввода, выполнен на базе контакторов TDM 200А.",
+                         "description":  "Трёхфазный контактор 200А TDM",
+                         "full_description":  "Трёхфазный контактор 200А, выполнен на базе контакторов TDM 200А.",
                          "documentation":  [
 
                                            ],
@@ -4409,8 +4409,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  176,
-                         "article":  "АВР-2-250-К-РОСЭК",
+                         "id":  171,
+                         "article":  "АВР-3Ф-250-К-РОСЭК",
                          "nominal_current":  250,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -4419,8 +4419,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 250А на базе TDM (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 250А на 2 ввода, выполнен на базе контакторов TDM 250А.",
+                         "description":  "Трёхфазный контактор 250А TDM",
+                         "full_description":  "Трёхфазный контактор 250А, выполнен на базе контакторов TDM 250А.",
                          "documentation":  [
 
                                            ],
@@ -4433,8 +4433,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  177,
-                         "article":  "АВР-2-400-К-РОСЭК",
+                         "id":  172,
+                         "article":  "АВР-3Ф-400-К-РОСЭК",
                          "nominal_current":  400,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -4443,8 +4443,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 400А на базе TDM (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 400А на 2 ввода, выполнен на базе контакторов TDM 400А.",
+                         "description":  "Трёхфазный контактор 400А TDM",
+                         "full_description":  "Трёхфазный контактор 400А, выполнен на базе контакторов TDM 400А.",
                          "documentation":  [
 
                                            ],
@@ -4457,8 +4457,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  178,
-                         "article":  "АВР-2-630-К-РОСЭК",
+                         "id":  173,
+                         "article":  "АВР-3Ф-630-К-РОСЭК",
                          "nominal_current":  630,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -4467,8 +4467,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 630А на базе TDM (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 630А на 2 ввода, выполнен на базе контакторов TDM 630А.",
+                         "description":  "Трёхфазный контактор 630А TDM",
+                         "full_description":  "Трёхфазный контактор 630А, выполнен на базе контакторов TDM 630А.",
                          "documentation":  [
 
                                            ],
@@ -4481,8 +4481,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  179,
-                         "article":  "АВР-2-800-К-РОСЭК",
+                         "id":  174,
+                         "article":  "АВР-3Ф-800-К-РОСЭК",
                          "nominal_current":  800,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -4491,8 +4491,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Шкаф АВР 800А на базе TDM (контакторы), 2 ввода",
-                         "full_description":  "Трёхфазный АВР 800А на 2 ввода, выполнен на базе контакторов TDM 800А.",
+                         "description":  "Трёхфазный контактор 800А TDM",
+                         "full_description":  "Трёхфазный контактор 800А, выполнен на базе контакторов TDM 800А.",
                          "documentation":  [
 
                                            ],
@@ -4505,8 +4505,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  424,
-                         "article":  "AVR-12-K-1F-IEK",
+                         "id":  175,
+                         "article":  "АВР-1Ф-12-К-РОСЭК",
                          "nominal_current":  12,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4515,8 +4515,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 12 A IEK",
-                         "full_description":  "Single phase contactor 12 A IEK",
+                         "description":  "Однофазный контактор 12А IEK",
+                         "full_description":  "Однофазный контактор 12А, выполнен на базе контакторов IEK 12А.",
                          "documentation":  [
 
                                            ],
@@ -4529,8 +4529,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  425,
-                         "article":  "AVR-12-K-3F-IEK",
+                         "id":  176,
+                         "article":  "АВР-3Ф-12-К-РОСЭК",
                          "nominal_current":  12,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4539,8 +4539,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 12 A IEK",
-                         "full_description":  "Three phase contactor 12 A IEK",
+                         "description":  "Трёхфазный контактор 12А IEK",
+                         "full_description":  "Трёхфазный контактор 12А, выполнен на базе контакторов IEK 12А.",
                          "documentation":  [
 
                                            ],
@@ -4553,8 +4553,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  426,
-                         "article":  "AVR-16-K-1F-IEK",
+                         "id":  177,
+                         "article":  "АВР-1Ф-16-К-РОСЭК",
                          "nominal_current":  16,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4563,8 +4563,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 16 A IEK",
-                         "full_description":  "Single phase contactor 16 A IEK",
+                         "description":  "Однофазный контактор 16А IEK",
+                         "full_description":  "Однофазный контактор 16А, выполнен на базе контакторов IEK 16А.",
                          "documentation":  [
 
                                            ],
@@ -4577,8 +4577,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  427,
-                         "article":  "AVR-16-K-3F-IEK",
+                         "id":  178,
+                         "article":  "АВР-3Ф-16-К-РОСЭК",
                          "nominal_current":  16,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4587,8 +4587,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 16 A IEK",
-                         "full_description":  "Three phase contactor 16 A IEK",
+                         "description":  "Трёхфазный контактор 16А IEK",
+                         "full_description":  "Трёхфазный контактор 16А, выполнен на базе контакторов IEK 16А.",
                          "documentation":  [
 
                                            ],
@@ -4601,8 +4601,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  428,
-                         "article":  "AVR-20-K-1F-IEK",
+                         "id":  179,
+                         "article":  "АВР-1Ф-20-К-РОСЭК",
                          "nominal_current":  20,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4611,8 +4611,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 20 A IEK",
-                         "full_description":  "Single phase contactor 20 A IEK",
+                         "description":  "Однофазный контактор 20А IEK",
+                         "full_description":  "Однофазный контактор 20А, выполнен на базе контакторов IEK 20А.",
                          "documentation":  [
 
                                            ],
@@ -4625,8 +4625,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  429,
-                         "article":  "AVR-20-K-3F-IEK",
+                         "id":  180,
+                         "article":  "АВР-3Ф-20-К-РОСЭК",
                          "nominal_current":  20,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4635,8 +4635,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 20 A IEK",
-                         "full_description":  "Three phase contactor 20 A IEK",
+                         "description":  "Трёхфазный контактор 20А IEK",
+                         "full_description":  "Трёхфазный контактор 20А, выполнен на базе контакторов IEK 20А.",
                          "documentation":  [
 
                                            ],
@@ -4649,8 +4649,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  430,
-                         "article":  "AVR-25-K-3F-IEK",
+                         "id":  181,
+                         "article":  "АВР-3Ф-25-К-РОСЭК",
                          "nominal_current":  25,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4659,8 +4659,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 25 A IEK",
-                         "full_description":  "Three phase contactor 25 A IEK",
+                         "description":  "Трёхфазный контактор 25А IEK",
+                         "full_description":  "Трёхфазный контактор 25А, выполнен на базе контакторов IEK 25А.",
                          "documentation":  [
 
                                            ],
@@ -4673,8 +4673,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  431,
-                         "article":  "AVR-32-K-3F-IEK",
+                         "id":  182,
+                         "article":  "АВР-3Ф-32-К-РОСЭК",
                          "nominal_current":  32,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4683,8 +4683,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 32 A IEK",
-                         "full_description":  "Three phase contactor 32 A IEK",
+                         "description":  "Трёхфазный контактор 32А IEK",
+                         "full_description":  "Трёхфазный контактор 32А, выполнен на базе контакторов IEK 32А.",
                          "documentation":  [
 
                                            ],
@@ -4697,8 +4697,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  432,
-                         "article":  "AVR-40-K-3F-IEK",
+                         "id":  183,
+                         "article":  "АВР-3Ф-40-К-РОСЭК",
                          "nominal_current":  40,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4707,8 +4707,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 40 A IEK",
-                         "full_description":  "Three phase contactor 40 A IEK",
+                         "description":  "Трёхфазный контактор 40А IEK",
+                         "full_description":  "Трёхфазный контактор 40А, выполнен на базе контакторов IEK 40А.",
                          "documentation":  [
 
                                            ],
@@ -4721,8 +4721,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  433,
-                         "article":  "AVR-50-K-1F-IEK",
+                         "id":  184,
+                         "article":  "АВР-1Ф-50-К-РОСЭК",
                          "nominal_current":  50,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4731,8 +4731,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 50 A IEK",
-                         "full_description":  "Single phase contactor 50 A IEK",
+                         "description":  "Однофазный контактор 50А IEK",
+                         "full_description":  "Однофазный контактор 50А, выполнен на базе контакторов IEK 50А.",
                          "documentation":  [
 
                                            ],
@@ -4745,8 +4745,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  434,
-                         "article":  "AVR-50-K-3F-IEK",
+                         "id":  185,
+                         "article":  "АВР-3Ф-50-К-РОСЭК",
                          "nominal_current":  50,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4755,8 +4755,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 50 A IEK",
-                         "full_description":  "Three phase contactor 50 A IEK",
+                         "description":  "Трёхфазный контактор 50А IEK",
+                         "full_description":  "Трёхфазный контактор 50А, выполнен на базе контакторов IEK 50А.",
                          "documentation":  [
 
                                            ],
@@ -4769,8 +4769,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  435,
-                         "article":  "AVR-63-K-3F-IEK",
+                         "id":  186,
+                         "article":  "АВР-3Ф-63-К-РОСЭК",
                          "nominal_current":  63,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4779,8 +4779,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 63 A IEK",
-                         "full_description":  "Three phase contactor 63 A IEK",
+                         "description":  "Трёхфазный контактор 63А IEK",
+                         "full_description":  "Трёхфазный контактор 63А, выполнен на базе контакторов IEK 63А.",
                          "documentation":  [
 
                                            ],
@@ -4793,8 +4793,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  436,
-                         "article":  "AVR-80-K-1F-IEK",
+                         "id":  187,
+                         "article":  "АВР-1Ф-80-К-РОСЭК",
                          "nominal_current":  80,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4803,8 +4803,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 80 A IEK",
-                         "full_description":  "Single phase contactor 80 A IEK",
+                         "description":  "Однофазный контактор 80А IEK",
+                         "full_description":  "Однофазный контактор 80А, выполнен на базе контакторов IEK 80А.",
                          "documentation":  [
 
                                            ],
@@ -4817,8 +4817,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  437,
-                         "article":  "AVR-100-K-1F-IEK",
+                         "id":  188,
+                         "article":  "АВР-1Ф-100-К-РОСЭК",
                          "nominal_current":  100,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4827,8 +4827,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 100 A IEK",
-                         "full_description":  "Single phase contactor 100 A IEK",
+                         "description":  "Однофазный контактор 100А IEK",
+                         "full_description":  "Однофазный контактор 100А, выполнен на базе контакторов IEK 100А.",
                          "documentation":  [
 
                                            ],
@@ -4841,8 +4841,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  438,
-                         "article":  "AVR-125-K-1F-IEK",
+                         "id":  189,
+                         "article":  "АВР-1Ф-125-К-РОСЭК",
                          "nominal_current":  125,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4851,8 +4851,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 125 A IEK",
-                         "full_description":  "Single phase contactor 125 A IEK",
+                         "description":  "Однофазный контактор 125А IEK",
+                         "full_description":  "Однофазный контактор 125А, выполнен на базе контакторов IEK 125А.",
                          "documentation":  [
 
                                            ],
@@ -4865,8 +4865,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  439,
-                         "article":  "AVR-160-K-1F-IEK",
+                         "id":  190,
+                         "article":  "АВР-1Ф-160-К-РОСЭК",
                          "nominal_current":  160,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4875,8 +4875,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 160 A IEK",
-                         "full_description":  "Single phase contactor 160 A IEK",
+                         "description":  "Однофазный контактор 160А IEK",
+                         "full_description":  "Однофазный контактор 160А, выполнен на базе контакторов IEK 160А.",
                          "documentation":  [
 
                                            ],
@@ -4889,8 +4889,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  440,
-                         "article":  "AVR-200-K-1F-IEK",
+                         "id":  191,
+                         "article":  "АВР-1Ф-200-К-РОСЭК",
                          "nominal_current":  200,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4899,8 +4899,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 200 A IEK",
-                         "full_description":  "Single phase contactor 200 A IEK",
+                         "description":  "Однофазный контактор 200А IEK",
+                         "full_description":  "Однофазный контактор 200А, выполнен на базе контакторов IEK 200А.",
                          "documentation":  [
 
                                            ],
@@ -4913,8 +4913,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  441,
-                         "article":  "AVR-250-K-1F-IEK",
+                         "id":  192,
+                         "article":  "АВР-1Ф-250-К-РОСЭК",
                          "nominal_current":  250,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4923,8 +4923,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 250 A IEK",
-                         "full_description":  "Single phase contactor 250 A IEK",
+                         "description":  "Однофазный контактор 250А IEK",
+                         "full_description":  "Однофазный контактор 250А, выполнен на базе контакторов IEK 250А.",
                          "documentation":  [
 
                                            ],
@@ -4937,8 +4937,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  442,
-                         "article":  "AVR-400-K-1F-IEK",
+                         "id":  193,
+                         "article":  "АВР-1Ф-400-К-РОСЭК",
                          "nominal_current":  400,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4947,8 +4947,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 400 A IEK",
-                         "full_description":  "Single phase contactor 400 A IEK",
+                         "description":  "Однофазный контактор 400А IEK",
+                         "full_description":  "Однофазный контактор 400А, выполнен на базе контакторов IEK 400А.",
                          "documentation":  [
 
                                            ],
@@ -4961,8 +4961,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  443,
-                         "article":  "AVR-630-K-1F-IEK",
+                         "id":  194,
+                         "article":  "АВР-1Ф-630-К-РОСЭК",
                          "nominal_current":  630,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4971,8 +4971,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 630 A IEK",
-                         "full_description":  "Single phase contactor 630 A IEK",
+                         "description":  "Однофазный контактор 630А IEK",
+                         "full_description":  "Однофазный контактор 630А, выполнен на базе контакторов IEK 630А.",
                          "documentation":  [
 
                                            ],
@@ -4985,8 +4985,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  444,
-                         "article":  "AVR-800-K-1F-IEK",
+                         "id":  195,
+                         "article":  "АВР-1Ф-800-К-РОСЭК",
                          "nominal_current":  800,
                          "brand":  "IEK",
                          "commutation_type":  "contactors",
@@ -4995,8 +4995,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 800 A IEK",
-                         "full_description":  "Single phase contactor 800 A IEK",
+                         "description":  "Однофазный контактор 800А IEK",
+                         "full_description":  "Однофазный контактор 800А, выполнен на базе контакторов IEK 800А.",
                          "documentation":  [
 
                                            ],
@@ -5009,8 +5009,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  445,
-                         "article":  "AVR-12-K-1F-CHINT",
+                         "id":  196,
+                         "article":  "АВР-1Ф-12-К-РОСЭК",
                          "nominal_current":  12,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5019,8 +5019,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 12 A CHINT",
-                         "full_description":  "Single phase contactor 12 A CHINT",
+                         "description":  "Однофазный контактор 12А CHINT",
+                         "full_description":  "Однофазный контактор 12А, выполнен на базе контакторов CHINT 12А.",
                          "documentation":  [
 
                                            ],
@@ -5033,8 +5033,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  446,
-                         "article":  "AVR-12-K-3F-CHINT",
+                         "id":  197,
+                         "article":  "АВР-3Ф-12-К-РОСЭК",
                          "nominal_current":  12,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5043,8 +5043,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 12 A CHINT",
-                         "full_description":  "Three phase contactor 12 A CHINT",
+                         "description":  "Трёхфазный контактор 12А CHINT",
+                         "full_description":  "Трёхфазный контактор 12А, выполнен на базе контакторов CHINT 12А.",
                          "documentation":  [
 
                                            ],
@@ -5057,8 +5057,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  447,
-                         "article":  "AVR-16-K-1F-CHINT",
+                         "id":  198,
+                         "article":  "АВР-1Ф-16-К-РОСЭК",
                          "nominal_current":  16,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5067,8 +5067,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 16 A CHINT",
-                         "full_description":  "Single phase contactor 16 A CHINT",
+                         "description":  "Однофазный контактор 16А CHINT",
+                         "full_description":  "Однофазный контактор 16А, выполнен на базе контакторов CHINT 16А.",
                          "documentation":  [
 
                                            ],
@@ -5081,8 +5081,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  448,
-                         "article":  "AVR-16-K-3F-CHINT",
+                         "id":  199,
+                         "article":  "АВР-3Ф-16-К-РОСЭК",
                          "nominal_current":  16,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5091,8 +5091,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 16 A CHINT",
-                         "full_description":  "Three phase contactor 16 A CHINT",
+                         "description":  "Трёхфазный контактор 16А CHINT",
+                         "full_description":  "Трёхфазный контактор 16А, выполнен на базе контакторов CHINT 16А.",
                          "documentation":  [
 
                                            ],
@@ -5105,8 +5105,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  449,
-                         "article":  "AVR-20-K-1F-CHINT",
+                         "id":  200,
+                         "article":  "АВР-1Ф-20-К-РОСЭК",
                          "nominal_current":  20,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5115,8 +5115,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 20 A CHINT",
-                         "full_description":  "Single phase contactor 20 A CHINT",
+                         "description":  "Однофазный контактор 20А CHINT",
+                         "full_description":  "Однофазный контактор 20А, выполнен на базе контакторов CHINT 20А.",
                          "documentation":  [
 
                                            ],
@@ -5129,8 +5129,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  450,
-                         "article":  "AVR-20-K-3F-CHINT",
+                         "id":  201,
+                         "article":  "АВР-3Ф-20-К-РОСЭК",
                          "nominal_current":  20,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5139,8 +5139,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 20 A CHINT",
-                         "full_description":  "Three phase contactor 20 A CHINT",
+                         "description":  "Трёхфазный контактор 20А CHINT",
+                         "full_description":  "Трёхфазный контактор 20А, выполнен на базе контакторов CHINT 20А.",
                          "documentation":  [
 
                                            ],
@@ -5153,8 +5153,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  451,
-                         "article":  "AVR-25-K-3F-CHINT",
+                         "id":  202,
+                         "article":  "АВР-3Ф-25-К-РОСЭК",
                          "nominal_current":  25,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5163,8 +5163,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 25 A CHINT",
-                         "full_description":  "Three phase contactor 25 A CHINT",
+                         "description":  "Трёхфазный контактор 25А CHINT",
+                         "full_description":  "Трёхфазный контактор 25А, выполнен на базе контакторов CHINT 25А.",
                          "documentation":  [
 
                                            ],
@@ -5177,8 +5177,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  452,
-                         "article":  "AVR-32-K-3F-CHINT",
+                         "id":  203,
+                         "article":  "АВР-3Ф-32-К-РОСЭК",
                          "nominal_current":  32,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5187,8 +5187,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 32 A CHINT",
-                         "full_description":  "Three phase contactor 32 A CHINT",
+                         "description":  "Трёхфазный контактор 32А CHINT",
+                         "full_description":  "Трёхфазный контактор 32А, выполнен на базе контакторов CHINT 32А.",
                          "documentation":  [
 
                                            ],
@@ -5201,8 +5201,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  453,
-                         "article":  "AVR-40-K-3F-CHINT",
+                         "id":  204,
+                         "article":  "АВР-3Ф-40-К-РОСЭК",
                          "nominal_current":  40,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5211,8 +5211,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 40 A CHINT",
-                         "full_description":  "Three phase contactor 40 A CHINT",
+                         "description":  "Трёхфазный контактор 40А CHINT",
+                         "full_description":  "Трёхфазный контактор 40А, выполнен на базе контакторов CHINT 40А.",
                          "documentation":  [
 
                                            ],
@@ -5225,8 +5225,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  454,
-                         "article":  "AVR-50-K-1F-CHINT",
+                         "id":  205,
+                         "article":  "АВР-1Ф-50-К-РОСЭК",
                          "nominal_current":  50,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5235,8 +5235,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 50 A CHINT",
-                         "full_description":  "Single phase contactor 50 A CHINT",
+                         "description":  "Однофазный контактор 50А CHINT",
+                         "full_description":  "Однофазный контактор 50А, выполнен на базе контакторов CHINT 50А.",
                          "documentation":  [
 
                                            ],
@@ -5249,8 +5249,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  455,
-                         "article":  "AVR-50-K-3F-CHINT",
+                         "id":  206,
+                         "article":  "АВР-3Ф-50-К-РОСЭК",
                          "nominal_current":  50,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5259,8 +5259,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 50 A CHINT",
-                         "full_description":  "Three phase contactor 50 A CHINT",
+                         "description":  "Трёхфазный контактор 50А CHINT",
+                         "full_description":  "Трёхфазный контактор 50А, выполнен на базе контакторов CHINT 50А.",
                          "documentation":  [
 
                                            ],
@@ -5273,8 +5273,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  456,
-                         "article":  "AVR-63-K-3F-CHINT",
+                         "id":  207,
+                         "article":  "АВР-3Ф-63-К-РОСЭК",
                          "nominal_current":  63,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5283,8 +5283,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 63 A CHINT",
-                         "full_description":  "Three phase contactor 63 A CHINT",
+                         "description":  "Трёхфазный контактор 63А CHINT",
+                         "full_description":  "Трёхфазный контактор 63А, выполнен на базе контакторов CHINT 63А.",
                          "documentation":  [
 
                                            ],
@@ -5297,8 +5297,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  457,
-                         "article":  "AVR-80-K-1F-CHINT",
+                         "id":  208,
+                         "article":  "АВР-1Ф-80-К-РОСЭК",
                          "nominal_current":  80,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5307,8 +5307,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 80 A CHINT",
-                         "full_description":  "Single phase contactor 80 A CHINT",
+                         "description":  "Однофазный контактор 80А CHINT",
+                         "full_description":  "Однофазный контактор 80А, выполнен на базе контакторов CHINT 80А.",
                          "documentation":  [
 
                                            ],
@@ -5321,8 +5321,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  458,
-                         "article":  "AVR-100-K-1F-CHINT",
+                         "id":  209,
+                         "article":  "АВР-1Ф-100-К-РОСЭК",
                          "nominal_current":  100,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5331,8 +5331,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 100 A CHINT",
-                         "full_description":  "Single phase contactor 100 A CHINT",
+                         "description":  "Однофазный контактор 100А CHINT",
+                         "full_description":  "Однофазный контактор 100А, выполнен на базе контакторов CHINT 100А.",
                          "documentation":  [
 
                                            ],
@@ -5345,8 +5345,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  459,
-                         "article":  "AVR-125-K-1F-CHINT",
+                         "id":  210,
+                         "article":  "АВР-1Ф-125-К-РОСЭК",
                          "nominal_current":  125,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5355,8 +5355,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 125 A CHINT",
-                         "full_description":  "Single phase contactor 125 A CHINT",
+                         "description":  "Однофазный контактор 125А CHINT",
+                         "full_description":  "Однофазный контактор 125А, выполнен на базе контакторов CHINT 125А.",
                          "documentation":  [
 
                                            ],
@@ -5369,8 +5369,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  460,
-                         "article":  "AVR-160-K-1F-CHINT",
+                         "id":  211,
+                         "article":  "АВР-1Ф-160-К-РОСЭК",
                          "nominal_current":  160,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5379,8 +5379,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 160 A CHINT",
-                         "full_description":  "Single phase contactor 160 A CHINT",
+                         "description":  "Однофазный контактор 160А CHINT",
+                         "full_description":  "Однофазный контактор 160А, выполнен на базе контакторов CHINT 160А.",
                          "documentation":  [
 
                                            ],
@@ -5393,8 +5393,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  461,
-                         "article":  "AVR-200-K-1F-CHINT",
+                         "id":  212,
+                         "article":  "АВР-1Ф-200-К-РОСЭК",
                          "nominal_current":  200,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5403,8 +5403,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 200 A CHINT",
-                         "full_description":  "Single phase contactor 200 A CHINT",
+                         "description":  "Однофазный контактор 200А CHINT",
+                         "full_description":  "Однофазный контактор 200А, выполнен на базе контакторов CHINT 200А.",
                          "documentation":  [
 
                                            ],
@@ -5417,8 +5417,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  462,
-                         "article":  "AVR-250-K-1F-CHINT",
+                         "id":  213,
+                         "article":  "АВР-1Ф-250-К-РОСЭК",
                          "nominal_current":  250,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5427,8 +5427,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 250 A CHINT",
-                         "full_description":  "Single phase contactor 250 A CHINT",
+                         "description":  "Однофазный контактор 250А CHINT",
+                         "full_description":  "Однофазный контактор 250А, выполнен на базе контакторов CHINT 250А.",
                          "documentation":  [
 
                                            ],
@@ -5441,8 +5441,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  463,
-                         "article":  "AVR-400-K-1F-CHINT",
+                         "id":  214,
+                         "article":  "АВР-1Ф-400-К-РОСЭК",
                          "nominal_current":  400,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5451,8 +5451,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 400 A CHINT",
-                         "full_description":  "Single phase contactor 400 A CHINT",
+                         "description":  "Однофазный контактор 400А CHINT",
+                         "full_description":  "Однофазный контактор 400А, выполнен на базе контакторов CHINT 400А.",
                          "documentation":  [
 
                                            ],
@@ -5465,8 +5465,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  464,
-                         "article":  "AVR-630-K-1F-CHINT",
+                         "id":  215,
+                         "article":  "АВР-1Ф-630-К-РОСЭК",
                          "nominal_current":  630,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5475,8 +5475,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 630 A CHINT",
-                         "full_description":  "Single phase contactor 630 A CHINT",
+                         "description":  "Однофазный контактор 630А CHINT",
+                         "full_description":  "Однофазный контактор 630А, выполнен на базе контакторов CHINT 630А.",
                          "documentation":  [
 
                                            ],
@@ -5489,8 +5489,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  465,
-                         "article":  "AVR-800-K-1F-CHINT",
+                         "id":  216,
+                         "article":  "АВР-1Ф-800-К-РОСЭК",
                          "nominal_current":  800,
                          "brand":  "CHINT",
                          "commutation_type":  "contactors",
@@ -5499,8 +5499,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 800 A CHINT",
-                         "full_description":  "Single phase contactor 800 A CHINT",
+                         "description":  "Однофазный контактор 800А CHINT",
+                         "full_description":  "Однофазный контактор 800А, выполнен на базе контакторов CHINT 800А.",
                          "documentation":  [
 
                                            ],
@@ -5513,8 +5513,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  466,
-                         "article":  "AVR-12-K-1F-EKF",
+                         "id":  217,
+                         "article":  "АВР-1Ф-12-К-РОСЭК",
                          "nominal_current":  12,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5523,8 +5523,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 12 A EKF",
-                         "full_description":  "Single phase contactor 12 A EKF",
+                         "description":  "Однофазный контактор 12А EKF",
+                         "full_description":  "Однофазный контактор 12А, выполнен на базе контакторов EKF 12А.",
                          "documentation":  [
 
                                            ],
@@ -5537,8 +5537,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  467,
-                         "article":  "AVR-12-K-3F-EKF",
+                         "id":  218,
+                         "article":  "АВР-3Ф-12-К-РОСЭК",
                          "nominal_current":  12,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5547,8 +5547,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 12 A EKF",
-                         "full_description":  "Three phase contactor 12 A EKF",
+                         "description":  "Трёхфазный контактор 12А EKF",
+                         "full_description":  "Трёхфазный контактор 12А, выполнен на базе контакторов EKF 12А.",
                          "documentation":  [
 
                                            ],
@@ -5561,8 +5561,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  468,
-                         "article":  "AVR-16-K-1F-EKF",
+                         "id":  219,
+                         "article":  "АВР-1Ф-16-К-РОСЭК",
                          "nominal_current":  16,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5571,8 +5571,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 16 A EKF",
-                         "full_description":  "Single phase contactor 16 A EKF",
+                         "description":  "Однофазный контактор 16А EKF",
+                         "full_description":  "Однофазный контактор 16А, выполнен на базе контакторов EKF 16А.",
                          "documentation":  [
 
                                            ],
@@ -5585,8 +5585,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  469,
-                         "article":  "AVR-16-K-3F-EKF",
+                         "id":  220,
+                         "article":  "АВР-3Ф-16-К-РОСЭК",
                          "nominal_current":  16,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5595,8 +5595,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 16 A EKF",
-                         "full_description":  "Three phase contactor 16 A EKF",
+                         "description":  "Трёхфазный контактор 16А EKF",
+                         "full_description":  "Трёхфазный контактор 16А, выполнен на базе контакторов EKF 16А.",
                          "documentation":  [
 
                                            ],
@@ -5609,8 +5609,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  470,
-                         "article":  "AVR-20-K-1F-EKF",
+                         "id":  221,
+                         "article":  "АВР-1Ф-20-К-РОСЭК",
                          "nominal_current":  20,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5619,8 +5619,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 20 A EKF",
-                         "full_description":  "Single phase contactor 20 A EKF",
+                         "description":  "Однофазный контактор 20А EKF",
+                         "full_description":  "Однофазный контактор 20А, выполнен на базе контакторов EKF 20А.",
                          "documentation":  [
 
                                            ],
@@ -5633,8 +5633,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  471,
-                         "article":  "AVR-20-K-3F-EKF",
+                         "id":  222,
+                         "article":  "АВР-3Ф-20-К-РОСЭК",
                          "nominal_current":  20,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5643,8 +5643,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 20 A EKF",
-                         "full_description":  "Three phase contactor 20 A EKF",
+                         "description":  "Трёхфазный контактор 20А EKF",
+                         "full_description":  "Трёхфазный контактор 20А, выполнен на базе контакторов EKF 20А.",
                          "documentation":  [
 
                                            ],
@@ -5657,8 +5657,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  472,
-                         "article":  "AVR-25-K-3F-EKF",
+                         "id":  223,
+                         "article":  "АВР-3Ф-25-К-РОСЭК",
                          "nominal_current":  25,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5667,8 +5667,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 25 A EKF",
-                         "full_description":  "Three phase contactor 25 A EKF",
+                         "description":  "Трёхфазный контактор 25А EKF",
+                         "full_description":  "Трёхфазный контактор 25А, выполнен на базе контакторов EKF 25А.",
                          "documentation":  [
 
                                            ],
@@ -5681,8 +5681,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  473,
-                         "article":  "AVR-32-K-3F-EKF",
+                         "id":  224,
+                         "article":  "АВР-3Ф-32-К-РОСЭК",
                          "nominal_current":  32,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5691,8 +5691,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 32 A EKF",
-                         "full_description":  "Three phase contactor 32 A EKF",
+                         "description":  "Трёхфазный контактор 32А EKF",
+                         "full_description":  "Трёхфазный контактор 32А, выполнен на базе контакторов EKF 32А.",
                          "documentation":  [
 
                                            ],
@@ -5705,8 +5705,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  474,
-                         "article":  "AVR-40-K-3F-EKF",
+                         "id":  225,
+                         "article":  "АВР-3Ф-40-К-РОСЭК",
                          "nominal_current":  40,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5715,8 +5715,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 40 A EKF",
-                         "full_description":  "Three phase contactor 40 A EKF",
+                         "description":  "Трёхфазный контактор 40А EKF",
+                         "full_description":  "Трёхфазный контактор 40А, выполнен на базе контакторов EKF 40А.",
                          "documentation":  [
 
                                            ],
@@ -5729,8 +5729,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  475,
-                         "article":  "AVR-50-K-1F-EKF",
+                         "id":  226,
+                         "article":  "АВР-1Ф-50-К-РОСЭК",
                          "nominal_current":  50,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5739,8 +5739,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 50 A EKF",
-                         "full_description":  "Single phase contactor 50 A EKF",
+                         "description":  "Однофазный контактор 50А EKF",
+                         "full_description":  "Однофазный контактор 50А, выполнен на базе контакторов EKF 50А.",
                          "documentation":  [
 
                                            ],
@@ -5753,8 +5753,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  476,
-                         "article":  "AVR-50-K-3F-EKF",
+                         "id":  227,
+                         "article":  "АВР-3Ф-50-К-РОСЭК",
                          "nominal_current":  50,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5763,8 +5763,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 50 A EKF",
-                         "full_description":  "Three phase contactor 50 A EKF",
+                         "description":  "Трёхфазный контактор 50А EKF",
+                         "full_description":  "Трёхфазный контактор 50А, выполнен на базе контакторов EKF 50А.",
                          "documentation":  [
 
                                            ],
@@ -5777,8 +5777,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  477,
-                         "article":  "AVR-63-K-3F-EKF",
+                         "id":  228,
+                         "article":  "АВР-3Ф-63-К-РОСЭК",
                          "nominal_current":  63,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5787,8 +5787,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 63 A EKF",
-                         "full_description":  "Three phase contactor 63 A EKF",
+                         "description":  "Трёхфазный контактор 63А EKF",
+                         "full_description":  "Трёхфазный контактор 63А, выполнен на базе контакторов EKF 63А.",
                          "documentation":  [
 
                                            ],
@@ -5801,8 +5801,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  478,
-                         "article":  "AVR-80-K-1F-EKF",
+                         "id":  229,
+                         "article":  "АВР-1Ф-80-К-РОСЭК",
                          "nominal_current":  80,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5811,8 +5811,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 80 A EKF",
-                         "full_description":  "Single phase contactor 80 A EKF",
+                         "description":  "Однофазный контактор 80А EKF",
+                         "full_description":  "Однофазный контактор 80А, выполнен на базе контакторов EKF 80А.",
                          "documentation":  [
 
                                            ],
@@ -5825,8 +5825,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  479,
-                         "article":  "AVR-100-K-1F-EKF",
+                         "id":  230,
+                         "article":  "АВР-1Ф-100-К-РОСЭК",
                          "nominal_current":  100,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5835,8 +5835,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 100 A EKF",
-                         "full_description":  "Single phase contactor 100 A EKF",
+                         "description":  "Однофазный контактор 100А EKF",
+                         "full_description":  "Однофазный контактор 100А, выполнен на базе контакторов EKF 100А.",
                          "documentation":  [
 
                                            ],
@@ -5849,8 +5849,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  480,
-                         "article":  "AVR-125-K-1F-EKF",
+                         "id":  231,
+                         "article":  "АВР-1Ф-125-К-РОСЭК",
                          "nominal_current":  125,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5859,8 +5859,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 125 A EKF",
-                         "full_description":  "Single phase contactor 125 A EKF",
+                         "description":  "Однофазный контактор 125А EKF",
+                         "full_description":  "Однофазный контактор 125А, выполнен на базе контакторов EKF 125А.",
                          "documentation":  [
 
                                            ],
@@ -5873,8 +5873,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  481,
-                         "article":  "AVR-160-K-1F-EKF",
+                         "id":  232,
+                         "article":  "АВР-1Ф-160-К-РОСЭК",
                          "nominal_current":  160,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5883,8 +5883,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 160 A EKF",
-                         "full_description":  "Single phase contactor 160 A EKF",
+                         "description":  "Однофазный контактор 160А EKF",
+                         "full_description":  "Однофазный контактор 160А, выполнен на базе контакторов EKF 160А.",
                          "documentation":  [
 
                                            ],
@@ -5897,8 +5897,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  482,
-                         "article":  "AVR-200-K-1F-EKF",
+                         "id":  233,
+                         "article":  "АВР-1Ф-200-К-РОСЭК",
                          "nominal_current":  200,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5907,8 +5907,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 200 A EKF",
-                         "full_description":  "Single phase contactor 200 A EKF",
+                         "description":  "Однофазный контактор 200А EKF",
+                         "full_description":  "Однофазный контактор 200А, выполнен на базе контакторов EKF 200А.",
                          "documentation":  [
 
                                            ],
@@ -5921,8 +5921,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  483,
-                         "article":  "AVR-250-K-1F-EKF",
+                         "id":  234,
+                         "article":  "АВР-1Ф-250-К-РОСЭК",
                          "nominal_current":  250,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5931,8 +5931,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 250 A EKF",
-                         "full_description":  "Single phase contactor 250 A EKF",
+                         "description":  "Однофазный контактор 250А EKF",
+                         "full_description":  "Однофазный контактор 250А, выполнен на базе контакторов EKF 250А.",
                          "documentation":  [
 
                                            ],
@@ -5945,8 +5945,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  484,
-                         "article":  "AVR-400-K-1F-EKF",
+                         "id":  235,
+                         "article":  "АВР-1Ф-400-К-РОСЭК",
                          "nominal_current":  400,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5955,8 +5955,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 400 A EKF",
-                         "full_description":  "Single phase contactor 400 A EKF",
+                         "description":  "Однофазный контактор 400А EKF",
+                         "full_description":  "Однофазный контактор 400А, выполнен на базе контакторов EKF 400А.",
                          "documentation":  [
 
                                            ],
@@ -5969,8 +5969,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  485,
-                         "article":  "AVR-630-K-1F-EKF",
+                         "id":  236,
+                         "article":  "АВР-1Ф-630-К-РОСЭК",
                          "nominal_current":  630,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -5979,8 +5979,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 630 A EKF",
-                         "full_description":  "Single phase contactor 630 A EKF",
+                         "description":  "Однофазный контактор 630А EKF",
+                         "full_description":  "Однофазный контактор 630А, выполнен на базе контакторов EKF 630А.",
                          "documentation":  [
 
                                            ],
@@ -5993,8 +5993,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  486,
-                         "article":  "AVR-800-K-1F-EKF",
+                         "id":  237,
+                         "article":  "АВР-1Ф-800-К-РОСЭК",
                          "nominal_current":  800,
                          "brand":  "EKF",
                          "commutation_type":  "contactors",
@@ -6003,8 +6003,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 800 A EKF",
-                         "full_description":  "Single phase contactor 800 A EKF",
+                         "description":  "Однофазный контактор 800А EKF",
+                         "full_description":  "Однофазный контактор 800А, выполнен на базе контакторов EKF 800А.",
                          "documentation":  [
 
                                            ],
@@ -6017,8 +6017,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  487,
-                         "article":  "AVR-12-K-1F-Dekraft",
+                         "id":  238,
+                         "article":  "АВР-1Ф-12-К-РОСЭК",
                          "nominal_current":  12,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6027,8 +6027,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 12 A Dekraft",
-                         "full_description":  "Single phase contactor 12 A Dekraft",
+                         "description":  "Однофазный контактор 12А Dekraft",
+                         "full_description":  "Однофазный контактор 12А, выполнен на базе контакторов Dekraft 12А.",
                          "documentation":  [
 
                                            ],
@@ -6041,8 +6041,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  488,
-                         "article":  "AVR-12-K-3F-Dekraft",
+                         "id":  239,
+                         "article":  "АВР-3Ф-12-К-РОСЭК",
                          "nominal_current":  12,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6051,8 +6051,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 12 A Dekraft",
-                         "full_description":  "Three phase contactor 12 A Dekraft",
+                         "description":  "Трёхфазный контактор 12А Dekraft",
+                         "full_description":  "Трёхфазный контактор 12А, выполнен на базе контакторов Dekraft 12А.",
                          "documentation":  [
 
                                            ],
@@ -6065,8 +6065,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  489,
-                         "article":  "AVR-16-K-1F-Dekraft",
+                         "id":  240,
+                         "article":  "АВР-1Ф-16-К-РОСЭК",
                          "nominal_current":  16,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6075,8 +6075,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 16 A Dekraft",
-                         "full_description":  "Single phase contactor 16 A Dekraft",
+                         "description":  "Однофазный контактор 16А Dekraft",
+                         "full_description":  "Однофазный контактор 16А, выполнен на базе контакторов Dekraft 16А.",
                          "documentation":  [
 
                                            ],
@@ -6089,8 +6089,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  490,
-                         "article":  "AVR-16-K-3F-Dekraft",
+                         "id":  241,
+                         "article":  "АВР-3Ф-16-К-РОСЭК",
                          "nominal_current":  16,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6099,8 +6099,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 16 A Dekraft",
-                         "full_description":  "Three phase contactor 16 A Dekraft",
+                         "description":  "Трёхфазный контактор 16А Dekraft",
+                         "full_description":  "Трёхфазный контактор 16А, выполнен на базе контакторов Dekraft 16А.",
                          "documentation":  [
 
                                            ],
@@ -6113,8 +6113,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  491,
-                         "article":  "AVR-20-K-1F-Dekraft",
+                         "id":  242,
+                         "article":  "АВР-1Ф-20-К-РОСЭК",
                          "nominal_current":  20,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6123,8 +6123,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 20 A Dekraft",
-                         "full_description":  "Single phase contactor 20 A Dekraft",
+                         "description":  "Однофазный контактор 20А Dekraft",
+                         "full_description":  "Однофазный контактор 20А, выполнен на базе контакторов Dekraft 20А.",
                          "documentation":  [
 
                                            ],
@@ -6137,8 +6137,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  492,
-                         "article":  "AVR-20-K-3F-Dekraft",
+                         "id":  243,
+                         "article":  "АВР-3Ф-20-К-РОСЭК",
                          "nominal_current":  20,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6147,8 +6147,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 20 A Dekraft",
-                         "full_description":  "Three phase contactor 20 A Dekraft",
+                         "description":  "Трёхфазный контактор 20А Dekraft",
+                         "full_description":  "Трёхфазный контактор 20А, выполнен на базе контакторов Dekraft 20А.",
                          "documentation":  [
 
                                            ],
@@ -6161,8 +6161,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  493,
-                         "article":  "AVR-25-K-3F-Dekraft",
+                         "id":  244,
+                         "article":  "АВР-3Ф-25-К-РОСЭК",
                          "nominal_current":  25,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6171,8 +6171,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 25 A Dekraft",
-                         "full_description":  "Three phase contactor 25 A Dekraft",
+                         "description":  "Трёхфазный контактор 25А Dekraft",
+                         "full_description":  "Трёхфазный контактор 25А, выполнен на базе контакторов Dekraft 25А.",
                          "documentation":  [
 
                                            ],
@@ -6185,8 +6185,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  494,
-                         "article":  "AVR-32-K-3F-Dekraft",
+                         "id":  245,
+                         "article":  "АВР-3Ф-32-К-РОСЭК",
                          "nominal_current":  32,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6195,8 +6195,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 32 A Dekraft",
-                         "full_description":  "Three phase contactor 32 A Dekraft",
+                         "description":  "Трёхфазный контактор 32А Dekraft",
+                         "full_description":  "Трёхфазный контактор 32А, выполнен на базе контакторов Dekraft 32А.",
                          "documentation":  [
 
                                            ],
@@ -6209,8 +6209,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  495,
-                         "article":  "AVR-40-K-3F-Dekraft",
+                         "id":  246,
+                         "article":  "АВР-3Ф-40-К-РОСЭК",
                          "nominal_current":  40,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6219,8 +6219,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 40 A Dekraft",
-                         "full_description":  "Three phase contactor 40 A Dekraft",
+                         "description":  "Трёхфазный контактор 40А Dekraft",
+                         "full_description":  "Трёхфазный контактор 40А, выполнен на базе контакторов Dekraft 40А.",
                          "documentation":  [
 
                                            ],
@@ -6233,8 +6233,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  496,
-                         "article":  "AVR-50-K-1F-Dekraft",
+                         "id":  247,
+                         "article":  "АВР-1Ф-50-К-РОСЭК",
                          "nominal_current":  50,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6243,8 +6243,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 50 A Dekraft",
-                         "full_description":  "Single phase contactor 50 A Dekraft",
+                         "description":  "Однофазный контактор 50А Dekraft",
+                         "full_description":  "Однофазный контактор 50А, выполнен на базе контакторов Dekraft 50А.",
                          "documentation":  [
 
                                            ],
@@ -6257,8 +6257,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  497,
-                         "article":  "AVR-50-K-3F-Dekraft",
+                         "id":  248,
+                         "article":  "АВР-3Ф-50-К-РОСЭК",
                          "nominal_current":  50,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6267,8 +6267,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 50 A Dekraft",
-                         "full_description":  "Three phase contactor 50 A Dekraft",
+                         "description":  "Трёхфазный контактор 50А Dekraft",
+                         "full_description":  "Трёхфазный контактор 50А, выполнен на базе контакторов Dekraft 50А.",
                          "documentation":  [
 
                                            ],
@@ -6281,8 +6281,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  498,
-                         "article":  "AVR-63-K-3F-Dekraft",
+                         "id":  249,
+                         "article":  "АВР-3Ф-63-К-РОСЭК",
                          "nominal_current":  63,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6291,8 +6291,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 63 A Dekraft",
-                         "full_description":  "Three phase contactor 63 A Dekraft",
+                         "description":  "Трёхфазный контактор 63А Dekraft",
+                         "full_description":  "Трёхфазный контактор 63А, выполнен на базе контакторов Dekraft 63А.",
                          "documentation":  [
 
                                            ],
@@ -6305,8 +6305,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  499,
-                         "article":  "AVR-80-K-1F-Dekraft",
+                         "id":  250,
+                         "article":  "АВР-1Ф-80-К-РОСЭК",
                          "nominal_current":  80,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6315,8 +6315,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 80 A Dekraft",
-                         "full_description":  "Single phase contactor 80 A Dekraft",
+                         "description":  "Однофазный контактор 80А Dekraft",
+                         "full_description":  "Однофазный контактор 80А, выполнен на базе контакторов Dekraft 80А.",
                          "documentation":  [
 
                                            ],
@@ -6329,8 +6329,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  500,
-                         "article":  "AVR-100-K-1F-Dekraft",
+                         "id":  251,
+                         "article":  "АВР-1Ф-100-К-РОСЭК",
                          "nominal_current":  100,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6339,8 +6339,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 100 A Dekraft",
-                         "full_description":  "Single phase contactor 100 A Dekraft",
+                         "description":  "Однофазный контактор 100А Dekraft",
+                         "full_description":  "Однофазный контактор 100А, выполнен на базе контакторов Dekraft 100А.",
                          "documentation":  [
 
                                            ],
@@ -6353,8 +6353,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  501,
-                         "article":  "AVR-125-K-1F-Dekraft",
+                         "id":  252,
+                         "article":  "АВР-1Ф-125-К-РОСЭК",
                          "nominal_current":  125,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6363,8 +6363,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 125 A Dekraft",
-                         "full_description":  "Single phase contactor 125 A Dekraft",
+                         "description":  "Однофазный контактор 125А Dekraft",
+                         "full_description":  "Однофазный контактор 125А, выполнен на базе контакторов Dekraft 125А.",
                          "documentation":  [
 
                                            ],
@@ -6377,8 +6377,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  502,
-                         "article":  "AVR-160-K-1F-Dekraft",
+                         "id":  253,
+                         "article":  "АВР-1Ф-160-К-РОСЭК",
                          "nominal_current":  160,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6387,8 +6387,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 160 A Dekraft",
-                         "full_description":  "Single phase contactor 160 A Dekraft",
+                         "description":  "Однофазный контактор 160А Dekraft",
+                         "full_description":  "Однофазный контактор 160А, выполнен на базе контакторов Dekraft 160А.",
                          "documentation":  [
 
                                            ],
@@ -6401,8 +6401,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  503,
-                         "article":  "AVR-200-K-1F-Dekraft",
+                         "id":  254,
+                         "article":  "АВР-1Ф-200-К-РОСЭК",
                          "nominal_current":  200,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6411,8 +6411,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 200 A Dekraft",
-                         "full_description":  "Single phase contactor 200 A Dekraft",
+                         "description":  "Однофазный контактор 200А Dekraft",
+                         "full_description":  "Однофазный контактор 200А, выполнен на базе контакторов Dekraft 200А.",
                          "documentation":  [
 
                                            ],
@@ -6425,8 +6425,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  504,
-                         "article":  "AVR-250-K-1F-Dekraft",
+                         "id":  255,
+                         "article":  "АВР-1Ф-250-К-РОСЭК",
                          "nominal_current":  250,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6435,8 +6435,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 250 A Dekraft",
-                         "full_description":  "Single phase contactor 250 A Dekraft",
+                         "description":  "Однофазный контактор 250А Dekraft",
+                         "full_description":  "Однофазный контактор 250А, выполнен на базе контакторов Dekraft 250А.",
                          "documentation":  [
 
                                            ],
@@ -6449,8 +6449,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  505,
-                         "article":  "AVR-400-K-1F-Dekraft",
+                         "id":  256,
+                         "article":  "АВР-1Ф-400-К-РОСЭК",
                          "nominal_current":  400,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6459,8 +6459,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 400 A Dekraft",
-                         "full_description":  "Single phase contactor 400 A Dekraft",
+                         "description":  "Однофазный контактор 400А Dekraft",
+                         "full_description":  "Однофазный контактор 400А, выполнен на базе контакторов Dekraft 400А.",
                          "documentation":  [
 
                                            ],
@@ -6473,8 +6473,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  506,
-                         "article":  "AVR-630-K-1F-Dekraft",
+                         "id":  257,
+                         "article":  "АВР-1Ф-630-К-РОСЭК",
                          "nominal_current":  630,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6483,8 +6483,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 630 A Dekraft",
-                         "full_description":  "Single phase contactor 630 A Dekraft",
+                         "description":  "Однофазный контактор 630А Dekraft",
+                         "full_description":  "Однофазный контактор 630А, выполнен на базе контакторов Dekraft 630А.",
                          "documentation":  [
 
                                            ],
@@ -6497,8 +6497,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  507,
-                         "article":  "AVR-800-K-1F-Dekraft",
+                         "id":  258,
+                         "article":  "АВР-1Ф-800-К-РОСЭК",
                          "nominal_current":  800,
                          "brand":  "Dekraft",
                          "commutation_type":  "contactors",
@@ -6507,8 +6507,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 800 A Dekraft",
-                         "full_description":  "Single phase contactor 800 A Dekraft",
+                         "description":  "Однофазный контактор 800А Dekraft",
+                         "full_description":  "Однофазный контактор 800А, выполнен на базе контакторов Dekraft 800А.",
                          "documentation":  [
 
                                            ],
@@ -6521,8 +6521,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  508,
-                         "article":  "AVR-12-K-1F-TDM",
+                         "id":  259,
+                         "article":  "АВР-1Ф-12-К-РОСЭК",
                          "nominal_current":  12,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6531,8 +6531,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 12 A TDM",
-                         "full_description":  "Single phase contactor 12 A TDM",
+                         "description":  "Однофазный контактор 12А TDM",
+                         "full_description":  "Однофазный контактор 12А, выполнен на базе контакторов TDM 12А.",
                          "documentation":  [
 
                                            ],
@@ -6545,8 +6545,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  509,
-                         "article":  "AVR-12-K-3F-TDM",
+                         "id":  260,
+                         "article":  "АВР-3Ф-12-К-РОСЭК",
                          "nominal_current":  12,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6555,8 +6555,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 12 A TDM",
-                         "full_description":  "Three phase contactor 12 A TDM",
+                         "description":  "Трёхфазный контактор 12А TDM",
+                         "full_description":  "Трёхфазный контактор 12А, выполнен на базе контакторов TDM 12А.",
                          "documentation":  [
 
                                            ],
@@ -6569,8 +6569,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  510,
-                         "article":  "AVR-16-K-1F-TDM",
+                         "id":  261,
+                         "article":  "АВР-1Ф-16-К-РОСЭК",
                          "nominal_current":  16,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6579,8 +6579,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 16 A TDM",
-                         "full_description":  "Single phase contactor 16 A TDM",
+                         "description":  "Однофазный контактор 16А TDM",
+                         "full_description":  "Однофазный контактор 16А, выполнен на базе контакторов TDM 16А.",
                          "documentation":  [
 
                                            ],
@@ -6593,8 +6593,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  511,
-                         "article":  "AVR-16-K-3F-TDM",
+                         "id":  262,
+                         "article":  "АВР-3Ф-16-К-РОСЭК",
                          "nominal_current":  16,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6603,8 +6603,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 16 A TDM",
-                         "full_description":  "Three phase contactor 16 A TDM",
+                         "description":  "Трёхфазный контактор 16А TDM",
+                         "full_description":  "Трёхфазный контактор 16А, выполнен на базе контакторов TDM 16А.",
                          "documentation":  [
 
                                            ],
@@ -6617,8 +6617,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  512,
-                         "article":  "AVR-20-K-1F-TDM",
+                         "id":  263,
+                         "article":  "АВР-1Ф-20-К-РОСЭК",
                          "nominal_current":  20,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6627,8 +6627,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 20 A TDM",
-                         "full_description":  "Single phase contactor 20 A TDM",
+                         "description":  "Однофазный контактор 20А TDM",
+                         "full_description":  "Однофазный контактор 20А, выполнен на базе контакторов TDM 20А.",
                          "documentation":  [
 
                                            ],
@@ -6641,8 +6641,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  513,
-                         "article":  "AVR-20-K-3F-TDM",
+                         "id":  264,
+                         "article":  "АВР-3Ф-20-К-РОСЭК",
                          "nominal_current":  20,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6651,8 +6651,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 20 A TDM",
-                         "full_description":  "Three phase contactor 20 A TDM",
+                         "description":  "Трёхфазный контактор 20А TDM",
+                         "full_description":  "Трёхфазный контактор 20А, выполнен на базе контакторов TDM 20А.",
                          "documentation":  [
 
                                            ],
@@ -6665,8 +6665,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  514,
-                         "article":  "AVR-25-K-3F-TDM",
+                         "id":  265,
+                         "article":  "АВР-3Ф-25-К-РОСЭК",
                          "nominal_current":  25,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6675,8 +6675,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 25 A TDM",
-                         "full_description":  "Three phase contactor 25 A TDM",
+                         "description":  "Трёхфазный контактор 25А TDM",
+                         "full_description":  "Трёхфазный контактор 25А, выполнен на базе контакторов TDM 25А.",
                          "documentation":  [
 
                                            ],
@@ -6689,8 +6689,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  515,
-                         "article":  "AVR-32-K-3F-TDM",
+                         "id":  266,
+                         "article":  "АВР-3Ф-32-К-РОСЭК",
                          "nominal_current":  32,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6699,8 +6699,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 32 A TDM",
-                         "full_description":  "Three phase contactor 32 A TDM",
+                         "description":  "Трёхфазный контактор 32А TDM",
+                         "full_description":  "Трёхфазный контактор 32А, выполнен на базе контакторов TDM 32А.",
                          "documentation":  [
 
                                            ],
@@ -6713,8 +6713,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  516,
-                         "article":  "AVR-40-K-3F-TDM",
+                         "id":  267,
+                         "article":  "АВР-3Ф-40-К-РОСЭК",
                          "nominal_current":  40,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6723,8 +6723,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 40 A TDM",
-                         "full_description":  "Three phase contactor 40 A TDM",
+                         "description":  "Трёхфазный контактор 40А TDM",
+                         "full_description":  "Трёхфазный контактор 40А, выполнен на базе контакторов TDM 40А.",
                          "documentation":  [
 
                                            ],
@@ -6737,8 +6737,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  517,
-                         "article":  "AVR-50-K-1F-TDM",
+                         "id":  268,
+                         "article":  "АВР-1Ф-50-К-РОСЭК",
                          "nominal_current":  50,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6747,8 +6747,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 50 A TDM",
-                         "full_description":  "Single phase contactor 50 A TDM",
+                         "description":  "Однофазный контактор 50А TDM",
+                         "full_description":  "Однофазный контактор 50А, выполнен на базе контакторов TDM 50А.",
                          "documentation":  [
 
                                            ],
@@ -6761,8 +6761,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  518,
-                         "article":  "AVR-50-K-3F-TDM",
+                         "id":  269,
+                         "article":  "АВР-3Ф-50-К-РОСЭК",
                          "nominal_current":  50,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6771,8 +6771,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 50 A TDM",
-                         "full_description":  "Three phase contactor 50 A TDM",
+                         "description":  "Трёхфазный контактор 50А TDM",
+                         "full_description":  "Трёхфазный контактор 50А, выполнен на базе контакторов TDM 50А.",
                          "documentation":  [
 
                                            ],
@@ -6785,8 +6785,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  519,
-                         "article":  "AVR-63-K-3F-TDM",
+                         "id":  270,
+                         "article":  "АВР-3Ф-63-К-РОСЭК",
                          "nominal_current":  63,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6795,8 +6795,8 @@
                          "images":  [
                                         "images/avr-kont.jpg"
                                     ],
-                         "description":  "Three phase contactor 63 A TDM",
-                         "full_description":  "Three phase contactor 63 A TDM",
+                         "description":  "Трёхфазный контактор 63А TDM",
+                         "full_description":  "Трёхфазный контактор 63А, выполнен на базе контакторов TDM 63А.",
                          "documentation":  [
 
                                            ],
@@ -6809,8 +6809,8 @@
                          "poles_count":  "three_phase"
                      },
                      {
-                         "id":  520,
-                         "article":  "AVR-80-K-1F-TDM",
+                         "id":  271,
+                         "article":  "АВР-1Ф-80-К-РОСЭК",
                          "nominal_current":  80,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6819,8 +6819,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 80 A TDM",
-                         "full_description":  "Single phase contactor 80 A TDM",
+                         "description":  "Однофазный контактор 80А TDM",
+                         "full_description":  "Однофазный контактор 80А, выполнен на базе контакторов TDM 80А.",
                          "documentation":  [
 
                                            ],
@@ -6833,8 +6833,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  521,
-                         "article":  "AVR-100-K-1F-TDM",
+                         "id":  272,
+                         "article":  "АВР-1Ф-100-К-РОСЭК",
                          "nominal_current":  100,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6843,8 +6843,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 100 A TDM",
-                         "full_description":  "Single phase contactor 100 A TDM",
+                         "description":  "Однофазный контактор 100А TDM",
+                         "full_description":  "Однофазный контактор 100А, выполнен на базе контакторов TDM 100А.",
                          "documentation":  [
 
                                            ],
@@ -6857,8 +6857,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  522,
-                         "article":  "AVR-125-K-1F-TDM",
+                         "id":  273,
+                         "article":  "АВР-1Ф-125-К-РОСЭК",
                          "nominal_current":  125,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6867,8 +6867,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 125 A TDM",
-                         "full_description":  "Single phase contactor 125 A TDM",
+                         "description":  "Однофазный контактор 125А TDM",
+                         "full_description":  "Однофазный контактор 125А, выполнен на базе контакторов TDM 125А.",
                          "documentation":  [
 
                                            ],
@@ -6881,8 +6881,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  523,
-                         "article":  "AVR-160-K-1F-TDM",
+                         "id":  274,
+                         "article":  "АВР-1Ф-160-К-РОСЭК",
                          "nominal_current":  160,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6891,8 +6891,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 160 A TDM",
-                         "full_description":  "Single phase contactor 160 A TDM",
+                         "description":  "Однофазный контактор 160А TDM",
+                         "full_description":  "Однофазный контактор 160А, выполнен на базе контакторов TDM 160А.",
                          "documentation":  [
 
                                            ],
@@ -6905,8 +6905,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  524,
-                         "article":  "AVR-200-K-1F-TDM",
+                         "id":  275,
+                         "article":  "АВР-1Ф-200-К-РОСЭК",
                          "nominal_current":  200,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6915,8 +6915,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 200 A TDM",
-                         "full_description":  "Single phase contactor 200 A TDM",
+                         "description":  "Однофазный контактор 200А TDM",
+                         "full_description":  "Однофазный контактор 200А, выполнен на базе контакторов TDM 200А.",
                          "documentation":  [
 
                                            ],
@@ -6929,8 +6929,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  525,
-                         "article":  "AVR-250-K-1F-TDM",
+                         "id":  276,
+                         "article":  "АВР-1Ф-250-К-РОСЭК",
                          "nominal_current":  250,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6939,8 +6939,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 250 A TDM",
-                         "full_description":  "Single phase contactor 250 A TDM",
+                         "description":  "Однофазный контактор 250А TDM",
+                         "full_description":  "Однофазный контактор 250А, выполнен на базе контакторов TDM 250А.",
                          "documentation":  [
 
                                            ],
@@ -6953,8 +6953,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  526,
-                         "article":  "AVR-400-K-1F-TDM",
+                         "id":  277,
+                         "article":  "АВР-1Ф-400-К-РОСЭК",
                          "nominal_current":  400,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6963,8 +6963,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 400 A TDM",
-                         "full_description":  "Single phase contactor 400 A TDM",
+                         "description":  "Однофазный контактор 400А TDM",
+                         "full_description":  "Однофазный контактор 400А, выполнен на базе контакторов TDM 400А.",
                          "documentation":  [
 
                                            ],
@@ -6977,8 +6977,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  527,
-                         "article":  "AVR-630-K-1F-TDM",
+                         "id":  278,
+                         "article":  "АВР-1Ф-630-К-РОСЭК",
                          "nominal_current":  630,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -6987,8 +6987,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 630 A TDM",
-                         "full_description":  "Single phase contactor 630 A TDM",
+                         "description":  "Однофазный контактор 630А TDM",
+                         "full_description":  "Однофазный контактор 630А, выполнен на базе контакторов TDM 630А.",
                          "documentation":  [
 
                                            ],
@@ -7001,8 +7001,8 @@
                          "poles_count":  "single_phase"
                      },
                      {
-                         "id":  528,
-                         "article":  "AVR-800-K-1F-TDM",
+                         "id":  279,
+                         "article":  "АВР-1Ф-800-К-РОСЭК",
                          "nominal_current":  800,
                          "brand":  "TDM",
                          "commutation_type":  "contactors",
@@ -7011,8 +7011,8 @@
                          "images":  [
 
                                     ],
-                         "description":  "Single phase contactor 800 A TDM",
-                         "full_description":  "Single phase contactor 800 A TDM",
+                         "description":  "Однофазный контактор 800А TDM",
+                         "full_description":  "Однофазный контактор 800А, выполнен на базе контакторов TDM 800А.",
                          "documentation":  [
 
                                            ],
