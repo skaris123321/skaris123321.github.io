@@ -182,7 +182,14 @@
       <template x-for="product in filteredProducts" :key="product.id">
         <a :href="getProductUrl(product)" class="product-card" style="text-decoration: none; color: inherit;">
           <div class="product-image-wrapper">
-            <img :src="'../' + (product.main_image || 'images/avr-100.jpg')" :alt="product.description" class="product-image">
+            <template x-if="product.main_image && product.main_image !== ''">
+              <img :src="'../' + product.main_image" :alt="product.description" class="product-image">
+            </template>
+            <template x-if="!product.main_image || product.main_image === ''">
+              <div class="no-image-placeholder">
+                <p>Нет изображения</p>
+              </div>
+            </template>
           </div>
           <div class="product-info">
             <h2 class="product-title" x-text="product.article"></h2>
