@@ -13,6 +13,7 @@ document.addEventListener('alpine:init', () => {
       selectedBrand: null,
       selectedInputs: null,
       selectedCommutationType: null,
+      selectedPolesCount: null,
       sortBy: 'price_asc',
       loading: true,
       searchQuery: '',
@@ -73,14 +74,19 @@ document.addEventListener('alpine:init', () => {
       },
       
       filterByCommutationType(type) {
-        // Если уже выбран такой же тип коммутации и 2 ввода, убираем фильтр
-        if (this.selectedCommutationType === type && this.selectedInputs === '2') {
+        // Если уже выбран такой же тип коммутации, убираем фильтр
+        if (this.selectedCommutationType === type) {
           this.selectedCommutationType = null;
           this.selectedInputs = null;
         } else {
-          // Иначе устанавливаем фильтр на контакторы с 2 вводами
+          // Устанавливаем фильтр на выбранный тип коммутации
           this.selectedCommutationType = type;
-          this.selectedInputs = '2';
+          // Для контакторов не устанавливаем inputs_count, так как у них poles_count
+          if (type !== 'contactors') {
+            this.selectedInputs = '2';
+          } else {
+            this.selectedInputs = null;
+          }
         }
         
         this.applyFilters();
@@ -94,9 +100,14 @@ document.addEventListener('alpine:init', () => {
           filtered = filtered.filter(p => p.brand === this.selectedBrand);
         }
         
-        // Фильтр по количеству вводов
+        // Фильтр по количеству вводов (для моноблочных АВР)
         if (this.selectedInputs) {
           filtered = filtered.filter(p => p.inputs_count === this.selectedInputs);
+        }
+        
+        // Фильтр по количеству полюсов (для контакторов)
+        if (this.selectedPolesCount) {
+          filtered = filtered.filter(p => p.poles_count === this.selectedPolesCount);
         }
         
         // Фильтр по типу коммутации
@@ -116,12 +127,15 @@ document.addEventListener('alpine:init', () => {
             case 'article_desc':
               return (b.article || '').localeCompare(a.article || '');
             default:
-              // По умолчанию сортируем по номинальному току, потом по количеству вводов, потом по бренду
+              // По умолчанию сортируем по номинальному току, потом по количеству вводов/полюсов, потом по бренду
               if (a.nominal_current !== b.nominal_current) {
                 return a.nominal_current - b.nominal_current;
               }
-              if (a.inputs_count !== b.inputs_count) {
-                return a.inputs_count.localeCompare(b.inputs_count);
+              // Для сортировки используем inputs_count или poles_count в зависимости от типа
+              const aSort = a.inputs_count || a.poles_count || '';
+              const bSort = b.inputs_count || b.poles_count || '';
+              if (aSort !== bSort) {
+                return String(aSort).localeCompare(String(bSort));
               }
               return (a.brand || '').localeCompare(b.brand || '');
           }

@@ -42,7 +42,7 @@ class ProductsAPI {
 
   async getAvailableOptions(filters = {}) {
     const data = await this.loadProducts();
-    const { manufacturer_brand, commutation_type, inputs_count } = filters;
+    const { manufacturer_brand, commutation_type, inputs_count, poles_count } = filters;
 
     // Фильтруем продукты по заданным параметрам
     let filteredProducts = data.products;
@@ -56,13 +56,17 @@ class ProductsAPI {
     if (inputs_count) {
       filteredProducts = filteredProducts.filter(p => p.inputs_count === inputs_count);
     }
+    if (poles_count) {
+      filteredProducts = filteredProducts.filter(p => p.poles_count === poles_count);
+    }
 
     // Получаем уникальные значения
     const availableOptions = {
       nominal_current: [],
       commutation_type: [],
       manufacturer_brand: [],
-      inputs_count: []
+      inputs_count: [],
+      poles_count: []
     };
 
     // Все бренды
@@ -77,16 +81,30 @@ class ProductsAPI {
     const commutationTypes = [...new Set(typeProducts.map(p => p.commutation_type).filter(Boolean))];
     availableOptions.commutation_type = commutationTypes.sort();
 
-    // Количество вводов (с учетом бренда и типа коммутации)
-    let inputsProducts = data.products;
-    if (manufacturer_brand) {
-      inputsProducts = inputsProducts.filter(p => p.brand === manufacturer_brand);
+    // Для контакторов используем poles_count, для остальных - inputs_count
+    if (commutation_type === 'contactors') {
+      let polesProducts = data.products.filter(p => p.commutation_type === 'contactors');
+      if (manufacturer_brand) {
+        polesProducts = polesProducts.filter(p => p.brand === manufacturer_brand);
+      }
+      const polesCounts = [...new Set(polesProducts.map(p => p.poles_count).filter(Boolean))];
+      availableOptions.poles_count = polesCounts.sort();
+      // Для контакторов inputs_count не используется
+      availableOptions.inputs_count = [];
+    } else {
+      // Количество вводов (с учетом бренда и типа коммутации)
+      let inputsProducts = data.products;
+      if (manufacturer_brand) {
+        inputsProducts = inputsProducts.filter(p => p.brand === manufacturer_brand);
+      }
+      if (commutation_type) {
+        inputsProducts = inputsProducts.filter(p => p.commutation_type === commutation_type);
+      }
+      const inputsCounts = [...new Set(inputsProducts.map(p => p.inputs_count).filter(Boolean))];
+      availableOptions.inputs_count = inputsCounts.sort((a, b) => String(a).localeCompare(String(b)));
+      // Для не-контакторов poles_count не используется
+      availableOptions.poles_count = [];
     }
-    if (commutation_type) {
-      inputsProducts = inputsProducts.filter(p => p.commutation_type === commutation_type);
-    }
-    const inputsCounts = [...new Set(inputsProducts.map(p => p.inputs_count).filter(Boolean))];
-    availableOptions.inputs_count = inputsCounts.sort((a, b) => String(a).localeCompare(String(b)));
 
     // Номинальный ток (с учетом всех фильтров)
     let currentProducts = data.products;
@@ -98,6 +116,9 @@ class ProductsAPI {
     }
     if (inputs_count) {
       currentProducts = currentProducts.filter(p => p.inputs_count === inputs_count);
+    }
+    if (poles_count) {
+      currentProducts = currentProducts.filter(p => p.poles_count === poles_count);
     }
     const nominalCurrents = [...new Set(currentProducts.map(p => parseInt(p.nominal_current)).filter(Boolean))];
     availableOptions.nominal_current = nominalCurrents.sort((a, b) => a - b);
@@ -147,6 +168,7 @@ class ProductsAPI {
           commutation_type: foundProduct.commutation_type || null,
           manufacturer_brand: foundProduct.brand || null,
           inputs_count: foundProduct.inputs_count || null,
+          poles_count: foundProduct.poles_count || null,
           base_price: parseInt(foundProduct.base_price || 0),
           main_image: foundProduct.main_image || (images[0] || null),
           images: images,
@@ -159,7 +181,7 @@ class ProductsAPI {
     }
     
     // Иначе ищем по фильтрам (старая логика)
-    const { nominal_current, commutation_type, manufacturer_brand, inputs_count } = filters;
+    const { nominal_current, commutation_type, manufacturer_brand, inputs_count, poles_count } = filters;
 
     if (!nominal_current) {
       throw new Error('nominal_current parameter is required');
@@ -177,6 +199,9 @@ class ProductsAPI {
         return false;
       }
       if (inputs_count && product.inputs_count !== inputs_count) {
+        return false;
+      }
+      if (poles_count && product.poles_count !== poles_count) {
         return false;
       }
       return true;
@@ -215,6 +240,7 @@ class ProductsAPI {
         commutation_type: foundProduct.commutation_type || null,
         manufacturer_brand: foundProduct.brand || null,
         inputs_count: foundProduct.inputs_count || null,
+        poles_count: foundProduct.poles_count || null,
         base_price: parseInt(foundProduct.base_price || 0),
         main_image: foundProduct.main_image || (images[0] || null),
         images: images,

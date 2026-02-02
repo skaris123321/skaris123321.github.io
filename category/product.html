@@ -211,38 +211,35 @@
             @click="updateCommutationType('contactors')"
             :disabled="loading || !isOptionAvailable('commutation_type', 'contactors')"
           >Контакторы</button>
-          <button 
-            class="spec-option"
-            :class="{ active: commutationType === 'single_phase_contactors', 'opacity-50': loading || !isOptionAvailable('commutation_type', 'single_phase_contactors'), disabled: !isOptionAvailable('commutation_type', 'single_phase_contactors') }"
-            @click="updateCommutationType('single_phase_contactors')"
-            :disabled="loading || !isOptionAvailable('commutation_type', 'single_phase_contactors')"
-          >Контакторы малых токов</button>
+
         </div>
       </div>
 
       <div x-show="commutationType !== 'single_phase_contactors'" class="product-spec-group">
-        <div class="product-spec-label">Количество вводов</div>
+        <div class="product-spec-label" x-text="commutationType === 'contactors' ? 'Количество полюсов' : 'Количество вводов'"></div>
         <div class="product-spec-options">
           <button 
             class="spec-option"
             :class="{ 
-              active: inputsCount === '2', 
-              'opacity-50': loading || !isOptionAvailable('inputs_count', '2'), 
-              disabled: loading || !isOptionAvailable('inputs_count', '2')
+              active: commutationType === 'contactors' ? polesCount === 'single_phase' : inputsCount === '2', 
+              'opacity-50': loading || (commutationType === 'contactors' ? !isOptionAvailable('poles_count', 'single_phase') : !isOptionAvailable('inputs_count', '2')), 
+              disabled: loading || (commutationType === 'contactors' ? !isOptionAvailable('poles_count', 'single_phase') : !isOptionAvailable('inputs_count', '2'))
             }"
-            @click="updateInputsCount('2')"
-            :disabled="loading || !isOptionAvailable('inputs_count', '2')"
-          >2 ввода</button>
+            @click="commutationType === 'contactors' ? updatePolesCount('single_phase') : updateInputsCount('2')"
+            :disabled="loading || (commutationType === 'contactors' ? !isOptionAvailable('poles_count', 'single_phase') : !isOptionAvailable('inputs_count', '2'))"
+            x-text="commutationType === 'contactors' ? 'Однофазные' : '2 ввода'"
+          ></button>
           <button 
             class="spec-option"
             :class="{ 
-              active: inputsCount === '3', 
-              'opacity-50': loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors', 
-              disabled: loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors'
+              active: commutationType === 'contactors' ? polesCount === 'three_phase' : inputsCount === '3', 
+              'opacity-50': loading || (commutationType === 'contactors' ? !isOptionAvailable('poles_count', 'three_phase') : !isOptionAvailable('inputs_count', '3')), 
+              disabled: loading || (commutationType === 'contactors' ? !isOptionAvailable('poles_count', 'three_phase') : !isOptionAvailable('inputs_count', '3'))
             }"
-            @click="updateInputsCount('3')"
-            :disabled="loading || !isOptionAvailable('inputs_count', '3') || commutationType === 'contactors'"
-          >3 ввода</button>
+            @click="commutationType === 'contactors' ? updatePolesCount('three_phase') : updateInputsCount('3')"
+            :disabled="loading || (commutationType === 'contactors' ? !isOptionAvailable('poles_count', 'three_phase') : !isOptionAvailable('inputs_count', '3'))"
+            x-text="commutationType === 'contactors' ? 'Трёхфазные' : '3 ввода'"
+          ></button>
         </div>
       </div>
 

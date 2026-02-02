@@ -75,24 +75,13 @@ if (typeof ProductsAPI !== 'undefined') {
       if (climate_type) currentProducts = currentProducts.filter(p => p.climate_type === climate_type);
       opts.nominal_current = [...new Set(currentProducts.map(p => parseInt(p.nominal_current)).filter(Boolean))].sort((a, b) => a - b);
 
-      // Опции для однофазных АВР - только если выбран тип single_phase_contactors
-      if (commutation_type === 'single_phase_contactors') {
-        let singlePhaseProducts = data.products.filter(p => p.commutation_type === 'single_phase_contactors');
-        if (manufacturer_brand) singlePhaseProducts = singlePhaseProducts.filter(p => p.brand === manufacturer_brand);
-        
-        // Для enclosure_type не фильтруем по connection_type и climate_type
-        let enclosureProducts = singlePhaseProducts;
-        const enclosureTypes = [...new Set(enclosureProducts.map(p => p.enclosure_type).filter(Boolean))].sort();
-        opts.enclosure_type = enclosureTypes;
-        
-        // Для connection_type не фильтруем по enclosure_type и climate_type
-        let connectionProducts = singlePhaseProducts;
-        opts.connection_type = [...new Set(connectionProducts.map(p => p.connection_type).filter(Boolean))].sort();
-        
-        // Для climate_type фильтруем по enclosure_type (УХЛ4 только для 19")
-        let climateProducts = singlePhaseProducts;
-        if (enclosure_type) climateProducts = climateProducts.filter(p => p.enclosure_type === enclosure_type);
-        opts.climate_type = [...new Set(climateProducts.map(p => p.climate_type).filter(Boolean))].sort();
+      // Опции для контакторов - используем poles_count вместо inputs_count
+      if (commutation_type === 'contactors') {
+        // Для контакторов poles_count означает: single_phase = однофазные, three_phase = трёхфазные
+        opts.poles_count = ['single_phase', 'three_phase'];
+        opts.inputs_count = []; // Для контакторов inputs_count не используется
+      } else {
+        opts.poles_count = []; // Для не-контакторов poles_count не используется
       }
 
       return { success: true, available_options: opts };
@@ -188,6 +177,7 @@ document.addEventListener('alpine:init', () => {
       commutationType: 'monoblock',
       nominalCurrent: '100',
       inputsCount: '2', // "2" или "3"
+      polesCount: 'single_phase', // для контакторов: 'single_phase' или 'three_phase'
       cableConnection: 'poles', // 'poles' или 'terminals'
       climateVersion: 'UXL4', // 'UXL4' или 'U2'
       // Новые параметры для однофазных АВР
@@ -206,6 +196,7 @@ document.addEventListener('alpine:init', () => {
         commutation_type: [],
         manufacturer_brand: [],
         inputs_count: [],
+        poles_count: [],
         enclosure_type: [],
         connection_type: [],
         climate_type: []
@@ -252,11 +243,9 @@ document.addEventListener('alpine:init', () => {
         }
         
         // Устанавливаем подключение кабеля в зависимости от тока для трехфазных АВР
-        if (this.commutationType !== 'single_phase_contactors') {
-          const current = parseInt(this.nominalCurrent);
-          if (current >= 100 && current <= 800) {
-            this.cableConnection = 'terminals';
-          }
+        const current = parseInt(this.nominalCurrent);
+        if (current >= 100 && current <= 800) {
+          this.cableConnection = 'terminals';
         }
         
         this.initCart();
@@ -272,13 +261,16 @@ document.addEventListener('alpine:init', () => {
           if (this.manufacturerBrand) filters.manufacturer_brand = this.manufacturerBrand;
           if (this.commutationType) filters.commutation_type = this.commutationType;
           
-          // Для однофазных АВР передаем только базовые фильтры
-          if (this.commutationType !== 'single_phase_contactors') {
+          // Для контакторов используем poles_count, для остальных - inputs_count
+          if (this.commutationType === 'contactors') {
+            if (this.polesCount) filters.poles_count = this.polesCount;
+          } else {
             if (this.inputsCount) filters.inputs_count = this.inputsCount;
-            if (this.enclosureType) filters.enclosure_type = this.enclosureType;
-            if (this.connectionType) filters.connection_type = this.connectionType;
-            if (this.climateType) filters.climate_type = this.climateType;
           }
+          
+          if (this.enclosureType) filters.enclosure_type = this.enclosureType;
+          if (this.connectionType) filters.connection_type = this.connectionType;
+          if (this.climateType) filters.climate_type = this.climateType;
 
           const data = await productsAPI.getAvailableOptions(filters);
           
@@ -288,18 +280,12 @@ document.addEventListener('alpine:init', () => {
               commutation_type: data.available_options.commutation_type || [],
               manufacturer_brand: data.available_options.manufacturer_brand || [],
               inputs_count: data.available_options.inputs_count || [],
+              poles_count: data.available_options.poles_count || [],
               enclosure_type: data.available_options.enclosure_type || [],
               connection_type: data.available_options.connection_type || [],
               climate_type: data.available_options.climate_type || []
             };
-            
-            // ПРИНУДИТЕЛЬНОЕ ИСПРАВЛЕНИЕ для однофазных АВР
-            if (this.commutationType === 'single_phase_contactors') {
-              // Для всех брендов однофазных АВР устанавливаем все доступные опции
-              this.availableOptions.enclosure_type = ['19inch', 'wall'];
-              this.availableOptions.connection_type = ['poles', 'terminals'];
-              this.availableOptions.climate_type = ['UHL4', 'U2'];
-            }
+
 
           } else {
             this.availableOptions = {
@@ -307,6 +293,7 @@ document.addEventListener('alpine:init', () => {
               commutation_type: [],
               manufacturer_brand: [],
               inputs_count: [],
+              poles_count: [],
               enclosure_type: [],
               connection_type: [],
               climate_type: []
@@ -319,6 +306,7 @@ document.addEventListener('alpine:init', () => {
             commutation_type: [],
             manufacturer_brand: [],
             inputs_count: [],
+            poles_count: [],
             enclosure_type: [],
             connection_type: [],
             climate_type: []
@@ -360,11 +348,11 @@ document.addEventListener('alpine:init', () => {
             manufacturer_brand: this.manufacturerBrand,
             commutation_type: this.commutationType,
             nominal_current: this.nominalCurrent,
-            inputs_count: this.inputsCount
+            inputs_count: this.inputsCount, poles_count: this.polesCount
           };
           
           // Добавляем фильтры для однофазных АВР
-          if (this.commutationType === 'single_phase_contactors') {
+          if (false) {
             filters.enclosure_type = this.enclosureType;
             filters.connection_type = this.connectionType;
             filters.climate_type = this.climateType;
@@ -450,9 +438,10 @@ document.addEventListener('alpine:init', () => {
             this.commutationType = product.commutation_type;
             this.nominalCurrent = String(product.nominal_current);
             this.inputsCount = product.inputs_count;
+            this.polesCount = product.poles_count;
             
             // Устанавливаем параметры для однофазных АВР
-            if (product.commutation_type === 'single_phase_contactors') {
+            if (false) {
               this.enclosureType = product.enclosure_type || '19inch';
               this.connectionType = product.connection_type || 'poles';
               this.climateType = product.climate_type || 'UHL4';
@@ -476,7 +465,7 @@ document.addEventListener('alpine:init', () => {
             this.documentation = product.documentation || [];
             
             const current = parseInt(product.nominal_current);
-            if (product.commutation_type !== 'single_phase_contactors') {
+            if (true) {
               if (current >= 100 && current <= 800) {
                 this.cableConnection = 'terminals';
               } else {
@@ -515,11 +504,11 @@ document.addEventListener('alpine:init', () => {
             manufacturer_brand: this.manufacturerBrand,
             commutation_type: this.commutationType,
             nominal_current: this.nominalCurrent,
-            inputs_count: this.inputsCount
+            inputs_count: this.inputsCount, poles_count: this.polesCount
           };
           
           // Добавляем фильтры для однофазных АВР
-          if (this.commutationType === 'single_phase_contactors') {
+          if (false) {
             filters.enclosure_type = this.enclosureType;
             filters.connection_type = this.connectionType;
             filters.climate_type = this.climateType;
@@ -589,45 +578,13 @@ document.addEventListener('alpine:init', () => {
         
         try {
           if (value === 'contactors') {
-            this.inputsCount = '2';
-          }
-          
-          // Если переключаемся на однофазные АВР, устанавливаем доступные значения по умолчанию
-          if (value === 'single_phase_contactors') {
-            this.inputsCount = '2'; // Однофазные всегда 2 ввода
+            this.polesCount = 'single_phase'; // По умолчанию однофазные
           }
           
           await this.loadAvailableOptions();
           
-          // Для однофазных АВР устанавливаем первые доступные значения
-          if (value === 'single_phase_contactors') {
-            // Устанавливаем первый доступный тип корпуса
-            if (this.availableOptions.enclosure_type && this.availableOptions.enclosure_type.length > 0) {
-              if (!this.availableOptions.enclosure_type.includes(this.enclosureType)) {
-                this.enclosureType = this.availableOptions.enclosure_type[0];
-              }
-            }
-            
-            // Устанавливаем первый доступный тип подключения
-            if (this.availableOptions.connection_type && this.availableOptions.connection_type.length > 0) {
-              if (!this.availableOptions.connection_type.includes(this.connectionType)) {
-                this.connectionType = this.availableOptions.connection_type[0];
-              }
-            }
-            
-            // Устанавливаем первый доступный тип климата
-            if (this.availableOptions.climate_type && this.availableOptions.climate_type.length > 0) {
-              if (!this.availableOptions.climate_type.includes(this.climateType)) {
-                this.climateType = this.availableOptions.climate_type[0];
-              }
-            }
-            
-            // Перезагружаем опции с учетом новых параметров
-            await this.loadAvailableOptions();
-          }
-          
           // Если тип не контакторы, выбираем первое доступное количество вводов
-          if (value !== 'contactors' && value !== 'single_phase_contactors' && this.availableOptions.inputs_count && this.availableOptions.inputs_count.length > 0) {
+          if (value !== 'contactors' && this.availableOptions.inputs_count && this.availableOptions.inputs_count.length > 0) {
             if (!this.availableOptions.inputs_count.includes(this.inputsCount)) {
               this.inputsCount = this.availableOptions.inputs_count[0];
             }
@@ -668,7 +625,7 @@ document.addEventListener('alpine:init', () => {
           }
           
           // Если это однофазные АВР, устанавливаем доступные параметры
-          if (this.commutationType === 'single_phase_contactors') {
+          if (false) {
             // Устанавливаем первый доступный тип корпуса
             if (this.availableOptions.enclosure_type && this.availableOptions.enclosure_type.length > 0) {
               this.enclosureType = this.availableOptions.enclosure_type[0];
@@ -702,10 +659,6 @@ document.addEventListener('alpine:init', () => {
       
       // Метод для обновления количества вводов
       async updateInputsCount(value) {
-        if (this.commutationType === 'contactors' && value === '3') {
-          return;
-        }
-        
         if (this.loading || !this.isOptionAvailable('inputs_count', value)) return;
         this.loading = true;
         this.inputsCount = value;
@@ -731,7 +684,7 @@ document.addEventListener('alpine:init', () => {
       get totalPrice() {
         let price = this.basePrice;
         
-        if (this.commutationType === 'single_phase_contactors') {
+        if (false) {
           // Для однофазных АВР
           if (this.connectionType === 'terminals') {
             price += 1000;
@@ -819,7 +772,7 @@ document.addEventListener('alpine:init', () => {
       },
       
       get productTitle() {
-        if (this.commutationType === 'single_phase_contactors') {
+        if (false) {
           // Для однофазных АВР: "Шкаф АВР 25А"
           return `Шкаф АВР ${this.nominalCurrent || '100'}А`;
         } else {
@@ -831,7 +784,7 @@ document.addEventListener('alpine:init', () => {
       get allSelectedSpecs() {
         const specs = this.productSpecs ? { ...this.productSpecs } : {};
         
-        if (this.commutationType === 'single_phase_contactors') {
+        if (false) {
           // Для однофазных АВР
           specs['Артикул'] = this.article || '';
           specs['Производитель'] = this.manufacturerBrand || '';
@@ -902,7 +855,7 @@ document.addEventListener('alpine:init', () => {
       },
 
       getCurrentProduct() {
-        if (this.commutationType === 'single_phase_contactors') {
+        if (false) {
           // Для однофазных АВР
           return {
             article: this.article,
@@ -1074,7 +1027,7 @@ document.addEventListener('alpine:init', () => {
       
       // Получение описания в зависимости от типа коммутации
       getCommutationDescription() {
-        if (this.commutationType === 'single_phase_contactors') {
+        if (false) {
           return {
             purpose: `АВР (автоматический ввод резерва) на базе контакторов предназначен для обеспечения бесперебойного электроснабжения потребителей путём автоматического переключения между основным и резервным вводами. Основные функции:`,
             purposeList: [
@@ -1243,6 +1196,29 @@ document.addEventListener('alpine:init', () => {
               }
             ]
           };
+        }
+      },
+      
+      // Метод для обновления количества полюсов (для контакторов)
+      async updatePolesCount(value) {
+        if (this.loading || !this.isOptionAvailable('poles_count', value)) return;
+        this.loading = true;
+        this.polesCount = value;
+        
+        try {
+          await this.loadAvailableOptions();
+          
+          // Выбираем первый доступный номинальный ток
+          if (!this.isOptionAvailable('nominal_current', this.nominalCurrent)) {
+            if (this.availableOptions.nominal_current && this.availableOptions.nominal_current.length > 0) {
+              this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
+            }
+          }
+          
+          await this.loadProductByCharacteristics();
+          this.updateCartQuantity();
+        } finally {
+          this.loading = false;
         }
       }
     };
