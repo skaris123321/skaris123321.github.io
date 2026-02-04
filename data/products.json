@@ -14842,6 +14842,1590 @@
                 "Количество фаз": "3",
                 "Степень защиты": "IP31"
             }
+        },
+        {
+            "id": 428,
+            "article": "ШУ-ПЧ-0_75-1-РОСЭК",
+            "motor_power": 0.75,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 45000,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 0.75 кВт CHINT",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 0.75 кВт, выполнен на базе преобразователей частоты CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-0_75-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "0.75 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 429,
+            "article": "ШУ-ПЧ-0_75-1-РОСЭК",
+            "motor_power": 0.75,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 42750,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 0.75 кВт EKF",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 0.75 кВт, выполнен на базе преобразователей частоты EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-0_75-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "0.75 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 430,
+            "article": "ШУ-ПЧ-0_75-1-РОСЭК",
+            "motor_power": 0.75,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 40500,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 0.75 кВт Dekraft",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 0.75 кВт, выполнен на базе преобразователей частоты Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-0_75-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "0.75 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 431,
+            "article": "ШУ-ПЧ-3_7-1-РОСЭК",
+            "motor_power": 3.7,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 45000,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 3.7 кВт CHINT",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 3.7 кВт, выполнен на базе преобразователей частоты CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-3_7-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "3.7 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 432,
+            "article": "ШУ-ПЧ-3_7-1-РОСЭК",
+            "motor_power": 3.7,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 42750,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 3.7 кВт EKF",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 3.7 кВт, выполнен на базе преобразователей частоты EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-3_7-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "3.7 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 433,
+            "article": "ШУ-ПЧ-3_7-1-РОСЭК",
+            "motor_power": 3.7,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 40500,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 3.7 кВт Dekraft",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 3.7 кВт, выполнен на базе преобразователей частоты Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-3_7-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "3.7 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 434,
+            "article": "ШУ-ПЧ-7_5-1-РОСЭК",
+            "motor_power": 7.5,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 65000,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 7.5 кВт CHINT",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 7.5 кВт, выполнен на базе преобразователей частоты CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-7_5-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "7.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 435,
+            "article": "ШУ-ПЧ-7_5-1-РОСЭК",
+            "motor_power": 7.5,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 61750,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 7.5 кВт EKF",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 7.5 кВт, выполнен на базе преобразователей частоты EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-7_5-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "7.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 436,
+            "article": "ШУ-ПЧ-7_5-1-РОСЭК",
+            "motor_power": 7.5,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 58500,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 7.5 кВт Dekraft",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 7.5 кВт, выполнен на базе преобразователей частоты Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-7_5-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "7.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 437,
+            "article": "ШУ-ПЧ-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 65000,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 15 кВт CHINT",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 15 кВт, выполнен на базе преобразователей частоты CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-15-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 438,
+            "article": "ШУ-ПЧ-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 61750,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 15 кВт EKF",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 15 кВт, выполнен на базе преобразователей частоты EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-15-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 439,
+            "article": "ШУ-ПЧ-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 58500,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 15 кВт Dekraft",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 15 кВт, выполнен на базе преобразователей частоты Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-15-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 440,
+            "article": "ШУ-ПЧ-18_5-1-РОСЭК",
+            "motor_power": 18.5,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 85000,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 18.5 кВт CHINT",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 18.5 кВт, выполнен на базе преобразователей частоты CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-18_5-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "18.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 441,
+            "article": "ШУ-ПЧ-18_5-1-РОСЭК",
+            "motor_power": 18.5,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 80750,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 18.5 кВт EKF",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 18.5 кВт, выполнен на базе преобразователей частоты EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-18_5-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "18.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 442,
+            "article": "ШУ-ПЧ-18_5-1-РОСЭК",
+            "motor_power": 18.5,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 76500,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 18.5 кВт Dekraft",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 18.5 кВт, выполнен на базе преобразователей частоты Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-18_5-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "18.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 443,
+            "article": "ШУ-ПЧ-22-1-РОСЭК",
+            "motor_power": 22,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 85000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 22 кВт CHINT",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 22 кВт, выполнен на базе преобразователей частоты CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-22-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "22 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 444,
+            "article": "ШУ-ПЧ-22-1-РОСЭК",
+            "motor_power": 22,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 80750,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 22 кВт EKF",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 22 кВт, выполнен на базе преобразователей частоты EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-22-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "22 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 445,
+            "article": "ШУ-ПЧ-22-1-РОСЭК",
+            "motor_power": 22,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 76500,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 22 кВт Dekraft",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 22 кВт, выполнен на базе преобразователей частоты Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-22-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "22 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 446,
+            "article": "ШУ-ПЧ-37-1-РОСЭК",
+            "motor_power": 37,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 120000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 37 кВт CHINT",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 37 кВт, выполнен на базе преобразователей частоты CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-37-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "37 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 447,
+            "article": "ШУ-ПЧ-37-1-РОСЭК",
+            "motor_power": 37,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 114000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 37 кВт EKF",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 37 кВт, выполнен на базе преобразователей частоты EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-37-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "37 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 448,
+            "article": "ШУ-ПЧ-37-1-РОСЭК",
+            "motor_power": 37,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 108000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 37 кВт Dekraft",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 37 кВт, выполнен на базе преобразователей частоты Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-37-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "37 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 449,
+            "article": "ШУ-ПЧ-45-1-РОСЭК",
+            "motor_power": 45,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 120000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 45 кВт CHINT",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 45 кВт, выполнен на базе преобразователей частоты CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-45-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "45 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 450,
+            "article": "ШУ-ПЧ-45-1-РОСЭК",
+            "motor_power": 45,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 114000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 45 кВт EKF",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 45 кВт, выполнен на базе преобразователей частоты EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-45-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "45 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 451,
+            "article": "ШУ-ПЧ-45-1-РОСЭК",
+            "motor_power": 45,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 108000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 45 кВт Dekraft",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 45 кВт, выполнен на базе преобразователей частоты Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-45-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "45 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 452,
+            "article": "ШУ-ПЧ-55-1-РОСЭК",
+            "motor_power": 55,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 180000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 55 кВт CHINT",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 55 кВт, выполнен на базе преобразователей частоты CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-55-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "55 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 453,
+            "article": "ШУ-ПЧ-55-1-РОСЭК",
+            "motor_power": 55,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 171000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 55 кВт EKF",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 55 кВт, выполнен на базе преобразователей частоты EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-55-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "55 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 454,
+            "article": "ШУ-ПЧ-55-1-РОСЭК",
+            "motor_power": 55,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 162000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 55 кВт Dekraft",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 55 кВт, выполнен на базе преобразователей частоты Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-55-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "55 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 455,
+            "article": "ШУ-ПЧ-75-1-РОСЭК",
+            "motor_power": 75,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 180000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 75 кВт CHINT",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 75 кВт, выполнен на базе преобразователей частоты CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-75-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "75 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 456,
+            "article": "ШУ-ПЧ-75-1-РОСЭК",
+            "motor_power": 75,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 171000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 75 кВт EKF",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 75 кВт, выполнен на базе преобразователей частоты EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-75-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "75 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 457,
+            "article": "ШУ-ПЧ-75-1-РОСЭК",
+            "motor_power": 75,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 162000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 75 кВт Dekraft",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 75 кВт, выполнен на базе преобразователей частоты Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-75-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "75 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 458,
+            "article": "ШУ-ПЧ-90-1-РОСЭК",
+            "motor_power": 90,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 250000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 90 кВт CHINT",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 90 кВт, выполнен на базе преобразователей частоты CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-90-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "90 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 459,
+            "article": "ШУ-ПЧ-90-1-РОСЭК",
+            "motor_power": 90,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 237500,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 90 кВт EKF",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 90 кВт, выполнен на базе преобразователей частоты EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-90-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "90 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 460,
+            "article": "ШУ-ПЧ-90-1-РОСЭК",
+            "motor_power": 90,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 225000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 90 кВт Dekraft",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 90 кВт, выполнен на базе преобразователей частоты Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-90-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "90 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 461,
+            "article": "ШУ-ПЧ-110-1-РОСЭК",
+            "motor_power": 110,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 250000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 110 кВт CHINT",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 110 кВт, выполнен на базе преобразователей частоты CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-110-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "110 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 462,
+            "article": "ШУ-ПЧ-110-1-РОСЭК",
+            "motor_power": 110,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 237500,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 110 кВт EKF",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 110 кВт, выполнен на базе преобразователей частоты EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-110-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "110 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 463,
+            "article": "ШУ-ПЧ-110-1-РОСЭК",
+            "motor_power": 110,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 225000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 110 кВт Dekraft",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 110 кВт, выполнен на базе преобразователей частоты Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-110-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "110 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 464,
+            "article": "ШУ-ПЧ-132-1-РОСЭК",
+            "motor_power": 132,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 350000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 132 кВт CHINT",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 132 кВт, выполнен на базе преобразователей частоты CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-132-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "132 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 465,
+            "article": "ШУ-ПЧ-132-1-РОСЭК",
+            "motor_power": 132,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 332500,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 132 кВт EKF",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 132 кВт, выполнен на базе преобразователей частоты EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-132-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "132 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 466,
+            "article": "ШУ-ПЧ-132-1-РОСЭК",
+            "motor_power": 132,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 315000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 132 кВт Dekraft",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 132 кВт, выполнен на базе преобразователей частоты Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-132-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "132 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 467,
+            "article": "ШУ-ПЧ-160-1-РОСЭК",
+            "motor_power": 160,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 350000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 160 кВт CHINT",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 160 кВт, выполнен на базе преобразователей частоты CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-160-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "160 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 468,
+            "article": "ШУ-ПЧ-160-1-РОСЭК",
+            "motor_power": 160,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 332500,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 160 кВт EKF",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 160 кВт, выполнен на базе преобразователей частоты EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-160-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "160 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 469,
+            "article": "ШУ-ПЧ-160-1-РОСЭК",
+            "motor_power": 160,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 315000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 160 кВт Dekraft",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 160 кВт, выполнен на базе преобразователей частоты Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-160-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "160 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 470,
+            "article": "ШУ-ПЧ-200-1-РОСЭК",
+            "motor_power": 200,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 450000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 200 кВт CHINT",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 200 кВт, выполнен на базе преобразователей частоты CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-200-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "200 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 471,
+            "article": "ШУ-ПЧ-200-1-РОСЭК",
+            "motor_power": 200,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 427500,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 200 кВт EKF",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 200 кВт, выполнен на базе преобразователей частоты EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-200-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "200 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 472,
+            "article": "ШУ-ПЧ-200-1-РОСЭК",
+            "motor_power": 200,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 405000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 200 кВт Dekraft",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 200 кВт, выполнен на базе преобразователей частоты Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-200-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "200 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 473,
+            "article": "ШУ-ПЧ-220-1-РОСЭК",
+            "motor_power": 220,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 450000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 220 кВт CHINT",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 220 кВт, выполнен на базе преобразователей частоты CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-220-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "220 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 474,
+            "article": "ШУ-ПЧ-220-1-РОСЭК",
+            "motor_power": 220,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 427500,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 220 кВт EKF",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 220 кВт, выполнен на базе преобразователей частоты EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-220-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "220 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 475,
+            "article": "ШУ-ПЧ-220-1-РОСЭК",
+            "motor_power": 220,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 405000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 220 кВт Dekraft",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 220 кВт, выполнен на базе преобразователей частоты Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-220-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "220 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
         }
     ]
 }
