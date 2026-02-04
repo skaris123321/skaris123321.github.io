@@ -164,11 +164,13 @@ class ProductsAPI {
         product: {
           id: foundProduct.id || null,
           article: foundProduct.article || '',
-          nominal_current: parseInt(foundProduct.nominal_current),
+          nominal_current: parseInt(foundProduct.nominal_current || 0),
           commutation_type: foundProduct.commutation_type || null,
           manufacturer_brand: foundProduct.brand || null,
           inputs_count: foundProduct.inputs_count || null,
           poles_count: foundProduct.poles_count || null,
+          motor_power: foundProduct.motor_power || null,
+          control_type: foundProduct.control_type || null,
           base_price: parseInt(foundProduct.base_price || 0),
           main_image: foundProduct.main_image || (images[0] || null),
           images: images,
@@ -180,18 +182,37 @@ class ProductsAPI {
       };
     }
     
-    // Иначе ищем по фильтрам (старая логика)
-    const { nominal_current, commutation_type, manufacturer_brand, inputs_count, poles_count } = filters;
+    // Иначе ищем по фильтрам
+    const { nominal_current, commutation_type, manufacturer_brand, inputs_count, poles_count, motor_power, control_type } = filters;
 
-    if (!nominal_current) {
-      throw new Error('nominal_current parameter is required');
+    // Для шкафов управления требуется motor_power, для остальных - nominal_current
+    if (commutation_type === 'control_cabinet') {
+      if (!motor_power) {
+        throw new Error('motor_power parameter is required for control cabinets');
+      }
+    } else {
+      if (!nominal_current) {
+        throw new Error('nominal_current parameter is required');
+      }
     }
 
     // Ищем подходящий продукт
     const foundProduct = data.products.find(product => {
-      if (!product.nominal_current || parseInt(product.nominal_current) !== parseInt(nominal_current)) {
-        return false;
+      if (commutation_type === 'control_cabinet') {
+        // Для шкафов управления проверяем motor_power
+        if (!product.motor_power || parseFloat(product.motor_power) !== parseFloat(motor_power)) {
+          return false;
+        }
+        if (control_type && product.control_type !== control_type) {
+          return false;
+        }
+      } else {
+        // Для АВР проверяем nominal_current
+        if (!product.nominal_current || parseInt(product.nominal_current) !== parseInt(nominal_current)) {
+          return false;
+        }
       }
+      
       if (commutation_type && product.commutation_type !== commutation_type) {
         return false;
       }
@@ -236,11 +257,13 @@ class ProductsAPI {
       product: {
         id: foundProduct.id || null,
         article: foundProduct.article || '',
-        nominal_current: parseInt(foundProduct.nominal_current),
+        nominal_current: parseInt(foundProduct.nominal_current || 0),
         commutation_type: foundProduct.commutation_type || null,
         manufacturer_brand: foundProduct.brand || null,
         inputs_count: foundProduct.inputs_count || null,
         poles_count: foundProduct.poles_count || null,
+        motor_power: foundProduct.motor_power || null,
+        control_type: foundProduct.control_type || null,
         base_price: parseInt(foundProduct.base_price || 0),
         main_image: foundProduct.main_image || (images[0] || null),
         images: images,
