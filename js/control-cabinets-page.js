@@ -20,9 +20,9 @@ function controlCabinetsCatalog() {
         
         const data = await response.json();
         
-        // Фильтруем только шкафы управления (пока что пустой массив, так как товаров еще нет)
+        // Фильтруем только шкафы управления
         this.products = data.products.filter(product => 
-          product.commutation_type === 'control_cabinet' // Когда добавим товары, они должны иметь этот тип
+          product.commutation_type === 'control_cabinet'
         );
         
         // Получаем уникальные бренды
@@ -70,6 +70,10 @@ function controlCabinetsCatalog() {
         filtered.sort((a, b) => (a.base_price || 0) - (b.base_price || 0));
       } else if (this.sortBy === 'price_desc') {
         filtered.sort((a, b) => (b.base_price || 0) - (a.base_price || 0));
+      } else if (this.sortBy === 'power_asc') {
+        filtered.sort((a, b) => (a.motor_power || 0) - (b.motor_power || 0));
+      } else if (this.sortBy === 'power_desc') {
+        filtered.sort((a, b) => (b.motor_power || 0) - (a.motor_power || 0));
       }
 
       this.filteredProducts = filtered;

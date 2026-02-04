@@ -130,7 +130,7 @@
           </template>
         </div>
         
-        <!-- Сортировка по цене -->
+        <!-- Сортировка по цене и мощности -->
         <div style="display: flex; gap: 0.5rem; margin-left: auto;">
           <button 
             @click="sortBy = 'price_asc'; applyFilters()"
@@ -145,6 +145,20 @@
             class="sort-btn"
           >
             По цене ↓
+          </button>
+          <button 
+            @click="sortBy = 'power_asc'; applyFilters()"
+            :class="{ active: sortBy === 'power_asc' }"
+            class="sort-btn"
+          >
+            По мощности ↑
+          </button>
+          <button 
+            @click="sortBy = 'power_desc'; applyFilters()"
+            :class="{ active: sortBy === 'power_desc' }"
+            class="sort-btn"
+          >
+            По мощности ↓
           </button>
         </div>
       </div>
