@@ -254,9 +254,24 @@ document.addEventListener('alpine:init', () => {
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('id');
         
+        // Проверяем параметры для шкафов управления
+        const commutationType = urlParams.get('commutationType');
+        const motorPower = urlParams.get('motorPower');
+        const controlType = urlParams.get('controlType');
+        const manufacturerBrand = urlParams.get('manufacturerBrand');
+        
         if (productId) {
           // Если есть ID в URL, загружаем товар по ID
           await this.loadProductById(productId);
+        } else if (commutationType && motorPower && controlType && manufacturerBrand) {
+          // Если есть параметры для шкафов управления, устанавливаем их
+          this.commutationType = commutationType;
+          this.motorPower = motorPower;
+          this.controlType = controlType;
+          this.manufacturerBrand = manufacturerBrand;
+          
+          await this.loadAvailableOptions();
+          await this.loadProduct();
         } else {
           // Иначе используем старую логику с параметрами по умолчанию
           await this.loadAvailableOptions();

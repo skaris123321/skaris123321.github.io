@@ -85,6 +85,17 @@ function controlCabinetsCatalog() {
     },
 
     getProductUrl(product) {
+      // Для шкафов управления передаем параметры вместо ID
+      if (product.commutation_type === 'control_cabinet') {
+        const params = new URLSearchParams({
+          commutationType: product.commutation_type,
+          motorPower: product.motor_power,
+          controlType: product.control_type,
+          manufacturerBrand: product.brand
+        });
+        return `product.html?${params.toString()}`;
+      }
+      // Для остальных товаров используем ID
       return `product.html?id=${product.id}`;
     }
   };
