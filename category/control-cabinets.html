@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>АВР — РОСЭК</title>
+  <title>Шкафы управления — РОСЭК</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,38 +78,38 @@
         <span>»</span>
         <span>Каталог</span>
         <span>»</span>
-        <span class="breadcrumbs-current">АВР</span>
+        <span class="breadcrumbs-current">Шкафы управления</span>
       </div>
 
       <h1 class="category-title">
-        Автоматический ввод резерва (АВР)
+        Шкафы управления
       </h1>
     </div>
   </section>
 
-  <div x-data="avrCatalog()" x-init="init()">
+  <div x-data="controlCabinetsCatalog()" x-init="init()">
   <section class="section">
     <div class="container">
       <div class="subcategories-grid">
-        <a href="#" class="subcategory-card" @click.prevent="filterByInputs('2')" :class="{ 'active': selectedInputs === '2' && selectedCommutationType === 'monoblock' }">
-          <div class="subcategory-image-wrapper" :style="(selectedInputs === '2' && selectedCommutationType === 'monoblock') ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
-            <img src="../images/sub-2-vvoda.jpg" alt="Шкафы АВР на 2 ввода" class="subcategory-image">
+        <a href="#" class="subcategory-card" @click.prevent="filterByControlType('soft_start')" :class="{ 'active': selectedControlType === 'soft_start' }">
+          <div class="subcategory-image-wrapper" :style="selectedControlType === 'soft_start' ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
+            <img src="../images/sub-soft-start.jpg" alt="Шкаф управления с плавным пуском" class="subcategory-image">
           </div>
-          <p class="subcategory-name" :style="(selectedInputs === '2' && selectedCommutationType === 'monoblock') ? 'color: #dc2626; font-weight: 600;' : ''">Шкафы АВР на 2 ввода</p>
+          <p class="subcategory-name" :style="selectedControlType === 'soft_start' ? 'color: #dc2626; font-weight: 600;' : ''">Шкаф управления с плавным пуском</p>
         </a>
 
-        <a href="#" class="subcategory-card" @click.prevent="filterByInputs('3')" :class="{ 'active': selectedInputs === '3' && selectedCommutationType === 'monoblock' }">
-          <div class="subcategory-image-wrapper" :style="(selectedInputs === '3' && selectedCommutationType === 'monoblock') ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
-            <img src="../images/sub-3-vvoda.jpg" alt="Шкафы АВР на 3 ввода" class="subcategory-image">
+        <a href="#" class="subcategory-card" @click.prevent="filterByControlType('frequency_converter')" :class="{ 'active': selectedControlType === 'frequency_converter' }">
+          <div class="subcategory-image-wrapper" :style="selectedControlType === 'frequency_converter' ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
+            <img src="../images/sub-frequency-converter.jpg" alt="Шкафы управления с преобразователем частоты" class="subcategory-image">
           </div>
-          <p class="subcategory-name" :style="(selectedInputs === '3' && selectedCommutationType === 'monoblock') ? 'color: #dc2626; font-weight: 600;' : ''">Шкафы АВР на 3 ввода</p>
+          <p class="subcategory-name" :style="selectedControlType === 'frequency_converter' ? 'color: #dc2626; font-weight: 600;' : ''">Шкафы управления с преобразователем частоты</p>
         </a>
 
-        <a href="#" class="subcategory-card" @click.prevent="filterByCommutationType('contactors')" :class="{ 'active': selectedCommutationType === 'contactors' }">
-          <div class="subcategory-image-wrapper" :style="selectedCommutationType === 'contactors' ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
-            <img src="../images/sub-kontaktor-2.jpg" alt="АВР на контакторах" class="subcategory-image">
+        <a href="#" class="subcategory-card" @click.prevent="filterByControlType('direct_start')" :class="{ 'active': selectedControlType === 'direct_start' }">
+          <div class="subcategory-image-wrapper" :style="selectedControlType === 'direct_start' ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
+            <img src="../images/sub-direct-start.jpg" alt="Шкаф управления с прямым пуском" class="subcategory-image">
           </div>
-          <p class="subcategory-name" :style="selectedCommutationType === 'contactors' ? 'color: #dc2626; font-weight: 600;' : ''">АВР на контакторах</p>
+          <p class="subcategory-name" :style="selectedControlType === 'direct_start' ? 'color: #dc2626; font-weight: 600;' : ''">Шкаф управления с прямым пуском</p>
         </a>
       </div>
     </div>
@@ -128,24 +128,6 @@
               x-text="brand"
             ></button>
           </template>
-        </div>
-        
-        <!-- Кнопки фильтрации по полюсам (только для контакторов) -->
-        <div x-show="selectedCommutationType === 'contactors'" style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
-          <button 
-            @click="filterByPolesCount('single_phase')"
-            :class="{ active: selectedPolesCount === 'single_phase' }"
-            class="brand-filter-btn"
-          >
-            Однофазные
-          </button>
-          <button 
-            @click="filterByPolesCount('three_phase')"
-            :class="{ active: selectedPolesCount === 'three_phase' }"
-            class="brand-filter-btn"
-          >
-            Трёхфазные
-          </button>
         </div>
         
         <!-- Сортировка по цене -->
@@ -205,7 +187,7 @@
 
   <script src="../js/cart.js"></script>
   <script src="../js/products-api.js"></script>
-  <script src="../js/avr-page.js"></script>
+  <script src="../js/control-cabinets-page.js"></script>
 
 </body>
 </html>
