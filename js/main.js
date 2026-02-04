@@ -757,42 +757,43 @@ document.addEventListener('alpine:init', () => {
         try {
           await this.loadAvailableOptions();
           
-          // Выбираем первый доступный тип коммутации
-          if (this.availableOptions.commutation_type && this.availableOptions.commutation_type.length > 0) {
-            this.commutationType = this.availableOptions.commutation_type[0];
-            await this.loadAvailableOptions();
+          // НЕ меняем тип коммутации при смене бренда!
+          // Проверяем, доступен ли текущий тип коммутации для нового бренда
+          if (!this.availableOptions.commutation_type || !this.availableOptions.commutation_type.includes(this.commutationType)) {
+            // Только если текущий тип недоступен, выбираем первый доступный
+            if (this.availableOptions.commutation_type && this.availableOptions.commutation_type.length > 0) {
+              this.commutationType = this.availableOptions.commutation_type[0];
+            }
           }
           
-          // Выбираем первое доступное количество вводов
-          if (this.availableOptions.inputs_count && this.availableOptions.inputs_count.length > 0) {
-            this.inputsCount = this.availableOptions.inputs_count[0];
-            await this.loadAvailableOptions();
-          }
+          await this.loadAvailableOptions();
           
-          // Если это однофазные АВР, устанавливаем доступные параметры
-          if (false) {
-            // Устанавливаем первый доступный тип корпуса
-            if (this.availableOptions.enclosure_type && this.availableOptions.enclosure_type.length > 0) {
-              this.enclosureType = this.availableOptions.enclosure_type[0];
+          if (this.commutationType === 'control_cabinet') {
+            // Для шкафов управления проверяем доступность текущих параметров
+            if (!this.availableOptions.control_type || !this.availableOptions.control_type.includes(this.controlType)) {
+              if (this.availableOptions.control_type && this.availableOptions.control_type.length > 0) {
+                this.controlType = this.availableOptions.control_type[0];
+              }
             }
             
-            // Устанавливаем первый доступный тип подключения
-            if (this.availableOptions.connection_type && this.availableOptions.connection_type.length > 0) {
-              this.connectionType = this.availableOptions.connection_type[0];
+            if (!this.availableOptions.motor_power || !this.availableOptions.motor_power.includes(parseFloat(this.motorPower))) {
+              if (this.availableOptions.motor_power && this.availableOptions.motor_power.length > 0) {
+                this.motorPower = String(this.availableOptions.motor_power[0]);
+              }
+            }
+          } else {
+            // Для АВР проверяем доступность текущих параметров
+            if (!this.availableOptions.inputs_count || !this.availableOptions.inputs_count.includes(this.inputsCount)) {
+              if (this.availableOptions.inputs_count && this.availableOptions.inputs_count.length > 0) {
+                this.inputsCount = this.availableOptions.inputs_count[0];
+              }
             }
             
-            // Устанавливаем первый доступный тип климата
-            if (this.availableOptions.climate_type && this.availableOptions.climate_type.length > 0) {
-              this.climateType = this.availableOptions.climate_type[0];
+            if (!this.availableOptions.nominal_current || !this.availableOptions.nominal_current.includes(parseInt(this.nominalCurrent))) {
+              if (this.availableOptions.nominal_current && this.availableOptions.nominal_current.length > 0) {
+                this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
+              }
             }
-            
-            // Перезагружаем опции с учетом новых параметров
-            await this.loadAvailableOptions();
-          }
-          
-          // Выбираем первый доступный номинальный ток
-          if (this.availableOptions.nominal_current && this.availableOptions.nominal_current.length > 0) {
-            this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
           }
           
           await this.loadProductByCharacteristics();
