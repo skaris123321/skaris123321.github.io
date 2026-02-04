@@ -248,14 +248,6 @@ document.addEventListener('alpine:init', () => {
           await this.loadProduct();
         }
         
-        // Устанавливаем подключение кабеля в зависимости от тока только для моноблочных АВР
-        if (this.commutationType !== 'contactors') {
-          const current = parseInt(this.nominalCurrent);
-          if (current >= 100 && current <= 800) {
-            this.cableConnection = 'terminals';
-          }
-        }
-        
         this.initCart();
       },
       
@@ -508,20 +500,6 @@ document.addEventListener('alpine:init', () => {
             this.fullDescription = product.full_description || product.description || '';
             this.documentation = product.documentation || [];
             
-            // Устанавливаем подключение кабеля
-            if (this.commutationType === 'contactors') {
-              // Для контакторов по умолчанию "К полюсам автомата"
-              this.cableConnection = 'poles';
-            } else {
-              // Для моноблочных АВР используем логику по току
-              const current = parseInt(product.nominal_current);
-              if (current >= 100 && current <= 800) {
-                this.cableConnection = 'terminals';
-              } else {
-                this.cableConnection = 'poles';
-              }
-            }
-            
             // Сбрасываем индекс изображения
             this.currentIndex = 0;
             this.thumbnailScroll = 0;
@@ -611,11 +589,6 @@ document.addEventListener('alpine:init', () => {
             this.fullDescription = product.full_description || product.description || '';
             this.documentation = product.documentation || [];
             
-            const current = parseInt(product.nominal_current);
-            if (current >= 100 && current <= 800) {
-              this.cableConnection = 'terminals';
-            }
-            
             // Сбрасываем индекс изображения
             this.currentIndex = 0;
             this.thumbnailScroll = 0;
@@ -635,11 +608,6 @@ document.addEventListener('alpine:init', () => {
       async updateNominalCurrent(value) {
         if (this.loading || !this.isOptionAvailable('nominal_current', value)) return;
         this.nominalCurrent = value;
-        
-        const current = parseInt(value);
-        if (current >= 100 && current <= 800) {
-          this.cableConnection = 'terminals';
-        }
         
         await this.loadProductByCharacteristics();
         this.updateCartQuantity();
@@ -836,18 +804,6 @@ document.addEventListener('alpine:init', () => {
         
         try {
           await this.loadAvailableOptions();
-          
-          // Если выбран навесной корпус, сбрасываем климатическое исполнение на У2
-          if (value === 'wall') {
-            this.climateType = 'U2';
-          } else if (value === '19inch') {
-            // Для 19" доступны оба варианта, выбираем первый доступный
-            if (this.availableOptions.climate_type && this.availableOptions.climate_type.length > 0) {
-              if (!this.availableOptions.climate_type.includes(this.climateType)) {
-                this.climateType = this.availableOptions.climate_type[0];
-              }
-            }
-          }
           
           await this.loadProductByCharacteristics();
           this.updateCartQuantity();
