@@ -467,6 +467,11 @@
         <span x-show="cartQuantity > 0" x-text="'Добавить еще (' + cartQuantity + ' в корзине)'"></span>
       </button>
 
+      <!-- Debug button (remove in production) -->
+      <button class="btn-add-to-cart" @click="debugSpecs()" style="background: #ff6b6b; margin-top: 10px;">
+        Debug Specs
+      </button>
+
       <div class="product-benefits">
         <div class="product-benefit">
           <svg class="benefit-icon delivery-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">

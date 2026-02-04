@@ -403,6 +403,8 @@ document.addEventListener('alpine:init', () => {
               return img.startsWith('images/') ? '../' + img : img;
             });
             this.productSpecs = product.specs || {};
+            console.log('Loaded product specs:', this.productSpecs); // Debug log
+            console.log('All selected specs:', this.allSelectedSpecs); // Debug log
             this.productOptions = product.options || [];
             this.fullDescription = product.full_description || product.description || '';
             this.documentation = product.documentation || [];
@@ -879,8 +881,82 @@ document.addEventListener('alpine:init', () => {
         }
       },
       
+      // Метод для диагностики проблем с локализацией
+      debugSpecs() {
+        console.log('=== SPECS DEBUG INFO ===');
+        console.log('Raw productSpecs:', this.productSpecs);
+        console.log('Processed allSelectedSpecs:', this.allSelectedSpecs);
+        console.log('Current product ID:', this.currentProductId);
+        console.log('Current commutation type:', this.commutationType);
+        console.log('========================');
+      },
+
+      // Функция для перевода английских ключей в русские (если они попали в данные)
+      translateSpecKey(key) {
+        const translations = {
+          'Voltage': 'Номинальное рабочее напряжение',
+          'Gabarity': 'Габариты', 
+          'IP': 'Степень защиты корпуса',
+          'Nominal_current': 'Номинальный ток',
+          'Dimensions': 'Габариты',
+          'Protection_class': 'Степень защиты корпуса',
+          'Working_voltage': 'Номинальное рабочее напряжение',
+          'Current': 'Номинальный ток',
+          'Size': 'Габариты',
+          'Protection': 'Степень защиты корпуса',
+          'Rated_current': 'Номинальный ток',
+          'Rated_voltage': 'Номинальное рабочее напряжение',
+          'Enclosure_protection': 'Степень защиты корпуса'
+        };
+        return translations[key] || key;
+      },
+
+      // Функция для нормализации значений спецификаций
+      normalizeSpecValue(key, value) {
+        // Если значение уже содержит единицы измерения, возвращаем как есть
+        if (typeof value !== 'string') return String(value);
+        
+        // Нормализуем значения для разных типов характеристик
+        if (key.includes('ток') || key.includes('current') || key.includes('Current')) {
+          if (!value.includes('А') && !value.includes('A')) {
+            return value + 'А';
+          }
+        }
+        
+        if (key.includes('напряжение') || key.includes('voltage') || key.includes('Voltage')) {
+          if (!value.includes('В') && !value.includes('V')) {
+            return value + ' В';
+          }
+        }
+        
+        if (key.includes('Габариты') || key.includes('габариты') || key.includes('Dimensions') || key.includes('Size')) {
+          if (!value.includes('мм') && !value.includes('mm')) {
+            return value + ' мм';
+          }
+        }
+        
+        return value;
+      },
+
       get allSelectedSpecs() {
-        const specs = this.productSpecs ? { ...this.productSpecs } : {};
+        const rawSpecs = this.productSpecs ? { ...this.productSpecs } : {};
+        const specs = {};
+        
+        // Переводим ключи, если они на английском, и нормализуем значения
+        for (const [key, value] of Object.entries(rawSpecs)) {
+          const translatedKey = this.translateSpecKey(key);
+          const normalizedValue = this.normalizeSpecValue(translatedKey, value);
+          
+          // Для контакторов исключаем поле с напряжением
+          if (this.commutationType === 'contactors' && 
+              (translatedKey === 'Номинальное рабочее напряжение' || 
+               translatedKey === 'Voltage' || 
+               key === 'Номинальное рабочее напряжение')) {
+            continue; // Пропускаем это поле для контакторов
+          }
+          
+          specs[translatedKey] = normalizedValue;
+        }
         
         if (this.commutationType === 'contactors') {
           // Для контакторов
