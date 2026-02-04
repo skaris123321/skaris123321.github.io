@@ -13754,6 +13754,1094 @@
                 "Количество фаз": "3",
                 "Степень защиты": "IP31"
             }
+        },
+        {
+            "id": 394,
+            "article": "ШУ-ПП-7.5-1-РОСЭК",
+            "motor_power": 7.5,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 45000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 7.5кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 7.5кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-7.5-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "7.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 395,
+            "article": "ШУ-ПП-11-1-РОСЭК",
+            "motor_power": 11,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 48000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 11кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 11кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-11-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "11 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 396,
+            "article": "ШУ-ПП-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 52000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 15кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 15кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-15-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 397,
+            "article": "ШУ-ПП-18.5-1-РОСЭК",
+            "motor_power": 18.5,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 55000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 18.5кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 18.5кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-18.5-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "18.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 398,
+            "article": "ШУ-ПП-22-1-РОСЭК",
+            "motor_power": 22,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 58000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 22кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 22кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-22-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "22 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 399,
+            "article": "ШУ-ПП-30-1-РОСЭК",
+            "motor_power": 30,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 62000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 30кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 30кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-30-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "30 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 400,
+            "article": "ШУ-ПП-37-1-РОСЭК",
+            "motor_power": 37,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 65000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 37кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 37кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-37-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "37 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 401,
+            "article": "ШУ-ПП-45-1-РОСЭК",
+            "motor_power": 45,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 68000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 45кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 45кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-45-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "45 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 402,
+            "article": "ШУ-ПП-55-1-РОСЭК",
+            "motor_power": 55,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 72000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 55кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 55кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-55-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "55 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 403,
+            "article": "ШУ-ПП-75-1-РОСЭК",
+            "motor_power": 75,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 75000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 75кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 75кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-75-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "75 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 404,
+            "article": "ШУ-ПП-90-1-РОСЭК",
+            "motor_power": 90,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 78000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 90кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 90кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-90-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "90 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 405,
+            "article": "ШУ-ПП-110-1-РОСЭК",
+            "motor_power": 110,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 85000,
+            "main_image": "images/shu-110.jpg",
+            "images": [
+                "images/shu-110.jpg"
+            ],
+            "description": "Шкаф управления 110кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 110кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-110-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "110 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 406,
+            "article": "ШУ-ПП-132-1-РОСЭК",
+            "motor_power": 132,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 90000,
+            "main_image": "images/shu-110.jpg",
+            "images": [
+                "images/shu-110.jpg"
+            ],
+            "description": "Шкаф управления 132кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 132кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-132-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "132 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 407,
+            "article": "ШУ-ПП-160-1-РОСЭК",
+            "motor_power": 160,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 95000,
+            "main_image": "images/shu-110.jpg",
+            "images": [
+                "images/shu-110.jpg"
+            ],
+            "description": "Шкаф управления 160кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 160кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-160-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "160 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 408,
+            "article": "ШУ-ПП-185-1-РОСЭК",
+            "motor_power": 185,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 100000,
+            "main_image": "images/shu-110.jpg",
+            "images": [
+                "images/shu-110.jpg"
+            ],
+            "description": "Шкаф управления 185кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 185кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-185-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "185 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 409,
+            "article": "ШУ-ПП-220-1-РОСЭК",
+            "motor_power": 220,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 105000,
+            "main_image": "images/shu-110.jpg",
+            "images": [
+                "images/shu-110.jpg"
+            ],
+            "description": "Шкаф управления 220кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 220кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-220-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "220 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 410,
+            "article": "ШУ-ПП-250-1-РОСЭК",
+            "motor_power": 250,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 110000,
+            "main_image": "images/shu-110.jpg",
+            "images": [
+                "images/shu-110.jpg"
+            ],
+            "description": "Шкаф управления 250кВт на базе VEDA, плавный пуск",
+            "full_description": "Шкаф управления двигателем 250кВт с плавным пуском, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-250-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "250 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 411,
+            "article": "ШУ-ПП-7.5-1-РОСЭК",
+            "motor_power": 7.5,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 45000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 7.5кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 7.5кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-7.5-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "7.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 412,
+            "article": "ШУ-ПП-11-1-РОСЭК",
+            "motor_power": 11,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 48000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 11кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 11кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-11-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "11 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 413,
+            "article": "ШУ-ПП-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 52000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 15кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 15кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-15-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 414,
+            "article": "ШУ-ПП-18.5-1-РОСЭК",
+            "motor_power": 18.5,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 55000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 18.5кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 18.5кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-18.5-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "18.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 415,
+            "article": "ШУ-ПП-22-1-РОСЭК",
+            "motor_power": 22,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 58000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 22кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 22кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-22-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "22 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 416,
+            "article": "ШУ-ПП-30-1-РОСЭК",
+            "motor_power": 30,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 62000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 30кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 30кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-30-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "30 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 417,
+            "article": "ШУ-ПП-37-1-РОСЭК",
+            "motor_power": 37,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 65000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 37кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 37кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-37-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "37 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 418,
+            "article": "ШУ-ПП-45-1-РОСЭК",
+            "motor_power": 45,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 68000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 45кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 45кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-45-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "45 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 419,
+            "article": "ШУ-ПП-55-1-РОСЭК",
+            "motor_power": 55,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 72000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 55кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 55кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-55-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "55 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 420,
+            "article": "ШУ-ПП-75-1-РОСЭК",
+            "motor_power": 75,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 75000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 75кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 75кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-75-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "75 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 421,
+            "article": "ШУ-ПП-90-1-РОСЭК",
+            "motor_power": 90,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 78000,
+            "main_image": "images/shu-90.jpg",
+            "images": [
+                "images/shu-90.jpg"
+            ],
+            "description": "Шкаф управления 90кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 90кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-90-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "90 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 422,
+            "article": "ШУ-ПП-110-1-РОСЭК",
+            "motor_power": 110,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 85000,
+            "main_image": "images/shu-110.jpg",
+            "images": [
+                "images/shu-110.jpg"
+            ],
+            "description": "Шкаф управления 110кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 110кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-110-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "110 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 423,
+            "article": "ШУ-ПП-132-1-РОСЭК",
+            "motor_power": 132,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 90000,
+            "main_image": "images/shu-110.jpg",
+            "images": [
+                "images/shu-110.jpg"
+            ],
+            "description": "Шкаф управления 132кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 132кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-132-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "132 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 424,
+            "article": "ШУ-ПП-160-1-РОСЭК",
+            "motor_power": 160,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 95000,
+            "main_image": "images/shu-110.jpg",
+            "images": [
+                "images/shu-110.jpg"
+            ],
+            "description": "Шкаф управления 160кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 160кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-160-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "160 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 425,
+            "article": "ШУ-ПП-185-1-РОСЭК",
+            "motor_power": 185,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 100000,
+            "main_image": "images/shu-110.jpg",
+            "images": [
+                "images/shu-110.jpg"
+            ],
+            "description": "Шкаф управления 185кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 185кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-185-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "185 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 426,
+            "article": "ШУ-ПП-220-1-РОСЭК",
+            "motor_power": 220,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 105000,
+            "main_image": "images/shu-110.jpg",
+            "images": [
+                "images/shu-110.jpg"
+            ],
+            "description": "Шкаф управления 220кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 220кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-220-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "220 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 427,
+            "article": "ШУ-ПП-250-1-РОСЭК",
+            "motor_power": 250,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "soft_start",
+            "inputs_count": "1",
+            "base_price": 110000,
+            "main_image": "images/shu-110.jpg",
+            "images": [
+                "images/shu-110.jpg"
+            ],
+            "description": "Шкаф управления 250кВт на базе Systeme electric, плавный пуск",
+            "full_description": "Шкаф управления двигателем 250кВт с плавным пуском, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-250-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "250 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
         }
     ]
 }

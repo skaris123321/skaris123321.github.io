@@ -80,9 +80,20 @@
         <span>»</span>
         <span>Каталог</span>
         <span>»</span>
-        <a href="avr.html">АВР</a>
-        <span>»</span>
-        <span class="breadcrumbs-current">АВР</span>
+        <template x-if="commutationType === 'control_cabinet'">
+          <div>
+            <a href="control-cabinets.html">Шкафы управления</a>
+            <span>»</span>
+            <span class="breadcrumbs-current">Шкафы управления</span>
+          </div>
+        </template>
+        <template x-if="commutationType !== 'control_cabinet'">
+          <div>
+            <a href="avr.html">АВР</a>
+            <span>»</span>
+            <span class="breadcrumbs-current">АВР</span>
+          </div>
+        </template>
       </div>
       <h1 class="category-title" x-text="productTitle"></h1>
     </div>
@@ -193,6 +204,18 @@
             @click="updateManufacturerBrand('TDM')"
             :disabled="loading"
           >TDM</button>
+          <button 
+            class="spec-option"
+            :class="{ active: manufacturerBrand === 'VEDA', 'opacity-50': loading }"
+            @click="updateManufacturerBrand('VEDA')"
+            :disabled="loading"
+          >VEDA</button>
+          <button 
+            class="spec-option"
+            :class="{ active: manufacturerBrand === 'Systeme electric', 'opacity-50': loading }"
+            @click="updateManufacturerBrand('Systeme electric')"
+            :disabled="loading"
+          >Systeme electric</button>
         </div>
       </div>
 
@@ -216,30 +239,7 @@
         </div>
       </div>
 
-      <!-- Фильтры для шкафов управления -->
-      <div x-show="commutationType === 'control_cabinet'" class="product-spec-group">
-        <div class="product-spec-label">Тип управления</div>
-        <div class="product-spec-options">
-          <button 
-            class="spec-option"
-            :class="{ active: controlType === 'soft_start', 'opacity-50': loading }"
-            @click="updateControlType('soft_start')"
-            :disabled="loading"
-          >Плавный пуск</button>
-          <button 
-            class="spec-option"
-            :class="{ active: controlType === 'frequency_converter', 'opacity-50': loading }"
-            @click="updateControlType('frequency_converter')"
-            :disabled="loading"
-          >Преобразователь частоты</button>
-          <button 
-            class="spec-option"
-            :class="{ active: controlType === 'direct_start', 'opacity-50': loading }"
-            @click="updateControlType('direct_start')"
-            :disabled="loading"
-          >Прямой пуск</button>
-        </div>
-      </div>
+
 
       <div x-show="commutationType !== 'single_phase_contactors' && commutationType !== 'control_cabinet'" class="product-spec-group">
         <div class="product-spec-label" x-text="commutationType === 'contactors' ? 'Количество полюсов' : 'Количество вводов'"></div>
