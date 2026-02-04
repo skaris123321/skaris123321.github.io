@@ -466,20 +466,23 @@ document.addEventListener('alpine:init', () => {
             this.article = product.article;
             // Формируем массив изображений: main_image первым, затем дополнительные images
             let imageList = [];
-            if (product.main_image) {
-              imageList.push(product.main_image);
-            }
-            if (product.images && product.images.length > 0) {
-              // Добавляем дополнительные изображения, исключая дубликаты
-              product.images.forEach(img => {
-                if (img && img !== product.main_image) {
-                  imageList.push(img);
-                }
-              });
-            }
-            // Если нет изображений вообще, используем пустой массив
-            if (imageList.length === 0) {
-              imageList = [];
+            
+            // Для однофазных контакторов не показываем изображения
+            if (product.commutation_type === 'contactors' && product.poles_count === 'single_phase') {
+              imageList = []; // Пустой массив для однофазных контакторов
+            } else {
+              // Для всех остальных товаров формируем изображения как обычно
+              if (product.main_image && product.main_image.trim() !== '') {
+                imageList.push(product.main_image);
+              }
+              if (product.images && product.images.length > 0) {
+                // Добавляем дополнительные изображения, исключая дубликаты
+                product.images.forEach(img => {
+                  if (img && img.trim() !== '' && img !== product.main_image) {
+                    imageList.push(img);
+                  }
+                });
+              }
             }
             
             this.images = imageList.map(img => {
@@ -544,6 +547,10 @@ document.addEventListener('alpine:init', () => {
       
       // Новый метод для загрузки товара по ID
       async loadProductById(productId) {
+        console.log('=== ОТЛАДКА ЗАГРУЗКИ ТОВАРА ===');
+        console.log('URL:', window.location.href);
+        console.log('ID товара из URL:', productId);
+        
         this.loading = true;
         
         try {
@@ -551,10 +558,22 @@ document.addEventListener('alpine:init', () => {
             throw new Error('ProductsAPI не инициализирован');
           }
 
+          console.log('=== ЗАГРУЗКА ТОВАРА ПО ID ===');
+          console.log('Ищем товар с ID:', productId);
+          
           const data = await productsAPI.getProduct({ id: productId });
+          
+          console.log('Результат поиска:', data);
           
           if (data.success && data.product) {
             const product = data.product;
+            
+            console.log('Найденный товар:', product);
+            console.log('Артикул:', product.article);
+            console.log('Ток:', product.nominal_current);
+            console.log('Бренд:', product.manufacturer_brand);
+            console.log('Тип коммутации:', product.commutation_type);
+            console.log('Полюса:', product.poles_count);
             
             // Устанавливаем параметры товара
             this.manufacturerBrand = product.manufacturer_brand;
@@ -584,20 +603,23 @@ document.addEventListener('alpine:init', () => {
             
             // Формируем массив изображений: main_image первым, затем дополнительные images
             let imageList = [];
-            if (product.main_image) {
-              imageList.push(product.main_image);
-            }
-            if (product.images && product.images.length > 0) {
-              // Добавляем дополнительные изображения, исключая дубликаты
-              product.images.forEach(img => {
-                if (img && img !== product.main_image) {
-                  imageList.push(img);
-                }
-              });
-            }
-            // Если нет изображений вообще, используем пустой массив
-            if (imageList.length === 0) {
-              imageList = [];
+            
+            // Для однофазных контакторов не показываем изображения
+            if (product.commutation_type === 'contactors' && product.poles_count === 'single_phase') {
+              imageList = []; // Пустой массив для однофазных контакторов
+            } else {
+              // Для всех остальных товаров формируем изображения как обычно
+              if (product.main_image && product.main_image.trim() !== '') {
+                imageList.push(product.main_image);
+              }
+              if (product.images && product.images.length > 0) {
+                // Добавляем дополнительные изображения, исключая дубликаты
+                product.images.forEach(img => {
+                  if (img && img.trim() !== '' && img !== product.main_image) {
+                    imageList.push(img);
+                  }
+                });
+              }
             }
             
             this.images = imageList.map(img => {
@@ -682,20 +704,23 @@ document.addEventListener('alpine:init', () => {
             
             // Формируем массив изображений: main_image первым, затем дополнительные images
             let imageList = [];
-            if (product.main_image) {
-              imageList.push(product.main_image);
-            }
-            if (product.images && product.images.length > 0) {
-              // Добавляем дополнительные изображения, исключая дубликаты
-              product.images.forEach(img => {
-                if (img && img !== product.main_image) {
-                  imageList.push(img);
-                }
-              });
-            }
-            // Если нет изображений вообще, используем пустой массив
-            if (imageList.length === 0) {
-              imageList = [];
+            
+            // Для однофазных контакторов не показываем изображения
+            if (product.commutation_type === 'contactors' && product.poles_count === 'single_phase') {
+              imageList = []; // Пустой массив для однофазных контакторов
+            } else {
+              // Для всех остальных товаров формируем изображения как обычно
+              if (product.main_image && product.main_image.trim() !== '') {
+                imageList.push(product.main_image);
+              }
+              if (product.images && product.images.length > 0) {
+                // Добавляем дополнительные изображения, исключая дубликаты
+                product.images.forEach(img => {
+                  if (img && img.trim() !== '' && img !== product.main_image) {
+                    imageList.push(img);
+                  }
+                });
+              }
             }
             
             this.images = imageList.map(img => {

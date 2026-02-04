@@ -16426,6 +16426,2118 @@
                 "Количество фаз": "3",
                 "Степень защиты": "IP31"
             }
+        },
+        {
+            "id": 476,
+            "article": "ШУ-ПЧ-0_75-1-РОСЭК",
+            "motor_power": 0.75,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 41400,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 0.75 кВт IEK",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 0.75 кВт, выполнен на базе преобразователей частоты IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-0_75-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "0.75 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 477,
+            "article": "ШУ-ПЧ-0_75-1-РОСЭК",
+            "motor_power": 0.75,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 49500,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 0.75 кВт Systeme electric",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 0.75 кВт, выполнен на базе преобразователей частоты Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-0_75-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "0.75 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 478,
+            "article": "ШУ-ПЧ-0_75-1-РОСЭК",
+            "motor_power": 0.75,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 39600,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 0.75 кВт TDM",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 0.75 кВт, выполнен на базе преобразователей частоты TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-0_75-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "0.75 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 479,
+            "article": "ШУ-ПЧ-0_75-1-РОСЭК",
+            "motor_power": 0.75,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 38250,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 0.75 кВт VEDA",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 0.75 кВт, выполнен на базе преобразователей частоты VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-0_75-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "0.75 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 480,
+            "article": "ШУ-ПЧ-3_7-1-РОСЭК",
+            "motor_power": 3.7,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 41400,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 3.7 кВт IEK",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 3.7 кВт, выполнен на базе преобразователей частоты IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-3_7-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "3.7 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 481,
+            "article": "ШУ-ПЧ-3_7-1-РОСЭК",
+            "motor_power": 3.7,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 49500,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 3.7 кВт Systeme electric",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 3.7 кВт, выполнен на базе преобразователей частоты Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-3_7-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "3.7 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 482,
+            "article": "ШУ-ПЧ-3_7-1-РОСЭК",
+            "motor_power": 3.7,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 39600,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 3.7 кВт TDM",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 3.7 кВт, выполнен на базе преобразователей частоты TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-3_7-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "3.7 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 483,
+            "article": "ШУ-ПЧ-3_7-1-РОСЭК",
+            "motor_power": 3.7,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 38250,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 3.7 кВт VEDA",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 3.7 кВт, выполнен на базе преобразователей частоты VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-3_7-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "3.7 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 484,
+            "article": "ШУ-ПЧ-7_5-1-РОСЭК",
+            "motor_power": 7.5,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 59800,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 7.5 кВт IEK",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 7.5 кВт, выполнен на базе преобразователей частоты IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-7_5-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "7.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 485,
+            "article": "ШУ-ПЧ-7_5-1-РОСЭК",
+            "motor_power": 7.5,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 71500,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 7.5 кВт Systeme electric",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 7.5 кВт, выполнен на базе преобразователей частоты Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-7_5-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "7.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 486,
+            "article": "ШУ-ПЧ-7_5-1-РОСЭК",
+            "motor_power": 7.5,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 57200,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 7.5 кВт TDM",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 7.5 кВт, выполнен на базе преобразователей частоты TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-7_5-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "7.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 487,
+            "article": "ШУ-ПЧ-7_5-1-РОСЭК",
+            "motor_power": 7.5,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 55250,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 7.5 кВт VEDA",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 7.5 кВт, выполнен на базе преобразователей частоты VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-7_5-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "7.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 488,
+            "article": "ШУ-ПЧ-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 59800,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 15 кВт IEK",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 15 кВт, выполнен на базе преобразователей частоты IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-15-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 489,
+            "article": "ШУ-ПЧ-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 71500,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 15 кВт Systeme electric",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 15 кВт, выполнен на базе преобразователей частоты Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-15-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 490,
+            "article": "ШУ-ПЧ-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 57200,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 15 кВт TDM",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 15 кВт, выполнен на базе преобразователей частоты TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-15-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 491,
+            "article": "ШУ-ПЧ-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 55250,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 15 кВт VEDA",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 15 кВт, выполнен на базе преобразователей частоты VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-15-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 492,
+            "article": "ШУ-ПЧ-18_5-1-РОСЭК",
+            "motor_power": 18.5,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 78200,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 18.5 кВт IEK",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 18.5 кВт, выполнен на базе преобразователей частоты IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-18_5-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "18.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 493,
+            "article": "ШУ-ПЧ-18_5-1-РОСЭК",
+            "motor_power": 18.5,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 93500,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 18.5 кВт Systeme electric",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 18.5 кВт, выполнен на базе преобразователей частоты Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-18_5-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "18.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 494,
+            "article": "ШУ-ПЧ-18_5-1-РОСЭК",
+            "motor_power": 18.5,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 74800,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 18.5 кВт TDM",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 18.5 кВт, выполнен на базе преобразователей частоты TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-18_5-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "18.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 495,
+            "article": "ШУ-ПЧ-18_5-1-РОСЭК",
+            "motor_power": 18.5,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 72250,
+            "main_image": "images/sp-3.7.png",
+            "images": [
+                "images/sp-3.7.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 18.5 кВт VEDA",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 18.5 кВт, выполнен на базе преобразователей частоты VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-18_5-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "18.5 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 496,
+            "article": "ШУ-ПЧ-22-1-РОСЭК",
+            "motor_power": 22,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 78200,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 22 кВт IEK",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 22 кВт, выполнен на базе преобразователей частоты IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-22-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "22 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 497,
+            "article": "ШУ-ПЧ-22-1-РОСЭК",
+            "motor_power": 22,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 93500,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 22 кВт Systeme electric",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 22 кВт, выполнен на базе преобразователей частоты Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-22-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "22 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 498,
+            "article": "ШУ-ПЧ-22-1-РОСЭК",
+            "motor_power": 22,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 74800,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 22 кВт TDM",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 22 кВт, выполнен на базе преобразователей частоты TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-22-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "22 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 499,
+            "article": "ШУ-ПЧ-22-1-РОСЭК",
+            "motor_power": 22,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 72250,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 22 кВт VEDA",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 22 кВт, выполнен на базе преобразователей частоты VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-22-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "22 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 500,
+            "article": "ШУ-ПЧ-37-1-РОСЭК",
+            "motor_power": 37,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 110400,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 37 кВт IEK",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 37 кВт, выполнен на базе преобразователей частоты IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-37-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "37 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 501,
+            "article": "ШУ-ПЧ-37-1-РОСЭК",
+            "motor_power": 37,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 132000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 37 кВт Systeme electric",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 37 кВт, выполнен на базе преобразователей частоты Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-37-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "37 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 502,
+            "article": "ШУ-ПЧ-37-1-РОСЭК",
+            "motor_power": 37,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 105600,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 37 кВт TDM",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 37 кВт, выполнен на базе преобразователей частоты TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-37-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "37 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 503,
+            "article": "ШУ-ПЧ-37-1-РОСЭК",
+            "motor_power": 37,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 102000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 37 кВт VEDA",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 37 кВт, выполнен на базе преобразователей частоты VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-37-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "37 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 504,
+            "article": "ШУ-ПЧ-45-1-РОСЭК",
+            "motor_power": 45,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 110400,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 45 кВт IEK",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 45 кВт, выполнен на базе преобразователей частоты IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-45-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "45 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 505,
+            "article": "ШУ-ПЧ-45-1-РОСЭК",
+            "motor_power": 45,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 132000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 45 кВт Systeme electric",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 45 кВт, выполнен на базе преобразователей частоты Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-45-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "45 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 506,
+            "article": "ШУ-ПЧ-45-1-РОСЭК",
+            "motor_power": 45,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 105600,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 45 кВт TDM",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 45 кВт, выполнен на базе преобразователей частоты TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-45-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "45 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 507,
+            "article": "ШУ-ПЧ-45-1-РОСЭК",
+            "motor_power": 45,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 102000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 45 кВт VEDA",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 45 кВт, выполнен на базе преобразователей частоты VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-45-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "45 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 508,
+            "article": "ШУ-ПЧ-55-1-РОСЭК",
+            "motor_power": 55,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 165600,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 55 кВт IEK",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 55 кВт, выполнен на базе преобразователей частоты IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-55-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "55 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 509,
+            "article": "ШУ-ПЧ-55-1-РОСЭК",
+            "motor_power": 55,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 198000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 55 кВт Systeme electric",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 55 кВт, выполнен на базе преобразователей частоты Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-55-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "55 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 510,
+            "article": "ШУ-ПЧ-55-1-РОСЭК",
+            "motor_power": 55,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 158400,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 55 кВт TDM",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 55 кВт, выполнен на базе преобразователей частоты TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-55-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "55 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 511,
+            "article": "ШУ-ПЧ-55-1-РОСЭК",
+            "motor_power": 55,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 153000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 55 кВт VEDA",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 55 кВт, выполнен на базе преобразователей частоты VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-55-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "55 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 512,
+            "article": "ШУ-ПЧ-75-1-РОСЭК",
+            "motor_power": 75,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 165600,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 75 кВт IEK",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 75 кВт, выполнен на базе преобразователей частоты IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-75-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "75 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 513,
+            "article": "ШУ-ПЧ-75-1-РОСЭК",
+            "motor_power": 75,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 198000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 75 кВт Systeme electric",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 75 кВт, выполнен на базе преобразователей частоты Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-75-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "75 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 514,
+            "article": "ШУ-ПЧ-75-1-РОСЭК",
+            "motor_power": 75,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 158400,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 75 кВт TDM",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 75 кВт, выполнен на базе преобразователей частоты TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-75-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "75 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 515,
+            "article": "ШУ-ПЧ-75-1-РОСЭК",
+            "motor_power": 75,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 153000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 75 кВт VEDA",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 75 кВт, выполнен на базе преобразователей частоты VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-75-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "75 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 516,
+            "article": "ШУ-ПЧ-90-1-РОСЭК",
+            "motor_power": 90,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 230000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 90 кВт IEK",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 90 кВт, выполнен на базе преобразователей частоты IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-90-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "90 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 517,
+            "article": "ШУ-ПЧ-90-1-РОСЭК",
+            "motor_power": 90,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 275000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 90 кВт Systeme electric",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 90 кВт, выполнен на базе преобразователей частоты Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-90-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "90 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 518,
+            "article": "ШУ-ПЧ-90-1-РОСЭК",
+            "motor_power": 90,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 220000,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 90 кВт TDM",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 90 кВт, выполнен на базе преобразователей частоты TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-90-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "90 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 519,
+            "article": "ШУ-ПЧ-90-1-РОСЭК",
+            "motor_power": 90,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 212500,
+            "main_image": "images/sp-90.png",
+            "images": [
+                "images/sp-90.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 90 кВт VEDA",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 90 кВт, выполнен на базе преобразователей частоты VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-90-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "90 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 520,
+            "article": "ШУ-ПЧ-110-1-РОСЭК",
+            "motor_power": 110,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 230000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 110 кВт IEK",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 110 кВт, выполнен на базе преобразователей частоты IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-110-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "110 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 521,
+            "article": "ШУ-ПЧ-110-1-РОСЭК",
+            "motor_power": 110,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 275000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 110 кВт Systeme electric",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 110 кВт, выполнен на базе преобразователей частоты Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-110-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "110 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 522,
+            "article": "ШУ-ПЧ-110-1-РОСЭК",
+            "motor_power": 110,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 220000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 110 кВт TDM",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 110 кВт, выполнен на базе преобразователей частоты TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-110-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "110 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 523,
+            "article": "ШУ-ПЧ-110-1-РОСЭК",
+            "motor_power": 110,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 212500,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 110 кВт VEDA",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 110 кВт, выполнен на базе преобразователей частоты VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-110-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "110 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 524,
+            "article": "ШУ-ПЧ-132-1-РОСЭК",
+            "motor_power": 132,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 322000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 132 кВт IEK",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 132 кВт, выполнен на базе преобразователей частоты IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-132-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "132 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 525,
+            "article": "ШУ-ПЧ-132-1-РОСЭК",
+            "motor_power": 132,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 385000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 132 кВт Systeme electric",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 132 кВт, выполнен на базе преобразователей частоты Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-132-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "132 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 526,
+            "article": "ШУ-ПЧ-132-1-РОСЭК",
+            "motor_power": 132,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 308000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 132 кВт TDM",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 132 кВт, выполнен на базе преобразователей частоты TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-132-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "132 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 527,
+            "article": "ШУ-ПЧ-132-1-РОСЭК",
+            "motor_power": 132,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 297500,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 132 кВт VEDA",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 132 кВт, выполнен на базе преобразователей частоты VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-132-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "132 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 528,
+            "article": "ШУ-ПЧ-160-1-РОСЭК",
+            "motor_power": 160,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 322000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 160 кВт IEK",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 160 кВт, выполнен на базе преобразователей частоты IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-160-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "160 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 529,
+            "article": "ШУ-ПЧ-160-1-РОСЭК",
+            "motor_power": 160,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 385000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 160 кВт Systeme electric",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 160 кВт, выполнен на базе преобразователей частоты Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-160-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "160 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 530,
+            "article": "ШУ-ПЧ-160-1-РОСЭК",
+            "motor_power": 160,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 308000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 160 кВт TDM",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 160 кВт, выполнен на базе преобразователей частоты TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-160-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "160 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 531,
+            "article": "ШУ-ПЧ-160-1-РОСЭК",
+            "motor_power": 160,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 297500,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 160 кВт VEDA",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 160 кВт, выполнен на базе преобразователей частоты VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-160-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "160 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 532,
+            "article": "ШУ-ПЧ-200-1-РОСЭК",
+            "motor_power": 200,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 414000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 200 кВт IEK",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 200 кВт, выполнен на базе преобразователей частоты IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-200-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "200 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 533,
+            "article": "ШУ-ПЧ-200-1-РОСЭК",
+            "motor_power": 200,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 495000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 200 кВт Systeme electric",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 200 кВт, выполнен на базе преобразователей частоты Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-200-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "200 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 534,
+            "article": "ШУ-ПЧ-200-1-РОСЭК",
+            "motor_power": 200,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 396000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 200 кВт TDM",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 200 кВт, выполнен на базе преобразователей частоты TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-200-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "200 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 535,
+            "article": "ШУ-ПЧ-200-1-РОСЭК",
+            "motor_power": 200,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 382500,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 200 кВт VEDA",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 200 кВт, выполнен на базе преобразователей частоты VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-200-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "200 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 536,
+            "article": "ШУ-ПЧ-220-1-РОСЭК",
+            "motor_power": 220,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 414000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 220 кВт IEK",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 220 кВт, выполнен на базе преобразователей частоты IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-220-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "220 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 537,
+            "article": "ШУ-ПЧ-220-1-РОСЭК",
+            "motor_power": 220,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 495000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 220 кВт Systeme electric",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 220 кВт, выполнен на базе преобразователей частоты Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-220-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "220 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 538,
+            "article": "ШУ-ПЧ-220-1-РОСЭК",
+            "motor_power": 220,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 396000,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 220 кВт TDM",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 220 кВт, выполнен на базе преобразователей частоты TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-220-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "220 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 539,
+            "article": "ШУ-ПЧ-220-1-РОСЭК",
+            "motor_power": 220,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "frequency_converter",
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 382500,
+            "main_image": "images/sp-220.png",
+            "images": [
+                "images/sp-220.png"
+            ],
+            "description": "Шкаф управления с преобразователем частоты 220 кВт VEDA",
+            "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 220 кВт, выполнен на базе преобразователей частоты VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПЧ-220-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "220 кВт",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
         }
     ]
 }

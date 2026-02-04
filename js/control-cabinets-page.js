@@ -15,18 +15,31 @@ function controlCabinetsCatalog() {
 
     async loadProducts() {
       try {
+        console.log('Загружаем товары...');
         const response = await fetch('../data/products.json');
         if (!response.ok) throw new Error('Failed to load products');
         
         const data = await response.json();
+        console.log('Всего товаров в базе:', data.products.length);
         
         // Фильтруем только шкафы управления
         this.products = data.products.filter(product => 
           product.commutation_type === 'control_cabinet'
         );
         
+        console.log('Шкафов управления найдено:', this.products.length);
+        
+        // Проверяем типы управления
+        const controlTypes = [...new Set(this.products.map(p => p.control_type))];
+        console.log('Типы управления:', controlTypes);
+        
+        // Проверяем количество товаров по типам
+        const frequencyConverters = this.products.filter(p => p.control_type === 'frequency_converter');
+        console.log('Преобразователей частоты:', frequencyConverters.length);
+        
         // Получаем уникальные бренды
         this.uniqueBrands = [...new Set(this.products.map(p => p.brand))].sort();
+        console.log('Уникальные бренды:', this.uniqueBrands);
         
         this.loading = false;
       } catch (error) {
@@ -36,6 +49,7 @@ function controlCabinetsCatalog() {
     },
 
     filterByControlType(controlType) {
+      console.log('Фильтруем по типу управления:', controlType);
       this.selectedControlType = controlType;
       this.selectedBrand = null; // Сбрасываем фильтр по бренду
       this.applyFilters();
@@ -52,17 +66,22 @@ function controlCabinetsCatalog() {
 
     applyFilters() {
       let filtered = [...this.products];
+      console.log('Применяем фильтры. Всего товаров:', filtered.length);
+      console.log('Выбранный тип управления:', this.selectedControlType);
+      console.log('Выбранный бренд:', this.selectedBrand);
 
       // Фильтр по типу управления
       if (this.selectedControlType) {
         filtered = filtered.filter(product => 
           product.control_type === this.selectedControlType
         );
+        console.log('После фильтра по типу управления:', filtered.length);
       }
 
       // Фильтр по бренду
       if (this.selectedBrand) {
         filtered = filtered.filter(product => product.brand === this.selectedBrand);
+        console.log('После фильтра по бренду:', filtered.length);
       }
 
       // Сортировка
@@ -77,6 +96,7 @@ function controlCabinetsCatalog() {
       }
 
       this.filteredProducts = filtered;
+      console.log('Итоговое количество товаров после фильтрации:', this.filteredProducts.length);
     },
 
     formatPrice(price) {

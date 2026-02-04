@@ -102,7 +102,7 @@
   <main class="container product-detail-content">
     <div class="product-image-column">
       <div class="product-gallery-row">
-        <div class="product-thumbnails-wrapper">
+        <div class="product-thumbnails-wrapper" x-show="images.length > 1">
           <button 
             class="thumbnail-nav-btn thumbnail-nav-up" 
             @click="scrollThumbnailsUp()"
@@ -139,7 +139,14 @@
         </div>
 
         <div class="product-main-image" :class="{ 'opacity-50': loading }">
-          <img :src="images[currentIndex]" alt="Шкаф АВР 100А на 2 ввода">
+          <template x-if="images.length > 0">
+            <img :src="images[currentIndex]" alt="Шкаф АВР 100А на 2 ввода">
+          </template>
+          <template x-if="images.length === 0">
+            <div class="no-image-placeholder">
+              <p>Нет изображения</p>
+            </div>
+          </template>
           <div x-show="loading" class="loading-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,255,255,0.9); padding: 20px; border-radius: 8px;">
             <div style="text-align: center;">Загрузка...</div>
           </div>
@@ -277,16 +284,22 @@
         <div class="product-spec-options product-spec-options-currents">
           <button 
             class="spec-option"
+            :class="{ active: motorPower === '0.75', 'opacity-50': loading }"
+            @click="updateMotorPower('0.75')"
+            :disabled="loading"
+          >0.75 кВт</button>
+          <button 
+            class="spec-option"
+            :class="{ active: motorPower === '3.7', 'opacity-50': loading }"
+            @click="updateMotorPower('3.7')"
+            :disabled="loading"
+          >3.7 кВт</button>
+          <button 
+            class="spec-option"
             :class="{ active: motorPower === '7.5', 'opacity-50': loading }"
             @click="updateMotorPower('7.5')"
             :disabled="loading"
           >7.5 кВт</button>
-          <button 
-            class="spec-option"
-            :class="{ active: motorPower === '11', 'opacity-50': loading }"
-            @click="updateMotorPower('11')"
-            :disabled="loading"
-          >11 кВт</button>
           <button 
             class="spec-option"
             :class="{ active: motorPower === '15', 'opacity-50': loading }"
@@ -305,12 +318,6 @@
             @click="updateMotorPower('22')"
             :disabled="loading"
           >22 кВт</button>
-          <button 
-            class="spec-option"
-            :class="{ active: motorPower === '30', 'opacity-50': loading }"
-            @click="updateMotorPower('30')"
-            :disabled="loading"
-          >30 кВт</button>
           <button 
             class="spec-option"
             :class="{ active: motorPower === '37', 'opacity-50': loading }"
@@ -361,22 +368,16 @@
           >160 кВт</button>
           <button 
             class="spec-option"
-            :class="{ active: motorPower === '185', 'opacity-50': loading }"
-            @click="updateMotorPower('185')"
+            :class="{ active: motorPower === '200', 'opacity-50': loading }"
+            @click="updateMotorPower('200')"
             :disabled="loading"
-          >185 кВт</button>
+          >200 кВт</button>
           <button 
             class="spec-option"
             :class="{ active: motorPower === '220', 'opacity-50': loading }"
             @click="updateMotorPower('220')"
             :disabled="loading"
           >220 кВт</button>
-          <button 
-            class="spec-option"
-            :class="{ active: motorPower === '250', 'opacity-50': loading }"
-            @click="updateMotorPower('250')"
-            :disabled="loading"
-          >250 кВт</button>
         </div>
       </div>
 
@@ -547,10 +548,10 @@
             class="spec-option"
             :class="{ 
               active: (commutationType === 'single_phase_contactors' ? connectionType === 'poles' : cableConnection === 'poles'), 
-              'opacity-50': commutationType !== 'single_phase_contactors' && !isPolesToAvailable, 
-              disabled: commutationType !== 'single_phase_contactors' && !isPolesToAvailable 
+              'opacity-50': commutationType !== 'single_phase_contactors' && commutationType !== 'contactors' && !isPolesToAvailable, 
+              disabled: commutationType !== 'single_phase_contactors' && commutationType !== 'contactors' && !isPolesToAvailable 
             }"
-            :disabled="commutationType !== 'single_phase_contactors' && !isPolesToAvailable"
+            :disabled="commutationType !== 'single_phase_contactors' && commutationType !== 'contactors' && !isPolesToAvailable"
             @click="commutationType === 'single_phase_contactors' ? updateConnectionType('poles') : updateCableConnection('poles')"
           >К полюсам автомата</button>
           <button 
@@ -559,7 +560,7 @@
             @click="commutationType === 'single_phase_contactors' ? updateConnectionType('terminals') : updateCableConnection('terminals')"
           >
             На дополнительные клеммы
-            <span class="option-price-add" x-show="(commutationType === 'single_phase_contactors' && connectionType === 'terminals') || (commutationType !== 'single_phase_contactors' && shouldChargeForTerminals)">+1 000 ₽</span>
+            <span class="option-price-add" x-show="(commutationType === 'single_phase_contactors' && connectionType === 'terminals') || (commutationType !== 'single_phase_contactors' && (shouldChargeForTerminals || commutationType === 'contactors'))">+1 000 ₽</span>
           </button>
         </div>
       </div>
