@@ -492,6 +492,7 @@ document.addEventListener('alpine:init', () => {
             this.productOptions = product.options || [];
             this.fullDescription = product.full_description || product.description || '';
             this.documentation = product.documentation || [];
+            console.log('Loaded documentation:', this.documentation); // Debug log для документации
             
             if (this.commutationType === 'control_cabinet') {
               // Для шкафов управления устанавливаем параметры из продукта
