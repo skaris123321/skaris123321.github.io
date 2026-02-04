@@ -460,7 +460,7 @@ document.addEventListener('alpine:init', () => {
             this.commutationType = product.commutation_type;
             this.nominalCurrent = String(product.nominal_current);
             this.inputsCount = product.inputs_count;
-            this.polesCount = product.poles_count || 'single_phase';
+            this.polesCount = product.poles_count || (product.nominal_current <= 100 ? 'single_phase' : 'three_phase');
             
             // Устанавливаем параметры для однофазных АВР
             if (false) {
@@ -829,7 +829,7 @@ document.addEventListener('alpine:init', () => {
       get productTitle() {
         if (this.commutationType === 'contactors') {
           // Для контакторов: "Шкаф АВР 25А однофазный" или "Шкаф АВР 25А трёхфазный"
-          const phaseType = this.polesCount === 'single_phase' ? 'однофазный' : 'трёхфазный';
+          const phaseType = (this.polesCount || (parseInt(this.nominalCurrent) <= 100 ? 'single_phase' : 'three_phase')) === 'single_phase' ? 'однофазный' : 'трёхфазный';
           return `Шкаф АВР ${this.nominalCurrent || '100'}А ${phaseType}`;
         } else {
           // Для моноблочных АВР: "Шкаф АВР 100А на 2 ввода"
@@ -924,13 +924,14 @@ document.addEventListener('alpine:init', () => {
         if (this.commutationType === 'contactors') {
           // Для контакторов
           const typeCode = 'К';
-          const phaseCode = this.polesCount === 'single_phase' ? '1Ф' : '3Ф';
+          const actualPolesCount = this.polesCount || (parseInt(this.nominalCurrent) <= 100 ? 'single_phase' : 'three_phase');
+          const phaseCode = actualPolesCount === 'single_phase' ? '1Ф' : '3Ф';
           const newArticle = `АВР-${this.nominalCurrent}-${typeCode}-${phaseCode}-РОСЭК`;
           
           specs['Артикул'] = newArticle;
           specs['Производитель'] = this.manufacturerBrand || '';
           specs['Тип коммутации'] = 'Контакторы';
-          specs['Количество полюсов'] = this.polesCount === 'single_phase' ? 'Однофазные' : 'Трёхфазные';
+          specs['Количество полюсов'] = actualPolesCount === 'single_phase' ? 'Однофазные' : 'Трёхфазные';
           specs['Подключение кабеля'] = this.cableConnection === 'poles' ? 'К полюсам автомата' : 'На дополнительные клеммы';
           specs['Климатическое исполнение'] = this.climateVersion === 'UXL4' ? 'УХЛ4 - сухие теплые помещения' : 'У2 - уличное с обогревом';
         } else {
@@ -952,7 +953,8 @@ document.addEventListener('alpine:init', () => {
       // Генерируем новый артикул по формуле
       get dynamicArticle() {
         if (this.commutationType === 'contactors') {
-          const phaseCode = this.polesCount === 'single_phase' ? '1Ф' : '3Ф';
+          const actualPolesCount = this.polesCount || (parseInt(this.nominalCurrent) <= 100 ? 'single_phase' : 'three_phase');
+          const phaseCode = actualPolesCount === 'single_phase' ? '1Ф' : '3Ф';
           return `АВР-${this.nominalCurrent}-К-${phaseCode}-РОСЭК`;
         } else {
           const typeCode = 'М';
@@ -1018,25 +1020,46 @@ document.addEventListener('alpine:init', () => {
             productTitle: this.productTitle
           };
         } else {
-          // Для трехфазных АВР
-          // Генерируем новый артикул по формуле АВР-[ВВОДЫ]-[ТОК]-[К/М]-РОСЭК
-          const typeCode = this.commutationType === 'contactors' ? 'К' : 'М';
-          const newArticle = `АВР-${this.inputsCount}-${this.nominalCurrent}-${typeCode}-РОСЭК`;
-          
-          return {
-            article: newArticle,
-            manufacturerBrand: this.manufacturerBrand,
-            commutationType: this.commutationType,
-            nominalCurrent: this.nominalCurrent,
-            inputsCount: this.inputsCount,
-            cableConnection: this.cableConnection,
-            climateVersion: this.climateVersion,
-            basePrice: this.basePrice,
-            totalPrice: this.totalPrice,
-            images: this.images,
-            productSpecs: this.productSpecs,
-            productTitle: this.productTitle
-          };
+          // Для трехфазных АВР и контакторов
+          if (this.commutationType === 'contactors') {
+            // Для контакторов используем polesCount, если его нет - определяем по току
+            const actualPolesCount = this.polesCount || (parseInt(this.nominalCurrent) <= 100 ? 'single_phase' : 'three_phase');
+            const phaseCode = actualPolesCount === 'single_phase' ? '1Ф' : '3Ф';
+            const newArticle = `АВР-${this.nominalCurrent}-К-${phaseCode}-РОСЭК`;
+            
+            return {
+              article: newArticle,
+              manufacturerBrand: this.manufacturerBrand,
+              commutationType: this.commutationType,
+              nominalCurrent: this.nominalCurrent,
+              polesCount: actualPolesCount,
+              cableConnection: this.cableConnection,
+              climateVersion: this.climateVersion,
+              basePrice: this.basePrice,
+              totalPrice: this.totalPrice,
+              images: this.images,
+              productSpecs: this.productSpecs,
+              productTitle: this.productTitle
+            };
+          } else {
+            // Для моноблочных АВР используем inputsCount
+            const newArticle = `АВР-${this.inputsCount}-${this.nominalCurrent}-М-РОСЭК`;
+            
+            return {
+              article: newArticle,
+              manufacturerBrand: this.manufacturerBrand,
+              commutationType: this.commutationType,
+              nominalCurrent: this.nominalCurrent,
+              inputsCount: this.inputsCount,
+              cableConnection: this.cableConnection,
+              climateVersion: this.climateVersion,
+              basePrice: this.basePrice,
+              totalPrice: this.totalPrice,
+              images: this.images,
+              productSpecs: this.productSpecs,
+              productTitle: this.productTitle
+            };
+          }
         }
       },
 

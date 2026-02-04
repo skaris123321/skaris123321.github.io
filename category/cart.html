@@ -119,9 +119,13 @@
                       <span>Тип коммутации:</span>
                       <span class="cart-item-spec-value" x-text="item.commutationType === 'monoblock' ? 'Моноблочный АВР' : (item.commutationType === 'single_phase_contactors' ? 'Однофазные контакторы' : 'Контакторы')"></span>
                     </div>
-                    <div x-show="item.commutationType !== 'single_phase_contactors'" class="cart-item-spec">
+                    <div x-show="item.commutationType !== 'single_phase_contactors' && item.commutationType !== 'contactors'" class="cart-item-spec">
                       <span>Количество вводов:</span>
                       <span class="cart-item-spec-value" x-text="item.inputsCount"></span>
+                    </div>
+                    <div x-show="item.commutationType === 'contactors'" class="cart-item-spec">
+                      <span>Количество полюсов:</span>
+                      <span class="cart-item-spec-value" x-text="item.polesCount === 'single_phase' ? 'Однофазные' : 'Трёхфазные'"></span>
                     </div>
                     <div x-show="item.commutationType === 'single_phase_contactors'" class="cart-item-spec">
                       <span>Корпус:</span>
