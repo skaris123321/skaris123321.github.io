@@ -46,7 +46,7 @@
             <a href="#" class="dropdown-item">ВРУ</a>
             <a href="#" class="dropdown-item">ГРЩ</a>
             <a href="#" class="dropdown-item">ИБП</a>
-            <a href="#" class="dropdown-item">Шкафы управления</a>
+            <a href="control-cabinets.html" class="dropdown-item">Шкафы управления</a>
             <a href="#" class="dropdown-item">Стабилизаторы напряжения</a>
           </div>
         </div>
@@ -81,18 +81,18 @@
         <span>Каталог</span>
         <span>»</span>
         <template x-if="commutationType === 'control_cabinet'">
-          <div>
+          <span>
             <a href="control-cabinets.html">Шкафы управления</a>
             <span>»</span>
-            <span class="breadcrumbs-current">Шкафы управления</span>
-          </div>
+            <span class="breadcrumbs-current" x-text="getControlTypeDisplayName()"></span>
+          </span>
         </template>
         <template x-if="commutationType !== 'control_cabinet'">
-          <div>
+          <span>
             <a href="avr.html">АВР</a>
             <span>»</span>
-            <span class="breadcrumbs-current">АВР</span>
-          </div>
+            <span class="breadcrumbs-current" x-text="getAvrTypeDisplayName()"></span>
+          </span>
         </template>
       </div>
       <h1 class="category-title" x-text="productTitle"></h1>

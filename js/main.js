@@ -948,6 +948,25 @@ document.addEventListener('alpine:init', () => {
         }
       },
       
+      // Методы для хлебных крошек
+      getControlTypeDisplayName() {
+        const controlTypeNames = {
+          'soft_start': 'Плавный пуск',
+          'frequency_converter': 'Преобразователь частоты',
+          'direct_start': 'Прямой пуск'
+        };
+        return controlTypeNames[this.controlType] || 'Плавный пуск';
+      },
+      
+      getAvrTypeDisplayName() {
+        if (this.commutationType === 'contactors') {
+          const phaseType = (this.polesCount || (parseInt(this.nominalCurrent) <= 100 ? 'single_phase' : 'three_phase')) === 'single_phase' ? 'Однофазные' : 'Трёхфазные';
+          return `Контакторы ${phaseType}`;
+        } else {
+          return `Моноблочный АВР на ${this.inputsCount || '2'} ввода`;
+        }
+      },
+      
       // Функция для перевода английских ключей в русские (если они попали в данные)
       translateSpecKey(key) {
         const translations = {
