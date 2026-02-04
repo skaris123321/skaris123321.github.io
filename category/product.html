@@ -205,12 +205,14 @@
             :disabled="loading"
           >TDM</button>
           <button 
+            x-show="commutationType === 'control_cabinet'"
             class="spec-option"
             :class="{ active: manufacturerBrand === 'VEDA', 'opacity-50': loading }"
             @click="updateManufacturerBrand('VEDA')"
             :disabled="loading"
           >VEDA</button>
           <button 
+            x-show="commutationType === 'control_cabinet'"
             class="spec-option"
             :class="{ active: manufacturerBrand === 'Systeme electric', 'opacity-50': loading }"
             @click="updateManufacturerBrand('Systeme electric')"

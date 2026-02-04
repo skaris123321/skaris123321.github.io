@@ -180,6 +180,17 @@ document.addEventListener('alpine:init', () => {
         }
         const brands = [...new Set(this.products.map(p => p.brand).filter(Boolean))];
         return brands.sort();
+      },
+      
+      getSelectedSubcategory() {
+        if (this.selectedCommutationType === 'contactors') {
+          return 'АВР на контакторах';
+        } else if (this.selectedCommutationType === 'monoblock' && this.selectedInputs === '2') {
+          return 'Шкафы АВР на 2 ввода';
+        } else if (this.selectedCommutationType === 'monoblock' && this.selectedInputs === '3') {
+          return 'Шкафы АВР на 3 ввода';
+        }
+        return null;
       }
     };
   });
