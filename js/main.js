@@ -37,12 +37,14 @@ if (typeof ProductsAPI !== 'undefined') {
 
     async getAvailableOptions(filters = {}) {
       const data = await this.loadProducts();
-      const { manufacturer_brand, commutation_type, inputs_count, enclosure_type, connection_type, climate_type } = filters;
+      const { manufacturer_brand, commutation_type, inputs_count, control_type, motor_power, enclosure_type, connection_type, climate_type } = filters;
 
       let filtered = data.products;
       if (manufacturer_brand) filtered = filtered.filter(p => p.brand === manufacturer_brand);
       if (commutation_type) filtered = filtered.filter(p => p.commutation_type === commutation_type);
       if (inputs_count) filtered = filtered.filter(p => p.inputs_count === inputs_count);
+      if (control_type) filtered = filtered.filter(p => p.control_type === control_type);
+      if (motor_power) filtered = filtered.filter(p => parseFloat(p.motor_power) === parseFloat(motor_power));
       if (enclosure_type) filtered = filtered.filter(p => p.enclosure_type === enclosure_type);
       if (connection_type) filtered = filtered.filter(p => p.connection_type === connection_type);
       if (climate_type) filtered = filtered.filter(p => p.climate_type === climate_type);
@@ -52,6 +54,8 @@ if (typeof ProductsAPI !== 'undefined') {
         commutation_type: [],
         inputs_count: [],
         nominal_current: [],
+        control_type: [],
+        motor_power: [],
         enclosure_type: [],
         connection_type: [],
         climate_type: []
@@ -66,14 +70,29 @@ if (typeof ProductsAPI !== 'undefined') {
       if (commutation_type) inputsProducts = inputsProducts.filter(p => p.commutation_type === commutation_type);
       opts.inputs_count = [...new Set(inputsProducts.map(p => p.inputs_count).filter(Boolean))].sort((a, b) => String(a).localeCompare(String(b)));
 
-      let currentProducts = data.products;
-      if (manufacturer_brand) currentProducts = currentProducts.filter(p => p.brand === manufacturer_brand);
-      if (commutation_type) currentProducts = currentProducts.filter(p => p.commutation_type === commutation_type);
-      if (inputs_count) currentProducts = currentProducts.filter(p => p.inputs_count === inputs_count);
-      if (enclosure_type) currentProducts = currentProducts.filter(p => p.enclosure_type === enclosure_type);
-      if (connection_type) currentProducts = currentProducts.filter(p => p.connection_type === connection_type);
-      if (climate_type) currentProducts = currentProducts.filter(p => p.climate_type === climate_type);
-      opts.nominal_current = [...new Set(currentProducts.map(p => parseInt(p.nominal_current)).filter(Boolean))].sort((a, b) => a - b);
+      // Для шкафов управления добавляем опции control_type и motor_power
+      if (commutation_type === 'control_cabinet') {
+        let controlTypeProducts = data.products;
+        if (manufacturer_brand) controlTypeProducts = controlTypeProducts.filter(p => p.brand === manufacturer_brand);
+        if (commutation_type) controlTypeProducts = controlTypeProducts.filter(p => p.commutation_type === commutation_type);
+        opts.control_type = [...new Set(controlTypeProducts.map(p => p.control_type).filter(Boolean))].sort();
+
+        let motorPowerProducts = data.products;
+        if (manufacturer_brand) motorPowerProducts = motorPowerProducts.filter(p => p.brand === manufacturer_brand);
+        if (commutation_type) motorPowerProducts = motorPowerProducts.filter(p => p.commutation_type === commutation_type);
+        if (control_type) motorPowerProducts = motorPowerProducts.filter(p => p.control_type === control_type);
+        opts.motor_power = [...new Set(motorPowerProducts.map(p => parseFloat(p.motor_power)).filter(Boolean))].sort((a, b) => a - b);
+      } else {
+        // Для АВР добавляем nominal_current
+        let currentProducts = data.products;
+        if (manufacturer_brand) currentProducts = currentProducts.filter(p => p.brand === manufacturer_brand);
+        if (commutation_type) currentProducts = currentProducts.filter(p => p.commutation_type === commutation_type);
+        if (inputs_count) currentProducts = currentProducts.filter(p => p.inputs_count === inputs_count);
+        if (enclosure_type) currentProducts = currentProducts.filter(p => p.enclosure_type === enclosure_type);
+        if (connection_type) currentProducts = currentProducts.filter(p => p.connection_type === connection_type);
+        if (climate_type) currentProducts = currentProducts.filter(p => p.climate_type === climate_type);
+        opts.nominal_current = [...new Set(currentProducts.map(p => parseInt(p.nominal_current)).filter(Boolean))].sort((a, b) => a - b);
+      }
 
       // Опции для контакторов - используем poles_count вместо inputs_count
       if (commutation_type === 'contactors') {
@@ -100,11 +119,13 @@ if (typeof ProductsAPI !== 'undefined') {
           product: {
             id: product.id,
             article: product.article || '',
-            nominal_current: parseInt(product.nominal_current),
+            nominal_current: parseInt(product.nominal_current || 0),
             commutation_type: product.commutation_type,
             manufacturer_brand: product.brand,
             inputs_count: product.inputs_count,
             poles_count: product.poles_count,
+            control_type: product.control_type,
+            motor_power: product.motor_power,
             enclosure_type: product.enclosure_type || null,
             connection_type: product.connection_type || null,
             climate_type: product.climate_type || null,
@@ -120,13 +141,26 @@ if (typeof ProductsAPI !== 'undefined') {
         };
       }
       
-      // Иначе ищем по фильтрам (старая логика)
-      const { nominal_current, commutation_type, manufacturer_brand, inputs_count, poles_count, enclosure_type, connection_type, climate_type } = filters;
+      // Иначе ищем по фильтрам
+      const { nominal_current, commutation_type, manufacturer_brand, inputs_count, poles_count, control_type, motor_power, enclosure_type, connection_type, climate_type } = filters;
 
-      if (!nominal_current) throw new Error('nominal_current required');
+      // Для шкафов управления требуется motor_power вместо nominal_current
+      if (commutation_type === 'control_cabinet' && !motor_power) {
+        throw new Error('motor_power required for control cabinets');
+      } else if (commutation_type !== 'control_cabinet' && !nominal_current) {
+        throw new Error('nominal_current required');
+      }
 
       const product = data.products.find(p => {
-        if (parseInt(p.nominal_current) !== parseInt(nominal_current)) return false;
+        if (commutation_type === 'control_cabinet') {
+          // Для шкафов управления
+          if (parseFloat(p.motor_power) !== parseFloat(motor_power)) return false;
+          if (control_type && p.control_type !== control_type) return false;
+        } else {
+          // Для АВР
+          if (parseInt(p.nominal_current) !== parseInt(nominal_current)) return false;
+        }
+        
         if (commutation_type && p.commutation_type !== commutation_type) return false;
         if (manufacturer_brand && p.brand !== manufacturer_brand) return false;
         if (inputs_count && p.inputs_count !== inputs_count) return false;
@@ -144,11 +178,13 @@ if (typeof ProductsAPI !== 'undefined') {
         product: {
           id: product.id,
           article: product.article || '',
-          nominal_current: parseInt(product.nominal_current),
+          nominal_current: parseInt(product.nominal_current || 0),
           commutation_type: product.commutation_type,
           manufacturer_brand: product.brand,
           inputs_count: product.inputs_count,
           poles_count: product.poles_count,
+          control_type: product.control_type,
+          motor_power: product.motor_power,
           enclosure_type: product.enclosure_type || null,
           connection_type: product.connection_type || null,
           climate_type: product.climate_type || null,
@@ -189,6 +225,9 @@ document.addEventListener('alpine:init', () => {
       enclosureType: '19inch', // '19inch' или 'wall'
       connectionType: 'poles', // 'poles' или 'terminals'
       climateType: 'UHL4', // 'UHL4' или 'U2'
+      // Параметры для шкафов управления
+      controlType: 'soft_start', // 'soft_start', 'frequency_converter', 'direct_start'
+      motorPower: '7.5', // мощность двигателя для шкафов управления
       basePrice: 87900,
       article: 'АВР-100-CHINT-2',
       loading: false,
@@ -230,18 +269,33 @@ document.addEventListener('alpine:init', () => {
             }
           }
           
-          // Убеждаемся, что количество вводов доступно
-          if (!this.isOptionAvailable('inputs_count', this.inputsCount)) {
-            if (this.availableOptions.inputs_count?.[0]) {
-              this.inputsCount = this.availableOptions.inputs_count[0];
-              await this.loadAvailableOptions();
+          if (this.commutationType === 'control_cabinet') {
+            // Для шкафов управления проверяем control_type и motor_power
+            if (!this.isOptionAvailable('control_type', this.controlType)) {
+              if (this.availableOptions.control_type?.[0]) {
+                this.controlType = this.availableOptions.control_type[0];
+                await this.loadAvailableOptions();
+              }
             }
-          }
-          
-          // Убеждаемся, что номинальный ток доступен
-          if (!this.isOptionAvailable('nominal_current', this.nominalCurrent)) {
-            if (this.availableOptions.nominal_current?.[0]) {
-              this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
+            
+            if (!this.isOptionAvailable('motor_power', this.motorPower)) {
+              if (this.availableOptions.motor_power?.[0]) {
+                this.motorPower = String(this.availableOptions.motor_power[0]);
+              }
+            }
+          } else {
+            // Для АВР проверяем inputs_count и nominal_current
+            if (!this.isOptionAvailable('inputs_count', this.inputsCount)) {
+              if (this.availableOptions.inputs_count?.[0]) {
+                this.inputsCount = this.availableOptions.inputs_count[0];
+                await this.loadAvailableOptions();
+              }
+            }
+            
+            if (!this.isOptionAvailable('nominal_current', this.nominalCurrent)) {
+              if (this.availableOptions.nominal_current?.[0]) {
+                this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
+              }
             }
           }
           
@@ -261,16 +315,24 @@ document.addEventListener('alpine:init', () => {
           if (this.manufacturerBrand) filters.manufacturer_brand = this.manufacturerBrand;
           if (this.commutationType) filters.commutation_type = this.commutationType;
           
-          // Для контакторов используем poles_count, для остальных - inputs_count
-          if (this.commutationType === 'contactors') {
-            if (this.polesCount) filters.poles_count = this.polesCount;
+          if (this.commutationType === 'control_cabinet') {
+            // Для шкафов управления используем control_type и motor_power
+            if (this.controlType) filters.control_type = this.controlType;
+            if (this.motorPower) filters.motor_power = this.motorPower;
+            filters.inputs_count = '1'; // Всегда 1 для шкафов управления
           } else {
-            if (this.inputsCount) filters.inputs_count = this.inputsCount;
+            // Для АВР используем старые фильтры
+            // Для контакторов используем poles_count, для остальных - inputs_count
+            if (this.commutationType === 'contactors') {
+              if (this.polesCount) filters.poles_count = this.polesCount;
+            } else {
+              if (this.inputsCount) filters.inputs_count = this.inputsCount;
+            }
+            
+            if (this.enclosureType) filters.enclosure_type = this.enclosureType;
+            if (this.connectionType) filters.connection_type = this.connectionType;
+            if (this.climateType) filters.climate_type = this.climateType;
           }
-          
-          if (this.enclosureType) filters.enclosure_type = this.enclosureType;
-          if (this.connectionType) filters.connection_type = this.connectionType;
-          if (this.climateType) filters.climate_type = this.climateType;
 
           const data = await productsAPI.getAvailableOptions(filters);
           
@@ -281,6 +343,8 @@ document.addEventListener('alpine:init', () => {
               manufacturer_brand: data.available_options.manufacturer_brand || [],
               inputs_count: data.available_options.inputs_count || [],
               poles_count: data.available_options.poles_count || [],
+              control_type: data.available_options.control_type || [],
+              motor_power: data.available_options.motor_power || [],
               enclosure_type: data.available_options.enclosure_type || [],
               connection_type: data.available_options.connection_type || [],
               climate_type: data.available_options.climate_type || []
@@ -294,6 +358,8 @@ document.addEventListener('alpine:init', () => {
               manufacturer_brand: [],
               inputs_count: [],
               poles_count: [],
+              control_type: [],
+              motor_power: [],
               enclosure_type: [],
               connection_type: [],
               climate_type: []
@@ -307,6 +373,8 @@ document.addEventListener('alpine:init', () => {
             manufacturer_brand: [],
             inputs_count: [],
             poles_count: [],
+            control_type: [],
+            motor_power: [],
             enclosure_type: [],
             connection_type: [],
             climate_type: []
@@ -346,22 +414,31 @@ document.addEventListener('alpine:init', () => {
 
           const filters = {
             manufacturer_brand: this.manufacturerBrand,
-            commutation_type: this.commutationType,
-            nominal_current: this.nominalCurrent
+            commutation_type: this.commutationType
           };
           
-          // Для контакторов используем poles_count, для остальных - inputs_count
-          if (this.commutationType === 'contactors') {
-            filters.poles_count = this.polesCount;
+          if (this.commutationType === 'control_cabinet') {
+            // Для шкафов управления используем motor_power и control_type
+            filters.motor_power = this.motorPower;
+            filters.control_type = this.controlType;
+            filters.inputs_count = '1'; // Всегда 1 для шкафов управления
           } else {
-            filters.inputs_count = this.inputsCount;
-          }
-          
-          // Добавляем фильтры для однофазных АВР
-          if (false) {
-            filters.enclosure_type = this.enclosureType;
-            filters.connection_type = this.connectionType;
-            filters.climate_type = this.climateType;
+            // Для АВР используем nominal_current
+            filters.nominal_current = this.nominalCurrent;
+            
+            // Для контакторов используем poles_count, для остальных - inputs_count
+            if (this.commutationType === 'contactors') {
+              filters.poles_count = this.polesCount;
+            } else {
+              filters.inputs_count = this.inputsCount;
+            }
+            
+            // Добавляем фильтры для однофазных АВР
+            if (false) {
+              filters.enclosure_type = this.enclosureType;
+              filters.connection_type = this.connectionType;
+              filters.climate_type = this.climateType;
+            }
           }
 
           const data = await productsAPI.getProduct(filters);
@@ -401,14 +478,22 @@ document.addEventListener('alpine:init', () => {
             this.fullDescription = product.full_description || product.description || '';
             this.documentation = product.documentation || [];
             
-            this.nominalCurrent = String(product.nominal_current);
-            this.commutationType = product.commutation_type;
-            this.manufacturerBrand = product.manufacturer_brand;
-            this.inputsCount = product.inputs_count;
-            
-            const current = parseInt(product.nominal_current);
-            if (current >= 100 && current <= 800) {
-              this.cableConnection = 'terminals';
+            if (this.commutationType === 'control_cabinet') {
+              // Для шкафов управления устанавливаем параметры из продукта
+              this.motorPower = String(product.motor_power);
+              this.controlType = product.control_type;
+              this.manufacturerBrand = product.manufacturer_brand;
+            } else {
+              // Для АВР устанавливаем параметры из продукта
+              this.nominalCurrent = String(product.nominal_current);
+              this.commutationType = product.commutation_type;
+              this.manufacturerBrand = product.manufacturer_brand;
+              this.inputsCount = product.inputs_count;
+              
+              const current = parseInt(product.nominal_current);
+              if (current >= 100 && current <= 800) {
+                this.cableConnection = 'terminals';
+              }
             }
             
             // Сбрасываем индекс изображения
@@ -423,8 +508,8 @@ document.addEventListener('alpine:init', () => {
               const productData = {
                 name: this.productTitle,
                 manufacturer: this.manufacturerBrand,
-                current: parseInt(this.nominalCurrent),
-                inputs: parseInt(this.inputsCount),
+                current: parseInt(this.nominalCurrent || 0),
+                inputs: parseInt(this.inputsCount || 1),
                 commutation_type: this.commutationType
               };
               await window.documentsManager.loadDocuments(productData);
@@ -458,15 +543,23 @@ document.addEventListener('alpine:init', () => {
             // Устанавливаем параметры товара
             this.manufacturerBrand = product.manufacturer_brand;
             this.commutationType = product.commutation_type;
-            this.nominalCurrent = String(product.nominal_current);
-            this.inputsCount = product.inputs_count;
-            this.polesCount = product.poles_count || (product.nominal_current <= 100 ? 'single_phase' : 'three_phase');
             
-            // Устанавливаем параметры для однофазных АВР
-            if (false) {
-              this.enclosureType = product.enclosure_type || '19inch';
-              this.connectionType = product.connection_type || 'poles';
-              this.climateType = product.climate_type || 'UHL4';
+            if (product.commutation_type === 'control_cabinet') {
+              // Для шкафов управления
+              this.controlType = product.control_type || 'soft_start';
+              this.motorPower = String(product.motor_power || '7.5');
+            } else {
+              // Для АВР
+              this.nominalCurrent = String(product.nominal_current);
+              this.inputsCount = product.inputs_count;
+              this.polesCount = product.poles_count || (product.nominal_current <= 100 ? 'single_phase' : 'three_phase');
+              
+              // Устанавливаем параметры для однофазных АВР
+              if (false) {
+                this.enclosureType = product.enclosure_type || '19inch';
+                this.connectionType = product.connection_type || 'poles';
+                this.climateType = product.climate_type || 'UHL4';
+              }
             }
             
             // Обновляем данные товара
@@ -535,22 +628,31 @@ document.addEventListener('alpine:init', () => {
 
           const filters = {
             manufacturer_brand: this.manufacturerBrand,
-            commutation_type: this.commutationType,
-            nominal_current: this.nominalCurrent
+            commutation_type: this.commutationType
           };
           
-          // Для контакторов используем poles_count, для остальных - inputs_count
-          if (this.commutationType === 'contactors') {
-            filters.poles_count = this.polesCount;
+          // Для шкафов управления используем motor_power и control_type
+          if (this.commutationType === 'control_cabinet') {
+            filters.motor_power = this.motorPower;
+            filters.control_type = this.controlType;
+            filters.inputs_count = '1'; // Всегда 1 для шкафов управления
           } else {
-            filters.inputs_count = this.inputsCount;
-          }
-          
-          // Добавляем фильтры для однофазных АВР
-          if (false) {
-            filters.enclosure_type = this.enclosureType;
-            filters.connection_type = this.connectionType;
-            filters.climate_type = this.climateType;
+            // Для АВР используем nominal_current
+            filters.nominal_current = this.nominalCurrent;
+            
+            // Для контакторов используем poles_count, для остальных - inputs_count
+            if (this.commutationType === 'contactors') {
+              filters.poles_count = this.polesCount;
+            } else {
+              filters.inputs_count = this.inputsCount;
+            }
+            
+            // Добавляем фильтры для однофазных АВР
+            if (false) {
+              filters.enclosure_type = this.enclosureType;
+              filters.connection_type = this.connectionType;
+              filters.climate_type = this.climateType;
+            }
           }
 
           const data = await productsAPI.getProduct(filters);
@@ -827,7 +929,16 @@ document.addEventListener('alpine:init', () => {
       },
       
       get productTitle() {
-        if (this.commutationType === 'contactors') {
+        if (this.commutationType === 'control_cabinet') {
+          // Для шкафов управления: "Шкаф управления с плавным пуском 7.5 кВт"
+          const controlTypeNames = {
+            'soft_start': 'с плавным пуском',
+            'frequency_converter': 'с преобразователем частоты',
+            'direct_start': 'с прямым пуском'
+          };
+          const controlTypeName = controlTypeNames[this.controlType] || 'с плавным пуском';
+          return `Шкаф управления ${controlTypeName} ${this.motorPower || '7.5'} кВт`;
+        } else if (this.commutationType === 'contactors') {
           // Для контакторов: "Шкаф АВР 25А однофазный" или "Шкаф АВР 25А трёхфазный"
           const phaseType = (this.polesCount || (parseInt(this.nominalCurrent) <= 100 ? 'single_phase' : 'three_phase')) === 'single_phase' ? 'однофазный' : 'трёхфазный';
           return `Шкаф АВР ${this.nominalCurrent || '100'}А ${phaseType}`;
@@ -921,7 +1032,15 @@ document.addEventListener('alpine:init', () => {
           specs[translatedKey] = normalizedValue;
         }
         
-        if (this.commutationType === 'contactors') {
+        if (this.commutationType === 'control_cabinet') {
+          // Для шкафов управления
+          specs['Артикул'] = this.article;
+          specs['Производитель'] = this.manufacturerBrand || '';
+          specs['Количество вводов'] = '1';
+          specs['Мощность двигателя'] = this.motorPower + ' кВт';
+          specs['Количество фаз'] = '3';
+          specs['Степень защиты'] = 'IP31';
+        } else if (this.commutationType === 'contactors') {
           // Для контакторов
           const typeCode = 'К';
           const actualPolesCount = this.polesCount || (parseInt(this.nominalCurrent) <= 100 ? 'single_phase' : 'three_phase');
@@ -1013,6 +1132,21 @@ document.addEventListener('alpine:init', () => {
             enclosureType: this.enclosureType,
             connectionType: this.connectionType,
             climateType: this.climateType,
+            basePrice: this.basePrice,
+            totalPrice: this.totalPrice,
+            images: this.images,
+            productSpecs: this.productSpecs,
+            productTitle: this.productTitle
+          };
+        } else if (this.commutationType === 'control_cabinet') {
+          // Для шкафов управления
+          return {
+            article: this.article,
+            manufacturerBrand: this.manufacturerBrand,
+            commutationType: this.commutationType,
+            controlType: this.controlType,
+            motorPower: this.motorPower,
+            inputsCount: '1', // Всегда 1 для шкафов управления
             basePrice: this.basePrice,
             totalPrice: this.totalPrice,
             images: this.images,
@@ -1388,6 +1522,36 @@ document.addEventListener('alpine:init', () => {
         } finally {
           this.loading = false;
         }
+      },
+      
+      // Метод для обновления типа управления (для шкафов управления)
+      async updateControlType(value) {
+        if (this.loading) return;
+        this.loading = true;
+        this.controlType = value;
+        
+        try {
+          await this.loadAvailableOptions();
+          
+          // Выбираем первую доступную мощность двигателя
+          if (this.availableOptions.motor_power && this.availableOptions.motor_power.length > 0) {
+            this.motorPower = String(this.availableOptions.motor_power[0]);
+          }
+          
+          await this.loadProductByCharacteristics();
+          this.updateCartQuantity();
+        } finally {
+          this.loading = false;
+        }
+      },
+      
+      // Метод для обновления мощности двигателя (для шкафов управления)
+      async updateMotorPower(value) {
+        if (this.loading) return;
+        this.motorPower = value;
+        
+        await this.loadProductByCharacteristics();
+        this.updateCartQuantity();
       }
     };
   });
