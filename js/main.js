@@ -1054,7 +1054,7 @@ document.addEventListener('alpine:init', () => {
         
         if (this.commutationType === 'control_cabinet') {
           // Для шкафов управления
-          specs['Артикул'] = this.article;
+          specs['Артикул'] = this.dynamicArticle;
           specs['Производитель'] = this.manufacturerBrand || '';
           specs['Количество вводов'] = '1';
           specs['Мощность двигателя'] = this.motorPower + ' кВт';
@@ -1091,7 +1091,10 @@ document.addEventListener('alpine:init', () => {
 
       // Генерируем новый артикул по формуле
       get dynamicArticle() {
-        if (this.commutationType === 'contactors') {
+        if (this.commutationType === 'control_cabinet') {
+          // Для шкафов управления: ШУ-ПП-{мощность}-1-РОСЭК
+          return `ШУ-ПП-${this.motorPower}-1-РОСЭК`;
+        } else if (this.commutationType === 'contactors') {
           const actualPolesCount = this.polesCount || (parseInt(this.nominalCurrent) <= 100 ? 'single_phase' : 'three_phase');
           const phaseCode = actualPolesCount === 'single_phase' ? '1Ф' : '3Ф';
           return `АВР-${this.nominalCurrent}-К-${phaseCode}-РОСЭК`;
@@ -1118,7 +1121,7 @@ document.addEventListener('alpine:init', () => {
       },
       
       copyArticle() {
-        navigator.clipboard.writeText(this.article).then(() => {
+        navigator.clipboard.writeText(this.dynamicArticle).then(() => {
           alert('Артикул скопирован!');
         }).catch(err => {
           console.error('Ошибка копирования:', err);
@@ -1161,7 +1164,7 @@ document.addEventListener('alpine:init', () => {
         } else if (this.commutationType === 'control_cabinet') {
           // Для шкафов управления
           return {
-            article: this.article,
+            article: this.dynamicArticle,
             manufacturerBrand: this.manufacturerBrand,
             commutationType: this.commutationType,
             controlType: this.controlType,
