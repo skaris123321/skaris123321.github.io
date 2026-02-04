@@ -881,16 +881,6 @@ document.addEventListener('alpine:init', () => {
         }
       },
       
-      // Метод для диагностики проблем с локализацией
-      debugSpecs() {
-        console.log('=== SPECS DEBUG INFO ===');
-        console.log('Raw productSpecs:', this.productSpecs);
-        console.log('Processed allSelectedSpecs:', this.allSelectedSpecs);
-        console.log('Current product ID:', this.currentProductId);
-        console.log('Current commutation type:', this.commutationType);
-        console.log('========================');
-      },
-
       // Функция для перевода английских ключей в русские (если они попали в данные)
       translateSpecKey(key) {
         const translations = {
@@ -906,7 +896,14 @@ document.addEventListener('alpine:init', () => {
           'Protection': 'Степень защиты корпуса',
           'Rated_current': 'Номинальный ток',
           'Rated_voltage': 'Номинальное рабочее напряжение',
-          'Enclosure_protection': 'Степень защиты корпуса'
+          'Enclosure_protection': 'Степень защиты корпуса',
+          // Дополнительные варианты
+          'voltage': 'Номинальное рабочее напряжение',
+          'gabarity': 'Габариты',
+          'ip': 'Степень защиты корпуса',
+          'nominal_current': 'Номинальный ток',
+          'dimensions': 'Габариты',
+          'current': 'Номинальный ток'
         };
         return translations[key] || key;
       },
@@ -942,6 +939,14 @@ document.addEventListener('alpine:init', () => {
         const rawSpecs = this.productSpecs ? { ...this.productSpecs } : {};
         const specs = {};
         
+        // Если это контактор и у него нет specs или specs пустая, добавляем дефолтные характеристики
+        if (this.commutationType === 'contactors' && Object.keys(rawSpecs).length === 0) {
+          // Дефолтные характеристики для контакторов
+          rawSpecs['Габариты'] = '600х500х250 мм';
+          rawSpecs['Номинальный ток'] = this.nominalCurrent + 'А';
+          rawSpecs['Степень защиты корпуса'] = 'IP31';
+        }
+        
         // Переводим ключи, если они на английском, и нормализуем значения
         for (const [key, value] of Object.entries(rawSpecs)) {
           const translatedKey = this.translateSpecKey(key);
@@ -951,7 +956,9 @@ document.addEventListener('alpine:init', () => {
           if (this.commutationType === 'contactors' && 
               (translatedKey === 'Номинальное рабочее напряжение' || 
                translatedKey === 'Voltage' || 
-               key === 'Номинальное рабочее напряжение')) {
+               key === 'Номинальное рабочее напряжение' ||
+               key === 'Voltage' ||
+               key === 'voltage')) {
             continue; // Пропускаем это поле для контакторов
           }
           
