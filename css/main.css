@@ -2809,3 +2809,72 @@ h1.category-title {
     gap: 0.25rem;
   }
 }
+
+/* Специальные стили для кнопок мощности двигателя */
+.product-spec-options-currents .spec-option {
+  min-width: 80px !important;
+  height: 3rem !important;
+  min-height: 3rem !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.product-spec-options-currents .spec-option:hover {
+  background: #f3f4f6 !important;
+  border-color: #d1d5db !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-spec-options-currents .spec-option.active {
+  background: #eff6ff !important;
+  border-color: #3b82f6 !important;
+  color: #3b82f6 !important;
+  font-weight: 600 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Улучшенная сетка для кнопок мощности */
+.product-spec-options-currents {
+  grid-template-columns: repeat(6, 1fr) !important;
+  gap: 0.75rem !important;
+}
+
+@media (max-width: 1280px) {
+  .product-spec-options-currents {
+    grid-template-columns: repeat(5, 1fr) !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .product-spec-options-currents {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-spec-options-currents {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .product-spec-options-currents {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .product-spec-options-currents .spec-option {
+    min-width: 70px !important;
+    font-size: 0.8125rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-spec-options-currents {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
