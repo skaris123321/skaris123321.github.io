@@ -113,6 +113,13 @@ function controlCabinetsCatalog() {
           controlType: product.control_type,
           manufacturerBrand: product.brand
         });
+        
+        // Для прямого пуска добавляем дополнительные параметры
+        if (product.control_type === 'direct_start') {
+          params.append('startType', product.start_type || 'direct_start');
+          params.append('pumpCount', product.pump_count || '1');
+        }
+        
         return `product.html?${params.toString()}`;
       }
       // Для остальных товаров используем ID

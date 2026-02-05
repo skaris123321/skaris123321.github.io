@@ -282,102 +282,223 @@
       <div x-show="commutationType === 'control_cabinet'" class="product-spec-group">
         <div class="product-spec-label">Мощность двигателя</div>
         <div class="product-spec-options product-spec-options-currents">
+          <!-- Мощности для преобразователей частоты -->
+          <template x-if="controlType === 'frequency_converter'">
+            <div style="display: contents;">
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '0.75', 'opacity-50': loading }"
+                @click="updateMotorPower('0.75')"
+                :disabled="loading"
+              >0.75 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '3.7', 'opacity-50': loading }"
+                @click="updateMotorPower('3.7')"
+                :disabled="loading"
+              >3.7 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '7.5', 'opacity-50': loading }"
+                @click="updateMotorPower('7.5')"
+                :disabled="loading"
+              >7.5 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '15', 'opacity-50': loading }"
+                @click="updateMotorPower('15')"
+                :disabled="loading"
+              >15 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '18.5', 'opacity-50': loading }"
+                @click="updateMotorPower('18.5')"
+                :disabled="loading"
+              >18.5 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '22', 'opacity-50': loading }"
+                @click="updateMotorPower('22')"
+                :disabled="loading"
+              >22 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '37', 'opacity-50': loading }"
+                @click="updateMotorPower('37')"
+                :disabled="loading"
+              >37 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '45', 'opacity-50': loading }"
+                @click="updateMotorPower('45')"
+                :disabled="loading"
+              >45 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '55', 'opacity-50': loading }"
+                @click="updateMotorPower('55')"
+                :disabled="loading"
+              >55 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '75', 'opacity-50': loading }"
+                @click="updateMotorPower('75')"
+                :disabled="loading"
+              >75 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '90', 'opacity-50': loading }"
+                @click="updateMotorPower('90')"
+                :disabled="loading"
+              >90 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '110', 'opacity-50': loading }"
+                @click="updateMotorPower('110')"
+                :disabled="loading"
+              >110 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '132', 'opacity-50': loading }"
+                @click="updateMotorPower('132')"
+                :disabled="loading"
+              >132 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '160', 'opacity-50': loading }"
+                @click="updateMotorPower('160')"
+                :disabled="loading"
+              >160 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '200', 'opacity-50': loading }"
+                @click="updateMotorPower('200')"
+                :disabled="loading"
+              >200 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '220', 'opacity-50': loading }"
+                @click="updateMotorPower('220')"
+                :disabled="loading"
+              >220 кВт</button>
+            </div>
+          </template>
+          
+          <!-- Мощности для прямого пуска -->
+          <template x-if="controlType === 'direct_start'">
+            <div style="display: contents;">
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '1.5', 'opacity-50': loading }"
+                @click="updateMotorPower('1.5')"
+                :disabled="loading"
+              >1.5 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '2.2', 'opacity-50': loading }"
+                @click="updateMotorPower('2.2')"
+                :disabled="loading"
+              >2.2 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '3', 'opacity-50': loading }"
+                @click="updateMotorPower('3')"
+                :disabled="loading"
+              >3 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '4', 'opacity-50': loading }"
+                @click="updateMotorPower('4')"
+                :disabled="loading"
+              >4 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '5.5', 'opacity-50': loading }"
+                @click="updateMotorPower('5.5')"
+                :disabled="loading"
+              >5.5 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '7.5', 'opacity-50': loading }"
+                @click="updateMotorPower('7.5')"
+                :disabled="loading"
+              >7.5 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '11', 'opacity-50': loading }"
+                @click="updateMotorPower('11')"
+                :disabled="loading"
+              >11 кВт</button>
+            </div>
+          </template>
+          
+          <!-- Мощности для других типов (плавный пуск и т.д.) -->
+          <template x-if="controlType !== 'frequency_converter' && controlType !== 'direct_start'">
+            <div style="display: contents;">
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '7.5', 'opacity-50': loading }"
+                @click="updateMotorPower('7.5')"
+                :disabled="loading"
+              >7.5 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '11', 'opacity-50': loading }"
+                @click="updateMotorPower('11')"
+                :disabled="loading"
+              >11 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '15', 'opacity-50': loading }"
+                @click="updateMotorPower('15')"
+                :disabled="loading"
+              >15 кВт</button>
+            </div>
+          </template>
+        </div>
+      </div>
+
+      <!-- Тип пуска для шкафов управления с прямым пуском -->
+      <div x-show="commutationType === 'control_cabinet' && controlType === 'direct_start'" class="product-spec-group">
+        <div class="product-spec-label">Тип пуска</div>
+        <div class="product-spec-options">
           <button 
             class="spec-option"
-            :class="{ active: motorPower === '0.75', 'opacity-50': loading }"
-            @click="updateMotorPower('0.75')"
+            :class="{ active: startType === 'direct_start', 'opacity-50': loading }"
+            @click="updateStartType('direct_start')"
             :disabled="loading"
-          >0.75 кВт</button>
+          >Прямой пуск</button>
           <button 
             class="spec-option"
-            :class="{ active: motorPower === '3.7', 'opacity-50': loading }"
-            @click="updateMotorPower('3.7')"
+            :class="{ active: startType === 'frequency_control', 'opacity-50': loading }"
+            @click="updateStartType('frequency_control')"
             :disabled="loading"
-          >3.7 кВт</button>
+          >Частотное регулирование</button>
           <button 
             class="spec-option"
-            :class="{ active: motorPower === '7.5', 'opacity-50': loading }"
-            @click="updateMotorPower('7.5')"
+            :class="{ active: startType === 'soft_start', 'opacity-50': loading }"
+            @click="updateStartType('soft_start')"
             :disabled="loading"
-          >7.5 кВт</button>
+          >Плавный пуск</button>
+        </div>
+      </div>
+
+      <!-- Количество насосов для шкафов управления с прямым пуском -->
+      <div x-show="commutationType === 'control_cabinet' && controlType === 'direct_start'" class="product-spec-group">
+        <div class="product-spec-label">Количество насосов</div>
+        <div class="product-spec-options">
           <button 
             class="spec-option"
-            :class="{ active: motorPower === '15', 'opacity-50': loading }"
-            @click="updateMotorPower('15')"
+            :class="{ active: pumpCount === '1', 'opacity-50': loading }"
+            @click="updatePumpCount('1')"
             :disabled="loading"
-          >15 кВт</button>
+          >1 насос</button>
           <button 
             class="spec-option"
-            :class="{ active: motorPower === '18.5', 'opacity-50': loading }"
-            @click="updateMotorPower('18.5')"
+            :class="{ active: pumpCount === '2', 'opacity-50': loading }"
+            @click="updatePumpCount('2')"
             :disabled="loading"
-          >18.5 кВт</button>
-          <button 
-            class="spec-option"
-            :class="{ active: motorPower === '22', 'opacity-50': loading }"
-            @click="updateMotorPower('22')"
-            :disabled="loading"
-          >22 кВт</button>
-          <button 
-            class="spec-option"
-            :class="{ active: motorPower === '37', 'opacity-50': loading }"
-            @click="updateMotorPower('37')"
-            :disabled="loading"
-          >37 кВт</button>
-          <button 
-            class="spec-option"
-            :class="{ active: motorPower === '45', 'opacity-50': loading }"
-            @click="updateMotorPower('45')"
-            :disabled="loading"
-          >45 кВт</button>
-          <button 
-            class="spec-option"
-            :class="{ active: motorPower === '55', 'opacity-50': loading }"
-            @click="updateMotorPower('55')"
-            :disabled="loading"
-          >55 кВт</button>
-          <button 
-            class="spec-option"
-            :class="{ active: motorPower === '75', 'opacity-50': loading }"
-            @click="updateMotorPower('75')"
-            :disabled="loading"
-          >75 кВт</button>
-          <button 
-            class="spec-option"
-            :class="{ active: motorPower === '90', 'opacity-50': loading }"
-            @click="updateMotorPower('90')"
-            :disabled="loading"
-          >90 кВт</button>
-          <button 
-            class="spec-option"
-            :class="{ active: motorPower === '110', 'opacity-50': loading }"
-            @click="updateMotorPower('110')"
-            :disabled="loading"
-          >110 кВт</button>
-          <button 
-            class="spec-option"
-            :class="{ active: motorPower === '132', 'opacity-50': loading }"
-            @click="updateMotorPower('132')"
-            :disabled="loading"
-          >132 кВт</button>
-          <button 
-            class="spec-option"
-            :class="{ active: motorPower === '160', 'opacity-50': loading }"
-            @click="updateMotorPower('160')"
-            :disabled="loading"
-          >160 кВт</button>
-          <button 
-            class="spec-option"
-            :class="{ active: motorPower === '200', 'opacity-50': loading }"
-            @click="updateMotorPower('200')"
-            :disabled="loading"
-          >200 кВт</button>
-          <button 
-            class="spec-option"
-            :class="{ active: motorPower === '220', 'opacity-50': loading }"
-            @click="updateMotorPower('220')"
-            :disabled="loading"
-          >220 кВт</button>
+          >2 насоса</button>
         </div>
       </div>
 

@@ -126,6 +126,8 @@ if (typeof ProductsAPI !== 'undefined') {
             poles_count: product.poles_count,
             control_type: product.control_type,
             motor_power: product.motor_power,
+            start_type: product.start_type,
+            pump_count: product.pump_count,
             enclosure_type: product.enclosure_type || null,
             connection_type: product.connection_type || null,
             climate_type: product.climate_type || null,
@@ -142,7 +144,7 @@ if (typeof ProductsAPI !== 'undefined') {
       }
       
       // Иначе ищем по фильтрам
-      const { nominal_current, commutation_type, manufacturer_brand, inputs_count, poles_count, control_type, motor_power, enclosure_type, connection_type, climate_type } = filters;
+      const { nominal_current, commutation_type, manufacturer_brand, inputs_count, poles_count, control_type, motor_power, start_type, pump_count, enclosure_type, connection_type, climate_type } = filters;
 
       // Для шкафов управления требуется motor_power вместо nominal_current
       if (commutation_type === 'control_cabinet' && !motor_power) {
@@ -156,6 +158,11 @@ if (typeof ProductsAPI !== 'undefined') {
           // Для шкафов управления
           if (parseFloat(p.motor_power) !== parseFloat(motor_power)) return false;
           if (control_type && p.control_type !== control_type) return false;
+          // Для прямого пуска проверяем дополнительные параметры
+          if (control_type === 'direct_start') {
+            if (start_type && p.start_type !== start_type) return false;
+            if (pump_count && p.pump_count !== parseInt(pump_count)) return false;
+          }
         } else {
           // Для АВР
           if (parseInt(p.nominal_current) !== parseInt(nominal_current)) return false;
@@ -185,6 +192,8 @@ if (typeof ProductsAPI !== 'undefined') {
           poles_count: product.poles_count,
           control_type: product.control_type,
           motor_power: product.motor_power,
+          start_type: product.start_type,
+          pump_count: product.pump_count,
           enclosure_type: product.enclosure_type || null,
           connection_type: product.connection_type || null,
           climate_type: product.climate_type || null,
@@ -228,6 +237,8 @@ document.addEventListener('alpine:init', () => {
       // Параметры для шкафов управления
       controlType: 'soft_start', // 'soft_start', 'frequency_converter', 'direct_start'
       motorPower: '7.5', // мощность двигателя для шкафов управления
+      startType: 'direct_start', // 'direct_start', 'frequency_control', 'soft_start' - для прямого пуска
+      pumpCount: '1', // '1' или '2' - количество насосов для прямого пуска
       basePrice: 87900,
       article: 'АВР-100-CHINT-2',
       loading: false,
@@ -259,6 +270,8 @@ document.addEventListener('alpine:init', () => {
         const motorPower = urlParams.get('motorPower');
         const controlType = urlParams.get('controlType');
         const manufacturerBrand = urlParams.get('manufacturerBrand');
+        const startType = urlParams.get('startType');
+        const pumpCount = urlParams.get('pumpCount');
         
         if (productId) {
           // Если есть ID в URL, загружаем товар по ID
@@ -269,6 +282,12 @@ document.addEventListener('alpine:init', () => {
           this.motorPower = motorPower;
           this.controlType = controlType;
           this.manufacturerBrand = manufacturerBrand;
+          
+          // Для прямого пуска устанавливаем дополнительные параметры
+          if (controlType === 'direct_start') {
+            this.startType = startType || 'direct_start';
+            this.pumpCount = pumpCount || '1';
+          }
           
           await this.loadAvailableOptions();
           await this.loadProduct();
@@ -334,6 +353,11 @@ document.addEventListener('alpine:init', () => {
             // Для шкафов управления используем control_type и motor_power
             if (this.controlType) filters.control_type = this.controlType;
             if (this.motorPower) filters.motor_power = this.motorPower;
+            // Для прямого пуска добавляем дополнительные параметры
+            if (this.controlType === 'direct_start') {
+              if (this.startType) filters.start_type = this.startType;
+              if (this.pumpCount) filters.pump_count = this.pumpCount;
+            }
             filters.inputs_count = '1'; // Всегда 1 для шкафов управления
           } else {
             // Для АВР используем старые фильтры
@@ -436,6 +460,11 @@ document.addEventListener('alpine:init', () => {
             // Для шкафов управления используем motor_power и control_type
             filters.motor_power = this.motorPower;
             filters.control_type = this.controlType;
+            // Для прямого пуска добавляем дополнительные параметры
+            if (this.controlType === 'direct_start') {
+              filters.start_type = this.startType;
+              filters.pump_count = this.pumpCount;
+            }
             filters.inputs_count = '1'; // Всегда 1 для шкафов управления
           } else {
             // Для АВР используем nominal_current
@@ -502,6 +531,11 @@ document.addEventListener('alpine:init', () => {
               this.motorPower = String(product.motor_power);
               this.controlType = product.control_type;
               this.manufacturerBrand = product.manufacturer_brand;
+              // Для прямого пуска устанавливаем дополнительные параметры
+              if (product.control_type === 'direct_start') {
+                this.startType = product.start_type || 'direct_start';
+                this.pumpCount = String(product.pump_count || '1');
+              }
             } else {
               // Для АВР устанавливаем параметры из продукта
               this.nominalCurrent = String(product.nominal_current);
@@ -583,6 +617,11 @@ document.addEventListener('alpine:init', () => {
               // Для шкафов управления
               this.controlType = product.control_type || 'soft_start';
               this.motorPower = String(product.motor_power || '7.5');
+              // Для прямого пуска устанавливаем дополнительные параметры
+              if (product.control_type === 'direct_start') {
+                this.startType = product.start_type || 'direct_start';
+                this.pumpCount = String(product.pump_count || '1');
+              }
             } else {
               // Для АВР
               this.nominalCurrent = String(product.nominal_current);
@@ -673,6 +712,11 @@ document.addEventListener('alpine:init', () => {
           if (this.commutationType === 'control_cabinet') {
             filters.motor_power = this.motorPower;
             filters.control_type = this.controlType;
+            // Для прямого пуска добавляем дополнительные параметры
+            if (this.controlType === 'direct_start') {
+              filters.start_type = this.startType;
+              filters.pump_count = this.pumpCount;
+            }
             filters.inputs_count = '1'; // Всегда 1 для шкафов управления
           } else {
             // Для АВР используем nominal_current
@@ -972,14 +1016,26 @@ document.addEventListener('alpine:init', () => {
       
       get productTitle() {
         if (this.commutationType === 'control_cabinet') {
-          // Для шкафов управления: "Шкаф управления с плавным пуском 7.5 кВт"
-          const controlTypeNames = {
-            'soft_start': 'с плавным пуском',
-            'frequency_converter': 'с преобразователем частоты',
-            'direct_start': 'с прямым пуском'
-          };
-          const controlTypeName = controlTypeNames[this.controlType] || 'с плавным пуском';
-          return `Шкаф управления ${controlTypeName} ${this.motorPower || '7.5'} кВт`;
+          if (this.controlType === 'direct_start') {
+            // Для шкафов управления с прямым пуском
+            const startTypeNames = {
+              'direct_start': 'прямым пуском',
+              'frequency_control': 'частотным регулированием',
+              'soft_start': 'плавным пуском'
+            };
+            const startTypeName = startTypeNames[this.startType] || 'прямым пуском';
+            const pumpCountName = this.pumpCount === '1' ? '1 насос' : '2 насоса';
+            return `Шкаф управления с ${startTypeName} ${this.motorPower || '7.5'} кВт (${pumpCountName})`;
+          } else {
+            // Для других типов шкафов управления
+            const controlTypeNames = {
+              'soft_start': 'с плавным пуском',
+              'frequency_converter': 'с преобразователем частоты',
+              'direct_start': 'с прямым пуском'
+            };
+            const controlTypeName = controlTypeNames[this.controlType] || 'с плавным пуском';
+            return `Шкаф управления ${controlTypeName} ${this.motorPower || '7.5'} кВт`;
+          }
         } else if (this.commutationType === 'contactors') {
           // Для контакторов: "Шкаф АВР 25А однофазный" или "Шкаф АВР 25А трёхфазный"
           const phaseType = (this.polesCount || (parseInt(this.nominalCurrent) <= 100 ? 'single_phase' : 'three_phase')) === 'single_phase' ? 'однофазный' : 'трёхфазный';
@@ -1133,8 +1189,30 @@ document.addEventListener('alpine:init', () => {
       // Генерируем новый артикул по формуле
       get dynamicArticle() {
         if (this.commutationType === 'control_cabinet') {
-          // Для шкафов управления: ШУ-ПП-{мощность}-1-РОСЭК
-          return `ШУ-ПП-${this.motorPower}-1-РОСЭК`;
+          if (this.controlType === 'direct_start') {
+            // Для шкафов управления с прямым пуском: ШУ-{тип пуска}-{количество насосов}-{мощность}-1-РОСЭК
+            let startTypeCode = '';
+            switch(this.startType) {
+              case 'direct_start':
+                startTypeCode = 'ПП'; // Прямой пуск
+                break;
+              case 'frequency_control':
+                startTypeCode = 'ЧР'; // Частотное регулирование
+                break;
+              case 'soft_start':
+                startTypeCode = 'ПП'; // Плавный пуск (тоже ПП)
+                break;
+              default:
+                startTypeCode = 'ПП';
+            }
+            return `ШУ-${startTypeCode}-${this.pumpCount || '1'}-${this.motorPower}-1-РОСЭК`;
+          } else if (this.controlType === 'frequency_converter') {
+            // Для преобразователей частоты: ШУ-ПЧ-{мощность}-1-РОСЭК
+            return `ШУ-ПЧ-${this.motorPower}-1-РОСЭК`;
+          } else {
+            // Для других типов: ШУ-ПП-{мощность}-1-РОСЭК
+            return `ШУ-ПП-${this.motorPower}-1-РОСЭК`;
+          }
         } else if (this.commutationType === 'contactors') {
           const actualPolesCount = this.polesCount || (parseInt(this.nominalCurrent) <= 100 ? 'single_phase' : 'three_phase');
           const phaseCode = actualPolesCount === 'single_phase' ? '1Ф' : '3Ф';
@@ -1204,7 +1282,7 @@ document.addEventListener('alpine:init', () => {
           };
         } else if (this.commutationType === 'control_cabinet') {
           // Для шкафов управления
-          return {
+          const productData = {
             article: this.dynamicArticle,
             manufacturerBrand: this.manufacturerBrand,
             commutationType: this.commutationType,
@@ -1217,6 +1295,14 @@ document.addEventListener('alpine:init', () => {
             productSpecs: this.productSpecs,
             productTitle: this.productTitle
           };
+          
+          // Для прямого пуска добавляем дополнительные параметры
+          if (this.controlType === 'direct_start') {
+            productData.startType = this.startType;
+            productData.pumpCount = this.pumpCount;
+          }
+          
+          return productData;
         } else {
           // Для трехфазных АВР и контакторов
           if (this.commutationType === 'contactors') {
@@ -1621,6 +1707,24 @@ document.addEventListener('alpine:init', () => {
       async updateMotorPower(value) {
         if (this.loading) return;
         this.motorPower = value;
+        
+        await this.loadProductByCharacteristics();
+        this.updateCartQuantity();
+      },
+      
+      // Метод для обновления типа пуска (для шкафов управления с прямым пуском)
+      async updateStartType(value) {
+        if (this.loading) return;
+        this.startType = value;
+        
+        await this.loadProductByCharacteristics();
+        this.updateCartQuantity();
+      },
+      
+      // Метод для обновления количества насосов (для шкафов управления с прямым пуском)
+      async updatePumpCount(value) {
+        if (this.loading) return;
+        this.pumpCount = value;
         
         await this.loadProductByCharacteristics();
         this.updateCartQuantity();
