@@ -1190,22 +1190,9 @@ document.addEventListener('alpine:init', () => {
       get dynamicArticle() {
         if (this.commutationType === 'control_cabinet') {
           if (this.controlType === 'direct_start') {
-            // Для шкафов управления с прямым пуском: ШУ-{тип пуска}-{количество насосов}-{мощность}-1-РОСЭК
-            let startTypeCode = '';
-            switch(this.startType) {
-              case 'direct_start':
-                startTypeCode = 'ПП'; // Прямой пуск
-                break;
-              case 'frequency_control':
-                startTypeCode = 'ЧР'; // Частотное регулирование
-                break;
-              case 'soft_start':
-                startTypeCode = 'ПП'; // Плавный пуск (тоже ПП)
-                break;
-              default:
-                startTypeCode = 'ПП';
-            }
-            return `ШУ-${startTypeCode}-${this.pumpCount || '1'}-${this.motorPower}-1-РОСЭК`;
+            // Для шкафов управления с прямым пуском: ШУ-ПП-{количество насосов}-{мощность}-1-РОСЭК
+            // Все типы пуска (прямой/частотное регулирование/плавный) имеют одинаковый артикул с "ПП"
+            return `ШУ-ПП-${this.pumpCount || '1'}-${this.motorPower}-1-РОСЭК`;
           } else if (this.controlType === 'frequency_converter') {
             // Для преобразователей частоты: ШУ-ПЧ-{мощность}-1-РОСЭК
             return `ШУ-ПЧ-${this.motorPower}-1-РОСЭК`;
