@@ -1,4 +1,4 @@
-﻿{
+{
     "products": [
         {
             "id": 1,
@@ -3375,10 +3375,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 45000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 25А IEK",
             "full_description": "Однофазный контактор 25А, выполнен на базе контакторов IEK 25А.",
             "documentation": [
@@ -3413,10 +3411,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 48000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 32А IEK",
             "full_description": "Однофазный контактор 32А, выполнен на базе контакторов IEK 32А.",
             "documentation": [
@@ -3451,10 +3447,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 52000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 40А IEK",
             "full_description": "Однофазный контактор 40А, выполнен на базе контакторов IEK 40А.",
             "documentation": [
@@ -3489,10 +3483,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 58000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 63А IEK",
             "full_description": "Однофазный контактор 63А, выполнен на базе контакторов IEK 63А.",
             "documentation": [
@@ -3869,10 +3861,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 45000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 25А CHINT",
             "full_description": "Однофазный контактор 25А, выполнен на базе контакторов CHINT 25А.",
             "documentation": [
@@ -3907,10 +3897,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 48000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 32А CHINT",
             "full_description": "Однофазный контактор 32А, выполнен на базе контакторов CHINT 32А.",
             "documentation": [
@@ -3945,10 +3933,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 52000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 40А CHINT",
             "full_description": "Однофазный контактор 40А, выполнен на базе контакторов CHINT 40А.",
             "documentation": [
@@ -3983,10 +3969,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 62000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 63А CHINT",
             "full_description": "Однофазный контактор 63А, выполнен на базе контакторов CHINT 63А.",
             "documentation": [
@@ -4363,10 +4347,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 42000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 25А EKF",
             "full_description": "Однофазный контактор 25А, выполнен на базе контакторов EKF 25А.",
             "documentation": [
@@ -4439,10 +4421,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 40000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 25А Dekraft",
             "full_description": "Однофазный контактор 25А, выполнен на базе контакторов Dekraft 25А.",
             "documentation": [
@@ -4515,10 +4495,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 38000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 25А TDM",
             "full_description": "Однофазный контактор 25А, выполнен на базе контакторов TDM 25А.",
             "documentation": [
@@ -4591,10 +4569,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 45000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 32А EKF",
             "full_description": "Однофазный контактор 32А, выполнен на базе контакторов EKF 32А.",
             "documentation": [
@@ -4629,10 +4605,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 49000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 40А EKF",
             "full_description": "Однофазный контактор 40А, выполнен на базе контакторов EKF 40А.",
             "documentation": [
@@ -4667,10 +4641,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 58000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 63А EKF",
             "full_description": "Однофазный контактор 63А, выполнен на базе контакторов EKF 63А.",
             "documentation": [
@@ -5009,10 +4981,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 43000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 32А Dekraft",
             "full_description": "Однофазный контактор 32А, выполнен на базе контакторов Dekraft 32А.",
             "documentation": [
@@ -5047,10 +5017,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 47000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 40А Dekraft",
             "full_description": "Однофазный контактор 40А, выполнен на базе контакторов Dekraft 40А.",
             "documentation": [
@@ -5085,10 +5053,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 55000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 63А Dekraft",
             "full_description": "Однофазный контактор 63А, выполнен на базе контакторов Dekraft 63А.",
             "documentation": [
@@ -5427,10 +5393,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 41000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 32А TDM",
             "full_description": "Однофазный контактор 32А, выполнен на базе контакторов TDM 32А.",
             "documentation": [
@@ -5465,10 +5429,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 45000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 40А TDM",
             "full_description": "Однофазный контактор 40А, выполнен на базе контакторов TDM 40А.",
             "documentation": [
@@ -5503,10 +5465,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 52000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 63А TDM",
             "full_description": "Однофазный контактор 63А, выполнен на базе контакторов TDM 63А.",
             "documentation": [
@@ -5845,10 +5805,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 46200,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 12А IEK",
             "full_description": "Однофазный контактор 12А, выполнен на базе контакторов IEK 12А.",
             "documentation": [
@@ -5921,10 +5879,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 46600,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 16А IEK",
             "full_description": "Однофазный контактор 16А, выполнен на базе контакторов IEK 16А.",
             "documentation": [
@@ -5997,10 +5953,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 47000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 20А IEK",
             "full_description": "Однофазный контактор 20А, выполнен на базе контакторов IEK 20А.",
             "documentation": [
@@ -6187,10 +6141,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 50000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 50А IEK",
             "full_description": "Однофазный контактор 50А, выполнен на базе контакторов IEK 50А.",
             "documentation": [
@@ -6301,10 +6253,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 53000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 80А IEK",
             "full_description": "Однофазный контактор 80А, выполнен на базе контакторов IEK 80А.",
             "documentation": [
@@ -6339,10 +6289,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 55000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 100А IEK",
             "full_description": "Однофазный контактор 100А, выполнен на базе контакторов IEK 100А.",
             "documentation": [
@@ -6377,10 +6325,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 57500,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 125А IEK",
             "full_description": "Однофазный контактор 125А, выполнен на базе контакторов IEK 125А.",
             "documentation": [
@@ -6415,10 +6361,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 61000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 160А IEK",
             "full_description": "Однофазный контактор 160А, выполнен на базе контакторов IEK 160А.",
             "documentation": [
@@ -6453,10 +6397,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 65000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 200А IEK",
             "full_description": "Однофазный контактор 200А, выполнен на базе контакторов IEK 200А.",
             "documentation": [
@@ -6491,10 +6433,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 70000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 250А IEK",
             "full_description": "Однофазный контактор 250А, выполнен на базе контакторов IEK 250А.",
             "documentation": [
@@ -6529,10 +6469,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 85000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 400А IEK",
             "full_description": "Однофазный контактор 400А, выполнен на базе контакторов IEK 400А.",
             "documentation": [
@@ -6567,10 +6505,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 108000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 630А IEK",
             "full_description": "Однофазный контактор 630А, выполнен на базе контакторов IEK 630А.",
             "documentation": [
@@ -6605,10 +6541,8 @@
             "brand": "IEK",
             "commutation_type": "contactors",
             "base_price": 125000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 800А IEK",
             "full_description": "Однофазный контактор 800А, выполнен на базе контакторов IEK 800А.",
             "documentation": [
@@ -6643,10 +6577,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 46200,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 12А CHINT",
             "full_description": "Однофазный контактор 12А, выполнен на базе контакторов CHINT 12А.",
             "documentation": [
@@ -6719,10 +6651,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 46600,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 16А CHINT",
             "full_description": "Однофазный контактор 16А, выполнен на базе контакторов CHINT 16А.",
             "documentation": [
@@ -6795,10 +6725,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 47000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 20А CHINT",
             "full_description": "Однофазный контактор 20А, выполнен на базе контакторов CHINT 20А.",
             "documentation": [
@@ -6985,10 +6913,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 50000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 50А CHINT",
             "full_description": "Однофазный контактор 50А, выполнен на базе контакторов CHINT 50А.",
             "documentation": [
@@ -7099,10 +7025,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 53000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 80А CHINT",
             "full_description": "Однофазный контактор 80А, выполнен на базе контакторов CHINT 80А.",
             "documentation": [
@@ -7137,10 +7061,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 55000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 100А CHINT",
             "full_description": "Однофазный контактор 100А, выполнен на базе контакторов CHINT 100А.",
             "documentation": [
@@ -7175,10 +7097,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 57500,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 125А CHINT",
             "full_description": "Однофазный контактор 125А, выполнен на базе контакторов CHINT 125А.",
             "documentation": [
@@ -7213,10 +7133,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 61000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 160А CHINT",
             "full_description": "Однофазный контактор 160А, выполнен на базе контакторов CHINT 160А.",
             "documentation": [
@@ -7251,10 +7169,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 65000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 200А CHINT",
             "full_description": "Однофазный контактор 200А, выполнен на базе контакторов CHINT 200А.",
             "documentation": [
@@ -7289,10 +7205,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 70000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 250А CHINT",
             "full_description": "Однофазный контактор 250А, выполнен на базе контакторов CHINT 250А.",
             "documentation": [
@@ -7327,10 +7241,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 85000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 400А CHINT",
             "full_description": "Однофазный контактор 400А, выполнен на базе контакторов CHINT 400А.",
             "documentation": [
@@ -7365,10 +7277,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 108000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 630А CHINT",
             "full_description": "Однофазный контактор 630А, выполнен на базе контакторов CHINT 630А.",
             "documentation": [
@@ -7403,10 +7313,8 @@
             "brand": "CHINT",
             "commutation_type": "contactors",
             "base_price": 125000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 800А CHINT",
             "full_description": "Однофазный контактор 800А, выполнен на базе контакторов CHINT 800А.",
             "documentation": [
@@ -7441,10 +7349,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 46200,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 12А EKF",
             "full_description": "Однофазный контактор 12А, выполнен на базе контакторов EKF 12А.",
             "documentation": [
@@ -7517,10 +7423,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 46600,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 16А EKF",
             "full_description": "Однофазный контактор 16А, выполнен на базе контакторов EKF 16А.",
             "documentation": [
@@ -7593,10 +7497,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 47000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 20А EKF",
             "full_description": "Однофазный контактор 20А, выполнен на базе контакторов EKF 20А.",
             "documentation": [
@@ -7783,10 +7685,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 50000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 50А EKF",
             "full_description": "Однофазный контактор 50А, выполнен на базе контакторов EKF 50А.",
             "documentation": [
@@ -7897,10 +7797,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 53000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 80А EKF",
             "full_description": "Однофазный контактор 80А, выполнен на базе контакторов EKF 80А.",
             "documentation": [
@@ -7935,10 +7833,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 55000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 100А EKF",
             "full_description": "Однофазный контактор 100А, выполнен на базе контакторов EKF 100А.",
             "documentation": [
@@ -7973,10 +7869,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 57500,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 125А EKF",
             "full_description": "Однофазный контактор 125А, выполнен на базе контакторов EKF 125А.",
             "documentation": [
@@ -8011,10 +7905,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 61000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 160А EKF",
             "full_description": "Однофазный контактор 160А, выполнен на базе контакторов EKF 160А.",
             "documentation": [
@@ -8049,10 +7941,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 65000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 200А EKF",
             "full_description": "Однофазный контактор 200А, выполнен на базе контакторов EKF 200А.",
             "documentation": [
@@ -8087,10 +7977,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 70000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 250А EKF",
             "full_description": "Однофазный контактор 250А, выполнен на базе контакторов EKF 250А.",
             "documentation": [
@@ -8125,10 +8013,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 85000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 400А EKF",
             "full_description": "Однофазный контактор 400А, выполнен на базе контакторов EKF 400А.",
             "documentation": [
@@ -8163,10 +8049,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 108000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 630А EKF",
             "full_description": "Однофазный контактор 630А, выполнен на базе контакторов EKF 630А.",
             "documentation": [
@@ -8201,10 +8085,8 @@
             "brand": "EKF",
             "commutation_type": "contactors",
             "base_price": 125000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 800А EKF",
             "full_description": "Однофазный контактор 800А, выполнен на базе контакторов EKF 800А.",
             "documentation": [
@@ -8239,10 +8121,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 46200,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 12А Dekraft",
             "full_description": "Однофазный контактор 12А, выполнен на базе контакторов Dekraft 12А.",
             "documentation": [
@@ -8315,10 +8195,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 46600,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 16А Dekraft",
             "full_description": "Однофазный контактор 16А, выполнен на базе контакторов Dekraft 16А.",
             "documentation": [
@@ -8391,10 +8269,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 47000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 20А Dekraft",
             "full_description": "Однофазный контактор 20А, выполнен на базе контакторов Dekraft 20А.",
             "documentation": [
@@ -8581,10 +8457,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 50000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 50А Dekraft",
             "full_description": "Однофазный контактор 50А, выполнен на базе контакторов Dekraft 50А.",
             "documentation": [
@@ -8695,10 +8569,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 53000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 80А Dekraft",
             "full_description": "Однофазный контактор 80А, выполнен на базе контакторов Dekraft 80А.",
             "documentation": [
@@ -8733,10 +8605,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 55000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 100А Dekraft",
             "full_description": "Однофазный контактор 100А, выполнен на базе контакторов Dekraft 100А.",
             "documentation": [
@@ -8771,10 +8641,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 57500,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 125А Dekraft",
             "full_description": "Однофазный контактор 125А, выполнен на базе контакторов Dekraft 125А.",
             "documentation": [
@@ -8809,10 +8677,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 61000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 160А Dekraft",
             "full_description": "Однофазный контактор 160А, выполнен на базе контакторов Dekraft 160А.",
             "documentation": [
@@ -8847,10 +8713,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 65000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 200А Dekraft",
             "full_description": "Однофазный контактор 200А, выполнен на базе контакторов Dekraft 200А.",
             "documentation": [
@@ -8885,10 +8749,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 70000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 250А Dekraft",
             "full_description": "Однофазный контактор 250А, выполнен на базе контакторов Dekraft 250А.",
             "documentation": [
@@ -8923,10 +8785,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 85000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 400А Dekraft",
             "full_description": "Однофазный контактор 400А, выполнен на базе контакторов Dekraft 400А.",
             "documentation": [
@@ -8961,10 +8821,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 108000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 630А Dekraft",
             "full_description": "Однофазный контактор 630А, выполнен на базе контакторов Dekraft 630А.",
             "documentation": [
@@ -8999,10 +8857,8 @@
             "brand": "Dekraft",
             "commutation_type": "contactors",
             "base_price": 125000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 800А Dekraft",
             "full_description": "Однофазный контактор 800А, выполнен на базе контакторов Dekraft 800А.",
             "documentation": [
@@ -9037,10 +8893,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 46200,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 12А TDM",
             "full_description": "Однофазный контактор 12А, выполнен на базе контакторов TDM 12А.",
             "documentation": [
@@ -9113,10 +8967,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 46600,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 16А TDM",
             "full_description": "Однофазный контактор 16А, выполнен на базе контакторов TDM 16А.",
             "documentation": [
@@ -9189,10 +9041,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 47000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 20А TDM",
             "full_description": "Однофазный контактор 20А, выполнен на базе контакторов TDM 20А.",
             "documentation": [
@@ -9379,10 +9229,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 50000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 50А TDM",
             "full_description": "Однофазный контактор 50А, выполнен на базе контакторов TDM 50А.",
             "documentation": [
@@ -9493,10 +9341,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 53000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 80А TDM",
             "full_description": "Однофазный контактор 80А, выполнен на базе контакторов TDM 80А.",
             "documentation": [
@@ -9531,10 +9377,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 55000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 100А TDM",
             "full_description": "Однофазный контактор 100А, выполнен на базе контакторов TDM 100А.",
             "documentation": [
@@ -9569,10 +9413,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 57500,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 125А TDM",
             "full_description": "Однофазный контактор 125А, выполнен на базе контакторов TDM 125А.",
             "documentation": [
@@ -9607,10 +9449,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 61000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 160А TDM",
             "full_description": "Однофазный контактор 160А, выполнен на базе контакторов TDM 160А.",
             "documentation": [
@@ -9645,10 +9485,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 65000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 200А TDM",
             "full_description": "Однофазный контактор 200А, выполнен на базе контакторов TDM 200А.",
             "documentation": [
@@ -9683,10 +9521,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 70000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 250А TDM",
             "full_description": "Однофазный контактор 250А, выполнен на базе контакторов TDM 250А.",
             "documentation": [
@@ -9721,10 +9557,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 85000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 400А TDM",
             "full_description": "Однофазный контактор 400А, выполнен на базе контакторов TDM 400А.",
             "documentation": [
@@ -9759,10 +9593,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 108000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 630А TDM",
             "full_description": "Однофазный контактор 630А, выполнен на базе контакторов TDM 630А.",
             "documentation": [
@@ -9797,10 +9629,8 @@
             "brand": "TDM",
             "commutation_type": "contactors",
             "base_price": 125000,
-            "main_image": "images/avr-1f.jfif",
-            "images": [
-                "images/avr-1f.jfif"
-            ],
+            "main_image": "",
+            "images": [],
             "description": "Однофазный контактор 800А TDM",
             "full_description": "Однофазный контактор 800А, выполнен на базе контакторов TDM 800А.",
             "documentation": [
@@ -29419,4 +29249,3 @@
         }
     ]
 }
-

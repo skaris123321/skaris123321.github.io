@@ -45,8 +45,11 @@ document.addEventListener('alpine:init', () => {
           const data = await response.json();
           
           if (data && Array.isArray(data.products)) {
-            this.products = data.products;
-            console.log(`Загружено ${this.products.length} товаров`);
+            // Фильтруем только АВР (моноблочные и контакторы), исключаем шкафы управления
+            this.products = data.products.filter(p => 
+              p.commutation_type === 'monoblock' || p.commutation_type === 'contactors'
+            );
+            console.log(`Загружено ${this.products.length} товаров АВР`);
           }
         } catch (error) {
           console.error('Ошибка загрузки товаров:', error);
