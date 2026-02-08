@@ -496,24 +496,17 @@ document.addEventListener('alpine:init', () => {
             // Формируем массив изображений: main_image первым, затем дополнительные images
             let imageList = [];
             
-            // Для однофазных контакторов не показываем изображения
-            if (product.commutation_type === 'contactors' && product.poles_count === 'single_phase') {
-              imageList = []; // Пустой массив для однофазных контакторов
-            } else {
-              // Для всех остальных товаров формируем изображения как обычно
-              if (product.main_image && product.main_image.trim() !== '') {
-                imageList.push(product.main_image);
-              }
-              if (product.images && product.images.length > 0) {
-                // Добавляем дополнительные изображения, исключая дубликаты
-                product.images.forEach(img => {
-                  if (img && img.trim() !== '' && img !== product.main_image) {
-                    imageList.push(img);
-                  }
-                });
-              }
+            // Формируем изображения для всех товаров
+            if (product.main_image && product.main_image.trim() !== '') {
+              imageList.push(product.main_image);
             }
-            
+            if (product.images && product.images.length > 0) {
+              // Добавляем дополнительные изображения, исключая дубликаты
+              product.images.forEach(img => {
+                if (img && img.trim() !== '' && img !== product.main_image) {
+                  imageList.push(img);
+                }
+              });
             this.images = imageList.map(img => {
               // Если путь относительный, добавляем ../
               return img.startsWith('images/') ? '../' + img : img;
@@ -643,12 +636,8 @@ document.addEventListener('alpine:init', () => {
             // Формируем массив изображений: main_image первым, затем дополнительные images
             let imageList = [];
             
-            // Для однофазных контакторов не показываем изображения
-            if (product.commutation_type === 'contactors' && product.poles_count === 'single_phase') {
-              imageList = []; // Пустой массив для однофазных контакторов
-            } else {
-              // Для всех остальных товаров формируем изображения как обычно
-              if (product.main_image && product.main_image.trim() !== '') {
+            // Формируем изображения для всех товаров
+            if (product.main_image && product.main_image.trim() !== '') {
                 imageList.push(product.main_image);
               }
               if (product.images && product.images.length > 0) {
@@ -659,8 +648,6 @@ document.addEventListener('alpine:init', () => {
                   }
                 });
               }
-            }
-            
             this.images = imageList.map(img => {
               return img.startsWith('images/') ? '../' + img : img;
             });
@@ -749,12 +736,8 @@ document.addEventListener('alpine:init', () => {
             // Формируем массив изображений: main_image первым, затем дополнительные images
             let imageList = [];
             
-            // Для однофазных контакторов не показываем изображения
-            if (product.commutation_type === 'contactors' && product.poles_count === 'single_phase') {
-              imageList = []; // Пустой массив для однофазных контакторов
-            } else {
-              // Для всех остальных товаров формируем изображения как обычно
-              if (product.main_image && product.main_image.trim() !== '') {
+            // Формируем изображения для всех товаров
+            if (product.main_image && product.main_image.trim() !== '') {
                 imageList.push(product.main_image);
               }
               if (product.images && product.images.length > 0) {
@@ -765,8 +748,6 @@ document.addEventListener('alpine:init', () => {
                   }
                 });
               }
-            }
-            
             this.images = imageList.map(img => {
               return img.startsWith('images/') ? '../' + img : img;
             });
