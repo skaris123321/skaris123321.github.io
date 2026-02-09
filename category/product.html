@@ -432,7 +432,7 @@
             </div>
           </template>
           
-          <!-- Мощности для других типов (плавный пуск и т.д.) -->
+          <!-- Мощности для плавного пуска -->
           <template x-if="controlType !== 'frequency_converter' && controlType !== 'direct_start'">
             <div style="display: contents;">
               <button 
@@ -453,6 +453,90 @@
                 @click="updateMotorPower('15')"
                 :disabled="loading"
               >15 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '18.5', 'opacity-50': loading }"
+                @click="updateMotorPower('18.5')"
+                :disabled="loading"
+              >18.5 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '22', 'opacity-50': loading }"
+                @click="updateMotorPower('22')"
+                :disabled="loading"
+              >22 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '30', 'opacity-50': loading }"
+                @click="updateMotorPower('30')"
+                :disabled="loading"
+              >30 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '37', 'opacity-50': loading }"
+                @click="updateMotorPower('37')"
+                :disabled="loading"
+              >37 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '45', 'opacity-50': loading }"
+                @click="updateMotorPower('45')"
+                :disabled="loading"
+              >45 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '55', 'opacity-50': loading }"
+                @click="updateMotorPower('55')"
+                :disabled="loading"
+              >55 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '75', 'opacity-50': loading }"
+                @click="updateMotorPower('75')"
+                :disabled="loading"
+              >75 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '90', 'opacity-50': loading }"
+                @click="updateMotorPower('90')"
+                :disabled="loading"
+              >90 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '110', 'opacity-50': loading }"
+                @click="updateMotorPower('110')"
+                :disabled="loading"
+              >110 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '132', 'opacity-50': loading }"
+                @click="updateMotorPower('132')"
+                :disabled="loading"
+              >132 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '160', 'opacity-50': loading }"
+                @click="updateMotorPower('160')"
+                :disabled="loading"
+              >160 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '185', 'opacity-50': loading }"
+                @click="updateMotorPower('185')"
+                :disabled="loading"
+              >185 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '220', 'opacity-50': loading }"
+                @click="updateMotorPower('220')"
+                :disabled="loading"
+              >220 кВт</button>
+              <button 
+                class="spec-option"
+                :class="{ active: motorPower === '250', 'opacity-50': loading }"
+                @click="updateMotorPower('250')"
+                :disabled="loading"
+              >250 кВт</button>
             </div>
           </template>
         </div>
