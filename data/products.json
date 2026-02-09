@@ -29416,6 +29416,1560 @@
                 "Количество фаз": "3",
                 "Степень защиты": "IP31"
             }
+        },
+        {
+            "id": 834,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "direct_start",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с прямым пуском 15 кВт CHINT (1 насос)",
+            "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "прямым пуском",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 835,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "direct_start",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с прямым пуском 15 кВт CHINT (2 насоса)",
+            "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "прямым пуском",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 836,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "frequency_control",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с частотное регулирование 15 кВт CHINT (1 насос)",
+            "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "частотное регулирование",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 837,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "frequency_control",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с частотное регулирование 15 кВт CHINT (2 насоса)",
+            "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "частотное регулирование",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 838,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "soft_start",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с плавным пуском 15 кВт CHINT (1 насос)",
+            "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "плавным пуском",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 839,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "CHINT",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "soft_start",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с плавным пуском 15 кВт CHINT (2 насоса)",
+            "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "CHINT",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "плавным пуском",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 840,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "direct_start",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с прямым пуском 15 кВт EKF (1 насос)",
+            "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "прямым пуском",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 841,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "direct_start",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с прямым пуском 15 кВт EKF (2 насоса)",
+            "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "прямым пуском",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 842,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "frequency_control",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с частотное регулирование 15 кВт EKF (1 насос)",
+            "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "частотное регулирование",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 843,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "frequency_control",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с частотное регулирование 15 кВт EKF (2 насоса)",
+            "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "частотное регулирование",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 844,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "soft_start",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с плавным пуском 15 кВт EKF (1 насос)",
+            "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "плавным пуском",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 845,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "EKF",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "soft_start",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с плавным пуском 15 кВт EKF (2 насоса)",
+            "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "EKF",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "плавным пуском",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 846,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "direct_start",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с прямым пуском 15 кВт Dekraft (1 насос)",
+            "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "прямым пуском",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 847,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "direct_start",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с прямым пуском 15 кВт Dekraft (2 насоса)",
+            "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "прямым пуском",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 848,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "frequency_control",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с частотное регулирование 15 кВт Dekraft (1 насос)",
+            "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "частотное регулирование",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 849,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "frequency_control",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с частотное регулирование 15 кВт Dekraft (2 насоса)",
+            "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "частотное регулирование",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 850,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "soft_start",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с плавным пуском 15 кВт Dekraft (1 насос)",
+            "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "плавным пуском",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 851,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "Dekraft",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "soft_start",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с плавным пуском 15 кВт Dekraft (2 насоса)",
+            "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "Dekraft",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "плавным пуском",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 852,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "direct_start",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с прямым пуском 15 кВт IEK (1 насос)",
+            "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "прямым пуском",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 853,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "direct_start",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с прямым пуском 15 кВт IEK (2 насоса)",
+            "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "прямым пуском",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 854,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "frequency_control",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с частотное регулирование 15 кВт IEK (1 насос)",
+            "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "частотное регулирование",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 855,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "frequency_control",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с частотное регулирование 15 кВт IEK (2 насоса)",
+            "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "частотное регулирование",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 856,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "soft_start",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с плавным пуском 15 кВт IEK (1 насос)",
+            "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "плавным пуском",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 857,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "IEK",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "soft_start",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с плавным пуском 15 кВт IEK (2 насоса)",
+            "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования IEK.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "IEK",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "плавным пуском",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 858,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "direct_start",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с прямым пуском 15 кВт TDM (1 насос)",
+            "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "прямым пуском",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 859,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "direct_start",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с прямым пуском 15 кВт TDM (2 насоса)",
+            "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "прямым пуском",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 860,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "frequency_control",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с частотное регулирование 15 кВт TDM (1 насос)",
+            "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "частотное регулирование",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 861,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "frequency_control",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с частотное регулирование 15 кВт TDM (2 насоса)",
+            "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "частотное регулирование",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 862,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "soft_start",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с плавным пуском 15 кВт TDM (1 насос)",
+            "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "плавным пуском",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 863,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "TDM",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "soft_start",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с плавным пуском 15 кВт TDM (2 насоса)",
+            "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "TDM",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "плавным пуском",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 864,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "direct_start",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с прямым пуском 15 кВт VEDA (1 насос)",
+            "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "прямым пуском",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 865,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "direct_start",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с прямым пуском 15 кВт VEDA (2 насоса)",
+            "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "прямым пуском",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 866,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "frequency_control",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с частотное регулирование 15 кВт VEDA (1 насос)",
+            "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "частотное регулирование",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 867,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "frequency_control",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с частотное регулирование 15 кВт VEDA (2 насоса)",
+            "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "частотное регулирование",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 868,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "soft_start",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с плавным пуском 15 кВт VEDA (1 насос)",
+            "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "плавным пуском",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 869,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "VEDA",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "soft_start",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с плавным пуском 15 кВт VEDA (2 насоса)",
+            "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "VEDA",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "плавным пуском",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 870,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "direct_start",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с прямым пуском 15 кВт Systeme electric (1 насос)",
+            "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "прямым пуском",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 871,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "direct_start",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с прямым пуском 15 кВт Systeme electric (2 насоса)",
+            "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "прямым пуском",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 872,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "frequency_control",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с частотное регулирование 15 кВт Systeme electric (1 насос)",
+            "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "частотное регулирование",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 873,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "frequency_control",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с частотное регулирование 15 кВт Systeme electric (2 насоса)",
+            "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "частотное регулирование",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 874,
+            "article": "ШУ-ПП-1-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "soft_start",
+            "pump_count": 1,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с плавным пуском 15 кВт Systeme electric (1 насос)",
+            "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-1-15-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "плавным пуском",
+                "Количество насосов": "1",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
+        },
+        {
+            "id": 875,
+            "article": "ШУ-ПП-2-15-1-РОСЭК",
+            "motor_power": 15,
+            "brand": "Systeme electric",
+            "commutation_type": "control_cabinet",
+            "control_type": "direct_start",
+            "start_type": "soft_start",
+            "pump_count": 2,
+            "inputs_count": "1",
+            "phases_count": "3",
+            "base_price": 68000,
+            "main_image": "images/ps.jpeg",
+            "images": [
+                "images/ps.jpeg"
+            ],
+            "description": "Шкаф управления с плавным пуском 15 кВт Systeme electric (2 насоса)",
+            "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "ШУ-ПП-2-15-1-РОСЭК",
+                "Производитель": "Systeme electric",
+                "Количество вводов": "1",
+                "Мощность двигателя": "15 кВт",
+                "Тип пуска": "плавным пуском",
+                "Количество насосов": "2",
+                "Количество фаз": "3",
+                "Степень защиты": "IP31"
+            }
         }
     ]
 }
