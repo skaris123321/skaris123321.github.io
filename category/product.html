@@ -102,11 +102,12 @@
   <main class="container product-detail-content">
     <div class="product-image-column">
       <div class="product-gallery-row">
-        <div class="product-thumbnails-wrapper" x-show="images.length > 1">
+        <div class="product-thumbnails-wrapper">
           <button 
             class="thumbnail-nav-btn thumbnail-nav-up" 
             @click="scrollThumbnailsUp()"
             :disabled="thumbnailScroll === 0"
+            x-show="images.length > 4"
           >
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
@@ -131,6 +132,7 @@
             class="thumbnail-nav-btn thumbnail-nav-down" 
             @click="scrollThumbnailsDown()"
             :disabled="thumbnailScroll >= maxScroll"
+            x-show="images.length > 4"
           >
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
