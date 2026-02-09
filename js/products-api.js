@@ -42,7 +42,7 @@ class ProductsAPI {
 
   async getAvailableOptions(filters = {}) {
     const data = await this.loadProducts();
-    const { manufacturer_brand, commutation_type, inputs_count, poles_count } = filters;
+    const { manufacturer_brand, commutation_type, inputs_count, poles_count, control_type, motor_power } = filters;
 
     // Фильтруем продукты по заданным параметрам
     let filteredProducts = data.products;
@@ -59,6 +59,12 @@ class ProductsAPI {
     if (poles_count) {
       filteredProducts = filteredProducts.filter(p => p.poles_count === poles_count);
     }
+    if (control_type) {
+      filteredProducts = filteredProducts.filter(p => p.control_type === control_type);
+    }
+    if (motor_power) {
+      filteredProducts = filteredProducts.filter(p => parseFloat(p.motor_power) === parseFloat(motor_power));
+    }
 
     // Получаем уникальные значения
     const availableOptions = {
@@ -66,7 +72,9 @@ class ProductsAPI {
       commutation_type: [],
       manufacturer_brand: [],
       inputs_count: [],
-      poles_count: []
+      poles_count: [],
+      control_type: [],
+      motor_power: []
     };
 
     // Все бренды
@@ -81,8 +89,33 @@ class ProductsAPI {
     const commutationTypes = [...new Set(typeProducts.map(p => p.commutation_type).filter(Boolean))];
     availableOptions.commutation_type = commutationTypes.sort();
 
-    // Для контакторов используем poles_count, для остальных - inputs_count
-    if (commutation_type === 'contactors') {
+    // Для шкафов управления добавляем control_type и motor_power
+    if (commutation_type === 'control_cabinet') {
+      // Тип управления (с учетом бренда)
+      let controlTypeProducts = data.products.filter(p => p.commutation_type === 'control_cabinet');
+      if (manufacturer_brand) {
+        controlTypeProducts = controlTypeProducts.filter(p => p.brand === manufacturer_brand);
+      }
+      const controlTypes = [...new Set(controlTypeProducts.map(p => p.control_type).filter(Boolean))];
+      availableOptions.control_type = controlTypes.sort();
+
+      // Мощность двигателя (с учетом бренда и типа управления)
+      let motorPowerProducts = data.products.filter(p => p.commutation_type === 'control_cabinet');
+      if (manufacturer_brand) {
+        motorPowerProducts = motorPowerProducts.filter(p => p.brand === manufacturer_brand);
+      }
+      if (control_type) {
+        motorPowerProducts = motorPowerProducts.filter(p => p.control_type === control_type);
+      }
+      const motorPowers = [...new Set(motorPowerProducts.map(p => parseFloat(p.motor_power)).filter(Boolean))];
+      availableOptions.motor_power = motorPowers.sort((a, b) => a - b);
+      
+      // Для шкафов управления inputs_count всегда "1"
+      availableOptions.inputs_count = ['1'];
+      availableOptions.poles_count = [];
+      availableOptions.nominal_current = [];
+    } else if (commutation_type === 'contactors') {
+      // Для контакторов используем poles_count
       let polesProducts = data.products.filter(p => p.commutation_type === 'contactors');
       if (manufacturer_brand) {
         polesProducts = polesProducts.filter(p => p.brand === manufacturer_brand);
@@ -91,8 +124,19 @@ class ProductsAPI {
       availableOptions.poles_count = polesCounts.sort();
       // Для контакторов inputs_count не используется
       availableOptions.inputs_count = [];
+      
+      // Номинальный ток для контакторов
+      let currentProducts = data.products.filter(p => p.commutation_type === 'contactors');
+      if (manufacturer_brand) {
+        currentProducts = currentProducts.filter(p => p.brand === manufacturer_brand);
+      }
+      if (poles_count) {
+        currentProducts = currentProducts.filter(p => p.poles_count === poles_count);
+      }
+      const nominalCurrents = [...new Set(currentProducts.map(p => parseInt(p.nominal_current)).filter(Boolean))];
+      availableOptions.nominal_current = nominalCurrents.sort((a, b) => a - b);
     } else {
-      // Количество вводов (с учетом бренда и типа коммутации)
+      // Для АВР используем inputs_count
       let inputsProducts = data.products;
       if (manufacturer_brand) {
         inputsProducts = inputsProducts.filter(p => p.brand === manufacturer_brand);
@@ -104,24 +148,21 @@ class ProductsAPI {
       availableOptions.inputs_count = inputsCounts.sort((a, b) => String(a).localeCompare(String(b)));
       // Для не-контакторов poles_count не используется
       availableOptions.poles_count = [];
+      
+      // Номинальный ток для АВР (с учетом всех фильтров)
+      let currentProducts = data.products;
+      if (manufacturer_brand) {
+        currentProducts = currentProducts.filter(p => p.brand === manufacturer_brand);
+      }
+      if (commutation_type) {
+        currentProducts = currentProducts.filter(p => p.commutation_type === commutation_type);
+      }
+      if (inputs_count) {
+        currentProducts = currentProducts.filter(p => p.inputs_count === inputs_count);
+      }
+      const nominalCurrents = [...new Set(currentProducts.map(p => parseInt(p.nominal_current)).filter(Boolean))];
+      availableOptions.nominal_current = nominalCurrents.sort((a, b) => a - b);
     }
-
-    // Номинальный ток (с учетом всех фильтров)
-    let currentProducts = data.products;
-    if (manufacturer_brand) {
-      currentProducts = currentProducts.filter(p => p.brand === manufacturer_brand);
-    }
-    if (commutation_type) {
-      currentProducts = currentProducts.filter(p => p.commutation_type === commutation_type);
-    }
-    if (inputs_count) {
-      currentProducts = currentProducts.filter(p => p.inputs_count === inputs_count);
-    }
-    if (poles_count) {
-      currentProducts = currentProducts.filter(p => p.poles_count === poles_count);
-    }
-    const nominalCurrents = [...new Set(currentProducts.map(p => parseInt(p.nominal_current)).filter(Boolean))];
-    availableOptions.nominal_current = nominalCurrents.sort((a, b) => a - b);
 
     return {
       success: true,
