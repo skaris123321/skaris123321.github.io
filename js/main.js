@@ -1676,6 +1676,27 @@ document.addEventListener('alpine:init', () => {
         }
       },
       
+      // Метод для обновления типа управления (для шкафов управления)
+      async updateControlType(value) {
+        if (this.loading) return;
+        this.loading = true;
+        this.controlType = value;
+        
+        try {
+          await this.loadAvailableOptions();
+          
+          // Выбираем первую доступную мощность двигателя для нового типа
+          if (this.availableOptions.motor_power && this.availableOptions.motor_power.length > 0) {
+            this.motorPower = String(this.availableOptions.motor_power[0]);
+          }
+          
+          await this.loadProductByCharacteristics();
+          this.updateCartQuantity();
+        } finally {
+          this.loading = false;
+        }
+      },
+      
       // Метод для обновления мощности двигателя (для шкафов управления)
       async updateMotorPower(value) {
         if (this.loading) return;
