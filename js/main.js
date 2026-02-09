@@ -1140,11 +1140,30 @@ document.addEventListener('alpine:init', () => {
         }
         
         if (this.commutationType === 'control_cabinet') {
-          // Для шкафов управления
+          // Для шкафов управления - динамические характеристики
           specs['Артикул'] = this.dynamicArticle;
           specs['Производитель'] = this.manufacturerBrand || '';
           specs['Количество вводов'] = '1';
           specs['Мощность двигателя'] = this.motorPower + ' кВт';
+          
+          // Тип управления в зависимости от controlType
+          if (this.controlType === 'soft_start') {
+            specs['Тип управления'] = 'Плавный пуск';
+          } else if (this.controlType === 'frequency_converter') {
+            specs['Тип управления'] = 'Преобразователь частоты';
+          } else if (this.controlType === 'direct_start') {
+            specs['Тип управления'] = 'Прямой пуск';
+            // Для прямого пуска добавляем тип пуска и количество насосов
+            if (this.startType === 'direct_start') {
+              specs['Тип пуска'] = 'Прямым пуском';
+            } else if (this.startType === 'frequency_control') {
+              specs['Тип пуска'] = 'Частотное регулирование';
+            } else if (this.startType === 'soft_start') {
+              specs['Тип пуска'] = 'Плавный пуск';
+            }
+            specs['Количество насосов'] = this.pumpCount || '1';
+          }
+          
           specs['Количество фаз'] = '3';
           specs['Степень защиты'] = 'IP31';
         } else if (this.commutationType === 'contactors') {
@@ -1592,7 +1611,8 @@ document.addEventListener('alpine:init', () => {
               purposeList: [
                 'надёжный пуск двигателя при полной нагрузке;',
                 'базовую защиту от аварийных режимов;',
-                'ручное или автоматическое управление в простых технологических процессах.'
+                'ручное или автоматическое управление в простых технологических процессах.',
+                'Отличается простотой конструкции, низкой стоимостью и высокой надёжностью по сравнению с шкафами плавного пуска или частотного регулирования.'
               ],
               workflow: [
                 {
@@ -1618,7 +1638,7 @@ document.addEventListener('alpine:init', () => {
               ],
               features: [
                 {
-                  name: 'Простота',
+                  name: 'Простота конструкции и обслуживания',
                   desc: '— Простота конструкции и обслуживания'
                 },
                 {
@@ -1630,7 +1650,7 @@ document.addEventListener('alpine:init', () => {
                   desc: '— Высокая надёжность (минимум электронных компонентов)'
                 },
                 {
-                  name: 'Быстрый монтаж',
+                  name: 'Быстрый монтаж и настройка',
                   desc: '— Быстрый монтаж и настройка'
                 }
               ]
