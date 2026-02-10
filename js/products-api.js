@@ -8,7 +8,7 @@ class ProductsAPI {
     this.productsData = null;
     this.loadPromise = null;
     // Версия для кэш-бастинга картинок (увеличивайте при обновлении картинок)
-    this.imageVersion = '2';
+    this.imageVersion = '5';
   }
 
   // Добавляет версию к URL картинки для обхода кэша браузера
