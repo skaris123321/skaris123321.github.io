@@ -486,19 +486,24 @@ h1.category-title {
 
 .product-image-wrapper {
   aspect-ratio: 4/3;
-  overflow: hidden;
+  overflow: visible;
   background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .product-image {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
   transition: transform 0.3s;
+  display: block;
 }
 
 .product-card:hover .product-image {
@@ -803,7 +808,7 @@ h1.category-title {
   max-height: 80px;
   border: 2px solid transparent;
   border-radius: 0.75rem;
-  overflow: hidden;
+  overflow: visible;
   cursor: pointer;
   transition: all 0.2s;
   background: #f9fafb;
@@ -813,7 +818,7 @@ h1.category-title {
   flex-shrink: 0;
   margin: 0;
   box-sizing: border-box;
-  padding: 0.5rem;
+  padding: 0.625rem;
 }
 
 .product-thumbnail:hover {
@@ -828,8 +833,10 @@ h1.category-title {
 }
 
 .product-thumbnail img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
 }
 
@@ -837,13 +844,13 @@ h1.category-title {
   position: relative;
   background: #ffffff;
   border-radius: 1rem;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
   margin: 0;
-  padding: 2rem;
+  padding: 3rem;
   width: 100%;
   height: 600px;
   min-height: 600px;
