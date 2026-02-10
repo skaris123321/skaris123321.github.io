@@ -7,6 +7,15 @@ class ProductsAPI {
   constructor() {
     this.productsData = null;
     this.loadPromise = null;
+    // Версия для кэш-бастинга картинок (увеличивайте при обновлении картинок)
+    this.imageVersion = '2';
+  }
+
+  // Добавляет версию к URL картинки для обхода кэша браузера
+  addImageVersion(imageUrl) {
+    if (!imageUrl) return imageUrl;
+    const separator = imageUrl.includes('?') ? '&' : '?';
+    return `${imageUrl}${separator}v=${this.imageVersion}`;
   }
 
   async loadProducts() {
@@ -187,9 +196,9 @@ class ProductsAPI {
       // Формируем ответ для поиска по ID
       let images = [];
       if (foundProduct.images && Array.isArray(foundProduct.images) && foundProduct.images.length > 0) {
-        images = foundProduct.images;
+        images = foundProduct.images.map(img => this.addImageVersion(img));
       } else if (foundProduct.main_image) {
-        images = [foundProduct.main_image];
+        images = [this.addImageVersion(foundProduct.main_image)];
       }
 
       const documentation = foundProduct.documentation && Array.isArray(foundProduct.documentation)
@@ -213,7 +222,7 @@ class ProductsAPI {
           motor_power: foundProduct.motor_power || null,
           control_type: foundProduct.control_type || null,
           base_price: parseInt(foundProduct.base_price || 0),
-          main_image: foundProduct.main_image || (images[0] || null),
+          main_image: this.addImageVersion(foundProduct.main_image) || (images[0] || null),
           images: images,
           description: foundProduct.description || '',
           full_description: foundProduct.full_description || foundProduct.description || '',
@@ -280,9 +289,9 @@ class ProductsAPI {
     // Формируем массив изображений: приоритет у массива images, иначе используем main_image
     let images = [];
     if (foundProduct.images && Array.isArray(foundProduct.images) && foundProduct.images.length > 0) {
-      images = foundProduct.images;
+      images = foundProduct.images.map(img => this.addImageVersion(img));
     } else if (foundProduct.main_image) {
-      images = [foundProduct.main_image];
+      images = [this.addImageVersion(foundProduct.main_image)];
     }
 
     const documentation = foundProduct.documentation && Array.isArray(foundProduct.documentation)
@@ -306,7 +315,7 @@ class ProductsAPI {
         motor_power: foundProduct.motor_power || null,
         control_type: foundProduct.control_type || null,
         base_price: parseInt(foundProduct.base_price || 0),
-        main_image: foundProduct.main_image || (images[0] || null),
+        main_image: this.addImageVersion(foundProduct.main_image) || (images[0] || null),
         images: images,
         description: foundProduct.description || '',
         full_description: foundProduct.full_description || foundProduct.description || '',
