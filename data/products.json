@@ -14853,9 +14853,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 45000,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 0.75 кВт CHINT",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 0.75 кВт, выполнен на базе преобразователей частоты CHINT.",
@@ -14886,9 +14887,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 42750,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 0.75 кВт EKF",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 0.75 кВт, выполнен на базе преобразователей частоты EKF.",
@@ -14919,9 +14921,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 40500,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 0.75 кВт Dekraft",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 0.75 кВт, выполнен на базе преобразователей частоты Dekraft.",
@@ -14952,9 +14955,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 45000,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 3.7 кВт CHINT",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 3.7 кВт, выполнен на базе преобразователей частоты CHINT.",
@@ -14985,9 +14989,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 42750,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 3.7 кВт EKF",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 3.7 кВт, выполнен на базе преобразователей частоты EKF.",
@@ -15018,9 +15023,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 40500,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 3.7 кВт Dekraft",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 3.7 кВт, выполнен на базе преобразователей частоты Dekraft.",
@@ -15051,9 +15057,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 65000,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 7.5 кВт CHINT",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 7.5 кВт, выполнен на базе преобразователей частоты CHINT.",
@@ -15084,9 +15091,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 61750,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 7.5 кВт EKF",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 7.5 кВт, выполнен на базе преобразователей частоты EKF.",
@@ -15117,9 +15125,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 58500,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 7.5 кВт Dekraft",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 7.5 кВт, выполнен на базе преобразователей частоты Dekraft.",
@@ -15150,9 +15159,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 65000,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 15 кВт CHINT",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 15 кВт, выполнен на базе преобразователей частоты CHINT.",
@@ -15183,9 +15193,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 61750,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 15 кВт EKF",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 15 кВт, выполнен на базе преобразователей частоты EKF.",
@@ -15216,9 +15227,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 58500,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 15 кВт Dekraft",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 15 кВт, выполнен на базе преобразователей частоты Dekraft.",
@@ -15249,9 +15261,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 85000,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 18.5 кВт CHINT",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 18.5 кВт, выполнен на базе преобразователей частоты CHINT.",
@@ -15282,9 +15295,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 80750,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 18.5 кВт EKF",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 18.5 кВт, выполнен на базе преобразователей частоты EKF.",
@@ -15315,9 +15329,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 76500,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 18.5 кВт Dekraft",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 18.5 кВт, выполнен на базе преобразователей частоты Dekraft.",
@@ -15348,9 +15363,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 85000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 22 кВт CHINT",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 22 кВт, выполнен на базе преобразователей частоты CHINT.",
@@ -15381,9 +15397,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 80750,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 22 кВт EKF",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 22 кВт, выполнен на базе преобразователей частоты EKF.",
@@ -15414,9 +15431,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 76500,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 22 кВт Dekraft",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 22 кВт, выполнен на базе преобразователей частоты Dekraft.",
@@ -15447,9 +15465,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 120000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 37 кВт CHINT",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 37 кВт, выполнен на базе преобразователей частоты CHINT.",
@@ -15480,9 +15499,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 114000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 37 кВт EKF",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 37 кВт, выполнен на базе преобразователей частоты EKF.",
@@ -15513,9 +15533,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 108000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 37 кВт Dekraft",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 37 кВт, выполнен на базе преобразователей частоты Dekraft.",
@@ -15546,9 +15567,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 120000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 45 кВт CHINT",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 45 кВт, выполнен на базе преобразователей частоты CHINT.",
@@ -15579,9 +15601,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 114000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 45 кВт EKF",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 45 кВт, выполнен на базе преобразователей частоты EKF.",
@@ -15612,9 +15635,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 108000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 45 кВт Dekraft",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 45 кВт, выполнен на базе преобразователей частоты Dekraft.",
@@ -15645,9 +15669,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 180000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 55 кВт CHINT",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 55 кВт, выполнен на базе преобразователей частоты CHINT.",
@@ -15678,9 +15703,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 171000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 55 кВт EKF",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 55 кВт, выполнен на базе преобразователей частоты EKF.",
@@ -15711,9 +15737,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 162000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 55 кВт Dekraft",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 55 кВт, выполнен на базе преобразователей частоты Dekraft.",
@@ -15744,9 +15771,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 180000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 75 кВт CHINT",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 75 кВт, выполнен на базе преобразователей частоты CHINT.",
@@ -15777,9 +15805,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 171000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 75 кВт EKF",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 75 кВт, выполнен на базе преобразователей частоты EKF.",
@@ -15810,9 +15839,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 162000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 75 кВт Dekraft",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 75 кВт, выполнен на базе преобразователей частоты Dekraft.",
@@ -15843,9 +15873,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 250000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 90 кВт CHINT",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 90 кВт, выполнен на базе преобразователей частоты CHINT.",
@@ -15876,9 +15907,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 237500,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 90 кВт EKF",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 90 кВт, выполнен на базе преобразователей частоты EKF.",
@@ -15909,9 +15941,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 225000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 90 кВт Dekraft",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 90 кВт, выполнен на базе преобразователей частоты Dekraft.",
@@ -15942,9 +15975,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 250000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 110 кВт CHINT",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 110 кВт, выполнен на базе преобразователей частоты CHINT.",
@@ -15975,9 +16009,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 237500,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 110 кВт EKF",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 110 кВт, выполнен на базе преобразователей частоты EKF.",
@@ -16008,9 +16043,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 225000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 110 кВт Dekraft",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 110 кВт, выполнен на базе преобразователей частоты Dekraft.",
@@ -16041,9 +16077,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 350000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 132 кВт CHINT",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 132 кВт, выполнен на базе преобразователей частоты CHINT.",
@@ -16074,9 +16111,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 332500,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 132 кВт EKF",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 132 кВт, выполнен на базе преобразователей частоты EKF.",
@@ -16107,9 +16145,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 315000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 132 кВт Dekraft",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 132 кВт, выполнен на базе преобразователей частоты Dekraft.",
@@ -16140,9 +16179,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 350000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 160 кВт CHINT",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 160 кВт, выполнен на базе преобразователей частоты CHINT.",
@@ -16173,9 +16213,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 332500,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 160 кВт EKF",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 160 кВт, выполнен на базе преобразователей частоты EKF.",
@@ -16206,9 +16247,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 315000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 160 кВт Dekraft",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 160 кВт, выполнен на базе преобразователей частоты Dekraft.",
@@ -16239,9 +16281,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 450000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 200 кВт CHINT",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 200 кВт, выполнен на базе преобразователей частоты CHINT.",
@@ -16272,9 +16315,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 427500,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 200 кВт EKF",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 200 кВт, выполнен на базе преобразователей частоты EKF.",
@@ -16305,9 +16349,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 405000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 200 кВт Dekraft",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 200 кВт, выполнен на базе преобразователей частоты Dekraft.",
@@ -16338,9 +16383,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 450000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 220 кВт CHINT",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 220 кВт, выполнен на базе преобразователей частоты CHINT.",
@@ -16371,9 +16417,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 427500,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 220 кВт EKF",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 220 кВт, выполнен на базе преобразователей частоты EKF.",
@@ -16404,9 +16451,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 405000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 220 кВт Dekraft",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 220 кВт, выполнен на базе преобразователей частоты Dekraft.",
@@ -16437,9 +16485,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 41400,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 0.75 кВт IEK",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 0.75 кВт, выполнен на базе преобразователей частоты IEK.",
@@ -16470,9 +16519,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 49500,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 0.75 кВт Systeme electric",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 0.75 кВт, выполнен на базе преобразователей частоты Systeme electric.",
@@ -16503,9 +16553,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 39600,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 0.75 кВт TDM",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 0.75 кВт, выполнен на базе преобразователей частоты TDM.",
@@ -16536,9 +16587,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 38250,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 0.75 кВт VEDA",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 0.75 кВт, выполнен на базе преобразователей частоты VEDA.",
@@ -16569,9 +16621,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 41400,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 3.7 кВт IEK",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 3.7 кВт, выполнен на базе преобразователей частоты IEK.",
@@ -16602,9 +16655,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 49500,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 3.7 кВт Systeme electric",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 3.7 кВт, выполнен на базе преобразователей частоты Systeme electric.",
@@ -16635,9 +16689,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 39600,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 3.7 кВт TDM",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 3.7 кВт, выполнен на базе преобразователей частоты TDM.",
@@ -16668,9 +16723,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 38250,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 3.7 кВт VEDA",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 3.7 кВт, выполнен на базе преобразователей частоты VEDA.",
@@ -16701,9 +16757,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 59800,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 7.5 кВт IEK",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 7.5 кВт, выполнен на базе преобразователей частоты IEK.",
@@ -16734,9 +16791,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 71500,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 7.5 кВт Systeme electric",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 7.5 кВт, выполнен на базе преобразователей частоты Systeme electric.",
@@ -16767,9 +16825,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 57200,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 7.5 кВт TDM",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 7.5 кВт, выполнен на базе преобразователей частоты TDM.",
@@ -16800,9 +16859,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 55250,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 7.5 кВт VEDA",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 7.5 кВт, выполнен на базе преобразователей частоты VEDA.",
@@ -16833,9 +16893,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 59800,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 15 кВт IEK",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 15 кВт, выполнен на базе преобразователей частоты IEK.",
@@ -16866,9 +16927,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 71500,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 15 кВт Systeme electric",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 15 кВт, выполнен на базе преобразователей частоты Systeme electric.",
@@ -16899,9 +16961,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 57200,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 15 кВт TDM",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 15 кВт, выполнен на базе преобразователей частоты TDM.",
@@ -16932,9 +16995,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 55250,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 15 кВт VEDA",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 15 кВт, выполнен на базе преобразователей частоты VEDA.",
@@ -16965,9 +17029,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 78200,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 18.5 кВт IEK",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 18.5 кВт, выполнен на базе преобразователей частоты IEK.",
@@ -16998,9 +17063,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 93500,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 18.5 кВт Systeme electric",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 18.5 кВт, выполнен на базе преобразователей частоты Systeme electric.",
@@ -17031,9 +17097,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 74800,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 18.5 кВт TDM",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 18.5 кВт, выполнен на базе преобразователей частоты TDM.",
@@ -17064,9 +17131,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 72250,
-            "main_image": "images/sp-3.7.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-3.7.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 18.5 кВт VEDA",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 18.5 кВт, выполнен на базе преобразователей частоты VEDA.",
@@ -17097,9 +17165,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 78200,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 22 кВт IEK",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 22 кВт, выполнен на базе преобразователей частоты IEK.",
@@ -17130,9 +17199,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 93500,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 22 кВт Systeme electric",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 22 кВт, выполнен на базе преобразователей частоты Systeme electric.",
@@ -17163,9 +17233,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 74800,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 22 кВт TDM",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 22 кВт, выполнен на базе преобразователей частоты TDM.",
@@ -17196,9 +17267,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 72250,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 22 кВт VEDA",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 22 кВт, выполнен на базе преобразователей частоты VEDA.",
@@ -17229,9 +17301,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 110400,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 37 кВт IEK",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 37 кВт, выполнен на базе преобразователей частоты IEK.",
@@ -17262,9 +17335,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 132000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 37 кВт Systeme electric",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 37 кВт, выполнен на базе преобразователей частоты Systeme electric.",
@@ -17295,9 +17369,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 105600,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 37 кВт TDM",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 37 кВт, выполнен на базе преобразователей частоты TDM.",
@@ -17328,9 +17403,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 102000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 37 кВт VEDA",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 37 кВт, выполнен на базе преобразователей частоты VEDA.",
@@ -17361,9 +17437,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 110400,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 45 кВт IEK",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 45 кВт, выполнен на базе преобразователей частоты IEK.",
@@ -17394,9 +17471,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 132000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 45 кВт Systeme electric",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 45 кВт, выполнен на базе преобразователей частоты Systeme electric.",
@@ -17427,9 +17505,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 105600,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 45 кВт TDM",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 45 кВт, выполнен на базе преобразователей частоты TDM.",
@@ -17460,9 +17539,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 102000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 45 кВт VEDA",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 45 кВт, выполнен на базе преобразователей частоты VEDA.",
@@ -17493,9 +17573,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 165600,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 55 кВт IEK",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 55 кВт, выполнен на базе преобразователей частоты IEK.",
@@ -17526,9 +17607,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 198000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 55 кВт Systeme electric",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 55 кВт, выполнен на базе преобразователей частоты Systeme electric.",
@@ -17559,9 +17641,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 158400,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 55 кВт TDM",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 55 кВт, выполнен на базе преобразователей частоты TDM.",
@@ -17592,9 +17675,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 153000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 55 кВт VEDA",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 55 кВт, выполнен на базе преобразователей частоты VEDA.",
@@ -17625,9 +17709,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 165600,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 75 кВт IEK",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 75 кВт, выполнен на базе преобразователей частоты IEK.",
@@ -17658,9 +17743,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 198000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 75 кВт Systeme electric",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 75 кВт, выполнен на базе преобразователей частоты Systeme electric.",
@@ -17691,9 +17777,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 158400,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 75 кВт TDM",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 75 кВт, выполнен на базе преобразователей частоты TDM.",
@@ -17724,9 +17811,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 153000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 75 кВт VEDA",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 75 кВт, выполнен на базе преобразователей частоты VEDA.",
@@ -17757,9 +17845,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 230000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 90 кВт IEK",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 90 кВт, выполнен на базе преобразователей частоты IEK.",
@@ -17790,9 +17879,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 275000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 90 кВт Systeme electric",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 90 кВт, выполнен на базе преобразователей частоты Systeme electric.",
@@ -17823,9 +17913,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 220000,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 90 кВт TDM",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 90 кВт, выполнен на базе преобразователей частоты TDM.",
@@ -17856,9 +17947,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 212500,
-            "main_image": "images/sp-90.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-90.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 90 кВт VEDA",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 90 кВт, выполнен на базе преобразователей частоты VEDA.",
@@ -17889,9 +17981,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 230000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 110 кВт IEK",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 110 кВт, выполнен на базе преобразователей частоты IEK.",
@@ -17922,9 +18015,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 275000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 110 кВт Systeme electric",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 110 кВт, выполнен на базе преобразователей частоты Systeme electric.",
@@ -17955,9 +18049,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 220000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 110 кВт TDM",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 110 кВт, выполнен на базе преобразователей частоты TDM.",
@@ -17988,9 +18083,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 212500,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 110 кВт VEDA",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 110 кВт, выполнен на базе преобразователей частоты VEDA.",
@@ -18021,9 +18117,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 322000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 132 кВт IEK",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 132 кВт, выполнен на базе преобразователей частоты IEK.",
@@ -18054,9 +18151,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 385000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 132 кВт Systeme electric",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 132 кВт, выполнен на базе преобразователей частоты Systeme electric.",
@@ -18087,9 +18185,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 308000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 132 кВт TDM",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 132 кВт, выполнен на базе преобразователей частоты TDM.",
@@ -18120,9 +18219,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 297500,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 132 кВт VEDA",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 132 кВт, выполнен на базе преобразователей частоты VEDA.",
@@ -18153,9 +18253,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 322000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 160 кВт IEK",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 160 кВт, выполнен на базе преобразователей частоты IEK.",
@@ -18186,9 +18287,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 385000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 160 кВт Systeme electric",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 160 кВт, выполнен на базе преобразователей частоты Systeme electric.",
@@ -18219,9 +18321,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 308000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 160 кВт TDM",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 160 кВт, выполнен на базе преобразователей частоты TDM.",
@@ -18252,9 +18355,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 297500,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 160 кВт VEDA",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 160 кВт, выполнен на базе преобразователей частоты VEDA.",
@@ -18285,9 +18389,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 414000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 200 кВт IEK",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 200 кВт, выполнен на базе преобразователей частоты IEK.",
@@ -18318,9 +18423,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 495000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 200 кВт Systeme electric",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 200 кВт, выполнен на базе преобразователей частоты Systeme electric.",
@@ -18351,9 +18457,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 396000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 200 кВт TDM",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 200 кВт, выполнен на базе преобразователей частоты TDM.",
@@ -18384,9 +18491,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 382500,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 200 кВт VEDA",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 200 кВт, выполнен на базе преобразователей частоты VEDA.",
@@ -18417,9 +18525,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 414000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 220 кВт IEK",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 220 кВт, выполнен на базе преобразователей частоты IEK.",
@@ -18450,9 +18559,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 495000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 220 кВт Systeme electric",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 220 кВт, выполнен на базе преобразователей частоты Systeme electric.",
@@ -18483,9 +18593,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 396000,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 220 кВт TDM",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 220 кВт, выполнен на базе преобразователей частоты TDM.",
@@ -18516,9 +18627,10 @@
             "inputs_count": "1",
             "phases_count": "3",
             "base_price": 382500,
-            "main_image": "images/sp-220.png",
+            "main_image": "images/preobh1.png",
             "images": [
-                "images/sp-220.png"
+                "images/preobh1.png",
+                "images/preobh2.png"
             ],
             "description": "Шкаф управления с преобразователем частоты 220 кВт VEDA",
             "full_description": "Шкаф управления с преобразователем частоты для электродвигателя мощностью 220 кВт, выполнен на базе преобразователей частоты VEDA.",
