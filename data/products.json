@@ -18784,7 +18784,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 1.5 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -18821,7 +18823,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 1.5 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -18858,7 +18862,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 1.5 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -18895,7 +18901,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 1.5 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -18932,7 +18940,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 1.5 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -18969,7 +18979,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 1.5 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -19006,7 +19018,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 2.2 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -19043,7 +19057,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 2.2 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -19080,7 +19096,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 2.2 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -19117,7 +19135,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 2.2 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -19154,7 +19174,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 2.2 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -19191,7 +19213,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 2.2 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -19228,7 +19252,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 3 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -19265,7 +19291,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 3 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -19302,7 +19330,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 3 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -19339,7 +19369,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 3 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -19376,7 +19408,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 3 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -19413,7 +19447,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 3 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -19450,7 +19486,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 4 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -19487,7 +19525,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 4 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -19524,7 +19564,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 4 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -19561,7 +19603,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 4 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -19598,7 +19642,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 4 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -19635,7 +19681,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 4 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -19672,7 +19720,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 5.5 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -19709,7 +19759,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 5.5 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -19746,7 +19798,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 5.5 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -19783,7 +19837,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 5.5 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -19820,7 +19876,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 5.5 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -19857,7 +19915,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 5.5 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -19894,7 +19954,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 7.5 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -19931,7 +19993,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 7.5 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -19968,7 +20032,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 7.5 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -20005,7 +20071,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 7.5 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -20042,7 +20110,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 7.5 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -20079,7 +20149,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 7.5 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -20116,7 +20188,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 11 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -20153,7 +20227,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 11 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -20190,7 +20266,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 11 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -20227,7 +20305,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 11 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -20264,7 +20344,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 11 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -20301,7 +20383,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 11 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -20338,7 +20422,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 1.5 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -20375,7 +20461,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 1.5 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -20412,7 +20500,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 1.5 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -20449,7 +20539,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 1.5 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -20486,7 +20578,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 1.5 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -20523,7 +20617,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 1.5 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -20560,7 +20656,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 2.2 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -20597,7 +20695,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 2.2 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -20634,7 +20734,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 2.2 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -20671,7 +20773,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 2.2 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -20708,7 +20812,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 2.2 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -20745,7 +20851,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 2.2 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -20782,7 +20890,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 3 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -20819,7 +20929,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 3 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -20856,7 +20968,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 3 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -20893,7 +21007,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 3 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -20930,7 +21046,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 3 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -20967,7 +21085,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 3 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -21004,7 +21124,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 4 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -21041,7 +21163,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 4 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -21078,7 +21202,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 4 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -21115,7 +21241,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 4 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -21152,7 +21280,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 4 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -21189,7 +21319,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 4 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -21226,7 +21358,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 5.5 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -21263,7 +21397,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 5.5 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -21300,7 +21436,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 5.5 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -21337,7 +21475,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 5.5 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -21374,7 +21514,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 5.5 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -21411,7 +21553,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 5.5 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -21448,7 +21592,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 7.5 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -21485,7 +21631,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 7.5 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -21522,7 +21670,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 7.5 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -21559,7 +21709,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 7.5 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -21596,7 +21748,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 7.5 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -21633,7 +21787,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 7.5 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -21670,7 +21826,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 11 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -21707,7 +21865,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 11 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -21744,7 +21904,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 11 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -21781,7 +21943,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 11 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -21818,7 +21982,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 11 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -21855,7 +22021,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 11 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -21892,7 +22060,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 1.5 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -21929,7 +22099,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 1.5 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -21966,7 +22138,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 1.5 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -22003,7 +22177,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 1.5 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -22040,7 +22216,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 1.5 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -22077,7 +22255,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 1.5 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -22114,7 +22294,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 2.2 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -22151,7 +22333,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 2.2 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -22188,7 +22372,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 2.2 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -22225,7 +22411,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 2.2 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -22262,7 +22450,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 2.2 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -22299,7 +22489,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 2.2 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -22336,7 +22528,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 3 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -22373,7 +22567,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 3 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -22410,7 +22606,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 3 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -22447,7 +22645,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 3 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -22484,7 +22684,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 3 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -22521,7 +22723,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 3 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -22558,7 +22762,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 4 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -22595,7 +22801,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 4 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -22632,7 +22840,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 4 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -22669,7 +22879,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 4 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -22706,7 +22918,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 4 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -22743,7 +22957,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 4 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -22780,7 +22996,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 5.5 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -22817,7 +23035,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 5.5 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -22854,7 +23074,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 5.5 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -22891,7 +23113,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 5.5 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -22928,7 +23152,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 5.5 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -22965,7 +23191,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 5.5 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -23002,7 +23230,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 7.5 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -23039,7 +23269,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 7.5 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -23076,7 +23308,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 7.5 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -23113,7 +23347,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 7.5 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -23150,7 +23386,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 7.5 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -23187,7 +23425,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 7.5 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -23224,7 +23464,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 11 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -23261,7 +23503,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 11 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -23298,7 +23542,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 11 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -23335,7 +23581,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 11 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -23372,7 +23620,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 11 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -23409,7 +23659,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 11 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -23446,7 +23698,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 1.5 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -23483,7 +23737,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 1.5 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -23520,7 +23776,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 1.5 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -23557,7 +23815,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 1.5 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -23594,7 +23854,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 1.5 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -23631,7 +23893,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 1.5 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -23668,7 +23932,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 2.2 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -23705,7 +23971,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 2.2 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -23742,7 +24010,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 2.2 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -23779,7 +24049,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 2.2 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -23816,7 +24088,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 2.2 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -23853,7 +24127,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 2.2 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -23890,7 +24166,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 3 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -23927,7 +24205,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 3 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -23964,7 +24244,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 3 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -24001,7 +24283,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 3 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -24038,7 +24322,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 3 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -24075,7 +24361,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 3 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -24112,7 +24400,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 4 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -24149,7 +24439,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 4 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -24186,7 +24478,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 4 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -24223,7 +24517,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 4 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -24260,7 +24556,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 4 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -24297,7 +24595,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 4 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -24334,7 +24634,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 5.5 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -24371,7 +24673,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 5.5 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -24408,7 +24712,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 5.5 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -24445,7 +24751,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 5.5 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -24482,7 +24790,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 5.5 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -24519,7 +24829,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 5.5 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -24556,7 +24868,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 7.5 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -24593,7 +24907,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 7.5 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -24630,7 +24946,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 7.5 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -24667,7 +24985,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 7.5 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -24704,7 +25024,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 7.5 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -24741,7 +25063,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 7.5 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -24778,7 +25102,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 11 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -24815,7 +25141,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 11 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -24852,7 +25180,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 11 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -24889,7 +25219,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 11 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -24926,7 +25258,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 11 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -24963,7 +25297,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 11 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -25000,7 +25336,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 1.5 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -25037,7 +25375,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 1.5 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -25074,7 +25414,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 1.5 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -25111,7 +25453,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 1.5 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -25148,7 +25492,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 1.5 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -25185,7 +25531,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 1.5 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -25222,7 +25570,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 2.2 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -25259,7 +25609,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 2.2 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -25296,7 +25648,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 2.2 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -25333,7 +25687,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 2.2 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -25370,7 +25726,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 2.2 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -25407,7 +25765,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 2.2 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -25444,7 +25804,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 3 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -25481,7 +25843,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 3 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -25518,7 +25882,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 3 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -25555,7 +25921,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 3 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -25592,7 +25960,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 3 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -25629,7 +25999,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 3 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -25666,7 +26038,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 4 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -25703,7 +26077,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 4 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -25740,7 +26116,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 4 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -25777,7 +26155,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 4 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -25814,7 +26194,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 4 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -25851,7 +26233,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 4 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -25888,7 +26272,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 5.5 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -25925,7 +26311,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 5.5 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -25962,7 +26350,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 5.5 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -25999,7 +26389,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 5.5 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -26036,7 +26428,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 5.5 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -26073,7 +26467,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 5.5 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -26110,7 +26506,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 7.5 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -26147,7 +26545,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 7.5 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -26184,7 +26584,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 7.5 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -26221,7 +26623,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 7.5 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -26258,7 +26662,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 7.5 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -26295,7 +26701,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 7.5 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -26332,7 +26740,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 11 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -26369,7 +26779,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 11 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -26406,7 +26818,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 11 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -26443,7 +26857,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 11 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -26480,7 +26896,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 11 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -26517,7 +26935,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 11 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -26554,7 +26974,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 1.5 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -26591,7 +27013,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 1.5 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -26628,7 +27052,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 1.5 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -26665,7 +27091,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 1.5 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -26702,7 +27130,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 1.5 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -26739,7 +27169,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 1.5 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -26776,7 +27208,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 2.2 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -26813,7 +27247,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 2.2 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -26850,7 +27286,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 2.2 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -26887,7 +27325,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 2.2 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -26924,7 +27364,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 2.2 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -26961,7 +27403,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 2.2 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -26998,7 +27442,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 3 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -27035,7 +27481,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 3 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -27072,7 +27520,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 3 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -27109,7 +27559,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 3 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -27146,7 +27598,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 3 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -27183,7 +27637,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 3 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -27220,7 +27676,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 4 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -27257,7 +27715,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 4 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -27294,7 +27754,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 4 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -27331,7 +27793,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 4 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -27368,7 +27832,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 4 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -27405,7 +27871,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 4 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -27442,7 +27910,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 5.5 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -27479,7 +27949,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 5.5 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -27516,7 +27988,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 5.5 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -27553,7 +28027,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 5.5 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -27590,7 +28066,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 5.5 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -27627,7 +28105,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 5.5 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -27664,7 +28144,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 7.5 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -27701,7 +28183,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 7.5 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -27738,7 +28222,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 7.5 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -27775,7 +28261,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 7.5 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -27812,7 +28300,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 7.5 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -27849,7 +28339,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 7.5 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -27886,7 +28378,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 11 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -27923,7 +28417,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 11 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -27960,7 +28456,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 11 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -27997,7 +28495,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 11 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -28034,7 +28534,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 11 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -28071,7 +28573,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 11 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -28108,7 +28612,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 1.5 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -28145,7 +28651,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 1.5 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -28182,7 +28690,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 1.5 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -28219,7 +28729,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 1.5 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -28256,7 +28768,9 @@
             "base_price": 51500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 1.5 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 1.5 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -28293,7 +28807,9 @@
             "base_price": 56500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 1.5 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 1.5 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -28330,7 +28846,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 2.2 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -28367,7 +28885,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 2.2 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -28404,7 +28924,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 2.2 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -28441,7 +28963,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 2.2 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -28478,7 +29002,9 @@
             "base_price": 52200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 2.2 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 2.2 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -28515,7 +29041,9 @@
             "base_price": 57200,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 2.2 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 2.2 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -28552,7 +29080,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 3 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -28589,7 +29119,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 3 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -28626,7 +29158,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 3 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -28663,7 +29197,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 3 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -28700,7 +29236,9 @@
             "base_price": 53000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 3 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 3 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -28737,7 +29275,9 @@
             "base_price": 58000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 3 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 3 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -28774,7 +29314,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 4 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -28811,7 +29353,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 4 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -28848,7 +29392,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 4 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -28885,7 +29431,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 4 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -28922,7 +29470,9 @@
             "base_price": 54000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 4 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 4 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -28959,7 +29509,9 @@
             "base_price": 59000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 4 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 4 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -28996,7 +29548,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 5.5 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -29033,7 +29587,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 5.5 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -29070,7 +29626,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 5.5 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -29107,7 +29665,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 5.5 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -29144,7 +29704,9 @@
             "base_price": 55500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 5.5 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 5.5 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -29181,7 +29743,9 @@
             "base_price": 60500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 5.5 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 5.5 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -29218,7 +29782,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 7.5 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -29255,7 +29821,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 7.5 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -29292,7 +29860,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 7.5 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -29329,7 +29899,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 7.5 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -29366,7 +29938,9 @@
             "base_price": 57500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 7.5 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 7.5 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -29403,7 +29977,9 @@
             "base_price": 62500,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 7.5 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 7.5 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -29440,7 +30016,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 11 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -29477,7 +30055,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 11 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -29514,7 +30094,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 11 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -29551,7 +30133,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотным регулированием 11 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с частотным регулированием для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -29588,7 +30172,9 @@
             "base_price": 61000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 11 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 11 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -29625,7 +30211,9 @@
             "base_price": 66000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 11 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 11 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -29662,7 +30250,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 15 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -29699,7 +30289,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 15 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -29736,7 +30328,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотное регулирование 15 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -29773,7 +30367,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотное регулирование 15 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -29810,7 +30406,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 15 кВт CHINT (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования CHINT.",
@@ -29847,7 +30445,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 15 кВт CHINT (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования CHINT.",
@@ -29884,7 +30484,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 15 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -29921,7 +30523,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 15 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -29958,7 +30562,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотное регулирование 15 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -29995,7 +30601,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотное регулирование 15 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -30032,7 +30640,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 15 кВт EKF (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования EKF.",
@@ -30069,7 +30679,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 15 кВт EKF (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования EKF.",
@@ -30106,7 +30718,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 15 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -30143,7 +30757,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 15 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -30180,7 +30796,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотное регулирование 15 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -30217,7 +30835,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотное регулирование 15 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -30254,7 +30874,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 15 кВт Dekraft (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования Dekraft.",
@@ -30291,7 +30913,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 15 кВт Dekraft (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования Dekraft.",
@@ -30328,7 +30952,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 15 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -30365,7 +30991,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 15 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -30402,7 +31030,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотное регулирование 15 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -30439,7 +31069,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотное регулирование 15 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -30476,7 +31108,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 15 кВт IEK (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования IEK.",
@@ -30513,7 +31147,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 15 кВт IEK (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования IEK.",
@@ -30550,7 +31186,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 15 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -30587,7 +31225,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 15 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -30624,7 +31264,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотное регулирование 15 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -30661,7 +31303,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотное регулирование 15 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -30698,7 +31342,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 15 кВт TDM (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования TDM.",
@@ -30735,7 +31381,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 15 кВт TDM (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования TDM.",
@@ -30772,7 +31420,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 15 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -30809,7 +31459,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 15 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -30846,7 +31498,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотное регулирование 15 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -30883,7 +31537,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотное регулирование 15 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -30920,7 +31576,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 15 кВт VEDA (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования VEDA.",
@@ -30957,7 +31615,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 15 кВт VEDA (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования VEDA.",
@@ -30994,7 +31654,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 15 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -31031,7 +31693,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с прямым пуском 15 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с прямым пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -31068,7 +31732,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотное регулирование 15 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -31105,7 +31771,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с частотное регулирование 15 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с частотное регулирование для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
@@ -31142,7 +31810,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 15 кВт Systeme electric (1 насос)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 1 насос, выполнен на базе оборудования Systeme electric.",
@@ -31179,7 +31849,9 @@
             "base_price": 68000,
             "main_image": "images/ps.jpeg",
             "images": [
-                "images/ps.jpeg"
+                "images/ps.jpeg",
+                "images/ps2.jpeg",
+                "images/ps3.jpeg"
             ],
             "description": "Шкаф управления с плавным пуском 15 кВт Systeme electric (2 насоса)",
             "full_description": "Шкаф управления с плавным пуском для электродвигателя мощностью 15 кВт, 2 насоса, выполнен на базе оборудования Systeme electric.",
