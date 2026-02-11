@@ -2852,17 +2852,21 @@ h1.category-title {
   gap: 2rem;
   margin-top: 2rem;
   margin-bottom: 4rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
   .catalog-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .catalog-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 }
@@ -2897,12 +2901,12 @@ h1.category-title {
 
 .catalog-category-image-wrapper {
   width: 100%;
-  height: 250px;
+  height: 280px;
   background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 2.5rem;
   flex-shrink: 0;
   border-radius: 1rem;
   box-shadow: none;
@@ -2913,8 +2917,9 @@ h1.category-title {
 
 @media (min-width: 768px) {
   .catalog-category-image-wrapper {
-    width: 280px;
+    width: 320px;
     height: auto;
+    min-height: 280px;
     border-radius: 1rem 0 0 1rem;
   }
 }
