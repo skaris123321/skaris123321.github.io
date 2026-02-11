@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог типовых решений — РОСЭК</title>
+  <meta name="description" content="Каталог типовых решений РОСЭК: шкафы АВР, ВРУ, ГРЩ, ИБП, шкафы управления и стабилизаторы напряжения">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <script>
+    if (typeof window.solveSimpleChallenge === 'undefined') {
+      window.solveSimpleChallenge = () => null;
+    }
+  </script>
+
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="bg-light text-dark">
+  <header class="header">
+    <div class="container flex-wrap justify-between items-center">
+      <a href="../index.html" class="logo">РОСЭК</a>
+
+      <div class="header-controls">
+        <div class="search-wrapper">
+          <input type="search" placeholder="Поиск по товарам..." class="search-input">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+
+        <div class="relative" x-data="{ open: false }">
+          <a href="catalog.html" class="btn-catalog">
+            Каталог
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <a href="cart.html" class="cart-link" x-data="{ cartCount: 0 }" x-init="
+          cartCount = window.cart ? window.cart.getTotalItems() : 0;
+          window.addEventListener('cartChanged', (e) => cartCount = e.detail.totalItems);
+        ">
+          <div class="cart-icon-wrapper">
+            <svg class="cart-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5-6m0 0h15M17 21a2 2 0 100-4 2 2 0 000 4zM9 21a2 2 0 100-4 2 2 0 000 4z"/>
+            </svg>
+            <span x-show="cartCount > 0" x-text="cartCount" class="cart-badge"></span>
+          </div>
+          <span class="cart-text">Корзина</span>
+        </a>
+        <a href="tel:+780055118939" class="phone hidden sm:block">8 (800) 511-89-39</a>
+        <a href="mailto:zakaz@rosek.tech" class="email hidden md:block">zakaz@rosek.tech</a>
+        <button class="btn-login">Войти</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <span>»</span>
+        <span class="breadcrumbs-current">Каталог типовых решений</span>
+      </div>
+      <h1 class="category-title">Каталог типовых решений</h1>
+    </div>
+  </section>
+
+  <main class="container" x-data="catalogData()" x-init="init()">
+    <div x-show="loading" class="text-center py-12">
+      <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-red-main"></div>
+      <p class="mt-4 text-gray-600">Загрузка каталога...</p>
+    </div>
+
+    <div x-show="!loading" class="catalog-grid">
+      <template x-for="category in categories" :key="category.type">
+        <div class="catalog-category-card">
+          <a :href="category.url" class="catalog-category-link">
+            <div class="catalog-category-image-wrapper">
+              <img :src="category.image" :alt="category.name" class="catalog-category-image">
+            </div>
+            <div class="catalog-category-content">
+              <h2 class="catalog-category-title" x-text="category.name"></h2>
+              <ul class="catalog-category-list">
+                <template x-for="subcategory in category.subcategories" :key="subcategory">
+                  <li class="catalog-category-item" x-text="subcategory"></li>
+                </template>
+              </ul>
+            </div>
+          </a>
+        </div>
+      </template>
+    </div>
+  </main>
+
+  <script src="../js/cart.js"></script>
+  <script src="../js/products-api.js"></script>
+  <script src="../js/catalog-page.js"></script>
+</body>
+</html>

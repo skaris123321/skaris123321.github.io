@@ -2844,3 +2844,130 @@ h1.category-title {
     gap: 0.25rem;
   }
 }
+
+/* Каталог типовых решений */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.catalog-category-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.catalog-category-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+}
+
+.catalog-category-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  .catalog-category-link {
+    flex-direction: row;
+  }
+}
+
+.catalog-category-image-wrapper {
+  width: 100%;
+  height: 250px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .catalog-category-image-wrapper {
+    width: 280px;
+    height: auto;
+  }
+}
+
+.catalog-category-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.catalog-category-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .catalog-category-content {
+    padding: 2rem;
+  }
+}
+
+.catalog-category-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .catalog-category-title {
+    font-size: 1.75rem;
+  }
+}
+
+.catalog-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.catalog-category-item {
+  color: #6b7280;
+  font-size: 0.95rem;
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.catalog-category-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--red-main);
+  font-weight: bold;
+}
