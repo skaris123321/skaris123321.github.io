@@ -2874,14 +2874,13 @@ h1.category-title {
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   transition: box-shadow 0.3s ease;
-  height: 100%;
-  min-height: 280px;
+  height: 280px;
   border: 1px solid #f3f4f6;
 }
 
 @media (min-width: 768px) {
   .catalog-category-card {
-    min-height: 240px;
+    height: 240px;
   }
 }
 
