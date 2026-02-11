@@ -2951,13 +2951,11 @@ h1.category-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 180px;
 }
 
 @media (min-width: 768px) {
   .catalog-category-content {
     padding: 2rem;
-    min-height: 200px;
   }
 }
 
