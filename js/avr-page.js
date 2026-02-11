@@ -20,10 +20,33 @@ document.addEventListener('alpine:init', () => {
       
       async init() {
         await this.loadProducts();
+        this.applyUrlFilters(); // Применяем фильтры из URL
         this.checkUrlParams();
         // Изначально показываем все товары
         this.filteredProducts = [...this.products];
         this.applyFilters();
+      },
+      
+      applyUrlFilters() {
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Читаем параметры из URL
+        const commutationType = urlParams.get('commutationType');
+        const inputs = urlParams.get('inputs');
+        const poles = urlParams.get('poles');
+        
+        // Применяем фильтры
+        if (commutationType) {
+          this.selectedCommutationType = commutationType;
+        }
+        
+        if (inputs) {
+          this.selectedInputs = inputs;
+        }
+        
+        if (poles) {
+          this.selectedPolesCount = poles;
+        }
       },
       
       checkUrlParams() {

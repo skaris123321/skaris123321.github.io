@@ -10,7 +10,20 @@ function controlCabinetsCatalog() {
 
     async init() {
       await this.loadProducts();
+      this.applyUrlFilters(); // Применяем фильтры из URL
       this.applyFilters();
+    },
+
+    applyUrlFilters() {
+      const urlParams = new URLSearchParams(window.location.search);
+      
+      // Читаем параметр controlType из URL
+      const controlType = urlParams.get('controlType');
+      
+      // Применяем фильтр
+      if (controlType) {
+        this.selectedControlType = controlType;
+      }
     },
 
     async loadProducts() {

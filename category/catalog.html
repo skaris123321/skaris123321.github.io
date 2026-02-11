@@ -80,19 +80,21 @@
     <div x-show="!loading" class="catalog-grid">
       <template x-for="category in categories" :key="category.type">
         <div class="catalog-category-card">
-          <a :href="category.url" class="catalog-category-link">
+          <div class="catalog-category-link-wrapper">
             <div class="catalog-category-image-wrapper">
               <img :src="category.image" :alt="category.name" class="catalog-category-image">
             </div>
             <div class="catalog-category-content">
               <h2 class="catalog-category-title" x-text="category.name"></h2>
               <ul class="catalog-category-list">
-                <template x-for="subcategory in category.subcategories" :key="subcategory">
-                  <li class="catalog-category-item" x-text="subcategory"></li>
+                <template x-for="subcategory in category.subcategories" :key="subcategory.url">
+                  <li class="catalog-category-item">
+                    <a :href="subcategory.url" class="catalog-subcategory-link" x-text="subcategory.name"></a>
+                  </li>
                 </template>
               </ul>
             </div>
-          </a>
+          </div>
         </div>
       </template>
     </div>

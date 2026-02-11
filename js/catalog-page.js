@@ -23,32 +23,54 @@ function catalogData() {
         );
         
         if (avrProducts.length > 0) {
-          const avrSubcategories = new Set();
+          const avrSubcategories = [];
           
-          avrProducts.forEach(product => {
-            if (product.commutation_type === 'monoblock') {
-              if (product.inputs_count === '2') {
-                avrSubcategories.add('Моноблочные АВР на 2 ввода');
-              } else if (product.inputs_count === '3') {
-                avrSubcategories.add('Моноблочные АВР на 3 ввода');
-              }
-            } else if (product.commutation_type === 'contactors') {
-              if (product.poles_count === 'single_phase') {
-                avrSubcategories.add('АВР на контакторах однофазные');
-              } else if (product.poles_count === 'three_phase') {
-                avrSubcategories.add('АВР на контакторах трёхфазные');
-              }
-            } else if (product.commutation_type === 'sectional') {
-              avrSubcategories.add('Секционные АВР');
-            }
-          });
+          // Моноблочные АВР на 2 ввода
+          if (avrProducts.some(p => p.commutation_type === 'monoblock' && p.inputs_count === '2')) {
+            avrSubcategories.push({
+              name: 'Моноблочные АВР на 2 ввода',
+              url: 'avr.html?commutationType=monoblock&inputs=2'
+            });
+          }
+          
+          // Моноблочные АВР на 3 ввода
+          if (avrProducts.some(p => p.commutation_type === 'monoblock' && p.inputs_count === '3')) {
+            avrSubcategories.push({
+              name: 'Моноблочные АВР на 3 ввода',
+              url: 'avr.html?commutationType=monoblock&inputs=3'
+            });
+          }
+          
+          // АВР на контакторах однофазные
+          if (avrProducts.some(p => p.commutation_type === 'contactors' && p.poles_count === 'single_phase')) {
+            avrSubcategories.push({
+              name: 'АВР на контакторах однофазные',
+              url: 'avr.html?commutationType=contactors&poles=single_phase'
+            });
+          }
+          
+          // АВР на контакторах трёхфазные
+          if (avrProducts.some(p => p.commutation_type === 'contactors' && p.poles_count === 'three_phase')) {
+            avrSubcategories.push({
+              name: 'АВР на контакторах трёхфазные',
+              url: 'avr.html?commutationType=contactors&poles=three_phase'
+            });
+          }
+          
+          // Секционные АВР
+          if (avrProducts.some(p => p.commutation_type === 'sectional')) {
+            avrSubcategories.push({
+              name: 'Секционные АВР',
+              url: 'avr.html?commutationType=sectional'
+            });
+          }
 
           categoryMap.set('avr', {
             type: 'avr',
             name: 'АВР',
             url: 'avr.html',
             image: '../images/avr-100.jpg',
-            subcategories: Array.from(avrSubcategories).sort()
+            subcategories: avrSubcategories
           });
         }
 
@@ -56,64 +78,43 @@ function catalogData() {
         const controlCabinets = data.products.filter(p => p.commutation_type === 'control_cabinet');
         
         if (controlCabinets.length > 0) {
-          const controlSubcategories = new Set();
+          const controlSubcategories = [];
           
-          controlCabinets.forEach(product => {
-            if (product.control_type === 'soft_start') {
-              controlSubcategories.add('Шкафы управления с плавным пуском');
-            } else if (product.control_type === 'frequency_converter') {
-              controlSubcategories.add('Шкафы управления с преобразователем частоты');
-            } else if (product.control_type === 'direct_start') {
-              controlSubcategories.add('Шкафы управления с прямым пуском');
-            }
-          });
+          // Плавный пуск
+          if (controlCabinets.some(p => p.control_type === 'soft_start')) {
+            controlSubcategories.push({
+              name: 'Шкафы управления с плавным пуском',
+              url: 'control-cabinets.html?controlType=soft_start'
+            });
+          }
+          
+          // Преобразователь частоты
+          if (controlCabinets.some(p => p.control_type === 'frequency_converter')) {
+            controlSubcategories.push({
+              name: 'Шкафы управления с преобразователем частоты',
+              url: 'control-cabinets.html?controlType=frequency_converter'
+            });
+          }
+          
+          // Прямой пуск
+          if (controlCabinets.some(p => p.control_type === 'direct_start')) {
+            controlSubcategories.push({
+              name: 'Шкафы управления с прямым пуском',
+              url: 'control-cabinets.html?controlType=direct_start'
+            });
+          }
 
           categoryMap.set('control_cabinets', {
             type: 'control_cabinets',
             name: 'Шкафы управления',
             url: 'control-cabinets.html',
             image: '../images/preobh1.png',
-            subcategories: Array.from(controlSubcategories).sort()
+            subcategories: controlSubcategories
           });
         }
 
-        // Добавляем будущие категории (пока пустые)
-        const futureCategories = [
-          {
-            type: 'vru',
-            name: 'ВРУ',
-            url: '#',
-            image: '../images/avr-100.jpg',
-            subcategories: ['Скоро в продаже']
-          },
-          {
-            type: 'grsh',
-            name: 'ГРЩ',
-            url: '#',
-            image: '../images/avr-100.jpg',
-            subcategories: ['Скоро в продаже']
-          },
-          {
-            type: 'ups',
-            name: 'ИБП',
-            url: '#',
-            image: '../images/avr-100.jpg',
-            subcategories: ['Скоро в продаже']
-          },
-          {
-            type: 'stabilizers',
-            name: 'Стабилизаторы напряжения',
-            url: '#',
-            image: '../images/avr-100.jpg',
-            subcategories: ['Скоро в продаже']
-          }
-        ];
-
         // Преобразуем Map в массив
         this.categories = Array.from(categoryMap.values());
-        
-        // Добавляем будущие категории
-        // this.categories.push(...futureCategories);
 
         this.loading = false;
         
