@@ -2908,7 +2908,7 @@ h1.category-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 1.5rem;
   flex-shrink: 0;
   border-radius: 1rem;
   box-shadow: none;
@@ -2924,7 +2924,7 @@ h1.category-title {
     min-height: 200px;
     max-height: none;
     border-radius: 1rem 0 0 1rem;
-    padding: 2rem;
+    padding: 1.5rem;
   }
 }
 
@@ -2933,8 +2933,8 @@ h1.category-title {
 }
 
 .catalog-category-image {
-  max-width: 95%;
-  max-height: 95%;
+  max-width: 100%;
+  max-height: 100%;
   width: auto;
   height: auto;
   object-fit: contain;
