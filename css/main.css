@@ -2931,7 +2931,6 @@ h1.category-title {
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .catalog-category-card:hover .catalog-category-image {
