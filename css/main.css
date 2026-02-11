@@ -2933,8 +2933,8 @@ h1.category-title {
 }
 
 .catalog-category-image {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 95%;
+  max-height: 95%;
   width: auto;
   height: auto;
   object-fit: contain;
