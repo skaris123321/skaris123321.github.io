@@ -2955,29 +2955,41 @@ h1.category-title {
 }
 
 .catalog-category-item {
-  color: #6b7280;
   font-size: 0.95rem;
-  padding-left: 1.25rem;
   position: relative;
   line-height: 1.6;
-}
-
-.catalog-category-item::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: var(--red-main);
-  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .catalog-subcategory-link {
-  color: #6b7280;
+  color: #374151;
   text-decoration: none;
-  transition: color 0.2s;
-  display: inline-block;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  background: #f3f4f6;
+  font-weight: 500;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.catalog-subcategory-link::before {
+  content: "→";
+  color: var(--red-main);
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: transform 0.2s;
 }
 
 .catalog-subcategory-link:hover {
   color: var(--red-main);
-  text-decoration: underline;
+  background: #fee2e2;
+  transform: translateX(4px);
+}
+
+.catalog-subcategory-link:hover::before {
+  transform: translateX(4px);
 }
