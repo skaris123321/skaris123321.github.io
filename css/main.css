@@ -2976,7 +2976,7 @@ h1.category-title {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  min-height: 120px;
+  min-height: 140px;
 }
 
 .catalog-category-item {
