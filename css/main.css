@@ -2946,7 +2946,7 @@ h1.category-title {
 }
 
 .catalog-category-content {
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -2955,12 +2955,12 @@ h1.category-title {
 
 @media (min-width: 768px) {
   .catalog-category-content {
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 2rem;
   }
 }
 
 .catalog-category-title {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--dark);
   margin-bottom: 1rem;
@@ -2971,7 +2971,7 @@ h1.category-title {
 
 @media (min-width: 768px) {
   .catalog-category-title {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     min-height: 3rem;
   }
 }
