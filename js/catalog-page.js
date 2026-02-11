@@ -41,19 +41,11 @@ function catalogData() {
             });
           }
           
-          // АВР на контакторах однофазные
-          if (avrProducts.some(p => p.commutation_type === 'contactors' && p.poles_count === 'single_phase')) {
+          // АВР на контакторах (объединенная категория)
+          if (avrProducts.some(p => p.commutation_type === 'contactors')) {
             avrSubcategories.push({
-              name: 'АВР на контакторах (однофазные)',
-              url: 'avr.html?commutationType=contactors&poles=single_phase'
-            });
-          }
-          
-          // АВР на контакторах трёхфазные
-          if (avrProducts.some(p => p.commutation_type === 'contactors' && p.poles_count === 'three_phase')) {
-            avrSubcategories.push({
-              name: 'АВР на контакторах (трёхфазные)',
-              url: 'avr.html?commutationType=contactors&poles=three_phase'
+              name: 'АВР на контакторах',
+              url: 'avr.html?commutationType=contactors'
             });
           }
           
