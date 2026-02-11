@@ -3,7 +3,7 @@
 :root {
   --red-main: #dc2626;
   --red-dark: #b91c1c;
-  --gray-light: #f9fafb;
+  --gray-light: #fafafa;
   --gray-dark: #111827;
 }
 
@@ -2876,15 +2876,14 @@ h1.category-title {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+  transition: box-shadow 0.3s ease;
   height: 100%;
   border: 1px solid #f3f4f6;
 }
 
 .catalog-category-card:hover {
-  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
-  transform: translateY(-8px);
-  border-color: rgba(220, 38, 38, 0.2);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  border-color: #e5e7eb;
 }
 
 .catalog-category-link-wrapper {
@@ -2934,12 +2933,12 @@ h1.category-title {
   width: auto;
   height: auto;
   object-fit: contain;
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .catalog-category-card:hover .catalog-category-image {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .catalog-category-content {
