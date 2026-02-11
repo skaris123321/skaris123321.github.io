@@ -2915,7 +2915,7 @@ h1.category-title {
   .catalog-category-image-wrapper {
     width: 380px;
     height: auto;
-    min-height: 300px;
+    min-height: 280px;
     border-radius: 1rem 0 0 1rem;
   }
 }
@@ -2956,11 +2956,15 @@ h1.category-title {
   font-weight: 600;
   color: var(--dark);
   margin-bottom: 1rem;
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
   .catalog-category-title {
     font-size: 1.75rem;
+    min-height: 4rem;
   }
 }
 
