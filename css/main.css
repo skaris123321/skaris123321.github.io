@@ -2898,7 +2898,7 @@ h1.category-title {
 .catalog-category-image-wrapper {
   width: 100%;
   height: 240px;
-  background: #f5f5f5;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2980,7 +2980,7 @@ h1.category-title {
   font-size: 0.95rem;
   position: relative;
   line-height: 1.6;
-  margin-bottom: 0.375rem;
+  margin-bottom: 0.25rem;
 }
 
 .catalog-subcategory-link {
