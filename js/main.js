@@ -801,6 +801,10 @@ document.addEventListener('alpine:init', () => {
             this.basePrice = product.base_price;
             this.article = product.article;
             
+            console.log('=== ОБНОВЛЕНИЕ АРТИКУЛА ===');
+            console.log('Новый артикул:', this.article);
+            console.log('dynamicArticle:', this.dynamicArticle);
+            
             // Формируем массив изображений: main_image первым, затем дополнительные images
             let imageList = [];
             
