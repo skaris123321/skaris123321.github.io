@@ -110,7 +110,7 @@ function catalogData() {
           type: 'reactive_power',
           name: 'Компенсация реактивной мощности',
           url: 'reactive-power.html',
-          image: '../images/sub-2-vvoda.jpg',
+          image: '../images/nky.jpg',
           subcategories: [
             {
               name: 'Нерегулируемые конденсаторные установки',
