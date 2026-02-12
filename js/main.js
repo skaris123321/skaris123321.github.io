@@ -2055,10 +2055,18 @@ document.addEventListener('alpine:init', () => {
       
       // Метод для обновления мощности (для компенсации реактивной мощности)
       async updateReactivePower(value) {
+        console.log('=== UPDATE REACTIVE POWER ===');
+        console.log('Новая мощность:', value);
+        console.log('Текущий артикул до обновления:', this.article);
+        
         if (this.loading) return;
         this.reactivePower = value;
         
         await this.loadProductByCharacteristics();
+        
+        console.log('Артикул после обновления:', this.article);
+        console.log('dynamicArticle:', this.dynamicArticle);
+        
         this.updateCartQuantity();
       }
     };
