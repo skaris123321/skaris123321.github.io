@@ -1028,8 +1028,8 @@
             <div class="description-article" x-text="'Артикул: ' + (dynamicArticle || '')"></div>
           </div>
 
-          <!-- Показываем полное описание -->
-          <div>
+          <!-- Показываем полное описание только для АВР и шкафов управления -->
+          <div x-show="commutationType !== 'reactive_power'">
             <div class="purpose-compact">
               <h3 class="description-subtitle">Общее назначение</h3>
               <p class="purpose-text" x-text="getCommutationDescription().purpose">
@@ -1063,6 +1063,11 @@
                 </div>
               </template>
             </div>
+          </div>
+          
+          <!-- Для реактивной мощности показываем только краткое описание из базы данных -->
+          <div x-show="commutationType === 'reactive_power'">
+            <p class="purpose-text" x-text="fullDescription"></p>
           </div>
         </div>
       </div>
