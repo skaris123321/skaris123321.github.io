@@ -37,7 +37,7 @@ if (typeof ProductsAPI !== 'undefined') {
 
     async getAvailableOptions(filters = {}) {
       const data = await this.loadProducts();
-      const { manufacturer_brand, commutation_type, inputs_count, control_type, motor_power, enclosure_type, connection_type, climate_type } = filters;
+      const { manufacturer_brand, commutation_type, inputs_count, control_type, motor_power, enclosure_type, connection_type, climate_type, regulation_type } = filters;
 
       let filtered = data.products;
       if (manufacturer_brand) filtered = filtered.filter(p => p.brand === manufacturer_brand);
@@ -48,6 +48,7 @@ if (typeof ProductsAPI !== 'undefined') {
       if (enclosure_type) filtered = filtered.filter(p => p.enclosure_type === enclosure_type);
       if (connection_type) filtered = filtered.filter(p => p.connection_type === connection_type);
       if (climate_type) filtered = filtered.filter(p => p.climate_type === climate_type);
+      if (regulation_type) filtered = filtered.filter(p => p.regulation_type === regulation_type);
 
       const opts = {
         manufacturer_brand: [...new Set(data.products.map(p => p.brand).filter(Boolean))].sort(),
@@ -58,7 +59,9 @@ if (typeof ProductsAPI !== 'undefined') {
         motor_power: [],
         enclosure_type: [],
         connection_type: [],
-        climate_type: []
+        climate_type: [],
+        regulation_type: [],
+        reactive_power: []
       };
 
       let typeProducts = data.products;
@@ -82,6 +85,18 @@ if (typeof ProductsAPI !== 'undefined') {
         if (commutation_type) motorPowerProducts = motorPowerProducts.filter(p => p.commutation_type === commutation_type);
         if (control_type) motorPowerProducts = motorPowerProducts.filter(p => p.control_type === control_type);
         opts.motor_power = [...new Set(motorPowerProducts.map(p => parseFloat(p.motor_power)).filter(Boolean))].sort((a, b) => a - b);
+      } else if (commutation_type === 'reactive_power') {
+        // Для компенсации реактивной мощности добавляем опции regulation_type и reactive_power
+        let regulationTypeProducts = data.products;
+        if (manufacturer_brand) regulationTypeProducts = regulationTypeProducts.filter(p => p.brand === manufacturer_brand);
+        if (commutation_type) regulationTypeProducts = regulationTypeProducts.filter(p => p.commutation_type === commutation_type);
+        opts.regulation_type = [...new Set(regulationTypeProducts.map(p => p.regulation_type).filter(Boolean))].sort();
+
+        let reactivePowerProducts = data.products;
+        if (manufacturer_brand) reactivePowerProducts = reactivePowerProducts.filter(p => p.brand === manufacturer_brand);
+        if (commutation_type) reactivePowerProducts = reactivePowerProducts.filter(p => p.commutation_type === commutation_type);
+        if (regulation_type) reactivePowerProducts = reactivePowerProducts.filter(p => p.regulation_type === regulation_type);
+        opts.reactive_power = [...new Set(reactivePowerProducts.map(p => parseFloat(p.power)).filter(Boolean))].sort((a, b) => a - b);
       } else {
         // Для АВР добавляем nominal_current
         let currentProducts = data.products;
@@ -128,6 +143,8 @@ if (typeof ProductsAPI !== 'undefined') {
             motor_power: product.motor_power,
             start_type: product.start_type,
             pump_count: product.pump_count,
+            regulation_type: product.regulation_type,
+            reactive_power: product.power,
             enclosure_type: product.enclosure_type || null,
             connection_type: product.connection_type || null,
             climate_type: product.climate_type || null,
@@ -144,12 +161,14 @@ if (typeof ProductsAPI !== 'undefined') {
       }
       
       // Иначе ищем по фильтрам
-      const { nominal_current, commutation_type, manufacturer_brand, inputs_count, poles_count, control_type, motor_power, start_type, pump_count, enclosure_type, connection_type, climate_type } = filters;
+      const { nominal_current, commutation_type, manufacturer_brand, inputs_count, poles_count, control_type, motor_power, start_type, pump_count, regulation_type, reactive_power, enclosure_type, connection_type, climate_type } = filters;
 
       // Для шкафов управления требуется motor_power вместо nominal_current
       if (commutation_type === 'control_cabinet' && !motor_power) {
         throw new Error('motor_power required for control cabinets');
-      } else if (commutation_type !== 'control_cabinet' && !nominal_current) {
+      } else if (commutation_type === 'reactive_power' && !reactive_power) {
+        throw new Error('reactive_power required for reactive power products');
+      } else if (commutation_type !== 'control_cabinet' && commutation_type !== 'reactive_power' && !nominal_current) {
         throw new Error('nominal_current required');
       }
 
@@ -163,6 +182,10 @@ if (typeof ProductsAPI !== 'undefined') {
             if (start_type && p.start_type !== start_type) return false;
             if (pump_count && p.pump_count !== parseInt(pump_count)) return false;
           }
+        } else if (commutation_type === 'reactive_power') {
+          // Для компенсации реактивной мощности
+          if (parseFloat(p.power) !== parseFloat(reactive_power)) return false;
+          if (regulation_type && p.regulation_type !== regulation_type) return false;
         } else {
           // Для АВР
           if (parseInt(p.nominal_current) !== parseInt(nominal_current)) return false;
@@ -194,6 +217,8 @@ if (typeof ProductsAPI !== 'undefined') {
           motor_power: product.motor_power,
           start_type: product.start_type,
           pump_count: product.pump_count,
+          regulation_type: product.regulation_type,
+          reactive_power: product.power,
           enclosure_type: product.enclosure_type || null,
           connection_type: product.connection_type || null,
           climate_type: product.climate_type || null,
@@ -239,6 +264,9 @@ document.addEventListener('alpine:init', () => {
       motorPower: '7.5', // мощность двигателя для шкафов управления
       startType: 'direct_start', // 'direct_start', 'frequency_control', 'soft_start' - для прямого пуска
       pumpCount: '1', // '1' или '2' - количество насосов для прямого пуска
+      // Параметры для компенсации реактивной мощности
+      regulationType: 'unregulated', // 'unregulated' или 'regulated'
+      reactivePower: '10', // мощность в кВАр (в базе данных это поле "power")
       basePrice: 87900,
       article: 'АВР-100-CHINT-2',
       loading: false,
@@ -359,6 +387,10 @@ document.addEventListener('alpine:init', () => {
               if (this.pumpCount) filters.pump_count = this.pumpCount;
             }
             filters.inputs_count = '1'; // Всегда 1 для шкафов управления
+          } else if (this.commutationType === 'reactive_power') {
+            // Для компенсации реактивной мощности используем regulation_type и reactive_power
+            if (this.regulationType) filters.regulation_type = this.regulationType;
+            if (this.reactivePower) filters.reactive_power = this.reactivePower;
           } else {
             // Для АВР используем старые фильтры
             // Для контакторов используем poles_count, для остальных - inputs_count
@@ -384,6 +416,8 @@ document.addEventListener('alpine:init', () => {
               poles_count: data.available_options.poles_count || [],
               control_type: data.available_options.control_type || [],
               motor_power: data.available_options.motor_power || [],
+              regulation_type: data.available_options.regulation_type || [],
+              reactive_power: data.available_options.reactive_power || [],
               enclosure_type: data.available_options.enclosure_type || [],
               connection_type: data.available_options.connection_type || [],
               climate_type: data.available_options.climate_type || []
@@ -399,6 +433,8 @@ document.addEventListener('alpine:init', () => {
               poles_count: [],
               control_type: [],
               motor_power: [],
+              regulation_type: [],
+              reactive_power: [],
               enclosure_type: [],
               connection_type: [],
               climate_type: []
@@ -414,6 +450,8 @@ document.addEventListener('alpine:init', () => {
             poles_count: [],
             control_type: [],
             motor_power: [],
+            regulation_type: [],
+            reactive_power: [],
             enclosure_type: [],
             connection_type: [],
             climate_type: []
@@ -622,6 +660,10 @@ document.addEventListener('alpine:init', () => {
                 this.startType = product.start_type || 'direct_start';
                 this.pumpCount = String(product.pump_count || '1');
               }
+            } else if (product.commutation_type === 'reactive_power') {
+              // Для компенсации реактивной мощности
+              this.regulationType = product.regulation_type || 'unregulated';
+              this.reactivePower = String(product.reactive_power || '10');
             } else {
               // Для АВР
               this.nominalCurrent = String(product.nominal_current);
@@ -713,6 +755,10 @@ document.addEventListener('alpine:init', () => {
               filters.pump_count = this.pumpCount;
             }
             filters.inputs_count = '1'; // Всегда 1 для шкафов управления
+          } else if (this.commutationType === 'reactive_power') {
+            // Для компенсации реактивной мощности используем reactive_power и regulation_type
+            filters.reactive_power = this.reactivePower;
+            filters.regulation_type = this.regulationType;
           } else {
             // Для АВР используем nominal_current
             filters.nominal_current = this.nominalCurrent;
@@ -1026,6 +1072,10 @@ document.addEventListener('alpine:init', () => {
             const controlTypeName = controlTypeNames[this.controlType] || 'с плавным пуском';
             return `Шкаф управления ${controlTypeName} ${this.motorPower || '7.5'} кВт`;
           }
+        } else if (this.commutationType === 'reactive_power') {
+          // Для компенсации реактивной мощности
+          const regulationTypeName = this.regulationType === 'unregulated' ? 'Нерегулируемая' : 'Автоматически регулируемая';
+          return `${regulationTypeName} конденсаторная установка ${this.reactivePower || '10'} кВАр`;
         } else if (this.commutationType === 'contactors') {
           // Для контакторов: "Шкаф АВР 25А однофазный" или "Шкаф АВР 25А трёхфазный"
           const phaseType = (this.polesCount || (parseInt(this.nominalCurrent) <= 100 ? 'single_phase' : 'three_phase')) === 'single_phase' ? 'однофазный' : 'трёхфазный';
@@ -1053,6 +1103,15 @@ document.addEventListener('alpine:init', () => {
         } else {
           return `Моноблочный АВР на ${this.inputsCount || '2'} ввода`;
         }
+      },
+      
+      getReactivePowerTypeDisplayName() {
+        if (this.regulationType === 'unregulated') {
+          return 'Нерегулируемые конденсаторные установки';
+        } else if (this.regulationType === 'regulated') {
+          return 'Автоматически регулируемые конденсаторные установки';
+        }
+        return 'Компенсация реактивной мощности';
       },
       
       // Функция для перевода английских ключей в русские (если они попали в данные)
@@ -1923,6 +1982,36 @@ document.addEventListener('alpine:init', () => {
       async updatePumpCount(value) {
         if (this.loading) return;
         this.pumpCount = value;
+        
+        await this.loadProductByCharacteristics();
+        this.updateCartQuantity();
+      },
+      
+      // Метод для обновления типа регулирования (для компенсации реактивной мощности)
+      async updateRegulationType(value) {
+        if (this.loading) return;
+        this.loading = true;
+        this.regulationType = value;
+        
+        try {
+          await this.loadAvailableOptions();
+          
+          // Выбираем первую доступную мощность
+          if (this.availableOptions.reactive_power && this.availableOptions.reactive_power.length > 0) {
+            this.reactivePower = String(this.availableOptions.reactive_power[0]);
+          }
+          
+          await this.loadProductByCharacteristics();
+          this.updateCartQuantity();
+        } finally {
+          this.loading = false;
+        }
+      },
+      
+      // Метод для обновления мощности (для компенсации реактивной мощности)
+      async updateReactivePower(value) {
+        if (this.loading) return;
+        this.reactivePower = value;
         
         await this.loadProductByCharacteristics();
         this.updateCartQuantity();

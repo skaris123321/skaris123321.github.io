@@ -75,7 +75,14 @@
             <span class="breadcrumbs-current" x-text="getControlTypeDisplayName()"></span>
           </span>
         </template>
-        <template x-if="commutationType !== 'control_cabinet'">
+        <template x-if="commutationType === 'reactive_power'">
+          <span>
+            <a href="reactive-power.html">Компенсация реактивной мощности</a>
+            <span>»</span>
+            <span class="breadcrumbs-current" x-text="getReactivePowerTypeDisplayName()"></span>
+          </span>
+        </template>
+        <template x-if="commutationType !== 'control_cabinet' && commutationType !== 'reactive_power'">
           <span>
             <a href="avr.html">АВР</a>
             <span>»</span>
@@ -219,7 +226,7 @@
       </div>
 
       <!-- Фильтры для АВР -->
-      <div x-show="commutationType !== 'control_cabinet'" class="product-spec-group">
+      <div x-show="commutationType !== 'control_cabinet' && commutationType !== 'reactive_power'" class="product-spec-group">
         <div class="product-spec-label">Тип коммутации</div>
         <div class="product-spec-options">
           <button 
@@ -240,7 +247,7 @@
 
 
 
-      <div x-show="commutationType !== 'single_phase_contactors' && commutationType !== 'control_cabinet'" class="product-spec-group">
+      <div x-show="commutationType !== 'single_phase_contactors' && commutationType !== 'control_cabinet' && commutationType !== 'reactive_power'" class="product-spec-group">
         <div class="product-spec-label" x-text="commutationType === 'contactors' ? 'Количество полюсов' : 'Количество вводов'"></div>
         <div class="product-spec-options">
           <button 
@@ -647,8 +654,88 @@
         </div>
       </div>
 
+      <!-- Тип регулирования для компенсации реактивной мощности -->
+      <div x-show="commutationType === 'reactive_power'" class="product-spec-group">
+        <div class="product-spec-label">Тип регулирования</div>
+        <div class="product-spec-options">
+          <button 
+            class="spec-option"
+            :class="{ active: regulationType === 'unregulated', 'opacity-50': loading }"
+            @click="updateRegulationType('unregulated')"
+            :disabled="loading"
+          >Нерегулируемая</button>
+          <button 
+            class="spec-option"
+            :class="{ active: regulationType === 'regulated', 'opacity-50': loading }"
+            @click="updateRegulationType('regulated')"
+            :disabled="loading"
+          >Автоматически регулируемая</button>
+        </div>
+      </div>
+
+      <!-- Мощность для компенсации реактивной мощности -->
+      <div x-show="commutationType === 'reactive_power'" class="product-spec-group">
+        <div class="product-spec-label">Мощность</div>
+        <div class="product-spec-options product-spec-options-currents">
+          <button 
+            class="spec-option"
+            :class="{ active: reactivePower === '10', 'opacity-50': loading }"
+            @click="updateReactivePower('10')"
+            :disabled="loading"
+          >10 кВАр</button>
+          <button 
+            class="spec-option"
+            :class="{ active: reactivePower === '15', 'opacity-50': loading }"
+            @click="updateReactivePower('15')"
+            :disabled="loading"
+          >15 кВАр</button>
+          <button 
+            class="spec-option"
+            :class="{ active: reactivePower === '25', 'opacity-50': loading }"
+            @click="updateReactivePower('25')"
+            :disabled="loading"
+          >25 кВАр</button>
+          <button 
+            class="spec-option"
+            :class="{ active: reactivePower === '50', 'opacity-50': loading }"
+            @click="updateReactivePower('50')"
+            :disabled="loading"
+          >50 кВАр</button>
+          <button 
+            class="spec-option"
+            :class="{ active: reactivePower === '75', 'opacity-50': loading }"
+            @click="updateReactivePower('75')"
+            :disabled="loading"
+          >75 кВАр</button>
+          <button 
+            class="spec-option"
+            :class="{ active: reactivePower === '100', 'opacity-50': loading }"
+            @click="updateReactivePower('100')"
+            :disabled="loading"
+          >100 кВАр</button>
+          <button 
+            class="spec-option"
+            :class="{ active: reactivePower === '125', 'opacity-50': loading }"
+            @click="updateReactivePower('125')"
+            :disabled="loading"
+          >125 кВАр</button>
+          <button 
+            class="spec-option"
+            :class="{ active: reactivePower === '150', 'opacity-50': loading }"
+            @click="updateReactivePower('150')"
+            :disabled="loading"
+          >150 кВАр</button>
+          <button 
+            class="spec-option"
+            :class="{ active: reactivePower === '200', 'opacity-50': loading }"
+            @click="updateReactivePower('200')"
+            :disabled="loading"
+          >200 кВАр</button>
+        </div>
+      </div>
+
       <!-- Номинальный ток для АВР -->
-      <div x-show="commutationType !== 'control_cabinet'" class="product-spec-group">
+      <div x-show="commutationType !== 'control_cabinet' && commutationType !== 'reactive_power'" class="product-spec-group">
         <div class="product-spec-label">Номинальный ток</div>
         <div class="product-spec-options product-spec-options-currents">
           <!-- Токи для однофазных АВР -->
@@ -807,7 +894,7 @@
         </div>
       </div>
 
-      <div x-show="commutationType !== 'control_cabinet'" class="product-spec-group">
+      <div x-show="commutationType !== 'control_cabinet' && commutationType !== 'reactive_power'" class="product-spec-group">
         <div class="product-spec-label">Подключение кабеля</div>
         <div class="product-spec-options">
           <button 
@@ -831,7 +918,7 @@
         </div>
       </div>
 
-      <div x-show="commutationType !== 'control_cabinet'" class="product-spec-group">
+      <div x-show="commutationType !== 'control_cabinet' && commutationType !== 'reactive_power'" class="product-spec-group">
         <div class="product-spec-label">Климатическое исполнение</div>
         <div class="product-spec-options">
           <button 
