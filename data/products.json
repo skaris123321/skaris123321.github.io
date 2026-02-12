@@ -31907,6 +31907,1401 @@
                 "Количество фаз": "3",
                 "Степень защиты": "IP31"
             }
+        },
+        {
+            "id": 876,
+            "article": "УКРМ 0,4-10",
+            "power": 10,
+            "brand": "CHINT",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 55000,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 10 кВАр CHINT",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 10 кВАр, выполнена на базе оборудования CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-10",
+                "Производитель": "CHINT",
+                "Мощность, кВАр": "10",
+                "Ток, Iном. А": "14",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 15"
+            }
+        },
+        {
+            "id": 877,
+            "article": "УКРМ 0,4-15",
+            "power": 15,
+            "brand": "CHINT",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 57500,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 15 кВАр CHINT",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 15 кВАр, выполнена на базе оборудования CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-15",
+                "Производитель": "CHINT",
+                "Мощность, кВАр": "15",
+                "Ток, Iном. А": "22",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 20"
+            }
+        },
+        {
+            "id": 878,
+            "article": "УКРМ 0,4-25",
+            "power": 25,
+            "brand": "CHINT",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 62500,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 25 кВАр CHINT",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 25 кВАр, выполнена на базе оборудования CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-25",
+                "Производитель": "CHINT",
+                "Мощность, кВАр": "25",
+                "Ток, Iном. А": "36",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 25"
+            }
+        },
+        {
+            "id": 879,
+            "article": "УКРМ 0,4-50",
+            "power": 50,
+            "brand": "CHINT",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 75000,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 50 кВАр CHINT",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 50 кВАр, выполнена на базе оборудования CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-50",
+                "Производитель": "CHINT",
+                "Мощность, кВАр": "50",
+                "Ток, Iном. А": "72",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 30"
+            }
+        },
+        {
+            "id": 880,
+            "article": "УКРМ 0,4-75",
+            "power": 75,
+            "brand": "CHINT",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 87500,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 75 кВАр CHINT",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 75 кВАр, выполнена на базе оборудования CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-75",
+                "Производитель": "CHINT",
+                "Мощность, кВАр": "75",
+                "Ток, Iном. А": "108",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 34"
+            }
+        },
+        {
+            "id": 881,
+            "article": "УКРМ 0,4-100",
+            "power": 100,
+            "brand": "CHINT",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 100000,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 100 кВАр CHINT",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 100 кВАр, выполнена на базе оборудования CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-100",
+                "Производитель": "CHINT",
+                "Мощность, кВАр": "100",
+                "Ток, Iном. А": "144",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 39"
+            }
+        },
+        {
+            "id": 882,
+            "article": "УКРМ 0,4-125",
+            "power": 125,
+            "brand": "CHINT",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 112500,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 125 кВАр CHINT",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 125 кВАр, выполнена на базе оборудования CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-125",
+                "Производитель": "CHINT",
+                "Мощность, кВАр": "125",
+                "Ток, Iном. А": "180",
+                "Габариты (ВхШхГ), мм": "1150x600x450/1250x600x435",
+                "Вес, кг": "от 43"
+            }
+        },
+        {
+            "id": 883,
+            "article": "УКРМ 0,4-150",
+            "power": 150,
+            "brand": "CHINT",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 125000,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 150 кВАр CHINT",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 150 кВАр, выполнена на базе оборудования CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-150",
+                "Производитель": "CHINT",
+                "Мощность, кВАр": "150",
+                "Ток, Iном. А": "216",
+                "Габариты (ВхШхГ), мм": "1150x600x450/1250x600x435",
+                "Вес, кг": "от 47"
+            }
+        },
+        {
+            "id": 884,
+            "article": "УКРМ 0,4-200",
+            "power": 200,
+            "brand": "CHINT",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 150000,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 200 кВАр CHINT",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 200 кВАр, выполнена на базе оборудования CHINT.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-200",
+                "Производитель": "CHINT",
+                "Мощность, кВАр": "200",
+                "Ток, Iном. А": "288",
+                "Габариты (ВхШхГ), мм": "1150x600x450/1250x600x435",
+                "Вес, кг": "от 52"
+            }
+        },
+        {
+            "id": 885,
+            "article": "УКРМ 0,4-10",
+            "power": 10,
+            "brand": "Systeme electric",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 63250,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 10 кВАр Systeme electric",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 10 кВАр, выполнена на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-10",
+                "Производитель": "Systeme electric",
+                "Мощность, кВАр": "10",
+                "Ток, Iном. А": "14",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 15"
+            }
+        },
+        {
+            "id": 886,
+            "article": "УКРМ 0,4-15",
+            "power": 15,
+            "brand": "Systeme electric",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 66125,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 15 кВАр Systeme electric",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 15 кВАр, выполнена на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-15",
+                "Производитель": "Systeme electric",
+                "Мощность, кВАр": "15",
+                "Ток, Iном. А": "22",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 20"
+            }
+        },
+        {
+            "id": 887,
+            "article": "УКРМ 0,4-25",
+            "power": 25,
+            "brand": "Systeme electric",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 71875,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 25 кВАр Systeme electric",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 25 кВАр, выполнена на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-25",
+                "Производитель": "Systeme electric",
+                "Мощность, кВАр": "25",
+                "Ток, Iном. А": "36",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 25"
+            }
+        },
+        {
+            "id": 888,
+            "article": "УКРМ 0,4-50",
+            "power": 50,
+            "brand": "Systeme electric",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 86250,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 50 кВАр Systeme electric",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 50 кВАр, выполнена на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-50",
+                "Производитель": "Systeme electric",
+                "Мощность, кВАр": "50",
+                "Ток, Iном. А": "72",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 30"
+            }
+        },
+        {
+            "id": 889,
+            "article": "УКРМ 0,4-75",
+            "power": 75,
+            "brand": "Systeme electric",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 100625,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 75 кВАр Systeme electric",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 75 кВАр, выполнена на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-75",
+                "Производитель": "Systeme electric",
+                "Мощность, кВАр": "75",
+                "Ток, Iном. А": "108",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 34"
+            }
+        },
+        {
+            "id": 890,
+            "article": "УКРМ 0,4-100",
+            "power": 100,
+            "brand": "Systeme electric",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 115000,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 100 кВАр Systeme electric",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 100 кВАр, выполнена на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-100",
+                "Производитель": "Systeme electric",
+                "Мощность, кВАр": "100",
+                "Ток, Iном. А": "144",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 39"
+            }
+        },
+        {
+            "id": 891,
+            "article": "УКРМ 0,4-125",
+            "power": 125,
+            "brand": "Systeme electric",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 129375,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 125 кВАр Systeme electric",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 125 кВАр, выполнена на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-125",
+                "Производитель": "Systeme electric",
+                "Мощность, кВАр": "125",
+                "Ток, Iном. А": "180",
+                "Габариты (ВхШхГ), мм": "1150x600x450/1250x600x435",
+                "Вес, кг": "от 43"
+            }
+        },
+        {
+            "id": 892,
+            "article": "УКРМ 0,4-150",
+            "power": 150,
+            "brand": "Systeme electric",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 143750,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 150 кВАр Systeme electric",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 150 кВАр, выполнена на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-150",
+                "Производитель": "Systeme electric",
+                "Мощность, кВАр": "150",
+                "Ток, Iном. А": "216",
+                "Габариты (ВхШхГ), мм": "1150x600x450/1250x600x435",
+                "Вес, кг": "от 47"
+            }
+        },
+        {
+            "id": 893,
+            "article": "УКРМ 0,4-200",
+            "power": 200,
+            "brand": "Systeme electric",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 172500,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 200 кВАр Systeme electric",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 200 кВАр, выполнена на базе оборудования Systeme electric.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-200",
+                "Производитель": "Systeme electric",
+                "Мощность, кВАр": "200",
+                "Ток, Iном. А": "288",
+                "Габариты (ВхШхГ), мм": "1150x600x450/1250x600x435",
+                "Вес, кг": "от 52"
+            }
+        },
+        {
+            "id": 894,
+            "article": "УКРМ 0,4-10",
+            "power": 10,
+            "brand": "EKF",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 52250,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 10 кВАр EKF",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 10 кВАр, выполнена на базе оборудования EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-10",
+                "Производитель": "EKF",
+                "Мощность, кВАр": "10",
+                "Ток, Iном. А": "14",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 15"
+            }
+        },
+        {
+            "id": 895,
+            "article": "УКРМ 0,4-15",
+            "power": 15,
+            "brand": "EKF",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 54625,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 15 кВАр EKF",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 15 кВАр, выполнена на базе оборудования EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-15",
+                "Производитель": "EKF",
+                "Мощность, кВАр": "15",
+                "Ток, Iном. А": "22",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 20"
+            }
+        },
+        {
+            "id": 896,
+            "article": "УКРМ 0,4-25",
+            "power": 25,
+            "brand": "EKF",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 59375,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 25 кВАр EKF",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 25 кВАр, выполнена на базе оборудования EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-25",
+                "Производитель": "EKF",
+                "Мощность, кВАр": "25",
+                "Ток, Iном. А": "36",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 25"
+            }
+        },
+        {
+            "id": 897,
+            "article": "УКРМ 0,4-50",
+            "power": 50,
+            "brand": "EKF",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 71250,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 50 кВАр EKF",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 50 кВАр, выполнена на базе оборудования EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-50",
+                "Производитель": "EKF",
+                "Мощность, кВАр": "50",
+                "Ток, Iном. А": "72",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 30"
+            }
+        },
+        {
+            "id": 898,
+            "article": "УКРМ 0,4-75",
+            "power": 75,
+            "brand": "EKF",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 83125,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 75 кВАр EKF",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 75 кВАр, выполнена на базе оборудования EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-75",
+                "Производитель": "EKF",
+                "Мощность, кВАр": "75",
+                "Ток, Iном. А": "108",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 34"
+            }
+        },
+        {
+            "id": 899,
+            "article": "УКРМ 0,4-100",
+            "power": 100,
+            "brand": "EKF",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 95000,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 100 кВАр EKF",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 100 кВАр, выполнена на базе оборудования EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-100",
+                "Производитель": "EKF",
+                "Мощность, кВАр": "100",
+                "Ток, Iном. А": "144",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 39"
+            }
+        },
+        {
+            "id": 900,
+            "article": "УКРМ 0,4-125",
+            "power": 125,
+            "brand": "EKF",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 106875,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 125 кВАр EKF",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 125 кВАр, выполнена на базе оборудования EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-125",
+                "Производитель": "EKF",
+                "Мощность, кВАр": "125",
+                "Ток, Iном. А": "180",
+                "Габариты (ВхШхГ), мм": "1150x600x450/1250x600x435",
+                "Вес, кг": "от 43"
+            }
+        },
+        {
+            "id": 901,
+            "article": "УКРМ 0,4-150",
+            "power": 150,
+            "brand": "EKF",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 118750,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 150 кВАр EKF",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 150 кВАр, выполнена на базе оборудования EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-150",
+                "Производитель": "EKF",
+                "Мощность, кВАр": "150",
+                "Ток, Iном. А": "216",
+                "Габариты (ВхШхГ), мм": "1150x600x450/1250x600x435",
+                "Вес, кг": "от 47"
+            }
+        },
+        {
+            "id": 902,
+            "article": "УКРМ 0,4-200",
+            "power": 200,
+            "brand": "EKF",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 142500,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 200 кВАр EKF",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 200 кВАр, выполнена на базе оборудования EKF.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-200",
+                "Производитель": "EKF",
+                "Мощность, кВАр": "200",
+                "Ток, Iном. А": "288",
+                "Габариты (ВхШхГ), мм": "1150x600x450/1250x600x435",
+                "Вес, кг": "от 52"
+            }
+        },
+        {
+            "id": 903,
+            "article": "УКРМ 0,4-10",
+            "power": 10,
+            "brand": "TDM",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 49500,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 10 кВАр TDM",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 10 кВАр, выполнена на базе оборудования TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-10",
+                "Производитель": "TDM",
+                "Мощность, кВАр": "10",
+                "Ток, Iном. А": "14",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 15"
+            }
+        },
+        {
+            "id": 904,
+            "article": "УКРМ 0,4-15",
+            "power": 15,
+            "brand": "TDM",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 51750,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 15 кВАр TDM",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 15 кВАр, выполнена на базе оборудования TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-15",
+                "Производитель": "TDM",
+                "Мощность, кВАр": "15",
+                "Ток, Iном. А": "22",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 20"
+            }
+        },
+        {
+            "id": 905,
+            "article": "УКРМ 0,4-25",
+            "power": 25,
+            "brand": "TDM",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 56250,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 25 кВАр TDM",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 25 кВАр, выполнена на базе оборудования TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-25",
+                "Производитель": "TDM",
+                "Мощность, кВАр": "25",
+                "Ток, Iном. А": "36",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 25"
+            }
+        },
+        {
+            "id": 906,
+            "article": "УКРМ 0,4-50",
+            "power": 50,
+            "brand": "TDM",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 67500,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 50 кВАр TDM",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 50 кВАр, выполнена на базе оборудования TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-50",
+                "Производитель": "TDM",
+                "Мощность, кВАр": "50",
+                "Ток, Iном. А": "72",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 30"
+            }
+        },
+        {
+            "id": 907,
+            "article": "УКРМ 0,4-75",
+            "power": 75,
+            "brand": "TDM",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 78750,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 75 кВАр TDM",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 75 кВАр, выполнена на базе оборудования TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-75",
+                "Производитель": "TDM",
+                "Мощность, кВАр": "75",
+                "Ток, Iном. А": "108",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 34"
+            }
+        },
+        {
+            "id": 908,
+            "article": "УКРМ 0,4-100",
+            "power": 100,
+            "brand": "TDM",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 90000,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 100 кВАр TDM",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 100 кВАр, выполнена на базе оборудования TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-100",
+                "Производитель": "TDM",
+                "Мощность, кВАр": "100",
+                "Ток, Iном. А": "144",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 39"
+            }
+        },
+        {
+            "id": 909,
+            "article": "УКРМ 0,4-125",
+            "power": 125,
+            "brand": "TDM",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 101250,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 125 кВАр TDM",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 125 кВАр, выполнена на базе оборудования TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-125",
+                "Производитель": "TDM",
+                "Мощность, кВАр": "125",
+                "Ток, Iном. А": "180",
+                "Габариты (ВхШхГ), мм": "1150x600x450/1250x600x435",
+                "Вес, кг": "от 43"
+            }
+        },
+        {
+            "id": 910,
+            "article": "УКРМ 0,4-150",
+            "power": 150,
+            "brand": "TDM",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 112500,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 150 кВАр TDM",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 150 кВАр, выполнена на базе оборудования TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-150",
+                "Производитель": "TDM",
+                "Мощность, кВАр": "150",
+                "Ток, Iном. А": "216",
+                "Габариты (ВхШхГ), мм": "1150x600x450/1250x600x435",
+                "Вес, кг": "от 47"
+            }
+        },
+        {
+            "id": 911,
+            "article": "УКРМ 0,4-200",
+            "power": 200,
+            "brand": "TDM",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 135000,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 200 кВАр TDM",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 200 кВАр, выполнена на базе оборудования TDM.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-200",
+                "Производитель": "TDM",
+                "Мощность, кВАр": "200",
+                "Ток, Iном. А": "288",
+                "Габариты (ВхШхГ), мм": "1150x600x450/1250x600x435",
+                "Вес, кг": "от 52"
+            }
+        },
+        {
+            "id": 912,
+            "article": "УКРМ 0,4-10",
+            "power": 10,
+            "brand": "Dekraft",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 51150,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 10 кВАр Dekraft",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 10 кВАр, выполнена на базе оборудования Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-10",
+                "Производитель": "Dekraft",
+                "Мощность, кВАр": "10",
+                "Ток, Iном. А": "14",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 15"
+            }
+        },
+        {
+            "id": 913,
+            "article": "УКРМ 0,4-15",
+            "power": 15,
+            "brand": "Dekraft",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 53475,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 15 кВАр Dekraft",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 15 кВАр, выполнена на базе оборудования Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-15",
+                "Производитель": "Dekraft",
+                "Мощность, кВАр": "15",
+                "Ток, Iном. А": "22",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 20"
+            }
+        },
+        {
+            "id": 914,
+            "article": "УКРМ 0,4-25",
+            "power": 25,
+            "brand": "Dekraft",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 58125,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 25 кВАр Dekraft",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 25 кВАр, выполнена на базе оборудования Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-25",
+                "Производитель": "Dekraft",
+                "Мощность, кВАр": "25",
+                "Ток, Iном. А": "36",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 25"
+            }
+        },
+        {
+            "id": 915,
+            "article": "УКРМ 0,4-50",
+            "power": 50,
+            "brand": "Dekraft",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 69750,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 50 кВАр Dekraft",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 50 кВАр, выполнена на базе оборудования Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-50",
+                "Производитель": "Dekraft",
+                "Мощность, кВАр": "50",
+                "Ток, Iном. А": "72",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 30"
+            }
+        },
+        {
+            "id": 916,
+            "article": "УКРМ 0,4-75",
+            "power": 75,
+            "brand": "Dekraft",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 81375,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 75 кВАр Dekraft",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 75 кВАр, выполнена на базе оборудования Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-75",
+                "Производитель": "Dekraft",
+                "Мощность, кВАр": "75",
+                "Ток, Iном. А": "108",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 34"
+            }
+        },
+        {
+            "id": 917,
+            "article": "УКРМ 0,4-100",
+            "power": 100,
+            "brand": "Dekraft",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 93000,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 100 кВАр Dekraft",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 100 кВАр, выполнена на базе оборудования Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-100",
+                "Производитель": "Dekraft",
+                "Мощность, кВАр": "100",
+                "Ток, Iном. А": "144",
+                "Габариты (ВхШхГ), мм": "800x440x270/900x440x270",
+                "Вес, кг": "от 39"
+            }
+        },
+        {
+            "id": 918,
+            "article": "УКРМ 0,4-125",
+            "power": 125,
+            "brand": "Dekraft",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 104625,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 125 кВАр Dekraft",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 125 кВАр, выполнена на базе оборудования Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-125",
+                "Производитель": "Dekraft",
+                "Мощность, кВАр": "125",
+                "Ток, Iном. А": "180",
+                "Габариты (ВхШхГ), мм": "1150x600x450/1250x600x435",
+                "Вес, кг": "от 43"
+            }
+        },
+        {
+            "id": 919,
+            "article": "УКРМ 0,4-150",
+            "power": 150,
+            "brand": "Dekraft",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 116250,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 150 кВАр Dekraft",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 150 кВАр, выполнена на базе оборудования Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-150",
+                "Производитель": "Dekraft",
+                "Мощность, кВАр": "150",
+                "Ток, Iном. А": "216",
+                "Габариты (ВхШхГ), мм": "1150x600x450/1250x600x435",
+                "Вес, кг": "от 47"
+            }
+        },
+        {
+            "id": 920,
+            "article": "УКРМ 0,4-200",
+            "power": 200,
+            "brand": "Dekraft",
+            "commutation_type": "reactive_power",
+            "regulation_type": "unregulated",
+            "base_price": 139500,
+            "main_image": "images/nky.jpg",
+            "images": [
+                "images/nky.jpg"
+            ],
+            "description": "Нерегулируемая конденсаторная установка 200 кВАр Dekraft",
+            "full_description": "Нерегулируемая конденсаторная установка мощностью 200 кВАр, выполнена на базе оборудования Dekraft.",
+            "documentation": [
+                {
+                    "name": "Сертификат НКУ (ТР ТС) 2024-2029",
+                    "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
+                    "size": 1251760,
+                    "type": "pdf"
+                }
+            ],
+            "specs": {
+                "Артикул": "УКРМ 0,4-200",
+                "Производитель": "Dekraft",
+                "Мощность, кВАр": "200",
+                "Ток, Iном. А": "288",
+                "Габариты (ВхШхГ), мм": "1150x600x450/1250x600x435",
+                "Вес, кг": "от 52"
+            }
         }
     ]
 }
