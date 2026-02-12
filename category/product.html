@@ -197,6 +197,7 @@
             :disabled="loading"
           >Dekraft</button>
           <button 
+            x-show="commutationType !== 'reactive_power'"
             class="spec-option"
             :class="{ active: manufacturerBrand === 'IEK', 'opacity-50': loading }"
             @click="updateManufacturerBrand('IEK')"
