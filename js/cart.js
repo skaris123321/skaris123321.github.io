@@ -10,8 +10,24 @@ class Cart {
 
   // Генерируем уникальный ID для товара на основе его характеристик
   generateItemId(product) {
-    const key = `${product.manufacturerBrand}-${product.commutationType}-${product.nominalCurrent}-${product.inputsCount}-${product.cableConnection}-${product.climateVersion}`;
-    return key;
+    if (product.commutationType === 'control_cabinet') {
+      // Для шкафов управления
+      let key = `${product.manufacturerBrand}-${product.commutationType}-${product.controlType}-${product.motorPower}`;
+      // Для прямого пуска добавляем тип пуска и количество насосов
+      if (product.controlType === 'direct_start') {
+        key += `-${product.startType}-${product.pumpCount}`;
+      }
+      return key;
+    } else if (product.commutationType === 'reactive_power') {
+      // Для реактивной мощности
+      return `${product.manufacturerBrand}-${product.commutationType}-${product.regulationType}-${product.reactivePower}`;
+    } else if (product.commutationType === 'contactors') {
+      // Для контакторов
+      return `${product.manufacturerBrand}-${product.commutationType}-${product.nominalCurrent}-${product.polesCount}-${product.cableConnection}-${product.climateVersion}`;
+    } else {
+      // Для моноблочных АВР
+      return `${product.manufacturerBrand}-${product.commutationType}-${product.nominalCurrent}-${product.inputsCount}-${product.cableConnection}-${product.climateVersion}`;
+    }
   }
 
   // Добавляем товар в корзину
