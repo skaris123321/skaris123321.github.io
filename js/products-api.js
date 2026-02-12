@@ -51,7 +51,7 @@ class ProductsAPI {
 
   async getAvailableOptions(filters = {}) {
     const data = await this.loadProducts();
-    const { manufacturer_brand, commutation_type, inputs_count, poles_count, control_type, motor_power } = filters;
+    const { manufacturer_brand, commutation_type, inputs_count, poles_count, control_type, motor_power, regulation_type } = filters;
 
     // Фильтруем продукты по заданным параметрам
     let filteredProducts = data.products;
@@ -74,6 +74,9 @@ class ProductsAPI {
     if (motor_power) {
       filteredProducts = filteredProducts.filter(p => parseFloat(p.motor_power) === parseFloat(motor_power));
     }
+    if (regulation_type) {
+      filteredProducts = filteredProducts.filter(p => p.regulation_type === regulation_type);
+    }
 
     // Получаем уникальные значения
     const availableOptions = {
@@ -83,7 +86,9 @@ class ProductsAPI {
       inputs_count: [],
       poles_count: [],
       control_type: [],
-      motor_power: []
+      motor_power: [],
+      regulation_type: [],
+      reactive_power: []
     };
 
     // Все бренды
@@ -144,6 +149,30 @@ class ProductsAPI {
       }
       const nominalCurrents = [...new Set(currentProducts.map(p => parseInt(p.nominal_current)).filter(Boolean))];
       availableOptions.nominal_current = nominalCurrents.sort((a, b) => a - b);
+    } else if (commutation_type === 'reactive_power') {
+      // Для реактивной мощности добавляем regulation_type и reactive_power
+      let regulationTypeProducts = data.products.filter(p => p.commutation_type === 'reactive_power');
+      if (manufacturer_brand) {
+        regulationTypeProducts = regulationTypeProducts.filter(p => p.brand === manufacturer_brand);
+      }
+      const regulationTypes = [...new Set(regulationTypeProducts.map(p => p.regulation_type).filter(Boolean))];
+      availableOptions.regulation_type = regulationTypes.sort();
+
+      // Мощность (с учетом бренда и типа регулирования)
+      let reactivePowerProducts = data.products.filter(p => p.commutation_type === 'reactive_power');
+      if (manufacturer_brand) {
+        reactivePowerProducts = reactivePowerProducts.filter(p => p.brand === manufacturer_brand);
+      }
+      if (regulation_type) {
+        reactivePowerProducts = reactivePowerProducts.filter(p => p.regulation_type === regulation_type);
+      }
+      const reactivePowers = [...new Set(reactivePowerProducts.map(p => parseFloat(p.power)).filter(Boolean))];
+      availableOptions.reactive_power = reactivePowers.sort((a, b) => a - b);
+      
+      // Для реактивной мощности не используются эти параметры
+      availableOptions.inputs_count = [];
+      availableOptions.poles_count = [];
+      availableOptions.nominal_current = [];
     } else {
       // Для АВР используем inputs_count
       let inputsProducts = data.products;
@@ -233,12 +262,16 @@ class ProductsAPI {
     }
     
     // Иначе ищем по фильтрам
-    const { nominal_current, commutation_type, manufacturer_brand, inputs_count, poles_count, motor_power, control_type } = filters;
+    const { nominal_current, commutation_type, manufacturer_brand, inputs_count, poles_count, motor_power, control_type, regulation_type, reactive_power } = filters;
 
-    // Для шкафов управления требуется motor_power, для остальных - nominal_current
+    // Для шкафов управления требуется motor_power, для реактивной мощности - reactive_power, для остальных - nominal_current
     if (commutation_type === 'control_cabinet') {
       if (!motor_power) {
         throw new Error('motor_power parameter is required for control cabinets');
+      }
+    } else if (commutation_type === 'reactive_power') {
+      if (!reactive_power) {
+        throw new Error('reactive_power parameter is required for reactive power products');
       }
     } else {
       if (!nominal_current) {
@@ -254,6 +287,14 @@ class ProductsAPI {
           return false;
         }
         if (control_type && product.control_type !== control_type) {
+          return false;
+        }
+      } else if (commutation_type === 'reactive_power') {
+        // Для реактивной мощности проверяем power и regulation_type
+        if (!product.power || parseFloat(product.power) !== parseFloat(reactive_power)) {
+          return false;
+        }
+        if (regulation_type && product.regulation_type !== regulation_type) {
           return false;
         }
       } else {
