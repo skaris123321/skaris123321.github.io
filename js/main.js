@@ -902,6 +902,19 @@ document.addEventListener('alpine:init', () => {
                 this.motorPower = String(this.availableOptions.motor_power[0]);
               }
             }
+          } else if (this.commutationType === 'reactive_power') {
+            // Для компенсации реактивной мощности проверяем доступность текущих параметров
+            if (!this.availableOptions.regulation_type || !this.availableOptions.regulation_type.includes(this.regulationType)) {
+              if (this.availableOptions.regulation_type && this.availableOptions.regulation_type.length > 0) {
+                this.regulationType = this.availableOptions.regulation_type[0];
+              }
+            }
+            
+            if (!this.availableOptions.reactive_power || !this.availableOptions.reactive_power.includes(parseFloat(this.reactivePower))) {
+              if (this.availableOptions.reactive_power && this.availableOptions.reactive_power.length > 0) {
+                this.reactivePower = String(this.availableOptions.reactive_power[0]);
+              }
+            }
           } else {
             // Для АВР проверяем доступность текущих параметров
             if (!this.availableOptions.inputs_count || !this.availableOptions.inputs_count.includes(this.inputsCount)) {
