@@ -216,7 +216,7 @@
             :disabled="loading"
           >VEDA</button>
           <button 
-            x-show="commutationType === 'control_cabinet'"
+            x-show="commutationType === 'control_cabinet' || commutationType === 'reactive_power'"
             class="spec-option"
             :class="{ active: manufacturerBrand === 'Systeme electric', 'opacity-50': loading }"
             @click="updateManufacturerBrand('Systeme electric')"
