@@ -1254,14 +1254,7 @@ document.addEventListener('alpine:init', () => {
             specs['Тип управления'] = 'Преобразователь частоты';
           } else if (this.controlType === 'direct_start') {
             specs['Тип управления'] = 'Прямой пуск';
-            // Для прямого пуска добавляем тип пуска и количество насосов
-            if (this.startType === 'direct_start') {
-              specs['Тип пуска'] = 'Прямым пуском';
-            } else if (this.startType === 'frequency_control') {
-              specs['Тип пуска'] = 'Частотное регулирование';
-            } else if (this.startType === 'soft_start') {
-              specs['Тип пуска'] = 'Плавный пуск';
-            }
+            // Для прямого пуска добавляем количество насосов
             specs['Количество насосов'] = this.pumpCount || '1';
           }
           
