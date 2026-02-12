@@ -1388,7 +1388,6 @@ document.addEventListener('alpine:init', () => {
             commutationType: this.commutationType,
             controlType: this.controlType,
             motorPower: this.motorPower,
-            inputsCount: '1', // Всегда 1 для шкафов управления
             basePrice: this.basePrice,
             totalPrice: this.totalPrice,
             images: this.images,
