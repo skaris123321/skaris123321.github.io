@@ -1403,6 +1403,20 @@ document.addEventListener('alpine:init', () => {
           }
           
           return productData;
+        } else if (this.commutationType === 'reactive_power') {
+          // Для компенсации реактивной мощности
+          return {
+            article: this.dynamicArticle,
+            manufacturerBrand: this.manufacturerBrand,
+            commutationType: this.commutationType,
+            regulationType: this.regulationType,
+            reactivePower: this.reactivePower,
+            basePrice: this.basePrice,
+            totalPrice: this.totalPrice,
+            images: this.images,
+            productSpecs: this.productSpecs,
+            productTitle: this.productTitle
+          };
         } else {
           // Для трехфазных АВР и контакторов
           if (this.commutationType === 'contactors') {
