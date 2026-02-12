@@ -25,26 +25,26 @@ function catalogData() {
         if (avrProducts.length > 0) {
           const avrSubcategories = [];
           
-          // Моноблочные АВР на 2 ввода
+          // Шкафы АВР на 2 ввода
           if (avrProducts.some(p => p.commutation_type === 'monoblock' && p.inputs_count === '2')) {
             avrSubcategories.push({
-              name: 'Моноблочные АВР на 2 ввода',
+              name: 'Шкафы АВР на 2 ввода',
               url: 'avr.html?commutationType=monoblock&inputs=2'
             });
           }
           
-          // Моноблочные АВР на 3 ввода
+          // Шкафы АВР на 3 ввода
           if (avrProducts.some(p => p.commutation_type === 'monoblock' && p.inputs_count === '3')) {
             avrSubcategories.push({
-              name: 'Моноблочные АВР на 3 ввода',
+              name: 'Шкафы АВР на 3 ввода',
               url: 'avr.html?commutationType=monoblock&inputs=3'
             });
           }
           
-          // АВР на контакторах (объединенная категория)
+          // Шкафы АВР на контакторах (объединенная категория)
           if (avrProducts.some(p => p.commutation_type === 'contactors')) {
             avrSubcategories.push({
-              name: 'АВР на контакторах',
+              name: 'Шкафы АВР на контакторах',
               url: 'avr.html?commutationType=contactors'
             });
           }

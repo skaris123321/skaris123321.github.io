@@ -210,7 +210,7 @@ document.addEventListener('alpine:init', () => {
       
       getSelectedSubcategory() {
         if (this.selectedCommutationType === 'contactors') {
-          return 'АВР на контакторах';
+          return 'Шкафы АВР на контакторах';
         } else if (this.selectedCommutationType === 'monoblock' && this.selectedInputs === '2') {
           return 'Шкафы АВР на 2 ввода';
         } else if (this.selectedCommutationType === 'monoblock' && this.selectedInputs === '3') {
