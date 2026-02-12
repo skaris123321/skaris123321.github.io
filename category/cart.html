@@ -65,6 +65,8 @@
         <div class="breadcrumbs">
           <a href="../index.html">Главная</a>
           <span>»</span>
+          <a href="catalog.html">Каталог</a>
+          <span>»</span>
           <span class="breadcrumbs-current">Корзина</span>
         </div>
         <h1 class="category-title">Корзина</h1>
@@ -240,11 +242,22 @@
           init() {
             this.loadCart();
             
+            // Если корзина пустая, перенаправляем на каталог
+            if (this.items.length === 0) {
+              window.location.href = 'catalog.html';
+              return;
+            }
+            
             // Слушаем изменения корзины
             window.addEventListener('cartChanged', (event) => {
               this.items = event.detail.items;
               this.totalItems = event.detail.totalItems;
               this.totalPrice = event.detail.totalPrice;
+              
+              // Если корзина стала пустой, перенаправляем на каталог
+              if (this.items.length === 0) {
+                window.location.href = 'catalog.html';
+              }
             });
           },
 
