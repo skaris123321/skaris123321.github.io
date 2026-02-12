@@ -105,6 +105,37 @@ function catalogData() {
           });
         }
 
+        // Компенсация реактивной мощности
+        const reactivePower = data.products.filter(p => p.commutation_type === 'capacitor_unit');
+        
+        if (reactivePower.length > 0) {
+          const reactivePowerSubcategories = [];
+          
+          // Нерегулируемые
+          if (reactivePower.some(p => p.regulation_type === 'unregulated')) {
+            reactivePowerSubcategories.push({
+              name: 'Нерегулируемые конденсаторные установки',
+              url: 'reactive-power.html?regulationType=unregulated'
+            });
+          }
+          
+          // Автоматически регулируемые
+          if (reactivePower.some(p => p.regulation_type === 'regulated')) {
+            reactivePowerSubcategories.push({
+              name: 'Автоматически регулируемые конденсаторные установки',
+              url: 'reactive-power.html?regulationType=regulated'
+            });
+          }
+
+          categoryMap.set('reactive_power', {
+            type: 'reactive_power',
+            name: 'Компенсация реактивной мощности',
+            url: 'reactive-power.html',
+            image: '../images/nky.jpg',
+            subcategories: reactivePowerSubcategories
+          });
+        }
+
         // Преобразуем Map в массив
         this.categories = Array.from(categoryMap.values());
 

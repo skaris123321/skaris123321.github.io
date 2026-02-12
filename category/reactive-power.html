@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Компенсация реактивной мощности — РОСЭК</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <script>
+    if (typeof window.solveSimpleChallenge === 'undefined') {
+      window.solveSimpleChallenge = () => null;
+    }
+  </script>
+
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="bg-light text-dark">
+  <header class="header">
+    <div class="container flex-wrap justify-between items-center">
+      <a href="../index.html" class="logo">РОСЭК</a>
+
+      <div class="header-controls">
+        <div class="search-wrapper">
+          <input type="search" placeholder="Поиск по товарам..." class="search-input">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+
+        <div class="relative" x-data="{ open: false }">
+          <a href="catalog.html" class="btn-catalog">
+            Каталог
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-group">
+        <a href="cart.html" class="cart-link" x-data="{ cartCount: 0 }" x-init="
+          cartCount = window.cart ? window.cart.getTotalItems() : 0;
+          window.addEventListener('cartChanged', (e) => cartCount = e.detail.totalItems);
+        ">
+          <div class="cart-icon-wrapper">
+            <svg class="cart-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5-6m0 0h15M17 21a2 2 0 100-4 2 2 0 000 4zM9 21a2 2 0 100-4 2 2 0 000 4z"/>
+            </svg>
+            <span x-show="cartCount > 0" x-text="cartCount" class="cart-badge"></span>
+          </div>
+          <span class="cart-text">Корзина</span>
+        </a>
+        <a href="tel:+780055118939" class="phone hidden sm:block">8 (800) 511-89-39</a>
+        <a href="mailto:zakaz@rosek.tech" class="email hidden md:block">zakaz@rosek.tech</a>
+        <button class="btn-login">Войти</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <span>»</span>
+        <a href="catalog.html">Каталог</a>
+        <span>»</span>
+        <span>Компенсация реактивной мощности</span>
+        <template x-if="getSelectedSubcategory()">
+          <span>
+            <span>»</span>
+            <span class="breadcrumbs-current" x-text="getSelectedSubcategory()"></span>
+          </span>
+        </template>
+        <template x-if="!getSelectedSubcategory()">
+          <span>
+            <span>»</span>
+            <span class="breadcrumbs-current">Все категории</span>
+          </span>
+        </template>
+      </div>
+
+      <h1 class="category-title">
+        Компенсация реактивной мощности
+      </h1>
+    </div>
+  </section>
+
+  <div x-data="reactivePowerCatalog()" x-init="init()">
+  <section class="section">
+    <div class="container">
+      <div class="subcategories-grid">
+        <a href="#" class="subcategory-card" @click.prevent="filterByRegulationType('unregulated')" :class="{ 'active': selectedRegulationType === 'unregulated' }">
+          <div class="subcategory-image-wrapper" :style="selectedRegulationType === 'unregulated' ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
+            <img src="../images/nky.jpg" alt="Нерегулируемые конденсаторные установки" class="subcategory-image">
+          </div>
+          <p class="subcategory-name" :style="selectedRegulationType === 'unregulated' ? 'color: #dc2626; font-weight: 600;' : ''">Нерегулируемые конденсаторные установки</p>
+        </a>
+
+        <a href="#" class="subcategory-card" @click.prevent="filterByRegulationType('regulated')" :class="{ 'active': selectedRegulationType === 'regulated' }">
+          <div class="subcategory-image-wrapper" :style="selectedRegulationType === 'regulated' ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
+            <img src="../images/nky2.jpg" alt="Автоматически регулируемые конденсаторные установки" class="subcategory-image">
+          </div>
+          <p class="subcategory-name" :style="selectedRegulationType === 'regulated' ? 'color: #dc2626; font-weight: 600;' : ''">Автоматически регулируемые конденсаторные установки</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sort-section">
+    <div class="container sort-controls">
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <!-- Кнопки фильтрации по брендам -->
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+          <template x-for="brand in uniqueBrands" :key="brand">
+            <button 
+              @click="filterByBrand(brand)"
+              :class="{ active: selectedBrand === brand }"
+              class="brand-filter-btn"
+              x-text="brand"
+            ></button>
+          </template>
+        </div>
+        
+        <!-- Кнопки фильтрации по мощности -->
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+          <template x-for="power in uniquePowers" :key="power">
+            <button 
+              @click="filterByPower(power)"
+              :class="{ active: selectedPower === power }"
+              class="brand-filter-btn"
+              x-text="power + ' кВар'"
+            ></button>
+          </template>
+        </div>
+        
+        <!-- Сортировка по цене -->
+        <div style="display: flex; gap: 0.5rem; margin-left: auto;">
+          <button 
+            @click="sortBy = 'price_asc'; applyFilters()"
+            :class="{ active: sortBy === 'price_asc' }"
+            class="sort-btn"
+          >
+            По цене ↑
+          </button>
+          <button 
+            @click="sortBy = 'price_desc'; applyFilters()"
+            :class="{ active: sortBy === 'price_desc' }"
+            class="sort-btn"
+          >
+            По цене ↓
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container" style="padding: 3rem 0;">
+    <div x-show="loading" style="text-align: center; padding: 3rem;">
+      <p style="color: #6b7280;">Загрузка товаров...</p>
+    </div>
+    
+    <div x-show="!loading && filteredProducts.length === 0" style="text-align: center; padding: 3rem;">
+      <p style="color: #6b7280;">Товары не найдены</p>
+    </div>
+
+    <div class="products-grid" x-show="!loading && filteredProducts.length > 0">
+      <template x-for="product in filteredProducts" :key="product.id">
+        <a :href="getProductUrl(product)" class="product-card" style="text-decoration: none; color: inherit;">
+          <div class="product-image-wrapper">
+            <img x-show="product.main_image && product.main_image !== ''" :src="'../' + product.main_image" :alt="product.description" class="product-image">
+            <div x-show="!product.main_image || product.main_image === ''" class="no-image-placeholder">
+              <p>Нет изображения</p>
+            </div>
+          </div>
+          <div class="product-info">
+            <h2 class="product-title" x-text="product.article"></h2>
+            <p class="product-description" x-text="product.description"></p>
+            <p class="product-price" x-text="formatPrice(product.base_price)"></p>
+            <p class="product-delivery">Под заказ от 12 дней</p>
+          </div>
+        </a>
+      </template>
+    </div>
+  </main>
+  </div>
+
+  <script src="../js/cart.js"></script>
+  <script src="../js/products-api.js"></script>
+  <script src="../js/reactive-power-page.js"></script>
+
+</body>
+</html>
