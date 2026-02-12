@@ -759,6 +759,11 @@ document.addEventListener('alpine:init', () => {
             // Для компенсации реактивной мощности используем reactive_power и regulation_type
             filters.reactive_power = this.reactivePower;
             filters.regulation_type = this.regulationType;
+            console.log('=== ФИЛЬТРЫ ДЛЯ РЕАКТИВНОЙ МОЩНОСТИ ===');
+            console.log('Бренд:', this.manufacturerBrand);
+            console.log('Мощность:', this.reactivePower);
+            console.log('Тип регулирования:', this.regulationType);
+            console.log('Фильтры:', filters);
           } else {
             // Для АВР используем nominal_current
             filters.nominal_current = this.nominalCurrent;
@@ -779,6 +784,15 @@ document.addEventListener('alpine:init', () => {
           }
 
           const data = await productsAPI.getProduct(filters);
+          
+          console.log('=== РЕЗУЛЬТАТ ПОИСКА ТОВАРА (loadProductByCharacteristics) ===');
+          console.log('Успех:', data.success);
+          if (data.success && data.product) {
+            console.log('Найденный товар:', data.product.article);
+            console.log('ID:', data.product.id);
+          } else {
+            console.log('Ошибка:', data.message);
+          }
           
           if (data.success && data.product) {
             const product = data.product;
