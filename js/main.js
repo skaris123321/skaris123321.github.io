@@ -1091,8 +1091,7 @@ document.addEventListener('alpine:init', () => {
               'soft_start': 'плавным пуском'
             };
             const startTypeName = startTypeNames[this.startType] || 'прямым пуском';
-            const pumpCountName = this.pumpCount === '1' ? '1 насос' : '2 насоса';
-            return `Шкаф управления с ${startTypeName} ${this.motorPower || '7.5'} кВт (${pumpCountName})`;
+            return `Шкаф управления с ${startTypeName} ${this.motorPower || '7.5'} кВт`;
           } else {
             // Для других типов шкафов управления
             const controlTypeNames = {
