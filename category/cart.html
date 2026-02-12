@@ -116,10 +116,6 @@
                           <span class="cart-item-spec-value" x-text="item.motorPower + ' кВт'"></span>
                         </div>
                         <div x-show="item.controlType === 'direct_start'" class="cart-item-spec">
-                          <span>Тип пуска:</span>
-                          <span class="cart-item-spec-value" x-text="item.startType === 'direct_start' ? 'Прямым пуском' : (item.startType === 'frequency_control' ? 'Частотное регулирование' : 'Плавный пуск')"></span>
-                        </div>
-                        <div x-show="item.controlType === 'direct_start'" class="cart-item-spec">
                           <span>Количество насосов:</span>
                           <span class="cart-item-spec-value" x-text="item.pumpCount"></span>
                         </div>
