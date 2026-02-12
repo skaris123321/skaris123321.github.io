@@ -81,7 +81,7 @@
         </svg>
         <h2 class="empty-cart-title">Корзина пуста</h2>
         <p class="empty-cart-text">Добавьте товары в корзину, чтобы оформить заказ</p>
-        <a href="avr.html" class="btn-add-to-cart">Перейти к каталогу</a>
+        <a href="catalog.html" class="btn-add-to-cart">Перейти к каталогу</a>
       </div>
 
       <!-- Товары в корзине -->
@@ -242,22 +242,11 @@
           init() {
             this.loadCart();
             
-            // Если корзина пустая, перенаправляем на каталог
-            if (this.items.length === 0) {
-              window.location.href = 'catalog.html';
-              return;
-            }
-            
             // Слушаем изменения корзины
             window.addEventListener('cartChanged', (event) => {
               this.items = event.detail.items;
               this.totalItems = event.detail.totalItems;
               this.totalPrice = event.detail.totalPrice;
-              
-              // Если корзина стала пустой, перенаправляем на каталог
-              if (this.items.length === 0) {
-                window.location.href = 'catalog.html';
-              }
             });
           },
 
