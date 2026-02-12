@@ -1185,6 +1185,17 @@ document.addEventListener('alpine:init', () => {
         const rawSpecs = this.productSpecs ? { ...this.productSpecs } : {};
         const specs = {};
         
+        // Для реактивной мощности просто возвращаем specs из базы данных
+        if (this.commutationType === 'reactive_power') {
+          // Переводим ключи, если они на английском, и нормализуем значения
+          for (const [key, value] of Object.entries(rawSpecs)) {
+            const translatedKey = this.translateSpecKey(key);
+            const normalizedValue = this.normalizeSpecValue(translatedKey, value);
+            specs[translatedKey] = normalizedValue;
+          }
+          return specs;
+        }
+        
         // Если это контактор и у него нет specs или specs пустая, добавляем дефолтные характеристики
         if (this.commutationType === 'contactors' && Object.keys(rawSpecs).length === 0) {
           // Дефолтные характеристики для контакторов
@@ -1269,7 +1280,10 @@ document.addEventListener('alpine:init', () => {
 
       // Генерируем новый артикул по формуле
       get dynamicArticle() {
-        if (this.commutationType === 'control_cabinet') {
+        if (this.commutationType === 'reactive_power') {
+          // Для реактивной мощности возвращаем артикул из базы данных
+          return this.article || '';
+        } else if (this.commutationType === 'control_cabinet') {
           if (this.controlType === 'direct_start') {
             // Для шкафов управления с прямым пуском: ШУ-ПП-{количество насосов}-{мощность}-1-РОСЭК
             // Все типы пуска (прямой/частотное регулирование/плавный) имеют одинаковый артикул с "ПП"
