@@ -267,6 +267,7 @@ document.addEventListener('alpine:init', () => {
       // Параметры для компенсации реактивной мощности
       regulationType: 'unregulated', // 'unregulated' или 'regulated'
       reactivePower: '10', // мощность в кВАр (в базе данных это поле "power")
+      step: null, // количество ступеней для автоматически регулируемых установок
       basePrice: 87900,
       article: 'АВР-100-CHINT-2',
       loading: false,
@@ -281,6 +282,11 @@ document.addEventListener('alpine:init', () => {
         manufacturer_brand: [],
         inputs_count: [],
         poles_count: [],
+        control_type: [],
+        motor_power: [],
+        regulation_type: [],
+        reactive_power: [],
+        steps: [],
         enclosure_type: [],
         connection_type: [],
         climate_type: []
@@ -391,6 +397,7 @@ document.addEventListener('alpine:init', () => {
             // Для компенсации реактивной мощности используем regulation_type и reactive_power
             if (this.regulationType) filters.regulation_type = this.regulationType;
             if (this.reactivePower) filters.reactive_power = this.reactivePower;
+            if (this.step) filters.step = this.step;
           } else {
             // Для АВР используем старые фильтры
             // Для контакторов используем poles_count, для остальных - inputs_count
@@ -418,6 +425,7 @@ document.addEventListener('alpine:init', () => {
               motor_power: data.available_options.motor_power || [],
               regulation_type: data.available_options.regulation_type || [],
               reactive_power: data.available_options.reactive_power || [],
+              steps: data.available_options.steps || [],
               enclosure_type: data.available_options.enclosure_type || [],
               connection_type: data.available_options.connection_type || [],
               climate_type: data.available_options.climate_type || []
@@ -435,6 +443,7 @@ document.addEventListener('alpine:init', () => {
               motor_power: [],
               regulation_type: [],
               reactive_power: [],
+              steps: [],
               enclosure_type: [],
               connection_type: [],
               climate_type: []
@@ -452,6 +461,7 @@ document.addEventListener('alpine:init', () => {
             motor_power: [],
             regulation_type: [],
             reactive_power: [],
+            steps: [],
             enclosure_type: [],
             connection_type: [],
             climate_type: []
@@ -756,13 +766,15 @@ document.addEventListener('alpine:init', () => {
             }
             filters.inputs_count = '1'; // Всегда 1 для шкафов управления
           } else if (this.commutationType === 'reactive_power') {
-            // Для компенсации реактивной мощности используем reactive_power и regulation_type
+            // Для компенсации реактивной мощности используем reactive_power, regulation_type и step
             filters.reactive_power = this.reactivePower;
             filters.regulation_type = this.regulationType;
+            if (this.step) filters.step = this.step;
             console.log('=== ФИЛЬТРЫ ДЛЯ РЕАКТИВНОЙ МОЩНОСТИ ===');
             console.log('Бренд:', this.manufacturerBrand);
             console.log('Мощность:', this.reactivePower);
             console.log('Тип регулирования:', this.regulationType);
+            console.log('Ступени:', this.step);
             console.log('Фильтры:', filters);
           } else {
             // Для АВР используем nominal_current
@@ -2067,10 +2079,34 @@ document.addEventListener('alpine:init', () => {
         if (this.loading) return;
         this.reactivePower = value;
         
+        // Сбрасываем выбранные ступени при смене мощности
+        this.step = null;
+        
+        // Перезагружаем доступные опции чтобы получить доступные ступени для новой мощности
+        await this.loadAvailableOptions();
+        
+        // Если есть доступные ступени, выбираем первую
+        if (this.availableOptions.steps && this.availableOptions.steps.length > 0) {
+          this.step = String(this.availableOptions.steps[0]);
+        }
+        
         await this.loadProductByCharacteristics();
         
         console.log('Артикул после обновления:', this.article);
         console.log('dynamicArticle:', this.dynamicArticle);
+        
+        this.updateCartQuantity();
+      },
+      
+      // Метод для обновления количества ступеней (для автоматически регулируемых установок)
+      async updateStep(value) {
+        console.log('=== UPDATE STEP ===');
+        console.log('Новые ступени:', value);
+        
+        if (this.loading) return;
+        this.step = value;
+        
+        await this.loadProductByCharacteristics();
         
         this.updateCartQuantity();
       }

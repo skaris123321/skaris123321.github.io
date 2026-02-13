@@ -690,6 +690,22 @@
         </div>
       </div>
 
+      <!-- Количество ступеней для автоматически регулируемых установок -->
+      <div x-show="commutationType === 'reactive_power' && regulationType === 'regulated' && availableOptions.steps && availableOptions.steps.length > 0" class="product-spec-group">
+        <div class="product-spec-label">Количество ступеней</div>
+        <div class="product-spec-options product-spec-options-currents">
+          <template x-for="stepValue in availableOptions.steps" :key="stepValue">
+            <button 
+              class="spec-option"
+              :class="{ active: step === String(stepValue), 'opacity-50': loading }"
+              @click="updateStep(String(stepValue))"
+              :disabled="loading"
+              x-text="stepValue"
+            ></button>
+          </template>
+        </div>
+      </div>
+
       <!-- Номинальный ток для АВР -->
       <div x-show="commutationType !== 'control_cabinet' && commutationType !== 'reactive_power'" class="product-spec-group">
         <div class="product-spec-label">Номинальный ток</div>
