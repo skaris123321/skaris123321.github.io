@@ -678,60 +678,15 @@
       <div x-show="commutationType === 'reactive_power'" class="product-spec-group">
         <div class="product-spec-label">Мощность</div>
         <div class="product-spec-options product-spec-options-currents">
-          <button 
-            class="spec-option"
-            :class="{ active: reactivePower === '10', 'opacity-50': loading }"
-            @click="updateReactivePower('10')"
-            :disabled="loading"
-          >10 кВАр</button>
-          <button 
-            class="spec-option"
-            :class="{ active: reactivePower === '15', 'opacity-50': loading }"
-            @click="updateReactivePower('15')"
-            :disabled="loading"
-          >15 кВАр</button>
-          <button 
-            class="spec-option"
-            :class="{ active: reactivePower === '25', 'opacity-50': loading }"
-            @click="updateReactivePower('25')"
-            :disabled="loading"
-          >25 кВАр</button>
-          <button 
-            class="spec-option"
-            :class="{ active: reactivePower === '50', 'opacity-50': loading }"
-            @click="updateReactivePower('50')"
-            :disabled="loading"
-          >50 кВАр</button>
-          <button 
-            class="spec-option"
-            :class="{ active: reactivePower === '75', 'opacity-50': loading }"
-            @click="updateReactivePower('75')"
-            :disabled="loading"
-          >75 кВАр</button>
-          <button 
-            class="spec-option"
-            :class="{ active: reactivePower === '100', 'opacity-50': loading }"
-            @click="updateReactivePower('100')"
-            :disabled="loading"
-          >100 кВАр</button>
-          <button 
-            class="spec-option"
-            :class="{ active: reactivePower === '125', 'opacity-50': loading }"
-            @click="updateReactivePower('125')"
-            :disabled="loading"
-          >125 кВАр</button>
-          <button 
-            class="spec-option"
-            :class="{ active: reactivePower === '150', 'opacity-50': loading }"
-            @click="updateReactivePower('150')"
-            :disabled="loading"
-          >150 кВАр</button>
-          <button 
-            class="spec-option"
-            :class="{ active: reactivePower === '200', 'opacity-50': loading }"
-            @click="updateReactivePower('200')"
-            :disabled="loading"
-          >200 кВАр</button>
+          <template x-for="power in availableOptions.reactive_power" :key="power">
+            <button 
+              class="spec-option"
+              :class="{ active: reactivePower === String(power), 'opacity-50': loading }"
+              @click="updateReactivePower(String(power))"
+              :disabled="loading"
+              x-text="power + ' кВАр'"
+            ></button>
+          </template>
         </div>
       </div>
 
