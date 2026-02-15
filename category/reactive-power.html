@@ -129,21 +129,6 @@
           </button>
         </div>
       </div>
-      
-      <!-- Кнопки фильтрации по мощности -->
-      <div x-show="selectedType" style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-top: 1rem;">
-        <span style="color: #6b7280; font-size: 0.875rem; margin-right: 0.5rem;">Мощность, кВАр:</span>
-        <template x-for="powerObj in availablePowers" :key="powerObj.value">
-          <button 
-            @click="powerObj.available && filterByPower(powerObj.value)"
-            :class="{ active: selectedPower === powerObj.value }"
-            :disabled="!powerObj.available"
-            class="brand-filter-btn"
-            :style="!powerObj.available ? 'opacity: 0.4; cursor: not-allowed;' : ''"
-            x-text="powerObj.value"
-          ></button>
-        </template>
-      </div>
     </div>
   </section>
 

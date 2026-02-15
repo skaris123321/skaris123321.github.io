@@ -304,7 +304,7 @@ document.addEventListener('alpine:init', () => {
         const productId = urlParams.get('id');
         
         // Проверяем параметры для шкафов управления
-        const commutationType = urlParams.get('commutationType');
+        const commutationType = urlParams.get('commutationType') || urlParams.get('commutation_type');
         const motorPower = urlParams.get('motorPower');
         const controlType = urlParams.get('controlType');
         const manufacturerBrand = urlParams.get('manufacturerBrand');
