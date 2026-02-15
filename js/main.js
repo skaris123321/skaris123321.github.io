@@ -325,7 +325,7 @@ document.addEventListener('alpine:init', () => {
           this.manufacturerBrand = brand;
           this.commutationType = commutationType;
           this.regulationType = regulationType;
-          this.reactivePower = parseFloat(power);
+          this.reactivePower = String(power);
           if (step) {
             this.step = parseInt(step);
           }
@@ -556,6 +556,13 @@ document.addEventListener('alpine:init', () => {
               filters.pump_count = this.pumpCount;
             }
             filters.inputs_count = '1'; // Всегда 1 для шкафов управления
+          } else if (this.commutationType === 'reactive_power') {
+            // Для компенсации реактивной мощности используем regulation_type и reactive_power
+            filters.regulation_type = this.regulationType;
+            filters.reactive_power = this.reactivePower;
+            if (this.step) {
+              filters.step = this.step;
+            }
           } else {
             // Для АВР используем nominal_current
             filters.nominal_current = this.nominalCurrent;
@@ -621,6 +628,14 @@ document.addEventListener('alpine:init', () => {
               if (product.control_type === 'direct_start') {
                 this.startType = product.start_type || 'direct_start';
                 this.pumpCount = String(product.pump_count || '1');
+              }
+            } else if (this.commutationType === 'reactive_power') {
+              // Для компенсации реактивной мощности устанавливаем параметры из продукта
+              this.regulationType = product.regulation_type;
+              this.reactivePower = String(product.reactive_power);
+              this.manufacturerBrand = product.manufacturer_brand;
+              if (product.step) {
+                this.step = product.step;
               }
             } else {
               // Для АВР устанавливаем параметры из продукта
