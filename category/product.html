@@ -676,7 +676,6 @@
 
       <!-- Мощность для компенсации реактивной мощности -->
       <div x-show="commutationType === 'reactive_power'" class="product-spec-group">
-        <div class="product-spec-label">Мощность</div>
         <div class="product-spec-options product-spec-options-currents">
           <template x-for="power in allReactivePowers" :key="power">
             <button 

@@ -327,7 +327,7 @@ document.addEventListener('alpine:init', () => {
           this.regulationType = regulationType;
           this.reactivePower = String(power);
           if (step) {
-            this.step = parseInt(step);
+            this.step = String(step);
           }
           
           await this.loadAvailableOptions();
@@ -635,7 +635,7 @@ document.addEventListener('alpine:init', () => {
               this.reactivePower = String(product.reactive_power);
               this.manufacturerBrand = product.manufacturer_brand;
               if (product.step) {
-                this.step = product.step;
+                this.step = String(product.step);
               }
             } else {
               // Для АВР устанавливаем параметры из продукта
