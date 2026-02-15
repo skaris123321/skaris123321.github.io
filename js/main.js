@@ -1175,7 +1175,12 @@ document.addEventListener('alpine:init', () => {
         } else if (this.commutationType === 'reactive_power') {
           // Для компенсации реактивной мощности
           const regulationTypeName = this.regulationType === 'unregulated' ? 'Нерегулируемая' : 'Автоматически регулируемая';
-          return `${regulationTypeName} конденсаторная установка ${this.reactivePower || '10'} кВАр`;
+          let title = `${regulationTypeName} конденсаторная установка ${this.reactivePower || '10'} кВАр`;
+          // Добавляем информацию о ступенях для регулируемых установок
+          if (this.regulationType === 'regulated' && this.step) {
+            title += `, ${this.step} ступеней`;
+          }
+          return title;
         } else if (this.commutationType === 'contactors') {
           // Для контакторов: "Шкаф АВР 25А однофазный" или "Шкаф АВР 25А трёхфазный"
           const phaseType = (this.polesCount || (parseInt(this.nominalCurrent) <= 100 ? 'single_phase' : 'three_phase')) === 'single_phase' ? 'однофазный' : 'трёхфазный';
@@ -1466,7 +1471,7 @@ document.addEventListener('alpine:init', () => {
           return productData;
         } else if (this.commutationType === 'reactive_power') {
           // Для компенсации реактивной мощности
-          return {
+          const productData = {
             article: this.dynamicArticle,
             manufacturerBrand: this.manufacturerBrand,
             commutationType: this.commutationType,
@@ -1478,6 +1483,13 @@ document.addEventListener('alpine:init', () => {
             productSpecs: this.productSpecs,
             productTitle: this.productTitle
           };
+          
+          // Для регулируемых установок добавляем количество ступеней
+          if (this.regulationType === 'regulated' && this.step) {
+            productData.step = this.step;
+          }
+          
+          return productData;
         } else {
           // Для трехфазных АВР и контакторов
           if (this.commutationType === 'contactors') {

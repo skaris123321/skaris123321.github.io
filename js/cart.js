@@ -20,7 +20,12 @@ class Cart {
       return key;
     } else if (product.commutationType === 'reactive_power') {
       // Для реактивной мощности
-      return `${product.manufacturerBrand}-${product.commutationType}-${product.regulationType}-${product.reactivePower}`;
+      let key = `${product.manufacturerBrand}-${product.commutationType}-${product.regulationType}-${product.reactivePower}`;
+      // Для регулируемых установок добавляем количество ступеней
+      if (product.regulationType === 'regulated' && product.step) {
+        key += `-${product.step}`;
+      }
+      return key;
     } else if (product.commutationType === 'contactors') {
       // Для контакторов
       return `${product.manufacturerBrand}-${product.commutationType}-${product.nominalCurrent}-${product.polesCount}-${product.cableConnection}-${product.climateVersion}`;
