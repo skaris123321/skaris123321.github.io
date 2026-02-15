@@ -678,12 +678,15 @@
       <div x-show="commutationType === 'reactive_power'" class="product-spec-group">
         <div class="product-spec-label">Мощность</div>
         <div class="product-spec-options product-spec-options-currents">
-          <template x-for="power in availableOptions.reactive_power" :key="power">
+          <template x-for="power in allReactivePowers" :key="power">
             <button 
               class="spec-option"
-              :class="{ active: reactivePower === String(power), 'opacity-50': loading }"
-              @click="updateReactivePower(String(power))"
-              :disabled="loading"
+              :class="{ 
+                active: reactivePower === String(power), 
+                'opacity-50': loading || !isReactivePowerAvailable(power)
+              }"
+              @click="isReactivePowerAvailable(power) && updateReactivePower(String(power))"
+              :disabled="loading || !isReactivePowerAvailable(power)"
               x-text="power + ' кВАр'"
             ></button>
           </template>
@@ -691,15 +694,18 @@
       </div>
 
       <!-- Количество ступеней для автоматически регулируемых установок -->
-      <div x-show="commutationType === 'reactive_power' && regulationType === 'regulated' && availableOptions.steps && availableOptions.steps.length > 0" class="product-spec-group">
+      <div x-show="commutationType === 'reactive_power' && regulationType === 'regulated'" class="product-spec-group">
         <div class="product-spec-label">Количество ступеней</div>
         <div class="product-spec-options product-spec-options-currents">
-          <template x-for="stepValue in availableOptions.steps" :key="stepValue">
+          <template x-for="stepValue in allSteps" :key="stepValue">
             <button 
               class="spec-option"
-              :class="{ active: step === String(stepValue), 'opacity-50': loading }"
-              @click="updateStep(String(stepValue))"
-              :disabled="loading"
+              :class="{ 
+                active: step === String(stepValue), 
+                'opacity-50': loading || !isStepAvailable(stepValue)
+              }"
+              @click="isStepAvailable(stepValue) && updateStep(String(stepValue))"
+              :disabled="loading || !isStepAvailable(stepValue)"
               x-text="stepValue"
             ></button>
           </template>
