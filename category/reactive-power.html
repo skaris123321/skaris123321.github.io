@@ -152,7 +152,10 @@
           </div>
           <div class="product-info">
             <h2 class="product-title" x-text="product.article"></h2>
-            <p class="product-description" x-text="product.description"></p>
+            <p class="product-description">
+              <span x-text="product.description"></span>
+              <span x-show="product.regulation_type === 'regulated' && product.step" x-text="', ' + product.step + ' ступеней'"></span>
+            </p>
             <p class="product-price" x-text="formatPrice(product.base_price)"></p>
             <p class="product-delivery">Под заказ от 12 дней</p>
           </div>
