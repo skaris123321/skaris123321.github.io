@@ -637,6 +637,11 @@ document.addEventListener('alpine:init', () => {
               if (product.step) {
                 this.step = String(product.step);
               }
+              console.log('=== REACTIVE POWER PRODUCT LOADED ===');
+              console.log('regulationType:', this.regulationType);
+              console.log('reactivePower:', this.reactivePower, 'type:', typeof this.reactivePower);
+              console.log('step:', this.step, 'type:', typeof this.step);
+              console.log('manufacturerBrand:', this.manufacturerBrand);
             } else {
               // Для АВР устанавливаем параметры из продукта
               this.nominalCurrent = String(product.nominal_current);
