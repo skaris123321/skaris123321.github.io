@@ -12,6 +12,13 @@ function reactivePowerCatalog() {
 
     async init() {
       await this.loadProducts();
+      // Читаем параметр regulationType из URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const regulationType = urlParams.get('regulationType');
+      if (regulationType) {
+        this.selectedType = regulationType;
+        this.updateAvailablePowers();
+      }
       this.applyFilters();
     },
 
@@ -136,7 +143,20 @@ function reactivePowerCatalog() {
     },
 
     getProductUrl(product) {
-      return `product.html?id=${product.id}`;
+      // Передаем все параметры товара для автоматического выбора на странице product.html
+      const params = new URLSearchParams({
+        brand: product.brand,
+        commutation_type: product.commutation_type,
+        regulation_type: product.regulation_type,
+        power: product.power
+      });
+      
+      // Добавляем step если есть
+      if (product.step) {
+        params.append('step', product.step);
+      }
+      
+      return `product.html?${params.toString()}`;
     }
   };
 }

@@ -311,9 +311,27 @@ document.addEventListener('alpine:init', () => {
         const startType = urlParams.get('startType');
         const pumpCount = urlParams.get('pumpCount');
         
+        // Проверяем параметры для реактивной мощности
+        const brand = urlParams.get('brand');
+        const regulationType = urlParams.get('regulation_type');
+        const power = urlParams.get('power');
+        const step = urlParams.get('step');
+        
         if (productId) {
           // Если есть ID в URL, загружаем товар по ID
           await this.loadProductById(productId);
+        } else if (brand && commutationType === 'reactive_power' && regulationType && power) {
+          // Если есть параметры для реактивной мощности, устанавливаем их
+          this.manufacturerBrand = brand;
+          this.commutationType = commutationType;
+          this.regulationType = regulationType;
+          this.reactivePower = parseFloat(power);
+          if (step) {
+            this.step = parseInt(step);
+          }
+          
+          await this.loadAvailableOptions();
+          await this.loadProduct();
         } else if (commutationType && motorPower && controlType && manufacturerBrand) {
           // Если есть параметры для шкафов управления, устанавливаем их
           this.commutationType = commutationType;
