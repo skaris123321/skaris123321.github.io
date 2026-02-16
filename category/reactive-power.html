@@ -111,6 +111,21 @@
           </template>
         </div>
         
+        <!-- Фильтр по количеству ступеней (только для регулируемых) -->
+        <div x-show="selectedType === 'regulated' || selectedType === 'unregulated'" style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-left: 1rem;">
+          <span style="color: #6b7280; font-size: 0.875rem;">Количество ступеней:</span>
+          <template x-for="step in availableSteps" :key="step">
+            <button 
+              @click="selectedType === 'regulated' ? filterByStep(step) : null"
+              :class="{ active: selectedStep === step }"
+              :disabled="selectedType === 'unregulated'"
+              class="brand-filter-btn"
+              :style="selectedType === 'unregulated' ? 'opacity: 0.5; cursor: not-allowed;' : ''"
+              x-text="step"
+            ></button>
+          </template>
+        </div>
+        
         <!-- Сортировка -->
         <div style="display: flex; gap: 0.5rem; margin-left: auto;">
           <button 
