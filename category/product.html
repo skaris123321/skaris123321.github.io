@@ -1042,9 +1042,9 @@
             </div>
           </div>
           
-          <!-- Для реактивной мощности показываем только краткое описание из базы данных -->
+          <!-- Для реактивной мощности показываем полное описание -->
           <div x-show="commutationType === 'reactive_power'">
-            <p class="purpose-text" x-text="fullDescription"></p>
+            <div class="purpose-text" x-html="fullDescription"></div>
           </div>
         </div>
       </div>
