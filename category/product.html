@@ -1044,7 +1044,43 @@
           
           <!-- Для реактивной мощности показываем полное описание -->
           <div x-show="commutationType === 'reactive_power'">
-            <div class="purpose-text" x-html="fullDescription"></div>
+            <div class="purpose-compact">
+              <h3 class="description-subtitle">Общее назначение</h3>
+              <p class="purpose-text">УКРМ — это современное электротехническое оборудование, предназначенное для компенсации реактивной мощности в электрических сетях. Устройство позволяет оптимизировать энергопотребление и снизить затраты на электроэнергию.</p>
+            </div>
+
+            <h3 class="description-subtitle">Основные функции</h3>
+            <ul class="purpose-compact-list">
+              <li>Компенсация реактивной мощности</li>
+              <li>Повышение коэффициента мощности (cos φ)</li>
+              <li>Снижение потерь электроэнергии</li>
+              <li>Стабилизация напряжения в сети</li>
+              <li>Защита оборудования от перегрузок</li>
+            </ul>
+
+            <h3 class="description-subtitle">Технические преимущества</h3>
+            <div class="features-list-compact">
+              <div class="feature-item-compact" x-show="regulationType === 'regulated'">
+                <strong class="feature-name">Автоматическое управление</strong>
+                <span class="feature-desc">Мгновенная реакция на изменения нагрузки</span>
+              </div>
+              <div class="feature-item-compact">
+                <strong class="feature-name">Точность компенсации</strong>
+                <span class="feature-desc">Поддержание заданного значения cos φ</span>
+              </div>
+              <div class="feature-item-compact">
+                <strong class="feature-name">Энергоэффективность</strong>
+                <span class="feature-desc">Снижение потребления электроэнергии</span>
+              </div>
+              <div class="feature-item-compact">
+                <strong class="feature-name">Надежность</strong>
+                <span class="feature-desc">Защита от перегрузок и коротких замыканий</span>
+              </div>
+              <div class="feature-item-compact">
+                <strong class="feature-name">Долговечность</strong>
+                <span class="feature-desc">Использование качественных компонентов</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
