@@ -5,10 +5,8 @@ function reactivePowerCatalog() {
     loading: true,
     selectedType: null, // 'unregulated' или 'regulated'
     selectedBrand: null,
-    selectedStep: null,
     sortBy: 'price_asc',
     uniqueBrands: [],
-    availableSteps: [4, 6, 8, 10, 12],
 
     async init() {
       await this.loadProducts();
@@ -52,7 +50,6 @@ function reactivePowerCatalog() {
       console.log('Фильтруем по типу:', type);
       this.selectedType = type;
       this.selectedBrand = null;
-      this.selectedStep = null; // Сбрасываем фильтр по ступеням
       this.applyFilters();
     },
 
@@ -65,21 +62,11 @@ function reactivePowerCatalog() {
       this.applyFilters();
     },
 
-    filterByStep(step) {
-      if (this.selectedStep === step) {
-        this.selectedStep = null;
-      } else {
-        this.selectedStep = step;
-      }
-      this.applyFilters();
-    },
-
     applyFilters() {
       let filtered = [...this.products];
       console.log('Применяем фильтры. Всего товаров:', filtered.length);
       console.log('Выбранный тип:', this.selectedType);
       console.log('Выбранный бренд:', this.selectedBrand);
-      console.log('Выбранное количество ступеней:', this.selectedStep);
 
       // Фильтр по типу установки
       if (this.selectedType) {
@@ -93,12 +80,6 @@ function reactivePowerCatalog() {
       if (this.selectedBrand) {
         filtered = filtered.filter(product => product.brand === this.selectedBrand);
         console.log('После фильтра по бренду:', filtered.length);
-      }
-
-      // Фильтр по количеству ступеней (только для регулируемых)
-      if (this.selectedStep && this.selectedType === 'regulated') {
-        filtered = filtered.filter(product => product.step === this.selectedStep);
-        console.log('После фильтра по ступеням:', filtered.length);
       }
 
       // Сортировка
