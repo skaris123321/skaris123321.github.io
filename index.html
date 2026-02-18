@@ -62,70 +62,62 @@
 
   <main>
     <!-- Hero секция со слайдером -->
-    <section class="hero-section" x-data="heroSlider()">
-      <div class="hero-slider">
+    <section class="hero-section">
+      <div class="hero-slider" id="heroSlider">
         <!-- Слайд 1 - Systeme Electric -->
-        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 0 }">
-          <img src="images/banner-systeme-electric.jpg?v=2" alt="Systeme Electric - частотные преобразователи" class="hero-banner-image">
+        <div class="hero-slide hero-slide-banner active">
+          <img src="images/banner-systeme-electric.jpg?v=3" alt="Systeme Electric - частотные преобразователи" class="hero-banner-image">
         </div>
 
         <!-- Слайд 2 - DKC -->
-        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 1 }">
-          <img src="images/banner-dkc.jpg?v=2" alt="DKC - автоматические выключатели YON MAX" class="hero-banner-image">
+        <div class="hero-slide hero-slide-banner">
+          <img src="images/banner-dkc.jpg?v=3" alt="DKC - автоматические выключатели YON MAX" class="hero-banner-image">
         </div>
 
         <!-- Слайд 3 - Schneider Electric -->
-        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 2 }">
-          <img src="images/banner-schneider.jpg?v=2" alt="Schneider Electric - модульное оборудование" class="hero-banner-image">
+        <div class="hero-slide hero-slide-banner">
+          <img src="images/banner-schneider.jpg?v=3" alt="Schneider Electric - модульное оборудование" class="hero-banner-image">
         </div>
 
         <!-- Слайд 4 - Dekraft -->
-        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 3 }">
-          <img src="images/banner-dekraft.jpg?v=2" alt="Dekraft - модульное оборудование" class="hero-banner-image">
+        <div class="hero-slide hero-slide-banner">
+          <img src="images/banner-dekraft.jpg?v=3" alt="Dekraft - модульное оборудование" class="hero-banner-image">
         </div>
 
         <!-- Слайд 5 - TDM Electric -->
-        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 4 }">
-          <img src="images/banner-tdm.jpg?v=2" alt="TDM Electric - кабельная продукция" class="hero-banner-image">
+        <div class="hero-slide hero-slide-banner">
+          <img src="images/banner-tdm.jpg?v=3" alt="TDM Electric - кабельная продукция" class="hero-banner-image">
         </div>
 
         <!-- Слайд 6 - Atlas Design -->
-        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 5 }">
-          <img src="images/banner-atlas.jpg?v=2" alt="Atlas Design - дизайнерские решения" class="hero-banner-image">
+        <div class="hero-slide hero-slide-banner">
+          <img src="images/banner-atlas.jpg?v=3" alt="Atlas Design - дизайнерские решения" class="hero-banner-image">
         </div>
 
         <!-- Слайд 7 - Частотные преобразователи -->
-        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 6 }">
-          <img src="images/banner-inverters.jpg?v=2" alt="Частотные преобразователи разных брендов" class="hero-banner-image">
+        <div class="hero-slide hero-slide-banner">
+          <img src="images/banner-inverters.jpg?v=3" alt="Частотные преобразователи разных брендов" class="hero-banner-image">
         </div>
 
         <!-- Слайд 8 - Dekraft защита -->
-        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 7 }">
-          <img src="images/banner-dekraft-protection.jpg?v=2" alt="Dekraft - защита от токов перегрузки" class="hero-banner-image">
+        <div class="hero-slide hero-slide-banner">
+          <img src="images/banner-dekraft-protection.jpg?v=3" alt="Dekraft - защита от токов перегрузки" class="hero-banner-image">
         </div>
 
         <!-- Навигация слайдера -->
-        <button @click="prevSlide" class="slider-btn slider-btn-prev">
+        <button onclick="prevSlide()" class="slider-btn slider-btn-prev">
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
           </svg>
         </button>
-        <button @click="nextSlide" class="slider-btn slider-btn-next">
+        <button onclick="nextSlide()" class="slider-btn slider-btn-next">
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
         </button>
 
         <!-- Индикаторы -->
-        <div class="slider-indicators">
-          <template x-for="(slide, index) in totalSlides" :key="index">
-            <button 
-              @click="goToSlide(index)" 
-              class="slider-indicator"
-              :class="{ 'active': currentSlide === index }"
-            ></button>
-          </template>
-        </div>
+        <div class="slider-indicators" id="sliderIndicators"></div>
       </div>
 
       <!-- Текст под слайдером -->
@@ -154,40 +146,6 @@
           </div>
           <div class="about-image-card">
             <img src="images/service-center.jpg" alt="Сервисный центр РОСЭК">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Наши бренды -->
-    <section class="brands-section">
-      <div class="container">
-        <h2 class="section-title">Наши бренды</h2>
-        <p class="brands-subtitle">Мы являемся официальным дистрибьютором ведущих производителей электротехнического оборудования</p>
-        <div class="brands-grid">
-          <div class="brand-card">
-            <img src="images/banner-systeme-electric.jpg?v=2" alt="Systeme Electric">
-          </div>
-          <div class="brand-card">
-            <img src="images/banner-dkc.jpg?v=2" alt="DKC">
-          </div>
-          <div class="brand-card">
-            <img src="images/banner-schneider.jpg?v=2" alt="Schneider Electric">
-          </div>
-          <div class="brand-card">
-            <img src="images/banner-dekraft.jpg?v=2" alt="Dekraft">
-          </div>
-          <div class="brand-card">
-            <img src="images/banner-tdm.jpg?v=2" alt="TDM Electric">
-          </div>
-          <div class="brand-card">
-            <img src="images/banner-atlas.jpg?v=2" alt="Atlas Design">
-          </div>
-          <div class="brand-card">
-            <img src="images/banner-inverters.jpg?v=2" alt="Частотные преобразователи">
-          </div>
-          <div class="brand-card">
-            <img src="images/banner-dekraft-protection.jpg?v=2" alt="Dekraft защита">
           </div>
         </div>
       </div>
@@ -313,60 +271,93 @@
   <script src="js/main.js"></script>
   
   <script>
-    // Слайдер для hero-секции
-    function heroSlider() {
-      return {
-        currentSlide: 0,
-        totalSlides: 8,
-        autoplayInterval: null,
+    // Простой слайдер без Alpine.js
+    let currentSlide = 0;
+    const totalSlides = 8;
+    let autoplayInterval;
 
-        init() {
-          this.startAutoplay();
-        },
-
-        nextSlide() {
-          this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
-          this.resetAutoplay();
-        },
-
-        prevSlide() {
-          this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
-          this.resetAutoplay();
-        },
-
-        goToSlide(index) {
-          this.currentSlide = index;
-          this.resetAutoplay();
-        },
-
-        startAutoplay() {
-          this.autoplayInterval = setInterval(() => {
-            this.nextSlide();
-          }, 5000);
-        },
-
-        resetAutoplay() {
-          clearInterval(this.autoplayInterval);
-          this.startAutoplay();
+    function showSlide(index) {
+      const slides = document.querySelectorAll('.hero-slide');
+      const indicators = document.querySelectorAll('.slider-indicator');
+      
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
         }
-      };
+      });
+      
+      indicators.forEach((indicator, i) => {
+        if (i === index) {
+          indicator.classList.add('active');
+        } else {
+          indicator.classList.remove('active');
+        }
+      });
     }
 
-    // Простая функциональность поиска для главной страницы
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+      resetAutoplay();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlide);
+      resetAutoplay();
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      showSlide(currentSlide);
+      resetAutoplay();
+    }
+
+    function startAutoplay() {
+      autoplayInterval = setInterval(() => {
+        nextSlide();
+      }, 5000);
+    }
+
+    function resetAutoplay() {
+      clearInterval(autoplayInterval);
+      startAutoplay();
+    }
+
+    // Инициализация при загрузке страницы
     document.addEventListener('DOMContentLoaded', function() {
-      const searchInput = document.getElementById('searchInput');
-      if (searchInput) {
-        searchInput.addEventListener('keypress', function(e) {
-          if (e.key === 'Enter') {
-            const query = this.value.trim();
-            if (query) {
-              // Перенаправляем на страницу каталога с поисковым запросом
-              window.location.href = `category/avr.html?search=${encodeURIComponent(query)}`;
-            }
-          }
-        });
+      // Создаем индикаторы
+      const indicatorsContainer = document.getElementById('sliderIndicators');
+      for (let i = 0; i < totalSlides; i++) {
+        const indicator = document.createElement('button');
+        indicator.className = 'slider-indicator';
+        if (i === 0) indicator.classList.add('active');
+        indicator.onclick = () => goToSlide(i);
+        indicatorsContainer.appendChild(indicator);
       }
+      
+      // Запускаем автопрокрутку
+      startAutoplay();
     });
+  </script>
+
+  <script>
+
+    // Простая функциональность поиска для главной страницы
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+      searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          const query = this.value.trim();
+          if (query) {
+            // Перенаправляем на страницу каталога с поисковым запросом
+            window.location.href = `category/avr.html?search=${encodeURIComponent(query)}`;
+          }
+        }
+      });
+    }
   </script>
 </body>
 </html>
