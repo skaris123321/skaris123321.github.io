@@ -3028,7 +3028,7 @@ h1.category-title {
 
 /* Hero секция - современный дизайн */
 .hero-section-modern {
-  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  background: linear-gradient(135deg, #374151 0%, #1f2937 50%, #7f1d1d 100%);
   padding: 4rem 0;
   position: relative;
   overflow: hidden;
@@ -3042,8 +3042,8 @@ h1.category-title {
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(220, 38, 38, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(220, 38, 38, 0.12) 0%, transparent 50%);
   pointer-events: none;
 }
 
