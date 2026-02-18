@@ -3318,6 +3318,86 @@ h1.category-title {
   display: block;
 }
 
+/* Секция с брендами - прокручивающаяся лента */
+.brands-showcase {
+  padding: 4rem 0;
+  background: white;
+  overflow: hidden;
+}
+
+.brands-scroll-wrapper {
+  margin-top: 3rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.brands-scroll-wrapper::before,
+.brands-scroll-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.brands-scroll-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.brands-scroll-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+.brands-scroll {
+  display: flex;
+  gap: 2rem;
+  animation: scroll 40s linear infinite;
+  width: fit-content;
+}
+
+.brands-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-350px * 8 - 2rem * 8));
+  }
+}
+
+.brand-logo-card {
+  flex-shrink: 0;
+  width: 350px;
+  height: 200px;
+  background: #f9fafb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.brand-logo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.brand-logo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 /* Наши бренды */
 .brands-section {
   padding: 4rem 0;
