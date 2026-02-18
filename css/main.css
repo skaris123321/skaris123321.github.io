@@ -3026,7 +3026,97 @@ h1.category-title {
 
 /* ===== ГЛАВНАЯ СТРАНИЦА ===== */
 
-/* Hero секция - современный дизайн */
+/* Hero секция - новый дизайн с сеткой */
+.hero-section-redesign {
+  background: white;
+  padding: 5rem 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.hero-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .hero-heading {
+    font-size: 3rem;
+  }
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #dc2626;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.hero-image-block {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.hero-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 400px;
+}
+
+/* Старые стили hero - оставляем для совместимости */
 .hero-section-modern {
   background: linear-gradient(135deg, #374151 0%, #1f2937 50%, #7f1d1d 100%);
   padding: 4rem 0;
@@ -3085,6 +3175,8 @@ h1.category-title {
     font-size: 1.25rem;
   }
 }
+
+/* Старые стили hero */
 
 /* Старые стили hero - оставляем для совместимости */
 .hero-section {
@@ -3318,45 +3410,80 @@ h1.category-title {
   display: block;
 }
 
-/* Секция с брендами - статичная сетка */
+/* Секция с брендами - прокручивающаяся лента */
 .brands-showcase {
   padding: 4rem 0;
-  background: #f9fafb;
+  background: white;
+  overflow: hidden;
 }
 
-.brands-grid-static {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+.brands-scroll-wrapper {
   margin-top: 3rem;
+  overflow: hidden;
+  position: relative;
 }
 
-@media (min-width: 768px) {
-  .brands-grid-static {
-    grid-template-columns: repeat(4, 1fr);
+.brands-scroll-wrapper::before,
+.brands-scroll-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.brands-scroll-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.brands-scroll-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+.brands-scroll {
+  display: flex;
+  gap: 2rem;
+  animation: scroll 40s linear infinite;
+  width: fit-content;
+}
+
+.brands-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-500px * 8 - 2rem * 8));
   }
 }
 
-.brand-logo-card-static {
-  background: white;
+.brand-logo-card {
+  flex-shrink: 0;
+  width: 500px;
+  height: 280px;
+  background: #f9fafb;
   border-radius: 1rem;
   padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-  aspect-ratio: 16/9;
-  border: 1px solid #e5e7eb;
 }
 
-.brand-logo-card-static:hover {
+.brand-logo-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  border-color: #dc2626;
 }
 
-.brand-logo-card-static img {
+.brand-logo-card img {
   width: 100%;
   height: 100%;
   object-fit: contain;
