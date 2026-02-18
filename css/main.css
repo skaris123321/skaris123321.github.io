@@ -3093,7 +3093,7 @@ h1.category-title {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.3);
   border: none;
   width: 3rem;
   height: 3rem;
@@ -3104,11 +3104,15 @@ h1.category-title {
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 10;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+}
+
+.hero-slider:hover .slider-btn {
+  opacity: 1;
 }
 
 .slider-btn:hover {
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   transform: translateY(-50%) scale(1.1);
 }
 
