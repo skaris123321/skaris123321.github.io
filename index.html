@@ -64,57 +64,43 @@
     <!-- Hero секция со слайдером -->
     <section class="hero-section" x-data="heroSlider()">
       <div class="hero-slider">
-        <!-- Слайд 1 -->
-        <div class="hero-slide" :class="{ 'active': currentSlide === 0 }">
-          <div class="container">
-            <div class="hero-content">
-              <h1 class="hero-title">Комплексные электротехнические решения для вашего бизнеса</h1>
-              <p class="hero-subtitle">Проектирование, производство и поставка электротехнического оборудования от официального дистрибьютора ведущих брендов</p>
-              <div class="hero-buttons">
-                <a href="category/catalog.html" class="btn-primary-large">Перейти в каталог</a>
-                <a href="tel:+780055118939" class="btn-secondary-large">8 (800) 511-89-39</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Слайд 2 - Systeme Electric -->
-        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 1 }">
+        <!-- Слайд 1 - Systeme Electric -->
+        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 0 }">
           <img src="images/banner-systeme-electric.jpg" alt="Systeme Electric - частотные преобразователи" class="hero-banner-image">
         </div>
 
-        <!-- Слайд 3 - DKC -->
-        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 2 }">
+        <!-- Слайд 2 - DKC -->
+        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 1 }">
           <img src="images/banner-dkc.jpg" alt="DKC - автоматические выключатели YON MAX" class="hero-banner-image">
         </div>
 
-        <!-- Слайд 4 - Schneider Electric -->
-        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 3 }">
+        <!-- Слайд 3 - Schneider Electric -->
+        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 2 }">
           <img src="images/banner-schneider.jpg" alt="Schneider Electric - модульное оборудование" class="hero-banner-image">
         </div>
 
-        <!-- Слайд 5 - Dekraft -->
-        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 4 }">
+        <!-- Слайд 4 - Dekraft -->
+        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 3 }">
           <img src="images/banner-dekraft.jpg" alt="Dekraft - модульное оборудование" class="hero-banner-image">
         </div>
 
-        <!-- Слайд 6 - TDM Electric -->
-        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 5 }">
+        <!-- Слайд 5 - TDM Electric -->
+        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 4 }">
           <img src="images/banner-tdm.jpg" alt="TDM Electric - кабельная продукция" class="hero-banner-image">
         </div>
 
-        <!-- Слайд 7 - Atlas Design -->
-        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 6 }">
+        <!-- Слайд 6 - Atlas Design -->
+        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 5 }">
           <img src="images/banner-atlas.jpg" alt="Atlas Design - дизайнерские решения" class="hero-banner-image">
         </div>
 
-        <!-- Слайд 8 - Частотные преобразователи -->
-        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 7 }">
+        <!-- Слайд 7 - Частотные преобразователи -->
+        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 6 }">
           <img src="images/banner-inverters.jpg" alt="Частотные преобразователи разных брендов" class="hero-banner-image">
         </div>
 
-        <!-- Слайд 9 - Dekraft защита -->
-        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 8 }">
+        <!-- Слайд 8 - Dekraft защита -->
+        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 7 }">
           <img src="images/banner-dekraft-protection.jpg" alt="Dekraft - защита от токов перегрузки" class="hero-banner-image">
         </div>
 
@@ -139,6 +125,14 @@
               :class="{ 'active': currentSlide === index }"
             ></button>
           </template>
+        </div>
+      </div>
+
+      <!-- Текст под слайдером -->
+      <div class="hero-text-section">
+        <div class="container">
+          <h1 class="hero-main-title">Комплексные электротехнические решения для вашего бизнеса</h1>
+          <p class="hero-main-subtitle">Проектирование, производство и поставка электротехнического оборудования от официального дистрибьютора ведущих брендов</p>
         </div>
       </div>
     </section>
@@ -288,7 +282,7 @@
     function heroSlider() {
       return {
         currentSlide: 0,
-        totalSlides: 9,
+        totalSlides: 8,
         autoplayInterval: null,
 
         init() {
