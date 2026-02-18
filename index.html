@@ -61,21 +61,89 @@
   </header>
 
   <main>
-    <!-- Hero секция -->
-    <section class="hero-section">
-      <div class="container">
-        <div class="hero-content">
-          <h1 class="hero-title">Комплексные электротехнические решения для вашего бизнеса</h1>
-          <p class="hero-subtitle">Проектирование, производство и поставка электротехнического оборудования от официального дистрибьютора ведущих брендов</p>
-          <div class="hero-buttons">
-            <a href="category/catalog.html" class="btn-primary-large">Перейти в каталог</a>
-            <a href="tel:+780055118939" class="btn-secondary-large">8 (800) 511-89-39</a>
+    <!-- Hero секция со слайдером -->
+    <section class="hero-section" x-data="heroSlider()">
+      <div class="hero-slider">
+        <!-- Слайд 1 -->
+        <div class="hero-slide" :class="{ 'active': currentSlide === 0 }">
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="hero-title">Комплексные электротехнические решения для вашего бизнеса</h1>
+              <p class="hero-subtitle">Проектирование, производство и поставка электротехнического оборудования от официального дистрибьютора ведущих брендов</p>
+              <div class="hero-buttons">
+                <a href="category/catalog.html" class="btn-primary-large">Перейти в каталог</a>
+                <a href="tel:+780055118939" class="btn-secondary-large">8 (800) 511-89-39</a>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <!-- Слайд 2 - Systeme Electric -->
+        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 1 }">
+          <img src="images/banner-systeme-electric.jpg" alt="Systeme Electric - частотные преобразователи" class="hero-banner-image">
+        </div>
+
+        <!-- Слайд 3 - DKC -->
+        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 2 }">
+          <img src="images/banner-dkc.jpg" alt="DKC - автоматические выключатели YON MAX" class="hero-banner-image">
+        </div>
+
+        <!-- Слайд 4 - Schneider Electric -->
+        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 3 }">
+          <img src="images/banner-schneider.jpg" alt="Schneider Electric - модульное оборудование" class="hero-banner-image">
+        </div>
+
+        <!-- Слайд 5 - Dekraft -->
+        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 4 }">
+          <img src="images/banner-dekraft.jpg" alt="Dekraft - модульное оборудование" class="hero-banner-image">
+        </div>
+
+        <!-- Слайд 6 - TDM Electric -->
+        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 5 }">
+          <img src="images/banner-tdm.jpg" alt="TDM Electric - кабельная продукция" class="hero-banner-image">
+        </div>
+
+        <!-- Слайд 7 - Atlas Design -->
+        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 6 }">
+          <img src="images/banner-atlas.jpg" alt="Atlas Design - дизайнерские решения" class="hero-banner-image">
+        </div>
+
+        <!-- Слайд 8 - Частотные преобразователи -->
+        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 7 }">
+          <img src="images/banner-inverters.jpg" alt="Частотные преобразователи разных брендов" class="hero-banner-image">
+        </div>
+
+        <!-- Слайд 9 - Dekraft защита -->
+        <div class="hero-slide hero-slide-banner" :class="{ 'active': currentSlide === 8 }">
+          <img src="images/banner-dekraft-protection.jpg" alt="Dekraft - защита от токов перегрузки" class="hero-banner-image">
+        </div>
+
+        <!-- Навигация слайдера -->
+        <button @click="prevSlide" class="slider-btn slider-btn-prev">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <button @click="nextSlide" class="slider-btn slider-btn-next">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+
+        <!-- Индикаторы -->
+        <div class="slider-indicators">
+          <template x-for="(slide, index) in totalSlides" :key="index">
+            <button 
+              @click="goToSlide(index)" 
+              class="slider-indicator"
+              :class="{ 'active': currentSlide === index }"
+            ></button>
+          </template>
         </div>
       </div>
     </section>
 
-    <!-- О компании -->
+    <!-- О компании с фоновыми изображениями -->
     <section class="about-section">
       <div class="container">
         <div class="about-content">
@@ -83,6 +151,16 @@
           <p class="about-text">
             ООО «РОСЭК» выражает заинтересованность в реализации комплексных электротехнических проектов и поставках оборудования для Вашей организации. Мы являемся официальным дистрибьютором таких брендов как: <strong>DKC, CHINT, System Electric, Dekraft, Veda MC (Danfoss), Ostec, IEK, TDM Electric, Световые технологии</strong> и многих других.
           </p>
+        </div>
+        
+        <!-- Фотографии производства -->
+        <div class="about-images">
+          <div class="about-image-card">
+            <img src="images/production-line.jpg" alt="Производственная линия РОСЭК">
+          </div>
+          <div class="about-image-card">
+            <img src="images/service-center.jpg" alt="Сервисный центр РОСЭК">
+          </div>
         </div>
       </div>
     </section>
@@ -188,29 +266,6 @@
       </div>
     </section>
 
-    <!-- Наше производство -->
-    <section class="production-section">
-      <div class="container">
-        <h2 class="section-title">Наше производство</h2>
-        <div class="production-grid">
-          <div class="production-image-card">
-            <img src="images/production-line.jpg" alt="Производственная линия РОСЭК" class="production-image">
-            <div class="production-overlay">
-              <h3 class="production-overlay-title">Современное производство</h3>
-              <p class="production-overlay-text">Собственные производственные мощности для изготовления электротехнического оборудования</p>
-            </div>
-          </div>
-          <div class="production-image-card">
-            <img src="images/service-center.jpg" alt="Сервисный центр РОСЭК" class="production-image">
-            <div class="production-overlay">
-              <h3 class="production-overlay-title">Сервисный центр</h3>
-              <p class="production-overlay-text">Полный сервис под ключ: диагностика, гарантия, оригинальные запчасти</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- CTA секция -->
     <section class="cta-section">
       <div class="container">
@@ -229,6 +284,45 @@
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
   <script>
+    // Слайдер для hero-секции
+    function heroSlider() {
+      return {
+        currentSlide: 0,
+        totalSlides: 9,
+        autoplayInterval: null,
+
+        init() {
+          this.startAutoplay();
+        },
+
+        nextSlide() {
+          this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+          this.resetAutoplay();
+        },
+
+        prevSlide() {
+          this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+          this.resetAutoplay();
+        },
+
+        goToSlide(index) {
+          this.currentSlide = index;
+          this.resetAutoplay();
+        },
+
+        startAutoplay() {
+          this.autoplayInterval = setInterval(() => {
+            this.nextSlide();
+          }, 5000);
+        },
+
+        resetAutoplay() {
+          clearInterval(this.autoplayInterval);
+          this.startAutoplay();
+        }
+      };
+    }
+
     // Простая функциональность поиска для главной страницы
     document.addEventListener('DOMContentLoaded', function() {
       const searchInput = document.getElementById('searchInput');
