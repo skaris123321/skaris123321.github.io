@@ -692,8 +692,8 @@
         </div>
       </div>
 
-      <!-- Количество ступеней для автоматически регулируемых установок -->
-      <div x-show="commutationType === 'reactive_power' && regulationType === 'regulated'" class="product-spec-group">
+      <!-- Количество ступеней для конденсаторных установок -->
+      <div x-show="commutationType === 'reactive_power'" class="product-spec-group">
         <div class="product-spec-label">Количество ступеней</div>
         <div class="product-spec-options product-spec-options-currents">
           <template x-for="stepValue in allSteps" :key="stepValue">
@@ -701,10 +701,11 @@
               class="spec-option"
               :class="{ 
                 active: step === String(stepValue), 
-                'opacity-50': loading || !isStepAvailable(stepValue)
+                'opacity-50': loading || regulationType === 'unregulated' || !isStepAvailable(stepValue),
+                disabled: regulationType === 'unregulated' || !isStepAvailable(stepValue)
               }"
-              @click="isStepAvailable(stepValue) && updateStep(String(stepValue))"
-              :disabled="loading || !isStepAvailable(stepValue)"
+              @click="regulationType === 'regulated' && isStepAvailable(stepValue) && updateStep(String(stepValue))"
+              :disabled="loading || regulationType === 'unregulated' || !isStepAvailable(stepValue)"
               x-text="stepValue"
             ></button>
           </template>
@@ -1041,9 +1042,45 @@
             </div>
           </div>
           
-          <!-- Для реактивной мощности показываем только краткое описание из базы данных -->
+          <!-- Для реактивной мощности показываем полное описание -->
           <div x-show="commutationType === 'reactive_power'">
-            <p class="purpose-text" x-text="fullDescription"></p>
+            <div class="purpose-compact">
+              <h3 class="description-subtitle">Общее назначение</h3>
+              <p class="purpose-text">УКРМ — это современное электротехническое оборудование, предназначенное для компенсации реактивной мощности в электрических сетях. Устройство позволяет оптимизировать энергопотребление и снизить затраты на электроэнергию.</p>
+            </div>
+
+            <h3 class="description-subtitle">Основные функции</h3>
+            <ul class="purpose-compact-list">
+              <li>Компенсация реактивной мощности</li>
+              <li>Повышение коэффициента мощности (cos φ)</li>
+              <li>Снижение потерь электроэнергии</li>
+              <li>Стабилизация напряжения в сети</li>
+              <li>Защита оборудования от перегрузок</li>
+            </ul>
+
+            <h3 class="description-subtitle">Технические преимущества</h3>
+            <div class="features-list-compact">
+              <div class="feature-item-compact" x-show="regulationType === 'regulated'">
+                <strong class="feature-name">Автоматическое управление</strong>
+                <span class="feature-desc">Мгновенная реакция на изменения нагрузки</span>
+              </div>
+              <div class="feature-item-compact">
+                <strong class="feature-name">Точность компенсации</strong>
+                <span class="feature-desc">Поддержание заданного значения cos φ</span>
+              </div>
+              <div class="feature-item-compact">
+                <strong class="feature-name">Энергоэффективность</strong>
+                <span class="feature-desc">Снижение потребления электроэнергии</span>
+              </div>
+              <div class="feature-item-compact">
+                <strong class="feature-name">Надежность</strong>
+                <span class="feature-desc">Защита от перегрузок и коротких замыканий</span>
+              </div>
+              <div class="feature-item-compact">
+                <strong class="feature-name">Долговечность</strong>
+                <span class="feature-desc">Использование качественных компонентов</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

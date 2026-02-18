@@ -662,8 +662,8 @@ document.addEventListener('alpine:init', () => {
             // Перезагружаем доступные опции после загрузки товара для актуализации доступных значений
             await this.loadAvailableOptions();
             
-            // Загружаем документы для текущего продукта
-            if (window.documentsManager) {
+            // Загружаем документы для текущего продукта (только для АВР)
+            if (window.documentsManager && this.commutationType !== 'reactive_power' && this.commutationType !== 'control_cabinet') {
               const productData = {
                 name: this.productTitle,
                 manufacturer: this.manufacturerBrand,
