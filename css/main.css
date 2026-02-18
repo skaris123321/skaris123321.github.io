@@ -3368,17 +3368,17 @@ h1.category-title {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-350px * 8 - 2rem * 8));
+    transform: translateX(calc(-500px * 8 - 2rem * 8));
   }
 }
 
 .brand-logo-card {
   flex-shrink: 0;
-  width: 350px;
-  height: 200px;
+  width: 500px;
+  height: 280px;
   background: #f9fafb;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
