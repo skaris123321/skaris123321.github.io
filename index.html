@@ -286,7 +286,27 @@
         autoplayInterval: null,
 
         init() {
+          this.preloadImages();
           this.startAutoplay();
+        },
+
+        preloadImages() {
+          // Предзагрузка всех изображений баннеров
+          const images = [
+            'images/banner-systeme-electric.jpg',
+            'images/banner-dkc.jpg',
+            'images/banner-schneider.jpg',
+            'images/banner-dekraft.jpg',
+            'images/banner-tdm.jpg',
+            'images/banner-atlas.jpg',
+            'images/banner-inverters.jpg',
+            'images/banner-dekraft-protection.jpg'
+          ];
+          
+          images.forEach(src => {
+            const img = new Image();
+            img.src = src;
+          });
         },
 
         nextSlide() {
