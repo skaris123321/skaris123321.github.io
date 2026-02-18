@@ -277,6 +277,7 @@
 
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
+  
   <script>
     // Слайдер для hero-секции
     function heroSlider() {
@@ -284,29 +285,28 @@
         currentSlide: 0,
         totalSlides: 8,
         autoplayInterval: null,
+        imagesLoaded: false,
 
         init() {
-          this.preloadImages();
+          this.forceLoadBackgrounds();
           this.startAutoplay();
         },
 
-        preloadImages() {
-          // Предзагрузка всех изображений баннеров
-          const images = [
-            'images/banner-systeme-electric.jpg',
-            'images/banner-dkc.jpg',
-            'images/banner-schneider.jpg',
-            'images/banner-dekraft.jpg',
-            'images/banner-tdm.jpg',
-            'images/banner-atlas.jpg',
-            'images/banner-inverters.jpg',
-            'images/banner-dekraft-protection.jpg'
-          ];
-          
-          images.forEach(src => {
-            const img = new Image();
-            img.src = src;
+        forceLoadBackgrounds() {
+          // Принудительно загружаем все фоновые изображения
+          const slides = document.querySelectorAll('.hero-slide-bg');
+          slides.forEach(slide => {
+            const bgUrl = slide.style.backgroundImage.match(/url\(['"]?([^'"]+)['"]?\)/);
+            if (bgUrl && bgUrl[1]) {
+              const img = new Image();
+              img.onload = () => {
+                // Изображение загружено, фон будет отображаться
+                slide.style.opacity = '0.6';
+              };
+              img.src = bgUrl[1];
+            }
           });
+          this.imagesLoaded = true;
         },
 
         nextSlide() {
