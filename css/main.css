@@ -1,8 +1,8 @@
 /* css/main.css */
 
 :root {
-  --red-main: #dc2626;
-  --red-dark: #b91c1c;
+  --red-main: #F16664;
+  --red-dark: #d94f4d;
   --gray-light: #fafafa;
   --gray-dark: #111827;
 }
@@ -86,24 +86,26 @@ button {
 }
 
 .logo {
-  font-size: 1.5rem !important;
-  font-weight: bold !important;
-  color: var(--red-main) !important;
+  display: flex;
+  align-items: center;
   text-decoration: none !important;
   transition: opacity 0.2s;
   line-height: 1.2 !important;
   flex-shrink: 0;
-  font-family: 'Inter', system-ui, sans-serif !important;
-  letter-spacing: normal !important;
-  text-transform: none !important;
   margin: 0 !important;
   padding: 0 !important;
+  height: 40px;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 a.logo {
-  font-size: 1.5rem !important;
-  font-weight: bold !important;
-  color: var(--red-main) !important;
+  display: flex;
+  align-items: center;
 }
 
 .logo:hover {
@@ -3147,7 +3149,7 @@ h1.category-title {
 .stat-number {
   font-size: 2rem;
   font-weight: 700;
-  color: #dc2626;
+  color: #F16664;
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
@@ -3920,27 +3922,61 @@ h1.category-title {
 }
 
 .project-card-all {
-  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  background: white;
+  border: 2px dashed #e5e7eb;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 300px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .project-card-all:hover {
-  background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%);
+  border-color: #F16664;
+  background: #fef2f2;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(241, 102, 100, 0.1);
 }
 
 .project-all-content {
   text-align: center;
-  color: white;
+  color: #6b7280;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-all-icon {
+  width: 4rem;
+  height: 4rem;
+  color: #F16664;
+  margin-bottom: 0.5rem;
+}
+
+.project-card-all:hover .project-all-icon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 .project-all-title {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 600;
   margin: 0;
+  color: #111827;
+}
+
+.project-all-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.project-card-all:hover .project-all-title {
+  color: #F16664;
 }
 
 @media (max-width: 640px) {
