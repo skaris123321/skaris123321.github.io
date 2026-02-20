@@ -18,7 +18,7 @@
     }
   </script>
 
-  <link rel="stylesheet" href="../css/main.css?v=20">
+  <link rel="stylesheet" href="../css/main.css?v=21">
 </head>
 <body class="bg-light text-dark">
   <header class="header">
@@ -81,7 +81,7 @@
 
     <div x-show="!loading" class="catalog-grid">
       <template x-for="category in categories" :key="category.type">
-        <a :href="category.url" class="catalog-category-card">
+        <div class="catalog-category-card">
           <div class="catalog-category-link-wrapper">
             <div class="catalog-category-image-wrapper">
               <img :src="category.image" :alt="category.name" class="catalog-category-image">
@@ -90,12 +90,14 @@
               <h2 class="catalog-category-title" x-text="category.name"></h2>
               <ul class="catalog-category-list">
                 <template x-for="subcategory in category.subcategories" :key="subcategory.name">
-                  <li class="catalog-category-item" x-text="subcategory.name"></li>
+                  <li class="catalog-category-item">
+                    <a :href="subcategory.url" class="catalog-subcategory-link" x-text="subcategory.name"></a>
+                  </li>
                 </template>
               </ul>
             </div>
           </div>
-        </a>
+        </div>
       </template>
     </div>
   </main>
