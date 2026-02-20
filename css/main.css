@@ -4040,44 +4040,45 @@ h1.category-title {
 .advantages-grid-modern {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-top: 3rem;
-  max-width: 1000px;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .advantage-card-modern {
   background: white;
-  padding: 2rem;
+  padding: 1.5rem;
   border: 1px solid #e5e7eb;
-  border-radius: 1rem;
-  transition: all 0.3s ease;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
   align-items: flex-start;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  height: 100%;
 }
 
 .advantage-card-modern:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border-color: #F16664;
 }
 
 .advantage-number-modern {
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   background: linear-gradient(135deg, #F16664 0%, #d94f4d 100%);
   color: white;
-  border-radius: 12px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 700;
-  box-shadow: 0 4px 12px rgba(241, 102, 100, 0.3);
+  box-shadow: 0 2px 8px rgba(241, 102, 100, 0.25);
 }
 
 .advantage-content-modern {
@@ -4086,56 +4087,60 @@ h1.category-title {
 }
 
 .advantage-title-modern {
-  font-size: 1.25rem;
+  font-size: 1.0625rem;
   font-weight: 600;
   color: #111827;
-  margin: 0 0 0.75rem 0;
+  margin: 0 0 0.5rem 0;
   line-height: 1.4;
 }
 
 .advantage-text-modern {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   color: #6b7280;
-  line-height: 1.7;
+  line-height: 1.6;
   margin: 0;
 }
 
 @media (min-width: 768px) {
   .advantages-grid-modern {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .advantages-grid-modern {
-    gap: 2.5rem;
+    gap: 1.75rem;
+  }
+  
+  .advantage-card-modern {
+    padding: 1.75rem;
   }
 }
 
 @media (max-width: 767px) {
   .advantages-grid-modern {
-    gap: 1.5rem;
+    gap: 1.25rem;
     margin-top: 2rem;
   }
   
   .advantage-card-modern {
-    padding: 1.5rem;
+    padding: 1.25rem;
     gap: 1rem;
   }
   
   .advantage-number-modern {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     font-size: 1rem;
   }
   
   .advantage-title-modern {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
   
   .advantage-text-modern {
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
   }
 }
 
