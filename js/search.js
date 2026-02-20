@@ -11,12 +11,25 @@ class UniversalSearch {
     // Находим все поисковые поля на странице
     const searchInputs = document.querySelectorAll('.search-input');
     
+    if (searchInputs.length === 0) {
+      console.log('Поисковые поля не найдены, повторная попытка через 500мс');
+      setTimeout(() => this.init(), 500);
+      return;
+    }
+
+    console.log('Найдено поисковых полей:', searchInputs.length);
+    
     searchInputs.forEach(input => {
       // Создаем контейнер для подсказок
       const wrapper = input.parentElement;
-      const suggestionsDiv = document.createElement('div');
-      suggestionsDiv.className = 'search-suggestions';
-      wrapper.appendChild(suggestionsDiv);
+      
+      // Проверяем, не создан ли уже контейнер
+      let suggestionsDiv = wrapper.querySelector('.search-suggestions');
+      if (!suggestionsDiv) {
+        suggestionsDiv = document.createElement('div');
+        suggestionsDiv.className = 'search-suggestions';
+        wrapper.appendChild(suggestionsDiv);
+      }
 
       // Добавляем обработчик на ввод текста
       input.addEventListener('input', (e) => {
@@ -452,11 +465,10 @@ class UniversalSearch {
   }
 }
 
-// Инициализируем поиск после загрузки DOM
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
+// Инициализируем поиск после полной загрузки страницы и Alpine.js
+document.addEventListener('DOMContentLoaded', () => {
+  // Ждем немного, чтобы Alpine.js успел инициализироваться
+  setTimeout(() => {
     new UniversalSearch();
-  });
-} else {
-  new UniversalSearch();
-}
+  }, 100);
+});
