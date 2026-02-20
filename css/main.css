@@ -3097,12 +3097,12 @@ h1.category-title {
   height: 100%;
   object-fit: cover;
   display: block;
-  min-height: 400px;
+  min-height: 350px;
 }
 
 @media (min-width: 768px) {
   .hero-image-large img {
-    min-height: 550px;
+    min-height: 450px;
   }
 }
 
@@ -4036,63 +4036,56 @@ h1.category-title {
 }
 
 
-/* Современные карточки преимуществ - Вариант с сеткой */
+/* Современные карточки преимуществ - Элегантный список */
 .advantages-grid-modern {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
   margin-top: 2.5rem;
-}
-
-@media (min-width: 768px) {
-  .advantages-grid-modern {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .advantage-card-modern {
   background: white;
-  border-radius: 1rem;
-  padding: 2rem;
-  border: 1px solid #e5e7eb;
+  padding: 2rem 2.5rem;
+  border-bottom: 1px solid #e5e7eb;
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
 }
 
-.advantage-card-modern::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 0;
-  background: linear-gradient(180deg, #F16664 0%, #d94f4d 100%);
-  transition: height 0.3s ease;
+.advantage-card-modern:first-child {
+  border-top: 1px solid #e5e7eb;
 }
 
 .advantage-card-modern:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  border-color: #F16664;
-}
-
-.advantage-card-modern:hover::before {
-  height: 100%;
+  background: #fef2f2;
+  padding-left: 3rem;
 }
 
 .advantage-number-modern {
-  display: inline-flex;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: white;
+  color: #F16664;
+  border: 2px solid #F16664;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.advantage-card-modern:hover .advantage-number-modern {
   background: #F16664;
   color: white;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  transform: scale(1.1);
 }
 
 .advantage-content-modern {
@@ -4101,7 +4094,7 @@ h1.category-title {
 }
 
 .advantage-title-modern {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #111827;
   margin: 0 0 0.75rem 0;
@@ -4109,7 +4102,7 @@ h1.category-title {
 }
 
 .advantage-text-modern {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   color: #6b7280;
   line-height: 1.7;
   margin: 0;
@@ -4117,20 +4110,26 @@ h1.category-title {
 
 @media (max-width: 767px) {
   .advantage-card-modern {
+    flex-direction: column;
     padding: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .advantage-card-modern:hover {
+    padding-left: 1.5rem;
   }
   
   .advantage-number-modern {
-    width: 32px;
-    height: 32px;
-    font-size: 0.875rem;
-  }
-  
-  .advantage-title-modern {
+    width: 40px;
+    height: 40px;
     font-size: 1rem;
   }
   
+  .advantage-title-modern {
+    font-size: 1.125rem;
+  }
+  
   .advantage-text-modern {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
   }
 }
