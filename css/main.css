@@ -3021,31 +3021,14 @@ h1.category-title {
   text-decoration: none;
   transition: all 0.2s ease;
   display: inline-block;
-  padding: 0.5rem 0;
+  padding: 0.25rem 0;
   position: relative;
   font-weight: 400;
-  border-bottom: 2px solid transparent;
-}
-
-.catalog-subcategory-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--red-main);
-  transition: width 0.3s ease;
 }
 
 .catalog-subcategory-link:hover {
   color: var(--red-main);
-  padding-left: 0.5rem;
-  border-bottom-color: var(--red-main);
-}
-
-.catalog-subcategory-link:hover::after {
-  width: 100%;
+  text-decoration: underline;
 }
 
 
