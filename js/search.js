@@ -276,6 +276,55 @@ class UniversalSearch {
     }
 
     const searchQuery = query.toLowerCase();
+    
+    // Проверяем, содержит ли запрос название категории и бренд
+    const avrKeywords = ['авр', 'avr'];
+    const controlKeywords = ['управлен', 'шкаф', 'control', 'soft', 'частот', 'преобразовател'];
+    const reactiveKeywords = ['реактивн', 'компенсац', 'конденсатор', 'reactive'];
+    
+    const supportedBrands = ['CHINT', 'Dekraft', 'EKF', 'Systeme electric', 'TDM', 'VEDA', 'IEK'];
+    
+    let detectedCategory = null;
+    let detectedBrand = null;
+    
+    // Определяем категорию
+    if (avrKeywords.some(kw => searchQuery.includes(kw))) {
+      detectedCategory = 'avr';
+    } else if (controlKeywords.some(kw => searchQuery.includes(kw))) {
+      detectedCategory = 'control-cabinets';
+    } else if (reactiveKeywords.some(kw => searchQuery.includes(kw))) {
+      detectedCategory = 'reactive-power';
+    }
+    
+    // Определяем бренд
+    for (const brand of supportedBrands) {
+      if (searchQuery.includes(brand.toLowerCase())) {
+        detectedBrand = brand;
+        break;
+      }
+    }
+    
+    // Если найдена категория и бренд, перенаправляем на страницу категории с выбранным брендом
+    if (detectedCategory && detectedBrand) {
+      const currentPath = window.location.pathname;
+      const isInCategory = currentPath.includes('/category/');
+      const categoryPath = isInCategory ? `${detectedCategory}.html` : `category/${detectedCategory}.html`;
+      
+      window.location.href = `${categoryPath}?brand=${encodeURIComponent(detectedBrand)}`;
+      return;
+    }
+    
+    // Если найдена только категория, перенаправляем на страницу категории
+    if (detectedCategory) {
+      const currentPath = window.location.pathname;
+      const isInCategory = currentPath.includes('/category/');
+      const categoryPath = isInCategory ? `${detectedCategory}.html` : `category/${detectedCategory}.html`;
+      
+      window.location.href = categoryPath;
+      return;
+    }
+    
+    // Если категория не определена, ищем товары в каталоге
     const results = this.searchProducts(searchQuery);
 
     if (results.length > 0) {
@@ -283,7 +332,6 @@ class UniversalSearch {
       const isInCategory = currentPath.includes('/category/');
       const catalogPath = isInCategory ? 'catalog.html' : 'category/catalog.html';
       
-      // Всегда перенаправляем на каталог с поисковым запросом, без фильтрации по брендам
       window.location.href = `${catalogPath}?search=${encodeURIComponent(query)}`;
     } else {
       alert(`По запросу "${query}" ничего не найдено. Попробуйте изменить запрос.`);

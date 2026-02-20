@@ -18,10 +18,15 @@ function controlCabinetsCatalog() {
       const urlParams = new URLSearchParams(window.location.search);
       
       // Читаем параметры из URL
+      const brand = urlParams.get('brand');
       const controlType = urlParams.get('controlType');
       const motorPower = urlParams.get('motorPower');
       
-      // Применяем фильтры (НЕ применяем бренд из URL)
+      // Применяем фильтры
+      if (brand) {
+        this.selectedBrand = brand;
+      }
+      
       if (controlType) {
         this.selectedControlType = controlType;
       }

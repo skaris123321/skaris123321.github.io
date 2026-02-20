@@ -31,12 +31,17 @@ document.addEventListener('alpine:init', () => {
         const urlParams = new URLSearchParams(window.location.search);
         
         // Читаем параметры из URL
+        const brand = urlParams.get('brand');
         const commutationType = urlParams.get('commutationType');
         const inputs = urlParams.get('inputs');
         const poles = urlParams.get('poles');
         const current = urlParams.get('current');
         
-        // Применяем фильтры (НЕ применяем бренд из URL)
+        // Применяем фильтры
+        if (brand) {
+          this.selectedBrand = brand;
+        }
+        
         if (commutationType) {
           this.selectedCommutationType = commutationType;
         }
