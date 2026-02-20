@@ -23,14 +23,6 @@ class UniversalSearch {
         this.handleInput(e.target.value.trim(), suggestionsDiv, input);
       });
 
-      // Показываем все товары при фокусе на поле
-      input.addEventListener('focus', (e) => {
-        if (!e.target.value || e.target.value.trim().length === 0) {
-          const allProducts = this.getAllProductsSuggestions();
-          this.showSuggestions(allProducts, suggestionsDiv, input);
-        }
-      });
-
       // Добавляем обработчик на Enter
       input.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
@@ -77,18 +69,13 @@ class UniversalSearch {
   }
 
   handleInput(query, suggestionsDiv, inputElement) {
-    // Если поле пустое или очень короткий запрос, показываем все товары
+    // Если поле пустое, скрываем подсказки
     if (!query || query.length === 0) {
-      const allProducts = this.getAllProductsSuggestions();
-      this.showSuggestions(allProducts, suggestionsDiv, inputElement);
-      return;
-    }
-
-    if (query.length < 2) {
       this.hideSuggestions(suggestionsDiv);
       return;
     }
 
+    // Показываем подсказки даже для 1 символа
     const suggestions = this.getSuggestions(query);
     this.showSuggestions(suggestions, suggestionsDiv, inputElement);
   }
@@ -152,7 +139,7 @@ class UniversalSearch {
 
     const searchLower = query.toLowerCase();
     const suggestions = [];
-    const maxSuggestions = 8;
+    const maxSuggestions = 50; // Увеличиваем количество показываемых вариантов
     const addedArticles = new Set();
     const addedDescriptions = new Set();
 
@@ -242,7 +229,7 @@ class UniversalSearch {
     // Сортируем по приоритету (меньше = выше)
     suggestions.sort((a, b) => (a.priority || 3) - (b.priority || 3));
 
-    return suggestions.slice(0, maxSuggestions);
+    return suggestions;
   }
 
   getCategorySuggestions(query) {

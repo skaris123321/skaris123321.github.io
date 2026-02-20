@@ -165,7 +165,7 @@ a.logo {
   border-radius: 0.75rem;
   box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
   border: 1px solid #e5e7eb;
-  max-height: 400px;
+  max-height: 500px;
   overflow-y: auto;
   z-index: 100;
 }
