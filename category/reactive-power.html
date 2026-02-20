@@ -113,6 +113,17 @@
           </template>
         </div>
         
+        <!-- Кнопки фильтрации по мощности -->
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+          <template x-for="power in uniquePowers" :key="power">
+            <button 
+              @click="filterByPower(power)"
+              :class="{ active: selectedPower === power }"
+              class="brand-filter-btn"
+              x-text="power + ' кВАр'"
+            ></button>
+          </template>
+        </div>
 
         <!-- Сортировка -->
         <div style="display: flex; gap: 0.5rem; margin-left: auto;">

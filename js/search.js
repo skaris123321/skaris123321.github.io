@@ -4,13 +4,10 @@ console.log('search.js загружен');
 class UniversalSearch {
   constructor() {
     this.productsData = null;
-    this.searchInput = null;
-    this.suggestionsContainer = null;
     this.init();
   }
 
   async init() {
-    // Находим все поисковые поля на странице
     const searchInputs = document.querySelectorAll('.search-input');
     
     if (searchInputs.length === 0) {
@@ -22,41 +19,26 @@ class UniversalSearch {
     console.log('Найдено поисковых полей:', searchInputs.length);
     
     searchInputs.forEach((input, index) => {
-      console.log(`Инициализация поля ${index + 1}`);
-      
-      // Создаем контейнер для подсказок
       const wrapper = input.parentElement;
-      
-      // Проверяем, не создан ли уже контейнер
       let suggestionsDiv = wrapper.querySelector('.search-suggestions');
       if (!suggestionsDiv) {
         suggestionsDiv = document.createElement('div');
         suggestionsDiv.className = 'search-suggestions';
         wrapper.appendChild(suggestionsDiv);
-        console.log(`Создан контейнер подсказок для поля ${index + 1}`);
       }
 
-      // Удаляем старые обработчики, если есть
-      const newInput = input.cloneNode(true);
-      input.parentNode.replaceChild(newInput, input);
-
-      // Добавляем обработчик на ввод текста
-      newInput.addEventListener('input', (e) => {
-        console.log('Input event:', e.target.value);
-        this.handleInput(e.target.value.trim(), suggestionsDiv, newInput);
+      input.addEventListener('input', (e) => {
+        this.handleInput(e.target.value.trim(), suggestionsDiv, input);
       });
 
-      // Добавляем обработчик на Enter
-      newInput.addEventListener('keypress', (e) => {
+      input.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
           e.preventDefault();
-          console.log('Enter pressed:', newInput.value);
-          this.performSearch(newInput.value.trim());
+          this.performSearch(input.value.trim());
           this.hideSuggestions(suggestionsDiv);
         }
       });
 
-      // Закрываем подсказки при клике вне поля
       document.addEventListener('click', (e) => {
         if (!wrapper.contains(e.target)) {
           this.hideSuggestions(suggestionsDiv);
@@ -64,22 +46,17 @@ class UniversalSearch {
       });
     });
 
-    // Загружаем данные о товарах
     await this.loadProducts();
-    console.log('Поиск инициализирован успешно');
   }
 
   async loadProducts() {
     try {
-      // Пробуем разные пути в зависимости от текущей страницы
-      let response;
       const currentPath = window.location.pathname;
+      let response;
       
       if (currentPath.includes('/category/')) {
-        // Мы в папке category
         response = await fetch('../data/products.json');
       } else {
-        // Мы в корне
         response = await fetch('data/products.json');
       }
       
@@ -94,69 +71,13 @@ class UniversalSearch {
   }
 
   handleInput(query, suggestionsDiv, inputElement) {
-    // Если поле пустое, скрываем подсказки
     if (!query || query.length === 0) {
       this.hideSuggestions(suggestionsDiv);
       return;
     }
 
-    // Показываем подсказки даже для 1 символа
     const suggestions = this.getSuggestions(query);
     this.showSuggestions(suggestions, suggestionsDiv, inputElement);
-  }
-
-  getAllProductsSuggestions() {
-    if (!this.productsData) return [];
-
-    const suggestions = [];
-    const maxSuggestions = 15; // Показываем больше товаров
-
-    // Группируем товары по категориям
-    const categories = {
-      'monoblock': { name: 'Моноблочные АВР', items: [] },
-      'contactors': { name: 'АВР на контакторах', items: [] },
-      'sectional': { name: 'Секционные АВР', items: [] },
-      'control_cabinet': { name: 'Шкафы управления', items: [] },
-      'reactive_power': { name: 'Реактивная мощность', items: [] }
-    };
-
-    // Распределяем товары по категориям
-    this.productsData.forEach(product => {
-      if (categories[product.commutation_type]) {
-        categories[product.commutation_type].items.push(product);
-      }
-    });
-
-    // Добавляем категории с товарами
-    Object.keys(categories).forEach(key => {
-      const category = categories[key];
-      if (category.items.length > 0) {
-        // Добавляем заголовок категории
-        suggestions.push({
-          type: 'category_header',
-          text: category.name,
-          label: 'Категория',
-          isHeader: true
-        });
-
-        // Добавляем несколько товаров из категории
-        category.items.slice(0, 3).forEach(product => {
-          const desc = product.description && product.description.length > 50 
-            ? product.description.substring(0, 50) + '...' 
-            : product.description || product.article;
-          
-          suggestions.push({
-            type: 'product',
-            text: desc,
-            label: product.article,
-            productId: product.id,
-            priority: 3
-          });
-        });
-      }
-    });
-
-    return suggestions.slice(0, maxSuggestions);
   }
 
   getSuggestions(query) {
@@ -168,34 +89,10 @@ class UniversalSearch {
     const addedArticles = new Set();
     const addedDescriptions = new Set();
 
-    // Умный поиск по комбинациям параметров
-    const smartResults = this.smartSearch(searchLower);
-    
-    // Добавляем результаты умного поиска
-    smartResults.forEach(product => {
-      if (suggestions.length >= maxSuggestions) return;
-      
-      if (!addedArticles.has(product.article)) {
-        const desc = product.description && product.description.length > 60 
-          ? product.description.substring(0, 60) + '...' 
-          : product.description;
-        
-        suggestions.push({
-          type: 'article',
-          text: product.article,
-          label: desc || 'Товар',
-          productId: product.id,
-          priority: 0 // Высший приоритет для умного поиска
-        });
-        addedArticles.add(product.article);
-      }
-    });
-
-    // Сначала ищем совпадения с начала строки (приоритет)
+    // Сначала ищем совпадения с начала строки
     this.productsData.forEach(product => {
       if (suggestions.length >= maxSuggestions) return;
 
-      // Артикулы - начинаются с запроса
       if (product.article && product.article.toLowerCase().startsWith(searchLower)) {
         if (!addedArticles.has(product.article)) {
           suggestions.push({
@@ -209,7 +106,6 @@ class UniversalSearch {
         }
       }
 
-      // Описания - начинаются с запроса
       if (product.description && product.description.toLowerCase().startsWith(searchLower)) {
         const desc = product.description.length > 60 
           ? product.description.substring(0, 60) + '...' 
@@ -232,7 +128,6 @@ class UniversalSearch {
     this.productsData.forEach(product => {
       if (suggestions.length >= maxSuggestions) return;
 
-      // Артикулы - содержат запрос
       if (product.article && 
           product.article.toLowerCase().includes(searchLower) && 
           !addedArticles.has(product.article)) {
@@ -246,7 +141,6 @@ class UniversalSearch {
         addedArticles.add(product.article);
       }
 
-      // Описания - содержат запрос
       if (product.description && 
           product.description.toLowerCase().includes(searchLower)) {
         const desc = product.description.length > 60 
@@ -274,228 +168,37 @@ class UniversalSearch {
       }
     });
 
-    // Сортируем по приоритету (меньше = выше)
     suggestions.sort((a, b) => (a.priority || 3) - (b.priority || 3));
-
     return suggestions;
-  }
-
-  // Умный поиск по комбинациям параметров
-  smartSearch(query) {
-    if (!this.productsData) return [];
-
-    const results = [];
-    
-    // Извлекаем параметры из запроса
-    const params = this.extractSearchParams(query);
-    
-    if (Object.keys(params).length === 0) return [];
-
-    // Фильтруем товары по извлеченным параметрам
-    this.productsData.forEach(product => {
-      let matches = true;
-
-      // Проверка бренда
-      if (params.brand && product.brand) {
-        if (product.brand.toLowerCase() !== params.brand.toLowerCase()) {
-          matches = false;
-        }
-      }
-
-      // Проверка типа (АВР, шкаф управления, реактивная мощность)
-      if (params.type) {
-        if (params.type === 'avr') {
-          if (!['monoblock', 'contactors', 'sectional'].includes(product.commutation_type)) {
-            matches = false;
-          }
-        } else if (params.type === 'control') {
-          if (product.commutation_type !== 'control_cabinet') {
-            matches = false;
-          }
-        } else if (params.type === 'reactive') {
-          if (product.commutation_type !== 'reactive_power') {
-            matches = false;
-          }
-        }
-      }
-
-      // Проверка количества вводов
-      if (params.inputs && product.inputs_count) {
-        if (product.inputs_count !== params.inputs) {
-          matches = false;
-        }
-      }
-
-      // Проверка номинального тока
-      if (params.current && product.nominal_current) {
-        if (parseInt(product.nominal_current) !== params.current) {
-          matches = false;
-        }
-      }
-
-      // Проверка мощности двигателя
-      if (params.motorPower && product.motor_power) {
-        if (parseFloat(product.motor_power) !== params.motorPower) {
-          matches = false;
-        }
-      }
-
-      // Проверка реактивной мощности
-      if (params.reactivePower && product.power) {
-        if (parseFloat(product.power) !== params.reactivePower) {
-          matches = false;
-        }
-      }
-
-      // Проверка типа управления
-      if (params.controlType && product.control_type) {
-        if (product.control_type !== params.controlType) {
-          matches = false;
-        }
-      }
-
-      // Проверка типа коммутации
-      if (params.commutationType && product.commutation_type) {
-        if (product.commutation_type !== params.commutationType) {
-          matches = false;
-        }
-      }
-
-      if (matches) {
-        results.push(product);
-      }
-    });
-
-    return results;
-  }
-
-  // Извлечение параметров из поискового запроса
-  extractSearchParams(query) {
-    const params = {};
-
-  // Извлечение параметров из поискового запроса
-  extractSearchParams(query) {
-    const params = {};
-
-    // Определяем бренд (сохраняем как в базе данных)
-    const brandsMap = {
-      'chint': 'CHINT',
-      'dekraft': 'Dekraft',
-      'ekf': 'EKF',
-      'systeme electric': 'Systeme electric',
-      'tdm': 'TDM',
-      'veda': 'VEDA'
-    };
-    
-    Object.keys(brandsMap).forEach(brandKey => {
-      if (query.includes(brandKey)) {
-        params.brand = brandsMap[brandKey];
-      }
-    });
-
-    // Определяем тип товара
-    if (query.includes('авр') || query.includes('avr')) {
-      params.type = 'avr';
-    }
-    if (query.includes('шкаф') && (query.includes('управлен') || query.includes('control'))) {
-      params.type = 'control';
-    }
-    if (query.includes('реактивн') || query.includes('компенсац') || query.includes('конденсатор')) {
-      params.type = 'reactive';
-    }
-
-    // Извлекаем количество вводов
-    const inputsMatch = query.match(/(\d+)\s*(ввод|input)/i);
-    if (inputsMatch) {
-      params.inputs = inputsMatch[1];
-    }
-
-    // Извлекаем номинальный ток
-    const currentMatch = query.match(/(\d+)\s*(а|ампер|amp)/i);
-    if (currentMatch) {
-      params.current = parseInt(currentMatch[1]);
-    }
-
-    // Извлекаем мощность двигателя
-    const motorPowerMatch = query.match(/(\d+\.?\d*)\s*(квт|кw|kw)/i);
-    if (motorPowerMatch) {
-      params.motorPower = parseFloat(motorPowerMatch[1]);
-    }
-
-    // Извлекаем реактивную мощность
-    const reactivePowerMatch = query.match(/(\d+)\s*(квар|kvar)/i);
-    if (reactivePowerMatch) {
-      params.reactivePower = parseFloat(reactivePowerMatch[1]);
-    }
-
-    // Определяем тип регулирования для реактивной мощности
-    if (params.type === 'reactive') {
-      if (query.includes('нерегулируем') || query.includes('unregulated')) {
-        params.regulationType = 'unregulated';
-      } else if (query.includes('регулируем') || query.includes('автоматич') || query.includes('regulated')) {
-        params.regulationType = 'regulated';
-      }
-    }
-
-    // Определяем тип управления
-    if (query.includes('плавн') || query.includes('soft')) {
-      params.controlType = 'soft_start';
-    }
-    if (query.includes('частот') || query.includes('frequency') || query.includes('преобразовател')) {
-      params.controlType = 'frequency_converter';
-    }
-    if (query.includes('прямой') && query.includes('пуск')) {
-      params.controlType = 'direct_start';
-    }
-
-    // Определяем тип коммутации
-    if (query.includes('моноблок')) {
-      params.commutationType = 'monoblock';
-    }
-    if (query.includes('контактор')) {
-      params.commutationType = 'contactors';
-    }
-    if (query.includes('секционн')) {
-      params.commutationType = 'sectional';
-    }
-
-    return params;
   }
 
   getCategorySuggestions(query) {
     const categories = [];
 
-    // АВР
     if ('авр'.includes(query) || 'avr'.includes(query) || query.includes('авр') || query.includes('avr')) {
       categories.push({ type: 'category', text: 'АВР (Автоматический ввод резерва)', label: 'Категория', url: 'avr.html' });
     }
 
-    // Моноблок
     if ('моноблок'.includes(query) || 'monoblock'.includes(query) || query.includes('моноблок')) {
       categories.push({ type: 'category', text: 'Моноблочные АВР', label: 'Категория', url: 'avr.html?commutationType=monoblock' });
     }
 
-    // Контакторы
     if ('контактор'.includes(query) || 'contactors'.includes(query) || query.includes('контактор')) {
       categories.push({ type: 'category', text: 'АВР на контакторах', label: 'Категория', url: 'avr.html?commutationType=contactors' });
     }
 
-    // Шкафы управления
     if ('управление'.includes(query) || 'control'.includes(query) || query.includes('управлен') || query.includes('шкаф')) {
       categories.push({ type: 'category', text: 'Шкафы управления', label: 'Категория', url: 'control-cabinets.html' });
     }
 
-    // Плавный пуск
     if ('плавный'.includes(query) || 'soft'.includes(query) || query.includes('плавн')) {
       categories.push({ type: 'category', text: 'Шкафы с плавным пуском', label: 'Категория', url: 'control-cabinets.html?controlType=soft_start' });
     }
 
-    // Преобразователь частоты
     if ('частот'.includes(query) || 'frequency'.includes(query) || query.includes('частот') || query.includes('преобразовател')) {
       categories.push({ type: 'category', text: 'Шкафы с преобразователем частоты', label: 'Категория', url: 'control-cabinets.html?controlType=frequency_converter' });
     }
 
-    // Реактивная мощность
     if ('реактивн'.includes(query) || 'reactive'.includes(query) || query.includes('реактивн') || query.includes('компенсац') || query.includes('конденсатор')) {
       categories.push({ type: 'category', text: 'Компенсация реактивной мощности', label: 'Категория', url: 'reactive-power.html' });
     }
@@ -515,7 +218,6 @@ class UniversalSearch {
     suggestions.forEach(suggestion => {
       const item = document.createElement('div');
       
-      // Если это заголовок категории
       if (suggestion.isHeader) {
         item.className = 'search-suggestion-header';
         item.textContent = suggestion.text;
@@ -538,26 +240,21 @@ class UniversalSearch {
 
       item.addEventListener('click', () => {
         if (suggestion.productId) {
-          // Переход на страницу товара
           const currentPath = window.location.pathname;
           const isInCategory = currentPath.includes('/category/');
           const productPath = isInCategory ? 'product.html' : 'category/product.html';
           window.location.href = `${productPath}?id=${suggestion.productId}`;
         } else if (suggestion.url) {
-          // Переход на страницу категории
           const currentPath = window.location.pathname;
           const isInCategory = currentPath.includes('/category/');
           
-          // Если URL уже содержит category/, используем как есть
           if (suggestion.url.includes('category/')) {
             window.location.href = suggestion.url;
           } else {
-            // Иначе добавляем category/ если нужно
             const categoryPath = isInCategory ? suggestion.url : 'category/' + suggestion.url;
             window.location.href = categoryPath;
           }
         } else {
-          // Поиск по тексту
           inputElement.value = suggestion.text;
           this.performSearch(suggestion.text);
         }
@@ -579,109 +276,35 @@ class UniversalSearch {
     }
 
     const searchQuery = query.toLowerCase();
-    
-    // Извлекаем параметры из запроса
-    const params = this.extractSearchParams(searchQuery);
-    
-    // Если есть тип категории, перенаправляем на страницу категории с фильтрами
-    if (params.type || params.brand) {
-      this.redirectToCategoryWithFilters(params);
-      return;
-    }
-    
-    // Иначе выполняем обычный поиск
     const results = this.searchProducts(searchQuery);
 
     if (results.length > 0) {
-      // Переходим на страницу каталога с результатами поиска
       const currentPath = window.location.pathname;
       const isInCategory = currentPath.includes('/category/');
       const catalogPath = isInCategory ? 'catalog.html' : 'category/catalog.html';
       
       window.location.href = `${catalogPath}?search=${encodeURIComponent(query)}`;
     } else {
-      // Показываем сообщение, что ничего не найдено
-      this.showNoResultsMessage(query);
+      alert(`По запросу "${query}" ничего не найдено. Попробуйте изменить запрос.`);
     }
-  }
-
-  // Перенаправление на страницу категории с фильтрами
-  redirectToCategoryWithFilters(params) {
-    const currentPath = window.location.pathname;
-    const isInCategory = currentPath.includes('/category/');
-    let targetUrl = '';
-    
-    // Определяем целевую страницу
-    if (params.type === 'avr') {
-      targetUrl = isInCategory ? 'avr.html' : 'category/avr.html';
-    } else if (params.type === 'control') {
-      targetUrl = isInCategory ? 'control-cabinets.html' : 'category/control-cabinets.html';
-    } else if (params.type === 'reactive') {
-      targetUrl = isInCategory ? 'reactive-power.html' : 'category/reactive-power.html';
-    } else if (params.brand) {
-      // Если указан только бренд без категории, идем в каталог с поиском по бренду
-      targetUrl = isInCategory ? 'catalog.html' : 'category/catalog.html';
-      targetUrl += `?search=${encodeURIComponent(params.brand)}`;
-      window.location.href = targetUrl;
-      return;
-    }
-    
-    // Добавляем параметры фильтров в URL
-    const urlParams = new URLSearchParams();
-    
-    if (params.brand) {
-      urlParams.set('brand', params.brand);
-    }
-    if (params.commutationType) {
-      urlParams.set('commutationType', params.commutationType);
-    }
-    if (params.inputs) {
-      urlParams.set('inputs', params.inputs);
-    }
-    if (params.current) {
-      urlParams.set('current', params.current);
-    }
-    if (params.motorPower) {
-      urlParams.set('motorPower', params.motorPower);
-    }
-    if (params.controlType) {
-      urlParams.set('controlType', params.controlType);
-    }
-    if (params.reactivePower) {
-      urlParams.set('power', params.reactivePower);
-    }
-    if (params.regulationType) {
-      urlParams.set('regulationType', params.regulationType);
-    }
-    
-    const queryString = urlParams.toString();
-    if (queryString) {
-      targetUrl += '?' + queryString;
-    }
-    
-    window.location.href = targetUrl;
   }
 
   searchProducts(query) {
     if (!this.productsData) return [];
 
     return this.productsData.filter(product => {
-      // Поиск по артикулу
       if (product.article && product.article.toLowerCase().includes(query)) {
         return true;
       }
 
-      // Поиск по описанию
       if (product.description && product.description.toLowerCase().includes(query)) {
         return true;
       }
 
-      // Поиск по бренду
       if (product.brand && product.brand.toLowerCase().includes(query)) {
         return true;
       }
 
-      // Поиск по типу коммутации
       const commutationTypes = {
         'monoblock': ['моноблок', 'моноблочный', 'monoblock'],
         'contactors': ['контактор', 'контакторы', 'contactors'],
@@ -697,21 +320,18 @@ class UniversalSearch {
         }
       }
 
-      // Поиск по количеству вводов
       if (product.inputs_count && query.includes(product.inputs_count)) {
         if (query.includes('ввод') || query.includes('input')) {
           return true;
         }
       }
 
-      // Поиск по номинальному току
       if (product.nominal_current && query.includes(product.nominal_current)) {
         if (query.includes('а') || query.includes('ампер') || query.includes('amp')) {
           return true;
         }
       }
 
-      // Поиск по типу управления
       const controlTypes = {
         'soft_start': ['плавный пуск', 'soft start'],
         'frequency_converter': ['преобразователь частоты', 'частотник', 'frequency'],
@@ -725,14 +345,12 @@ class UniversalSearch {
         }
       }
 
-      // Поиск по мощности двигателя
       if (product.motor_power && query.includes(product.motor_power)) {
         if (query.includes('квт') || query.includes('кw') || query.includes('мощность')) {
           return true;
         }
       }
 
-      // Поиск АВР
       if (query.includes('авр') || query.includes('avr')) {
         if (product.commutation_type === 'monoblock' || 
             product.commutation_type === 'contactors' || 
@@ -744,15 +362,10 @@ class UniversalSearch {
       return false;
     });
   }
-
-  showNoResultsMessage(query) {
-    alert(`По запросу "${query}" ничего не найдено. Попробуйте изменить запрос.`);
-  }
 }
 
-// Инициализируем поиск после полной загрузки страницы и Alpine.js
+// Инициализируем поиск после полной загрузки страницы
 window.addEventListener('load', () => {
-  // Ждем, чтобы Alpine.js точно успел отрендерить элементы
   setTimeout(() => {
     console.log('Инициализация поиска...');
     new UniversalSearch();
