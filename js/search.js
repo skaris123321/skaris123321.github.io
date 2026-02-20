@@ -373,11 +373,23 @@ class UniversalSearch {
   extractSearchParams(query) {
     const params = {};
 
-    // Определяем бренд (приводим к нижнему регистру для сравнения)
-    const brands = ['chint', 'dekraft', 'ekf', 'systeme electric', 'tdm', 'veda'];
-    brands.forEach(brand => {
-      if (query.includes(brand)) {
-        params.brand = brand.toUpperCase(); // Сохраняем в верхнем регистре для URL
+  // Извлечение параметров из поискового запроса
+  extractSearchParams(query) {
+    const params = {};
+
+    // Определяем бренд (сохраняем как в базе данных)
+    const brandsMap = {
+      'chint': 'CHINT',
+      'dekraft': 'Dekraft',
+      'ekf': 'EKF',
+      'systeme electric': 'Systeme electric',
+      'tdm': 'TDM',
+      'veda': 'VEDA'
+    };
+    
+    Object.keys(brandsMap).forEach(brandKey => {
+      if (query.includes(brandKey)) {
+        params.brand = brandsMap[brandKey];
       }
     });
 

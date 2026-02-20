@@ -17,12 +17,22 @@ function controlCabinetsCatalog() {
     applyUrlFilters() {
       const urlParams = new URLSearchParams(window.location.search);
       
-      // Читаем параметр controlType из URL
+      // Читаем параметры из URL
+      const brand = urlParams.get('brand');
       const controlType = urlParams.get('controlType');
+      const motorPower = urlParams.get('motorPower');
       
-      // Применяем фильтр
+      // Применяем фильтры
+      if (brand) {
+        this.selectedBrand = brand;
+      }
+      
       if (controlType) {
         this.selectedControlType = controlType;
+      }
+      
+      if (motorPower) {
+        this.selectedMotorPower = motorPower;
       }
     },
 
