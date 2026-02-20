@@ -164,9 +164,32 @@ class UniversalSearch {
 
     const searchLower = query.toLowerCase();
     const suggestions = [];
-    const maxSuggestions = 50; // Увеличиваем количество показываемых вариантов
+    const maxSuggestions = 50;
     const addedArticles = new Set();
     const addedDescriptions = new Set();
+
+    // Умный поиск по комбинациям параметров
+    const smartResults = this.smartSearch(searchLower);
+    
+    // Добавляем результаты умного поиска
+    smartResults.forEach(product => {
+      if (suggestions.length >= maxSuggestions) return;
+      
+      if (!addedArticles.has(product.article)) {
+        const desc = product.description && product.description.length > 60 
+          ? product.description.substring(0, 60) + '...' 
+          : product.description;
+        
+        suggestions.push({
+          type: 'article',
+          text: product.article,
+          label: desc || 'Товар',
+          productId: product.id,
+          priority: 0 // Высший приоритет для умного поиска
+        });
+        addedArticles.add(product.article);
+      }
+    });
 
     // Сначала ищем совпадения с начала строки (приоритет)
     this.productsData.forEach(product => {
@@ -255,6 +278,152 @@ class UniversalSearch {
     suggestions.sort((a, b) => (a.priority || 3) - (b.priority || 3));
 
     return suggestions;
+  }
+
+  // Умный поиск по комбинациям параметров
+  smartSearch(query) {
+    if (!this.productsData) return [];
+
+    const results = [];
+    
+    // Извлекаем параметры из запроса
+    const params = this.extractSearchParams(query);
+    
+    if (Object.keys(params).length === 0) return [];
+
+    // Фильтруем товары по извлеченным параметрам
+    this.productsData.forEach(product => {
+      let matches = true;
+
+      // Проверка типа (АВР, шкаф управления, реактивная мощность)
+      if (params.type) {
+        if (params.type === 'avr') {
+          if (!['monoblock', 'contactors', 'sectional'].includes(product.commutation_type)) {
+            matches = false;
+          }
+        } else if (params.type === 'control') {
+          if (product.commutation_type !== 'control_cabinet') {
+            matches = false;
+          }
+        } else if (params.type === 'reactive') {
+          if (product.commutation_type !== 'reactive_power') {
+            matches = false;
+          }
+        }
+      }
+
+      // Проверка количества вводов
+      if (params.inputs && product.inputs_count) {
+        if (product.inputs_count !== params.inputs) {
+          matches = false;
+        }
+      }
+
+      // Проверка номинального тока
+      if (params.current && product.nominal_current) {
+        if (parseInt(product.nominal_current) !== params.current) {
+          matches = false;
+        }
+      }
+
+      // Проверка мощности двигателя
+      if (params.motorPower && product.motor_power) {
+        if (parseFloat(product.motor_power) !== params.motorPower) {
+          matches = false;
+        }
+      }
+
+      // Проверка реактивной мощности
+      if (params.reactivePower && product.power) {
+        if (parseFloat(product.power) !== params.reactivePower) {
+          matches = false;
+        }
+      }
+
+      // Проверка типа управления
+      if (params.controlType && product.control_type) {
+        if (product.control_type !== params.controlType) {
+          matches = false;
+        }
+      }
+
+      // Проверка типа коммутации
+      if (params.commutationType && product.commutation_type) {
+        if (product.commutation_type !== params.commutationType) {
+          matches = false;
+        }
+      }
+
+      if (matches) {
+        results.push(product);
+      }
+    });
+
+    return results;
+  }
+
+  // Извлечение параметров из поискового запроса
+  extractSearchParams(query) {
+    const params = {};
+
+    // Определяем тип товара
+    if (query.includes('авр') || query.includes('avr')) {
+      params.type = 'avr';
+    }
+    if (query.includes('шкаф') && (query.includes('управлен') || query.includes('control'))) {
+      params.type = 'control';
+    }
+    if (query.includes('реактивн') || query.includes('компенсац') || query.includes('конденсатор')) {
+      params.type = 'reactive';
+    }
+
+    // Извлекаем количество вводов
+    const inputsMatch = query.match(/(\d+)\s*(ввод|input)/i);
+    if (inputsMatch) {
+      params.inputs = inputsMatch[1];
+    }
+
+    // Извлекаем номинальный ток
+    const currentMatch = query.match(/(\d+)\s*(а|ампер|amp)/i);
+    if (currentMatch) {
+      params.current = parseInt(currentMatch[1]);
+    }
+
+    // Извлекаем мощность двигателя
+    const motorPowerMatch = query.match(/(\d+\.?\d*)\s*(квт|кw|kw)/i);
+    if (motorPowerMatch) {
+      params.motorPower = parseFloat(motorPowerMatch[1]);
+    }
+
+    // Извлекаем реактивную мощность
+    const reactivePowerMatch = query.match(/(\d+)\s*(квар|kvar)/i);
+    if (reactivePowerMatch) {
+      params.reactivePower = parseFloat(reactivePowerMatch[1]);
+    }
+
+    // Определяем тип управления
+    if (query.includes('плавн') || query.includes('soft')) {
+      params.controlType = 'soft_start';
+    }
+    if (query.includes('частот') || query.includes('frequency') || query.includes('преобразовател')) {
+      params.controlType = 'frequency_converter';
+    }
+    if (query.includes('прямой') && query.includes('пуск')) {
+      params.controlType = 'direct_start';
+    }
+
+    // Определяем тип коммутации
+    if (query.includes('моноблок')) {
+      params.commutationType = 'monoblock';
+    }
+    if (query.includes('контактор')) {
+      params.commutationType = 'contactors';
+    }
+    if (query.includes('секционн')) {
+      params.commutationType = 'sectional';
+    }
+
+    return params;
   }
 
   getCategorySuggestions(query) {
