@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест путей</title>
+    <link rel="stylesheet" href="../css/main.css?v=19">
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background: white;
+        }
+        .test-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Тест путей для catalog.html</h1>
+    
+    <div class="test-section">
+        <h2>1. Тест логотипа</h2>
+        <div class="test-item">
+            <p>Путь: ../images/logo-main-1.svg</p>
+            <img src="../images/logo-main-1.svg?v=2" alt="Логотип" style="height: 32px;">
+            <p class="success">✓ Если видите логотип выше, путь правильный</p>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>2. Тест иконки ВК</h2>
+        <div class="test-item">
+            <p>Путь: ../images/vk_icon.png</p>
+            <img src="../images/vk_icon.png?v=2" alt="ВК" style="height: 28px;">
+            <p class="success">✓ Если видите иконку ВК выше, путь правильный</p>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>3. Тест CSS</h2>
+        <div class="test-item">
+            <p>Путь: ../css/main.css?v=19</p>
+            <div class="logo" style="height: 32px; display: flex; align-items: center;">
+                <img src="../images/logo-main-1.svg?v=2" alt="Логотип" class="logo-image">
+            </div>
+            <p class="success">✓ Если логотип выше имеет правильный размер (32px), CSS загружен</p>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>4. Тест футера</h2>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <div class="footer-logo-main">
+                            <a href="../index.html">
+                                <img src="../images/logo-main-1.svg" alt="РОСЭК" class="footer-logo-image">
+                            </a>
+                        </div>
+                        <div class="footer-contacts">
+                            <a href="mailto:zakaz@rosek.ru" class="footer-email">zakaz@rosek.ru</a>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-phone-social">
+                            <a href="tel:+78005511052" class="footer-phone">8 (800) 55-11-052</a>
+                            <a href="https://vk.com/rosek" target="_blank" class="footer-vk-link" aria-label="ВКонтакте">
+                                <img src="../images/vk_icon.png?v=2" alt="ВКонтакте" class="footer-vk-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <p class="success">✓ Если видите футер выше со всеми элементами, все работает</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Инструкции:</h2>
+        <ol>
+            <li>Откройте этот файл: <code>category/test-paths.html</code></li>
+            <li>Проверьте, отображаются ли все элементы</li>
+            <li>Откройте консоль браузера (F12) и проверьте ошибки</li>
+            <li>Если все работает здесь, но не работает в catalog.html - проблема в JavaScript</li>
+        </ol>
+    </div>
+</body>
+</html>
