@@ -73,63 +73,65 @@
     </div>
   </section>
 
-  <main class="container" x-data="catalogData()" x-init="init()">
-    <div x-show="loading" class="text-center py-12">
-      <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-red-main"></div>
-      <p class="mt-4 text-gray-600">Загрузка каталога...</p>
-    </div>
-
-    <!-- Результаты поиска -->
-    <div x-show="!loading && isSearchMode">
-      <h2 class="text-2xl font-semibold mb-6" x-show="searchResults.length > 0">
-        Результаты поиска: <span x-text="searchQuery"></span> (<span x-text="searchResults.length"></span>)
-      </h2>
-      <div x-show="searchResults.length === 0" class="text-center py-12">
-        <p class="text-gray-600 text-lg">По запросу "<span x-text="searchQuery"></span>" ничего не найдено</p>
-        <a href="catalog.html" class="btn-add-to-cart inline-block mt-4" style="width: auto; padding: 0.75rem 2rem;">Вернуться к каталогу</a>
+  <main x-data="catalogData()" x-init="init()">
+    <div class="container">
+      <div x-show="loading" class="text-center py-12">
+        <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-red-main"></div>
+        <p class="mt-4 text-gray-600">Загрузка каталога...</p>
       </div>
-      
-      <div class="products-grid" x-show="searchResults.length > 0">
-        <template x-for="product in searchResults" :key="product.id">
-          <a :href="getProductUrl(product)" class="product-card" style="text-decoration: none; color: inherit;">
-            <div class="product-image-wrapper">
-              <img x-show="product.main_image && product.main_image !== ''" :src="'../' + product.main_image" :alt="product.description" class="product-image">
-              <div x-show="!product.main_image || product.main_image === ''" class="no-image-placeholder">
-                <p>Нет изображения</p>
+
+      <!-- Результаты поиска -->
+      <div x-show="!loading && isSearchMode">
+        <h2 class="text-2xl font-semibold mb-6" x-show="searchResults.length > 0">
+          Результаты поиска: <span x-text="searchQuery"></span> (<span x-text="searchResults.length"></span>)
+        </h2>
+        <div x-show="searchResults.length === 0" class="text-center py-12">
+          <p class="text-gray-600 text-lg">По запросу "<span x-text="searchQuery"></span>" ничего не найдено</p>
+          <a href="catalog.html" class="btn-add-to-cart inline-block mt-4" style="width: auto; padding: 0.75rem 2rem;">Вернуться к каталогу</a>
+        </div>
+        
+        <div class="products-grid" x-show="searchResults.length > 0">
+          <template x-for="product in searchResults" :key="product.id">
+            <a :href="getProductUrl(product)" class="product-card" style="text-decoration: none; color: inherit;">
+              <div class="product-image-wrapper">
+                <img x-show="product.main_image && product.main_image !== ''" :src="'../' + product.main_image" :alt="product.description" class="product-image">
+                <div x-show="!product.main_image || product.main_image === ''" class="no-image-placeholder">
+                  <p>Нет изображения</p>
+                </div>
+              </div>
+              <div class="product-info">
+                <h2 class="product-title" x-text="product.article"></h2>
+                <p class="product-description" x-text="product.description"></p>
+                <p class="product-price" x-text="formatPrice(product.base_price)"></p>
+                <p class="product-delivery">Под заказ от 12 дней</p>
+              </div>
+            </a>
+          </template>
+        </div>
+      </div>
+
+      <!-- Обычный каталог категорий -->
+      <div x-show="!loading && !isSearchMode" class="catalog-grid">
+        <template x-for="category in categories" :key="category.type">
+          <div class="catalog-category-card">
+            <div class="catalog-category-link-wrapper">
+              <div class="catalog-category-image-wrapper">
+                <img :src="category.image" :alt="category.name" class="catalog-category-image">
+              </div>
+              <div class="catalog-category-content">
+                <h2 class="catalog-category-title" x-text="category.name"></h2>
+                <ul class="catalog-category-list">
+                  <template x-for="subcategory in category.subcategories" :key="subcategory.name">
+                    <li class="catalog-category-item">
+                      <a :href="subcategory.url" class="catalog-subcategory-link" x-text="subcategory.name"></a>
+                    </li>
+                  </template>
+                </ul>
               </div>
             </div>
-            <div class="product-info">
-              <h2 class="product-title" x-text="product.article"></h2>
-              <p class="product-description" x-text="product.description"></p>
-              <p class="product-price" x-text="formatPrice(product.base_price)"></p>
-              <p class="product-delivery">Под заказ от 12 дней</p>
-            </div>
-          </a>
+          </div>
         </template>
       </div>
-    </div>
-
-    <!-- Обычный каталог категорий -->
-    <div x-show="!loading && !isSearchMode" class="catalog-grid">
-      <template x-for="category in categories" :key="category.type">
-        <div class="catalog-category-card">
-          <div class="catalog-category-link-wrapper">
-            <div class="catalog-category-image-wrapper">
-              <img :src="category.image" :alt="category.name" class="catalog-category-image">
-            </div>
-            <div class="catalog-category-content">
-              <h2 class="catalog-category-title" x-text="category.name"></h2>
-              <ul class="catalog-category-list">
-                <template x-for="subcategory in category.subcategories" :key="subcategory.name">
-                  <li class="catalog-category-item">
-                    <a :href="subcategory.url" class="catalog-subcategory-link" x-text="subcategory.name"></a>
-                  </li>
-                </template>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </template>
     </div>
   </main>
 

@@ -18,7 +18,7 @@ class UniversalSearch {
 
     console.log('Найдено поисковых полей:', searchInputs.length);
     
-    searchInputs.forEach((input, index) => {
+    searchInputs.forEach((input) => {
       const wrapper = input.parentElement;
       let suggestionsDiv = wrapper.querySelector('.search-suggestions');
       if (!suggestionsDiv) {
@@ -283,6 +283,7 @@ class UniversalSearch {
       const isInCategory = currentPath.includes('/category/');
       const catalogPath = isInCategory ? 'catalog.html' : 'category/catalog.html';
       
+      // Всегда перенаправляем на каталог с поисковым запросом, без фильтрации по брендам
       window.location.href = `${catalogPath}?search=${encodeURIComponent(query)}`;
     } else {
       alert(`По запросу "${query}" ничего не найдено. Попробуйте изменить запрос.`);

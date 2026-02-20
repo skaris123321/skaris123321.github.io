@@ -14,13 +14,9 @@ function reactivePowerCatalog() {
       await this.loadProducts();
       // Читаем параметры из URL
       const urlParams = new URLSearchParams(window.location.search);
-      const brand = urlParams.get('brand');
       const regulationType = urlParams.get('regulationType');
       const power = urlParams.get('power');
       
-      if (brand) {
-        this.selectedBrand = brand;
-      }
       if (regulationType) {
         this.selectedType = regulationType;
       }
