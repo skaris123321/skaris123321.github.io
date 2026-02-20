@@ -5,10 +5,8 @@ function reactivePowerCatalog() {
     loading: true,
     selectedType: null, // 'unregulated' или 'regulated'
     selectedBrand: null,
-    selectedPower: null,
     sortBy: 'price_asc',
     uniqueBrands: [],
-    uniquePowers: [],
 
     async init() {
       await this.loadProducts();
@@ -47,10 +45,6 @@ function reactivePowerCatalog() {
         this.uniqueBrands = [...new Set(this.products.map(p => p.brand))].sort();
         console.log('Уникальные бренды:', this.uniqueBrands);
         
-        // Получаем уникальные мощности
-        this.uniquePowers = [...new Set(this.products.map(p => parseFloat(p.power)).filter(Boolean))].sort((a, b) => a - b);
-        console.log('Уникальные мощности:', this.uniquePowers);
-        
         this.loading = false;
       } catch (error) {
         console.error('Error loading products:', error);
@@ -62,7 +56,6 @@ function reactivePowerCatalog() {
       console.log('Фильтруем по типу:', type);
       this.selectedType = type;
       this.selectedBrand = null;
-      this.selectedPower = null;
       this.applyFilters();
     },
 
@@ -75,21 +68,11 @@ function reactivePowerCatalog() {
       this.applyFilters();
     },
 
-    filterByPower(power) {
-      if (this.selectedPower === power) {
-        this.selectedPower = null;
-      } else {
-        this.selectedPower = power;
-      }
-      this.applyFilters();
-    },
-
     applyFilters() {
       let filtered = [...this.products];
       console.log('Применяем фильтры. Всего товаров:', filtered.length);
       console.log('Выбранный тип:', this.selectedType);
       console.log('Выбранный бренд:', this.selectedBrand);
-      console.log('Выбранная мощность:', this.selectedPower);
 
       // Фильтр по типу установки
       if (this.selectedType) {
@@ -103,12 +86,6 @@ function reactivePowerCatalog() {
       if (this.selectedBrand) {
         filtered = filtered.filter(product => product.brand === this.selectedBrand);
         console.log('После фильтра по бренду:', filtered.length);
-      }
-
-      // Фильтр по мощности
-      if (this.selectedPower) {
-        filtered = filtered.filter(product => parseFloat(product.power) === parseFloat(this.selectedPower));
-        console.log('После фильтра по мощности:', filtered.length);
       }
 
       // Сортировка
@@ -128,20 +105,7 @@ function reactivePowerCatalog() {
     },
 
     getProductUrl(product) {
-      // Передаем все параметры товара для автоматического выбора на странице product.html
-      const params = new URLSearchParams({
-        brand: product.brand,
-        commutation_type: product.commutation_type,
-        regulation_type: product.regulation_type,
-        power: product.power
-      });
-      
-      // Добавляем step если есть
-      if (product.step) {
-        params.append('step', product.step);
-      }
-      
-      return `product.html?${params.toString()}`;
+      return `product.html?id=${product.id}`;
     }
   };
 }

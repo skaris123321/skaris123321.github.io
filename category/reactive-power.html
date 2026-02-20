@@ -101,6 +101,9 @@
   <section class="sort-section">
     <div class="container sort-controls">
       <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <!-- Название для брендов -->
+        <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem;">Бренды:</span>
+        
         <!-- Кнопки фильтрации по брендам -->
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
           <template x-for="brand in uniqueBrands" :key="brand">
@@ -109,18 +112,6 @@
               :class="{ active: selectedBrand === brand }"
               class="brand-filter-btn"
               x-text="brand"
-            ></button>
-          </template>
-        </div>
-        
-        <!-- Кнопки фильтрации по мощности -->
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
-          <template x-for="power in uniquePowers" :key="power">
-            <button 
-              @click="filterByPower(power)"
-              :class="{ active: selectedPower === power }"
-              class="brand-filter-btn"
-              x-text="power + ' кВАр'"
             ></button>
           </template>
         </div>
