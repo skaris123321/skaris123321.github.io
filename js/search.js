@@ -1,4 +1,6 @@
 // Универсальный поиск по сайту
+console.log('search.js загружен');
+
 class UniversalSearch {
   constructor() {
     this.productsData = null;
