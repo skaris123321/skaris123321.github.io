@@ -2,9 +2,90 @@ function catalogData() {
   return {
     categories: [],
     loading: true,
+    searchQuery: '',
+    searchResults: [],
+    isSearchMode: false,
 
     async init() {
-      await this.loadCategories();
+      // Проверяем, есть ли параметр поиска в URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const searchParam = urlParams.get('search');
+      
+      if (searchParam) {
+        this.searchQuery = searchParam;
+        this.isSearchMode = true;
+        await this.performSearch(searchParam);
+      } else {
+        await this.loadCategories();
+      }
+    },
+
+    async performSearch(query) {
+      try {
+        const api = new ProductsAPI();
+        const data = await api.loadProducts();
+        
+        const searchLower = query.toLowerCase();
+        
+        // Фильтруем товары по поисковому запросу
+        this.searchResults = data.products.filter(product => {
+          // Поиск по артикулу
+          if (product.article && product.article.toLowerCase().includes(searchLower)) {
+            return true;
+          }
+
+          // Поиск по описанию
+          if (product.description && product.description.toLowerCase().includes(searchLower)) {
+            return true;
+          }
+
+          // Поиск по бренду
+          if (product.brand && product.brand.toLowerCase().includes(searchLower)) {
+            return true;
+          }
+
+          // Поиск по типу коммутации
+          const commutationTypes = {
+            'monoblock': ['моноблок', 'моноблочный', 'monoblock'],
+            'contactors': ['контактор', 'контакторы', 'contactors'],
+            'sectional': ['секционный', 'sectional'],
+            'control_cabinet': ['шкаф управления', 'управление', 'control'],
+            'reactive_power': ['реактивная мощность', 'компенсация', 'reactive', 'конденсатор']
+          };
+
+          if (product.commutation_type) {
+            const typeKeywords = commutationTypes[product.commutation_type] || [];
+            if (typeKeywords.some(keyword => keyword.includes(searchLower) || searchLower.includes(keyword))) {
+              return true;
+            }
+          }
+
+          // Поиск АВР
+          if (searchLower.includes('авр') || searchLower.includes('avr')) {
+            if (product.commutation_type === 'monoblock' || 
+                product.commutation_type === 'contactors' || 
+                product.commutation_type === 'sectional') {
+              return true;
+            }
+          }
+
+          return false;
+        });
+
+        this.loading = false;
+        console.log(`Найдено товаров: ${this.searchResults.length}`);
+      } catch (error) {
+        console.error('Ошибка поиска:', error);
+        this.loading = false;
+      }
+    },
+
+    getProductUrl(product) {
+      return `product.html?id=${product.id}`;
+    },
+
+    formatPrice(price) {
+      return new Intl.NumberFormat('ru-RU').format(price) + ' ₽';
     },
 
     async loadCategories() {
