@@ -23,6 +23,14 @@ class UniversalSearch {
         this.handleInput(e.target.value.trim(), suggestionsDiv, input);
       });
 
+      // Показываем все товары при фокусе на поле
+      input.addEventListener('focus', (e) => {
+        if (!e.target.value || e.target.value.trim().length === 0) {
+          const allProducts = this.getAllProductsSuggestions();
+          this.showSuggestions(allProducts, suggestionsDiv, input);
+        }
+      });
+
       // Добавляем обработчик на Enter
       input.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
@@ -46,13 +54,22 @@ class UniversalSearch {
 
   async loadProducts() {
     try {
-      const response = await fetch('data/products.json').catch(() => 
-        fetch('../data/products.json')
-      );
+      // Пробуем разные пути в зависимости от текущей страницы
+      let response;
+      const currentPath = window.location.pathname;
+      
+      if (currentPath.includes('/category/')) {
+        // Мы в папке category
+        response = await fetch('../data/products.json');
+      } else {
+        // Мы в корне
+        response = await fetch('data/products.json');
+      }
       
       if (response.ok) {
         const data = await response.json();
         this.productsData = data.products || [];
+        console.log('Загружено товаров для поиска:', this.productsData.length);
       }
     } catch (error) {
       console.error('Ошибка загрузки данных для поиска:', error);
@@ -60,7 +77,14 @@ class UniversalSearch {
   }
 
   handleInput(query, suggestionsDiv, inputElement) {
-    if (!query || query.length < 2) {
+    // Если поле пустое или очень короткий запрос, показываем все товары
+    if (!query || query.length === 0) {
+      const allProducts = this.getAllProductsSuggestions();
+      this.showSuggestions(allProducts, suggestionsDiv, inputElement);
+      return;
+    }
+
+    if (query.length < 2) {
       this.hideSuggestions(suggestionsDiv);
       return;
     }
@@ -69,59 +93,156 @@ class UniversalSearch {
     this.showSuggestions(suggestions, suggestionsDiv, inputElement);
   }
 
+  getAllProductsSuggestions() {
+    if (!this.productsData) return [];
+
+    const suggestions = [];
+    const maxSuggestions = 15; // Показываем больше товаров
+
+    // Группируем товары по категориям
+    const categories = {
+      'monoblock': { name: 'Моноблочные АВР', items: [] },
+      'contactors': { name: 'АВР на контакторах', items: [] },
+      'sectional': { name: 'Секционные АВР', items: [] },
+      'control_cabinet': { name: 'Шкафы управления', items: [] },
+      'reactive_power': { name: 'Реактивная мощность', items: [] }
+    };
+
+    // Распределяем товары по категориям
+    this.productsData.forEach(product => {
+      if (categories[product.commutation_type]) {
+        categories[product.commutation_type].items.push(product);
+      }
+    });
+
+    // Добавляем категории с товарами
+    Object.keys(categories).forEach(key => {
+      const category = categories[key];
+      if (category.items.length > 0) {
+        // Добавляем заголовок категории
+        suggestions.push({
+          type: 'category_header',
+          text: category.name,
+          label: 'Категория',
+          isHeader: true
+        });
+
+        // Добавляем несколько товаров из категории
+        category.items.slice(0, 3).forEach(product => {
+          const desc = product.description && product.description.length > 50 
+            ? product.description.substring(0, 50) + '...' 
+            : product.description || product.article;
+          
+          suggestions.push({
+            type: 'product',
+            text: desc,
+            label: product.article,
+            productId: product.id,
+            priority: 3
+          });
+        });
+      }
+    });
+
+    return suggestions.slice(0, maxSuggestions);
+  }
+
   getSuggestions(query) {
     if (!this.productsData) return [];
 
     const searchLower = query.toLowerCase();
-    const suggestions = new Set();
+    const suggestions = [];
     const maxSuggestions = 8;
+    const addedArticles = new Set();
+    const addedDescriptions = new Set();
 
-    // Собираем уникальные варианты
+    // Сначала ищем совпадения с начала строки (приоритет)
     this.productsData.forEach(product => {
-      if (suggestions.size >= maxSuggestions) return;
+      if (suggestions.length >= maxSuggestions) return;
 
-      // Артикулы
-      if (product.article && product.article.toLowerCase().includes(searchLower)) {
-        suggestions.add({
-          type: 'article',
-          text: product.article,
-          label: 'Артикул',
-          productId: product.id
-        });
+      // Артикулы - начинаются с запроса
+      if (product.article && product.article.toLowerCase().startsWith(searchLower)) {
+        if (!addedArticles.has(product.article)) {
+          suggestions.push({
+            type: 'article',
+            text: product.article,
+            label: 'Артикул',
+            productId: product.id,
+            priority: 1
+          });
+          addedArticles.add(product.article);
+        }
       }
 
-      // Бренды
-      if (product.brand && product.brand.toLowerCase().includes(searchLower)) {
-        suggestions.add({
-          type: 'brand',
-          text: product.brand,
-          label: 'Бренд'
-        });
-      }
-
-      // Описания (первые 60 символов)
-      if (product.description && product.description.toLowerCase().includes(searchLower)) {
+      // Описания - начинаются с запроса
+      if (product.description && product.description.toLowerCase().startsWith(searchLower)) {
         const desc = product.description.length > 60 
           ? product.description.substring(0, 60) + '...' 
           : product.description;
-        suggestions.add({
-          type: 'description',
-          text: desc,
-          label: 'Товар',
-          productId: product.id
+        const key = product.id + '_' + desc;
+        if (!addedDescriptions.has(key)) {
+          suggestions.push({
+            type: 'description',
+            text: desc,
+            label: 'Товар',
+            productId: product.id,
+            priority: 1
+          });
+          addedDescriptions.add(key);
+        }
+      }
+    });
+
+    // Затем ищем совпадения в любом месте строки
+    this.productsData.forEach(product => {
+      if (suggestions.length >= maxSuggestions) return;
+
+      // Артикулы - содержат запрос
+      if (product.article && 
+          product.article.toLowerCase().includes(searchLower) && 
+          !addedArticles.has(product.article)) {
+        suggestions.push({
+          type: 'article',
+          text: product.article,
+          label: 'Артикул',
+          productId: product.id,
+          priority: 2
         });
+        addedArticles.add(product.article);
+      }
+
+      // Описания - содержат запрос
+      if (product.description && 
+          product.description.toLowerCase().includes(searchLower)) {
+        const desc = product.description.length > 60 
+          ? product.description.substring(0, 60) + '...' 
+          : product.description;
+        const key = product.id + '_' + desc;
+        if (!addedDescriptions.has(key)) {
+          suggestions.push({
+            type: 'description',
+            text: desc,
+            label: 'Товар',
+            productId: product.id,
+            priority: 2
+          });
+          addedDescriptions.add(key);
+        }
       }
     });
 
     // Добавляем категории
     const categories = this.getCategorySuggestions(searchLower);
     categories.forEach(cat => {
-      if (suggestions.size < maxSuggestions) {
-        suggestions.add(cat);
+      if (suggestions.length < maxSuggestions) {
+        suggestions.push(cat);
       }
     });
 
-    return Array.from(suggestions).slice(0, maxSuggestions);
+    // Сортируем по приоритету (меньше = выше)
+    suggestions.sort((a, b) => (a.priority || 3) - (b.priority || 3));
+
+    return suggestions.slice(0, maxSuggestions);
   }
 
   getCategorySuggestions(query) {
@@ -176,6 +297,15 @@ class UniversalSearch {
 
     suggestions.forEach(suggestion => {
       const item = document.createElement('div');
+      
+      // Если это заголовок категории
+      if (suggestion.isHeader) {
+        item.className = 'search-suggestion-header';
+        item.textContent = suggestion.text;
+        container.appendChild(item);
+        return;
+      }
+
       item.className = 'search-suggestion-item';
       
       const label = document.createElement('span');
@@ -200,8 +330,15 @@ class UniversalSearch {
           // Переход на страницу категории
           const currentPath = window.location.pathname;
           const isInCategory = currentPath.includes('/category/');
-          const categoryPath = isInCategory ? suggestion.url : 'category/' + suggestion.url;
-          window.location.href = categoryPath;
+          
+          // Если URL уже содержит category/, используем как есть
+          if (suggestion.url.includes('category/')) {
+            window.location.href = suggestion.url;
+          } else {
+            // Иначе добавляем category/ если нужно
+            const categoryPath = isInCategory ? suggestion.url : 'category/' + suggestion.url;
+            window.location.href = categoryPath;
+          }
         } else {
           // Поиск по тексту
           inputElement.value = suggestion.text;

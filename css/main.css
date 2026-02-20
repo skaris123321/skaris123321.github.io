@@ -170,6 +170,20 @@ a.logo {
   z-index: 100;
 }
 
+.search-suggestion-header {
+  padding: 0.75rem 1rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 .search-suggestion-item {
   padding: 0.75rem 1rem;
   cursor: pointer;
