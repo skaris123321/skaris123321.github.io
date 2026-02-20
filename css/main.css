@@ -2907,9 +2907,8 @@ h1.category-title {
 }
 
 .catalog-category-card:hover {
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  border-color: var(--red-main);
-  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
 }
 
 .catalog-category-link-wrapper {
@@ -3019,16 +3018,30 @@ h1.category-title {
 .catalog-subcategory-link {
   color: #4b5563;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
   display: inline-block;
   padding: 0.25rem 0;
   position: relative;
   font-weight: 400;
 }
 
+.catalog-subcategory-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--red-main);
+  transition: width 0.3s ease;
+}
+
 .catalog-subcategory-link:hover {
   color: var(--red-main);
-  text-decoration: underline;
+}
+
+.catalog-subcategory-link:hover::after {
+  width: 100%;
 }
 
 
