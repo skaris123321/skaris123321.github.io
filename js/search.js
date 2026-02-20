@@ -373,11 +373,11 @@ class UniversalSearch {
   extractSearchParams(query) {
     const params = {};
 
-    // Определяем бренд
+    // Определяем бренд (приводим к нижнему регистру для сравнения)
     const brands = ['chint', 'dekraft', 'ekf', 'systeme electric', 'tdm', 'veda'];
     brands.forEach(brand => {
       if (query.includes(brand)) {
-        params.brand = brand;
+        params.brand = brand.toUpperCase(); // Сохраняем в верхнем регистре для URL
       }
     });
 
@@ -414,6 +414,15 @@ class UniversalSearch {
     const reactivePowerMatch = query.match(/(\d+)\s*(квар|kvar)/i);
     if (reactivePowerMatch) {
       params.reactivePower = parseFloat(reactivePowerMatch[1]);
+    }
+
+    // Определяем тип регулирования для реактивной мощности
+    if (params.type === 'reactive') {
+      if (query.includes('нерегулируем') || query.includes('unregulated')) {
+        params.regulationType = 'unregulated';
+      } else if (query.includes('регулируем') || query.includes('автоматич') || query.includes('regulated')) {
+        params.regulationType = 'regulated';
+      }
     }
 
     // Определяем тип управления
@@ -558,6 +567,17 @@ class UniversalSearch {
     }
 
     const searchQuery = query.toLowerCase();
+    
+    // Извлекаем параметры из запроса
+    const params = this.extractSearchParams(searchQuery);
+    
+    // Если есть тип категории, перенаправляем на страницу категории с фильтрами
+    if (params.type || params.brand) {
+      this.redirectToCategoryWithFilters(params);
+      return;
+    }
+    
+    // Иначе выполняем обычный поиск
     const results = this.searchProducts(searchQuery);
 
     if (results.length > 0) {
@@ -571,6 +591,63 @@ class UniversalSearch {
       // Показываем сообщение, что ничего не найдено
       this.showNoResultsMessage(query);
     }
+  }
+
+  // Перенаправление на страницу категории с фильтрами
+  redirectToCategoryWithFilters(params) {
+    const currentPath = window.location.pathname;
+    const isInCategory = currentPath.includes('/category/');
+    let targetUrl = '';
+    
+    // Определяем целевую страницу
+    if (params.type === 'avr') {
+      targetUrl = isInCategory ? 'avr.html' : 'category/avr.html';
+    } else if (params.type === 'control') {
+      targetUrl = isInCategory ? 'control-cabinets.html' : 'category/control-cabinets.html';
+    } else if (params.type === 'reactive') {
+      targetUrl = isInCategory ? 'reactive-power.html' : 'category/reactive-power.html';
+    } else if (params.brand) {
+      // Если указан только бренд без категории, идем в каталог с поиском по бренду
+      targetUrl = isInCategory ? 'catalog.html' : 'category/catalog.html';
+      targetUrl += `?search=${encodeURIComponent(params.brand)}`;
+      window.location.href = targetUrl;
+      return;
+    }
+    
+    // Добавляем параметры фильтров в URL
+    const urlParams = new URLSearchParams();
+    
+    if (params.brand) {
+      urlParams.set('brand', params.brand);
+    }
+    if (params.commutationType) {
+      urlParams.set('commutationType', params.commutationType);
+    }
+    if (params.inputs) {
+      urlParams.set('inputs', params.inputs);
+    }
+    if (params.current) {
+      urlParams.set('current', params.current);
+    }
+    if (params.motorPower) {
+      urlParams.set('motorPower', params.motorPower);
+    }
+    if (params.controlType) {
+      urlParams.set('controlType', params.controlType);
+    }
+    if (params.reactivePower) {
+      urlParams.set('power', params.reactivePower);
+    }
+    if (params.regulationType) {
+      urlParams.set('regulationType', params.regulationType);
+    }
+    
+    const queryString = urlParams.toString();
+    if (queryString) {
+      targetUrl += '?' + queryString;
+    }
+    
+    window.location.href = targetUrl;
   }
 
   searchProducts(query) {
