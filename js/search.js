@@ -291,6 +291,20 @@ class UniversalSearch {
       return;
     }
     
+    // Проверяем точное совпадение по полному названию товара
+    const exactDescriptionMatch = this.productsData.find(product => 
+      product.description && product.description.toLowerCase() === searchQuery
+    );
+    
+    if (exactDescriptionMatch) {
+      // Если найден товар по названию, перенаправляем на его страницу
+      const currentPath = window.location.pathname;
+      const isInCategory = currentPath.includes('/category/');
+      const productPath = isInCategory ? 'product.html' : 'category/product.html';
+      window.location.href = `${productPath}?id=${exactDescriptionMatch.id}`;
+      return;
+    }
+    
     // Ключевые слова для определения категорий
     const avrKeywords = ['авр', 'avr'];
     const controlKeywords = ['управлен', 'шкаф', 'control'];
