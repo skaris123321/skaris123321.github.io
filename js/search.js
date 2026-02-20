@@ -291,7 +291,7 @@ class UniversalSearch {
       return;
     }
     
-    // Проверяем, содержит ли запрос название категории и бренд
+    // Ключевые слова для определения категорий
     const avrKeywords = ['авр', 'avr'];
     const controlKeywords = ['управлен', 'шкаф', 'control'];
     const reactiveKeywords = ['реактивн', 'компенсац', 'конденсатор', 'reactive'];
@@ -306,9 +306,9 @@ class UniversalSearch {
     
     // Ключевые слова для подкатегорий шкафов управления
     const controlSubcategories = {
-      'soft_start': ['плавный пуск', 'soft start', 'soft_start'],
-      'frequency_converter': ['преобразователь частоты', 'частотник', 'frequency', 'преобразовател'],
-      'direct_start': ['прямой пуск', 'direct start', 'direct_start']
+      'soft_start': ['плавный пуск', 'soft start', 'soft_start', 'плавн'],
+      'frequency_converter': ['преобразователь частоты', 'частотник', 'frequency', 'преобразовател', 'частот'],
+      'direct_start': ['прямой пуск', 'direct start', 'direct_start', 'прямой']
     };
     
     // Ключевые слова для подкатегорий компенсации реактивной мощности
