@@ -12,14 +12,16 @@ class UniversalSearch {
     const searchInputs = document.querySelectorAll('.search-input');
     
     if (searchInputs.length === 0) {
-      console.log('Поисковые поля не найдены, повторная попытка через 500мс');
-      setTimeout(() => this.init(), 500);
+      console.log('Поисковые поля не найдены, повторная попытка через 1000мс');
+      setTimeout(() => this.init(), 1000);
       return;
     }
 
     console.log('Найдено поисковых полей:', searchInputs.length);
     
-    searchInputs.forEach(input => {
+    searchInputs.forEach((input, index) => {
+      console.log(`Инициализация поля ${index + 1}`);
+      
       // Создаем контейнер для подсказок
       const wrapper = input.parentElement;
       
@@ -29,18 +31,25 @@ class UniversalSearch {
         suggestionsDiv = document.createElement('div');
         suggestionsDiv.className = 'search-suggestions';
         wrapper.appendChild(suggestionsDiv);
+        console.log(`Создан контейнер подсказок для поля ${index + 1}`);
       }
 
+      // Удаляем старые обработчики, если есть
+      const newInput = input.cloneNode(true);
+      input.parentNode.replaceChild(newInput, input);
+
       // Добавляем обработчик на ввод текста
-      input.addEventListener('input', (e) => {
-        this.handleInput(e.target.value.trim(), suggestionsDiv, input);
+      newInput.addEventListener('input', (e) => {
+        console.log('Input event:', e.target.value);
+        this.handleInput(e.target.value.trim(), suggestionsDiv, newInput);
       });
 
       // Добавляем обработчик на Enter
-      input.addEventListener('keypress', (e) => {
+      newInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
           e.preventDefault();
-          this.performSearch(input.value.trim());
+          console.log('Enter pressed:', newInput.value);
+          this.performSearch(newInput.value.trim());
           this.hideSuggestions(suggestionsDiv);
         }
       });
@@ -55,6 +64,7 @@ class UniversalSearch {
 
     // Загружаем данные о товарах
     await this.loadProducts();
+    console.log('Поиск инициализирован успешно');
   }
 
   async loadProducts() {
@@ -466,9 +476,10 @@ class UniversalSearch {
 }
 
 // Инициализируем поиск после полной загрузки страницы и Alpine.js
-document.addEventListener('DOMContentLoaded', () => {
-  // Ждем немного, чтобы Alpine.js успел инициализироваться
+window.addEventListener('load', () => {
+  // Ждем, чтобы Alpine.js точно успел отрендерить элементы
   setTimeout(() => {
+    console.log('Инициализация поиска...');
     new UniversalSearch();
-  }, 100);
+  }, 300);
 });
