@@ -237,7 +237,7 @@ a.logo {
 }
 
 .btn-login {
-  background: #1f2937;
+  background: var(--red-main);
   color: white;
   padding: 0.375rem 1rem !important;
   border-radius: 0.5rem;
@@ -251,7 +251,7 @@ a.logo {
 }
 
 .btn-login:hover {
-  background: #111827;
+  background: var(--red-dark);
 }
 
 .page-title {
@@ -1456,7 +1456,7 @@ h1.category-title {
 .btn-add-to-cart {
   width: 100%;
   padding: 1rem 2rem;
-  background: #92400e;
+  background: var(--red-main);
   color: white;
   border: none;
   border-radius: 0.75rem;
@@ -1465,13 +1465,13 @@ h1.category-title {
   cursor: pointer;
   transition: all 0.2s;
   margin-top: 0.5rem;
-  box-shadow: 0 2px 4px rgba(146, 64, 14, 0.2);
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.2);
 }
 
 .btn-add-to-cart:hover {
-  background: #78350f;
+  background: var(--red-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(146, 64, 14, 0.4);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
 }
 
 .btn-add-to-cart:active {
