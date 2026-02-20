@@ -86,26 +86,28 @@ button {
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  align-items: center !important;
   text-decoration: none !important;
   transition: opacity 0.2s;
   line-height: 1.2 !important;
   flex-shrink: 0;
   margin: 0 !important;
   padding: 0 !important;
-  height: 32px;
+  height: 32px !important;
+  font-size: 0 !important;
 }
 
 .logo-image {
-  height: 32px;
-  width: auto;
-  display: block;
+  height: 32px !important;
+  width: auto !important;
+  display: block !important;
 }
 
 a.logo {
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  align-items: center !important;
+  font-size: 0 !important;
 }
 
 .logo:hover {
