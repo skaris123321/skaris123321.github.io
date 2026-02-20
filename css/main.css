@@ -95,7 +95,6 @@ button {
   margin: 0 !important;
   padding: 0 !important;
   height: 32px !important;
-  font-size: 0 !important;
 }
 
 .logo-image {
@@ -107,7 +106,6 @@ button {
 a.logo {
   display: flex !important;
   align-items: center !important;
-  font-size: 0 !important;
 }
 
 .logo:hover {
