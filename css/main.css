@@ -2898,6 +2898,9 @@ h1.category-title {
   transition: box-shadow 0.3s ease;
   height: 340px;
   border: 1px solid #f3f4f6;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 @media (min-width: 768px) {
@@ -2984,7 +2987,7 @@ h1.category-title {
 .catalog-category-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--dark);
+  color: #111827;
   margin-bottom: 1rem;
   min-height: 2.5rem;
   display: flex;
@@ -3013,6 +3016,8 @@ h1.category-title {
   position: relative;
   line-height: 1.6;
   margin-bottom: 0.25rem;
+  color: #4b5563;
+  text-decoration: none;
 }
 
 .catalog-subcategory-link {
