@@ -277,23 +277,92 @@ class UniversalSearch {
 
     const searchQuery = query.toLowerCase();
     
+    // Сначала проверяем, есть ли точное совпадение по артикулу
+    const exactArticleMatch = this.productsData.find(product => 
+      product.article && product.article.toLowerCase() === searchQuery
+    );
+    
+    if (exactArticleMatch) {
+      // Если найден товар по артикулу, перенаправляем на его страницу
+      const currentPath = window.location.pathname;
+      const isInCategory = currentPath.includes('/category/');
+      const productPath = isInCategory ? 'product.html' : 'category/product.html';
+      window.location.href = `${productPath}?id=${exactArticleMatch.id}`;
+      return;
+    }
+    
     // Проверяем, содержит ли запрос название категории и бренд
     const avrKeywords = ['авр', 'avr'];
-    const controlKeywords = ['управлен', 'шкаф', 'control', 'soft', 'частот', 'преобразовател'];
+    const controlKeywords = ['управлен', 'шкаф', 'control'];
     const reactiveKeywords = ['реактивн', 'компенсац', 'конденсатор', 'reactive'];
+    
+    // Ключевые слова для подкатегорий АВР
+    const avrSubcategories = {
+      '2_inputs': ['2 ввод', 'два ввод', '2input', 'двух вводов'],
+      '3_inputs': ['3 ввод', 'три ввод', '3input', 'трех вводов'],
+      'contactors': ['контактор', 'contactors'],
+      'monoblock': ['моноблок', 'monoblock']
+    };
+    
+    // Ключевые слова для подкатегорий шкафов управления
+    const controlSubcategories = {
+      'soft_start': ['плавный пуск', 'soft start', 'soft_start'],
+      'frequency_converter': ['преобразователь частоты', 'частотник', 'frequency', 'преобразовател'],
+      'direct_start': ['прямой пуск', 'direct start', 'direct_start']
+    };
+    
+    // Ключевые слова для подкатегорий компенсации реактивной мощности
+    const reactiveSubcategories = {
+      'unregulated': ['нерегулируемые', 'unregulated'],
+      'regulated': ['регулируемые', 'автоматически', 'regulated']
+    };
     
     const supportedBrands = ['CHINT', 'Dekraft', 'EKF', 'Systeme electric', 'TDM', 'VEDA', 'IEK'];
     
     let detectedCategory = null;
+    let detectedSubcategory = null;
     let detectedBrand = null;
+    let urlParams = '';
     
     // Определяем категорию
     if (avrKeywords.some(kw => searchQuery.includes(kw))) {
       detectedCategory = 'avr';
+      
+      // Определяем подкатегорию АВР
+      for (const [subcatKey, keywords] of Object.entries(avrSubcategories)) {
+        if (keywords.some(kw => searchQuery.includes(kw))) {
+          if (subcatKey === '2_inputs') {
+            urlParams = 'commutationType=monoblock&inputs=2';
+          } else if (subcatKey === '3_inputs') {
+            urlParams = 'commutationType=monoblock&inputs=3';
+          } else if (subcatKey === 'contactors') {
+            urlParams = 'commutationType=contactors';
+          } else if (subcatKey === 'monoblock') {
+            urlParams = 'commutationType=monoblock';
+          }
+          break;
+        }
+      }
     } else if (controlKeywords.some(kw => searchQuery.includes(kw))) {
       detectedCategory = 'control-cabinets';
+      
+      // Определяем подкатегорию шкафов управления
+      for (const [subcatKey, keywords] of Object.entries(controlSubcategories)) {
+        if (keywords.some(kw => searchQuery.includes(kw))) {
+          urlParams = `controlType=${subcatKey}`;
+          break;
+        }
+      }
     } else if (reactiveKeywords.some(kw => searchQuery.includes(kw))) {
       detectedCategory = 'reactive-power';
+      
+      // Определяем подкатегорию компенсации реактивной мощности
+      for (const [subcatKey, keywords] of Object.entries(reactiveSubcategories)) {
+        if (keywords.some(kw => searchQuery.includes(kw))) {
+          urlParams = `regulationType=${subcatKey}`;
+          break;
+        }
+      }
     }
     
     // Определяем бренд
@@ -304,23 +373,25 @@ class UniversalSearch {
       }
     }
     
-    // Если найдена категория и бренд, перенаправляем на страницу категории с выбранным брендом
-    if (detectedCategory && detectedBrand) {
-      const currentPath = window.location.pathname;
-      const isInCategory = currentPath.includes('/category/');
-      const categoryPath = isInCategory ? `${detectedCategory}.html` : `category/${detectedCategory}.html`;
-      
-      window.location.href = `${categoryPath}?brand=${encodeURIComponent(detectedBrand)}`;
-      return;
-    }
-    
-    // Если найдена только категория, перенаправляем на страницу категории
+    // Если найдена категория, перенаправляем на страницу категории
     if (detectedCategory) {
       const currentPath = window.location.pathname;
       const isInCategory = currentPath.includes('/category/');
       const categoryPath = isInCategory ? `${detectedCategory}.html` : `category/${detectedCategory}.html`;
       
-      window.location.href = categoryPath;
+      // Добавляем параметры подкатегории и бренда
+      let fullUrl = categoryPath;
+      if (urlParams || detectedBrand) {
+        fullUrl += '?';
+        if (urlParams) {
+          fullUrl += urlParams;
+        }
+        if (detectedBrand) {
+          fullUrl += (urlParams ? '&' : '') + `brand=${encodeURIComponent(detectedBrand)}`;
+        }
+      }
+      
+      window.location.href = fullUrl;
       return;
     }
     
