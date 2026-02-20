@@ -295,6 +295,13 @@ class UniversalSearch {
     this.productsData.forEach(product => {
       let matches = true;
 
+      // Проверка бренда
+      if (params.brand && product.brand) {
+        if (product.brand.toLowerCase() !== params.brand.toLowerCase()) {
+          matches = false;
+        }
+      }
+
       // Проверка типа (АВР, шкаф управления, реактивная мощность)
       if (params.type) {
         if (params.type === 'avr') {
@@ -365,6 +372,14 @@ class UniversalSearch {
   // Извлечение параметров из поискового запроса
   extractSearchParams(query) {
     const params = {};
+
+    // Определяем бренд
+    const brands = ['chint', 'dekraft', 'ekf', 'systeme electric', 'tdm', 'veda'];
+    brands.forEach(brand => {
+      if (query.includes(brand)) {
+        params.brand = brand;
+      }
+    });
 
     // Определяем тип товара
     if (query.includes('авр') || query.includes('avr')) {

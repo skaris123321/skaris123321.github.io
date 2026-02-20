@@ -18,7 +18,7 @@
     }
   </script>
 
-  <link rel="stylesheet" href="../css/main.css?v=26">
+  <link rel="stylesheet" href="../css/main.css?v=28">
 </head>
 <body class="bg-light text-dark">
   <header class="header">
@@ -110,7 +110,7 @@
     </div>
 
     <!-- Обычный каталог категорий -->
-    <div x-show="!loading && !isSearchMode" class="catalog-grid"></div>
+    <div x-show="!loading && !isSearchMode" class="catalog-grid">
       <template x-for="category in categories" :key="category.type">
         <div class="catalog-category-card">
           <div class="catalog-category-link-wrapper">
