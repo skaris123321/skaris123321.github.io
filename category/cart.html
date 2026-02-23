@@ -649,14 +649,73 @@
             } catch (error) {
               console.error('Ошибка отправки заказа:', error);
               
-              // Показываем ошибку
-              this.showModal({
-                type: 'warning',
-                title: 'Ошибка',
-                message: 'Не удалось отправить заказ. Проверьте подключение к интернету или свяжитесь с нами по телефону 8 (800) 55-11-052',
-                showCancel: false,
-                confirmText: 'OK'
-              });
+              // Резервный вариант: копируем данные в буфер обмена
+              let orderText = `📦 НОВЫЙ ЗАКАЗ С САЙТА РОСЭК\n\n`;
+              orderText += `📅 Дата: ${orderData.orderDate}\n`;
+              orderText += `👤 Тип клиента: ${orderData.clientType}\n\n`;
+              
+              if (this.clientType === 'individual') {
+                orderText += `ФИО: ${this.orderForm.fullName}\n`;
+                orderText += `📞 Телефон: ${this.orderForm.phone}\n`;
+                orderText += `📧 Email: ${this.orderForm.email}\n`;
+                if (this.orderForm.address) orderText += `📍 Адрес: ${this.orderForm.address}\n`;
+              } else {
+                orderText += `🏢 Организация: ${this.orderForm.companyName}\n`;
+                orderText += `🔢 ИНН: ${this.orderForm.inn}\n`;
+                if (this.orderForm.kpp) orderText += `КПП: ${this.orderForm.kpp}\n`;
+                orderText += `📍 Юр. адрес: ${this.orderForm.legalAddress}\n`;
+                orderText += `👤 Контактное лицо: ${this.orderForm.contactPerson}\n`;
+                orderText += `📞 Телефон: ${this.orderForm.phone}\n`;
+                orderText += `📧 Email: ${this.orderForm.email}\n`;
+              }
+              
+              if (this.orderForm.comment) {
+                orderText += `\n💬 Комментарий: ${this.orderForm.comment}\n`;
+              }
+              
+              orderText += `\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+              orderText += `📦 ТОВАРЫ В ЗАКАЗЕ:\n\n`;
+              orderText += orderData.items;
+              orderText += `\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+              orderText += `💰 ИТОГО: ${orderData.totalPrice}\n`;
+              orderText += `📦 Всего товаров: ${this.totalItems} шт.\n`;
+
+              try {
+                await navigator.clipboard.writeText(orderText);
+                
+                this.showModal({
+                  type: 'success',
+                  title: 'Данные заказа скопированы!',
+                  message: 'Данные заказа скопированы в буфер обмена.\n\nОтправьте их на почту: enogovicina167@gmail.com',
+                  showCancel: false,
+                  confirmText: 'OK',
+                  onConfirm: () => {
+                    this.showCheckoutModal = false;
+                    this.orderForm = {
+                      fullName: '',
+                      phone: '',
+                      email: '',
+                      address: '',
+                      comment: '',
+                      companyName: '',
+                      inn: '',
+                      kpp: '',
+                      legalAddress: '',
+                      contactPerson: ''
+                    };
+                    this.clearCart();
+                  }
+                });
+              } catch (clipErr) {
+                // Если не удалось скопировать, показываем alert
+                this.showModal({
+                  type: 'warning',
+                  title: 'Ошибка отправки',
+                  message: 'Не удалось отправить заказ автоматически. Свяжитесь с нами по телефону 8 (800) 55-11-052 или email: enogovicina167@gmail.com',
+                  showCancel: false,
+                  confirmText: 'OK'
+                });
+              }
             }
           },
 
