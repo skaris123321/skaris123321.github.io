@@ -269,13 +269,21 @@
         <form x-show="clientType === 'individual'" @submit.prevent="submitOrder" class="checkout-form">
           <div class="form-group">
             <label class="form-label">ФИО *</label>
-            <input type="text" x-model="orderForm.fullName" required class="form-input" placeholder="Иванов Иван Иванович">
+            <input type="text" x-model="orderForm.fullName" required class="form-input" placeholder="Иванов Иван Иванович" minlength="3">
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">Телефон *</label>
-              <input type="tel" x-model="orderForm.phone" required class="form-input" placeholder="+7 (___) ___-__-__">
+              <input 
+                type="tel" 
+                x-model="orderForm.phone" 
+                @input="formatPhone($event)" 
+                required 
+                class="form-input" 
+                placeholder="+7 (___) ___-__-__"
+                pattern="\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}"
+                title="Формат: +7 (999) 999-99-99">
             </div>
             <div class="form-group">
               <label class="form-label">Email *</label>
@@ -284,8 +292,8 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label">Адрес доставки</label>
-            <textarea x-model="orderForm.address" class="form-textarea" rows="2" placeholder="Укажите адрес доставки"></textarea>
+            <label class="form-label">Адрес доставки *</label>
+            <textarea x-model="orderForm.address" required class="form-textarea" rows="2" placeholder="Укажите адрес доставки"></textarea>
           </div>
 
           <div class="form-group">
@@ -303,17 +311,35 @@
         <form x-show="clientType === 'legal'" @submit.prevent="submitOrder" class="checkout-form">
           <div class="form-group">
             <label class="form-label">Название организации *</label>
-            <input type="text" x-model="orderForm.companyName" required class="form-input" placeholder="ООО «Компания»">
+            <input type="text" x-model="orderForm.companyName" required class="form-input" placeholder="ООО «Компания»" minlength="3">
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">ИНН *</label>
-              <input type="text" x-model="orderForm.inn" required class="form-input" placeholder="1234567890">
+              <input 
+                type="text" 
+                x-model="orderForm.inn" 
+                @input="formatINN($event)" 
+                required 
+                class="form-input" 
+                placeholder="1234567890"
+                pattern="\d{10}|\d{12}"
+                title="ИНН должен содержать 10 или 12 цифр"
+                maxlength="12">
             </div>
             <div class="form-group">
-              <label class="form-label">КПП</label>
-              <input type="text" x-model="orderForm.kpp" class="form-input" placeholder="123456789">
+              <label class="form-label">КПП *</label>
+              <input 
+                type="text" 
+                x-model="orderForm.kpp" 
+                @input="formatKPP($event)" 
+                required 
+                class="form-input" 
+                placeholder="123456789"
+                pattern="\d{9}"
+                title="КПП должен содержать 9 цифр"
+                maxlength="9">
             </div>
           </div>
 
@@ -324,13 +350,21 @@
 
           <div class="form-group">
             <label class="form-label">Контактное лицо *</label>
-            <input type="text" x-model="orderForm.contactPerson" required class="form-input" placeholder="ФИО контактного лица">
+            <input type="text" x-model="orderForm.contactPerson" required class="form-input" placeholder="ФИО контактного лица" minlength="3">
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">Телефон *</label>
-              <input type="tel" x-model="orderForm.phone" required class="form-input" placeholder="+7 (___) ___-__-__">
+              <input 
+                type="tel" 
+                x-model="orderForm.phone" 
+                @input="formatPhone($event)" 
+                required 
+                class="form-input" 
+                placeholder="+7 (___) ___-__-__"
+                pattern="\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}"
+                title="Формат: +7 (999) 999-99-99">
             </div>
             <div class="form-group">
               <label class="form-label">Email *</label>
@@ -427,6 +461,70 @@
               this.totalItems = event.detail.totalItems;
               this.totalPrice = event.detail.totalPrice;
             });
+          },
+
+          // Форматирование телефона
+          formatPhone(event) {
+            let value = event.target.value.replace(/\D/g, '');
+            
+            // Ограничиваем 11 цифрами (7 + 10 цифр номера)
+            if (value.length > 11) {
+              value = value.slice(0, 11);
+            }
+            
+            // Если начинается с 8, заменяем на 7
+            if (value.startsWith('8')) {
+              value = '7' + value.slice(1);
+            }
+            
+            // Если не начинается с 7, добавляем 7
+            if (value.length > 0 && !value.startsWith('7')) {
+              value = '7' + value;
+            }
+            
+            // Форматируем
+            let formatted = '+7';
+            if (value.length > 1) {
+              formatted += ' (' + value.slice(1, 4);
+            }
+            if (value.length >= 5) {
+              formatted += ') ' + value.slice(4, 7);
+            }
+            if (value.length >= 8) {
+              formatted += '-' + value.slice(7, 9);
+            }
+            if (value.length >= 10) {
+              formatted += '-' + value.slice(9, 11);
+            }
+            
+            this.orderForm.phone = formatted;
+            event.target.value = formatted;
+          },
+
+          // Форматирование ИНН (только цифры)
+          formatINN(event) {
+            let value = event.target.value.replace(/\D/g, '');
+            
+            // Ограничиваем 12 цифрами
+            if (value.length > 12) {
+              value = value.slice(0, 12);
+            }
+            
+            this.orderForm.inn = value;
+            event.target.value = value;
+          },
+
+          // Форматирование КПП (только цифры)
+          formatKPP(event) {
+            let value = event.target.value.replace(/\D/g, '');
+            
+            // Ограничиваем 9 цифрами
+            if (value.length > 9) {
+              value = value.slice(0, 9);
+            }
+            
+            this.orderForm.kpp = value;
+            event.target.value = value;
           },
 
           loadCart() {
