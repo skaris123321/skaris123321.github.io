@@ -588,7 +588,7 @@
             }
           },
 
-          submitOrder() {
+          async submitOrder() {
             // Формируем данные заказа
             const orderData = {
               clientType: this.clientType,
@@ -599,72 +599,60 @@
               orderDate: new Date().toLocaleString('ru-RU')
             };
 
-            // Формируем текст письма
-            let emailBody = `Новый заказ с сайта РОСЭК\n\n`;
-            emailBody += `Тип клиента: ${this.clientType === 'individual' ? 'Физическое лицо' : 'Юридическое лицо'}\n`;
-            emailBody += `Дата заказа: ${orderData.orderDate}\n\n`;
+            try {
+              // Отправляем заказ на сервер
+              const response = await fetch('http://localhost:3000/api/orders', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(orderData)
+              });
 
-            if (this.clientType === 'individual') {
-              emailBody += `ФИО: ${this.orderForm.fullName}\n`;
-              emailBody += `Телефон: ${this.orderForm.phone}\n`;
-              emailBody += `Email: ${this.orderForm.email}\n`;
-              if (this.orderForm.address) emailBody += `Адрес доставки: ${this.orderForm.address}\n`;
-            } else {
-              emailBody += `Организация: ${this.orderForm.companyName}\n`;
-              emailBody += `ИНН: ${this.orderForm.inn}\n`;
-              if (this.orderForm.kpp) emailBody += `КПП: ${this.orderForm.kpp}\n`;
-              emailBody += `Юридический адрес: ${this.orderForm.legalAddress}\n`;
-              emailBody += `Контактное лицо: ${this.orderForm.contactPerson}\n`;
-              emailBody += `Телефон: ${this.orderForm.phone}\n`;
-              emailBody += `Email: ${this.orderForm.email}\n`;
-            }
+              const result = await response.json();
 
-            if (this.orderForm.comment) {
-              emailBody += `\nКомментарий: ${this.orderForm.comment}\n`;
-            }
-
-            emailBody += `\n--- ТОВАРЫ В ЗАКАЗЕ ---\n\n`;
-            this.items.forEach((item, index) => {
-              emailBody += `${index + 1}. ${item.productTitle}\n`;
-              emailBody += `   Артикул: ${item.article}\n`;
-              emailBody += `   Производитель: ${item.manufacturerBrand}\n`;
-              emailBody += `   Количество: ${item.quantity} шт.\n`;
-              emailBody += `   Цена за единицу: ${this.formatPrice(item.totalPrice)}\n`;
-              emailBody += `   Сумма: ${this.formatPrice(item.totalPrice * item.quantity)}\n\n`;
-            });
-
-            emailBody += `\nИТОГО: ${this.formatPrice(this.totalPrice)}\n`;
-            emailBody += `Всего товаров: ${this.totalItems} шт.`;
-
-            // Отправляем на email через mailto (временное решение)
-            const subject = encodeURIComponent(`Заказ с сайта РОСЭК от ${orderData.orderDate}`);
-            const body = encodeURIComponent(emailBody);
-            window.location.href = `mailto:enogovicina167@gmail.com?subject=${subject}&body=${body}`;
-
-            // Показываем уведомление
-            this.showModal({
-              type: 'success',
-              title: 'Заказ оформлен!',
-              message: 'Ваш заказ успешно оформлен. Мы свяжемся с вами в ближайшее время.',
-              showCancel: false,
-              confirmText: 'OK',
-              onConfirm: () => {
-                this.showCheckoutModal = false;
-                // Очищаем форму
-                this.orderForm = {
-                  fullName: '',
-                  phone: '',
-                  email: '',
-                  address: '',
-                  comment: '',
-                  companyName: '',
-                  inn: '',
-                  kpp: '',
-                  legalAddress: '',
-                  contactPerson: ''
-                };
+              if (result.success) {
+                // Показываем уведомление об успехе
+                this.showModal({
+                  type: 'success',
+                  title: 'Заказ оформлен!',
+                  message: `Ваш заказ №${result.orderId} успешно оформлен. Подтверждение отправлено на ${orderData.email}`,
+                  showCancel: false,
+                  confirmText: 'OK',
+                  onConfirm: () => {
+                    this.showCheckoutModal = false;
+                    // Очищаем форму
+                    this.orderForm = {
+                      fullName: '',
+                      phone: '',
+                      email: '',
+                      address: '',
+                      comment: '',
+                      companyName: '',
+                      inn: '',
+                      kpp: '',
+                      legalAddress: '',
+                      contactPerson: ''
+                    };
+                    // Очищаем корзину
+                    this.clearCart();
+                  }
+                });
+              } else {
+                throw new Error(result.message || 'Ошибка при оформлении заказа');
               }
-            });
+            } catch (error) {
+              console.error('Ошибка отправки заказа:', error);
+              
+              // Показываем ошибку
+              this.showModal({
+                type: 'warning',
+                title: 'Ошибка',
+                message: 'Не удалось отправить заказ. Проверьте подключение к интернету или свяжитесь с нами по телефону 8 (800) 55-11-052',
+                showCancel: false,
+                confirmText: 'OK'
+              });
+            }
           },
 
           formatPrice(price) {
