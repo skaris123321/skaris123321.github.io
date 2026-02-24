@@ -426,6 +426,12 @@
             "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе моноблочного АВР CHINT 125А.",
             "documentation": [
                 {
+                    "name": "Комплект чертежей шкафа АВР 125А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
+                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -487,6 +493,12 @@
             "description": "Шкаф АВР 160А на базе CHINT, 2 ввода",
             "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе моноблочного АВР CHINT 160А.",
             "documentation": [
+                {
+                    "name": "Комплект чертежей шкафа АВР 160А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -550,6 +562,12 @@
             "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе моноблочного АВР CHINT 200А.",
             "documentation": [
                 {
+                    "name": "Комплект чертежей шкафа АВР 200А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
+                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -611,6 +629,12 @@
             "description": "Шкаф АВР 250А на базе CHINT, 2 ввода",
             "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе моноблочного АВР CHINT 250А.",
             "documentation": [
+                {
+                    "name": "Комплект чертежей шкафа АВР 250А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -674,6 +698,12 @@
             "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе моноблочного АВР CHINT 400А.",
             "documentation": [
                 {
+                    "name": "Комплект чертежей шкафа АВР 400А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/400А/avr-400a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
+                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -736,6 +766,12 @@
             "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе моноблочного АВР CHINT 630А.",
             "documentation": [
                 {
+                    "name": "Комплект чертежей шкафа АВР 630А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/630-800A/avr-630-800a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
+                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -797,6 +833,12 @@
             "description": "Шкаф АВР 800А на базе CHINT, 2 ввода",
             "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе моноблочного АВР CHINT 800А.",
             "documentation": [
+                {
+                    "name": "Комплект чертежей шкафа АВР 800А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/630-800A/avr-630-800a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -1268,6 +1310,12 @@
             "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе моноблочного АВР EKF 125А.",
             "documentation": [
                 {
+                    "name": "Комплект чертежей шкафа АВР 125А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
+                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -1329,6 +1377,12 @@
             "description": "Шкаф АВР 160А на базе EKF, 2 ввода",
             "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе моноблочного АВР EKF 160А.",
             "documentation": [
+                {
+                    "name": "Комплект чертежей шкафа АВР 160А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -1392,6 +1446,12 @@
             "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе моноблочного АВР EKF 200А.",
             "documentation": [
                 {
+                    "name": "Комплект чертежей шкафа АВР 200А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
+                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -1453,6 +1513,12 @@
             "description": "Шкаф АВР 250А на базе EKF, 2 ввода",
             "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе моноблочного АВР EKF 250А.",
             "documentation": [
+                {
+                    "name": "Комплект чертежей шкафа АВР 250А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -1516,6 +1582,12 @@
             "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе моноблочного АВР EKF 400А.",
             "documentation": [
                 {
+                    "name": "Комплект чертежей шкафа АВР 400А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/400А/avr-400a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
+                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -1578,6 +1650,12 @@
             "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе моноблочного АВР EKF 630А.",
             "documentation": [
                 {
+                    "name": "Комплект чертежей шкафа АВР 630А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/630-800A/avr-630-800a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
+                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -1639,6 +1717,12 @@
             "description": "Шкаф АВР 800А на базе EKF, 2 ввода",
             "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе моноблочного АВР EKF 800А.",
             "documentation": [
+                {
+                    "name": "Комплект чертежей шкафа АВР 800А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/630-800A/avr-630-800a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -2110,6 +2194,12 @@
             "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 125А.",
             "documentation": [
                 {
+                    "name": "Комплект чертежей шкафа АВР 125А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
+                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -2171,6 +2261,12 @@
             "description": "Шкаф АВР 160А на базе Dekraft, 2 ввода",
             "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 160А.",
             "documentation": [
+                {
+                    "name": "Комплект чертежей шкафа АВР 160А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -2234,6 +2330,12 @@
             "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 200А.",
             "documentation": [
                 {
+                    "name": "Комплект чертежей шкафа АВР 200А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
+                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -2295,6 +2397,12 @@
             "description": "Шкаф АВР 250А на базе Dekraft, 2 ввода",
             "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 250А.",
             "documentation": [
+                {
+                    "name": "Комплект чертежей шкафа АВР 250А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -2358,6 +2466,12 @@
             "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 400А.",
             "documentation": [
                 {
+                    "name": "Комплект чертежей шкафа АВР 400А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/400А/avr-400a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
+                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -2420,6 +2534,12 @@
             "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 630А.",
             "documentation": [
                 {
+                    "name": "Комплект чертежей шкафа АВР 630А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/630-800A/avr-630-800a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
+                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -2481,6 +2601,12 @@
             "description": "Шкаф АВР 800А на базе Dekraft, 2 ввода",
             "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 800А.",
             "documentation": [
+                {
+                    "name": "Комплект чертежей шкафа АВР 800А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/630-800A/avr-630-800a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -2952,6 +3078,12 @@
             "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе моноблочного АВР TDM 125А.",
             "documentation": [
                 {
+                    "name": "Комплект чертежей шкафа АВР 125А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
+                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -3013,6 +3145,12 @@
             "description": "Шкаф АВР 160А на базе TDM, 2 ввода",
             "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе моноблочного АВР TDM 160А.",
             "documentation": [
+                {
+                    "name": "Комплект чертежей шкафа АВР 160А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -3076,6 +3214,12 @@
             "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе моноблочного АВР TDM 200А.",
             "documentation": [
                 {
+                    "name": "Комплект чертежей шкафа АВР 200А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
+                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -3137,6 +3281,12 @@
             "description": "Шкаф АВР 250А на базе TDM, 2 ввода",
             "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе моноблочного АВР TDM 250А.",
             "documentation": [
+                {
+                    "name": "Комплект чертежей шкафа АВР 250А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -3200,6 +3350,12 @@
             "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе моноблочного АВР TDM 400А.",
             "documentation": [
                 {
+                    "name": "Комплект чертежей шкафа АВР 400А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/400А/avr-400a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
+                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -3262,6 +3418,12 @@
             "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе моноблочного АВР TDM 630А.",
             "documentation": [
                 {
+                    "name": "Комплект чертежей шкафа АВР 630А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/630-800A/avr-630-800a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
+                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -3323,6 +3485,12 @@
             "description": "Шкаф АВР 800А на базе TDM, 2 ввода",
             "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе моноблочного АВР TDM 800А.",
             "documentation": [
+                {
+                    "name": "Комплект чертежей шкафа АВР 800А на 2 ввода",
+                    "url": "../documents/monoblock-avr/2-inputs/630-800A/avr-630-800a-2inputs-drawings.pdf",
+                    "size": 2048000,
+                    "type": "pdf"
+                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
