@@ -3714,19 +3714,14 @@ h1.category-title {
   flex-shrink: 0;
   width: 500px;
   height: 280px;
-  background: #f9fafb;
-  border-radius: 1rem;
-  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
 
 .brand-logo-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: scale(1.05);
 }
 
 .brand-logo-card img {
