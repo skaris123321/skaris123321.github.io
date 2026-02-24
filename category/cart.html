@@ -18,7 +18,7 @@
     }
   </script>
 
-  <link rel="stylesheet" href="../css/main.css?v=31">
+  <link rel="stylesheet" href="../css/main.css?v=32">
 </head>
 <body class="bg-light text-dark">
   <header class="header">
@@ -687,22 +687,73 @@
           },
 
           async submitOrder() {
-            // Формируем данные заказа
-            const orderData = {
-              clientType: this.clientType === 'individual' ? 'Физическое лицо' : 'Юридическое лицо',
-              orderDate: new Date().toLocaleString('ru-RU'),
-              ...this.orderForm,
-              totalItems: this.totalItems,
-              totalPrice: this.formatPrice(this.totalPrice),
-              // Форматируем товары для письма
-              items: this.items.map((item, index) => 
-                `${index + 1}. ${item.productTitle}\n` +
-                `   Артикул: ${item.article}\n` +
-                `   Производитель: ${item.manufacturerBrand}\n` +
-                `   Количество: ${item.quantity} шт.\n` +
-                `   Цена: ${this.formatPrice(item.totalPrice * item.quantity)}`
-              ).join('\n\n')
-            };
+            // Формируем данные заказа в зависимости от типа клиента
+            let emailContent = '';
+            
+            if (this.clientType === 'individual') {
+              // Формат для физического лица
+              emailContent = `
+НОВЫЙ ЗАКАЗ - ФИЗИЧЕСКОЕ ЛИЦО
+================================
+
+Дата заказа: ${new Date().toLocaleString('ru-RU')}
+
+ИНФОРМАЦИЯ О КЛИЕНТЕ:
+ФИО: ${this.orderForm.fullName}
+Телефон: ${this.orderForm.phone}
+Email: ${this.orderForm.email}
+Адрес доставки: ${this.orderForm.address}
+Комментарий: ${this.orderForm.comment || 'Нет'}
+
+ТОВАРЫ В ЗАКАЗЕ:
+${this.items.map((item, index) => 
+  `${index + 1}. ${item.productTitle}
+   Артикул: ${item.article}
+   Производитель: ${item.manufacturerBrand}
+   Количество: ${item.quantity} шт.
+   Цена за единицу: ${this.formatPrice(item.totalPrice)}
+   Сумма: ${this.formatPrice(item.totalPrice * item.quantity)}`
+).join('\n\n')}
+
+ИТОГО:
+Количество товаров: ${this.totalItems} шт.
+Общая сумма: ${this.formatPrice(this.totalPrice)}
+              `;
+            } else {
+              // Формат для юридического лица
+              emailContent = `
+НОВЫЙ ЗАКАЗ - ЮРИДИЧЕСКОЕ ЛИЦО
+================================
+
+Дата заказа: ${new Date().toLocaleString('ru-RU')}
+
+ИНФОРМАЦИЯ ОБ ОРГАНИЗАЦИИ:
+Название организации: ${this.orderForm.companyName}
+ИНН: ${this.orderForm.inn}
+КПП: ${this.orderForm.kpp}
+Юридический адрес: ${this.orderForm.legalAddress}
+
+КОНТАКТНОЕ ЛИЦО:
+ФИО: ${this.orderForm.contactPerson}
+Телефон: ${this.orderForm.phone}
+Email: ${this.orderForm.email}
+Комментарий: ${this.orderForm.comment || 'Нет'}
+
+ТОВАРЫ В ЗАКАЗЕ:
+${this.items.map((item, index) => 
+  `${index + 1}. ${item.productTitle}
+   Артикул: ${item.article}
+   Производитель: ${item.manufacturerBrand}
+   Количество: ${item.quantity} шт.
+   Цена за единицу: ${this.formatPrice(item.totalPrice)}
+   Сумма: ${this.formatPrice(item.totalPrice * item.quantity)}`
+).join('\n\n')}
+
+ИТОГО:
+Количество товаров: ${this.totalItems} шт.
+Общая сумма: ${this.formatPrice(this.totalPrice)}
+              `;
+            }
 
             try {
               // Отправляем через Formspree
@@ -711,7 +762,10 @@
                 headers: {
                   'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(orderData)
+                body: JSON.stringify({
+                  email: this.orderForm.email,
+                  message: emailContent
+                })
               });
 
               if (response.ok) {
