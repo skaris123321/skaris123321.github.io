@@ -177,7 +177,7 @@ class ProductsAPI {
       if (poles_count) {
         currentProducts = currentProducts.filter(p => p.poles_count === poles_count);
       }
-      const nominalCurrents = [...new Set(currentProducts.map(p => parseInt(p.nominal_current)).filter(Boolean))];
+      const nominalCurrents = [...new Set(currentProducts.map(p => parseFloat(p.nominal_current)).filter(Boolean))];
       availableOptions.nominal_current = nominalCurrents.sort((a, b) => a - b);
     } else if (commutation_type === 'reactive_power') {
       // Для реактивной мощности добавляем regulation_type, reactive_power и steps
@@ -243,7 +243,7 @@ class ProductsAPI {
       if (inputs_count) {
         currentProducts = currentProducts.filter(p => p.inputs_count === inputs_count);
       }
-      const nominalCurrents = [...new Set(currentProducts.map(p => parseInt(p.nominal_current)).filter(Boolean))];
+      const nominalCurrents = [...new Set(currentProducts.map(p => parseFloat(p.nominal_current)).filter(Boolean))];
       availableOptions.nominal_current = nominalCurrents.sort((a, b) => a - b);
     }
 
@@ -288,7 +288,7 @@ class ProductsAPI {
         product: {
           id: foundProduct.id || null,
           article: foundProduct.article || '',
-          nominal_current: parseInt(foundProduct.nominal_current || 0),
+          nominal_current: parseFloat(foundProduct.nominal_current || 0),
           commutation_type: foundProduct.commutation_type || null,
           manufacturer_brand: foundProduct.brand || null,
           inputs_count: foundProduct.inputs_count || null,
@@ -373,7 +373,7 @@ class ProductsAPI {
         }
       } else {
         // Для АВР проверяем nominal_current
-        if (!product.nominal_current || parseInt(product.nominal_current) !== parseInt(nominal_current)) {
+        if (!product.nominal_current || parseFloat(product.nominal_current) !== parseFloat(nominal_current)) {
           return false;
         }
       }
@@ -422,7 +422,7 @@ class ProductsAPI {
       product: {
         id: foundProduct.id || null,
         article: foundProduct.article || '',
-        nominal_current: parseInt(foundProduct.nominal_current || 0),
+        nominal_current: parseFloat(foundProduct.nominal_current || 0),
         commutation_type: foundProduct.commutation_type || null,
         manufacturer_brand: foundProduct.brand || null,
         inputs_count: foundProduct.inputs_count || null,
