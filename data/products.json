@@ -426,12 +426,6 @@
             "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе моноблочного АВР CHINT 125А.",
             "documentation": [
                 {
-                    "name": "Комплект чертежей шкафа АВР 125А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
-                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -493,12 +487,6 @@
             "description": "Шкаф АВР 160А на базе CHINT, 2 ввода",
             "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе моноблочного АВР CHINT 160А.",
             "documentation": [
-                {
-                    "name": "Комплект чертежей шкафа АВР 160А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -562,12 +550,6 @@
             "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе моноблочного АВР CHINT 200А.",
             "documentation": [
                 {
-                    "name": "Комплект чертежей шкафа АВР 200А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
-                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -629,12 +611,6 @@
             "description": "Шкаф АВР 250А на базе CHINT, 2 ввода",
             "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе моноблочного АВР CHINT 250А.",
             "documentation": [
-                {
-                    "name": "Комплект чертежей шкафа АВР 250А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -698,12 +674,6 @@
             "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе моноблочного АВР CHINT 400А.",
             "documentation": [
                 {
-                    "name": "Комплект чертежей шкафа АВР 400А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/400А/avr-400a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
-                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -766,12 +736,6 @@
             "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе моноблочного АВР CHINT 630А.",
             "documentation": [
                 {
-                    "name": "Комплект чертежей шкафа АВР 630А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/630-800A/avr-630-800a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
-                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -833,12 +797,6 @@
             "description": "Шкаф АВР 800А на базе CHINT, 2 ввода",
             "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе моноблочного АВР CHINT 800А.",
             "documentation": [
-                {
-                    "name": "Комплект чертежей шкафа АВР 800А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/630-800A/avr-630-800a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -1310,12 +1268,6 @@
             "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе моноблочного АВР EKF 125А.",
             "documentation": [
                 {
-                    "name": "Комплект чертежей шкафа АВР 125А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
-                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -1377,12 +1329,6 @@
             "description": "Шкаф АВР 160А на базе EKF, 2 ввода",
             "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе моноблочного АВР EKF 160А.",
             "documentation": [
-                {
-                    "name": "Комплект чертежей шкафа АВР 160А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -1446,12 +1392,6 @@
             "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе моноблочного АВР EKF 200А.",
             "documentation": [
                 {
-                    "name": "Комплект чертежей шкафа АВР 200А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
-                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -1513,12 +1453,6 @@
             "description": "Шкаф АВР 250А на базе EKF, 2 ввода",
             "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе моноблочного АВР EKF 250А.",
             "documentation": [
-                {
-                    "name": "Комплект чертежей шкафа АВР 250А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -1582,12 +1516,6 @@
             "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе моноблочного АВР EKF 400А.",
             "documentation": [
                 {
-                    "name": "Комплект чертежей шкафа АВР 400А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/400А/avr-400a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
-                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -1650,12 +1578,6 @@
             "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе моноблочного АВР EKF 630А.",
             "documentation": [
                 {
-                    "name": "Комплект чертежей шкафа АВР 630А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/630-800A/avr-630-800a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
-                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -1717,12 +1639,6 @@
             "description": "Шкаф АВР 800А на базе EKF, 2 ввода",
             "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе моноблочного АВР EKF 800А.",
             "documentation": [
-                {
-                    "name": "Комплект чертежей шкафа АВР 800А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/630-800A/avr-630-800a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -2194,12 +2110,6 @@
             "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 125А.",
             "documentation": [
                 {
-                    "name": "Комплект чертежей шкафа АВР 125А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
-                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -2261,12 +2171,6 @@
             "description": "Шкаф АВР 160А на базе Dekraft, 2 ввода",
             "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 160А.",
             "documentation": [
-                {
-                    "name": "Комплект чертежей шкафа АВР 160А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -2330,12 +2234,6 @@
             "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 200А.",
             "documentation": [
                 {
-                    "name": "Комплект чертежей шкафа АВР 200А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
-                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -2397,12 +2295,6 @@
             "description": "Шкаф АВР 250А на базе Dekraft, 2 ввода",
             "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 250А.",
             "documentation": [
-                {
-                    "name": "Комплект чертежей шкафа АВР 250А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -2466,12 +2358,6 @@
             "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 400А.",
             "documentation": [
                 {
-                    "name": "Комплект чертежей шкафа АВР 400А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/400А/avr-400a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
-                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -2534,12 +2420,6 @@
             "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 630А.",
             "documentation": [
                 {
-                    "name": "Комплект чертежей шкафа АВР 630А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/630-800A/avr-630-800a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
-                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -2601,12 +2481,6 @@
             "description": "Шкаф АВР 800А на базе Dekraft, 2 ввода",
             "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе моноблочного АВР Dekraft 800А.",
             "documentation": [
-                {
-                    "name": "Комплект чертежей шкафа АВР 800А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/630-800A/avr-630-800a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -3078,12 +2952,6 @@
             "full_description": "Трёхфазный АВР 125А на 2 ввода, выполнен на базе моноблочного АВР TDM 125А.",
             "documentation": [
                 {
-                    "name": "Комплект чертежей шкафа АВР 125А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
-                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -3145,12 +3013,6 @@
             "description": "Шкаф АВР 160А на базе TDM, 2 ввода",
             "full_description": "Трёхфазный АВР 160А на 2 ввода, выполнен на базе моноблочного АВР TDM 160А.",
             "documentation": [
-                {
-                    "name": "Комплект чертежей шкафа АВР 160А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -3214,12 +3076,6 @@
             "full_description": "Трёхфазный АВР 200А на 2 ввода, выполнен на базе моноблочного АВР TDM 200А.",
             "documentation": [
                 {
-                    "name": "Комплект чертежей шкафа АВР 200А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
-                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -3281,12 +3137,6 @@
             "description": "Шкаф АВР 250А на базе TDM, 2 ввода",
             "full_description": "Трёхфазный АВР 250А на 2 ввода, выполнен на базе моноблочного АВР TDM 250А.",
             "documentation": [
-                {
-                    "name": "Комплект чертежей шкафа АВР 250А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/125-250А/avr-125-250a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -3350,12 +3200,6 @@
             "full_description": "Трёхфазный АВР 400А на 2 ввода, выполнен на базе моноблочного АВР TDM 400А.",
             "documentation": [
                 {
-                    "name": "Комплект чертежей шкафа АВР 400А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/400А/avr-400a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
-                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -3418,12 +3262,6 @@
             "full_description": "Трёхфазный АВР 630А на 2 ввода, выполнен на базе моноблочного АВР TDM 630А.",
             "documentation": [
                 {
-                    "name": "Комплект чертежей шкафа АВР 630А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/630-800A/avr-630-800a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
-                {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
                     "size": 1251760,
@@ -3485,12 +3323,6 @@
             "description": "Шкаф АВР 800А на базе TDM, 2 ввода",
             "full_description": "Трёхфазный АВР 800А на 2 ввода, выполнен на базе моноблочного АВР TDM 800А.",
             "documentation": [
-                {
-                    "name": "Комплект чертежей шкафа АВР 800А на 2 ввода",
-                    "url": "../documents/monoblock-avr/2-inputs/630-800A/avr-630-800a-2inputs-drawings.pdf",
-                    "size": 2048000,
-                    "type": "pdf"
-                },
                 {
                     "name": "Сертификат НКУ (ТР ТС) 2024-2029",
                     "url": "../documents/Сертификат НКУ (ТР ТС) 2024-2029.pdf",
@@ -40010,6 +39842,696 @@
                 "Количество ступеней": "20"
             },
             "full_description": "<p>УКРМ — это современное электротехническое оборудование, предназначенное для компенсации реактивной мощности в электрических сетях. Устройство позволяет оптимизировать энергопотребление и снизить затраты на электроэнергию.</p><p><strong>Основные функции:</strong></p><ul><li>Компенсация реактивной мощности</li><li>Повышение коэффициента мощности (cos φ)</li><li>Снижение потерь электроэнергии</li><li>Стабилизация напряжения в сети</li><li>Защита оборудования от перегрузок</li></ul><p><strong>Технические преимущества:</strong></p><ul><li>Автоматическое управление — мгновенная реакция на изменения нагрузки</li><li>Точность компенсации — поддержание заданного значения cos φ</li><li>Энергоэффективность — снижение потребления электроэнергии</li><li>Надежность — защита от перегрузок и коротких замыканий</li><li>Долговечность — использование качественных компонентов</li></ul>"
+        },
+        {
+            "id": 1216,
+            "article": "Я5000-2Ф-0.6-IEK",
+            "nominal_current": 0.6,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_no_auto",
+            "base_price": 12090,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 0.6А без переключателя на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 0.6А, двухфидерный, без переключателя на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "0.6",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, без переключателя на автоматический режим"
+            }
+        },
+        {
+            "id": 1217,
+            "article": "Я5000-2Ф-0.6-IEK-А",
+            "nominal_current": 0.6,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_with_auto",
+            "base_price": 12090,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 0.6А с переключателем на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 0.6А, двухфидерный, с переключателем на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "0.6",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, с переключателем на автоматический режим"
+            }
+        },
+        {
+            "id": 1218,
+            "article": "Я5000-2Ф-1-IEK",
+            "nominal_current": 1,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_no_auto",
+            "base_price": 12150,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 1А без переключателя на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 1А, двухфидерный, без переключателя на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "1",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, без переключателя на автоматический режим"
+            }
+        },
+        {
+            "id": 1219,
+            "article": "Я5000-2Ф-1-IEK-А",
+            "nominal_current": 1,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_with_auto",
+            "base_price": 12150,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 1А с переключателем на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 1А, двухфидерный, с переключателем на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "1",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, с переключателем на автоматический режим"
+            }
+        },
+        {
+            "id": 1220,
+            "article": "Я5000-2Ф-1.6-IEK",
+            "nominal_current": 1.6,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_no_auto",
+            "base_price": 12240,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 1.6А без переключателя на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 1.6А, двухфидерный, без переключателя на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "1.6",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, без переключателя на автоматический режим"
+            }
+        },
+        {
+            "id": 1221,
+            "article": "Я5000-2Ф-1.6-IEK-А",
+            "nominal_current": 1.6,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_with_auto",
+            "base_price": 12240,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 1.6А с переключателем на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 1.6А, двухфидерный, с переключателем на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "1.6",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, с переключателем на автоматический режим"
+            }
+        },
+        {
+            "id": 1222,
+            "article": "Я5000-2Ф-2.5-IEK",
+            "nominal_current": 2.5,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_no_auto",
+            "base_price": 12375,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 2.5А без переключателя на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 2.5А, двухфидерный, без переключателя на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "2.5",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, без переключателя на автоматический режим"
+            }
+        },
+        {
+            "id": 1223,
+            "article": "Я5000-2Ф-2.5-IEK-А",
+            "nominal_current": 2.5,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_with_auto",
+            "base_price": 12375,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 2.5А с переключателем на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 2.5А, двухфидерный, с переключателем на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "2.5",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, с переключателем на автоматический режим"
+            }
+        },
+        {
+            "id": 1224,
+            "article": "Я5000-2Ф-4-IEK",
+            "nominal_current": 4,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_no_auto",
+            "base_price": 12600,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 4А без переключателя на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 4А, двухфидерный, без переключателя на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "4",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, без переключателя на автоматический режим"
+            }
+        },
+        {
+            "id": 1225,
+            "article": "Я5000-2Ф-4-IEK-А",
+            "nominal_current": 4,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_with_auto",
+            "base_price": 12600,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 4А с переключателем на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 4А, двухфидерный, с переключателем на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "4",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, с переключателем на автоматический режим"
+            }
+        },
+        {
+            "id": 1226,
+            "article": "Я5000-2Ф-6-IEK",
+            "nominal_current": 6,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_no_auto",
+            "base_price": 12900,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 6А без переключателя на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 6А, двухфидерный, без переключателя на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "6",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, без переключателя на автоматический режим"
+            }
+        },
+        {
+            "id": 1227,
+            "article": "Я5000-2Ф-6-IEK-А",
+            "nominal_current": 6,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_with_auto",
+            "base_price": 12900,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 6А с переключателем на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 6А, двухфидерный, с переключателем на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "6",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, с переключателем на автоматический режим"
+            }
+        },
+        {
+            "id": 1228,
+            "article": "Я5000-2Ф-8-IEK",
+            "nominal_current": 8,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_no_auto",
+            "base_price": 13200,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 8А без переключателя на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 8А, двухфидерный, без переключателя на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "8",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, без переключателя на автоматический режим"
+            }
+        },
+        {
+            "id": 1229,
+            "article": "Я5000-2Ф-8-IEK-А",
+            "nominal_current": 8,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_with_auto",
+            "base_price": 13200,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 8А с переключателем на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 8А, двухфидерный, с переключателем на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "8",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, с переключателем на автоматический режим"
+            }
+        },
+        {
+            "id": 1230,
+            "article": "Я5000-2Ф-10-IEK",
+            "nominal_current": 10,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_no_auto",
+            "base_price": 13500,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 10А без переключателя на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 10А, двухфидерный, без переключателя на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "10",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, без переключателя на автоматический режим"
+            }
+        },
+        {
+            "id": 1231,
+            "article": "Я5000-2Ф-10-IEK-А",
+            "nominal_current": 10,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_with_auto",
+            "base_price": 13500,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 10А с переключателем на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 10А, двухфидерный, с переключателем на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "10",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, с переключателем на автоматический режим"
+            }
+        },
+        {
+            "id": 1232,
+            "article": "Я5000-2Ф-12-IEK",
+            "nominal_current": 12,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_no_auto",
+            "base_price": 13800,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 12А без переключателя на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 12А, двухфидерный, без переключателя на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "12",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, без переключателя на автоматический режим"
+            }
+        },
+        {
+            "id": 1233,
+            "article": "Я5000-2Ф-12-IEK-А",
+            "nominal_current": 12,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_with_auto",
+            "base_price": 13800,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 12А с переключателем на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 12А, двухфидерный, с переключателем на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "12",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, с переключателем на автоматический режим"
+            }
+        },
+        {
+            "id": 1234,
+            "article": "Я5000-2Ф-25-IEK",
+            "nominal_current": 25,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_no_auto",
+            "base_price": 15750,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 25А без переключателя на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 25А, двухфидерный, без переключателя на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "25",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, без переключателя на автоматический режим"
+            }
+        },
+        {
+            "id": 1235,
+            "article": "Я5000-2Ф-25-IEK-А",
+            "nominal_current": 25,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_with_auto",
+            "base_price": 15750,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 25А с переключателем на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 25А, двухфидерный, с переключателем на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "25",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, с переключателем на автоматический режим"
+            }
+        },
+        {
+            "id": 1236,
+            "article": "Я5000-2Ф-32-IEK",
+            "nominal_current": 32,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_no_auto",
+            "base_price": 16800,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 32А без переключателя на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 32А, двухфидерный, без переключателя на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "32",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, без переключателя на автоматический режим"
+            }
+        },
+        {
+            "id": 1237,
+            "article": "Я5000-2Ф-32-IEK-А",
+            "nominal_current": 32,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_with_auto",
+            "base_price": 16800,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 32А с переключателем на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 32А, двухфидерный, с переключателем на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "32",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, с переключателем на автоматический режим"
+            }
+        },
+        {
+            "id": 1238,
+            "article": "Я5000-2Ф-40-IEK",
+            "nominal_current": 40,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_no_auto",
+            "base_price": 18000,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 40А без переключателя на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 40А, двухфидерный, без переключателя на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "40",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, без переключателя на автоматический режим"
+            }
+        },
+        {
+            "id": 1239,
+            "article": "Я5000-2Ф-40-IEK-А",
+            "nominal_current": 40,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_with_auto",
+            "base_price": 18000,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 40А с переключателем на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 40А, двухфидерный, с переключателем на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "40",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, с переключателем на автоматический режим"
+            }
+        },
+        {
+            "id": 1240,
+            "article": "Я5000-2Ф-50-IEK",
+            "nominal_current": 50,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_no_auto",
+            "base_price": 19500,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 50А без переключателя на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 50А, двухфидерный, без переключателя на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "50",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, без переключателя на автоматический режим"
+            }
+        },
+        {
+            "id": 1241,
+            "article": "Я5000-2Ф-50-IEK-А",
+            "nominal_current": 50,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_with_auto",
+            "base_price": 19500,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 50А с переключателем на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 50А, двухфидерный, с переключателем на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "50",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, с переключателем на автоматический режим"
+            }
+        },
+        {
+            "id": 1242,
+            "article": "Я5000-2Ф-63-IEK",
+            "nominal_current": 63,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_no_auto",
+            "base_price": 21450,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 63А без переключателя на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 63А, двухфидерный, без переключателя на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "63",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, без переключателя на автоматический режим"
+            }
+        },
+        {
+            "id": 1243,
+            "article": "Я5000-2Ф-63-IEK-А",
+            "nominal_current": 63,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_with_auto",
+            "base_price": 21450,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 63А с переключателем на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 63А, двухфидерный, с переключателем на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "63",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, с переключателем на автоматический режим"
+            }
+        },
+        {
+            "id": 1244,
+            "article": "Я5000-2Ф-80-IEK",
+            "nominal_current": 80,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_no_auto",
+            "base_price": 24000,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 80А без переключателя на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 80А, двухфидерный, без переключателя на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "80",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, без переключателя на автоматический режим"
+            }
+        },
+        {
+            "id": 1245,
+            "article": "Я5000-2Ф-80-IEK-А",
+            "nominal_current": 80,
+            "brand": "IEK",
+            "commutation_type": "motor_control_box",
+            "box_type": "double_feeder",
+            "motor_control_type": "non_reversible",
+            "feeder_type": "double_with_auto",
+            "base_price": 24000,
+            "main_image": "images/upr-ilektr.jpg",
+            "images": [
+                "images/upr-ilektr.jpg"
+            ],
+            "description": "Ящик управления Я5000 двухфидерный нереверсивный 80А с переключателем на автоматический режим",
+            "full_description": "Ящик управления электродвигателем Я5000 двухфидерный нереверсивный, номинальный ток 80А, двухфидерный, с переключателем на автоматический режим.",
+            "documentation": [],
+            "specs": {
+                "Номинальный ток щитка, А": "80",
+                "Тип": "Двухфидерный нереверсивный",
+                "Количество фидеров": "Двухфидерный, с переключателем на автоматический режим"
+            }
         }
     ]
 }

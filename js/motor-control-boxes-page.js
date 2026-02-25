@@ -6,6 +6,7 @@ function motorControlBoxesPage() {
         selectedBoxType: '',
         selectedBrand: '',
         selectedCurrent: '',
+        sortBy: '',
         availableBrands: [],
         availableCurrents: [],
 
@@ -68,6 +69,13 @@ function motorControlBoxesPage() {
 
                 return true;
             });
+
+            // Применяем сортировку
+            if (this.sortBy === 'price_asc') {
+                this.filteredProducts.sort((a, b) => a.base_price - b.base_price);
+            } else if (this.sortBy === 'price_desc') {
+                this.filteredProducts.sort((a, b) => b.base_price - a.base_price);
+            }
 
             console.log('Отфильтровано товаров:', this.filteredProducts.length);
         },
