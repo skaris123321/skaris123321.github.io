@@ -37,7 +37,7 @@ if (typeof ProductsAPI !== 'undefined') {
 
     async getAvailableOptions(filters = {}) {
       const data = await this.loadProducts();
-      const { manufacturer_brand, commutation_type, inputs_count, control_type, motor_power, enclosure_type, connection_type, climate_type, regulation_type } = filters;
+      const { manufacturer_brand, commutation_type, inputs_count, control_type, motor_power, enclosure_type, connection_type, climate_type, regulation_type, box_type, motor_control_type, feeder_type } = filters;
 
       let filtered = data.products;
       if (manufacturer_brand) filtered = filtered.filter(p => p.brand === manufacturer_brand);
@@ -49,6 +49,9 @@ if (typeof ProductsAPI !== 'undefined') {
       if (connection_type) filtered = filtered.filter(p => p.connection_type === connection_type);
       if (climate_type) filtered = filtered.filter(p => p.climate_type === climate_type);
       if (regulation_type) filtered = filtered.filter(p => p.regulation_type === regulation_type);
+      if (box_type) filtered = filtered.filter(p => p.box_type === box_type);
+      if (motor_control_type) filtered = filtered.filter(p => p.motor_control_type === motor_control_type);
+      if (feeder_type) filtered = filtered.filter(p => p.feeder_type === feeder_type);
 
       const opts = {
         manufacturer_brand: [...new Set(data.products.map(p => p.brand).filter(Boolean))].sort(),
@@ -102,6 +105,9 @@ if (typeof ProductsAPI !== 'undefined') {
         let currentProducts = data.products;
         if (manufacturer_brand) currentProducts = currentProducts.filter(p => p.brand === manufacturer_brand);
         if (commutation_type) currentProducts = currentProducts.filter(p => p.commutation_type === commutation_type);
+        if (box_type) currentProducts = currentProducts.filter(p => p.box_type === box_type);
+        if (motor_control_type) currentProducts = currentProducts.filter(p => p.motor_control_type === motor_control_type);
+        if (feeder_type) currentProducts = currentProducts.filter(p => p.feeder_type === feeder_type);
         opts.nominal_current = [...new Set(currentProducts.map(p => parseFloat(p.nominal_current)).filter(Boolean))].sort((a, b) => a - b);
       } else {
         // Для АВР добавляем nominal_current
