@@ -2279,6 +2279,14 @@ document.addEventListener('alpine:init', () => {
             }] : [])
           };
         }
+        
+        // Возвращаем пустое описание по умолчанию
+        return {
+          purpose: '',
+          purposeList: [],
+          workflow: [],
+          features: []
+        };
       },
       
       // Метод для обновления количества полюсов (для контакторов)
