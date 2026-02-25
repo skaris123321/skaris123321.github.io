@@ -213,6 +213,13 @@
             :disabled="loading"
           >IEK</button>
           <button 
+            x-show="commutationType === 'motor_control_box'"
+            class="spec-option"
+            :class="{ active: manufacturerBrand === 'IEK', 'opacity-50': loading }"
+            @click="updateManufacturerBrand('IEK')"
+            :disabled="loading"
+          >IEK</button>
+          <button 
             class="spec-option"
             :class="{ active: manufacturerBrand === 'TDM', 'opacity-50': loading }"
             @click="updateManufacturerBrand('TDM')"
