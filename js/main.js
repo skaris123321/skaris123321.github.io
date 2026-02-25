@@ -97,6 +97,12 @@ if (typeof ProductsAPI !== 'undefined') {
         if (commutation_type) reactivePowerProducts = reactivePowerProducts.filter(p => p.commutation_type === commutation_type);
         if (regulation_type) reactivePowerProducts = reactivePowerProducts.filter(p => p.regulation_type === regulation_type);
         opts.reactive_power = [...new Set(reactivePowerProducts.map(p => parseFloat(p.power)).filter(Boolean))].sort((a, b) => a - b);
+      } else if (commutation_type === 'motor_control_box') {
+        // Для ящиков управления электродвигателями Я5000 добавляем nominal_current
+        let currentProducts = data.products;
+        if (manufacturer_brand) currentProducts = currentProducts.filter(p => p.brand === manufacturer_brand);
+        if (commutation_type) currentProducts = currentProducts.filter(p => p.commutation_type === commutation_type);
+        opts.nominal_current = [...new Set(currentProducts.map(p => parseFloat(p.nominal_current)).filter(Boolean))].sort((a, b) => a - b);
       } else {
         // Для АВР добавляем nominal_current
         let currentProducts = data.products;
@@ -442,6 +448,11 @@ document.addEventListener('alpine:init', () => {
             if (this.regulationType) filters.regulation_type = this.regulationType;
             if (this.reactivePower) filters.reactive_power = this.reactivePower;
             if (this.step) filters.step = this.step;
+          } else if (this.commutationType === 'motor_control_box') {
+            // Для ящиков управления электродвигателями Я5000
+            if (this.boxType) filters.box_type = this.boxType;
+            if (this.motorControlType) filters.motor_control_type = this.motorControlType;
+            if (this.feederType) filters.feeder_type = this.feederType;
           } else {
             // Для АВР используем старые фильтры
             // Для контакторов используем poles_count, для остальных - inputs_count
@@ -1080,6 +1091,15 @@ document.addEventListener('alpine:init', () => {
         } finally {
           this.loading = false;
         }
+      },
+      
+      // Метод для обновления типа фидера (для ящиков управления)
+      async updateFeederType(value) {
+        if (this.loading) return;
+        this.feederType = value;
+        
+        await this.loadProductByCharacteristics();
+        this.updateCartQuantity();
       },
       
       // Итоговая цена = базовая цена + дополнительные опции
