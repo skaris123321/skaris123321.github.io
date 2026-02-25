@@ -100,12 +100,62 @@
 
   <section class="sort-section">
     <div class="container sort-controls">
-      <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-        <!-- Название для брендов -->
-        <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem;">Бренды:</span>
-        
-        <!-- Кнопки фильтрации по брендам -->
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+      <!-- Тип регулирования -->
+      <div style="margin-bottom: 1.5rem;">
+        <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Тип регулирования</span>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button 
+            @click="filterByType('unregulated')"
+            :class="{ active: selectedType === 'unregulated' }"
+            class="brand-filter-btn"
+          >
+            Нерегулируемая
+          </button>
+          <button 
+            @click="filterByType('regulated')"
+            :class="{ active: selectedType === 'regulated' }"
+            class="brand-filter-btn"
+          >
+            Автоматически регулируемая
+          </button>
+        </div>
+      </div>
+
+      <!-- Мощность (только для регулируемых) -->
+      <div x-show="selectedType === 'regulated'" style="margin-bottom: 1.5rem;">
+        <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Мощность</span>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <template x-for="power in uniquePowers" :key="power">
+            <button 
+              @click="filterByPower(power)"
+              :class="{ active: selectedPower === power }"
+              class="brand-filter-btn"
+            >
+              <span x-text="power"></span> кВАр
+            </button>
+          </template>
+        </div>
+      </div>
+
+      <!-- Количество ступеней (только для регулируемых) -->
+      <div x-show="selectedType === 'regulated'" style="margin-bottom: 1.5rem;">
+        <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Количество ступеней</span>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <template x-for="step in uniqueSteps" :key="step">
+            <button 
+              @click="filterByStep(step)"
+              :class="{ active: selectedStep === step }"
+              class="brand-filter-btn"
+              x-text="step"
+            ></button>
+          </template>
+        </div>
+      </div>
+
+      <!-- Бренды -->
+      <div style="margin-bottom: 1.5rem;">
+        <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Бренды</span>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
           <template x-for="brand in uniqueBrands" :key="brand">
             <button 
               @click="filterByBrand(brand)"
@@ -115,24 +165,24 @@
             ></button>
           </template>
         </div>
+      </div>
 
-        <!-- Сортировка -->
-        <div style="display: flex; gap: 0.5rem; margin-left: auto;">
-          <button 
-            @click="sortBy = 'price_asc'; applyFilters()"
-            :class="{ active: sortBy === 'price_asc' }"
-            class="sort-btn"
-          >
-            По цене ↑
-          </button>
-          <button 
-            @click="sortBy = 'price_desc'; applyFilters()"
-            :class="{ active: sortBy === 'price_desc' }"
-            class="sort-btn"
-          >
-            По цене ↓
-          </button>
-        </div>
+      <!-- Сортировка -->
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <button 
+          @click="sortBy = 'price_asc'; applyFilters()"
+          :class="{ active: sortBy === 'price_asc' }"
+          class="sort-btn"
+        >
+          По цене ↑
+        </button>
+        <button 
+          @click="sortBy = 'price_desc'; applyFilters()"
+          :class="{ active: sortBy === 'price_desc' }"
+          class="sort-btn"
+        >
+          По цене ↓
+        </button>
       </div>
     </div>
   </section>
