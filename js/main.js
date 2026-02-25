@@ -1,4 +1,4 @@
-if (typeof window.solveSimpleChallenge === 'undefined') {
+﻿if (typeof window.solveSimpleChallenge === 'undefined') {
   window.solveSimpleChallenge = () => null;
 }
 
@@ -109,14 +109,7 @@ if (typeof ProductsAPI !== 'undefined') {
         if (motor_control_type) currentProducts = currentProducts.filter(p => p.motor_control_type === motor_control_type);
         if (feeder_type) currentProducts = currentProducts.filter(p => p.feeder_type === feeder_type);
         
-        console.log('=== ОТЛАДКА ДОСТУПНЫХ ТОКОВ ДЛЯ ЯЩИКОВ УПРАВЛЕНИЯ ===');
-        console.log('Фильтры:', { manufacturer_brand, commutation_type, box_type, motor_control_type, feeder_type });
-        console.log('Найдено продуктов после фильтрации:', currentProducts.length);
-        console.log('Токи из продуктов:', currentProducts.map(p => p.nominal_current));
-        
         opts.nominal_current = [...new Set(currentProducts.map(p => parseFloat(p.nominal_current)).filter(Boolean))].sort((a, b) => a - b);
-        
-        console.log('Доступные токи:', opts.nominal_current);
       } else {
         // Для АВР добавляем nominal_current
         let currentProducts = data.products;
@@ -289,7 +282,6 @@ if (typeof ProductsAPI !== 'undefined') {
 }
 
 document.addEventListener('alpine:init', () => {
-  console.log('РОСЭК сайт запущен');
   
   Alpine.data('productData', () => {
     return {
@@ -477,11 +469,6 @@ document.addEventListener('alpine:init', () => {
           if (this.manufacturerBrand) filters.manufacturer_brand = this.manufacturerBrand;
           if (this.commutationType) filters.commutation_type = this.commutationType;
           
-          console.log('=== ЗАГРУЗКА ДОСТУПНЫХ ОПЦИЙ ===');
-          console.log('Тип коммутации:', this.commutationType);
-          console.log('Бренд:', this.manufacturerBrand);
-          console.log('Фильтры для API:', filters);
-          
           if (this.commutationType === 'control_cabinet') {
             // Для шкафов управления используем control_type и motor_power
             if (this.controlType) filters.control_type = this.controlType;
@@ -580,13 +567,11 @@ document.addEventListener('alpine:init', () => {
         
         // Проверяем наличие массива опций
         if (!this.availableOptions[optionType] || !Array.isArray(this.availableOptions[optionType])) {
-          console.log(`isOptionAvailable: ${optionType} не является массивом или не существует`);
           return false;
         }
         
         // Проверяем, что массив не пустой (для типа коммутации и количества вводов нужно хотя бы что-то быть доступным)
         if (this.availableOptions[optionType].length === 0) {
-          console.log(`isOptionAvailable: ${optionType} пустой массив`);
           return false;
         }
         
@@ -702,12 +687,9 @@ document.addEventListener('alpine:init', () => {
             });
             
             this.productSpecs = product.specs || {};
-            console.log('Loaded product specs:', this.productSpecs); // Debug log
-            console.log('All selected specs:', this.allSelectedSpecs); // Debug log
             this.productOptions = product.options || [];
             this.fullDescription = product.full_description || product.description || '';
             this.documentation = product.documentation || [];
-            console.log('Loaded documentation:', this.documentation); // Debug log для документации
             
             if (this.commutationType === 'control_cabinet') {
               // Для шкафов управления устанавливаем параметры из продукта
@@ -727,12 +709,7 @@ document.addEventListener('alpine:init', () => {
               if (product.step) {
                 this.step = String(product.step);
               }
-              console.log('=== REACTIVE POWER PRODUCT LOADED ===');
-              console.log('regulationType:', this.regulationType);
-              console.log('reactivePower:', this.reactivePower, 'type:', typeof this.reactivePower);
-              console.log('step:', this.step, 'type:', typeof this.step);
-              console.log('manufacturerBrand:', this.manufacturerBrand);
-            } else {
+              } else {
               // Для АВР устанавливаем параметры из продукта
               this.nominalCurrent = String(product.nominal_current);
               this.commutationType = product.commutation_type;
@@ -777,10 +754,6 @@ document.addEventListener('alpine:init', () => {
       
       // Новый метод для загрузки товара по ID
       async loadProductById(productId) {
-        console.log('=== ОТЛАДКА ЗАГРУЗКИ ТОВАРА ===');
-        console.log('URL:', window.location.href);
-        console.log('ID товара из URL:', productId);
-        
         this.loading = true;
         
         try {
@@ -788,22 +761,10 @@ document.addEventListener('alpine:init', () => {
             throw new Error('ProductsAPI не инициализирован');
           }
 
-          console.log('=== ЗАГРУЗКА ТОВАРА ПО ID ===');
-          console.log('Ищем товар с ID:', productId);
-          
           const data = await productsAPI.getProduct({ id: productId });
-          
-          console.log('Результат поиска:', data);
           
           if (data.success && data.product) {
             const product = data.product;
-            
-            console.log('Найденный товар:', product);
-            console.log('Артикул:', product.article);
-            console.log('Ток:', product.nominal_current);
-            console.log('Бренд:', product.manufacturer_brand);
-            console.log('Тип коммутации:', product.commutation_type);
-            console.log('Полюса:', product.poles_count);
             
             // Устанавливаем параметры товара
             this.manufacturerBrand = product.manufacturer_brand;
@@ -820,20 +781,12 @@ document.addEventListener('alpine:init', () => {
               }
             } else if (product.commutation_type === 'motor_control_box') {
               // Для ящиков управления электродвигателями Я5000
-              console.log('=== ЗАГРУЗКА ЯЩИКА УПРАВЛЕНИЯ ПО ID ===');
-              console.log('Ток из базы:', product.nominal_current, 'тип:', typeof product.nominal_current);
-              
               this.nominalCurrent = String(product.nominal_current);
               this.boxType = product.box_type || 'double_feeder';
               this.motorControlType = product.motor_control_type || 'non_reversible';
               this.feederType = product.feeder_type || 'double_no_auto';
               
-              console.log('Установленные параметры:');
-              console.log('nominalCurrent:', this.nominalCurrent, 'тип:', typeof this.nominalCurrent);
-              console.log('boxType:', this.boxType);
-              console.log('motorControlType:', this.motorControlType);
-              console.log('feederType:', this.feederType);
-            } else if (product.commutation_type === 'reactive_power') {
+              } else if (product.commutation_type === 'reactive_power') {
               // Для компенсации реактивной мощности
               this.regulationType = product.regulation_type || 'unregulated';
               this.reactivePower = String(product.reactive_power || '10');
@@ -887,11 +840,7 @@ document.addEventListener('alpine:init', () => {
             // Загружаем доступные опции для этого товара ПОСЛЕ установки всех параметров
             await this.loadAvailableOptions();
             
-            console.log('=== ДОСТУПНЫЕ ОПЦИИ ПОСЛЕ ЗАГРУЗКИ ===');
-            console.log('availableOptions.nominal_current:', this.availableOptions.nominal_current);
-            
-
-          } else {
+            } else {
             console.error('Ошибка загрузки товара по ID:', data.message);
             // Если товар не найден по ID, загружаем товар по умолчанию
             await this.loadAvailableOptions();
@@ -936,13 +885,7 @@ document.addEventListener('alpine:init', () => {
             filters.reactive_power = this.reactivePower;
             filters.regulation_type = this.regulationType;
             if (this.step) filters.step = this.step;
-            console.log('=== ФИЛЬТРЫ ДЛЯ РЕАКТИВНОЙ МОЩНОСТИ ===');
-            console.log('Бренд:', this.manufacturerBrand);
-            console.log('Мощность:', this.reactivePower);
-            console.log('Тип регулирования:', this.regulationType);
-            console.log('Ступени:', this.step);
-            console.log('Фильтры:', filters);
-          } else if (this.commutationType === 'motor_control_box') {
+            } else if (this.commutationType === 'motor_control_box') {
             // Для ящиков управления используем nominal_current
             filters.nominal_current = this.nominalCurrent;
             filters.box_type = this.boxType;
@@ -970,13 +913,9 @@ document.addEventListener('alpine:init', () => {
           const data = await productsAPI.getProduct(filters);
           
           console.log('=== РЕЗУЛЬТАТ ПОИСКА ТОВАРА (loadProductByCharacteristics) ===');
-          console.log('Успех:', data.success);
           if (data.success && data.product) {
-            console.log('Найденный товар:', data.product.article);
-            console.log('ID:', data.product.id);
-          } else {
-            console.log('Ошибка:', data.message);
-          }
+            } else {
+            }
           
           if (data.success && data.product) {
             const product = data.product;
@@ -984,10 +923,6 @@ document.addEventListener('alpine:init', () => {
             // Обновляем данные товара, но НЕ меняем характеристики
             this.basePrice = product.base_price;
             this.article = product.article;
-            
-            console.log('=== ОБНОВЛЕНИЕ АРТИКУЛА ===');
-            console.log('Новый артикул:', this.article);
-            console.log('dynamicArticle:', this.dynamicArticle);
             
             // Формируем массив изображений: main_image первым, затем дополнительные images
             let imageList = [];
@@ -2374,10 +2309,6 @@ document.addEventListener('alpine:init', () => {
       
       // Метод для обновления мощности (для компенсации реактивной мощности)
       async updateReactivePower(value) {
-        console.log('=== UPDATE REACTIVE POWER ===');
-        console.log('Новая мощность:', value);
-        console.log('Текущий артикул до обновления:', this.article);
-        
         if (this.loading) return;
         this.reactivePower = value;
         
@@ -2394,17 +2325,11 @@ document.addEventListener('alpine:init', () => {
         
         await this.loadProductByCharacteristics();
         
-        console.log('Артикул после обновления:', this.article);
-        console.log('dynamicArticle:', this.dynamicArticle);
-        
         this.updateCartQuantity();
       },
       
       // Метод для обновления количества ступеней (для автоматически регулируемых установок)
       async updateStep(value) {
-        console.log('=== UPDATE STEP ===');
-        console.log('Новые ступени:', value);
-        
         if (this.loading) return;
         this.step = value;
         

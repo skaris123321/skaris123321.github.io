@@ -47,25 +47,9 @@ class ProductsAPI {
         
         // ОТЛАДКА: проверяем первый товар с motor_control_box
         const firstMotorBox = data.products.find(p => p.commutation_type === 'motor_control_box');
-        if (firstMotorBox) {
-          console.log('🔍 ПЕРВЫЙ ЯЩИК УПРАВЛЕНИЯ ИЗ БАЗЫ:', {
-            id: firstMotorBox.id,
-            article: firstMotorBox.article,
-            nominal_current: firstMotorBox.nominal_current,
-            type: typeof firstMotorBox.nominal_current
-          });
-        }
         
         // ОТЛАДКА: проверяем товар ID 1218
         const product1218 = data.products.find(p => p.id === 1218);
-        if (product1218) {
-          console.log('🔍 ТОВАР ID 1218 ИЗ БАЗЫ:', {
-            id: product1218.id,
-            article: product1218.article,
-            nominal_current: product1218.nominal_current,
-            type: typeof product1218.nominal_current
-          });
-        }
         
         this.productsData = data;
         return data;

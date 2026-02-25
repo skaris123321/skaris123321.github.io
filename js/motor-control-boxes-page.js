@@ -1,4 +1,4 @@
-function motorControlBoxesPage() {
+﻿function motorControlBoxesPage() {
     return {
         products: [],
         filteredProducts: [],
@@ -20,7 +20,6 @@ function motorControlBoxesPage() {
 
         async loadProducts() {
             try {
-                console.log('Загружаем ящики управления Я5000...');
                 const response = await fetch('../data/products.json');
                 
                 if (!response.ok) throw new Error('Failed to load products');
@@ -32,10 +31,9 @@ function motorControlBoxesPage() {
                     p.commutation_type === 'motor_control_box'
                 );
 
-                console.log('Загружено ящиков управления:', this.products.length);
-
-                // Собираем уникальные бренды
-                this.availableBrands = [...new Set(this.products.map(p => p.brand))].sort();
+                // Собираем уникальные бренды (только разрешенные для ящиков управления)
+                const allowedBrands = ['IEK', 'TDM', 'EKF'];
+                this.availableBrands = [...new Set(this.products.map(p => p.brand).filter(b => allowedBrands.includes(b)))].sort();
 
                 this.filterProducts();
                 this.loading = false;
@@ -67,8 +65,7 @@ function motorControlBoxesPage() {
                 this.filteredProducts.sort((a, b) => b.base_price - a.base_price);
             }
 
-            console.log('Отфильтровано товаров:', this.filteredProducts.length);
-        },
+            },
 
         formatPrice(price) {
             return new Intl.NumberFormat('ru-RU').format(price) + ' ₽';

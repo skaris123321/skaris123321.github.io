@@ -1,5 +1,4 @@
-// Универсальный поиск по сайту
-console.log('search.js загружен');
+﻿// Универсальный поиск по сайту
 
 class UniversalSearch {
   constructor() {
@@ -11,12 +10,9 @@ class UniversalSearch {
     const searchInputs = document.querySelectorAll('.search-input');
     
     if (searchInputs.length === 0) {
-      console.log('Поисковые поля не найдены, повторная попытка через 1000мс');
       setTimeout(() => this.init(), 1000);
       return;
     }
-
-    console.log('Найдено поисковых полей:', searchInputs.length);
     
     searchInputs.forEach((input) => {
       const wrapper = input.parentElement;
@@ -63,7 +59,6 @@ class UniversalSearch {
       if (response.ok) {
         const data = await response.json();
         this.productsData = data.products || [];
-        console.log('Загружено товаров для поиска:', this.productsData.length);
       }
     } catch (error) {
       console.error('Ошибка загрузки данных для поиска:', error);
@@ -501,7 +496,6 @@ class UniversalSearch {
 // Инициализируем поиск после полной загрузки страницы
 window.addEventListener('load', () => {
   setTimeout(() => {
-    console.log('Инициализация поиска...');
     new UniversalSearch();
   }, 300);
 });
