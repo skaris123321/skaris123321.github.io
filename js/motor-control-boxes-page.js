@@ -31,9 +31,8 @@
                     p.commutation_type === 'motor_control_box'
                 );
 
-                // Собираем уникальные бренды (только разрешенные для ящиков управления)
-                const allowedBrands = ['IEK', 'TDM', 'EKF'];
-                this.availableBrands = [...new Set(this.products.map(p => p.brand).filter(b => allowedBrands.includes(b)))].sort();
+                // Всегда показываем 3 разрешенных бренда для ящиков управления
+                this.availableBrands = ['IEK', 'TDM', 'EKF'];
 
                 this.filterProducts();
                 this.loading = false;
