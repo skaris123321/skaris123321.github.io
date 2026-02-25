@@ -100,37 +100,39 @@
 
   <section class="sort-section">
     <div class="container sort-controls">
-      <!-- Бренды -->
-      <div style="margin-bottom: 1.5rem;">
-        <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Бренды</span>
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-          <template x-for="brand in uniqueBrands" :key="brand">
-            <button 
-              @click="filterByBrand(brand)"
-              :class="{ active: selectedBrand === brand }"
-              class="brand-filter-btn"
-              x-text="brand"
-            ></button>
-          </template>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start; width: 100%;">
+        <!-- Бренды -->
+        <div style="min-width: 300px;">
+          <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Бренды</span>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <template x-for="brand in uniqueBrands" :key="brand">
+              <button 
+                @click="filterByBrand(brand)"
+                :class="{ active: selectedBrand === brand }"
+                class="brand-filter-btn"
+                x-text="brand"
+              ></button>
+            </template>
+          </div>
         </div>
-      </div>
 
-      <!-- Сортировка -->
-      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-        <button 
-          @click="sortBy = 'price_asc'; applyFilters()"
-          :class="{ active: sortBy === 'price_asc' }"
-          class="sort-btn"
-        >
-          По цене ↑
-        </button>
-        <button 
-          @click="sortBy = 'price_desc'; applyFilters()"
-          :class="{ active: sortBy === 'price_desc' }"
-          class="sort-btn"
-        >
-          По цене ↓
-        </button>
+        <!-- Сортировка -->
+        <div style="display: flex; gap: 0.5rem; margin-left: auto; align-self: flex-end;">
+          <button 
+            @click="sortBy = 'price_asc'; applyFilters()"
+            :class="{ active: sortBy === 'price_asc' }"
+            class="sort-btn"
+          >
+            По цене ↑
+          </button>
+          <button 
+            @click="sortBy = 'price_desc'; applyFilters()"
+            :class="{ active: sortBy === 'price_desc' }"
+            class="sort-btn"
+          >
+            По цене ↓
+          </button>
+        </div>
       </div>
     </div>
   </section>
