@@ -1186,7 +1186,17 @@ document.addEventListener('alpine:init', () => {
       },
       
       get productTitle() {
-        if (this.commutationType === 'control_cabinet') {
+        if (this.commutationType === 'motor_control_box') {
+          // Для ящиков управления электродвигателями Я5000
+          const boxTypeNames = {
+            'single_feeder': 'однофидерный',
+            'double_feeder': 'двухфидерный',
+            'triple_feeder': 'трехфидерный'
+          };
+          const boxTypeName = boxTypeNames[this.boxType] || 'двухфидерный';
+          const motorControlTypeName = this.motorControlType === 'reversible' ? 'реверсивный' : 'нереверсивный';
+          return `Ящик управления Я5000 ${boxTypeName} ${motorControlTypeName} ${this.nominalCurrent || '0.6'}А`;
+        } else if (this.commutationType === 'control_cabinet') {
           if (this.controlType === 'direct_start') {
             // Для шкафов управления с прямым пуском
             const startTypeNames = {
@@ -1251,6 +1261,15 @@ document.addEventListener('alpine:init', () => {
           return 'Автоматически регулируемые конденсаторные установки';
         }
         return 'Компенсация реактивной мощности';
+      },
+      
+      getMotorControlBoxTypeDisplayName() {
+        const boxTypeNames = {
+          'single_feeder': 'Однофидерные',
+          'double_feeder': 'Двухфидерные',
+          'triple_feeder': 'Трехфидерные нереверсивные'
+        };
+        return boxTypeNames[this.boxType] || 'Ящики управления Я5000';
       },
       
       // Функция для перевода английских ключей в русские (если они попали в данные)

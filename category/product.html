@@ -84,7 +84,14 @@
             <span class="breadcrumbs-current" x-text="getReactivePowerTypeDisplayName()"></span>
           </span>
         </template>
-        <template x-if="commutationType !== 'control_cabinet' && commutationType !== 'reactive_power'">
+        <template x-if="commutationType === 'motor_control_box'">
+          <span>
+            <a href="motor-control-boxes.html">Ящики управления электродвигателями Я5000</a>
+            <span>»</span>
+            <span class="breadcrumbs-current" x-text="getMotorControlBoxTypeDisplayName()"></span>
+          </span>
+        </template>
+        <template x-if="commutationType !== 'control_cabinet' && commutationType !== 'reactive_power' && commutationType !== 'motor_control_box'">
           <span>
             <a href="avr.html">АВР</a>
             <span>»</span>
