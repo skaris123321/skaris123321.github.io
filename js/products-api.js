@@ -121,9 +121,24 @@ class ProductsAPI {
       steps: []
     };
 
-    // Все бренды
-    const allBrands = [...new Set(data.products.map(p => p.brand).filter(Boolean))];
-    availableOptions.manufacturer_brand = allBrands.sort();
+    // Все бренды (с учетом типа коммутации)
+    let brandProducts = data.products;
+    if (commutation_type) {
+      brandProducts = brandProducts.filter(p => p.commutation_type === commutation_type);
+      
+      // Для ящиков управления ограничиваем список брендов
+      if (commutation_type === 'motor_control_box') {
+        const allowedBrands = ['IEK', 'TDM', 'EKF'];
+        const allBrands = [...new Set(brandProducts.map(p => p.brand).filter(b => allowedBrands.includes(b)))];
+        availableOptions.manufacturer_brand = allBrands.sort();
+      } else {
+        const allBrands = [...new Set(brandProducts.map(p => p.brand).filter(Boolean))];
+        availableOptions.manufacturer_brand = allBrands.sort();
+      }
+    } else {
+      const allBrands = [...new Set(data.products.map(p => p.brand).filter(Boolean))];
+      availableOptions.manufacturer_brand = allBrands.sort();
+    }
 
     // Тип коммутации (с учетом бренда если выбран)
     let typeProducts = data.products;
