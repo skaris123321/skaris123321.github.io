@@ -268,6 +268,10 @@ document.addEventListener('alpine:init', () => {
       regulationType: 'unregulated', // 'unregulated' или 'regulated'
       reactivePower: '10', // мощность в кВАр (в базе данных это поле "power")
       step: null, // количество ступеней для автоматически регулируемых установок
+      // Параметры для ящиков управления электродвигателями Я5000
+      boxType: 'double_feeder', // 'single_feeder', 'double_feeder', 'triple_feeder'
+      motorControlType: 'non_reversible', // 'non_reversible' или 'reversible'
+      feederType: 'double_no_auto', // 'double_no_auto' или 'double_with_auto'
       basePrice: 87900,
       article: 'АВР-100-CHINT-2',
       loading: false,
@@ -344,6 +348,24 @@ document.addEventListener('alpine:init', () => {
             this.startType = startType || 'direct_start';
             this.pumpCount = pumpCount || '1';
           }
+          
+          await this.loadAvailableOptions();
+          await this.loadProduct();
+        } else if (commutationType === 'motor_control_box' && manufacturerBrand) {
+          // Если есть параметры для ящиков управления, устанавливаем их
+          this.commutationType = commutationType;
+          this.manufacturerBrand = manufacturerBrand;
+          
+          // Получаем параметры из URL
+          const nominalCurrent = urlParams.get('nominalCurrent') || urlParams.get('nominal_current');
+          const boxType = urlParams.get('boxType') || urlParams.get('box_type');
+          const motorControlType = urlParams.get('motorControlType') || urlParams.get('motor_control_type');
+          const feederType = urlParams.get('feederType') || urlParams.get('feeder_type');
+          
+          if (nominalCurrent) this.nominalCurrent = String(nominalCurrent);
+          if (boxType) this.boxType = boxType;
+          if (motorControlType) this.motorControlType = motorControlType;
+          if (feederType) this.feederType = feederType;
           
           await this.loadAvailableOptions();
           await this.loadProduct();
@@ -728,6 +750,12 @@ document.addEventListener('alpine:init', () => {
                 this.startType = product.start_type || 'direct_start';
                 this.pumpCount = String(product.pump_count || '1');
               }
+            } else if (product.commutation_type === 'motor_control_box') {
+              // Для ящиков управления электродвигателями Я5000
+              this.nominalCurrent = String(product.nominal_current);
+              this.boxType = product.box_type || 'double_feeder';
+              this.motorControlType = product.motor_control_type || 'non_reversible';
+              this.feederType = product.feeder_type || 'double_no_auto';
             } else if (product.commutation_type === 'reactive_power') {
               // Для компенсации реактивной мощности
               this.regulationType = product.regulation_type || 'unregulated';

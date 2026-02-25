@@ -82,6 +82,11 @@ function motorControlBoxesPage() {
 
         formatPrice(price) {
             return new Intl.NumberFormat('ru-RU').format(price) + ' ₽';
+        },
+
+        getProductUrl(product) {
+            // Для ящиков управления передаем ID
+            return `product.html?id=${product.id}`;
         }
     };
 }
