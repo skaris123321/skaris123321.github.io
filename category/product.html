@@ -1151,18 +1151,23 @@
               </ul>
             </div>
 
-            <h3 class="description-subtitle">
-              Принцип работы
-            </h3>
-            
-            <div class="workflow-text">
-              <template x-for="workflowItem in getCommutationDescription().workflow" :key="workflowItem.title">
-                <div class="workflow-item">
-                  <h4 class="workflow-item-title" x-text="workflowItem.title"></h4>
-                  <p class="workflow-item-text" x-html="workflowItem.text"></p>
+            <!-- Принцип работы (не показываем для ящиков управления) -->
+            <template x-if="getCommutationDescription().workflow.length > 0">
+              <div>
+                <h3 class="description-subtitle">
+                  Принцип работы
+                </h3>
+                
+                <div class="workflow-text">
+                  <template x-for="workflowItem in getCommutationDescription().workflow" :key="workflowItem.title">
+                    <div class="workflow-item">
+                      <h4 class="workflow-item-title" x-text="workflowItem.title"></h4>
+                      <p class="workflow-item-text" x-html="workflowItem.text"></p>
+                    </div>
+                  </template>
                 </div>
-              </template>
-            </div>
+              </div>
+            </template>
 
             <h3 class="description-subtitle">Особенности и преимущества</h3>
             <div class="features-list-compact">
@@ -1295,7 +1300,7 @@
 
   <script src="../js/cart.js"></script>
   <script src="../js/products-api.js?v=6"></script>
-  <script src="../js/main.js?v=12"></script>
+  <script src="../js/main.js?v=13"></script>
   <script src="../js/search.js"></script>
 </body>
 </html>
