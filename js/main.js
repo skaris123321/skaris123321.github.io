@@ -475,9 +475,9 @@ document.addEventListener('alpine:init', () => {
             if (this.step) filters.step = this.step;
           } else if (this.commutationType === 'motor_control_box') {
             // Для ящиков управления электродвигателями Я5000
-            if (this.boxType) filters.box_type = this.boxType;
-            if (this.motorControlType) filters.motor_control_type = this.motorControlType;
-            if (this.feederType) filters.feeder_type = this.feederType;
+            // НЕ передаем фильтры по box_type, motor_control_type, feeder_type
+            // чтобы показать ВСЕ доступные токи для выбранного бренда
+            // Фильтры будут применены только при поиске конкретного продукта
           } else {
             // Для АВР используем старые фильтры
             // Для контакторов используем poles_count, для остальных - inputs_count
