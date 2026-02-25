@@ -100,43 +100,6 @@
 
   <section class="sort-section">
     <div class="container sort-controls">
-      <!-- Тип регулирования -->
-      <div style="margin-bottom: 1.5rem;">
-        <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Тип регулирования</span>
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-          <button 
-            @click="filterByType('unregulated')"
-            :class="{ active: selectedType === 'unregulated' }"
-            class="brand-filter-btn"
-          >
-            Нерегулируемая
-          </button>
-          <button 
-            @click="filterByType('regulated')"
-            :class="{ active: selectedType === 'regulated' }"
-            class="brand-filter-btn"
-          >
-            Автоматически регулируемая
-          </button>
-        </div>
-      </div>
-
-      <!-- Мощность -->
-      <div style="margin-bottom: 1.5rem;">
-        <h3 style="font-weight: 600; color: #1f2937; font-size: 1.125rem; margin: 0 0 0.75rem 0; padding: 0;">Мощность</h3>
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-          <template x-for="power in availablePowers" :key="power">
-            <button 
-              @click="filterByPower(power)"
-              :class="{ active: selectedPower === power }"
-              class="brand-filter-btn"
-            >
-              <span x-text="power"></span> кВАр
-            </button>
-          </template>
-        </div>
-      </div>
-
       <!-- Количество ступеней (только для регулируемых) -->
       <div x-show="selectedType === 'regulated'" style="margin-bottom: 1.5rem;">
         <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Количество ступеней</span>
