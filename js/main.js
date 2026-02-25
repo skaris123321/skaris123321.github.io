@@ -569,7 +569,9 @@ document.addEventListener('alpine:init', () => {
         if (optionType === 'nominal_current') {
           const numValue = parseFloat(value);
           const available = this.availableOptions[optionType].some(opt => parseFloat(opt) === numValue);
-          console.log(`isOptionAvailable: проверка тока ${value} (${numValue}), доступные:`, this.availableOptions[optionType], 'результат:', available);
+          if (!available) {
+            console.log(`isOptionAvailable: ток ${value} (${numValue}) НЕ НАЙДЕН, доступные:`, this.availableOptions[optionType]);
+          }
           return available;
         }
         
@@ -860,6 +862,9 @@ document.addEventListener('alpine:init', () => {
             
             // Загружаем доступные опции для этого товара ПОСЛЕ установки всех параметров
             await this.loadAvailableOptions();
+            
+            console.log('=== ДОСТУПНЫЕ ОПЦИИ ПОСЛЕ ЗАГРУЗКИ ===');
+            console.log('availableOptions.nominal_current:', this.availableOptions.nominal_current);
             
 
           } else {
