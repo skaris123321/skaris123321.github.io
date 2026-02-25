@@ -199,7 +199,7 @@
             :disabled="loading"
           >Dekraft</button>
           <button 
-            x-show="commutationType !== 'reactive_power'"
+            x-show="commutationType !== 'reactive_power' && commutationType !== 'motor_control_box'"
             class="spec-option"
             :class="{ active: manufacturerBrand === 'IEK', 'opacity-50': loading }"
             @click="updateManufacturerBrand('IEK')"
@@ -229,7 +229,7 @@
       </div>
 
       <!-- Фильтры для АВР -->
-      <div x-show="commutationType !== 'control_cabinet' && commutationType !== 'reactive_power'" class="product-spec-group">
+      <div x-show="commutationType !== 'control_cabinet' && commutationType !== 'reactive_power' && commutationType !== 'motor_control_box'" class="product-spec-group">
         <div class="product-spec-label">Тип коммутации</div>
         <div class="product-spec-options">
           <button 
@@ -250,7 +250,7 @@
 
 
 
-      <div x-show="commutationType !== 'single_phase_contactors' && commutationType !== 'control_cabinet' && commutationType !== 'reactive_power'" class="product-spec-group">
+      <div x-show="commutationType !== 'single_phase_contactors' && commutationType !== 'control_cabinet' && commutationType !== 'reactive_power' && commutationType !== 'motor_control_box'" class="product-spec-group">
         <div class="product-spec-label" x-text="commutationType === 'contactors' ? 'Количество полюсов' : 'Количество вводов'"></div>
         <div class="product-spec-options">
           <button 
@@ -716,7 +716,7 @@
       </div>
 
       <!-- Номинальный ток для АВР -->
-      <div x-show="commutationType !== 'control_cabinet' && commutationType !== 'reactive_power'" class="product-spec-group">
+      <div x-show="commutationType !== 'control_cabinet' && commutationType !== 'reactive_power' && commutationType !== 'motor_control_box'" class="product-spec-group">
         <div class="product-spec-label">Номинальный ток</div>
         <div class="product-spec-options product-spec-options-currents">
           <!-- Токи для однофазных АВР -->
@@ -875,7 +875,7 @@
         </div>
       </div>
 
-      <div x-show="commutationType !== 'control_cabinet' && commutationType !== 'reactive_power'" class="product-spec-group">
+      <div x-show="commutationType !== 'control_cabinet' && commutationType !== 'reactive_power' && commutationType !== 'motor_control_box'" class="product-spec-group">
         <div class="product-spec-label">Подключение кабеля</div>
         <div class="product-spec-options">
           <button 
@@ -899,7 +899,7 @@
         </div>
       </div>
 
-      <div x-show="commutationType !== 'control_cabinet' && commutationType !== 'reactive_power'" class="product-spec-group">
+      <div x-show="commutationType !== 'control_cabinet' && commutationType !== 'reactive_power' && commutationType !== 'motor_control_box'" class="product-spec-group">
         <div class="product-spec-label">Климатическое исполнение</div>
         <div class="product-spec-options">
           <button 
@@ -1164,8 +1164,8 @@
   </footer>
 
   <script src="../js/cart.js"></script>
-  <script src="../js/products-api.js?v=2"></script>
-  <script src="../js/main.js?v=2"></script>
+  <script src="../js/products-api.js?v=3"></script>
+  <script src="../js/main.js?v=3"></script>
   <script src="../js/search.js"></script>
 </body>
 </html>
