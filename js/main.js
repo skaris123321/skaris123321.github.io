@@ -458,6 +458,11 @@ document.addEventListener('alpine:init', () => {
           if (this.manufacturerBrand) filters.manufacturer_brand = this.manufacturerBrand;
           if (this.commutationType) filters.commutation_type = this.commutationType;
           
+          console.log('=== ЗАГРУЗКА ДОСТУПНЫХ ОПЦИЙ ===');
+          console.log('Тип коммутации:', this.commutationType);
+          console.log('Бренд:', this.manufacturerBrand);
+          console.log('Фильтры для API:', filters);
+          
           if (this.commutationType === 'control_cabinet') {
             // Для шкафов управления используем control_type и motor_power
             if (this.controlType) filters.control_type = this.controlType;
