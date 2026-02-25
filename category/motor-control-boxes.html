@@ -58,21 +58,6 @@
           </div>
         </div>
 
-        <!-- Номинальный ток -->
-        <div style="min-width: 300px;">
-          <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Номинальный ток, А</span>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <template x-for="current in availableCurrents" :key="current">
-              <button 
-                @click="selectedCurrent = (selectedCurrent === current.toString() ? '' : current.toString()); filterProducts()"
-                :class="{ active: selectedCurrent === current.toString() }"
-                class="brand-filter-btn"
-                x-text="current"
-              ></button>
-            </template>
-          </div>
-        </div>
-        
         <!-- Сортировка -->
         <div style="display: flex; gap: 0.5rem; margin-left: auto; align-self: flex-end;">
           <button 

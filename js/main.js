@@ -546,11 +546,13 @@ document.addEventListener('alpine:init', () => {
         }
         
         if (optionType === 'nominal_current') {
-          return this.availableOptions[optionType].includes(parseFloat(value));
+          const numValue = parseFloat(value);
+          return this.availableOptions[optionType].some(opt => parseFloat(opt) === numValue);
         }
         
         if (optionType === 'motor_power') {
-          return this.availableOptions[optionType].includes(parseFloat(value));
+          const numValue = parseFloat(value);
+          return this.availableOptions[optionType].some(opt => parseFloat(opt) === numValue);
         }
         
         return this.availableOptions[optionType].includes(value);
@@ -1372,8 +1374,20 @@ document.addEventListener('alpine:init', () => {
           // Переводим ключи, если они на английском, и нормализуем значения
           for (const [key, value] of Object.entries(rawSpecs)) {
             const translatedKey = this.translateSpecKey(key);
-            const normalizedValue = this.normalizeSpecValue(translatedKey, value);
-            specs[translatedKey] = normalizedValue;
+            
+            // Для поля "Количество фидеров" используем значение в зависимости от feederType
+            if (translatedKey === 'Количество фидеров') {
+              if (this.feederType === 'double_no_auto') {
+                specs[translatedKey] = 'Двухфидерный, без переключателя на автоматический режим';
+              } else if (this.feederType === 'double_with_auto') {
+                specs[translatedKey] = 'Двухфидерный, с переключателем на автоматический режим';
+              } else {
+                specs[translatedKey] = value;
+              }
+            } else {
+              const normalizedValue = this.normalizeSpecValue(translatedKey, value);
+              specs[translatedKey] = normalizedValue;
+            }
           }
           // Добавляем артикул и производителя
           specs['Артикул'] = this.dynamicArticle;
