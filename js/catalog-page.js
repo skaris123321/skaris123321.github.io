@@ -220,7 +220,7 @@ function catalogData() {
             type: 'motor_control_boxes',
             name: 'Ящики управления электродвигателями Я5000',
             url: 'motor-control-boxes.html',
-            image: '../images/ps.jpeg',
+            image: '../images/upr-ilektr.jpg',
             subcategories: motorControlSubcategories
           });
         }
