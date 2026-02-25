@@ -121,11 +121,11 @@
         </div>
       </div>
 
-      <!-- Мощность (только для регулируемых) -->
-      <div x-show="selectedType === 'regulated'" style="margin-bottom: 1.5rem;">
+      <!-- Мощность -->
+      <div style="margin-bottom: 1.5rem;">
         <span style="font-weight: 500; color: #374151; font-size: 1rem; display: block; margin-bottom: 0.75rem;">Мощность</span>
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-          <template x-for="power in uniquePowers" :key="power">
+          <template x-for="power in availablePowers" :key="power">
             <button 
               @click="filterByPower(power)"
               :class="{ active: selectedPower === power }"

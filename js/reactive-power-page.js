@@ -11,6 +11,7 @@ function reactivePowerCatalog() {
     uniqueBrands: [],
     uniquePowers: [],
     uniqueSteps: [],
+    availablePowers: [],
 
     async init() {
       await this.loadProducts();
@@ -26,6 +27,7 @@ function reactivePowerCatalog() {
         this.selectedType = regulationType;
       }
       
+      this.updateAvailableFilters();
       this.applyFilters();
     },
 
@@ -49,12 +51,12 @@ function reactivePowerCatalog() {
         this.uniqueBrands = [...new Set(this.products.map(p => p.brand))].sort();
         console.log('Уникальные бренды:', this.uniqueBrands);
         
-        // Получаем уникальные мощности (только для регулируемых)
-        const regulatedProducts = this.products.filter(p => p.regulation_type === 'regulated');
-        this.uniquePowers = [...new Set(regulatedProducts.map(p => p.power).filter(p => p))].sort((a, b) => a - b);
+        // Получаем все уникальные мощности
+        this.uniquePowers = [...new Set(this.products.map(p => p.power).filter(p => p))].sort((a, b) => a - b);
         console.log('Уникальные мощности:', this.uniquePowers);
         
         // Получаем уникальные количества ступеней (только для регулируемых)
+        const regulatedProducts = this.products.filter(p => p.regulation_type === 'regulated');
         this.uniqueSteps = [...new Set(regulatedProducts.map(p => p.step).filter(s => s))].sort((a, b) => a - b);
         console.log('Уникальные ступени:', this.uniqueSteps);
         
@@ -65,12 +67,24 @@ function reactivePowerCatalog() {
       }
     },
 
+    updateAvailableFilters() {
+      // Обновляем доступные мощности в зависимости от выбранного типа
+      let productsForFilters = this.products;
+      
+      if (this.selectedType) {
+        productsForFilters = productsForFilters.filter(p => p.regulation_type === this.selectedType);
+      }
+      
+      this.availablePowers = [...new Set(productsForFilters.map(p => p.power).filter(p => p))].sort((a, b) => a - b);
+    },
+
     filterByType(type) {
       console.log('Фильтруем по типу:', type);
       this.selectedType = type;
       this.selectedBrand = null;
       this.selectedPower = null;
       this.selectedStep = null;
+      this.updateAvailableFilters();
       this.applyFilters();
     },
 
