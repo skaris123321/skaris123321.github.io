@@ -154,7 +154,7 @@ if (typeof ProductsAPI !== 'undefined') {
           product: {
             id: product.id,
             article: product.article || '',
-            nominal_current: parseInt(product.nominal_current || 0),
+            nominal_current: parseFloat(product.nominal_current || 0),
             commutation_type: product.commutation_type,
             manufacturer_brand: product.brand,
             inputs_count: product.inputs_count,
@@ -239,7 +239,7 @@ if (typeof ProductsAPI !== 'undefined') {
         product: {
           id: product.id,
           article: product.article || '',
-          nominal_current: parseInt(product.nominal_current || 0),
+          nominal_current: parseFloat(product.nominal_current || 0),
           commutation_type: product.commutation_type,
           manufacturer_brand: product.brand,
           inputs_count: product.inputs_count,
