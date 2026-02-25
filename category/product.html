@@ -863,6 +863,103 @@
         </div>
       </div>
 
+      <!-- Номинальный ток для ящиков управления электродвигателями Я5000 -->
+      <div x-show="commutationType === 'motor_control_box'" class="product-spec-group">
+        <div class="product-spec-label">Номинальный ток</div>
+        <div class="product-spec-options product-spec-options-currents">
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '0.6', 'opacity-50': loading || !isOptionAvailable('nominal_current', '0.6'), disabled: loading || !isOptionAvailable('nominal_current', '0.6') }"
+            @click="updateNominalCurrent('0.6')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '0.6')"
+          >0.6 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '1', 'opacity-50': loading || !isOptionAvailable('nominal_current', '1'), disabled: loading || !isOptionAvailable('nominal_current', '1') }"
+            @click="updateNominalCurrent('1')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '1')"
+          >1 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '1.6', 'opacity-50': loading || !isOptionAvailable('nominal_current', '1.6'), disabled: loading || !isOptionAvailable('nominal_current', '1.6') }"
+            @click="updateNominalCurrent('1.6')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '1.6')"
+          >1.6 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '2.5', 'opacity-50': loading || !isOptionAvailable('nominal_current', '2.5'), disabled: loading || !isOptionAvailable('nominal_current', '2.5') }"
+            @click="updateNominalCurrent('2.5')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '2.5')"
+          >2.5 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '4', 'opacity-50': loading || !isOptionAvailable('nominal_current', '4'), disabled: loading || !isOptionAvailable('nominal_current', '4') }"
+            @click="updateNominalCurrent('4')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '4')"
+          >4 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '6', 'opacity-50': loading || !isOptionAvailable('nominal_current', '6'), disabled: loading || !isOptionAvailable('nominal_current', '6') }"
+            @click="updateNominalCurrent('6')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '6')"
+          >6 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '8', 'opacity-50': loading || !isOptionAvailable('nominal_current', '8'), disabled: loading || !isOptionAvailable('nominal_current', '8') }"
+            @click="updateNominalCurrent('8')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '8')"
+          >8 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '10', 'opacity-50': loading || !isOptionAvailable('nominal_current', '10'), disabled: loading || !isOptionAvailable('nominal_current', '10') }"
+            @click="updateNominalCurrent('10')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '10')"
+          >10 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '12', 'opacity-50': loading || !isOptionAvailable('nominal_current', '12'), disabled: loading || !isOptionAvailable('nominal_current', '12') }"
+            @click="updateNominalCurrent('12')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '12')"
+          >12 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '25', 'opacity-50': loading || !isOptionAvailable('nominal_current', '25'), disabled: loading || !isOptionAvailable('nominal_current', '25') }"
+            @click="updateNominalCurrent('25')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '25')"
+          >25 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '32', 'opacity-50': loading || !isOptionAvailable('nominal_current', '32'), disabled: loading || !isOptionAvailable('nominal_current', '32') }"
+            @click="updateNominalCurrent('32')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '32')"
+          >32 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '40', 'opacity-50': loading || !isOptionAvailable('nominal_current', '40'), disabled: loading || !isOptionAvailable('nominal_current', '40') }"
+            @click="updateNominalCurrent('40')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '40')"
+          >40 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '50', 'opacity-50': loading || !isOptionAvailable('nominal_current', '50'), disabled: loading || !isOptionAvailable('nominal_current', '50') }"
+            @click="updateNominalCurrent('50')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '50')"
+          >50 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '63', 'opacity-50': loading || !isOptionAvailable('nominal_current', '63'), disabled: loading || !isOptionAvailable('nominal_current', '63') }"
+            @click="updateNominalCurrent('63')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '63')"
+          >63 A</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === '80', 'opacity-50': loading || !isOptionAvailable('nominal_current', '80'), disabled: loading || !isOptionAvailable('nominal_current', '80') }"
+            @click="updateNominalCurrent('80')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '80')"
+          >80 A</button>
+        </div>
+      </div>
+
       <!-- Корпус - показываем только для однофазных АВР -->
       <div x-show="commutationType === 'single_phase_contactors'" class="product-spec-group">
         <div class="product-spec-label">Корпус</div>

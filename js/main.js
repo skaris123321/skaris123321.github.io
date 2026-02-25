@@ -106,7 +106,7 @@ if (typeof ProductsAPI !== 'undefined') {
         if (enclosure_type) currentProducts = currentProducts.filter(p => p.enclosure_type === enclosure_type);
         if (connection_type) currentProducts = currentProducts.filter(p => p.connection_type === connection_type);
         if (climate_type) currentProducts = currentProducts.filter(p => p.climate_type === climate_type);
-        opts.nominal_current = [...new Set(currentProducts.map(p => parseInt(p.nominal_current)).filter(Boolean))].sort((a, b) => a - b);
+        opts.nominal_current = [...new Set(currentProducts.map(p => parseFloat(p.nominal_current)).filter(Boolean))].sort((a, b) => a - b);
       }
 
       // Опции для контакторов - используем poles_count вместо inputs_count
@@ -529,7 +529,7 @@ document.addEventListener('alpine:init', () => {
         }
         
         if (optionType === 'nominal_current') {
-          return this.availableOptions[optionType].includes(parseInt(value));
+          return this.availableOptions[optionType].includes(parseFloat(value));
         }
         
         if (optionType === 'motor_power') {
