@@ -100,21 +100,6 @@
 
   <section class="sort-section">
     <div class="container sort-controls">
-      <!-- Количество ступеней (только для регулируемых) -->
-      <div x-show="selectedType === 'regulated'" style="margin-bottom: 1.5rem;">
-        <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Количество ступеней</span>
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-          <template x-for="step in uniqueSteps" :key="step">
-            <button 
-              @click="filterByStep(step)"
-              :class="{ active: selectedStep === step }"
-              class="brand-filter-btn"
-              x-text="step"
-            ></button>
-          </template>
-        </div>
-      </div>
-
       <!-- Бренды -->
       <div style="margin-bottom: 1.5rem;">
         <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Бренды</span>
