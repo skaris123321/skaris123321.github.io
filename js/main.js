@@ -219,7 +219,7 @@ if (typeof ProductsAPI !== 'undefined') {
           if (filters.feeder_type && p.feeder_type !== filters.feeder_type) return false;
         } else {
           // Для АВР
-          if (parseInt(p.nominal_current) !== parseInt(nominal_current)) return false;
+          if (parseFloat(p.nominal_current) !== parseFloat(nominal_current)) return false;
         }
         
         if (commutation_type && p.commutation_type !== commutation_type) return false;
@@ -720,7 +720,7 @@ document.addEventListener('alpine:init', () => {
               this.manufacturerBrand = product.manufacturer_brand;
               this.inputsCount = product.inputs_count;
               
-              const current = parseInt(product.nominal_current);
+              const current = parseFloat(product.nominal_current);
               if (current >= 100 && current <= 800) {
                 this.cableConnection = 'terminals';
               }
@@ -1106,7 +1106,7 @@ document.addEventListener('alpine:init', () => {
               }
             }
             
-            if (!this.availableOptions.nominal_current || !this.availableOptions.nominal_current.includes(parseInt(this.nominalCurrent))) {
+            if (!this.availableOptions.nominal_current || !this.availableOptions.nominal_current.some(opt => parseFloat(opt) === parseFloat(this.nominalCurrent))) {
               if (this.availableOptions.nominal_current && this.availableOptions.nominal_current.length > 0) {
                 this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
               }
