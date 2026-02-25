@@ -157,6 +157,9 @@ if (typeof ProductsAPI !== 'undefined') {
             pump_count: product.pump_count,
             regulation_type: product.regulation_type,
             reactive_power: product.power,
+            box_type: product.box_type || null,
+            motor_control_type: product.motor_control_type || null,
+            feeder_type: product.feeder_type || null,
             enclosure_type: product.enclosure_type || null,
             connection_type: product.connection_type || null,
             climate_type: product.climate_type || null,
@@ -180,7 +183,9 @@ if (typeof ProductsAPI !== 'undefined') {
         throw new Error('motor_power required for control cabinets');
       } else if (commutation_type === 'reactive_power' && !reactive_power) {
         throw new Error('reactive_power required for reactive power products');
-      } else if (commutation_type !== 'control_cabinet' && commutation_type !== 'reactive_power' && !nominal_current) {
+      } else if (commutation_type === 'motor_control_box' && !nominal_current) {
+        throw new Error('nominal_current required for motor control boxes');
+      } else if (commutation_type !== 'control_cabinet' && commutation_type !== 'reactive_power' && commutation_type !== 'motor_control_box' && !nominal_current) {
         throw new Error('nominal_current required');
       }
 
@@ -198,6 +203,12 @@ if (typeof ProductsAPI !== 'undefined') {
           // Для компенсации реактивной мощности
           if (parseFloat(p.power) !== parseFloat(reactive_power)) return false;
           if (regulation_type && p.regulation_type !== regulation_type) return false;
+        } else if (commutation_type === 'motor_control_box') {
+          // Для ящиков управления электродвигателями Я5000
+          if (parseFloat(p.nominal_current) !== parseFloat(nominal_current)) return false;
+          if (filters.box_type && p.box_type !== filters.box_type) return false;
+          if (filters.motor_control_type && p.motor_control_type !== filters.motor_control_type) return false;
+          if (filters.feeder_type && p.feeder_type !== filters.feeder_type) return false;
         } else {
           // Для АВР
           if (parseInt(p.nominal_current) !== parseInt(nominal_current)) return false;
