@@ -578,9 +578,6 @@ document.addEventListener('alpine:init', () => {
         if (optionType === 'nominal_current') {
           const numValue = parseFloat(value);
           const available = this.availableOptions[optionType].some(opt => parseFloat(opt) === numValue);
-          if (!available) {
-            console.log(`isOptionAvailable: ток ${value} (${numValue}) НЕ НАЙДЕН, доступные:`, this.availableOptions[optionType]);
-          }
           return available;
         }
         

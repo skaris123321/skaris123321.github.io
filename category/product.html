@@ -187,44 +187,49 @@
       <div class="product-spec-group">
         <div class="product-spec-label">Бренд производителя</div>
         <div class="product-spec-options product-spec-options-brands">
+          <!-- CHINT - только для АВР -->
           <button 
+            x-show="commutationType !== 'reactive_power' && commutationType !== 'motor_control_box' && commutationType !== 'control_cabinet'"
             class="spec-option"
             :class="{ active: manufacturerBrand === 'CHINT', 'opacity-50': loading }"
             @click="updateManufacturerBrand('CHINT')"
             :disabled="loading"
           >CHINT</button>
+          
+          <!-- EKF - для всех категорий -->
           <button 
             class="spec-option"
             :class="{ active: manufacturerBrand === 'EKF', 'opacity-50': loading }"
             @click="updateManufacturerBrand('EKF')"
             :disabled="loading"
           >EKF</button>
+          
+          <!-- Dekraft - только для АВР и реактивной мощности -->
           <button 
+            x-show="commutationType !== 'motor_control_box' && commutationType !== 'control_cabinet'"
             class="spec-option"
             :class="{ active: manufacturerBrand === 'Dekraft', 'opacity-50': loading }"
             @click="updateManufacturerBrand('Dekraft')"
             :disabled="loading"
           >Dekraft</button>
+          
+          <!-- IEK - для всех категорий -->
           <button 
-            x-show="commutationType !== 'reactive_power' && commutationType !== 'motor_control_box'"
             class="spec-option"
             :class="{ active: manufacturerBrand === 'IEK', 'opacity-50': loading }"
             @click="updateManufacturerBrand('IEK')"
             :disabled="loading"
           >IEK</button>
-          <button 
-            x-show="commutationType === 'motor_control_box'"
-            class="spec-option"
-            :class="{ active: manufacturerBrand === 'IEK', 'opacity-50': loading }"
-            @click="updateManufacturerBrand('IEK')"
-            :disabled="loading"
-          >IEK</button>
+          
+          <!-- TDM - для всех категорий -->
           <button 
             class="spec-option"
             :class="{ active: manufacturerBrand === 'TDM', 'opacity-50': loading }"
             @click="updateManufacturerBrand('TDM')"
             :disabled="loading"
           >TDM</button>
+          
+          <!-- VEDA - только для шкафов управления -->
           <button 
             x-show="commutationType === 'control_cabinet'"
             class="spec-option"
@@ -232,6 +237,8 @@
             @click="updateManufacturerBrand('VEDA')"
             :disabled="loading"
           >VEDA</button>
+          
+          <!-- Systeme electric - только для шкафов управления и реактивной мощности -->
           <button 
             x-show="commutationType === 'control_cabinet' || commutationType === 'reactive_power'"
             class="spec-option"
@@ -1300,7 +1307,7 @@
 
   <script src="../js/cart.js"></script>
   <script src="../js/products-api.js?v=8"></script>
-  <script src="../js/main.js?v=14"></script>
+  <script src="../js/main.js?v=15"></script>
   <script src="../js/search.js?v=2"></script>
 </body>
 </html>
