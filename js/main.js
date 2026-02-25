@@ -1418,7 +1418,10 @@ document.addEventListener('alpine:init', () => {
 
       // Генерируем новый артикул по формуле
       get dynamicArticle() {
-        if (this.commutationType === 'reactive_power') {
+        if (this.commutationType === 'motor_control_box') {
+          // Для ящиков управления электродвигателями Я5000 возвращаем артикул из базы данных
+          return this.article || '';
+        } else if (this.commutationType === 'reactive_power') {
           // Для реактивной мощности возвращаем артикул из базы данных
           return this.article || '';
         } else if (this.commutationType === 'control_cabinet') {
@@ -1483,7 +1486,23 @@ document.addEventListener('alpine:init', () => {
       },
 
       getCurrentProduct() {
-        if (false) {
+        if (this.commutationType === 'motor_control_box') {
+          // Для ящиков управления электродвигателями Я5000
+          return {
+            article: this.dynamicArticle,
+            manufacturerBrand: this.manufacturerBrand,
+            commutationType: this.commutationType,
+            nominalCurrent: this.nominalCurrent,
+            boxType: this.boxType,
+            motorControlType: this.motorControlType,
+            feederType: this.feederType,
+            basePrice: this.basePrice,
+            totalPrice: this.totalPrice,
+            images: this.images,
+            productSpecs: this.productSpecs,
+            productTitle: this.productTitle
+          };
+        } else if (false) {
           // Для однофазных АВР
           return {
             article: this.article,
