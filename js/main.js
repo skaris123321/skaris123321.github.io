@@ -1341,6 +1341,20 @@ document.addEventListener('alpine:init', () => {
           return specs;
         }
         
+        // Для ящиков управления электродвигателями Я5000 возвращаем specs из базы данных
+        if (this.commutationType === 'motor_control_box') {
+          // Переводим ключи, если они на английском, и нормализуем значения
+          for (const [key, value] of Object.entries(rawSpecs)) {
+            const translatedKey = this.translateSpecKey(key);
+            const normalizedValue = this.normalizeSpecValue(translatedKey, value);
+            specs[translatedKey] = normalizedValue;
+          }
+          // Добавляем артикул и производителя
+          specs['Артикул'] = this.dynamicArticle;
+          specs['Производитель'] = this.manufacturerBrand || '';
+          return specs;
+        }
+        
         // Если это контактор и у него нет specs или specs пустая, добавляем дефолтные характеристики
         if (this.commutationType === 'contactors' && Object.keys(rawSpecs).length === 0) {
           // Дефолтные характеристики для контакторов
