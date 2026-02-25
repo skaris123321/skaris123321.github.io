@@ -27,7 +27,13 @@ class ProductsAPI {
       return this.loadPromise;
     }
 
-    this.loadPromise = fetch('../data/products.json?v=2')
+    this.loadPromise = fetch('../data/products.json?v=3&t=' + Date.now(), {
+        cache: 'no-cache',
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache'
+        }
+      })
       .then(response => {
         if (!response.ok) {
           throw new Error(`Failed to load products.json: ${response.status}`);
@@ -38,6 +44,29 @@ class ProductsAPI {
         if (!data || !Array.isArray(data.products)) {
           throw new Error('Invalid products.json format');
         }
+        
+        // ОТЛАДКА: проверяем первый товар с motor_control_box
+        const firstMotorBox = data.products.find(p => p.commutation_type === 'motor_control_box');
+        if (firstMotorBox) {
+          console.log('🔍 ПЕРВЫЙ ЯЩИК УПРАВЛЕНИЯ ИЗ БАЗЫ:', {
+            id: firstMotorBox.id,
+            article: firstMotorBox.article,
+            nominal_current: firstMotorBox.nominal_current,
+            type: typeof firstMotorBox.nominal_current
+          });
+        }
+        
+        // ОТЛАДКА: проверяем товар ID 1218
+        const product1218 = data.products.find(p => p.id === 1218);
+        if (product1218) {
+          console.log('🔍 ТОВАР ID 1218 ИЗ БАЗЫ:', {
+            id: product1218.id,
+            article: product1218.article,
+            nominal_current: product1218.nominal_current,
+            type: typeof product1218.nominal_current
+          });
+        }
+        
         this.productsData = data;
         return data;
       })
