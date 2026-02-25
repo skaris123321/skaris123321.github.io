@@ -20,7 +20,7 @@ if (typeof ProductsAPI !== 'undefined') {
       if (this.productsData) return this.productsData;
       if (this.loadPromise) return this.loadPromise;
 
-      this.loadPromise = fetch('../data/products.json')
+      this.loadPromise = fetch('../data/products.json?v=2')
         .then(r => r.ok ? r.json() : Promise.reject(new Error(`Failed: ${r.status}`)))
         .then(data => {
           if (!data?.products) throw new Error('Invalid JSON format');

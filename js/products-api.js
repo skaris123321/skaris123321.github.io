@@ -27,7 +27,7 @@ class ProductsAPI {
       return this.loadPromise;
     }
 
-    this.loadPromise = fetch('../data/products.json')
+    this.loadPromise = fetch('../data/products.json?v=2')
       .then(response => {
         if (!response.ok) {
           throw new Error(`Failed to load products.json: ${response.status}`);
