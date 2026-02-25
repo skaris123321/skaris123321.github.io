@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ящики управления электродвигателями Я5000 - РОСЭК</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <div x-data="motorControlBoxesPage()">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <a href="../index.html" class="logo">
+                        <img src="../images/logo-main-1.svg" alt="РОСЭК">
+                    </a>
+                    <nav class="nav">
+                        <a href="../index.html">Главная</a>
+                        <a href="catalog.html">Каталог</a>
+                        <a href="cart.html">Корзина</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="container">
+                <!-- Breadcrumbs -->
+                <div class="breadcrumbs">
+                    <a href="../index.html">Главная</a>
+                    <span>/</span>
+                    <a href="catalog.html">Каталог</a>
+                    <span>/</span>
+                    <span>Ящики управления электродвигателями Я5000</span>
+                </div>
+
+                <h1>Ящики управления электродвигателями Я5000</h1>
+
+                <!-- Filters -->
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Тип ящика:</label>
+                        <select x-model="selectedBoxType" @change="filterProducts()">
+                            <option value="">Все типы</option>
+                            <option value="single_feeder">Однофидерные</option>
+                            <option value="double_feeder">Двухфидерные</option>
+                            <option value="triple_feeder">Трехфидерные нереверсивные</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Бренд:</label>
+                        <select x-model="selectedBrand" @change="filterProducts()">
+                            <option value="">Все бренды</option>
+                            <template x-for="brand in availableBrands" :key="brand">
+                                <option :value="brand" x-text="brand"></option>
+                            </template>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Номинальный ток:</label>
+                        <select x-model="selectedCurrent" @change="filterProducts()">
+                            <option value="">Все токи</option>
+                            <template x-for="current in availableCurrents" :key="current">
+                                <option :value="current" x-text="current + 'А'"></option>
+                            </template>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Loading -->
+                <div x-show="loading" class="loading">
+                    Загрузка товаров...
+                </div>
+
+                <!-- Products Grid -->
+                <div x-show="!loading" class="products-grid">
+                    <template x-for="product in filteredProducts" :key="product.id">
+                        <div class="product-card">
+                            <a :href="'product.html?id=' + product.id" class="product-link">
+                                <img :src="'../' + product.main_image" :alt="product.description" class="product-image">
+                                <h3 class="product-title" x-text="product.description"></h3>
+                                <p class="product-brand" x-text="product.brand"></p>
+                                <p class="product-price" x-text="formatPrice(product.base_price)"></p>
+                            </a>
+                        </div>
+                    </template>
+                </div>
+
+                <!-- No Results -->
+                <div x-show="!loading && filteredProducts.length === 0" class="no-results">
+                    <p>Товары не найдены. Попробуйте изменить фильтры.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 РОСЭК. Все права защищены.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/products-api.js"></script>
+    <script src="../js/motor-control-boxes-page.js"></script>
+</body>
+</html>

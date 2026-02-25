@@ -186,6 +186,45 @@ function catalogData() {
           });
         }
 
+        // Ящики управления электродвигателями Я5000
+        const motorControlBoxes = data.products.filter(p => p.commutation_type === 'motor_control_box');
+        
+        if (motorControlBoxes.length > 0) {
+          const motorControlSubcategories = [];
+          
+          // Однофидерные
+          if (motorControlBoxes.some(p => p.box_type === 'single_feeder')) {
+            motorControlSubcategories.push({
+              name: 'Ящики управления Я5000 однофидерные',
+              url: 'motor-control-boxes.html?boxType=single_feeder'
+            });
+          }
+          
+          // Двухфидерные
+          if (motorControlBoxes.some(p => p.box_type === 'double_feeder')) {
+            motorControlSubcategories.push({
+              name: 'Ящики управления Я5000 двухфидерные',
+              url: 'motor-control-boxes.html?boxType=double_feeder'
+            });
+          }
+          
+          // Трехфидерные нереверсивные
+          if (motorControlBoxes.some(p => p.box_type === 'triple_feeder')) {
+            motorControlSubcategories.push({
+              name: 'Ящики управления Я5000 трехфидерные нереверсивные',
+              url: 'motor-control-boxes.html?boxType=triple_feeder'
+            });
+          }
+
+          categoryMap.set('motor_control_boxes', {
+            type: 'motor_control_boxes',
+            name: 'Ящики управления электродвигателями Я5000',
+            url: 'motor-control-boxes.html',
+            image: '../images/ps.jpeg',
+            subcategories: motorControlSubcategories
+          });
+        }
+
         // Компенсация реактивной мощности (всегда показываем)
         categoryMap.set('reactive_power', {
           type: 'reactive_power',
