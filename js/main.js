@@ -149,6 +149,14 @@ if (typeof ProductsAPI !== 'undefined') {
         const product = data.products.find(p => p.id === parseInt(filters.id));
         if (!product) return { success: false, message: 'Товар не найден' };
         
+        console.log('🔧 ОТЛАДКА getProduct ДО ПРЕОБРАЗОВАНИЯ:', {
+          id: product.id,
+          nominal_current_raw: product.nominal_current,
+          type: typeof product.nominal_current,
+          parseFloat_result: parseFloat(product.nominal_current),
+          with_or: parseFloat(product.nominal_current || 0)
+        });
+        
         return {
           success: true,
           product: {
@@ -234,6 +242,14 @@ if (typeof ProductsAPI !== 'undefined') {
 
       if (!product) return { success: false, message: 'Товар не найден' };
 
+      console.log('🔧 ОТЛАДКА getProduct (по фильтрам) ДО ПРЕОБРАЗОВАНИЯ:', {
+        id: product.id,
+        nominal_current_raw: product.nominal_current,
+        type: typeof product.nominal_current,
+        parseFloat_result: parseFloat(product.nominal_current),
+        with_or: parseFloat(product.nominal_current || 0)
+      });
+
       return {
         success: true,
         product: {
@@ -250,6 +266,9 @@ if (typeof ProductsAPI !== 'undefined') {
           pump_count: product.pump_count,
           regulation_type: product.regulation_type,
           reactive_power: product.power,
+          box_type: product.box_type || null,
+          motor_control_type: product.motor_control_type || null,
+          feeder_type: product.feeder_type || null,
           enclosure_type: product.enclosure_type || null,
           connection_type: product.connection_type || null,
           climate_type: product.climate_type || null,
