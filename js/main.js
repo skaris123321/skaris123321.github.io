@@ -862,6 +862,12 @@ document.addEventListener('alpine:init', () => {
             console.log('Тип регулирования:', this.regulationType);
             console.log('Ступени:', this.step);
             console.log('Фильтры:', filters);
+          } else if (this.commutationType === 'motor_control_box') {
+            // Для ящиков управления используем nominal_current
+            filters.nominal_current = this.nominalCurrent;
+            filters.box_type = this.boxType;
+            filters.motor_control_type = this.motorControlType;
+            filters.feeder_type = this.feederType;
           } else {
             // Для АВР используем nominal_current
             filters.nominal_current = this.nominalCurrent;

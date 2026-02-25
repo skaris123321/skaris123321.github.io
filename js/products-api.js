@@ -326,6 +326,22 @@ class ProductsAPI {
         if (step && product.step && parseInt(product.step) !== parseInt(step)) {
           return false;
         }
+      } else if (commutation_type === 'motor_control_box') {
+        // Для ящиков управления проверяем nominal_current
+        if (!product.nominal_current || parseFloat(product.nominal_current) !== parseFloat(nominal_current)) {
+          return false;
+        }
+        // Проверяем дополнительные параметры
+        const { box_type, motor_control_type, feeder_type } = filters;
+        if (box_type && product.box_type !== box_type) {
+          return false;
+        }
+        if (motor_control_type && product.motor_control_type !== motor_control_type) {
+          return false;
+        }
+        if (feeder_type && product.feeder_type !== feeder_type) {
+          return false;
+        }
       } else {
         // Для АВР проверяем nominal_current
         if (!product.nominal_current || parseInt(product.nominal_current) !== parseInt(nominal_current)) {
