@@ -108,7 +108,15 @@ if (typeof ProductsAPI !== 'undefined') {
         if (box_type) currentProducts = currentProducts.filter(p => p.box_type === box_type);
         if (motor_control_type) currentProducts = currentProducts.filter(p => p.motor_control_type === motor_control_type);
         if (feeder_type) currentProducts = currentProducts.filter(p => p.feeder_type === feeder_type);
+        
+        console.log('=== ОТЛАДКА ДОСТУПНЫХ ТОКОВ ДЛЯ ЯЩИКОВ УПРАВЛЕНИЯ ===');
+        console.log('Фильтры:', { manufacturer_brand, commutation_type, box_type, motor_control_type, feeder_type });
+        console.log('Найдено продуктов после фильтрации:', currentProducts.length);
+        console.log('Токи из продуктов:', currentProducts.map(p => p.nominal_current));
+        
         opts.nominal_current = [...new Set(currentProducts.map(p => parseFloat(p.nominal_current)).filter(Boolean))].sort((a, b) => a - b);
+        
+        console.log('Доступные токи:', opts.nominal_current);
       } else {
         // Для АВР добавляем nominal_current
         let currentProducts = data.products;
@@ -548,17 +556,21 @@ document.addEventListener('alpine:init', () => {
         
         // Проверяем наличие массива опций
         if (!this.availableOptions[optionType] || !Array.isArray(this.availableOptions[optionType])) {
+          console.log(`isOptionAvailable: ${optionType} не является массивом или не существует`);
           return false;
         }
         
         // Проверяем, что массив не пустой (для типа коммутации и количества вводов нужно хотя бы что-то быть доступным)
         if (this.availableOptions[optionType].length === 0) {
+          console.log(`isOptionAvailable: ${optionType} пустой массив`);
           return false;
         }
         
         if (optionType === 'nominal_current') {
           const numValue = parseFloat(value);
-          return this.availableOptions[optionType].some(opt => parseFloat(opt) === numValue);
+          const available = this.availableOptions[optionType].some(opt => parseFloat(opt) === numValue);
+          console.log(`isOptionAvailable: проверка тока ${value} (${numValue}), доступные:`, this.availableOptions[optionType], 'результат:', available);
+          return available;
         }
         
         if (optionType === 'motor_power') {
@@ -782,10 +794,19 @@ document.addEventListener('alpine:init', () => {
               }
             } else if (product.commutation_type === 'motor_control_box') {
               // Для ящиков управления электродвигателями Я5000
+              console.log('=== ЗАГРУЗКА ЯЩИКА УПРАВЛЕНИЯ ПО ID ===');
+              console.log('Ток из базы:', product.nominal_current, 'тип:', typeof product.nominal_current);
+              
               this.nominalCurrent = String(product.nominal_current);
               this.boxType = product.box_type || 'double_feeder';
               this.motorControlType = product.motor_control_type || 'non_reversible';
               this.feederType = product.feeder_type || 'double_no_auto';
+              
+              console.log('Установленные параметры:');
+              console.log('nominalCurrent:', this.nominalCurrent, 'тип:', typeof this.nominalCurrent);
+              console.log('boxType:', this.boxType);
+              console.log('motorControlType:', this.motorControlType);
+              console.log('feederType:', this.feederType);
             } else if (product.commutation_type === 'reactive_power') {
               // Для компенсации реактивной мощности
               this.regulationType = product.regulation_type || 'unregulated';

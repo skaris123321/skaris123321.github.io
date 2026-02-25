@@ -5,10 +5,8 @@ function motorControlBoxesPage() {
         loading: true,
         selectedBoxType: '',
         selectedBrand: '',
-        selectedCurrent: '',
         sortBy: '',
         availableBrands: [],
-        availableCurrents: [],
 
         async init() {
             // Получаем параметры из URL
@@ -39,9 +37,6 @@ function motorControlBoxesPage() {
                 // Собираем уникальные бренды
                 this.availableBrands = [...new Set(this.products.map(p => p.brand))].sort();
 
-                // Собираем уникальные токи
-                this.availableCurrents = [...new Set(this.products.map(p => p.nominal_current))].sort((a, b) => a - b);
-
                 this.filterProducts();
                 this.loading = false;
             } catch (error) {
@@ -59,11 +54,6 @@ function motorControlBoxesPage() {
 
                 // Фильтр по бренду
                 if (this.selectedBrand && product.brand !== this.selectedBrand) {
-                    return false;
-                }
-
-                // Фильтр по току
-                if (this.selectedCurrent && product.nominal_current !== parseInt(this.selectedCurrent)) {
                     return false;
                 }
 
