@@ -1,122 +1,169 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ящики управления электродвигателями Я5000 - РОСЭК</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ящики управления электродвигателями Я5000 — РОСЭК</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <script>
+    if (typeof window.solveSimpleChallenge === 'undefined') {
+      window.solveSimpleChallenge = () => null;
+    }
+  </script>
+
+  <link rel="stylesheet" href="../css/main.css?v=32">
 </head>
-<body>
-    <div x-data="motorControlBoxesPage()">
-        <!-- Header -->
-        <header class="header">
-            <div class="container">
-                <div class="header-content">
-                    <a href="../index.html" class="logo">
-                        <img src="../images/logo-main-1.svg" alt="РОСЭК">
-                    </a>
-                    <nav class="nav">
-                        <a href="../index.html">Главная</a>
-                        <a href="catalog.html">Каталог</a>
-                        <a href="cart.html">Корзина</a>
-                    </nav>
-                </div>
-            </div>
-        </header>
+<body class="bg-light text-dark">
+  <header class="header">
+    <div class="container flex-wrap justify-between items-center">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo-main-1.svg" alt="РОСЭК" class="logo-image">
+      </a>
 
-        <!-- Main Content -->
-        <main class="main">
-            <div class="container">
-                <!-- Breadcrumbs -->
-                <div class="breadcrumbs">
-                    <a href="../index.html">Главная</a>
-                    <span>/</span>
-                    <a href="catalog.html">Каталог</a>
-                    <span>/</span>
-                    <span>Ящики управления электродвигателями Я5000</span>
-                </div>
+      <div class="header-controls">
+        <div class="search-wrapper">
+          <input type="search" placeholder="Поиск по товарам..." class="search-input">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
 
-                <h1 class="category-title">Ящики управления электродвигателями Я5000</h1>
+        <div class="relative" x-data="{ open: false }">
+          <a href="catalog.html" class="btn-catalog">
+            Каталог
+          </a>
+        </div>
+      </div>
 
-                <!-- Filters -->
-                <section class="sort-section">
-                    <div class="container sort-controls">
-                        <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start; width: 100%;">
-                            <!-- Бренды -->
-                            <div style="min-width: 300px;">
-                                <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Бренды</span>
-                                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                    <template x-for="brand in availableBrands" :key="brand">
-                                        <button 
-                                            @click="selectedBrand = (selectedBrand === brand ? '' : brand); filterProducts()"
-                                            :class="{ active: selectedBrand === brand }"
-                                            class="brand-filter-btn"
-                                            x-text="brand"
-                                        ></button>
-                                    </template>
-                                </div>
-                            </div>
-                            
-                            <!-- Сортировка -->
-                            <div style="display: flex; gap: 0.5rem; margin-left: auto; align-self: flex-end;">
-                                <button 
-                                    @click="sortBy = 'price_asc'; filterProducts()"
-                                    :class="{ active: sortBy === 'price_asc' }"
-                                    class="sort-btn"
-                                >
-                                    По цене ↑
-                                </button>
-                                <button 
-                                    @click="sortBy = 'price_desc'; filterProducts()"
-                                    :class="{ active: sortBy === 'price_desc' }"
-                                    class="sort-btn"
-                                >
-                                    По цене ↓
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+      <div class="contact-group">
+        <a href="cart.html" class="cart-link" x-data="{ cartCount: 0 }" x-init="
+          cartCount = window.cart ? window.cart.getTotalItems() : 0;
+          window.addEventListener('cartChanged', (e) => cartCount = e.detail.totalItems);
+        ">
+          <div class="cart-icon-wrapper">
+            <svg class="cart-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5-6m0 0h15M17 21a2 2 0 100-4 2 2 0 000 4zM9 21a2 2 0 100-4 2 2 0 000 4z"/>
+            </svg>
+            <span x-show="cartCount > 0" x-text="cartCount" class="cart-badge"></span>
+          </div>
+          <span class="cart-text">Корзина</span>
+        </a>
+        <a href="tel:+78005511052" class="phone hidden sm:block">8 (800) 55-11-052</a>
+        <a href="mailto:zakaz@rosek.tech" class="email hidden md:block">zakaz@rosek.tech</a>
+        <button class="btn-login">Войти</button>
+      </div>
+    </div>
+  </header>
 
-                <!-- Loading -->
-                <div x-show="loading" style="text-align: center; padding: 3rem;">
-                    <p style="color: #6b7280;">Загрузка товаров...</p>
-                </div>
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="../index.html">Главная</a>
+        <span>»</span>
+        <a href="catalog.html">Каталог</a>
+        <span>»</span>
+        <span>Ящики управления электродвигателями Я5000</span>
+      </div>
 
-                <!-- No Results -->
-                <div x-show="!loading && filteredProducts.length === 0" style="text-align: center; padding: 3rem;">
-                    <p style="color: #6b7280;">Товары не найдены. Попробуйте изменить фильтры.</p>
-                </div>
+      <h1 class="category-title">
+        Ящики управления электродвигателями Я5000
+      </h1>
+    </div>
+  </section>
 
-                <!-- Products Grid -->
-                <div class="products-grid" x-show="!loading && filteredProducts.length > 0">
-                    <template x-for="product in filteredProducts" :key="product.id">
-                        <a :href="'product.html?id=' + product.id" class="product-card" style="text-decoration: none; color: inherit;">
-                            <div class="product-image-wrapper">
-                                <img :src="'../' + product.main_image" :alt="product.description" class="product-image">
-                            </div>
-                            <div class="product-info">
-                                <h2 class="product-title" x-text="product.article"></h2>
-                                <p class="product-description" x-text="product.description"></p>
-                                <p class="product-brand" x-text="product.brand"></p>
-                                <p class="product-price" x-text="formatPrice(product.base_price)"></p>
-                            </div>
-                        </a>
-                    </template>
-                </div>
-            </div>
-        </main>
+  <div x-data="motorControlBoxesPage()" x-init="init()">
+  <section class="sort-section">
+    <div class="container sort-controls">
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start; width: 100%;">
+        <!-- Бренды -->
+        <div style="min-width: 300px;">
+          <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Бренды</span>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <template x-for="brand in availableBrands" :key="brand">
+              <button 
+                @click="selectedBrand = (selectedBrand === brand ? '' : brand); filterProducts()"
+                :class="{ active: selectedBrand === brand }"
+                class="brand-filter-btn"
+                x-text="brand"
+              ></button>
+            </template>
+          </div>
+        </div>
+        
+        <!-- Сортировка -->
+        <div style="display: flex; gap: 0.5rem; margin-left: auto; align-self: flex-end;">
+          <button 
+            @click="sortBy = 'price_asc'; filterProducts()"
+            :class="{ active: sortBy === 'price_asc' }"
+            class="sort-btn"
+          >
+            По цене ↑
+          </button>
+          <button 
+            @click="sortBy = 'price_desc'; filterProducts()"
+            :class="{ active: sortBy === 'price_desc' }"
+            class="sort-btn"
+          >
+            По цене ↓
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <p>&copy; 2024 РОСЭК. Все права защищены.</p>
-            </div>
-        </footer>
+  <main class="container" style="padding: 3rem 0;">
+    <div x-show="loading" style="text-align: center; padding: 3rem;">
+      <p style="color: #6b7280;">Загрузка товаров...</p>
+    </div>
+    
+    <div x-show="!loading && filteredProducts.length === 0" style="text-align: center; padding: 3rem;">
+      <p style="color: #6b7280;">Товары не найдены</p>
     </div>
 
-    <script src="../js/products-api.js"></script>
-    <script src="../js/motor-control-boxes-page.js"></script>
+    <div class="products-grid" x-show="!loading && filteredProducts.length > 0">
+      <template x-for="product in filteredProducts" :key="product.id">
+        <a :href="'product.html?id=' + product.id" class="product-card" style="text-decoration: none; color: inherit;">
+          <div class="product-image-wrapper">
+            <img :src="'../' + product.main_image" :alt="product.description" class="product-image">
+          </div>
+          <div class="product-info">
+            <h2 class="product-title" x-text="product.article"></h2>
+            <p class="product-description" x-text="product.description"></p>
+            <p class="product-brand" x-text="product.brand"></p>
+            <p class="product-price" x-text="formatPrice(product.base_price)"></p>
+          </div>
+        </a>
+      </template>
+    </div>
+  </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">О компании</h3>
+          <p class="footer-text">РОСЭК — надежный партнер в области электротехнического оборудования</p>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Контакты</h3>
+          <p class="footer-text">Телефон: 8 (800) 55-11-052</p>
+          <p class="footer-text">Email: zakaz@rosek.tech</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 РОСЭК. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/products-api.js"></script>
+  <script src="../js/motor-control-boxes-page.js"></script>
 </body>
 </html>
