@@ -186,6 +186,10 @@ class UniversalSearch {
       categories.push({ type: 'category', text: 'Шкафы управления', label: 'Категория', url: 'control-cabinets.html' });
     }
 
+    if ('ящик'.includes(query) || 'ящики'.includes(query) || query.includes('ящик') || query.includes('я5000') || query.includes('я-5000')) {
+      categories.push({ type: 'category', text: 'Ящики управления электродвигателями Я5000', label: 'Категория', url: 'motor-control-boxes.html' });
+    }
+
     if ('плавный'.includes(query) || 'soft'.includes(query) || query.includes('плавн')) {
       categories.push({ type: 'category', text: 'Шкафы с плавным пуском', label: 'Категория', url: 'control-cabinets.html?controlType=soft_start' });
     }
@@ -303,6 +307,7 @@ class UniversalSearch {
     // Ключевые слова для определения категорий
     const avrKeywords = ['авр', 'avr'];
     const controlKeywords = ['управлен', 'шкаф', 'control'];
+    const boxKeywords = ['ящик', 'я5000', 'я-5000'];
     const reactiveKeywords = ['реактивн', 'компенсац', 'конденсатор', 'reactive'];
     
     // Ключевые слова для подкатегорий АВР
@@ -324,6 +329,13 @@ class UniversalSearch {
     const reactiveSubcategories = {
       'unregulated': ['нерегулируемые', 'unregulated'],
       'regulated': ['регулируемые', 'автоматически', 'regulated']
+    };
+    
+    // Ключевые слова для подкатегорий ящиков управления
+    const boxSubcategories = {
+      'single_feeder': ['однофидерн', 'single'],
+      'double_feeder': ['двухфидерн', 'double'],
+      'triple_feeder': ['трехфидерн', 'triple']
     };
     
     const supportedBrands = ['CHINT', 'Dekraft', 'EKF', 'Systeme electric', 'TDM', 'VEDA', 'IEK'];
@@ -349,6 +361,16 @@ class UniversalSearch {
           } else if (subcatKey === 'monoblock') {
             urlParams = 'commutationType=monoblock';
           }
+          break;
+        }
+      }
+    } else if (boxKeywords.some(kw => searchQuery.includes(kw))) {
+      detectedCategory = 'motor-control-boxes';
+      
+      // Определяем подкатегорию ящиков управления
+      for (const [subcatKey, keywords] of Object.entries(boxSubcategories)) {
+        if (keywords.some(kw => searchQuery.includes(kw))) {
+          urlParams = `boxType=${subcatKey}`;
           break;
         }
       }
@@ -439,6 +461,7 @@ class UniversalSearch {
         'contactors': ['контактор', 'контакторы', 'contactors'],
         'sectional': ['секционный', 'sectional'],
         'control_cabinet': ['шкаф управления', 'управление', 'control'],
+        'motor_control_box': ['ящик управления', 'ящик', 'я5000', 'я-5000', 'motor control'],
         'reactive_power': ['реактивная мощность', 'компенсация', 'reactive', 'конденсатор']
       };
 

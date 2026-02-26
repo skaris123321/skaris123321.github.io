@@ -472,6 +472,12 @@ h1.category-title {
   border-bottom: none;
 }
 
+.subcategories-section {
+  padding: 2rem 0;
+  background: white;
+  border-bottom: none;
+}
+
 .sort-controls {
   display: flex;
   flex-wrap: wrap;
