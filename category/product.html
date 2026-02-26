@@ -763,8 +763,8 @@
         </div>
       </div>
 
-      <!-- Тип регулирования (реверсивный/нереверсивный) - только для двухфидерных -->
-      <div x-show="commutationType === 'motor_control_box' && boxType === 'double_feeder'" class="product-spec-group">
+      <!-- Тип регулирования (реверсивный/нереверсивный) - для всех типов ящиков -->
+      <div x-show="commutationType === 'motor_control_box'" class="product-spec-group">
         <div class="product-spec-label">Тип регулирования</div>
         <div class="product-spec-options">
           <button 

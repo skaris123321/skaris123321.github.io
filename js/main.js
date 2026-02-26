@@ -488,7 +488,7 @@ document.addEventListener('alpine:init', () => {
             // Для ящиков управления электродвигателями Я5000
             // Передаем текущие фильтры для получения доступных опций
             if (this.boxType) filters.box_type = this.boxType;
-            if (this.boxType === 'double_feeder' && this.reversible !== null) filters.reversible = this.reversible;
+            if (this.reversible !== null) filters.reversible = this.reversible;
             if (this.nominalCurrent) filters.nominal_current = this.nominalCurrent;
             if (this.feederType) filters.feeder_type = this.feederType;
           } else {
@@ -651,9 +651,7 @@ document.addEventListener('alpine:init', () => {
             filters.nominal_current = this.nominalCurrent;
             filters.box_type = this.boxType;
             filters.feeder_type = this.feederType;
-            if (this.boxType === 'double_feeder') {
-              filters.reversible = this.reversible;
-            }
+            filters.reversible = this.reversible;
           } else {
             // Для АВР используем nominal_current
             filters.nominal_current = this.nominalCurrent;
@@ -913,10 +911,7 @@ document.addEventListener('alpine:init', () => {
             filters.nominal_current = this.nominalCurrent;
             filters.box_type = this.boxType;
             filters.feeder_type = this.feederType;
-            // Для двухфидерных добавляем реверсивность
-            if (this.boxType === 'double_feeder') {
-              filters.reversible = this.reversible;
-            }
+            filters.reversible = this.reversible;
           } else {
             // Для АВР используем nominal_current
             filters.nominal_current = this.nominalCurrent;
@@ -1678,17 +1673,13 @@ document.addEventListener('alpine:init', () => {
             boxType: this.boxType,
             feederType: this.feederType,
             nominalCurrent: this.nominalCurrent,
+            reversible: this.reversible,
             basePrice: this.basePrice,
             totalPrice: this.totalPrice,
             images: this.images,
             productSpecs: this.productSpecs,
             productTitle: this.productTitle
           };
-          
-          // Для двухфидерных добавляем реверсивность
-          if (this.boxType === 'double_feeder') {
-            productData.reversible = this.reversible;
-          }
           
           return productData;
         } else {

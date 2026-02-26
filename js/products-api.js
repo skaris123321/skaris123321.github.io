@@ -297,7 +297,7 @@ class ProductsAPI {
       if (box_type) {
         currentProducts = currentProducts.filter(p => p.box_type === box_type);
       }
-      if (box_type === 'double_feeder' && reversible !== undefined) {
+      if (reversible !== undefined) {
         currentProducts = currentProducts.filter(p => p.reversible === reversible);
       }
       if (feeder_type) {
@@ -314,7 +314,7 @@ class ProductsAPI {
       if (box_type) {
         feederTypeProducts = feederTypeProducts.filter(p => p.box_type === box_type);
       }
-      if (box_type === 'double_feeder' && reversible !== undefined) {
+      if (reversible !== undefined) {
         feederTypeProducts = feederTypeProducts.filter(p => p.reversible === reversible);
       }
       if (nominal_current) {
@@ -477,8 +477,8 @@ class ProductsAPI {
         if (feeder_type && product.feeder_type !== feeder_type) {
           return false;
         }
-        // Проверяем реверсивность только для двухфидерных
-        if (box_type === 'double_feeder' && reversible !== undefined && product.reversible !== reversible) {
+        // Проверяем реверсивность для всех типов ящиков
+        if (reversible !== undefined && product.reversible !== reversible) {
           return false;
         }
       } else {
