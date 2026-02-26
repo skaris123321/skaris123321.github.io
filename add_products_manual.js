@@ -14,27 +14,20 @@ if (!fs.existsSync(inputFile)) {
     process.exit(1);
 }
 
-// Читаем файл как текст
-let content = fs.readFileSync('data/products.json', 'utf8');
+// Читаем основной файл как JSON
+const mainData = JSON.parse(fs.readFileSync('data/products.json', 'utf8'));
 
 // Читаем новые товары
 const newProducts = JSON.parse(fs.readFileSync(inputFile, 'utf8'));
 
-// Находим последнюю запятую перед закрывающими скобками
-const lastBrace = content.lastIndexOf(']');
-const beforeBrace = content.substring(0, lastBrace);
-
-// Формируем строки новых товаров
-let newProductsStr = '';
-newProducts.forEach((product, index) => {
-    newProductsStr += ',\n                     ' + JSON.stringify(product);
+// Добавляем новые товары
+newProducts.forEach(product => {
+    mainData.products.push(product);
 });
 
-// Вставляем новые товары
-const newContent = beforeBrace + newProductsStr + '\n                ]\n}';
-
-// Сохраняем
-fs.writeFileSync('data/products.json', newContent, 'utf8');
+// Сохраняем в правильном JSON формате
+fs.writeFileSync('data/products.json', JSON.stringify(mainData, null, 4), 'utf8');
 
 console.log(`Добавлено ${newProducts.length} товаров из файла ${inputFile}`);
+console.log(`Всего товаров: ${mainData.products.length}`);
 
