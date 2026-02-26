@@ -86,6 +86,27 @@
           </div>
         </div>
 
+        <!-- Тип переключателя -->
+        <div style="min-width: 300px;">
+          <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Тип переключателя</span>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button 
+              @click="selectedFeederType = (selectedFeederType === 'with_auto' ? '' : 'with_auto'); filterProducts()"
+              :class="{ active: selectedFeederType === 'with_auto' }"
+              class="brand-filter-btn"
+            >
+              С переключателем
+            </button>
+            <button 
+              @click="selectedFeederType = (selectedFeederType === 'no_auto' ? '' : 'no_auto'); filterProducts()"
+              :class="{ active: selectedFeederType === 'no_auto' }"
+              class="brand-filter-btn"
+            >
+              Без переключателя
+            </button>
+          </div>
+        </div>
+
         <!-- Сортировка -->
         <div style="display: flex; gap: 0.5rem; margin-left: auto; align-self: flex-end;">
           <button 

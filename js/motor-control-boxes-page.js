@@ -5,6 +5,7 @@
         loading: true,
         selectedBoxType: '',
         selectedBrand: '',
+        selectedFeederType: '',
         sortBy: '',
         availableBrands: [],
 
@@ -13,7 +14,7 @@
             const urlParams = new URLSearchParams(window.location.search);
             this.selectedBoxType = urlParams.get('boxType') || '';
             this.selectedBrand = urlParams.get('brand') || '';
-            this.selectedCurrent = urlParams.get('current') || '';
+            this.selectedFeederType = urlParams.get('feederType') || '';
 
             await this.loadProducts();
         },
@@ -52,6 +53,21 @@
                 // Фильтр по бренду
                 if (this.selectedBrand && product.brand !== this.selectedBrand) {
                     return false;
+                }
+
+                // Фильтр по типу переключателя
+                if (this.selectedFeederType) {
+                    if (this.selectedFeederType === 'with_auto') {
+                        // С переключателем - ищем товары с "with_auto" в feeder_type
+                        if (!product.feeder_type || !product.feeder_type.includes('with_auto')) {
+                            return false;
+                        }
+                    } else if (this.selectedFeederType === 'no_auto') {
+                        // Без переключателя - ищем товары с "no_auto" в feeder_type
+                        if (!product.feeder_type || !product.feeder_type.includes('no_auto')) {
+                            return false;
+                        }
+                    }
                 }
 
                 return true;
