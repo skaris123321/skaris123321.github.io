@@ -548,6 +548,22 @@ h1.category-title {
   font-weight: 600;
 }
 
+.brand-filter-btn.disabled,
+.brand-filter-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: #f9fafb;
+  color: #9ca3af;
+  border-color: #e5e7eb;
+}
+
+.brand-filter-btn.disabled:hover,
+.brand-filter-btn:disabled:hover {
+  border-color: #e5e7eb;
+  background: #f9fafb;
+  color: #9ca3af;
+}
+
 /* Кнопки сортировки */
 .sort-btn {
   padding: 0.5rem 1rem;
