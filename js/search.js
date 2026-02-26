@@ -47,19 +47,9 @@ class UniversalSearch {
 
   async loadProducts() {
     try {
-      const currentPath = window.location.pathname;
-      let response;
-      
-      if (currentPath.includes('/category/')) {
-        response = await fetch('../data/products.json');
-      } else {
-        response = await fetch('data/products.json');
-      }
-      
-      if (response.ok) {
-        const data = await response.json();
-        this.productsData = data.products || [];
-      }
+      const api = new ProductsAPI();
+      const data = await api.loadProducts();
+      this.productsData = data.products || [];
     } catch (error) {
       console.error('Ошибка загрузки данных для поиска:', error);
     }

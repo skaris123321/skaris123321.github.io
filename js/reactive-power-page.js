@@ -33,10 +33,13 @@
 
     async loadProducts() {
       try {
-        const response = await fetch('../data/products.json');
-        if (!response.ok) throw new Error('Failed to load products');
+        const api = new ProductsAPI();
+        const data = await api.loadProducts();
         
-        const data = await response.json();
+        if (!data || !data.products) {
+          throw new Error('Failed to load products');
+        }
+        
         // Фильтруем только товары компенсации реактивной мощности
         this.products = data.products.filter(product => 
           product.commutation_type === 'reactive_power'

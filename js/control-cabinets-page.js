@@ -39,10 +39,13 @@ function controlCabinetsCatalog() {
     async loadProducts() {
       try {
         console.log('Загружаем товары...');
-        const response = await fetch('../data/products.json');
-        if (!response.ok) throw new Error('Failed to load products');
+        const api = new ProductsAPI();
+        const data = await api.loadProducts();
         
-        const data = await response.json();
+        if (!data || !data.products) {
+          throw new Error('Failed to load products');
+        }
+        
         console.log('Всего товаров в базе:', data.products.length);
         
         // Фильтруем только шкафы управления

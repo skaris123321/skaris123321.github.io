@@ -75,8 +75,8 @@ document.addEventListener('alpine:init', () => {
       
       async loadProducts() {
         try {
-          const response = await fetch('../data/products.json');
-          const data = await response.json();
+          const api = new ProductsAPI();
+          const data = await api.loadProducts();
           
           if (data && Array.isArray(data.products)) {
             // Фильтруем только АВР (моноблочные и контакторы), исключаем шкафы управления
