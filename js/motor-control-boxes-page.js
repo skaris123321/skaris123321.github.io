@@ -5,7 +5,6 @@ function motorControlBoxesCatalog() {
     loading: true,
     selectedBoxType: null, // 'single_feeder', 'double_feeder', 'triple_feeder'
     selectedBrand: null,
-    selectedReversible: null, // true/false для двухфидерных
     sortBy: 'price_asc',
     uniqueBrands: [],
 
@@ -20,7 +19,6 @@ function motorControlBoxesCatalog() {
       
       const brand = urlParams.get('brand');
       const boxType = urlParams.get('boxType');
-      const reversible = urlParams.get('reversible');
       
       if (brand) {
         this.selectedBrand = brand;
@@ -28,10 +26,6 @@ function motorControlBoxesCatalog() {
       
       if (boxType) {
         this.selectedBoxType = boxType;
-      }
-      
-      if (reversible !== null) {
-        this.selectedReversible = reversible === 'true';
       }
     },
 
@@ -47,8 +41,11 @@ function motorControlBoxesCatalog() {
         
         console.log('Ящиков управления найдено:', this.products.length);
         
-        // Получаем уникальные бренды
-        this.uniqueBrands = [...new Set(this.products.map(p => p.brand))].sort();
+        // Получаем уникальные бренды (только IEK, TDM, EKF)
+        const allowedBrands = ['IEK', 'TDM', 'EKF'];
+        this.uniqueBrands = [...new Set(this.products.map(p => p.brand))]
+          .filter(brand => allowedBrands.includes(brand))
+          .sort();
         console.log('Уникальные бренды:', this.uniqueBrands);
         
         this.loading = false;
@@ -64,13 +61,8 @@ function motorControlBoxesCatalog() {
       if (this.selectedBoxType === boxType) {
         // Если уже выбран этот тип, убираем фильтр
         this.selectedBoxType = null;
-        this.selectedReversible = null;
       } else {
         this.selectedBoxType = boxType;
-        // Сбрасываем фильтр реверсивности при смене типа
-        if (boxType !== 'double_feeder') {
-          this.selectedReversible = null;
-        }
       }
       
       this.selectedBrand = null; // Сбрасываем фильтр по бренду
@@ -86,21 +78,11 @@ function motorControlBoxesCatalog() {
       this.applyFilters();
     },
 
-    filterByReversible(reversible) {
-      if (this.selectedReversible === reversible) {
-        this.selectedReversible = null;
-      } else {
-        this.selectedReversible = reversible;
-      }
-      this.applyFilters();
-    },
-
     applyFilters() {
       let filtered = [...this.products];
       console.log('Применяем фильтры. Всего товаров:', filtered.length);
       console.log('Выбранный тип ящика:', this.selectedBoxType);
       console.log('Выбранный бренд:', this.selectedBrand);
-      console.log('Выбрана реверсивность:', this.selectedReversible);
 
       // Фильтр по типу ящика
       if (this.selectedBoxType) {
@@ -108,14 +90,6 @@ function motorControlBoxesCatalog() {
           product.box_type === this.selectedBoxType
         );
         console.log('После фильтра по типу ящика:', filtered.length);
-      }
-
-      // Фильтр по реверсивности (только для двухфидерных)
-      if (this.selectedReversible !== null && this.selectedBoxType === 'double_feeder') {
-        filtered = filtered.filter(product => 
-          product.reversible === this.selectedReversible
-        );
-        console.log('После фильтра по реверсивности:', filtered.length);
       }
 
       // Фильтр по бренду
