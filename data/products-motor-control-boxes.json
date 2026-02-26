@@ -1,7 +1,7 @@
 {
     "products": [
         {
-            "article": "Я5111-0,6-IEK",
+            "article": "Я5111-0,6-РОСЭК",
             "nominal_current": 0.6,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -32,7 +32,7 @@
             "id": 1217
         },
         {
-            "article": "Я5111-0,6-К-IEK",
+            "article": "Я5111-0,6-К-РОСЭК",
             "nominal_current": 0.6,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -63,7 +63,7 @@
             "id": 1218
         },
         {
-            "article": "Я5111-0,6-А-IEK",
+            "article": "Я5111-0,6-А-РОСЭК",
             "nominal_current": 0.6,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -94,7 +94,7 @@
             "id": 1219
         },
         {
-            "article": "Я5111-1-IEK",
+            "article": "Я5111-1-РОСЭК",
             "nominal_current": 1,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -125,7 +125,7 @@
             "id": 1220
         },
         {
-            "article": "Я5111-1-К-IEK",
+            "article": "Я5111-1-К-РОСЭК",
             "nominal_current": 1,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -156,7 +156,7 @@
             "id": 1221
         },
         {
-            "article": "Я5111-1-А-IEK",
+            "article": "Я5111-1-А-РОСЭК",
             "nominal_current": 1,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -187,7 +187,7 @@
             "id": 1222
         },
         {
-            "article": "Я5111-1,6-IEK",
+            "article": "Я5111-1,6-РОСЭК",
             "nominal_current": 1.6,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -218,7 +218,7 @@
             "id": 1223
         },
         {
-            "article": "Я5111-1,6-К-IEK",
+            "article": "Я5111-1,6-К-РОСЭК",
             "nominal_current": 1.6,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -249,7 +249,7 @@
             "id": 1224
         },
         {
-            "article": "Я5111-1,6-А-IEK",
+            "article": "Я5111-1,6-А-РОСЭК",
             "nominal_current": 1.6,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -280,7 +280,7 @@
             "id": 1225
         },
         {
-            "article": "Я5111-2,5-IEK",
+            "article": "Я5111-2,5-РОСЭК",
             "nominal_current": 2.5,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -311,7 +311,7 @@
             "id": 1226
         },
         {
-            "article": "Я5111-2,5-К-IEK",
+            "article": "Я5111-2,5-К-РОСЭК",
             "nominal_current": 2.5,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -342,7 +342,7 @@
             "id": 1227
         },
         {
-            "article": "Я5111-2,5-А-IEK",
+            "article": "Я5111-2,5-А-РОСЭК",
             "nominal_current": 2.5,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -373,7 +373,7 @@
             "id": 1228
         },
         {
-            "article": "Я5111-4-IEK",
+            "article": "Я5111-4-РОСЭК",
             "nominal_current": 4,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -404,7 +404,7 @@
             "id": 1229
         },
         {
-            "article": "Я5111-4-К-IEK",
+            "article": "Я5111-4-К-РОСЭК",
             "nominal_current": 4,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -435,7 +435,7 @@
             "id": 1230
         },
         {
-            "article": "Я5111-4-А-IEK",
+            "article": "Я5111-4-А-РОСЭК",
             "nominal_current": 4,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -466,7 +466,7 @@
             "id": 1231
         },
         {
-            "article": "Я5111-6-IEK",
+            "article": "Я5111-6-РОСЭК",
             "nominal_current": 6,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -497,7 +497,7 @@
             "id": 1232
         },
         {
-            "article": "Я5111-6-К-IEK",
+            "article": "Я5111-6-К-РОСЭК",
             "nominal_current": 6,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -528,7 +528,7 @@
             "id": 1233
         },
         {
-            "article": "Я5111-6-А-IEK",
+            "article": "Я5111-6-А-РОСЭК",
             "nominal_current": 6,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -559,7 +559,7 @@
             "id": 1234
         },
         {
-            "article": "Я5111-8-IEK",
+            "article": "Я5111-8-РОСЭК",
             "nominal_current": 8,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -590,7 +590,7 @@
             "id": 1235
         },
         {
-            "article": "Я5111-8-К-IEK",
+            "article": "Я5111-8-К-РОСЭК",
             "nominal_current": 8,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -621,7 +621,7 @@
             "id": 1236
         },
         {
-            "article": "Я5111-8-А-IEK",
+            "article": "Я5111-8-А-РОСЭК",
             "nominal_current": 8,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -652,7 +652,7 @@
             "id": 1237
         },
         {
-            "article": "Я5111-10-IEK",
+            "article": "Я5111-10-РОСЭК",
             "nominal_current": 10,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -683,7 +683,7 @@
             "id": 1238
         },
         {
-            "article": "Я5111-10-К-IEK",
+            "article": "Я5111-10-К-РОСЭК",
             "nominal_current": 10,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -714,7 +714,7 @@
             "id": 1239
         },
         {
-            "article": "Я5111-10-А-IEK",
+            "article": "Я5111-10-А-РОСЭК",
             "nominal_current": 10,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -745,7 +745,7 @@
             "id": 1240
         },
         {
-            "article": "Я5111-12-IEK",
+            "article": "Я5111-12-РОСЭК",
             "nominal_current": 12,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -776,7 +776,7 @@
             "id": 1241
         },
         {
-            "article": "Я5111-12-К-IEK",
+            "article": "Я5111-12-К-РОСЭК",
             "nominal_current": 12,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -807,7 +807,7 @@
             "id": 1242
         },
         {
-            "article": "Я5111-12-А-IEK",
+            "article": "Я5111-12-А-РОСЭК",
             "nominal_current": 12,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -838,7 +838,7 @@
             "id": 1243
         },
         {
-            "article": "Я5111-16-IEK",
+            "article": "Я5111-16-РОСЭК",
             "nominal_current": 16,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -869,7 +869,7 @@
             "id": 1244
         },
         {
-            "article": "Я5111-16-К-IEK",
+            "article": "Я5111-16-К-РОСЭК",
             "nominal_current": 16,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -900,7 +900,7 @@
             "id": 1245
         },
         {
-            "article": "Я5111-16-А-IEK",
+            "article": "Я5111-16-А-РОСЭК",
             "nominal_current": 16,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -931,7 +931,7 @@
             "id": 1246
         },
         {
-            "article": "Я5111-25-IEK",
+            "article": "Я5111-25-РОСЭК",
             "nominal_current": 25,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -962,7 +962,7 @@
             "id": 1247
         },
         {
-            "article": "Я5111-25-К-IEK",
+            "article": "Я5111-25-К-РОСЭК",
             "nominal_current": 25,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -993,7 +993,7 @@
             "id": 1248
         },
         {
-            "article": "Я5111-25-А-IEK",
+            "article": "Я5111-25-А-РОСЭК",
             "nominal_current": 25,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -1024,7 +1024,7 @@
             "id": 1249
         },
         {
-            "article": "Я5111-32-IEK",
+            "article": "Я5111-32-РОСЭК",
             "nominal_current": 32,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -1055,7 +1055,7 @@
             "id": 1250
         },
         {
-            "article": "Я5111-32-К-IEK",
+            "article": "Я5111-32-К-РОСЭК",
             "nominal_current": 32,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -1086,7 +1086,7 @@
             "id": 1251
         },
         {
-            "article": "Я5111-32-А-IEK",
+            "article": "Я5111-32-А-РОСЭК",
             "nominal_current": 32,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -1117,7 +1117,7 @@
             "id": 1252
         },
         {
-            "article": "Я5111-40-IEK",
+            "article": "Я5111-40-РОСЭК",
             "nominal_current": 40,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -1148,7 +1148,7 @@
             "id": 1253
         },
         {
-            "article": "Я5111-40-К-IEK",
+            "article": "Я5111-40-К-РОСЭК",
             "nominal_current": 40,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -1179,7 +1179,7 @@
             "id": 1254
         },
         {
-            "article": "Я5111-40-А-IEK",
+            "article": "Я5111-40-А-РОСЭК",
             "nominal_current": 40,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -1210,7 +1210,7 @@
             "id": 1255
         },
         {
-            "article": "Я5111-50-IEK",
+            "article": "Я5111-50-РОСЭК",
             "nominal_current": 50,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -1241,7 +1241,7 @@
             "id": 1256
         },
         {
-            "article": "Я5111-50-К-IEK",
+            "article": "Я5111-50-К-РОСЭК",
             "nominal_current": 50,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -1272,7 +1272,7 @@
             "id": 1257
         },
         {
-            "article": "Я5111-50-А-IEK",
+            "article": "Я5111-50-А-РОСЭК",
             "nominal_current": 50,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -1303,7 +1303,7 @@
             "id": 1258
         },
         {
-            "article": "Я5111-63-IEK",
+            "article": "Я5111-63-РОСЭК",
             "nominal_current": 63,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -1334,7 +1334,7 @@
             "id": 1259
         },
         {
-            "article": "Я5111-63-К-IEK",
+            "article": "Я5111-63-К-РОСЭК",
             "nominal_current": 63,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -1365,7 +1365,7 @@
             "id": 1260
         },
         {
-            "article": "Я5111-63-А-IEK",
+            "article": "Я5111-63-А-РОСЭК",
             "nominal_current": 63,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -1396,7 +1396,7 @@
             "id": 1261
         },
         {
-            "article": "Я5111-80-IEK",
+            "article": "Я5111-80-РОСЭК",
             "nominal_current": 80,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -1427,7 +1427,7 @@
             "id": 1262
         },
         {
-            "article": "Я5111-80-К-IEK",
+            "article": "Я5111-80-К-РОСЭК",
             "nominal_current": 80,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -1458,7 +1458,7 @@
             "id": 1263
         },
         {
-            "article": "Я5111-80-А-IEK",
+            "article": "Я5111-80-А-РОСЭК",
             "nominal_current": 80,
             "brand": "IEK",
             "commutation_type": "motor_control_box",
@@ -1489,7 +1489,7 @@
             "id": 1264
         },
         {
-            "article": "Я5111-0,6-TDM",
+            "article": "Я5111-0,6-РОСЭК",
             "nominal_current": 0.6,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -1520,7 +1520,7 @@
             "id": 1265
         },
         {
-            "article": "Я5111-0,6-К-TDM",
+            "article": "Я5111-0,6-К-РОСЭК",
             "nominal_current": 0.6,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -1551,7 +1551,7 @@
             "id": 1266
         },
         {
-            "article": "Я5111-0,6-А-TDM",
+            "article": "Я5111-0,6-А-РОСЭК",
             "nominal_current": 0.6,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -1582,7 +1582,7 @@
             "id": 1267
         },
         {
-            "article": "Я5111-1-TDM",
+            "article": "Я5111-1-РОСЭК",
             "nominal_current": 1,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -1613,7 +1613,7 @@
             "id": 1268
         },
         {
-            "article": "Я5111-1-К-TDM",
+            "article": "Я5111-1-К-РОСЭК",
             "nominal_current": 1,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -1644,7 +1644,7 @@
             "id": 1269
         },
         {
-            "article": "Я5111-1-А-TDM",
+            "article": "Я5111-1-А-РОСЭК",
             "nominal_current": 1,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -1675,7 +1675,7 @@
             "id": 1270
         },
         {
-            "article": "Я5111-1,6-TDM",
+            "article": "Я5111-1,6-РОСЭК",
             "nominal_current": 1.6,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -1706,7 +1706,7 @@
             "id": 1271
         },
         {
-            "article": "Я5111-1,6-К-TDM",
+            "article": "Я5111-1,6-К-РОСЭК",
             "nominal_current": 1.6,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -1737,7 +1737,7 @@
             "id": 1272
         },
         {
-            "article": "Я5111-1,6-А-TDM",
+            "article": "Я5111-1,6-А-РОСЭК",
             "nominal_current": 1.6,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -1768,7 +1768,7 @@
             "id": 1273
         },
         {
-            "article": "Я5111-2,5-TDM",
+            "article": "Я5111-2,5-РОСЭК",
             "nominal_current": 2.5,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -1799,7 +1799,7 @@
             "id": 1274
         },
         {
-            "article": "Я5111-2,5-К-TDM",
+            "article": "Я5111-2,5-К-РОСЭК",
             "nominal_current": 2.5,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -1830,7 +1830,7 @@
             "id": 1275
         },
         {
-            "article": "Я5111-2,5-А-TDM",
+            "article": "Я5111-2,5-А-РОСЭК",
             "nominal_current": 2.5,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -1861,7 +1861,7 @@
             "id": 1276
         },
         {
-            "article": "Я5111-4-TDM",
+            "article": "Я5111-4-РОСЭК",
             "nominal_current": 4,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -1892,7 +1892,7 @@
             "id": 1277
         },
         {
-            "article": "Я5111-4-К-TDM",
+            "article": "Я5111-4-К-РОСЭК",
             "nominal_current": 4,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -1923,7 +1923,7 @@
             "id": 1278
         },
         {
-            "article": "Я5111-4-А-TDM",
+            "article": "Я5111-4-А-РОСЭК",
             "nominal_current": 4,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -1954,7 +1954,7 @@
             "id": 1279
         },
         {
-            "article": "Я5111-6-TDM",
+            "article": "Я5111-6-РОСЭК",
             "nominal_current": 6,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -1985,7 +1985,7 @@
             "id": 1280
         },
         {
-            "article": "Я5111-6-К-TDM",
+            "article": "Я5111-6-К-РОСЭК",
             "nominal_current": 6,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2016,7 +2016,7 @@
             "id": 1281
         },
         {
-            "article": "Я5111-6-А-TDM",
+            "article": "Я5111-6-А-РОСЭК",
             "nominal_current": 6,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2047,7 +2047,7 @@
             "id": 1282
         },
         {
-            "article": "Я5111-8-TDM",
+            "article": "Я5111-8-РОСЭК",
             "nominal_current": 8,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2078,7 +2078,7 @@
             "id": 1283
         },
         {
-            "article": "Я5111-8-К-TDM",
+            "article": "Я5111-8-К-РОСЭК",
             "nominal_current": 8,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2109,7 +2109,7 @@
             "id": 1284
         },
         {
-            "article": "Я5111-8-А-TDM",
+            "article": "Я5111-8-А-РОСЭК",
             "nominal_current": 8,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2140,7 +2140,7 @@
             "id": 1285
         },
         {
-            "article": "Я5111-10-TDM",
+            "article": "Я5111-10-РОСЭК",
             "nominal_current": 10,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2171,7 +2171,7 @@
             "id": 1286
         },
         {
-            "article": "Я5111-10-К-TDM",
+            "article": "Я5111-10-К-РОСЭК",
             "nominal_current": 10,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2202,7 +2202,7 @@
             "id": 1287
         },
         {
-            "article": "Я5111-10-А-TDM",
+            "article": "Я5111-10-А-РОСЭК",
             "nominal_current": 10,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2233,7 +2233,7 @@
             "id": 1288
         },
         {
-            "article": "Я5111-12-TDM",
+            "article": "Я5111-12-РОСЭК",
             "nominal_current": 12,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2264,7 +2264,7 @@
             "id": 1289
         },
         {
-            "article": "Я5111-12-К-TDM",
+            "article": "Я5111-12-К-РОСЭК",
             "nominal_current": 12,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2295,7 +2295,7 @@
             "id": 1290
         },
         {
-            "article": "Я5111-12-А-TDM",
+            "article": "Я5111-12-А-РОСЭК",
             "nominal_current": 12,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2326,7 +2326,7 @@
             "id": 1291
         },
         {
-            "article": "Я5111-16-TDM",
+            "article": "Я5111-16-РОСЭК",
             "nominal_current": 16,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2357,7 +2357,7 @@
             "id": 1292
         },
         {
-            "article": "Я5111-16-К-TDM",
+            "article": "Я5111-16-К-РОСЭК",
             "nominal_current": 16,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2388,7 +2388,7 @@
             "id": 1293
         },
         {
-            "article": "Я5111-16-А-TDM",
+            "article": "Я5111-16-А-РОСЭК",
             "nominal_current": 16,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2419,7 +2419,7 @@
             "id": 1294
         },
         {
-            "article": "Я5111-25-TDM",
+            "article": "Я5111-25-РОСЭК",
             "nominal_current": 25,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2450,7 +2450,7 @@
             "id": 1295
         },
         {
-            "article": "Я5111-25-К-TDM",
+            "article": "Я5111-25-К-РОСЭК",
             "nominal_current": 25,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2481,7 +2481,7 @@
             "id": 1296
         },
         {
-            "article": "Я5111-25-А-TDM",
+            "article": "Я5111-25-А-РОСЭК",
             "nominal_current": 25,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2512,7 +2512,7 @@
             "id": 1297
         },
         {
-            "article": "Я5111-32-TDM",
+            "article": "Я5111-32-РОСЭК",
             "nominal_current": 32,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2543,7 +2543,7 @@
             "id": 1298
         },
         {
-            "article": "Я5111-32-К-TDM",
+            "article": "Я5111-32-К-РОСЭК",
             "nominal_current": 32,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2574,7 +2574,7 @@
             "id": 1299
         },
         {
-            "article": "Я5111-32-А-TDM",
+            "article": "Я5111-32-А-РОСЭК",
             "nominal_current": 32,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2605,7 +2605,7 @@
             "id": 1300
         },
         {
-            "article": "Я5111-40-TDM",
+            "article": "Я5111-40-РОСЭК",
             "nominal_current": 40,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2636,7 +2636,7 @@
             "id": 1301
         },
         {
-            "article": "Я5111-40-К-TDM",
+            "article": "Я5111-40-К-РОСЭК",
             "nominal_current": 40,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2667,7 +2667,7 @@
             "id": 1302
         },
         {
-            "article": "Я5111-40-А-TDM",
+            "article": "Я5111-40-А-РОСЭК",
             "nominal_current": 40,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2698,7 +2698,7 @@
             "id": 1303
         },
         {
-            "article": "Я5111-50-TDM",
+            "article": "Я5111-50-РОСЭК",
             "nominal_current": 50,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2729,7 +2729,7 @@
             "id": 1304
         },
         {
-            "article": "Я5111-50-К-TDM",
+            "article": "Я5111-50-К-РОСЭК",
             "nominal_current": 50,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2760,7 +2760,7 @@
             "id": 1305
         },
         {
-            "article": "Я5111-50-А-TDM",
+            "article": "Я5111-50-А-РОСЭК",
             "nominal_current": 50,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2791,7 +2791,7 @@
             "id": 1306
         },
         {
-            "article": "Я5111-63-TDM",
+            "article": "Я5111-63-РОСЭК",
             "nominal_current": 63,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2822,7 +2822,7 @@
             "id": 1307
         },
         {
-            "article": "Я5111-63-К-TDM",
+            "article": "Я5111-63-К-РОСЭК",
             "nominal_current": 63,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2853,7 +2853,7 @@
             "id": 1308
         },
         {
-            "article": "Я5111-63-А-TDM",
+            "article": "Я5111-63-А-РОСЭК",
             "nominal_current": 63,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2884,7 +2884,7 @@
             "id": 1309
         },
         {
-            "article": "Я5111-80-TDM",
+            "article": "Я5111-80-РОСЭК",
             "nominal_current": 80,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2915,7 +2915,7 @@
             "id": 1310
         },
         {
-            "article": "Я5111-80-К-TDM",
+            "article": "Я5111-80-К-РОСЭК",
             "nominal_current": 80,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2946,7 +2946,7 @@
             "id": 1311
         },
         {
-            "article": "Я5111-80-А-TDM",
+            "article": "Я5111-80-А-РОСЭК",
             "nominal_current": 80,
             "brand": "TDM",
             "commutation_type": "motor_control_box",
@@ -2977,7 +2977,7 @@
             "id": 1312
         },
         {
-            "article": "Я5111-0,6-EKF",
+            "article": "Я5111-0,6-РОСЭК",
             "nominal_current": 0.6,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3008,7 +3008,7 @@
             "id": 1313
         },
         {
-            "article": "Я5111-0,6-К-EKF",
+            "article": "Я5111-0,6-К-РОСЭК",
             "nominal_current": 0.6,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3039,7 +3039,7 @@
             "id": 1314
         },
         {
-            "article": "Я5111-0,6-А-EKF",
+            "article": "Я5111-0,6-А-РОСЭК",
             "nominal_current": 0.6,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3070,7 +3070,7 @@
             "id": 1315
         },
         {
-            "article": "Я5111-1-EKF",
+            "article": "Я5111-1-РОСЭК",
             "nominal_current": 1,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3101,7 +3101,7 @@
             "id": 1316
         },
         {
-            "article": "Я5111-1-К-EKF",
+            "article": "Я5111-1-К-РОСЭК",
             "nominal_current": 1,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3132,7 +3132,7 @@
             "id": 1317
         },
         {
-            "article": "Я5111-1-А-EKF",
+            "article": "Я5111-1-А-РОСЭК",
             "nominal_current": 1,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3163,7 +3163,7 @@
             "id": 1318
         },
         {
-            "article": "Я5111-1,6-EKF",
+            "article": "Я5111-1,6-РОСЭК",
             "nominal_current": 1.6,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3194,7 +3194,7 @@
             "id": 1319
         },
         {
-            "article": "Я5111-1,6-К-EKF",
+            "article": "Я5111-1,6-К-РОСЭК",
             "nominal_current": 1.6,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3225,7 +3225,7 @@
             "id": 1320
         },
         {
-            "article": "Я5111-1,6-А-EKF",
+            "article": "Я5111-1,6-А-РОСЭК",
             "nominal_current": 1.6,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3256,7 +3256,7 @@
             "id": 1321
         },
         {
-            "article": "Я5111-2,5-EKF",
+            "article": "Я5111-2,5-РОСЭК",
             "nominal_current": 2.5,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3287,7 +3287,7 @@
             "id": 1322
         },
         {
-            "article": "Я5111-2,5-К-EKF",
+            "article": "Я5111-2,5-К-РОСЭК",
             "nominal_current": 2.5,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3318,7 +3318,7 @@
             "id": 1323
         },
         {
-            "article": "Я5111-2,5-А-EKF",
+            "article": "Я5111-2,5-А-РОСЭК",
             "nominal_current": 2.5,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3349,7 +3349,7 @@
             "id": 1324
         },
         {
-            "article": "Я5111-4-EKF",
+            "article": "Я5111-4-РОСЭК",
             "nominal_current": 4,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3380,7 +3380,7 @@
             "id": 1325
         },
         {
-            "article": "Я5111-4-К-EKF",
+            "article": "Я5111-4-К-РОСЭК",
             "nominal_current": 4,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3411,7 +3411,7 @@
             "id": 1326
         },
         {
-            "article": "Я5111-4-А-EKF",
+            "article": "Я5111-4-А-РОСЭК",
             "nominal_current": 4,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3442,7 +3442,7 @@
             "id": 1327
         },
         {
-            "article": "Я5111-6-EKF",
+            "article": "Я5111-6-РОСЭК",
             "nominal_current": 6,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3473,7 +3473,7 @@
             "id": 1328
         },
         {
-            "article": "Я5111-6-К-EKF",
+            "article": "Я5111-6-К-РОСЭК",
             "nominal_current": 6,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3504,7 +3504,7 @@
             "id": 1329
         },
         {
-            "article": "Я5111-6-А-EKF",
+            "article": "Я5111-6-А-РОСЭК",
             "nominal_current": 6,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3535,7 +3535,7 @@
             "id": 1330
         },
         {
-            "article": "Я5111-8-EKF",
+            "article": "Я5111-8-РОСЭК",
             "nominal_current": 8,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3566,7 +3566,7 @@
             "id": 1331
         },
         {
-            "article": "Я5111-8-К-EKF",
+            "article": "Я5111-8-К-РОСЭК",
             "nominal_current": 8,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3597,7 +3597,7 @@
             "id": 1332
         },
         {
-            "article": "Я5111-8-А-EKF",
+            "article": "Я5111-8-А-РОСЭК",
             "nominal_current": 8,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3628,7 +3628,7 @@
             "id": 1333
         },
         {
-            "article": "Я5111-10-EKF",
+            "article": "Я5111-10-РОСЭК",
             "nominal_current": 10,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3659,7 +3659,7 @@
             "id": 1334
         },
         {
-            "article": "Я5111-10-К-EKF",
+            "article": "Я5111-10-К-РОСЭК",
             "nominal_current": 10,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3690,7 +3690,7 @@
             "id": 1335
         },
         {
-            "article": "Я5111-10-А-EKF",
+            "article": "Я5111-10-А-РОСЭК",
             "nominal_current": 10,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3721,7 +3721,7 @@
             "id": 1336
         },
         {
-            "article": "Я5111-12-EKF",
+            "article": "Я5111-12-РОСЭК",
             "nominal_current": 12,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3752,7 +3752,7 @@
             "id": 1337
         },
         {
-            "article": "Я5111-12-К-EKF",
+            "article": "Я5111-12-К-РОСЭК",
             "nominal_current": 12,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3783,7 +3783,7 @@
             "id": 1338
         },
         {
-            "article": "Я5111-12-А-EKF",
+            "article": "Я5111-12-А-РОСЭК",
             "nominal_current": 12,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3814,7 +3814,7 @@
             "id": 1339
         },
         {
-            "article": "Я5111-16-EKF",
+            "article": "Я5111-16-РОСЭК",
             "nominal_current": 16,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3845,7 +3845,7 @@
             "id": 1340
         },
         {
-            "article": "Я5111-16-К-EKF",
+            "article": "Я5111-16-К-РОСЭК",
             "nominal_current": 16,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3876,7 +3876,7 @@
             "id": 1341
         },
         {
-            "article": "Я5111-16-А-EKF",
+            "article": "Я5111-16-А-РОСЭК",
             "nominal_current": 16,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3907,7 +3907,7 @@
             "id": 1342
         },
         {
-            "article": "Я5111-25-EKF",
+            "article": "Я5111-25-РОСЭК",
             "nominal_current": 25,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3938,7 +3938,7 @@
             "id": 1343
         },
         {
-            "article": "Я5111-25-К-EKF",
+            "article": "Я5111-25-К-РОСЭК",
             "nominal_current": 25,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -3969,7 +3969,7 @@
             "id": 1344
         },
         {
-            "article": "Я5111-25-А-EKF",
+            "article": "Я5111-25-А-РОСЭК",
             "nominal_current": 25,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -4000,7 +4000,7 @@
             "id": 1345
         },
         {
-            "article": "Я5111-32-EKF",
+            "article": "Я5111-32-РОСЭК",
             "nominal_current": 32,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -4031,7 +4031,7 @@
             "id": 1346
         },
         {
-            "article": "Я5111-32-К-EKF",
+            "article": "Я5111-32-К-РОСЭК",
             "nominal_current": 32,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -4062,7 +4062,7 @@
             "id": 1347
         },
         {
-            "article": "Я5111-32-А-EKF",
+            "article": "Я5111-32-А-РОСЭК",
             "nominal_current": 32,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -4093,7 +4093,7 @@
             "id": 1348
         },
         {
-            "article": "Я5111-40-EKF",
+            "article": "Я5111-40-РОСЭК",
             "nominal_current": 40,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -4124,7 +4124,7 @@
             "id": 1349
         },
         {
-            "article": "Я5111-40-К-EKF",
+            "article": "Я5111-40-К-РОСЭК",
             "nominal_current": 40,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -4155,7 +4155,7 @@
             "id": 1350
         },
         {
-            "article": "Я5111-40-А-EKF",
+            "article": "Я5111-40-А-РОСЭК",
             "nominal_current": 40,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -4186,7 +4186,7 @@
             "id": 1351
         },
         {
-            "article": "Я5111-50-EKF",
+            "article": "Я5111-50-РОСЭК",
             "nominal_current": 50,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -4217,7 +4217,7 @@
             "id": 1352
         },
         {
-            "article": "Я5111-50-К-EKF",
+            "article": "Я5111-50-К-РОСЭК",
             "nominal_current": 50,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -4248,7 +4248,7 @@
             "id": 1353
         },
         {
-            "article": "Я5111-50-А-EKF",
+            "article": "Я5111-50-А-РОСЭК",
             "nominal_current": 50,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -4279,7 +4279,7 @@
             "id": 1354
         },
         {
-            "article": "Я5111-63-EKF",
+            "article": "Я5111-63-РОСЭК",
             "nominal_current": 63,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -4310,7 +4310,7 @@
             "id": 1355
         },
         {
-            "article": "Я5111-63-К-EKF",
+            "article": "Я5111-63-К-РОСЭК",
             "nominal_current": 63,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -4341,7 +4341,7 @@
             "id": 1356
         },
         {
-            "article": "Я5111-63-А-EKF",
+            "article": "Я5111-63-А-РОСЭК",
             "nominal_current": 63,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -4372,7 +4372,7 @@
             "id": 1357
         },
         {
-            "article": "Я5111-80-EKF",
+            "article": "Я5111-80-РОСЭК",
             "nominal_current": 80,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -4403,7 +4403,7 @@
             "id": 1358
         },
         {
-            "article": "Я5111-80-К-EKF",
+            "article": "Я5111-80-К-РОСЭК",
             "nominal_current": 80,
             "brand": "EKF",
             "commutation_type": "motor_control_box",
@@ -4434,7 +4434,7 @@
             "id": 1359
         },
         {
-            "article": "Я5111-80-А-EKF",
+            "article": "Я5111-80-А-РОСЭК",
             "nominal_current": 80,
             "brand": "EKF",
             "commutation_type": "motor_control_box",

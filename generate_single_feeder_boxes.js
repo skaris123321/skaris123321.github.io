@@ -52,7 +52,7 @@ function generateArticle(brand, current, feederType) {
         suffix = '-А';
     }
     
-    return `Я5111-${currentStr}${suffix}-${brand}`;
+    return `Я5111-${currentStr}${suffix}-РОСЭК`;
 }
 
 // Функция для расчета базовой цены (примерная)
