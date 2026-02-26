@@ -883,15 +883,15 @@
         <div class="product-spec-options">
           <button 
             class="spec-option"
-            :class="{ active: motorControlType === 'non_reversible', 'opacity-50': loading, disabled: loading }"
+            :class="{ active: motorControlType === 'non_reversible', 'opacity-50': loading || !isOptionAvailable('motor_control_type', 'non_reversible'), disabled: loading || !isOptionAvailable('motor_control_type', 'non_reversible') }"
             @click="updateMotorControlType('non_reversible')"
-            :disabled="loading"
+            :disabled="loading || !isOptionAvailable('motor_control_type', 'non_reversible')"
           >Нереверсивный</button>
           <button 
             class="spec-option"
-            :class="{ active: motorControlType === 'reversible', 'opacity-50': loading, disabled: loading }"
+            :class="{ active: motorControlType === 'reversible', 'opacity-50': loading || !isOptionAvailable('motor_control_type', 'reversible'), disabled: loading || !isOptionAvailable('motor_control_type', 'reversible') }"
             @click="updateMotorControlType('reversible')"
-            :disabled="loading"
+            :disabled="loading || !isOptionAvailable('motor_control_type', 'reversible')"
           >Реверсивный</button>
         </div>
       </div>
@@ -1003,18 +1003,50 @@
       <div x-show="commutationType === 'motor_control_box'" class="product-spec-group">
         <div class="product-spec-label">Количество фидеров</div>
         <div class="product-spec-options">
-          <button 
-            class="spec-option"
-            :class="{ active: feederType === 'double_no_auto', 'opacity-50': loading, disabled: loading }"
-            @click="updateFeederType('double_no_auto')"
-            :disabled="loading"
-          >Без переключателя</button>
-          <button 
-            class="spec-option"
-            :class="{ active: feederType === 'double_with_auto', 'opacity-50': loading, disabled: loading }"
-            @click="updateFeederType('double_with_auto')"
-            :disabled="loading"
-          >С переключателем</button>
+          <!-- Для однофидерных -->
+          <template x-if="boxType === 'single_feeder'">
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button 
+                class="spec-option"
+                style="font-size: 0.75rem; padding: 0.5rem 0.75rem;"
+                :class="{ active: feederType === 'single_no_auto', 'opacity-50': loading || !isOptionAvailable('feeder_type', 'single_no_auto'), disabled: loading || !isOptionAvailable('feeder_type', 'single_no_auto') }"
+                @click="updateFeederType('single_no_auto')"
+                :disabled="loading || !isOptionAvailable('feeder_type', 'single_no_auto')"
+              >Без переключателя</button>
+              <button 
+                class="spec-option"
+                style="font-size: 0.75rem; padding: 0.5rem 0.75rem;"
+                :class="{ active: feederType === 'single_no_auto_with_contacts', 'opacity-50': loading || !isOptionAvailable('feeder_type', 'single_no_auto_with_contacts'), disabled: loading || !isOptionAvailable('feeder_type', 'single_no_auto_with_contacts') }"
+                @click="updateFeederType('single_no_auto_with_contacts')"
+                :disabled="loading || !isOptionAvailable('feeder_type', 'single_no_auto_with_contacts')"
+              >Без переключателя, с контактами</button>
+              <button 
+                class="spec-option"
+                style="font-size: 0.75rem; padding: 0.5rem 0.75rem;"
+                :class="{ active: feederType === 'single_with_auto', 'opacity-50': loading || !isOptionAvailable('feeder_type', 'single_with_auto'), disabled: loading || !isOptionAvailable('feeder_type', 'single_with_auto') }"
+                @click="updateFeederType('single_with_auto')"
+                :disabled="loading || !isOptionAvailable('feeder_type', 'single_with_auto')"
+              >С переключателем</button>
+            </div>
+          </template>
+          
+          <!-- Для двухфидерных -->
+          <template x-if="boxType === 'double_feeder'">
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button 
+                class="spec-option"
+                :class="{ active: feederType === 'double_no_auto', 'opacity-50': loading || !isOptionAvailable('feeder_type', 'double_no_auto'), disabled: loading || !isOptionAvailable('feeder_type', 'double_no_auto') }"
+                @click="updateFeederType('double_no_auto')"
+                :disabled="loading || !isOptionAvailable('feeder_type', 'double_no_auto')"
+              >Без переключателя</button>
+              <button 
+                class="spec-option"
+                :class="{ active: feederType === 'double_with_auto', 'opacity-50': loading || !isOptionAvailable('feeder_type', 'double_with_auto'), disabled: loading || !isOptionAvailable('feeder_type', 'double_with_auto') }"
+                @click="updateFeederType('double_with_auto')"
+                :disabled="loading || !isOptionAvailable('feeder_type', 'double_with_auto')"
+              >С переключателем</button>
+            </div>
+          </template>
         </div>
       </div>
 
@@ -1332,7 +1364,7 @@
 
   <script src="../js/cart.js"></script>
   <script src="../js/products-api.js?v=8"></script>
-  <script src="../js/main.js?v=17"></script>
+  <script src="../js/main.js?v=18"></script>
   <script src="../js/search.js?v=2"></script>
 </body>
 </html>

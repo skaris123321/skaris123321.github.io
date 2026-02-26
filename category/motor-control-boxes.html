@@ -17,7 +17,7 @@
     }
   </script>
 
-  <link rel="stylesheet" href="../css/main.css?v=32">
+  <link rel="stylesheet" href="../css/main.css?v=33">
   <script src="../js/load-components.js"></script>
 </head>
 <body class="bg-light text-dark">
@@ -86,62 +86,6 @@
           </div>
         </div>
 
-        <!-- Тип управления -->
-        <div style="min-width: 300px;">
-          <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Тип управления</span>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <button 
-              @click="selectedMotorControlType = (selectedMotorControlType === 'non_reversible' ? '' : 'non_reversible'); filterProducts()"
-              :class="{ active: selectedMotorControlType === 'non_reversible', disabled: !isMotorControlTypeAvailable('non_reversible') }"
-              :disabled="!isMotorControlTypeAvailable('non_reversible')"
-              class="brand-filter-btn"
-            >
-              Нереверсивный
-            </button>
-            <button 
-              @click="selectedMotorControlType = (selectedMotorControlType === 'reversible' ? '' : 'reversible'); filterProducts()"
-              :class="{ active: selectedMotorControlType === 'reversible', disabled: !isMotorControlTypeAvailable('reversible') }"
-              :disabled="!isMotorControlTypeAvailable('reversible')"
-              class="brand-filter-btn"
-            >
-              Реверсивный
-            </button>
-          </div>
-        </div>
-
-        <!-- Номинальный ток -->
-        <div style="min-width: 300px;" x-show="selectedBoxType">
-          <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Номинальный ток, А</span>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <template x-for="current in allCurrents" :key="current">
-              <button 
-                @click="if(isCurrentAvailable(current)) { selectedCurrent = (selectedCurrent === current ? null : current); filterProducts(); }"
-                :class="{ active: selectedCurrent === current, disabled: !isCurrentAvailable(current) }"
-                :disabled="!isCurrentAvailable(current)"
-                class="brand-filter-btn"
-                x-text="current"
-              ></button>
-            </template>
-          </div>
-        </div>
-
-        <!-- Количество фидеров -->
-        <div style="min-width: 300px;" x-show="selectedBoxType === 'single_feeder'">
-          <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Количество фидеров</span>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <template x-for="feederType in allFeederTypes" :key="feederType.code">
-              <button 
-                @click="if(isFeederTypeAvailable(feederType.code)) { selectedFeederType = (selectedFeederType === feederType.code ? '' : feederType.code); filterProducts(); }"
-                :class="{ active: selectedFeederType === feederType.code, disabled: !isFeederTypeAvailable(feederType.code) }"
-                :disabled="!isFeederTypeAvailable(feederType.code)"
-                class="brand-filter-btn"
-                x-text="feederType.name"
-                style="font-size: 0.75rem; padding: 0.375rem 0.75rem;"
-              ></button>
-            </template>
-          </div>
-        </div>
-
         <!-- Сортировка -->
         <div style="display: flex; gap: 0.5rem; margin-left: auto; align-self: flex-end;">
           <button 
@@ -197,7 +141,7 @@
 
   <script src="../js/cart.js"></script>
   <script src="../js/products-api.js?v=8"></script>
-  <script src="../js/motor-control-boxes-page.js?v=9"></script>
+  <script src="../js/motor-control-boxes-page.js?v=10"></script>
   <script src="../js/search.js?v=2"></script>
 
 </body>

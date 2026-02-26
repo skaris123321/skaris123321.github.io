@@ -486,9 +486,11 @@ document.addEventListener('alpine:init', () => {
             if (this.step) filters.step = this.step;
           } else if (this.commutationType === 'motor_control_box') {
             // Для ящиков управления электродвигателями Я5000
-            // НЕ передаем фильтры по box_type, motor_control_type, feeder_type
-            // чтобы показать ВСЕ доступные токи для выбранного бренда
-            // Фильтры будут применены только при поиске конкретного продукта
+            // Передаем текущие фильтры для получения доступных опций
+            if (this.boxType) filters.box_type = this.boxType;
+            if (this.motorControlType) filters.motor_control_type = this.motorControlType;
+            if (this.nominalCurrent) filters.nominal_current = this.nominalCurrent;
+            if (this.feederType) filters.feeder_type = this.feederType;
           } else {
             // Для АВР используем старые фильтры
             // Для контакторов используем poles_count, для остальных - inputs_count
@@ -519,7 +521,10 @@ document.addEventListener('alpine:init', () => {
               steps: data.available_options.steps || [],
               enclosure_type: data.available_options.enclosure_type || [],
               connection_type: data.available_options.connection_type || [],
-              climate_type: data.available_options.climate_type || []
+              climate_type: data.available_options.climate_type || [],
+              motor_control_type: data.available_options.motor_control_type || [],
+              feeder_type: data.available_options.feeder_type || [],
+              box_type: data.available_options.box_type || []
             };
 
 
@@ -537,7 +542,10 @@ document.addEventListener('alpine:init', () => {
               steps: [],
               enclosure_type: [],
               connection_type: [],
-              climate_type: []
+              climate_type: [],
+              motor_control_type: [],
+              feeder_type: [],
+              box_type: []
             };
           }
         } catch (error) {
@@ -555,7 +563,10 @@ document.addEventListener('alpine:init', () => {
             steps: [],
             enclosure_type: [],
             connection_type: [],
-            climate_type: []
+            climate_type: [],
+            motor_control_type: [],
+            feeder_type: [],
+            box_type: []
           };
         }
       },
