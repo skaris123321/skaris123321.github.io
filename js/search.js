@@ -188,6 +188,25 @@ class UniversalSearch {
 
     if ('ящик'.includes(query) || 'ящики'.includes(query) || query.includes('ящик') || query.includes('я5000') || query.includes('я-5000')) {
       categories.push({ type: 'category', text: 'Ящики управления электродвигателями Я5000', label: 'Категория', url: 'motor-control-boxes.html' });
+      
+      // Подкатегории ящиков
+      if (query.includes('однофидерн') || query.includes('один фидер') || query.includes('1 фидер')) {
+        categories.push({ type: 'category', text: 'Ящики управления Я5000 однофидерные', label: 'Категория', url: 'motor-control-boxes.html?boxType=single_feeder' });
+      }
+      if (query.includes('двухфидерн') || query.includes('два фидер') || query.includes('2 фидер')) {
+        categories.push({ type: 'category', text: 'Ящики управления Я5000 двухфидерные', label: 'Категория', url: 'motor-control-boxes.html?boxType=double_feeder' });
+      }
+      if (query.includes('трехфидерн') || query.includes('три фидер') || query.includes('3 фидер')) {
+        categories.push({ type: 'category', text: 'Ящики управления Я5000 трехфидерные', label: 'Категория', url: 'motor-control-boxes.html?boxType=triple_feeder' });
+      }
+      
+      // Тип переключателя
+      if (query.includes('с переключател') || query.includes('с автомат') || query.includes('автоматическ')) {
+        categories.push({ type: 'category', text: 'Ящики управления с переключателем', label: 'Категория', url: 'motor-control-boxes.html?feederType=with_auto' });
+      }
+      if (query.includes('без переключател') || query.includes('без автомат') || query.includes('ручн')) {
+        categories.push({ type: 'category', text: 'Ящики управления без переключателя', label: 'Категория', url: 'motor-control-boxes.html?feederType=no_auto' });
+      }
     }
 
     if ('плавный'.includes(query) || 'soft'.includes(query) || query.includes('плавн')) {
@@ -333,9 +352,15 @@ class UniversalSearch {
     
     // Ключевые слова для подкатегорий ящиков управления
     const boxSubcategories = {
-      'single_feeder': ['однофидерн', 'single'],
-      'double_feeder': ['двухфидерн', 'double'],
-      'triple_feeder': ['трехфидерн', 'triple']
+      'single_feeder': ['однофидерн', 'single', 'один фидер', '1 фидер'],
+      'double_feeder': ['двухфидерн', 'double', 'два фидер', '2 фидер'],
+      'triple_feeder': ['трехфидерн', 'triple', 'три фидер', '3 фидер']
+    };
+    
+    // Ключевые слова для типа переключателя ящиков
+    const feederTypeKeywords = {
+      'with_auto': ['с переключател', 'с автомат', 'with auto', 'автоматическ'],
+      'no_auto': ['без переключател', 'без автомат', 'no auto', 'ручн']
     };
     
     const supportedBrands = ['CHINT', 'Dekraft', 'EKF', 'Systeme electric', 'TDM', 'VEDA', 'IEK'];
@@ -343,6 +368,7 @@ class UniversalSearch {
     let detectedCategory = null;
     let detectedSubcategory = null;
     let detectedBrand = null;
+    let detectedFeederType = null;
     let urlParams = '';
     
     // Определяем категорию
@@ -371,6 +397,19 @@ class UniversalSearch {
       for (const [subcatKey, keywords] of Object.entries(boxSubcategories)) {
         if (keywords.some(kw => searchQuery.includes(kw))) {
           urlParams = `boxType=${subcatKey}`;
+          break;
+        }
+      }
+      
+      // Определяем тип переключателя
+      for (const [feederKey, keywords] of Object.entries(feederTypeKeywords)) {
+        if (keywords.some(kw => searchQuery.includes(kw))) {
+          detectedFeederType = feederKey;
+          if (urlParams) {
+            urlParams += `&feederType=${feederKey}`;
+          } else {
+            urlParams = `feederType=${feederKey}`;
+          }
           break;
         }
       }
@@ -469,6 +508,34 @@ class UniversalSearch {
         const typeKeywords = commutationTypes[product.commutation_type] || [];
         if (typeKeywords.some(keyword => keyword.includes(query) || query.includes(keyword))) {
           return true;
+        }
+      }
+
+      // Поиск по типу ящика
+      if (product.box_type) {
+        const boxTypeKeywords = {
+          'single_feeder': ['однофидерн', 'один фидер', '1 фидер'],
+          'double_feeder': ['двухфидерн', 'два фидер', '2 фидер'],
+          'triple_feeder': ['трехфидерн', 'три фидер', '3 фидер']
+        };
+        
+        const boxKeywords = boxTypeKeywords[product.box_type] || [];
+        if (boxKeywords.some(keyword => keyword.includes(query) || query.includes(keyword))) {
+          return true;
+        }
+      }
+
+      // Поиск по типу переключателя
+      if (product.feeder_type) {
+        if (query.includes('с переключател') || query.includes('с автомат') || query.includes('автоматическ')) {
+          if (product.feeder_type.includes('with_auto')) {
+            return true;
+          }
+        }
+        if (query.includes('без переключател') || query.includes('без автомат') || query.includes('ручн')) {
+          if (product.feeder_type.includes('no_auto')) {
+            return true;
+          }
         }
       }
 
