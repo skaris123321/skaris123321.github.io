@@ -1123,6 +1123,17 @@ document.addEventListener('alpine:init', () => {
         if (this.loading) return;
         this.motorControlType = value;
         
+        // Обновляем доступные опции
+        await this.loadAvailableOptions();
+        
+        // Проверяем, доступен ли текущий ток
+        if (!this.isOptionAvailable('nominal_current', this.nominalCurrent)) {
+          // Если текущий ток недоступен, выбираем первый доступный
+          if (this.availableOptions.nominal_current && this.availableOptions.nominal_current.length > 0) {
+            this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
+          }
+        }
+        
         await this.loadProductByCharacteristics();
         this.updateCartQuantity();
       },
@@ -1131,6 +1142,17 @@ document.addEventListener('alpine:init', () => {
       async updateFeederType(value) {
         if (this.loading) return;
         this.feederType = value;
+        
+        // Обновляем доступные опции
+        await this.loadAvailableOptions();
+        
+        // Проверяем, доступен ли текущий ток
+        if (!this.isOptionAvailable('nominal_current', this.nominalCurrent)) {
+          // Если текущий ток недоступен, выбираем первый доступный
+          if (this.availableOptions.nominal_current && this.availableOptions.nominal_current.length > 0) {
+            this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
+          }
+        }
         
         await this.loadProductByCharacteristics();
         this.updateCartQuantity();
