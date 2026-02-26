@@ -19,7 +19,7 @@
         },
         "motor_control_boxes": {
             "file": "products-motor-control-boxes.json",
-            "count": 0,
+            "count": 144,
             "description": "Ящики управления электродвигателями Я5000"
         }
     }
