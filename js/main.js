@@ -646,6 +646,12 @@ document.addEventListener('alpine:init', () => {
             if (this.step) {
               filters.step = this.step;
             }
+          } else if (this.commutationType === 'motor_control_box') {
+            // Для ящиков управления электродвигателями Я5000
+            filters.nominal_current = this.nominalCurrent;
+            filters.box_type = this.boxType;
+            filters.motor_control_type = this.motorControlType;
+            filters.feeder_type = this.feederType;
           } else {
             // Для АВР используем nominal_current
             filters.nominal_current = this.nominalCurrent;
@@ -717,7 +723,14 @@ document.addEventListener('alpine:init', () => {
               if (product.step) {
                 this.step = String(product.step);
               }
-              } else {
+            } else if (this.commutationType === 'motor_control_box') {
+              // Для ящиков управления электродвигателями Я5000 устанавливаем параметры из продукта
+              this.nominalCurrent = String(product.nominal_current);
+              this.boxType = product.box_type;
+              this.motorControlType = product.motor_control_type;
+              this.feederType = product.feeder_type;
+              this.manufacturerBrand = product.manufacturer_brand;
+            } else {
               // Для АВР устанавливаем параметры из продукта
               this.nominalCurrent = String(product.nominal_current);
               this.commutationType = product.commutation_type;
