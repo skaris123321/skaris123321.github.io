@@ -229,14 +229,6 @@
             :disabled="loading"
           >TDM</button>
           
-          <!-- EKF - для всех категорий -->
-          <button 
-            class="spec-option"
-            :class="{ active: manufacturerBrand === 'EKF', 'opacity-50': loading }"
-            @click="updateManufacturerBrand('EKF')"
-            :disabled="loading"
-          >EKF</button>
-          
           <!-- VEDA - только для шкафов управления -->
           <button 
             x-show="commutationType === 'control_cabinet'"
