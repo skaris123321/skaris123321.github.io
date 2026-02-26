@@ -317,9 +317,7 @@ class ProductsAPI {
       if (reversible !== undefined) {
         feederTypeProducts = feederTypeProducts.filter(p => p.reversible === reversible);
       }
-      if (nominal_current) {
-        feederTypeProducts = feederTypeProducts.filter(p => parseFloat(p.nominal_current) === parseFloat(nominal_current));
-      }
+      // НЕ фильтруем по nominal_current, так как типы фидеров не зависят от тока
       const feederTypes = [...new Set(feederTypeProducts.map(p => p.feeder_type).filter(Boolean))];
       availableOptions.feeder_type = feederTypes.sort();
       
