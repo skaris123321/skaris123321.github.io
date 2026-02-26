@@ -313,7 +313,7 @@ document.addEventListener('alpine:init', () => {
       // Параметры для ящиков управления электродвигателями Я5000
       boxType: 'single_feeder', // 'single_feeder', 'double_feeder', 'triple_feeder'
       reversible: false, // true или false - для двухфидерных
-      feederType: 'no_auto' // 'no_auto', 'no_auto_contacts', 'with_auto'
+      feederType: 'no_auto', // 'no_auto', 'no_auto_contacts', 'with_auto'
       basePrice: 87900,
       article: 'АВР-100-CHINT-2',
       loading: false,
