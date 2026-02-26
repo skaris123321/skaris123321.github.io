@@ -380,6 +380,7 @@ class ProductsAPI {
   }
 
   async getProduct(filters) {
+    console.log('🔍 API getProduct вызван с фильтрами:', filters);
     const data = await this.loadProducts();
     
     // Если передан ID, ищем по ID
@@ -487,14 +488,15 @@ class ProductsAPI {
           return false;
         }
         // Проверяем дополнительные параметры
-        const { box_type, motor_control_type, feeder_type } = filters;
+        const { box_type, feeder_type, reversible } = filters;
         if (box_type && product.box_type !== box_type) {
           return false;
         }
-        if (motor_control_type && product.motor_control_type !== motor_control_type) {
+        if (feeder_type && product.feeder_type !== feeder_type) {
           return false;
         }
-        if (feeder_type && product.feeder_type !== feeder_type) {
+        // Проверяем реверсивность только для двухфидерных
+        if (box_type === 'double_feeder' && reversible !== undefined && product.reversible !== reversible) {
           return false;
         }
       } else {
@@ -558,6 +560,9 @@ class ProductsAPI {
         regulation_type: foundProduct.regulation_type || null,
         reactive_power: foundProduct.power || null,
         step: foundProduct.step || null,
+        box_type: foundProduct.box_type || null,
+        feeder_type: foundProduct.feeder_type || null,
+        reversible: foundProduct.reversible || null,
         base_price: parseInt(foundProduct.base_price || 0),
         main_image: this.addImageVersion(foundProduct.main_image) || (images[0] || null),
         images: images,
