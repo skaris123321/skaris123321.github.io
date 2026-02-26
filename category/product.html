@@ -891,21 +891,21 @@
         <div class="product-spec-options">
           <button 
             class="spec-option"
-            :class="{ active: feederType === 'no_auto', 'opacity-50': loading }"
-            @click="updateFeederType('no_auto')"
-            :disabled="loading"
+            :class="{ active: feederType === 'no_auto', 'opacity-50': loading || !isOptionAvailable('feeder_type', 'no_auto'), disabled: !isOptionAvailable('feeder_type', 'no_auto') }"
+            @click="isOptionAvailable('feeder_type', 'no_auto') && updateFeederType('no_auto')"
+            :disabled="loading || !isOptionAvailable('feeder_type', 'no_auto')"
           >Без переключателя</button>
           <button 
             class="spec-option"
-            :class="{ active: feederType === 'no_auto_contacts', 'opacity-50': loading || reversible === true || boxType === 'double_feeder', disabled: reversible === true || boxType === 'double_feeder' }"
-            @click="(reversible !== true && boxType !== 'double_feeder') && updateFeederType('no_auto_contacts')"
-            :disabled="loading || reversible === true || boxType === 'double_feeder'"
+            :class="{ active: feederType === 'no_auto_contacts', 'opacity-50': loading || !isOptionAvailable('feeder_type', 'no_auto_contacts'), disabled: !isOptionAvailable('feeder_type', 'no_auto_contacts') }"
+            @click="isOptionAvailable('feeder_type', 'no_auto_contacts') && updateFeederType('no_auto_contacts')"
+            :disabled="loading || !isOptionAvailable('feeder_type', 'no_auto_contacts')"
           >Без переключателя, с контактами</button>
           <button 
             class="spec-option"
-            :class="{ active: feederType === 'with_auto', 'opacity-50': loading }"
-            @click="updateFeederType('with_auto')"
-            :disabled="loading"
+            :class="{ active: feederType === 'with_auto', 'opacity-50': loading || !isOptionAvailable('feeder_type', 'with_auto'), disabled: !isOptionAvailable('feeder_type', 'with_auto') }"
+            @click="isOptionAvailable('feeder_type', 'with_auto') && updateFeederType('with_auto')"
+            :disabled="loading || !isOptionAvailable('feeder_type', 'with_auto')"
           >С переключателем</button>
         </div>
       </div>
@@ -1365,7 +1365,7 @@
 
   <script src="../js/cart.js"></script>
   <script src="../js/products-api.js?v=11"></script>
-  <script src="../js/main.js?v=23"></script>
+  <script src="../js/main.js?v=24"></script>
   <script src="../js/search.js?v=2"></script>
 </body>
 </html>

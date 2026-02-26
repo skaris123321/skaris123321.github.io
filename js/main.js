@@ -2417,17 +2417,14 @@ document.addEventListener('alpine:init', () => {
         this.boxType = value;
         
         try {
-          // Сбрасываем реверсивность при смене типа
-          if (value !== 'double_feeder') {
-            this.reversible = false;
-          }
-          
-          // Если выбран двухфидерный и тип фидера "с контактами", переключаем на "без переключателя"
-          if (value === 'double_feeder' && this.feederType === 'no_auto_contacts') {
-            this.feederType = 'no_auto';
-          }
-          
           await this.loadAvailableOptions();
+          
+          // Если текущий тип фидера недоступен, выбираем первый доступный
+          if (this.availableOptions.feeder_type && this.availableOptions.feeder_type.length > 0) {
+            if (!this.availableOptions.feeder_type.includes(this.feederType)) {
+              this.feederType = this.availableOptions.feeder_type[0];
+            }
+          }
           
           // Выбираем первый доступный ток
           if (this.availableOptions.nominal_current && this.availableOptions.nominal_current.length > 0) {
@@ -2447,13 +2444,16 @@ document.addEventListener('alpine:init', () => {
         this.loading = true;
         this.reversible = value;
         
-        // Если выбран реверсивный и тип фидера "с контактами", переключаем на "без переключателя"
-        if (value === true && this.feederType === 'no_auto_contacts') {
-          this.feederType = 'no_auto';
-        }
-        
         try {
           await this.loadAvailableOptions();
+          
+          // Если текущий тип фидера недоступен, выбираем первый доступный
+          if (this.availableOptions.feeder_type && this.availableOptions.feeder_type.length > 0) {
+            if (!this.availableOptions.feeder_type.includes(this.feederType)) {
+              this.feederType = this.availableOptions.feeder_type[0];
+            }
+          }
+          
           await this.loadProductByCharacteristics();
           this.updateCartQuantity();
         } finally {
