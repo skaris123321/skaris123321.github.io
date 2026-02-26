@@ -4,7 +4,7 @@ const fs = require('fs');
 let content = fs.readFileSync('data/products.json', 'utf8');
 
 // Читаем новые товары
-const newProducts = JSON.parse(fs.readFileSync('add_single_feeders_part3.json', 'utf8'));
+const newProducts = JSON.parse(fs.readFileSync('add_single_feeders_part6.json', 'utf8'));
 
 // Находим последнюю запятую перед закрывающими скобками
 const lastBrace = content.lastIndexOf(']');
@@ -22,4 +22,4 @@ const newContent = beforeBrace + newProductsStr + '\n                ]\n}';
 // Сохраняем
 fs.writeFileSync('data/products.json', newContent, 'utf8');
 
-console.log(`Добавлено ${newProducts.length} товаров TDM с переключателем (ID 1406-1420)`);
+console.log(`Добавлено ${newProducts.length} товаров EKF с переключателем (ID 1451-1465)`);
