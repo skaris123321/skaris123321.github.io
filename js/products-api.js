@@ -32,7 +32,7 @@ class ProductsAPI {
     this.loadPromise = (async () => {
       try {
         // Загружаем индексный файл
-        const indexResponse = await fetch('../data/products-index.json?t=' + Date.now(), {
+        const indexResponse = await fetch('../data/products-index.json?v=2&t=' + Date.now(), {
           cache: 'no-cache',
           headers: {
             'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -45,10 +45,12 @@ class ProductsAPI {
         }
 
         const index = await indexResponse.json();
+        console.log('✓ Индексный файл загружен:', index);
         
         // Загружаем все категории параллельно
         const categoryPromises = Object.entries(index.categories).map(async ([key, info]) => {
-          const response = await fetch(`../data/${info.file}?t=` + Date.now(), {
+          console.log(`Загружаем категорию: ${key} (${info.file})`);
+          const response = await fetch(`../data/${info.file}?v=2&t=` + Date.now(), {
             cache: 'no-cache',
             headers: {
               'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -62,6 +64,7 @@ class ProductsAPI {
           }
           
           const data = await response.json();
+          console.log(`✓ Загружено ${data.products.length} товаров из ${info.file}`);
           return data.products || [];
         });
 
@@ -71,10 +74,11 @@ class ProductsAPI {
         const allProducts = categoryResults.flat();
         
         this.productsData = { products: allProducts };
-        console.log(`✓ Загружено ${allProducts.length} товаров из ${Object.keys(index.categories).length} категорий`);
+        console.log(`✓ Всего загружено ${allProducts.length} товаров из ${Object.keys(index.categories).length} категорий`);
         
         return this.productsData;
       } catch (error) {
+        console.error('❌ Ошибка загрузки товаров:', error);
         this.loadPromise = null;
         throw error;
       }
@@ -86,12 +90,14 @@ class ProductsAPI {
   // Загружает товары только из конкретной категории (для оптимизации)
   async loadCategory(categoryName) {
     if (this.categoryCache[categoryName]) {
+      console.log(`✓ Категория ${categoryName} загружена из кэша`);
       return this.categoryCache[categoryName];
     }
 
     try {
       const fileName = `products-${categoryName}.json`;
-      const response = await fetch(`../data/${fileName}?t=` + Date.now(), {
+      console.log(`Загружаем категорию: ${fileName}`);
+      const response = await fetch(`../data/${fileName}?v=2&t=` + Date.now(), {
         cache: 'no-cache',
         headers: {
           'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -109,7 +115,7 @@ class ProductsAPI {
       
       return data;
     } catch (error) {
-      console.error(`Error loading category ${categoryName}:`, error);
+      console.error(`❌ Ошибка загрузки категории ${categoryName}:`, error);
       throw error;
     }
   }
