@@ -1,12 +1,13 @@
 /**
  * Клиентский API для работы с продуктами
- * Работает напрямую с JSON файлом без необходимости сервера
+ * Работает с разделенными JSON файлами по категориям
  */
 
 class ProductsAPI {
   constructor() {
     this.productsData = null;
     this.loadPromise = null;
+    this.categoryCache = {}; // Кэш для отдельных категорий
     // Версия для кэш-бастинга картинок (увеличивайте при обновлении картинок)
     this.imageVersion = '5';
   }
@@ -18,6 +19,7 @@ class ProductsAPI {
     return `${imageUrl}${separator}v=${this.imageVersion}`;
   }
 
+  // Загружает все товары из всех категорий
   async loadProducts() {
     if (this.productsData) {
       return this.productsData;
@@ -27,39 +29,89 @@ class ProductsAPI {
       return this.loadPromise;
     }
 
-    this.loadPromise = fetch('../data/products.json?v=3&t=' + Date.now(), {
+    this.loadPromise = (async () => {
+      try {
+        // Загружаем индексный файл
+        const indexResponse = await fetch('../data/products-index.json?t=' + Date.now(), {
+          cache: 'no-cache',
+          headers: {
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache'
+          }
+        });
+
+        if (!indexResponse.ok) {
+          throw new Error(`Failed to load products-index.json: ${indexResponse.status}`);
+        }
+
+        const index = await indexResponse.json();
+        
+        // Загружаем все категории параллельно
+        const categoryPromises = Object.entries(index.categories).map(async ([key, info]) => {
+          const response = await fetch(`../data/${info.file}?t=` + Date.now(), {
+            cache: 'no-cache',
+            headers: {
+              'Cache-Control': 'no-cache, no-store, must-revalidate',
+              'Pragma': 'no-cache'
+            }
+          });
+          
+          if (!response.ok) {
+            console.warn(`Failed to load ${info.file}: ${response.status}`);
+            return [];
+          }
+          
+          const data = await response.json();
+          return data.products || [];
+        });
+
+        const categoryResults = await Promise.all(categoryPromises);
+        
+        // Объединяем все товары
+        const allProducts = categoryResults.flat();
+        
+        this.productsData = { products: allProducts };
+        console.log(`✓ Загружено ${allProducts.length} товаров из ${Object.keys(index.categories).length} категорий`);
+        
+        return this.productsData;
+      } catch (error) {
+        this.loadPromise = null;
+        throw error;
+      }
+    })();
+
+    return this.loadPromise;
+  }
+
+  // Загружает товары только из конкретной категории (для оптимизации)
+  async loadCategory(categoryName) {
+    if (this.categoryCache[categoryName]) {
+      return this.categoryCache[categoryName];
+    }
+
+    try {
+      const fileName = `products-${categoryName}.json`;
+      const response = await fetch(`../data/${fileName}?t=` + Date.now(), {
         cache: 'no-cache',
         headers: {
           'Cache-Control': 'no-cache, no-store, must-revalidate',
           'Pragma': 'no-cache'
         }
-      })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`Failed to load products.json: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(data => {
-        if (!data || !Array.isArray(data.products)) {
-          throw new Error('Invalid products.json format');
-        }
-        
-        // ОТЛАДКА: проверяем первый товар с motor_control_box
-        const firstMotorBox = data.products.find(p => p.commutation_type === 'motor_control_box');
-        
-        // ОТЛАДКА: проверяем товар ID 1218
-        const product1218 = data.products.find(p => p.id === 1218);
-        
-        this.productsData = data;
-        return data;
-      })
-      .catch(error => {
-        this.loadPromise = null;
-        throw error;
       });
 
-    return this.loadPromise;
+      if (!response.ok) {
+        throw new Error(`Failed to load ${fileName}: ${response.status}`);
+      }
+
+      const data = await response.json();
+      this.categoryCache[categoryName] = data;
+      console.log(`✓ Загружено ${data.products.length} товаров из категории ${categoryName}`);
+      
+      return data;
+    } catch (error) {
+      console.error(`Error loading category ${categoryName}:`, error);
+      throw error;
+    }
   }
 
   async getAvailableOptions(filters = {}) {
