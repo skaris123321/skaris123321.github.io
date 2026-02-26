@@ -229,6 +229,14 @@
             :disabled="loading"
           >TDM</button>
           
+          <!-- EKF - для всех категорий -->
+          <button 
+            class="spec-option"
+            :class="{ active: manufacturerBrand === 'EKF', 'opacity-50': loading }"
+            @click="updateManufacturerBrand('EKF')"
+            :disabled="loading"
+          >EKF</button>
+          
           <!-- VEDA - только для шкафов управления -->
           <button 
             x-show="commutationType === 'control_cabinet'"
@@ -733,6 +741,180 @@
               x-text="stepValue"
             ></button>
           </template>
+        </div>
+      </div>
+
+      <!-- ФИЛЬТРЫ ДЛЯ ЯЩИКОВ УПРАВЛЕНИЯ Я5000 -->
+      
+      <!-- Тип ящика (однофидерный/двухфидерный/трехфидерный) -->
+      <div x-show="commutationType === 'motor_control_box'" class="product-spec-group">
+        <div class="product-spec-label">Тип ящика</div>
+        <div class="product-spec-options">
+          <button 
+            class="spec-option"
+            :class="{ active: boxType === 'single_feeder', 'opacity-50': loading }"
+            @click="updateBoxType('single_feeder')"
+            :disabled="loading"
+          >Однофидерный</button>
+          <button 
+            class="spec-option"
+            :class="{ active: boxType === 'double_feeder', 'opacity-50': loading }"
+            @click="updateBoxType('double_feeder')"
+            :disabled="loading"
+          >Двухфидерный</button>
+          <button 
+            class="spec-option"
+            :class="{ active: boxType === 'triple_feeder', 'opacity-50': loading }"
+            @click="updateBoxType('triple_feeder')"
+            :disabled="loading"
+          >Трехфидерный</button>
+        </div>
+      </div>
+
+      <!-- Тип регулирования (реверсивный/нереверсивный) - только для двухфидерных -->
+      <div x-show="commutationType === 'motor_control_box' && boxType === 'double_feeder'" class="product-spec-group">
+        <div class="product-spec-label">Тип регулирования</div>
+        <div class="product-spec-options">
+          <button 
+            class="spec-option"
+            :class="{ active: reversible === false, 'opacity-50': loading }"
+            @click="updateReversible(false)"
+            :disabled="loading"
+          >Нереверсивные</button>
+          <button 
+            class="spec-option"
+            :class="{ active: reversible === true, 'opacity-50': loading }"
+            @click="updateReversible(true)"
+            :disabled="loading"
+          >Реверсивные</button>
+        </div>
+      </div>
+
+      <!-- Номинальный ток для ящиков управления -->
+      <div x-show="commutationType === 'motor_control_box'" class="product-spec-group">
+        <div class="product-spec-label">Номинальный ток щитка, А</div>
+        <div class="product-spec-options product-spec-options-currents">
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === 0.6, 'opacity-50': loading }"
+            @click="updateNominalCurrent(0.6)"
+            :disabled="loading"
+          >0,6</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === 1, 'opacity-50': loading }"
+            @click="updateNominalCurrent(1)"
+            :disabled="loading"
+          >1</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === 1.6, 'opacity-50': loading }"
+            @click="updateNominalCurrent(1.6)"
+            :disabled="loading"
+          >1,6</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === 2.5, 'opacity-50': loading }"
+            @click="updateNominalCurrent(2.5)"
+            :disabled="loading"
+          >2,5</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === 4, 'opacity-50': loading }"
+            @click="updateNominalCurrent(4)"
+            :disabled="loading"
+          >4</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === 6, 'opacity-50': loading }"
+            @click="updateNominalCurrent(6)"
+            :disabled="loading"
+          >6</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === 8, 'opacity-50': loading }"
+            @click="updateNominalCurrent(8)"
+            :disabled="loading"
+          >8</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === 10, 'opacity-50': loading }"
+            @click="updateNominalCurrent(10)"
+            :disabled="loading"
+          >10</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === 12, 'opacity-50': loading }"
+            @click="updateNominalCurrent(12)"
+            :disabled="loading"
+          >12</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === 16, 'opacity-50': loading }"
+            @click="updateNominalCurrent(16)"
+            :disabled="loading"
+          >16</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === 25, 'opacity-50': loading }"
+            @click="updateNominalCurrent(25)"
+            :disabled="loading"
+          >25</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === 32, 'opacity-50': loading }"
+            @click="updateNominalCurrent(32)"
+            :disabled="loading"
+          >32</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === 40, 'opacity-50': loading }"
+            @click="updateNominalCurrent(40)"
+            :disabled="loading"
+          >40</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === 50, 'opacity-50': loading }"
+            @click="updateNominalCurrent(50)"
+            :disabled="loading"
+          >50</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === 63, 'opacity-50': loading }"
+            @click="updateNominalCurrent(63)"
+            :disabled="loading"
+          >63</button>
+          <button 
+            class="spec-option"
+            :class="{ active: nominalCurrent === 80, 'opacity-50': loading }"
+            @click="updateNominalCurrent(80)"
+            :disabled="loading"
+          >80</button>
+        </div>
+      </div>
+
+      <!-- Количество фидеров (тип переключателя) -->
+      <div x-show="commutationType === 'motor_control_box'" class="product-spec-group">
+        <div class="product-spec-label">Количество фидеров</div>
+        <div class="product-spec-options">
+          <button 
+            class="spec-option"
+            :class="{ active: feederType === 'no_auto', 'opacity-50': loading }"
+            @click="updateFeederType('no_auto')"
+            :disabled="loading"
+          >Без переключателя</button>
+          <button 
+            class="spec-option"
+            :class="{ active: feederType === 'no_auto_contacts', 'opacity-50': loading }"
+            @click="updateFeederType('no_auto_contacts')"
+            :disabled="loading"
+          >Без переключателя, с контактами</button>
+          <button 
+            class="spec-option"
+            :class="{ active: feederType === 'with_auto', 'opacity-50': loading }"
+            @click="updateFeederType('with_auto')"
+            :disabled="loading"
+          >С переключателем</button>
         </div>
       </div>
 

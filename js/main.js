@@ -311,9 +311,9 @@ document.addEventListener('alpine:init', () => {
       reactivePower: '10', // мощность в кВАр (в базе данных это поле "power")
       step: null, // количество ступеней для автоматически регулируемых установок
       // Параметры для ящиков управления электродвигателями Я5000
-      boxType: 'double_feeder', // 'single_feeder', 'double_feeder', 'triple_feeder'
-      motorControlType: 'non_reversible', // 'non_reversible' или 'reversible'
-      feederType: 'double_no_auto', // 'double_no_auto' или 'double_with_auto'
+      boxType: 'single_feeder', // 'single_feeder', 'double_feeder', 'triple_feeder'
+      reversible: false, // true или false - для двухфидерных
+      feederType: 'no_auto', // 'no_auto', 'no_auto_contacts', 'with_auto'
       basePrice: 87900,
       article: 'АВР-100-CHINT-2',
       loading: false,
@@ -910,8 +910,11 @@ document.addEventListener('alpine:init', () => {
             // Для ящиков управления используем nominal_current
             filters.nominal_current = this.nominalCurrent;
             filters.box_type = this.boxType;
-            filters.motor_control_type = this.motorControlType;
             filters.feeder_type = this.feederType;
+            // Для двухфидерных добавляем реверсивность
+            if (this.boxType === 'double_feeder') {
+              filters.reversible = this.reversible;
+            }
           } else {
             // Для АВР используем nominal_current
             filters.nominal_current = this.nominalCurrent;
@@ -1664,6 +1667,28 @@ document.addEventListener('alpine:init', () => {
           }
           
           return productData;
+        } else if (this.commutationType === 'motor_control_box') {
+          // Для ящиков управления Я5000
+          const productData = {
+            article: this.article,
+            manufacturerBrand: this.manufacturerBrand,
+            commutationType: this.commutationType,
+            boxType: this.boxType,
+            feederType: this.feederType,
+            nominalCurrent: this.nominalCurrent,
+            basePrice: this.basePrice,
+            totalPrice: this.totalPrice,
+            images: this.images,
+            productSpecs: this.productSpecs,
+            productTitle: this.productTitle
+          };
+          
+          // Для двухфидерных добавляем реверсивность
+          if (this.boxType === 'double_feeder') {
+            productData.reversible = this.reversible;
+          }
+          
+          return productData;
         } else {
           // Для трехфазных АВР и контакторов
           if (this.commutationType === 'contactors') {
@@ -2388,6 +2413,64 @@ document.addEventListener('alpine:init', () => {
         await this.loadProductByCharacteristics();
         
         this.updateCartQuantity();
+      },
+      
+      // МЕТОДЫ ДЛЯ ЯЩИКОВ УПРАВЛЕНИЯ Я5000
+      
+      // Метод для обновления типа ящика
+      async updateBoxType(value) {
+        if (this.loading) return;
+        this.loading = true;
+        this.boxType = value;
+        
+        try {
+          // Сбрасываем реверсивность при смене типа
+          if (value !== 'double_feeder') {
+            this.reversible = false;
+          }
+          
+          await this.loadAvailableOptions();
+          
+          // Выбираем первый доступный ток
+          if (this.availableOptions.nominal_current && this.availableOptions.nominal_current.length > 0) {
+            this.nominalCurrent = String(this.availableOptions.nominal_current[0]);
+          }
+          
+          await this.loadProductByCharacteristics();
+          this.updateCartQuantity();
+        } finally {
+          this.loading = false;
+        }
+      },
+      
+      // Метод для обновления реверсивности (только для двухфидерных)
+      async updateReversible(value) {
+        if (this.loading) return;
+        this.loading = true;
+        this.reversible = value;
+        
+        try {
+          await this.loadAvailableOptions();
+          await this.loadProductByCharacteristics();
+          this.updateCartQuantity();
+        } finally {
+          this.loading = false;
+        }
+      },
+      
+      // Метод для обновления типа фидера (переключателя)
+      async updateFeederType(value) {
+        if (this.loading) return;
+        this.loading = true;
+        this.feederType = value;
+        
+        try {
+          await this.loadAvailableOptions();
+          await this.loadProductByCharacteristics();
+          this.updateCartQuantity();
+        } finally {
+          this.loading = false;
+        }
       }
     };
   });
