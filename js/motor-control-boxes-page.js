@@ -63,8 +63,12 @@
             } else if (this.sortBy === 'price_desc') {
                 this.filteredProducts.sort((a, b) => b.base_price - a.base_price);
             }
+        },
 
-            },
+        filterByBoxType(boxType) {
+            this.selectedBoxType = this.selectedBoxType === boxType ? '' : boxType;
+            this.filterProducts();
+        },
 
         formatPrice(price) {
             return new Intl.NumberFormat('ru-RU').format(price) + ' ₽';

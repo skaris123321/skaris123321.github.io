@@ -39,6 +39,34 @@
     </div>
   </section>
 
+  <!-- Подкатегории -->
+  <section class="subcategories-section">
+    <div class="container">
+      <div class="subcategories-grid">
+        <a href="#" class="subcategory-card" @click.prevent="filterByBoxType('single_feeder')" :class="{ 'active': selectedBoxType === 'single_feeder' }">
+          <div class="subcategory-image-wrapper" :style="selectedBoxType === 'single_feeder' ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
+            <img src="../images/upr-ilektr.png" alt="Ящики управления Я5000 однофидерные" class="subcategory-image">
+          </div>
+          <p class="subcategory-name" :style="selectedBoxType === 'single_feeder' ? 'color: #dc2626; font-weight: 600;' : ''">Ящики управления Я5000 однофидерные</p>
+        </a>
+
+        <a href="#" class="subcategory-card" @click.prevent="filterByBoxType('double_feeder')" :class="{ 'active': selectedBoxType === 'double_feeder' }">
+          <div class="subcategory-image-wrapper" :style="selectedBoxType === 'double_feeder' ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
+            <img src="../images/upr-ilektr.png" alt="Ящики управления Я5000 двухфидерные" class="subcategory-image">
+          </div>
+          <p class="subcategory-name" :style="selectedBoxType === 'double_feeder' ? 'color: #dc2626; font-weight: 600;' : ''">Ящики управления Я5000 двухфидерные</p>
+        </a>
+
+        <a href="#" class="subcategory-card" @click.prevent="filterByBoxType('triple_feeder')" :class="{ 'active': selectedBoxType === 'triple_feeder' }">
+          <div class="subcategory-image-wrapper" :style="selectedBoxType === 'triple_feeder' ? 'background: #fef2f2; border: 2px solid #dc2626;' : ''">
+            <img src="../images/upr-ilektr.png" alt="Ящики управления Я5000 трехфидерные нереверсивные" class="subcategory-image">
+          </div>
+          <p class="subcategory-name" :style="selectedBoxType === 'triple_feeder' ? 'color: #dc2626; font-weight: 600;' : ''">Ящики управления Я5000 трехфидерные нереверсивные</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <div x-data="motorControlBoxesPage()" x-init="init()">
   <section class="sort-section">
     <div class="container sort-controls">
@@ -113,7 +141,7 @@
 
   <script src="../js/cart.js"></script>
   <script src="../js/products-api.js?v=8"></script>
-  <script src="../js/motor-control-boxes-page.js?v=6"></script>
+  <script src="../js/motor-control-boxes-page.js?v=7"></script>
   <script src="../js/search.js?v=2"></script>
 
 </body>
