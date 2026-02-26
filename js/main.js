@@ -2442,6 +2442,11 @@ document.addEventListener('alpine:init', () => {
         this.loading = true;
         this.reversible = value;
         
+        // Если выбран реверсивный и тип фидера "с контактами", переключаем на "без переключателя"
+        if (value === true && this.feederType === 'no_auto_contacts') {
+          this.feederType = 'no_auto';
+        }
+        
         try {
           await this.loadAvailableOptions();
           await this.loadProductByCharacteristics();

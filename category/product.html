@@ -897,9 +897,9 @@
           >Без переключателя</button>
           <button 
             class="spec-option"
-            :class="{ active: feederType === 'no_auto_contacts', 'opacity-50': loading }"
-            @click="updateFeederType('no_auto_contacts')"
-            :disabled="loading"
+            :class="{ active: feederType === 'no_auto_contacts', 'opacity-50': loading || reversible === true, disabled: reversible === true }"
+            @click="reversible !== true && updateFeederType('no_auto_contacts')"
+            :disabled="loading || reversible === true"
           >Без переключателя, с контактами</button>
           <button 
             class="spec-option"
@@ -1364,8 +1364,8 @@
   </footer>
 
   <script src="../js/cart.js"></script>
-  <script src="../js/products-api.js?v=10"></script>
-  <script src="../js/main.js?v=21"></script>
+  <script src="../js/products-api.js?v=11"></script>
+  <script src="../js/main.js?v=22"></script>
   <script src="../js/search.js?v=2"></script>
 </body>
 </html>
