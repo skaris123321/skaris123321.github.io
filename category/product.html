@@ -1059,33 +1059,6 @@
         </div>
       </div>
 
-      <!-- Тип управления для ящиков (Реверсивный/Нереверсивный) -->
-      <div x-show="commutationType === 'motor_control_box'" class="product-spec-group">
-        <div class="product-spec-label">Тип управления</div>
-        <div class="product-spec-options">
-          <button 
-            class="spec-option"
-            :class="{ 
-              active: motorControlType === 'non_reversible', 
-              'opacity-50': loading || !isOptionAvailable('motor_control_type', 'non_reversible'),
-              disabled: !isOptionAvailable('motor_control_type', 'non_reversible')
-            }"
-            @click="isOptionAvailable('motor_control_type', 'non_reversible') && updateMotorControlType('non_reversible')"
-            :disabled="loading"
-          >Нереверсивный</button>
-          <button 
-            class="spec-option"
-            :class="{ 
-              active: motorControlType === 'reversible', 
-              'opacity-50': loading || !isOptionAvailable('motor_control_type', 'reversible'),
-              disabled: !isOptionAvailable('motor_control_type', 'reversible')
-            }"
-            @click="isOptionAvailable('motor_control_type', 'reversible') && updateMotorControlType('reversible')"
-            :disabled="loading"
-          >Реверсивный</button>
-        </div>
-      </div>
-
       <!-- Номинальный ток для ящиков управления электродвигателями Я5000 -->
       <div x-show="commutationType === 'motor_control_box'" class="product-spec-group">
         <div class="product-spec-label">Номинальный ток</div>
