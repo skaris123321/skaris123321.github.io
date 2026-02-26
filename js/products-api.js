@@ -102,7 +102,10 @@ class ProductsAPI {
       motor_power: [],
       regulation_type: [],
       reactive_power: [],
-      steps: []
+      steps: [],
+      motor_control_type: [],
+      feeder_type: [],
+      box_type: []
     };
 
     // Все бренды (с учетом типа коммутации)
@@ -217,6 +220,72 @@ class ProductsAPI {
       availableOptions.inputs_count = [];
       availableOptions.poles_count = [];
       availableOptions.nominal_current = [];
+    } else if (commutation_type === 'motor_control_box') {
+      // Для ящиков управления электродвигателями Я5000
+      const { box_type, motor_control_type, nominal_current, feeder_type } = filters;
+      
+      // Получаем доступные типы ящиков
+      let boxTypeProducts = data.products.filter(p => p.commutation_type === 'motor_control_box');
+      if (manufacturer_brand) {
+        boxTypeProducts = boxTypeProducts.filter(p => p.brand === manufacturer_brand);
+      }
+      const boxTypes = [...new Set(boxTypeProducts.map(p => p.box_type).filter(Boolean))];
+      availableOptions.box_type = boxTypes.sort();
+      
+      // Получаем доступные типы управления
+      let motorControlTypeProducts = data.products.filter(p => p.commutation_type === 'motor_control_box');
+      if (manufacturer_brand) {
+        motorControlTypeProducts = motorControlTypeProducts.filter(p => p.brand === manufacturer_brand);
+      }
+      if (box_type) {
+        motorControlTypeProducts = motorControlTypeProducts.filter(p => p.box_type === box_type);
+      }
+      if (nominal_current) {
+        motorControlTypeProducts = motorControlTypeProducts.filter(p => parseFloat(p.nominal_current) === parseFloat(nominal_current));
+      }
+      if (feeder_type) {
+        motorControlTypeProducts = motorControlTypeProducts.filter(p => p.feeder_type === feeder_type);
+      }
+      const motorControlTypes = [...new Set(motorControlTypeProducts.map(p => p.motor_control_type).filter(Boolean))];
+      availableOptions.motor_control_type = motorControlTypes.sort();
+      
+      // Получаем доступные номинальные токи
+      let currentProducts = data.products.filter(p => p.commutation_type === 'motor_control_box');
+      if (manufacturer_brand) {
+        currentProducts = currentProducts.filter(p => p.brand === manufacturer_brand);
+      }
+      if (box_type) {
+        currentProducts = currentProducts.filter(p => p.box_type === box_type);
+      }
+      if (motor_control_type) {
+        currentProducts = currentProducts.filter(p => p.motor_control_type === motor_control_type);
+      }
+      if (feeder_type) {
+        currentProducts = currentProducts.filter(p => p.feeder_type === feeder_type);
+      }
+      const nominalCurrents = [...new Set(currentProducts.map(p => parseFloat(p.nominal_current)).filter(Boolean))];
+      availableOptions.nominal_current = nominalCurrents.sort((a, b) => a - b);
+      
+      // Получаем доступные типы фидеров
+      let feederTypeProducts = data.products.filter(p => p.commutation_type === 'motor_control_box');
+      if (manufacturer_brand) {
+        feederTypeProducts = feederTypeProducts.filter(p => p.brand === manufacturer_brand);
+      }
+      if (box_type) {
+        feederTypeProducts = feederTypeProducts.filter(p => p.box_type === box_type);
+      }
+      if (motor_control_type) {
+        feederTypeProducts = feederTypeProducts.filter(p => p.motor_control_type === motor_control_type);
+      }
+      if (nominal_current) {
+        feederTypeProducts = feederTypeProducts.filter(p => parseFloat(p.nominal_current) === parseFloat(nominal_current));
+      }
+      const feederTypes = [...new Set(feederTypeProducts.map(p => p.feeder_type).filter(Boolean))];
+      availableOptions.feeder_type = feederTypes.sort();
+      
+      // Для ящиков управления не используются эти параметры
+      availableOptions.inputs_count = [];
+      availableOptions.poles_count = [];
     } else {
       // Для АВР используем inputs_count
       let inputsProducts = data.products;
