@@ -2422,6 +2422,11 @@ document.addEventListener('alpine:init', () => {
             this.reversible = false;
           }
           
+          // Если выбран двухфидерный и тип фидера "с контактами", переключаем на "без переключателя"
+          if (value === 'double_feeder' && this.feederType === 'no_auto_contacts') {
+            this.feederType = 'no_auto';
+          }
+          
           await this.loadAvailableOptions();
           
           // Выбираем первый доступный ток
