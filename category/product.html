@@ -877,6 +877,44 @@
         </div>
       </div>
 
+      <!-- Тип управления для ящиков (Реверсивный/Нереверсивный) -->
+      <div x-show="commutationType === 'motor_control_box'" class="product-spec-group">
+        <div class="product-spec-label">Тип управления</div>
+        <div class="product-spec-options">
+          <button 
+            class="spec-option"
+            :class="{ active: motorControlType === 'non_reversible', 'opacity-50': loading, disabled: loading }"
+            @click="updateMotorControlType('non_reversible')"
+            :disabled="loading"
+          >Нереверсивный</button>
+          <button 
+            class="spec-option"
+            :class="{ active: motorControlType === 'reversible', 'opacity-50': loading, disabled: loading }"
+            @click="updateMotorControlType('reversible')"
+            :disabled="loading"
+          >Реверсивный</button>
+        </div>
+      </div>
+
+      <!-- Тип фидера для ящиков управления -->
+      <div x-show="commutationType === 'motor_control_box'" class="product-spec-group">
+        <div class="product-spec-label">Количество фидеров</div>
+        <div class="product-spec-options">
+          <button 
+            class="spec-option"
+            :class="{ active: feederType === 'double_no_auto', 'opacity-50': loading, disabled: loading }"
+            @click="updateFeederType('double_no_auto')"
+            :disabled="loading"
+          >Без переключателя</button>
+          <button 
+            class="spec-option"
+            :class="{ active: feederType === 'double_with_auto', 'opacity-50': loading, disabled: loading }"
+            @click="updateFeederType('double_with_auto')"
+            :disabled="loading"
+          >С переключателем</button>
+        </div>
+      </div>
+
       <!-- Номинальный ток для ящиков управления электродвигателями Я5000 -->
       <div x-show="commutationType === 'motor_control_box'" class="product-spec-group">
         <div class="product-spec-label">Номинальный ток</div>
@@ -937,6 +975,12 @@
           >12 A</button>
           <button 
             class="spec-option"
+            :class="{ active: nominalCurrent === '16', 'opacity-50': loading || !isOptionAvailable('nominal_current', '16'), disabled: loading || !isOptionAvailable('nominal_current', '16') }"
+            @click="updateNominalCurrent('16')"
+            :disabled="loading || !isOptionAvailable('nominal_current', '16')"
+          >16 A</button>
+          <button 
+            class="spec-option"
             :class="{ active: nominalCurrent === '25', 'opacity-50': loading || !isOptionAvailable('nominal_current', '25'), disabled: loading || !isOptionAvailable('nominal_current', '25') }"
             @click="updateNominalCurrent('25')"
             :disabled="loading || !isOptionAvailable('nominal_current', '25')"
@@ -971,25 +1015,6 @@
             @click="updateNominalCurrent('80')"
             :disabled="loading || !isOptionAvailable('nominal_current', '80')"
           >80 A</button>
-        </div>
-      </div>
-
-      <!-- Тип фидера для ящиков управления -->
-      <div x-show="commutationType === 'motor_control_box'" class="product-spec-group">
-        <div class="product-spec-label">Количество фидеров</div>
-        <div class="product-spec-options">
-          <button 
-            class="spec-option"
-            :class="{ active: feederType === 'double_no_auto', 'opacity-50': loading, disabled: loading }"
-            @click="updateFeederType('double_no_auto')"
-            :disabled="loading"
-          >Без переключателя</button>
-          <button 
-            class="spec-option"
-            :class="{ active: feederType === 'double_with_auto', 'opacity-50': loading, disabled: loading }"
-            @click="updateFeederType('double_with_auto')"
-            :disabled="loading"
-          >С переключателем</button>
         </div>
       </div>
 
@@ -1307,7 +1332,7 @@
 
   <script src="../js/cart.js"></script>
   <script src="../js/products-api.js?v=8"></script>
-  <script src="../js/main.js?v=15"></script>
+  <script src="../js/main.js?v=16"></script>
   <script src="../js/search.js?v=2"></script>
 </body>
 </html>

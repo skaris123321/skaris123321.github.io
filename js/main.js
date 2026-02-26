@@ -1094,6 +1094,15 @@ document.addEventListener('alpine:init', () => {
         }
       },
       
+      // Метод для обновления типа управления (для ящиков управления)
+      async updateMotorControlType(value) {
+        if (this.loading) return;
+        this.motorControlType = value;
+        
+        await this.loadProductByCharacteristics();
+        this.updateCartQuantity();
+      },
+      
       // Метод для обновления типа фидера (для ящиков управления)
       async updateFeederType(value) {
         if (this.loading) return;
