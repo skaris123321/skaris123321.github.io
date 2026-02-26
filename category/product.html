@@ -883,15 +883,23 @@
         <div class="product-spec-options">
           <button 
             class="spec-option"
-            :class="{ active: motorControlType === 'non_reversible', 'opacity-50': loading || !isOptionAvailable('motor_control_type', 'non_reversible'), disabled: loading || !isOptionAvailable('motor_control_type', 'non_reversible') }"
-            @click="updateMotorControlType('non_reversible')"
-            :disabled="loading || !isOptionAvailable('motor_control_type', 'non_reversible')"
+            :class="{ 
+              active: motorControlType === 'non_reversible', 
+              'opacity-50': loading || !isOptionAvailable('motor_control_type', 'non_reversible'),
+              disabled: !isOptionAvailable('motor_control_type', 'non_reversible')
+            }"
+            @click="isOptionAvailable('motor_control_type', 'non_reversible') && updateMotorControlType('non_reversible')"
+            :disabled="loading"
           >Нереверсивный</button>
           <button 
             class="spec-option"
-            :class="{ active: motorControlType === 'reversible', 'opacity-50': loading || !isOptionAvailable('motor_control_type', 'reversible'), disabled: loading || !isOptionAvailable('motor_control_type', 'reversible') }"
-            @click="updateMotorControlType('reversible')"
-            :disabled="loading || !isOptionAvailable('motor_control_type', 'reversible')"
+            :class="{ 
+              active: motorControlType === 'reversible', 
+              'opacity-50': loading || !isOptionAvailable('motor_control_type', 'reversible'),
+              disabled: !isOptionAvailable('motor_control_type', 'reversible')
+            }"
+            @click="isOptionAvailable('motor_control_type', 'reversible') && updateMotorControlType('reversible')"
+            :disabled="loading"
           >Реверсивный</button>
         </div>
       </div>
@@ -1009,23 +1017,35 @@
               <button 
                 class="spec-option"
                 style="font-size: 0.75rem; padding: 0.5rem 0.75rem;"
-                :class="{ active: feederType === 'single_no_auto', 'opacity-50': loading || !isOptionAvailable('feeder_type', 'single_no_auto'), disabled: loading || !isOptionAvailable('feeder_type', 'single_no_auto') }"
-                @click="updateFeederType('single_no_auto')"
-                :disabled="loading || !isOptionAvailable('feeder_type', 'single_no_auto')"
+                :class="{ 
+                  active: feederType === 'single_no_auto', 
+                  'opacity-50': loading || !isOptionAvailable('feeder_type', 'single_no_auto'),
+                  disabled: !isOptionAvailable('feeder_type', 'single_no_auto')
+                }"
+                @click="isOptionAvailable('feeder_type', 'single_no_auto') && updateFeederType('single_no_auto')"
+                :disabled="loading"
               >Без переключателя</button>
               <button 
                 class="spec-option"
                 style="font-size: 0.75rem; padding: 0.5rem 0.75rem;"
-                :class="{ active: feederType === 'single_no_auto_with_contacts', 'opacity-50': loading || !isOptionAvailable('feeder_type', 'single_no_auto_with_contacts'), disabled: loading || !isOptionAvailable('feeder_type', 'single_no_auto_with_contacts') }"
-                @click="updateFeederType('single_no_auto_with_contacts')"
-                :disabled="loading || !isOptionAvailable('feeder_type', 'single_no_auto_with_contacts')"
+                :class="{ 
+                  active: feederType === 'single_no_auto_with_contacts', 
+                  'opacity-50': loading || !isOptionAvailable('feeder_type', 'single_no_auto_with_contacts'),
+                  disabled: !isOptionAvailable('feeder_type', 'single_no_auto_with_contacts')
+                }"
+                @click="isOptionAvailable('feeder_type', 'single_no_auto_with_contacts') && updateFeederType('single_no_auto_with_contacts')"
+                :disabled="loading"
               >Без переключателя, с контактами</button>
               <button 
                 class="spec-option"
                 style="font-size: 0.75rem; padding: 0.5rem 0.75rem;"
-                :class="{ active: feederType === 'single_with_auto', 'opacity-50': loading || !isOptionAvailable('feeder_type', 'single_with_auto'), disabled: loading || !isOptionAvailable('feeder_type', 'single_with_auto') }"
-                @click="updateFeederType('single_with_auto')"
-                :disabled="loading || !isOptionAvailable('feeder_type', 'single_with_auto')"
+                :class="{ 
+                  active: feederType === 'single_with_auto', 
+                  'opacity-50': loading || !isOptionAvailable('feeder_type', 'single_with_auto'),
+                  disabled: !isOptionAvailable('feeder_type', 'single_with_auto')
+                }"
+                @click="isOptionAvailable('feeder_type', 'single_with_auto') && updateFeederType('single_with_auto')"
+                :disabled="loading"
               >С переключателем</button>
             </div>
           </template>
@@ -1035,15 +1055,23 @@
             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
               <button 
                 class="spec-option"
-                :class="{ active: feederType === 'double_no_auto', 'opacity-50': loading || !isOptionAvailable('feeder_type', 'double_no_auto'), disabled: loading || !isOptionAvailable('feeder_type', 'double_no_auto') }"
-                @click="updateFeederType('double_no_auto')"
-                :disabled="loading || !isOptionAvailable('feeder_type', 'double_no_auto')"
+                :class="{ 
+                  active: feederType === 'double_no_auto', 
+                  'opacity-50': loading || !isOptionAvailable('feeder_type', 'double_no_auto'),
+                  disabled: !isOptionAvailable('feeder_type', 'double_no_auto')
+                }"
+                @click="isOptionAvailable('feeder_type', 'double_no_auto') && updateFeederType('double_no_auto')"
+                :disabled="loading"
               >Без переключателя</button>
               <button 
                 class="spec-option"
-                :class="{ active: feederType === 'double_with_auto', 'opacity-50': loading || !isOptionAvailable('feeder_type', 'double_with_auto'), disabled: loading || !isOptionAvailable('feeder_type', 'double_with_auto') }"
-                @click="updateFeederType('double_with_auto')"
-                :disabled="loading || !isOptionAvailable('feeder_type', 'double_with_auto')"
+                :class="{ 
+                  active: feederType === 'double_with_auto', 
+                  'opacity-50': loading || !isOptionAvailable('feeder_type', 'double_with_auto'),
+                  disabled: !isOptionAvailable('feeder_type', 'double_with_auto')
+                }"
+                @click="isOptionAvailable('feeder_type', 'double_with_auto') && updateFeederType('double_with_auto')"
+                :disabled="loading"
               >С переключателем</button>
             </div>
           </template>
@@ -1364,7 +1392,7 @@
 
   <script src="../js/cart.js"></script>
   <script src="../js/products-api.js?v=8"></script>
-  <script src="../js/main.js?v=18"></script>
+  <script src="../js/main.js?v=19"></script>
   <script src="../js/search.js?v=2"></script>
 </body>
 </html>
