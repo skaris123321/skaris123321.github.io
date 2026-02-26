@@ -161,7 +161,6 @@ class ProductsAPI {
       regulation_type: [],
       reactive_power: [],
       steps: [],
-      motor_control_type: [],
       feeder_type: [],
       box_type: []
     };
@@ -280,7 +279,7 @@ class ProductsAPI {
       availableOptions.nominal_current = [];
     } else if (commutation_type === 'motor_control_box') {
       // Для ящиков управления электродвигателями Я5000
-      const { box_type, motor_control_type, nominal_current, feeder_type } = filters;
+      const { box_type, reversible, nominal_current, feeder_type } = filters;
       
       // Получаем доступные типы ящиков
       let boxTypeProducts = data.products.filter(p => p.commutation_type === 'motor_control_box');
@@ -290,23 +289,6 @@ class ProductsAPI {
       const boxTypes = [...new Set(boxTypeProducts.map(p => p.box_type).filter(Boolean))];
       availableOptions.box_type = boxTypes.sort();
       
-      // Получаем доступные типы управления
-      let motorControlTypeProducts = data.products.filter(p => p.commutation_type === 'motor_control_box');
-      if (manufacturer_brand) {
-        motorControlTypeProducts = motorControlTypeProducts.filter(p => p.brand === manufacturer_brand);
-      }
-      if (box_type) {
-        motorControlTypeProducts = motorControlTypeProducts.filter(p => p.box_type === box_type);
-      }
-      if (nominal_current) {
-        motorControlTypeProducts = motorControlTypeProducts.filter(p => parseFloat(p.nominal_current) === parseFloat(nominal_current));
-      }
-      if (feeder_type) {
-        motorControlTypeProducts = motorControlTypeProducts.filter(p => p.feeder_type === feeder_type);
-      }
-      const motorControlTypes = [...new Set(motorControlTypeProducts.map(p => p.motor_control_type).filter(Boolean))];
-      availableOptions.motor_control_type = motorControlTypes.sort();
-      
       // Получаем доступные номинальные токи
       let currentProducts = data.products.filter(p => p.commutation_type === 'motor_control_box');
       if (manufacturer_brand) {
@@ -315,8 +297,8 @@ class ProductsAPI {
       if (box_type) {
         currentProducts = currentProducts.filter(p => p.box_type === box_type);
       }
-      if (motor_control_type) {
-        currentProducts = currentProducts.filter(p => p.motor_control_type === motor_control_type);
+      if (box_type === 'double_feeder' && reversible !== undefined) {
+        currentProducts = currentProducts.filter(p => p.reversible === reversible);
       }
       if (feeder_type) {
         currentProducts = currentProducts.filter(p => p.feeder_type === feeder_type);
@@ -332,8 +314,8 @@ class ProductsAPI {
       if (box_type) {
         feederTypeProducts = feederTypeProducts.filter(p => p.box_type === box_type);
       }
-      if (motor_control_type) {
-        feederTypeProducts = feederTypeProducts.filter(p => p.motor_control_type === motor_control_type);
+      if (box_type === 'double_feeder' && reversible !== undefined) {
+        feederTypeProducts = feederTypeProducts.filter(p => p.reversible === reversible);
       }
       if (nominal_current) {
         feederTypeProducts = feederTypeProducts.filter(p => parseFloat(p.nominal_current) === parseFloat(nominal_current));
@@ -428,7 +410,7 @@ class ProductsAPI {
           reactive_power: foundProduct.power || null,
           step: foundProduct.step || null,
           box_type: foundProduct.box_type || null,
-          motor_control_type: foundProduct.motor_control_type || null,
+          reversible: foundProduct.reversible || null,
           feeder_type: foundProduct.feeder_type || null,
           base_price: parseInt(foundProduct.base_price || 0),
           main_image: this.addImageVersion(foundProduct.main_image) || (images[0] || null),
