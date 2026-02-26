@@ -1,5 +1,5 @@
-function motorControlBoxesCatalog() {
-  return {
+document.addEventListener('alpine:init', () => {
+  Alpine.data('motorControlBoxesCatalog', () => ({
     products: [],
     filteredProducts: [],
     loading: true,
@@ -120,5 +120,5 @@ function motorControlBoxesCatalog() {
     getProductUrl(product) {
       return `product.html?id=${product.id}`;
     }
-  };
-}
+  }));
+});
