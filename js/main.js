@@ -597,6 +597,11 @@ document.addEventListener('alpine:init', () => {
           return this.availableOptions[optionType].some(opt => parseFloat(opt) === numValue);
         }
         
+        // Для reversible сравниваем boolean значения
+        if (optionType === 'reversible') {
+          return this.availableOptions[optionType].includes(value);
+        }
+        
         return this.availableOptions[optionType].includes(value);
       },
       
