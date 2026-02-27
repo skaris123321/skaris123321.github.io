@@ -1430,6 +1430,11 @@ document.addEventListener('alpine:init', () => {
         if (this.commutationType === 'motor_control_box') {
           // Переводим ключи, если они на английском, и нормализуем значения
           for (const [key, value] of Object.entries(rawSpecs)) {
+            // Пропускаем пустые значения, undefined, null
+            if (value === undefined || value === null || value === '') {
+              continue;
+            }
+            
             const translatedKey = this.translateSpecKey(key);
             
             // Для поля "Количество фидеров" используем значение в зависимости от feederType
