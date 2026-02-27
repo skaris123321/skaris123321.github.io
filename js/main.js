@@ -910,7 +910,8 @@ document.addEventListener('alpine:init', () => {
             // Для ящиков управления используем nominal_current
             filters.nominal_current = this.nominalCurrent;
             filters.box_type = this.boxType;
-            filters.feeder_type = this.feederType;
+            // Для трехфидерных используем фиксированный тип, для остальных - выбранный
+            filters.feeder_type = this.boxType === 'triple_feeder' ? 'triple_fixed' : this.feederType;
             filters.reversible = this.reversible;
           } else {
             // Для АВР используем nominal_current
