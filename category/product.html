@@ -788,97 +788,97 @@
         <div class="product-spec-options product-spec-options-currents">
           <button 
             class="spec-option"
-            :class="{ active: nominalCurrent === 0.6, 'opacity-50': loading || !isOptionAvailable('nominal_current', 0.6), disabled: !isOptionAvailable('nominal_current', 0.6) }"
+            :class="{ active: parseFloat(nominalCurrent) === 0.6, 'opacity-50': loading || !isOptionAvailable('nominal_current', 0.6), disabled: !isOptionAvailable('nominal_current', 0.6) }"
             @click="isOptionAvailable('nominal_current', 0.6) && updateNominalCurrent(0.6)"
             :disabled="loading || !isOptionAvailable('nominal_current', 0.6)"
           >0,6</button>
           <button 
             class="spec-option"
-            :class="{ active: nominalCurrent === 1, 'opacity-50': loading || !isOptionAvailable('nominal_current', 1), disabled: !isOptionAvailable('nominal_current', 1) }"
+            :class="{ active: parseFloat(nominalCurrent) === 1, 'opacity-50': loading || !isOptionAvailable('nominal_current', 1), disabled: !isOptionAvailable('nominal_current', 1) }"
             @click="isOptionAvailable('nominal_current', 1) && updateNominalCurrent(1)"
             :disabled="loading || !isOptionAvailable('nominal_current', 1)"
           >1</button>
           <button 
             class="spec-option"
-            :class="{ active: nominalCurrent === 1.6, 'opacity-50': loading || !isOptionAvailable('nominal_current', 1.6), disabled: !isOptionAvailable('nominal_current', 1.6) }"
+            :class="{ active: parseFloat(nominalCurrent) === 1.6, 'opacity-50': loading || !isOptionAvailable('nominal_current', 1.6), disabled: !isOptionAvailable('nominal_current', 1.6) }"
             @click="isOptionAvailable('nominal_current', 1.6) && updateNominalCurrent(1.6)"
             :disabled="loading || !isOptionAvailable('nominal_current', 1.6)"
           >1,6</button>
           <button 
             class="spec-option"
-            :class="{ active: nominalCurrent === 2.5, 'opacity-50': loading || !isOptionAvailable('nominal_current', 2.5), disabled: !isOptionAvailable('nominal_current', 2.5) }"
+            :class="{ active: parseFloat(nominalCurrent) === 2.5, 'opacity-50': loading || !isOptionAvailable('nominal_current', 2.5), disabled: !isOptionAvailable('nominal_current', 2.5) }"
             @click="isOptionAvailable('nominal_current', 2.5) && updateNominalCurrent(2.5)"
             :disabled="loading || !isOptionAvailable('nominal_current', 2.5)"
           >2,5</button>
           <button 
             class="spec-option"
-            :class="{ active: nominalCurrent === 4, 'opacity-50': loading || !isOptionAvailable('nominal_current', 4), disabled: !isOptionAvailable('nominal_current', 4) }"
+            :class="{ active: parseFloat(nominalCurrent) === 4, 'opacity-50': loading || !isOptionAvailable('nominal_current', 4), disabled: !isOptionAvailable('nominal_current', 4) }"
             @click="isOptionAvailable('nominal_current', 4) && updateNominalCurrent(4)"
             :disabled="loading || !isOptionAvailable('nominal_current', 4)"
           >4</button>
           <button 
             class="spec-option"
-            :class="{ active: nominalCurrent === 6, 'opacity-50': loading || !isOptionAvailable('nominal_current', 6), disabled: !isOptionAvailable('nominal_current', 6) }"
+            :class="{ active: parseFloat(nominalCurrent) === 6, 'opacity-50': loading || !isOptionAvailable('nominal_current', 6), disabled: !isOptionAvailable('nominal_current', 6) }"
             @click="isOptionAvailable('nominal_current', 6) && updateNominalCurrent(6)"
             :disabled="loading || !isOptionAvailable('nominal_current', 6)"
           >6</button>
           <button 
             class="spec-option"
-            :class="{ active: nominalCurrent === 8, 'opacity-50': loading || !isOptionAvailable('nominal_current', 8), disabled: !isOptionAvailable('nominal_current', 8) }"
+            :class="{ active: parseFloat(nominalCurrent) === 8, 'opacity-50': loading || !isOptionAvailable('nominal_current', 8), disabled: !isOptionAvailable('nominal_current', 8) }"
             @click="isOptionAvailable('nominal_current', 8) && updateNominalCurrent(8)"
             :disabled="loading || !isOptionAvailable('nominal_current', 8)"
           >8</button>
           <button 
             class="spec-option"
-            :class="{ active: nominalCurrent === 10, 'opacity-50': loading || !isOptionAvailable('nominal_current', 10), disabled: !isOptionAvailable('nominal_current', 10) }"
+            :class="{ active: parseFloat(nominalCurrent) === 10, 'opacity-50': loading || !isOptionAvailable('nominal_current', 10), disabled: !isOptionAvailable('nominal_current', 10) }"
             @click="isOptionAvailable('nominal_current', 10) && updateNominalCurrent(10)"
             :disabled="loading || !isOptionAvailable('nominal_current', 10)"
           >10</button>
           <button 
             class="spec-option"
-            :class="{ active: nominalCurrent === 12, 'opacity-50': loading || !isOptionAvailable('nominal_current', 12), disabled: !isOptionAvailable('nominal_current', 12) }"
+            :class="{ active: parseFloat(nominalCurrent) === 12, 'opacity-50': loading || !isOptionAvailable('nominal_current', 12), disabled: !isOptionAvailable('nominal_current', 12) }"
             @click="isOptionAvailable('nominal_current', 12) && updateNominalCurrent(12)"
             :disabled="loading || !isOptionAvailable('nominal_current', 12)"
           >12</button>
           <button 
             class="spec-option"
-            :class="{ active: nominalCurrent === 16, 'opacity-50': loading || !isOptionAvailable('nominal_current', 16), disabled: !isOptionAvailable('nominal_current', 16) }"
+            :class="{ active: parseFloat(nominalCurrent) === 16, 'opacity-50': loading || !isOptionAvailable('nominal_current', 16), disabled: !isOptionAvailable('nominal_current', 16) }"
             @click="isOptionAvailable('nominal_current', 16) && updateNominalCurrent(16)"
             :disabled="loading || !isOptionAvailable('nominal_current', 16)"
           >16</button>
           <button 
             class="spec-option"
-            :class="{ active: nominalCurrent === 25, 'opacity-50': loading || !isOptionAvailable('nominal_current', 25), disabled: !isOptionAvailable('nominal_current', 25) }"
+            :class="{ active: parseFloat(nominalCurrent) === 25, 'opacity-50': loading || !isOptionAvailable('nominal_current', 25), disabled: !isOptionAvailable('nominal_current', 25) }"
             @click="isOptionAvailable('nominal_current', 25) && updateNominalCurrent(25)"
             :disabled="loading || !isOptionAvailable('nominal_current', 25)"
           >25</button>
           <button 
             class="spec-option"
-            :class="{ active: nominalCurrent === 32, 'opacity-50': loading || !isOptionAvailable('nominal_current', 32), disabled: !isOptionAvailable('nominal_current', 32) }"
+            :class="{ active: parseFloat(nominalCurrent) === 32, 'opacity-50': loading || !isOptionAvailable('nominal_current', 32), disabled: !isOptionAvailable('nominal_current', 32) }"
             @click="isOptionAvailable('nominal_current', 32) && updateNominalCurrent(32)"
             :disabled="loading || !isOptionAvailable('nominal_current', 32)"
           >32</button>
           <button 
             class="spec-option"
-            :class="{ active: nominalCurrent === 40, 'opacity-50': loading || !isOptionAvailable('nominal_current', 40), disabled: !isOptionAvailable('nominal_current', 40) }"
+            :class="{ active: parseFloat(nominalCurrent) === 40, 'opacity-50': loading || !isOptionAvailable('nominal_current', 40), disabled: !isOptionAvailable('nominal_current', 40) }"
             @click="isOptionAvailable('nominal_current', 40) && updateNominalCurrent(40)"
             :disabled="loading || !isOptionAvailable('nominal_current', 40)"
           >40</button>
           <button 
             class="spec-option"
-            :class="{ active: nominalCurrent === 50, 'opacity-50': loading || !isOptionAvailable('nominal_current', 50), disabled: !isOptionAvailable('nominal_current', 50) }"
+            :class="{ active: parseFloat(nominalCurrent) === 50, 'opacity-50': loading || !isOptionAvailable('nominal_current', 50), disabled: !isOptionAvailable('nominal_current', 50) }"
             @click="isOptionAvailable('nominal_current', 50) && updateNominalCurrent(50)"
             :disabled="loading || !isOptionAvailable('nominal_current', 50)"
           >50</button>
           <button 
             class="spec-option"
-            :class="{ active: nominalCurrent === 63, 'opacity-50': loading || !isOptionAvailable('nominal_current', 63), disabled: !isOptionAvailable('nominal_current', 63) }"
+            :class="{ active: parseFloat(nominalCurrent) === 63, 'opacity-50': loading || !isOptionAvailable('nominal_current', 63), disabled: !isOptionAvailable('nominal_current', 63) }"
             @click="isOptionAvailable('nominal_current', 63) && updateNominalCurrent(63)"
             :disabled="loading || !isOptionAvailable('nominal_current', 63)"
           >63</button>
           <button 
             class="spec-option"
-            :class="{ active: nominalCurrent === 80, 'opacity-50': loading || !isOptionAvailable('nominal_current', 80), disabled: !isOptionAvailable('nominal_current', 80) }"
+            :class="{ active: parseFloat(nominalCurrent) === 80, 'opacity-50': loading || !isOptionAvailable('nominal_current', 80), disabled: !isOptionAvailable('nominal_current', 80) }"
             @click="isOptionAvailable('nominal_current', 80) && updateNominalCurrent(80)"
             :disabled="loading || !isOptionAvailable('nominal_current', 80)"
           >80</button>
