@@ -123,6 +123,27 @@
           </div>
         </div>
         
+        <!-- Тип регулирования -->
+        <div style="min-width: 250px;">
+          <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Тип регулирования</span>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button 
+              @click="filterByReversible(false)"
+              :class="{ active: selectedReversible === false }"
+              class="brand-filter-btn"
+            >
+              Нереверсивный
+            </button>
+            <button 
+              @click="filterByReversible(true)"
+              :class="{ active: selectedReversible === true }"
+              class="brand-filter-btn"
+            >
+              Реверсивный
+            </button>
+          </div>
+        </div>
+        
         <!-- Сортировка -->
         <div style="display: flex; gap: 0.5rem; margin-left: auto; align-self: flex-end;">
           <button 

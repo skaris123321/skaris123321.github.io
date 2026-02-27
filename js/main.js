@@ -142,14 +142,6 @@ if (typeof ProductsAPI !== 'undefined') {
         const product = data.products.find(p => p.id === parseInt(filters.id));
         if (!product) return { success: false, message: 'Товар не найден' };
         
-        console.log('🔧 ОТЛАДКА getProduct ДО ПРЕОБРАЗОВАНИЯ:', {
-          id: product.id,
-          nominal_current_raw: product.nominal_current,
-          type: typeof product.nominal_current,
-          parseFloat_result: parseFloat(product.nominal_current),
-          with_or: parseFloat(product.nominal_current || 0)
-        });
-        
         return {
           success: true,
           product: {
@@ -234,14 +226,6 @@ if (typeof ProductsAPI !== 'undefined') {
       });
 
       if (!product) return { success: false, message: 'Товар не найден' };
-
-      console.log('🔧 ОТЛАДКА getProduct (по фильтрам) ДО ПРЕОБРАЗОВАНИЯ:', {
-        id: product.id,
-        nominal_current_raw: product.nominal_current,
-        type: typeof product.nominal_current,
-        parseFloat_result: parseFloat(product.nominal_current),
-        with_or: parseFloat(product.nominal_current || 0)
-      });
 
       return {
         success: true,
@@ -941,11 +925,6 @@ document.addEventListener('alpine:init', () => {
           }
 
           const data = await productsAPI.getProduct(filters);
-          
-          console.log('=== РЕЗУЛЬТАТ ПОИСКА ТОВАРА (loadProductByCharacteristics) ===');
-          if (data.success && data.product) {
-            } else {
-            }
           
           if (data.success && data.product) {
             const product = data.product;

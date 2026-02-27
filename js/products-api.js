@@ -45,11 +45,9 @@ class ProductsAPI {
         }
 
         const index = await indexResponse.json();
-        console.log('✓ Индексный файл загружен:', index);
         
         // Загружаем все категории параллельно
         const categoryPromises = Object.entries(index.categories).map(async ([key, info]) => {
-          console.log(`Загружаем категорию: ${key} (${info.file})`);
           const response = await fetch(`../data/${info.file}?v=2&t=` + Date.now(), {
             cache: 'no-cache',
             headers: {
@@ -64,7 +62,6 @@ class ProductsAPI {
           }
           
           const data = await response.json();
-          console.log(`✓ Загружено ${data.products.length} товаров из ${info.file}`);
           return data.products || [];
         });
 
@@ -74,7 +71,6 @@ class ProductsAPI {
         const allProducts = categoryResults.flat();
         
         this.productsData = { products: allProducts };
-        console.log(`✓ Всего загружено ${allProducts.length} товаров из ${Object.keys(index.categories).length} категорий`);
         
         return this.productsData;
       } catch (error) {
@@ -90,13 +86,11 @@ class ProductsAPI {
   // Загружает товары только из конкретной категории (для оптимизации)
   async loadCategory(categoryName) {
     if (this.categoryCache[categoryName]) {
-      console.log(`✓ Категория ${categoryName} загружена из кэша`);
       return this.categoryCache[categoryName];
     }
 
     try {
       const fileName = `products-${categoryName}.json`;
-      console.log(`Загружаем категорию: ${fileName}`);
       const response = await fetch(`../data/${fileName}?v=2&t=` + Date.now(), {
         cache: 'no-cache',
         headers: {
@@ -111,7 +105,6 @@ class ProductsAPI {
 
       const data = await response.json();
       this.categoryCache[categoryName] = data;
-      console.log(`✓ Загружено ${data.products.length} товаров из категории ${categoryName}`);
       
       return data;
     } catch (error) {
@@ -371,7 +364,6 @@ class ProductsAPI {
   }
 
   async getProduct(filters) {
-    console.log('🔍 API getProduct вызван с фильтрами:', filters);
     const data = await this.loadProducts();
     
     // Если передан ID, ищем по ID
