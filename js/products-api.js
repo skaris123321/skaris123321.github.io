@@ -291,18 +291,13 @@ class ProductsAPI {
       availableOptions.box_type = boxTypes.sort();
       
       // Получаем доступные значения reversible (реверсивность)
+      // НЕ фильтруем по feeder_type и nominal_current, так как реверсивность зависит только от типа ящика
       let reversibleProducts = data.products.filter(p => p.commutation_type === 'motor_control_box');
       if (manufacturer_brand) {
         reversibleProducts = reversibleProducts.filter(p => p.brand === manufacturer_brand);
       }
       if (box_type) {
         reversibleProducts = reversibleProducts.filter(p => p.box_type === box_type);
-      }
-      if (nominal_current) {
-        reversibleProducts = reversibleProducts.filter(p => parseFloat(p.nominal_current) === parseFloat(nominal_current));
-      }
-      if (feeder_type) {
-        reversibleProducts = reversibleProducts.filter(p => p.feeder_type === feeder_type);
       }
       const reversibleValues = [...new Set(reversibleProducts.map(p => p.reversible).filter(v => v !== undefined && v !== null))];
       availableOptions.reversible = reversibleValues.sort();
