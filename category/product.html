@@ -769,15 +769,15 @@
         <div class="product-spec-options">
           <button 
             class="spec-option"
-            :class="{ active: reversible === false, 'opacity-50': loading }"
+            :class="{ active: reversible === false, 'opacity-50': loading || !isOptionAvailable('reversible', false), disabled: !isOptionAvailable('reversible', false) }"
             @click="updateReversible(false)"
-            :disabled="loading"
+            :disabled="loading || !isOptionAvailable('reversible', false)"
           >Нереверсивный</button>
           <button 
             class="spec-option"
-            :class="{ active: reversible === true, 'opacity-50': loading }"
+            :class="{ active: reversible === true, 'opacity-50': loading || !isOptionAvailable('reversible', true), disabled: !isOptionAvailable('reversible', true) }"
             @click="updateReversible(true)"
-            :disabled="loading"
+            :disabled="loading || !isOptionAvailable('reversible', true)"
           >Реверсивный</button>
         </div>
       </div>
@@ -1365,7 +1365,7 @@
 
   <script src="../js/cart.js"></script>
   <script src="../js/products-api.js?v=12"></script>
-  <script src="../js/main.js?v=27"></script>
+  <script src="../js/main.js?v=28"></script>
   <script src="../js/search.js?v=2"></script>
 </body>
 </html>
