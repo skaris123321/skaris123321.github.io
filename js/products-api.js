@@ -162,7 +162,8 @@ class ProductsAPI {
       reactive_power: [],
       steps: [],
       feeder_type: [],
-      box_type: []
+      box_type: [],
+      reversible: []
     };
 
     // Все бренды (с учетом типа коммутации)
@@ -288,6 +289,23 @@ class ProductsAPI {
       }
       const boxTypes = [...new Set(boxTypeProducts.map(p => p.box_type).filter(Boolean))];
       availableOptions.box_type = boxTypes.sort();
+      
+      // Получаем доступные значения reversible (реверсивность)
+      let reversibleProducts = data.products.filter(p => p.commutation_type === 'motor_control_box');
+      if (manufacturer_brand) {
+        reversibleProducts = reversibleProducts.filter(p => p.brand === manufacturer_brand);
+      }
+      if (box_type) {
+        reversibleProducts = reversibleProducts.filter(p => p.box_type === box_type);
+      }
+      if (nominal_current) {
+        reversibleProducts = reversibleProducts.filter(p => parseFloat(p.nominal_current) === parseFloat(nominal_current));
+      }
+      if (feeder_type) {
+        reversibleProducts = reversibleProducts.filter(p => p.feeder_type === feeder_type);
+      }
+      const reversibleValues = [...new Set(reversibleProducts.map(p => p.reversible).filter(v => v !== undefined && v !== null))];
+      availableOptions.reversible = reversibleValues.sort();
       
       // Получаем доступные номинальные токи
       let currentProducts = data.products.filter(p => p.commutation_type === 'motor_control_box');
