@@ -303,6 +303,7 @@ class ProductsAPI {
       availableOptions.reversible = reversibleValues.sort();
       
       // Получаем доступные номинальные токи
+      // НЕ фильтруем по feeder_type, так как токи не зависят от типа фидера
       let currentProducts = data.products.filter(p => p.commutation_type === 'motor_control_box');
       if (manufacturer_brand) {
         currentProducts = currentProducts.filter(p => p.brand === manufacturer_brand);
@@ -312,9 +313,6 @@ class ProductsAPI {
       }
       if (reversible !== undefined) {
         currentProducts = currentProducts.filter(p => p.reversible === reversible);
-      }
-      if (feeder_type) {
-        currentProducts = currentProducts.filter(p => p.feeder_type === feeder_type);
       }
       const nominalCurrents = [...new Set(currentProducts.map(p => parseFloat(p.nominal_current)).filter(Boolean))];
       availableOptions.nominal_current = nominalCurrents.sort((a, b) => a - b);
