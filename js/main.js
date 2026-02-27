@@ -524,7 +524,8 @@ document.addEventListener('alpine:init', () => {
               climate_type: data.available_options.climate_type || [],
               motor_control_type: data.available_options.motor_control_type || [],
               feeder_type: data.available_options.feeder_type || [],
-              box_type: data.available_options.box_type || []
+              box_type: data.available_options.box_type || [],
+              reversible: data.available_options.reversible || []
             };
 
 
@@ -545,7 +546,8 @@ document.addEventListener('alpine:init', () => {
               climate_type: [],
               motor_control_type: [],
               feeder_type: [],
-              box_type: []
+              box_type: [],
+              reversible: []
             };
           }
         } catch (error) {
@@ -566,7 +568,8 @@ document.addEventListener('alpine:init', () => {
             climate_type: [],
             motor_control_type: [],
             feeder_type: [],
-            box_type: []
+            box_type: [],
+            reversible: []
           };
         }
       },
