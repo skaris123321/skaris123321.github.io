@@ -3,18 +3,10 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 const fs = require('fs').promises;
 const path = require('path');
-const multer = require('multer');
-const XLSX = require('xlsx');
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-// Настройка multer для загрузки файлов
-const upload = multer({ 
-  dest: 'uploads/',
-  limits: { fileSize: 10 * 1024 * 1024 } // 10MB
-});
 
 // Middleware
 app.use(cors());
@@ -274,159 +266,6 @@ app.get('/api/health', (req, res) => {
     message: 'Сервер работает',
     timestamp: new Date().toISOString()
   });
-});
-
-// Страница загрузки Excel
-app.get('/upload-prices', (req, res) => {
-  res.sendFile(path.join(__dirname, 'upload-prices.html'));
-});
-
-// Endpoint для обновления цен из Excel файла
-app.post('/api/products/update-prices-excel', upload.single('file'), async (req, res) => {
-  try {
-    if (!req.file) {
-      return res.status(400).json({ 
-        success: false, 
-        error: 'Файл не загружен' 
-      });
-    }
-
-    console.log(`\n═══════════════════════════════════════════════════════════`);
-    console.log(`📦 ОБНОВЛЕНИЕ ЦЕН ИЗ EXCEL`);
-    console.log(`═══════════════════════════════════════════════════════════`);
-    console.log(`📄 Файл: ${req.file.originalname}`);
-
-    // Читаем Excel файл
-    const workbook = XLSX.readFile(req.file.path);
-    const sheetName = workbook.SheetNames[0];
-    const worksheet = workbook.Sheets[sheetName];
-    
-    // Конвертируем в JSON
-    const data = XLSX.utils.sheet_to_json(worksheet);
-    
-    // Удаляем загруженный файл
-    await fs.unlink(req.file.path);
-
-    if (!data || data.length === 0) {
-      return res.status(400).json({ 
-        success: false, 
-        error: 'Excel файл пустой или неправильный формат' 
-      });
-    }
-
-    console.log(`📊 Прочитано строк: ${data.length}`);
-
-    // Преобразуем данные в нужный формат
-    const prices = data.map(row => {
-      // Поддерживаем разные варианты названий колонок
-      const article = row['Артикул'] || row['артикул'] || row['article'] || row['АРТИКУЛ'];
-      const price = row['Цена'] || row['цена'] || row['price'] || row['ЦЕНА'];
-      
-      return {
-        article: String(article).trim(),
-        price: Number(price)
-      };
-    }).filter(item => item.article && item.price > 0);
-
-    console.log(`✅ Валидных записей: ${prices.length}`);
-
-    // Все файлы с товарами
-    const categoryFiles = [
-      'data/products-avr.json',
-      'data/products-control-cabinets.json',
-      'data/products-motor-control-boxes.json',
-      'data/products-reactive-power.json'
-    ];
-
-    let updatedCount = 0;
-    let notFoundArticles = [];
-
-    // Обрабатываем каждый файл категории
-    for (const categoryFile of categoryFiles) {
-      const filePath = path.join(__dirname, '..', categoryFile);
-      
-      try {
-        const fileContent = await fs.readFile(filePath, 'utf8');
-        const data = JSON.parse(fileContent);
-        
-        let fileUpdated = false;
-        
-        data.products.forEach(product => {
-          const priceUpdate = prices.find(p => p.article === product.article);
-          
-          if (priceUpdate) {
-            const oldPrice = product.base_price;
-            product.base_price = priceUpdate.price;
-            
-            if (oldPrice !== priceUpdate.price) {
-              console.log(`  ✅ ${product.article}: ${oldPrice} → ${priceUpdate.price} ₽`);
-              updatedCount++;
-              fileUpdated = true;
-            }
-          }
-        });
-        
-        if (fileUpdated) {
-          await fs.writeFile(filePath, JSON.stringify(data, null, 4), 'utf8');
-          console.log(`  💾 Сохранен файл: ${categoryFile}`);
-        }
-        
-      } catch (error) {
-        console.error(`❌ Ошибка обработки файла ${categoryFile}:`, error.message);
-      }
-    }
-
-    // Проверяем, какие артикулы не найдены
-    prices.forEach(priceItem => {
-      let found = false;
-      
-      for (const categoryFile of categoryFiles) {
-        const filePath = path.join(__dirname, '..', categoryFile);
-        try {
-          const fileContent = require('fs').readFileSync(filePath, 'utf8');
-          const data = JSON.parse(fileContent);
-          if (data.products.some(p => p.article === priceItem.article)) {
-            found = true;
-            break;
-          }
-        } catch (e) {}
-      }
-      
-      if (!found) {
-        notFoundArticles.push(priceItem.article);
-      }
-    });
-
-    console.log(`✅ Обновлено цен: ${updatedCount}`);
-    
-    if (notFoundArticles.length > 0) {
-      console.log(`⚠️  Не найдены артикулы: ${notFoundArticles.join(', ')}`);
-    }
-
-    res.json({
-      success: true,
-      message: 'Цены обновлены из Excel',
-      updated: updatedCount,
-      notFound: notFoundArticles,
-      total: prices.length
-    });
-
-  } catch (error) {
-    console.error('❌ Ошибка обработки Excel:', error);
-    
-    // Удаляем файл в случае ошибки
-    if (req.file) {
-      try {
-        await fs.unlink(req.file.path);
-      } catch (e) {}
-    }
-    
-    res.status(500).json({
-      success: false,
-      message: 'Ошибка при обработке Excel файла',
-      error: error.message
-    });
-  }
 });
 
 // Endpoint для обновления цен из 1С (только артикул + цена)
