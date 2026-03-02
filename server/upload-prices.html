@@ -3,119 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Загрузка цен из Excel - РОСЭК</title>
+    <title>Обновление цен - РОСЭК</title>
     <style>
+        :root {
+            --red-main: #F16664;
+            --red-dark: #d94f4d;
+            --gray-light: #fafafa;
+            --gray-dark: #111827;
+        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--gray-light);
+            color: var(--gray-dark);
+            line-height: 1.6;
             padding: 20px;
         }
+        
         .container {
+            max-width: 800px;
+            margin: 40px auto;
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            max-width: 600px;
-            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             padding: 40px;
         }
+        
         h1 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 28px;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--gray-dark);
+            margin-bottom: 8px;
         }
+        
         .subtitle {
-            color: #666;
-            margin-bottom: 30px;
+            color: #6b7280;
             font-size: 14px;
+            margin-bottom: 32px;
         }
+        
+        .info-box {
+            background: #f9fafb;
+            border-left: 3px solid var(--red-main);
+            padding: 16px;
+            margin-bottom: 24px;
+            border-radius: 4px;
+        }
+        
+        .info-box h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--gray-dark);
+        }
+        
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .info-box li {
+            font-size: 14px;
+            color: #4b5563;
+            margin-bottom: 6px;
+            padding-left: 16px;
+            position: relative;
+        }
+        
+        .info-box li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--red-main);
+        }
+        
+        .download-link {
+            display: inline-block;
+            color: var(--red-main);
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            margin-top: 12px;
+            transition: color 0.2s;
+        }
+        
+        .download-link:hover {
+            color: var(--red-dark);
+            text-decoration: underline;
+        }
+        
         .upload-area {
-            border: 3px dashed #ddd;
-            border-radius: 10px;
-            padding: 40px;
+            border: 2px dashed #d1d5db;
+            border-radius: 8px;
+            padding: 48px 24px;
             text-align: center;
-            transition: all 0.3s;
+            transition: all 0.2s;
             cursor: pointer;
+            background: #fafafa;
         }
-        .upload-area:hover { border-color: #667eea; background: #f8f9ff; }
-        .upload-area.dragover { border-color: #667eea; background: #f0f2ff; }
-        .upload-icon { font-size: 48px; margin-bottom: 20px; }
-        input[type="file"] { display: none; }
-        .btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: transform 0.2s;
+        
+        .upload-area:hover {
+            border-color: var(--red-main);
+            background: #fff;
         }
-        .btn:hover { transform: translateY(-2px); }
-        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
-        .result {
-            margin-top: 30px;
-            padding: 20px;
-            border-radius: 10px;
+        
+        .upload-area.dragover {
+            border-color: var(--red-main);
+            background: #fef2f2;
+        }
+        
+        .upload-text {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 16px;
+        }
+        
+        .upload-text strong {
+            color: var(--gray-dark);
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        input[type="file"] {
             display: none;
         }
-        .result.success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
-        .result.error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
-        .info-box {
-            background: #e7f3ff;
-            border-left: 4px solid #2196F3;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 5px;
+        
+        .btn {
+            background: var(--red-main);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
         }
-        .info-box h3 { color: #1976D2; margin-bottom: 10px; font-size: 16px; }
-        .info-box ul { margin-left: 20px; }
-        .info-box li { margin: 5px 0; color: #555; }
-        .download-template {
-            display: inline-block;
-            color: #667eea;
-            text-decoration: none;
-            margin-top: 15px;
-            font-weight: bold;
+        
+        .btn:hover {
+            background: var(--red-dark);
         }
-        .download-template:hover { text-decoration: underline; }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .selected-file {
+            margin-top: 24px;
+            padding: 16px;
+            background: #f9fafb;
+            border-radius: 6px;
+            display: none;
+        }
+        
+        .selected-file p {
+            font-size: 14px;
+            color: #4b5563;
+            margin-bottom: 12px;
+        }
+        
+        .file-name {
+            font-weight: 600;
+            color: var(--gray-dark);
+        }
+        
+        .result {
+            margin-top: 24px;
+            padding: 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            display: none;
+            white-space: pre-line;
+        }
+        
+        .result.success {
+            background: #f0fdf4;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+        }
+        
+        .result.error {
+            background: #fef2f2;
+            color: #991b1b;
+            border: 1px solid #fecaca;
+        }
+        
+        .result.loading {
+            background: #eff6ff;
+            color: #1e40af;
+            border: 1px solid #bfdbfe;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📊 Загрузка цен из Excel</h1>
-        <p class="subtitle">Обновите цены товаров на сайте РОСЭК</p>
+        <h1>Обновление цен товаров</h1>
+        <p class="subtitle">Загрузите Excel файл с артикулами и ценами</p>
 
         <div class="info-box">
-            <h3>📋 Формат Excel файла:</h3>
+            <h3>Формат Excel файла:</h3>
             <ul>
-                <li>Первая строка - заголовки: <strong>Артикул</strong> и <strong>Цена</strong></li>
-                <li>Со второй строки - данные товаров</li>
-                <li>Артикул должен точно совпадать с артикулом на сайте</li>
-                <li>Цена - целое число (рубли без копеек)</li>
+                <li>Первая строка: <strong>Артикул</strong> и <strong>Цена</strong></li>
+                <li>Со второй строки: данные товаров</li>
+                <li>Артикул должен точно совпадать с сайтом</li>
+                <li>Цена: целое число (рубли без копеек)</li>
             </ul>
-            <a href="#" class="download-template" onclick="downloadTemplate(); return false;">
-                ⬇️ Скачать шаблон Excel
+            <a href="#" class="download-link" onclick="downloadTemplate(); return false;">
+                Скачать шаблон Excel
             </a>
         </div>
 
         <div class="upload-area" id="uploadArea">
-            <div class="upload-icon">📁</div>
-            <p><strong>Перетащите Excel файл сюда</strong></p>
-            <p style="color: #999; margin-top: 10px;">или</p>
+            <div class="upload-text">
+                <strong>Перетащите Excel файл сюда</strong>
+                <span>или нажмите кнопку ниже</span>
+            </div>
             <button class="btn" onclick="document.getElementById('fileInput').click()">
                 Выбрать файл
             </button>
             <input type="file" id="fileInput" accept=".xlsx,.xls" onchange="handleFileSelect(event)">
         </div>
 
-        <div id="selectedFile" style="margin-top: 20px; display: none;">
-            <p><strong>Выбран файл:</strong> <span id="fileName"></span></p>
+        <div id="selectedFile" class="selected-file">
+            <p>Выбран файл: <span id="fileName" class="file-name"></span></p>
             <button class="btn" onclick="uploadFile()">Загрузить и обновить цены</button>
         </div>
 
@@ -175,8 +288,8 @@
             formData.append('file', selectedFile);
 
             resultDiv.style.display = 'block';
-            resultDiv.className = 'result';
-            resultDiv.innerHTML = '⏳ Загрузка и обработка файла...';
+            resultDiv.className = 'result loading';
+            resultDiv.textContent = 'Загрузка и обработка файла...';
 
             try {
                 const response = await fetch('http://localhost:3000/api/products/update-prices-excel', {
@@ -188,24 +301,24 @@
 
                 if (data.success) {
                     resultDiv.className = 'result success';
-                    let message = `✅ Успешно обновлено цен: ${data.updated} из ${data.total}`;
+                    let message = `✓ Успешно обновлено цен: ${data.updated} из ${data.total}`;
                     
                     if (data.notFound && data.notFound.length > 0) {
-                        message += `\n\n⚠️ Не найдены артикулы (${data.notFound.length}):\n`;
+                        message += `\n\n⚠ Не найдены артикулы (${data.notFound.length}):\n`;
                         message += data.notFound.slice(0, 10).join(', ');
                         if (data.notFound.length > 10) {
                             message += ` и еще ${data.notFound.length - 10}...`;
                         }
                     }
                     
-                    resultDiv.innerHTML = message.replace(/\n/g, '<br>');
+                    resultDiv.textContent = message;
                 } else {
                     resultDiv.className = 'result error';
-                    resultDiv.textContent = `❌ Ошибка: ${data.error || data.message}`;
+                    resultDiv.textContent = `✗ Ошибка: ${data.error || data.message}`;
                 }
             } catch (error) {
                 resultDiv.className = 'result error';
-                resultDiv.textContent = `❌ Ошибка соединения: ${error.message}`;
+                resultDiv.textContent = `✗ Ошибка соединения: ${error.message}`;
             }
         }
 
