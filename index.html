@@ -307,81 +307,9 @@
   </footer>
 
   <script src="js/cart.js"></script>
+  <script src="js/products-api.js"></script>
   <script src="js/main.js"></script>
   <script src="js/search.js"></script>
-  
-  <script>
-    // Простой слайдер без Alpine.js
-    let currentSlide = 0;
-    const totalSlides = 8;
-    let autoplayInterval;
-
-    function showSlide(index) {
-      const slides = document.querySelectorAll('.hero-slide');
-      const indicators = document.querySelectorAll('.slider-indicator');
-      
-      slides.forEach((slide, i) => {
-        if (i === index) {
-          slide.classList.add('active');
-        } else {
-          slide.classList.remove('active');
-        }
-      });
-      
-      indicators.forEach((indicator, i) => {
-        if (i === index) {
-          indicator.classList.add('active');
-        } else {
-          indicator.classList.remove('active');
-        }
-      });
-    }
-
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      showSlide(currentSlide);
-      resetAutoplay();
-    }
-
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      showSlide(currentSlide);
-      resetAutoplay();
-    }
-
-    function goToSlide(index) {
-      currentSlide = index;
-      showSlide(currentSlide);
-      resetAutoplay();
-    }
-
-    function startAutoplay() {
-      autoplayInterval = setInterval(() => {
-        nextSlide();
-      }, 5000);
-    }
-
-    function resetAutoplay() {
-      clearInterval(autoplayInterval);
-      startAutoplay();
-    }
-
-    // Инициализация при загрузке страницы
-    document.addEventListener('DOMContentLoaded', function() {
-      // Создаем индикаторы
-      const indicatorsContainer = document.getElementById('sliderIndicators');
-      for (let i = 0; i < totalSlides; i++) {
-        const indicator = document.createElement('button');
-        indicator.className = 'slider-indicator';
-        if (i === 0) indicator.classList.add('active');
-        indicator.onclick = () => goToSlide(i);
-        indicatorsContainer.appendChild(indicator);
-      }
-      
-      // Запускаем автопрокрутку
-      startAutoplay();
-    });
-  </script>
 
   <script>
 
