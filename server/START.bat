@@ -29,21 +29,26 @@ if not exist "node_modules\" (
 )
 
 REM Проверяем настроен ли .env файл
-findstr /C:"your-app-password-here" .env >nul 2>nul
-if %ERRORLEVEL% EQU 0 (
-    echo [ВНИМАНИЕ] Файл .env не настроен!
+if exist ".env" (
+    findstr /C:"your-app-password-here" .env >nul 2>nul
+    if %ERRORLEVEL% EQU 0 (
+        echo [ВНИМАНИЕ] Email не настроен, но сервер запустится!
+        echo.
+        echo Для отправки заказов на почту настройте .env файл:
+        echo   EMAIL_PASS=ваш-пароль-приложения-gmail
+        echo.
+        echo Обновление цен работает без email!
+        echo.
+    )
+) else (
+    echo [ВНИМАНИЕ] Файл .env не найден, создаем...
+    echo PORT=3000 > .env
+    echo EMAIL_USER=enogovicina167@gmail.com >> .env
+    echo EMAIL_PASS=your-app-password-here >> .env
+    echo ORDER_EMAIL=enogovicina167@gmail.com >> .env
     echo.
-    echo Откройте файл server/.env и укажите:
-    echo   EMAIL_PASS=ваш-пароль-приложения-gmail
+    echo [OK] Файл .env создан
     echo.
-    echo Инструкция по получению пароля приложения:
-    echo   1. Откройте https://myaccount.google.com/security
-    echo   2. Включите двухфакторную аутентификацию
-    echo   3. Создайте "Пароль приложения"
-    echo   4. Вставьте его в .env файл
-    echo.
-    pause
-    exit /b 1
 )
 
 echo [OK] Конфигурация настроена
