@@ -292,7 +292,7 @@
             resultDiv.textContent = 'Загрузка и обработка файла...';
 
             try {
-                const response = await fetch('http://localhost:3000/api/products/update-prices-excel', {
+                const response = await fetch('/api/products/update-prices-excel', {
                     method: 'POST',
                     body: formData
                 });
