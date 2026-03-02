@@ -303,17 +303,25 @@
 
                 if (data.success) {
                     resultDiv.className = 'result success';
-                    let message = `✓ Успешно обновлено цен: ${data.updated} из ${data.total}`;
+                    let message = `✓ УСПЕШНО!\n\nОбновлено цен: ${data.updated} из ${data.total}`;
                     
                     if (data.notFound && data.notFound.length > 0) {
-                        message += `\n\n⚠ Не найдены артикулы (${data.notFound.length}):\n`;
+                        message += `\n\n⚠ Внимание! Не найдены артикулы (${data.notFound.length}):\n`;
                         message += data.notFound.slice(0, 10).join(', ');
                         if (data.notFound.length > 10) {
                             message += ` и еще ${data.notFound.length - 10}...`;
                         }
+                        message += '\n\nПроверьте правильность написания артикулов.';
+                    } else {
+                        message += '\n\nВсе цены успешно обновлены на сайте!';
                     }
                     
                     resultDiv.textContent = message;
+                    
+                    // Очищаем выбранный файл
+                    selectedFile = null;
+                    fileInput.value = '';
+                    selectedFileDiv.style.display = 'none';
                 } else {
                     resultDiv.className = 'result error';
                     resultDiv.textContent = `✗ Ошибка: ${data.error || data.message}`;

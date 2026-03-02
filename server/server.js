@@ -291,7 +291,10 @@ app.post('/api/products/update-prices-excel', upload.single('file'), async (req,
       });
     }
 
-    console.log(`📦 Получен Excel файл: ${req.file.originalname}`);
+    console.log(`\n═══════════════════════════════════════════════════════════`);
+    console.log(`📦 ОБНОВЛЕНИЕ ЦЕН ИЗ EXCEL`);
+    console.log(`═══════════════════════════════════════════════════════════`);
+    console.log(`📄 Файл: ${req.file.originalname}`);
 
     // Читаем Excel файл
     const workbook = XLSX.readFile(req.file.path);
