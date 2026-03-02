@@ -224,7 +224,7 @@
             <button class="btn" onclick="document.getElementById('fileInput').click()">
                 Выбрать файл
             </button>
-            <input type="file" id="fileInput" accept=".xlsx,.xls" onchange="handleFileSelect(event)">
+            <input type="file" id="fileInput" accept=".xlsx,.xls,.csv" onchange="handleFileSelect(event)">
         </div>
 
         <div id="selectedFile" class="selected-file">
@@ -271,8 +271,10 @@
         }
 
         function handleFile(file) {
-            if (!file.name.match(/\.(xlsx|xls)$/)) {
-                alert('Пожалуйста, выберите Excel файл (.xlsx или .xls)');
+            if (!file.name.match(/\.(xlsx|xls|csv)$/i)) {
+                resultDiv.style.display = 'block';
+                resultDiv.className = 'result error';
+                resultDiv.textContent = '✗ Пожалуйста, выберите Excel файл (.xlsx, .xls или .csv)';
                 return;
             }
             selectedFile = file;
