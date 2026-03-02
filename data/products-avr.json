@@ -849,7 +849,7 @@
             "brand": "EKF",
             "commutation_type": "monoblock",
             "inputs_count": "2",
-            "base_price": 42000,
+            "base_price": 45000,
             "main_image": "images/avr-100.jpg",
             "images": [
                 "images/avr-100.jpg",
@@ -917,7 +917,7 @@
             "brand": "EKF",
             "commutation_type": "monoblock",
             "inputs_count": "2",
-            "base_price": 45000,
+            "base_price": 48000,
             "main_image": "images/avr-100.jpg",
             "images": [
                 "images/avr-100.jpg",
@@ -1691,7 +1691,7 @@
             "brand": "Dekraft",
             "commutation_type": "monoblock",
             "inputs_count": "2",
-            "base_price": 40000,
+            "base_price": 45000,
             "main_image": "images/avr-100.jpg",
             "images": [
                 "images/avr-100.jpg",
@@ -1759,7 +1759,7 @@
             "brand": "Dekraft",
             "commutation_type": "monoblock",
             "inputs_count": "2",
-            "base_price": 43000,
+            "base_price": 48000,
             "main_image": "images/avr-100.jpg",
             "images": [
                 "images/avr-100.jpg",
@@ -2533,7 +2533,7 @@
             "brand": "TDM",
             "commutation_type": "monoblock",
             "inputs_count": "2",
-            "base_price": 38000,
+            "base_price": 45000,
             "main_image": "images/avr-100.jpg",
             "images": [
                 "images/avr-100.jpg",
@@ -2601,7 +2601,7 @@
             "brand": "TDM",
             "commutation_type": "monoblock",
             "inputs_count": "2",
-            "base_price": 41000,
+            "base_price": 48000,
             "main_image": "images/avr-100.jpg",
             "images": [
                 "images/avr-100.jpg",
