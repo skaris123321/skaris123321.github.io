@@ -4,7 +4,8 @@
   --red-main: #F16664;
   --red-dark: #d94f4d;
   --gray-light: #fafafa;
-  --gray-dark: #111827;
+  --gray-dark: #4a5568;
+  --gray-darker: #2d3748;
 }
 
 * {
@@ -23,13 +24,15 @@ body {
   color: var(--gray-dark);
   font-family: 'Jost', system-ui, sans-serif;
   font-size: 16px;
-  font-weight: 450;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   line-height: 1.5;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-variant: all-small-caps;
+  letter-spacing: 0.02em;
 }
 
 main {
