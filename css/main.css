@@ -4342,9 +4342,16 @@ h1.category-title {
 
 .footer-contacts {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  align-items: flex-start;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-contacts > *:not(:last-child)::after {
+  content: '|';
+  margin-left: 2rem;
+  color: #d1d5db;
 }
 
 .footer-email {
