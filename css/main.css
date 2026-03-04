@@ -21,7 +21,7 @@ html {
 body {
   background: var(--gray-light);
   color: var(--gray-dark);
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Jost', system-ui, sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 0;
