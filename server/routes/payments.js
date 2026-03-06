@@ -10,8 +10,8 @@ const paymentService = useMockService
 const { processPaymentWebhook } = require('../payments/webhook-handler');
 
 if (useMockService) {
-  console.log('🧪 ТЕСТОВЫЙ РЕЖИМ: Используется мок-сервис для платежей');
-  console.log('💡 Для включения реального API настройте SBP_API_KEY в .env');
+  console.log('ТЕСТОВЫЙ РЕЖИМ: Используется мок-сервис для платежей');
+  console.log('Для включения реального API настройте SBP_API_KEY в .env');
 }
 
 /**
@@ -29,7 +29,7 @@ router.post('/create', async (req, res) => {
       });
     }
 
-    console.log('📦 Создание платежной сессии для заказа:', {
+    console.log('Создание платежной сессии для заказа:', {
       clientType: orderData.clientType,
       totalPrice: orderData.totalPrice,
       totalItems: orderData.totalItems
@@ -40,7 +40,7 @@ router.post('/create', async (req, res) => {
     res.json(paymentSession);
 
   } catch (error) {
-    console.error('❌ Ошибка создания платежа:', error);
+    console.error('Ошибка создания платежа:', error);
     res.status(500).json({
       success: false,
       message: 'Не удалось создать платежную сессию',
@@ -79,7 +79,7 @@ router.get('/status/:paymentId', async (req, res) => {
     });
 
   } catch (error) {
-    console.error('❌ Ошибка получения статуса платежа:', error);
+    console.error('Ошибка получения статуса платежа:', error);
     res.status(404).json({
       success: false,
       message: 'Платеж не найден',
@@ -99,7 +99,7 @@ router.post('/webhook', async (req, res) => {
 
     // Валидируем подпись вебхука
     if (!paymentService.validateWebhookSignature(webhookData, signature)) {
-      console.error('❌ Невалидная подпись вебхука');
+      console.error('Невалидная подпись вебхука');
       return res.status(401).json({
         success: false,
         message: 'Invalid webhook signature'
@@ -112,7 +112,7 @@ router.post('/webhook', async (req, res) => {
     res.json(result);
 
   } catch (error) {
-    console.error('❌ Ошибка обработки вебхука:', error);
+    console.error('Ошибка обработки вебхука:', error);
     res.status(500).json({
       success: false,
       message: 'Webhook processing failed',
@@ -137,7 +137,7 @@ if (useMockService) {
     try {
       const { paymentId } = req.params;
       
-      console.log(`🧪 Симуляция успешной оплаты: ${paymentId}`);
+      console.log(`Симуляция успешной оплаты: ${paymentId}`);
       
       await paymentService.mockPaymentSuccess(paymentId);
       
@@ -167,7 +167,7 @@ if (useMockService) {
       });
       
     } catch (error) {
-      console.error('❌ Ошибка симуляции оплаты:', error);
+      console.error('Ошибка симуляции оплаты:', error);
       res.status(500).json({
         success: false,
         message: 'Ошибка симуляции оплаты',
@@ -184,7 +184,7 @@ if (useMockService) {
     try {
       const { paymentId } = req.params;
       
-      console.log(`🧪 Симуляция отклонения платежа: ${paymentId}`);
+      console.log(`Симуляция отклонения платежа: ${paymentId}`);
       
       await paymentService.mockPaymentFailure(paymentId);
       
@@ -195,7 +195,7 @@ if (useMockService) {
       });
       
     } catch (error) {
-      console.error('❌ Ошибка симуляции отклонения:', error);
+      console.error('Ошибка симуляции отклонения:', error);
       res.status(500).json({
         success: false,
         message: 'Ошибка симуляции отклонения',
@@ -242,7 +242,7 @@ if (useMockService) {
       });
       
     } catch (error) {
-      console.error('❌ Ошибка получения списка:', error);
+      console.error('Ошибка получения списка:', error);
       res.status(500).json({
         success: false,
         message: 'Ошибка получения списка платежей',

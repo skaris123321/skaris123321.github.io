@@ -16,7 +16,7 @@ async function processOrder(paymentId) {
       throw new Error(`Платеж не подтвержден. Статус: ${payment.status}`);
     }
 
-    console.log(`📤 Отправка заказа в 1С для платежа ${paymentId}`);
+    console.log(`Отправка заказа в 1С для платежа ${paymentId}`);
 
     // Формируем данные для отправки в 1С
     const orderData = {
@@ -34,12 +34,12 @@ async function processOrder(paymentId) {
     // Отправляем в 1С с retry логикой
     const result = await sendTo1CWithRetry(orderData);
 
-    console.log(`✅ Заказ успешно отправлен в 1С: ${paymentId}`);
+    console.log(`Заказ успешно отправлен в 1С: ${paymentId}`);
 
     return result;
 
   } catch (error) {
-    console.error(`❌ Ошибка обработки заказа ${paymentId}:`, error);
+    console.error(`Ошибка обработки заказа ${paymentId}:`, error);
     throw error;
   }
 }
@@ -73,7 +73,7 @@ async function sendTo1CWithRetry(orderData, attempt = 1) {
     }
 
   } catch (error) {
-    console.error(`❌ Попытка ${attempt}/${maxAttempts} не удалась:`, error.message);
+    console.error(`Попытка ${attempt}/${maxAttempts} не удалась:`, error.message);
 
     // Если это не последняя попытка, повторяем с экспоненциальной задержкой
     if (attempt < maxAttempts) {

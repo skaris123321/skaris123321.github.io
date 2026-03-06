@@ -133,7 +133,7 @@ class PaymentService {
   async savePaymentSession(paymentSession) {
     const filePath = path.join(__dirname, 'history', `payment-${paymentSession.paymentId}.json`);
     await fs.writeFile(filePath, JSON.stringify(paymentSession, null, 2), 'utf8');
-    console.log(`✅ Платежная сессия сохранена: ${paymentSession.paymentId}`);
+    console.log(`Платежная сессия сохранена: ${paymentSession.paymentId}`);
   }
 
   /**

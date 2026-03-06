@@ -17,7 +17,7 @@ class MockPaymentService {
    */
   async createPaymentSession(orderData) {
     try {
-      console.log('🧪 ТЕСТОВЫЙ РЕЖИМ: Создание мок-платежа');
+      console.log('ТЕСТОВЫЙ РЕЖИМ: Создание мок-платежа');
       
       // Генерируем тестовые ID
       const timestamp = Date.now();
@@ -67,8 +67,8 @@ class MockPaymentService {
       // Сохраняем в памяти для симуляции
       this.mockPayments.set(paymentId, paymentSession);
 
-      console.log(`✅ Тестовый платеж создан: ${paymentId}`);
-      console.log(`💡 Для симуляции оплаты используйте: POST /api/payments/mock-pay/${paymentId}`);
+      console.log(`Тестовый платеж создан: ${paymentId}`);
+      console.log(`Для симуляции оплаты используйте: POST /api/payments/mock-pay/${paymentId}`);
 
       return {
         success: true,
@@ -108,7 +108,7 @@ class MockPaymentService {
 
       await this.updatePaymentStatus(paymentId, updates);
       
-      console.log(`✅ Тестовый платеж успешно оплачен: ${paymentId}`);
+      console.log(`Тестовый платеж успешно оплачен: ${paymentId}`);
       
       return { success: true, message: 'Mock payment succeeded' };
     } catch (error) {
@@ -135,7 +135,7 @@ class MockPaymentService {
 
       await this.updatePaymentStatus(paymentId, updates);
       
-      console.log(`❌ Тестовый платеж отклонен: ${paymentId}`);
+      console.log(`Тестовый платеж отклонен: ${paymentId}`);
       
       return { success: true, message: 'Mock payment failed' };
     } catch (error) {
@@ -179,7 +179,7 @@ class MockPaymentService {
    * Валидирует подпись вебхука (всегда true для мок-режима)
    */
   validateWebhookSignature(payload, signature) {
-    console.log('🧪 ТЕСТОВЫЙ РЕЖИМ: Пропуск валидации подписи');
+    console.log('ТЕСТОВЫЙ РЕЖИМ: Пропуск валидации подписи');
     return true;
   }
 }

@@ -16,7 +16,7 @@ async function processPaymentWebhook(webhookData) {
     // Проверяем, не обработан ли уже этот вебхук
     const webhookId = `${session.id}-${type}`;
     if (processedWebhooks.has(webhookId)) {
-      console.log(`⚠️  Вебхук уже обработан: ${webhookId}`);
+      console.log(`Вебхук уже обработан: ${webhookId}`);
       return { success: true, message: 'Webhook already processed' };
     }
 
@@ -29,14 +29,14 @@ async function processPaymentWebhook(webhookData) {
       const paymentId = payment.id;
       const status = payment.status;
 
-      console.log(`📦 Получен вебхук для платежа ${paymentId}: ${status}`);
+      console.log(`Получен вебхук для платежа ${paymentId}: ${status}`);
 
       // Получаем сохраненную информацию о платеже
       let paymentSession;
       try {
         paymentSession = await paymentService.getPaymentStatus(paymentId);
       } catch (error) {
-        console.error(`❌ Платеж не найден: ${paymentId}`);
+        console.error(`Платеж не найден: ${paymentId}`);
         return { success: false, message: 'Payment not found' };
       }
 
@@ -49,17 +49,17 @@ async function processPaymentWebhook(webhookData) {
 
       await paymentService.updatePaymentStatus(paymentId, updates);
 
-      console.log(`✅ Статус платежа обновлен: ${paymentId} -> ${updates.status}`);
+      console.log(`Статус платежа обновлен: ${paymentId} -> ${updates.status}`);
 
       // Если платеж успешен, отправляем заказ в 1С
       if (updates.status === 'succeeded') {
-        console.log(`📤 Платеж подтвержден, отправка в 1С: ${paymentId}`);
+        console.log(`Платеж подтвержден, отправка в 1С: ${paymentId}`);
         
         try {
           await processOrder(paymentId);
-          console.log(`✅ Заказ успешно обработан: ${paymentId}`);
+          console.log(`Заказ успешно обработан: ${paymentId}`);
         } catch (error) {
-          console.error(`❌ Ошибка отправки заказа в 1С: ${error.message}`);
+          console.error(`Ошибка отправки заказа в 1С: ${error.message}`);
           // Не бросаем ошибку, чтобы вебхук считался обработанным
           // Заказ можно будет обработать вручную позже
         }
@@ -71,7 +71,7 @@ async function processPaymentWebhook(webhookData) {
     return { success: true, message: 'Webhook type not handled' };
 
   } catch (error) {
-    console.error('❌ Ошибка обработки вебхука:', error);
+    console.error('Ошибка обработки вебхука:', error);
     throw error;
   }
 }

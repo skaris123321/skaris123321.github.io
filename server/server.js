@@ -32,15 +32,15 @@ if (process.env.EMAIL_USER && process.env.EMAIL_PASS && process.env.EMAIL_PASS !
   // Проверяем подключение к email при старте
   transporter.verify((error, success) => {
     if (error) {
-      console.error('❌ Ошибка подключения к email:', error);
-      console.log('⚠️  Email не настроен, но сервер работает. Обновление цен доступно!');
+      console.error('Ошибка подключения к email:', error);
+      console.log('Email не настроен, но сервер работает. Обновление цен доступно!');
     } else {
-      console.log('✅ Email сервис готов к отправке писем');
+      console.log('Email сервис готов к отправке писем');
     }
   });
 } else {
-  console.log('⚠️  Email не настроен. Для отправки заказов настройте .env файл');
-  console.log('✅ Обновление цен работает без email!');
+  console.log('Email не настроен. Для отправки заказов настройте .env файл');
+  console.log('Обновление цен работает без email!');
 }
 
 // Функция для форматирования цены
@@ -67,10 +67,10 @@ async function saveOrder(orderData) {
   // Сохраняем заказ
   try {
     await fs.writeFile(filepath, JSON.stringify(orderData, null, 2), 'utf8');
-    console.log(`✅ Заказ сохранен: ${filename}`);
+    console.log(`Заказ сохранен: ${filename}`);
     return filename;
   } catch (error) {
-    console.error('❌ Ошибка сохранения заказа:', error);
+    console.error('Ошибка сохранения заказа:', error);
     throw error;
   }
 }
@@ -179,7 +179,7 @@ app.post('/api/orders', async (req, res) => {
   try {
     const orderData = req.body;
     
-    console.log('📦 Получен новый заказ:', {
+    console.log('Получен новый заказ:', {
       clientType: orderData.clientType,
       totalItems: orderData.totalItems,
       totalPrice: orderData.totalPrice
@@ -204,10 +204,10 @@ app.post('/api/orders', async (req, res) => {
 
       try {
         await transporter.sendMail(mailOptions);
-        console.log('✅ Email отправлен на:', process.env.ORDER_EMAIL);
+        console.log('Email отправлен на:', process.env.ORDER_EMAIL);
       } catch (emailError) {
-        console.error('⚠️  Ошибка отправки email:', emailError.message);
-        console.log('✅ Заказ сохранен в файл, но email не отправлен');
+        console.error('Ошибка отправки email:', emailError.message);
+        console.log('Заказ сохранен в файл, но email не отправлен');
       }
 
       // Отправляем подтверждение клиенту
@@ -237,13 +237,13 @@ app.post('/api/orders', async (req, res) => {
         
         try {
           await transporter.sendMail(clientMailOptions);
-          console.log('✅ Подтверждение отправлено клиенту:', orderData.email);
+          console.log('Подтверждение отправлено клиенту:', orderData.email);
         } catch (emailError) {
-          console.log('⚠️  Не удалось отправить подтверждение клиенту');
+          console.log('Не удалось отправить подтверждение клиенту');
         }
       }
     } else {
-      console.log('⚠️  Email не настроен. Заказ сохранен в файл:', filename);
+      console.log('Email не настроен. Заказ сохранен в файл:', filename);
     }
 
     // Отправляем успешный ответ
@@ -254,7 +254,7 @@ app.post('/api/orders', async (req, res) => {
     });
 
   } catch (error) {
-    console.error('❌ Ошибка обработки заказа:', error);
+    console.error('Ошибка обработки заказа:', error);
     res.status(500).json({
       success: false,
       message: 'Ошибка при оформлении заказа',
@@ -284,7 +284,7 @@ app.post('/api/products/update-prices', async (req, res) => {
       });
     }
 
-    console.log(`📦 Получен запрос на обновление цен: ${prices.length} товаров`);
+    console.log(`Получен запрос на обновление цен: ${prices.length} товаров`);
 
     // Все файлы с товарами
     const categoryFiles = [
@@ -317,7 +317,7 @@ app.post('/api/products/update-prices', async (req, res) => {
             product.base_price = priceUpdate.price;
             
             if (oldPrice !== priceUpdate.price) {
-              console.log(`  ✅ ${product.article}: ${oldPrice} → ${priceUpdate.price} ₽`);
+              console.log(`  ${product.article}: ${oldPrice} → ${priceUpdate.price} ₽`);
               updatedCount++;
               fileUpdated = true;
             }
@@ -327,11 +327,11 @@ app.post('/api/products/update-prices', async (req, res) => {
         // Сохраняем файл только если были изменения
         if (fileUpdated) {
           await fs.writeFile(filePath, JSON.stringify(data, null, 4), 'utf8');
-          console.log(`  💾 Сохранен файл: ${categoryFile}`);
+          console.log(`  Сохранен файл: ${categoryFile}`);
         }
         
       } catch (error) {
-        console.error(`❌ Ошибка обработки файла ${categoryFile}:`, error.message);
+        console.error(`Ошибка обработки файла ${categoryFile}:`, error.message);
       }
     }
 
@@ -356,10 +356,10 @@ app.post('/api/products/update-prices', async (req, res) => {
       }
     });
 
-    console.log(`✅ Обновлено цен: ${updatedCount}`);
+    console.log(`Обновлено цен: ${updatedCount}`);
     
     if (notFoundArticles.length > 0) {
-      console.log(`⚠️  Не найдены артикулы: ${notFoundArticles.join(', ')}`);
+      console.log(`Не найдены артикулы: ${notFoundArticles.join(', ')}`);
     }
 
     res.json({
@@ -370,7 +370,7 @@ app.post('/api/products/update-prices', async (req, res) => {
     });
 
   } catch (error) {
-    console.error('❌ Ошибка обновления цен:', error);
+    console.error('Ошибка обновления цен:', error);
     res.status(500).json({
       success: false,
       message: 'Ошибка при обновлении цен',
@@ -383,9 +383,9 @@ app.post('/api/products/update-prices', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`
 ╔════════════════════════════════════════╗
-║   🚀 РОСЭК Order Server запущен       ║
-║   📡 Порт: ${PORT}                         ║
-║   📧 Email: ${process.env.EMAIL_USER}     ║
+║   РОСЭК Order Server запущен          ║
+║   Порт: ${PORT}                         ║
+║   Email: ${process.env.EMAIL_USER}     ║
 ╚════════════════════════════════════════╝
   `);
 });

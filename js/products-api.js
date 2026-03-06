@@ -74,7 +74,7 @@ class ProductsAPI {
         
         return this.productsData;
       } catch (error) {
-        console.error('❌ Ошибка загрузки товаров:', error);
+        console.error('Ошибка загрузки товаров:', error);
         this.loadPromise = null;
         throw error;
       }
@@ -108,7 +108,7 @@ class ProductsAPI {
       
       return data;
     } catch (error) {
-      console.error(`❌ Ошибка загрузки категории ${categoryName}:`, error);
+      console.error(`Ошибка загрузки категории ${categoryName}:`, error);
       throw error;
     }
   }
