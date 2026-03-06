@@ -914,7 +914,7 @@ h1.category-title {
   .product-main-image {
     height: 300px;
     min-height: 300px;
-    padding: 1rem;
+    padding: 0.5rem;
     order: 1;
     display: flex;
     width: 100%;
