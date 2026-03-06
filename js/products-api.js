@@ -1,25 +1,18 @@
-/**
- * Клиентский API для работы с продуктами
- * Работает с разделенными JSON файлами по категориям
- */
-
+// API для работы с товарами
 class ProductsAPI {
   constructor() {
     this.productsData = null;
     this.loadPromise = null;
-    this.categoryCache = {}; // Кэш для отдельных категорий
-    // Версия для кэш-бастинга картинок (увеличивайте при обновлении картинок)
+    this.categoryCache = {};
     this.imageVersion = '5';
   }
 
-  // Добавляет версию к URL картинки для обхода кэша браузера
   addImageVersion(imageUrl) {
     if (!imageUrl) return imageUrl;
     const separator = imageUrl.includes('?') ? '&' : '?';
     return `${imageUrl}${separator}v=${this.imageVersion}`;
   }
 
-  // Загружает все товары из всех категорий
   async loadProducts() {
     if (this.productsData) {
       return this.productsData;
@@ -46,7 +39,6 @@ class ProductsAPI {
 
         const index = await indexResponse.json();
         
-        // Загружаем все категории параллельно
         const categoryPromises = Object.entries(index.categories).map(async ([key, info]) => {
           const response = await fetch(`../data/${info.file}?v=2&t=` + Date.now(), {
             cache: 'no-cache',
@@ -66,8 +58,6 @@ class ProductsAPI {
         });
 
         const categoryResults = await Promise.all(categoryPromises);
-        
-        // Объединяем все товары
         const allProducts = categoryResults.flat();
         
         this.productsData = { products: allProducts };
@@ -83,7 +73,6 @@ class ProductsAPI {
     return this.loadPromise;
   }
 
-  // Загружает товары только из конкретной категории (для оптимизации)
   async loadCategory(categoryName) {
     if (this.categoryCache[categoryName]) {
       return this.categoryCache[categoryName];
@@ -117,7 +106,6 @@ class ProductsAPI {
     const data = await this.loadProducts();
     const { manufacturer_brand, commutation_type, inputs_count, poles_count, control_type, motor_power, regulation_type } = filters;
 
-    // Фильтруем продукты по заданным параметрам
     let filteredProducts = data.products;
 
     if (manufacturer_brand) {
@@ -142,7 +130,6 @@ class ProductsAPI {
       filteredProducts = filteredProducts.filter(p => p.regulation_type === regulation_type);
     }
 
-    // Получаем уникальные значения
     const availableOptions = {
       nominal_current: [],
       commutation_type: [],
@@ -159,12 +146,10 @@ class ProductsAPI {
       reversible: []
     };
 
-    // Все бренды (с учетом типа коммутации)
     let brandProducts = data.products;
     if (commutation_type) {
       brandProducts = brandProducts.filter(p => p.commutation_type === commutation_type);
       
-      // Для ящиков управления ограничиваем список брендов
       if (commutation_type === 'motor_control_box') {
         const allowedBrands = ['IEK', 'TDM', 'EKF'];
         const allBrands = [...new Set(brandProducts.map(p => p.brand).filter(b => allowedBrands.includes(b)))];
@@ -178,7 +163,6 @@ class ProductsAPI {
       availableOptions.manufacturer_brand = allBrands.sort();
     }
 
-    // Тип коммутации (с учетом бренда если выбран)
     let typeProducts = data.products;
     if (manufacturer_brand) {
       typeProducts = typeProducts.filter(p => p.brand === manufacturer_brand);
@@ -186,9 +170,7 @@ class ProductsAPI {
     const commutationTypes = [...new Set(typeProducts.map(p => p.commutation_type).filter(Boolean))];
     availableOptions.commutation_type = commutationTypes.sort();
 
-    // Для шкафов управления добавляем control_type и motor_power
     if (commutation_type === 'control_cabinet') {
-      // Тип управления (с учетом бренда)
       let controlTypeProducts = data.products.filter(p => p.commutation_type === 'control_cabinet');
       if (manufacturer_brand) {
         controlTypeProducts = controlTypeProducts.filter(p => p.brand === manufacturer_brand);
@@ -196,7 +178,6 @@ class ProductsAPI {
       const controlTypes = [...new Set(controlTypeProducts.map(p => p.control_type).filter(Boolean))];
       availableOptions.control_type = controlTypes.sort();
 
-      // Мощность двигателя (с учетом бренда и типа управления)
       let motorPowerProducts = data.products.filter(p => p.commutation_type === 'control_cabinet');
       if (manufacturer_brand) {
         motorPowerProducts = motorPowerProducts.filter(p => p.brand === manufacturer_brand);
@@ -207,22 +188,18 @@ class ProductsAPI {
       const motorPowers = [...new Set(motorPowerProducts.map(p => parseFloat(p.motor_power)).filter(Boolean))];
       availableOptions.motor_power = motorPowers.sort((a, b) => a - b);
       
-      // Для шкафов управления inputs_count всегда "1"
       availableOptions.inputs_count = ['1'];
       availableOptions.poles_count = [];
       availableOptions.nominal_current = [];
     } else if (commutation_type === 'contactors') {
-      // Для контакторов используем poles_count
       let polesProducts = data.products.filter(p => p.commutation_type === 'contactors');
       if (manufacturer_brand) {
         polesProducts = polesProducts.filter(p => p.brand === manufacturer_brand);
       }
       const polesCounts = [...new Set(polesProducts.map(p => p.poles_count).filter(Boolean))];
       availableOptions.poles_count = polesCounts.sort();
-      // Для контакторов inputs_count не используется
       availableOptions.inputs_count = [];
       
-      // Номинальный ток для контакторов
       let currentProducts = data.products.filter(p => p.commutation_type === 'contactors');
       if (manufacturer_brand) {
         currentProducts = currentProducts.filter(p => p.brand === manufacturer_brand);
@@ -233,7 +210,6 @@ class ProductsAPI {
       const nominalCurrents = [...new Set(currentProducts.map(p => parseFloat(p.nominal_current)).filter(Boolean))];
       availableOptions.nominal_current = nominalCurrents.sort((a, b) => a - b);
     } else if (commutation_type === 'reactive_power') {
-      // Для реактивной мощности добавляем regulation_type, reactive_power и steps
       let regulationTypeProducts = data.products.filter(p => p.commutation_type === 'reactive_power');
       if (manufacturer_brand) {
         regulationTypeProducts = regulationTypeProducts.filter(p => p.brand === manufacturer_brand);
@@ -241,7 +217,6 @@ class ProductsAPI {
       const regulationTypes = [...new Set(regulationTypeProducts.map(p => p.regulation_type).filter(Boolean))];
       availableOptions.regulation_type = regulationTypes.sort();
 
-      // Мощность (с учетом бренда и типа регулирования)
       let reactivePowerProducts = data.products.filter(p => p.commutation_type === 'reactive_power');
       if (manufacturer_brand) {
         reactivePowerProducts = reactivePowerProducts.filter(p => p.brand === manufacturer_brand);
@@ -252,7 +227,6 @@ class ProductsAPI {
       const reactivePowers = [...new Set(reactivePowerProducts.map(p => parseFloat(p.power)).filter(Boolean))];
       availableOptions.reactive_power = reactivePowers.sort((a, b) => a - b);
       
-      // Ступени (с учетом бренда, типа регулирования и мощности)
       const { reactive_power } = filters;
       let stepsProducts = data.products.filter(p => p.commutation_type === 'reactive_power');
       if (manufacturer_brand) {
@@ -267,15 +241,12 @@ class ProductsAPI {
       const steps = [...new Set(stepsProducts.map(p => parseInt(p.step)).filter(Boolean))];
       availableOptions.steps = steps.sort((a, b) => a - b);
       
-      // Для реактивной мощности не используются эти параметры
       availableOptions.inputs_count = [];
       availableOptions.poles_count = [];
       availableOptions.nominal_current = [];
     } else if (commutation_type === 'motor_control_box') {
-      // Для ящиков управления электродвигателями Я5000
-      const { box_type, reversible, nominal_current, feeder_type } = filters;
+      const { box_type, reversible } = filters;
       
-      // Получаем доступные типы ящиков
       let boxTypeProducts = data.products.filter(p => p.commutation_type === 'motor_control_box');
       if (manufacturer_brand) {
         boxTypeProducts = boxTypeProducts.filter(p => p.brand === manufacturer_brand);
@@ -283,8 +254,6 @@ class ProductsAPI {
       const boxTypes = [...new Set(boxTypeProducts.map(p => p.box_type).filter(Boolean))];
       availableOptions.box_type = boxTypes.sort();
       
-      // Получаем доступные значения reversible (реверсивность)
-      // НЕ фильтруем по feeder_type и nominal_current, так как реверсивность зависит только от типа ящика
       let reversibleProducts = data.products.filter(p => p.commutation_type === 'motor_control_box');
       if (manufacturer_brand) {
         reversibleProducts = reversibleProducts.filter(p => p.brand === manufacturer_brand);
@@ -295,8 +264,6 @@ class ProductsAPI {
       const reversibleValues = [...new Set(reversibleProducts.map(p => p.reversible).filter(v => v !== undefined && v !== null))];
       availableOptions.reversible = reversibleValues.sort();
       
-      // Получаем доступные номинальные токи
-      // НЕ фильтруем по feeder_type, так как токи не зависят от типа фидера
       let currentProducts = data.products.filter(p => p.commutation_type === 'motor_control_box');
       if (manufacturer_brand) {
         currentProducts = currentProducts.filter(p => p.brand === manufacturer_brand);
@@ -310,7 +277,6 @@ class ProductsAPI {
       const nominalCurrents = [...new Set(currentProducts.map(p => parseFloat(p.nominal_current)).filter(Boolean))];
       availableOptions.nominal_current = nominalCurrents.sort((a, b) => a - b);
       
-      // Получаем доступные типы фидеров
       let feederTypeProducts = data.products.filter(p => p.commutation_type === 'motor_control_box');
       if (manufacturer_brand) {
         feederTypeProducts = feederTypeProducts.filter(p => p.brand === manufacturer_brand);
@@ -321,15 +287,12 @@ class ProductsAPI {
       if (reversible !== undefined) {
         feederTypeProducts = feederTypeProducts.filter(p => p.reversible === reversible);
       }
-      // НЕ фильтруем по nominal_current, так как типы фидеров не зависят от тока
       const feederTypes = [...new Set(feederTypeProducts.map(p => p.feeder_type).filter(Boolean))];
       availableOptions.feeder_type = feederTypes.sort();
       
-      // Для ящиков управления не используются эти параметры
       availableOptions.inputs_count = [];
       availableOptions.poles_count = [];
     } else {
-      // Для АВР используем inputs_count
       let inputsProducts = data.products;
       if (manufacturer_brand) {
         inputsProducts = inputsProducts.filter(p => p.brand === manufacturer_brand);
@@ -339,10 +302,8 @@ class ProductsAPI {
       }
       const inputsCounts = [...new Set(inputsProducts.map(p => p.inputs_count).filter(Boolean))];
       availableOptions.inputs_count = inputsCounts.sort((a, b) => String(a).localeCompare(String(b)));
-      // Для не-контакторов poles_count не используется
       availableOptions.poles_count = [];
       
-      // Номинальный ток для АВР (с учетом всех фильтров)
       let currentProducts = data.products;
       if (manufacturer_brand) {
         currentProducts = currentProducts.filter(p => p.brand === manufacturer_brand);
@@ -366,7 +327,6 @@ class ProductsAPI {
   async getProduct(filters) {
     const data = await this.loadProducts();
     
-    // Если передан ID, ищем по ID
     if (filters.id) {
       const foundProduct = data.products.find(product => product.id === parseInt(filters.id));
       
@@ -377,7 +337,6 @@ class ProductsAPI {
         };
       }
 
-      // Формируем ответ для поиска по ID
       let images = [];
       if (foundProduct.images && Array.isArray(foundProduct.images) && foundProduct.images.length > 0) {
         images = foundProduct.images.map(img => this.addImageVersion(img));
@@ -442,10 +401,8 @@ class ProductsAPI {
       }
     }
 
-    // Ищем подходящий продукт
     const foundProduct = data.products.find(product => {
       if (commutation_type === 'control_cabinet') {
-        // Для шкафов управления проверяем motor_power
         if (!product.motor_power || parseFloat(product.motor_power) !== parseFloat(motor_power)) {
           return false;
         }
@@ -453,24 +410,20 @@ class ProductsAPI {
           return false;
         }
       } else if (commutation_type === 'reactive_power') {
-        // Для реактивной мощности проверяем power, regulation_type и step
         if (!product.power || parseFloat(product.power) !== parseFloat(reactive_power)) {
           return false;
         }
         if (regulation_type && product.regulation_type !== regulation_type) {
           return false;
         }
-        // Проверяем ступени если указаны
         const { step } = filters;
         if (step && product.step && parseInt(product.step) !== parseInt(step)) {
           return false;
         }
       } else if (commutation_type === 'motor_control_box') {
-        // Для ящиков управления проверяем nominal_current
         if (!product.nominal_current || parseFloat(product.nominal_current) !== parseFloat(nominal_current)) {
           return false;
         }
-        // Проверяем дополнительные параметры
         const { box_type, feeder_type, reversible } = filters;
         if (box_type && product.box_type !== box_type) {
           return false;
@@ -478,12 +431,10 @@ class ProductsAPI {
         if (feeder_type && product.feeder_type !== feeder_type) {
           return false;
         }
-        // Проверяем реверсивность для всех типов ящиков
         if (reversible !== undefined && product.reversible !== reversible) {
           return false;
         }
       } else {
-        // Для АВР проверяем nominal_current
         if (!product.nominal_current || parseFloat(product.nominal_current) !== parseFloat(nominal_current)) {
           return false;
         }
@@ -511,8 +462,6 @@ class ProductsAPI {
       };
     }
 
-    // Формируем ответ в том же формате, что и PHP API
-    // Формируем массив изображений: приоритет у массива images, иначе используем main_image
     let images = [];
     if (foundProduct.images && Array.isArray(foundProduct.images) && foundProduct.images.length > 0) {
       images = foundProduct.images.map(img => this.addImageVersion(img));

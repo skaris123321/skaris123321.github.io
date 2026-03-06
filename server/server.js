@@ -8,18 +8,14 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Подключаем роуты для платежей
 const paymentsRouter = require('./routes/payments');
 app.use('/api/payments', paymentsRouter);
 
-// Создаем транспорт для отправки email через Gmail
 let transporter = null;
 
-// Проверяем настройки email
 if (process.env.EMAIL_USER && process.env.EMAIL_PASS && process.env.EMAIL_PASS !== 'your-app-password-here') {
   transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -29,7 +25,6 @@ if (process.env.EMAIL_USER && process.env.EMAIL_PASS && process.env.EMAIL_PASS !
     }
   });
 
-  // Проверяем подключение к email при старте
   transporter.verify((error, success) => {
     if (error) {
       console.error('Ошибка подключения к email:', error);
@@ -43,28 +38,23 @@ if (process.env.EMAIL_USER && process.env.EMAIL_PASS && process.env.EMAIL_PASS !
   console.log('Обновление цен работает без email!');
 }
 
-// Функция для форматирования цены
 function formatPrice(price) {
   return new Intl.NumberFormat('ru-RU').format(price) + ' ₽';
 }
 
-// Функция для сохранения заказа в файл
 async function saveOrder(orderData) {
   const ordersDir = path.join(__dirname, 'orders');
   
-  // Создаем папку orders если её нет
   try {
     await fs.mkdir(ordersDir, { recursive: true });
   } catch (error) {
     console.error('Ошибка создания папки orders:', error);
   }
 
-  // Генерируем имя файла с датой и временем
   const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
   const filename = `order-${timestamp}.json`;
   const filepath = path.join(ordersDir, filename);
 
-  // Сохраняем заказ
   try {
     await fs.writeFile(filepath, JSON.stringify(orderData, null, 2), 'utf8');
     console.log(`Заказ сохранен: ${filename}`);
@@ -75,7 +65,6 @@ async function saveOrder(orderData) {
   }
 }
 
-// Функция для формирования HTML письма
 function generateEmailHTML(orderData) {
   const clientTypeText = orderData.clientType === 'individual' ? 'Физическое лицо' : 'Юридическое лицо';
   
