@@ -1,0 +1,71 @@
+═══════════════════════════════════════════════════════════
+  ПОЛЕЗНЫЕ КОМАНДЫ
+═══════════════════════════════════════════════════════════
+
+🚀 ЗАПУСК СЕРВЕРА:
+
+cd C:\Users\nogovitsina.ea\Desktop\сайт\rosek-site\server
+npm start
+
+───────────────────────────────────────────────────────────
+
+🚀 ЗАПУСК СЕРВЕРА + NGROK (одной кнопкой):
+
+Дважды кликните на файл:
+start-server-with-ngrok.bat
+
+───────────────────────────────────────────────────────────
+
+💰 ОБНОВЛЕНИЕ ЦЕН ИЗ 1С:
+
+1. Получить файл prices.json от программиста 1С
+
+2. Положить файл в папку проекта
+
+3. Выполнить:
+   cd C:\Users\nogovitsina.ea\Desktop\сайт\rosek-site\server
+   curl.exe -X POST http://localhost:3000/api/products/update-prices -H "Content-Type: application/json; charset=utf-8" -d "@../prices.json"
+
+4. Проверить результат:
+   {"success":true,"message":"Цены обновлены","updated":8}
+
+───────────────────────────────────────────────────────────
+
+📤 ЗАГРУЗКА НА GITHUB:
+
+cd C:\Users\nogovitsina.ea\Desktop\сайт\rosek-site
+git add .
+git commit -m "Обновление"
+git push
+
+───────────────────────────────────────────────────────────
+
+🧪 ТЕСТИРОВАНИЕ:
+
+Открыть в браузере:
+- test-payment.html (тест оплаты)
+- index.html (главная страница)
+
+Или GitHub Pages:
+https://skaris123321.github.io/
+
+───────────────────────────────────────────────────────────
+
+🔍 ПРОВЕРКА РАБОТЫ:
+
+curl http://localhost:3000/api/health
+
+───────────────────────────────────────────────────────────
+
+📋 СПИСОК ПЛАТЕЖЕЙ:
+
+curl http://localhost:3000/api/payments/mock-list
+
+───────────────────────────────────────────────────────────
+
+🗑️ ОЧИСТКА ТЕСТОВЫХ ПЛАТЕЖЕЙ:
+
+cd C:\Users\nogovitsina.ea\Desktop\сайт\rosek-site\server\payments\history
+del payment-pm_test_*.json
+
+═══════════════════════════════════════════════════════════

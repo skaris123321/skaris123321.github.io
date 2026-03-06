@@ -3,8 +3,17 @@
 ## 🚀 Быстрый старт
 
 ### Запуск сервера
-```bash
-cd server
+
+**Windows (cmd):**
+```cmd
+cd C:\Users\nogovitsina.ea\Desktop\сайт\rosek-site\server
+npm install
+npm start
+```
+
+**Или через PowerShell:**
+```powershell
+cd "C:\Users\nogovitsina.ea\Desktop\сайт\rosek-site\server"
 npm install
 npm start
 ```
@@ -12,7 +21,17 @@ npm start
 Сервер запустится на `http://localhost:3000`
 
 ### Открыть сайт
+
+**Вариант 1: Локально (для разработки)**
 Откройте `index.html` в браузере
+
+**Вариант 2: GitHub Pages (рабочая версия)**
+```
+https://skaris123321.github.io/
+```
+
+⚠️ **ВАЖНО:** Сайт на GitHub Pages работает БЕЗ сервера! 
+Для работы оплаты и обновления цен нужен запущенный сервер.
 
 ---
 
@@ -61,9 +80,19 @@ npm start
 
 ### Обновление цен товаров
 
-**Endpoint:**
+**Для локального тестирования:**
 ```
 POST http://localhost:3000/api/products/update-prices
+```
+
+**Для работы с GitHub Pages (через ngrok):**
+```
+POST https://your-ngrok-url.ngrok.io/api/products/update-prices
+```
+
+**Для продакшена (если сервер на хостинге):**
+```
+POST https://rosek.tech/api/products/update-prices
 ```
 
 **Формат запроса:**
@@ -120,25 +149,35 @@ POST http://localhost:3000/api/orders
 
 ## 🌐 Доступ из интернета (для программиста 1С)
 
-### Вариант 1: Через ngrok (для тестирования)
+⚠️ **ВАЖНО:** Сайт на GitHub Pages (https://skaris123321.github.io/) - это только frontend!
+Для работы с 1С нужен запущенный backend сервер.
 
-```bash
-# Установите ngrok
-npm install -g ngrok
+### Вариант 1: Через ngrok (РЕКОМЕНДУЕТСЯ)
 
-# Запустите ngrok
+**Шаг 1:** Запустите сервер
+```cmd
+cd C:\Users\nogovitsina.ea\Desktop\сайт\rosek-site\server
+npm start
+```
+
+**Шаг 2:** В новом окне терминала запустите ngrok
+```cmd
+cd C:\Users\nogovitsina.ea\Desktop\сайт\rosek-site
 ngrok http 3000
 ```
 
-Получите URL типа `https://abc123.ngrok.io` и дайте программисту 1С:
+**Шаг 3:** Скопируйте URL из ngrok (например `https://abc123.ngrok.io`)
+
+**Шаг 4:** Дайте программисту 1С:
 ```
 POST https://abc123.ngrok.io/api/products/update-prices
 ```
 
-### Вариант 2: На продакшене
+### Вариант 2: Разместить сервер на хостинге
 
+Если разместите backend на отдельном сервере:
 ```
-POST https://rosek.tech/api/products/update-prices
+POST https://api.rosek.tech/api/products/update-prices
 ```
 
 ---
@@ -205,18 +244,35 @@ curl http://localhost:3000/api/health
 
 ## 📝 Полезные команды
 
-```bash
-# Запуск сервера
-cd server && npm start
+**Запуск сервера:**
+```cmd
+cd C:\Users\nogovitsina.ea\Desktop\сайт\rosek-site\server
+npm start
+```
 
-# Запуск с автоперезагрузкой
-cd server && npm run dev
+**Запуск с автоперезагрузкой:**
+```cmd
+cd C:\Users\nogovitsina.ea\Desktop\сайт\rosek-site\server
+npm run dev
+```
 
-# Список тестовых платежей
+**Список тестовых платежей:**
+```cmd
 curl http://localhost:3000/api/payments/mock-list
+```
 
-# Очистка тестовых платежей
-rm server/payments/history/payment-pm_test_*.json
+**Очистка тестовых платежей:**
+```cmd
+cd C:\Users\nogovitsina.ea\Desktop\сайт\rosek-site\server\payments\history
+del payment-pm_test_*.json
+```
+
+**Загрузка изменений на GitHub:**
+```cmd
+cd C:\Users\nogovitsina.ea\Desktop\сайт\rosek-site
+git add .
+git commit -m "Обновление"
+git push
 ```
 
 ---
