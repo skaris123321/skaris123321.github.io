@@ -302,7 +302,7 @@
 
           <div class="form-actions">
             <button type="button" @click="showCheckoutModal = false" class="btn-cancel">Отмена</button>
-            <button type="submit" class="btn-submit">Отправить заказ</button>
+            <button type="submit" class="btn-submit">Оплатить</button>
           </div>
         </form>
 
@@ -378,9 +378,132 @@
 
           <div class="form-actions">
             <button type="button" @click="showCheckoutModal = false" class="btn-cancel">Отмена</button>
-            <button type="submit" class="btn-submit">Отправить заказ</button>
+            <button type="submit" class="btn-submit">Оплатить</button>
           </div>
         </form>
+      </div>
+    </div>
+
+    <!-- Модальное окно с QR-кодом для оплаты -->
+    <div x-show="showPaymentModal" 
+         x-cloak
+         @click.self="payment && payment.closePaymentModal()"
+         class="checkout-modal-overlay">
+      <div class="checkout-modal" @click.stop style="max-width: 500px;" x-data="payment">
+        <button @click="closePaymentModal()" class="modal-close-btn">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+
+        <h2 class="modal-title">Оплата заказа</h2>
+        
+        <!-- Состояние: Загрузка -->
+        <div x-show="paymentState === 'loading'" style="text-align: center; padding: 3rem 0;">
+          <div style="display: inline-block; width: 48px; height: 48px; border: 4px solid #f3f4f6; border-top-color: #F16664; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+          <p style="margin-top: 1rem; color: #6b7280;">Создание платежа...</p>
+        </div>
+
+        <!-- Состояние: Ожидание оплаты -->
+        <div x-show="paymentState === 'pending'" style="text-align: center; padding: 1.5rem 0;">
+          <p style="font-size: 1.125rem; font-weight: 600; color: #111827; margin-bottom: 0.5rem;">
+            Сумма к оплате: <span x-text="formatPrice(amount)" style="color: #F16664;"></span>
+          </p>
+          <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">
+            Отсканируйте QR-код для оплаты через СБП
+          </p>
+          
+          <!-- Таймер -->
+          <div style="display: inline-block; padding: 0.5rem 1rem; background: #fef3c7; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+            <p style="font-size: 0.875rem; color: #92400e; font-weight: 600;">
+              ⏱️ Осталось времени: <span x-text="formattedTime"></span>
+            </p>
+          </div>
+          
+          <!-- QR-код -->
+          <div style="display: inline-block; padding: 1.5rem; background: white; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <div id="qrcode" style="width: 256px; height: 256px; background: #f3f4f6; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem;">
+              <p style="color: #9ca3af; font-size: 0.875rem; text-align: center; padding: 1rem;">
+                Загрузка QR-кода...
+              </p>
+            </div>
+          </div>
+          
+          <p style="font-size: 0.75rem; color: #9ca3af; margin-top: 1.5rem;">
+            После успешной оплаты заказ будет автоматически отправлен в обработку
+          </p>
+          
+          <div style="margin-top: 1rem; padding: 1rem; background: #f9fafb; border-radius: 0.5rem; text-align: left;">
+            <p style="font-size: 0.875rem; color: #374151; font-weight: 600; margin-bottom: 0.5rem;">
+              Как оплатить:
+            </p>
+            <ol style="font-size: 0.875rem; color: #6b7280; margin: 0; padding-left: 1.5rem;">
+              <li>Откройте приложение вашего банка</li>
+              <li>Найдите функцию "Оплата по QR"</li>
+              <li>Отсканируйте QR-код выше</li>
+              <li>Подтвердите платеж в приложении</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Состояние: Успех -->
+        <div x-show="paymentState === 'success'" style="text-align: center; padding: 3rem 0;">
+          <div style="width: 64px; height: 64px; background: #10b981; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="32" height="32" fill="none" stroke="white" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 0.5rem;">
+            Оплата подтверждена!
+          </h3>
+          <p style="color: #6b7280;">
+            Ваш заказ отправлен в обработку.<br>
+            Мы свяжемся с вами в ближайшее время.
+          </p>
+        </div>
+
+        <!-- Состояние: Ошибка -->
+        <div x-show="paymentState === 'failed'" style="text-align: center; padding: 3rem 0;">
+          <div style="width: 64px; height: 64px; background: #ef4444; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="32" height="32" fill="none" stroke="white" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 0.5rem;">
+            Ошибка оплаты
+          </h3>
+          <p style="color: #6b7280; margin-bottom: 1.5rem;">
+            Не удалось обработать платеж.<br>
+            Попробуйте еще раз или свяжитесь с нами.
+          </p>
+          <button @click="regenerateQR()" class="btn-submit">
+            Попробовать снова
+          </button>
+        </div>
+
+        <!-- Состояние: Истекло время -->
+        <div x-show="paymentState === 'expired'" style="text-align: center; padding: 3rem 0;">
+          <div style="width: 64px; height: 64px; background: #f59e0b; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="32" height="32" fill="none" stroke="white" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 0.5rem;">
+            Время истекло
+          </h3>
+          <p style="color: #6b7280; margin-bottom: 1.5rem;">
+            Время для оплаты истекло.<br>
+            Создайте новый QR-код для продолжения.
+          </p>
+          <button @click="regenerateQR()" class="btn-submit">
+            Создать новый QR-код
+          </button>
+        </div>
+
+        <!-- Кнопки (только для состояния pending) -->
+        <div x-show="paymentState === 'pending'" style="display: flex; gap: 1rem; margin-top: 1rem;">
+          <button @click="closePaymentModal()" class="btn-cancel" style="flex: 1;">Отменить</button>
+        </div>
       </div>
     </div>
   </div>
@@ -424,6 +547,7 @@
 
   <script src="../js/cart.js"></script>
   <script src="../js/search.js"></script>
+  <script src="../js/payment.js"></script>
   <script>
     // Глобальная ссылка на данные корзины для использования в модальных окнах
     window.cartData = null;
@@ -435,6 +559,8 @@
           totalItems: 0,
           totalPrice: 0,
           showCheckoutModal: false,
+          showPaymentModal: false,
+          payment: null, // Компонент оплаты
           clientType: 'individual', // 'individual' или 'legal'
           orderForm: {
             // Для физических лиц
@@ -686,7 +812,107 @@
           },
 
           async submitOrder() {
-            // Формируем данные заказа в зависимости от типа клиента
+            // Валидация формы прошла, показываем окно оплаты
+            this.showCheckoutModal = false;
+            this.showPaymentModal = true;
+            
+            // Формируем данные заказа
+            const orderData = {
+              orderDate: new Date().toISOString(),
+              clientType: this.clientType,
+              clientInfo: this.clientType === 'individual' ? {
+                fullName: this.orderForm.fullName,
+                phone: this.orderForm.phone,
+                email: this.orderForm.email,
+                address: this.orderForm.address,
+                comment: this.orderForm.comment
+              } : {
+                companyName: this.orderForm.companyName,
+                inn: this.orderForm.inn,
+                kpp: this.orderForm.kpp,
+                legalAddress: this.orderForm.legalAddress,
+                contactPerson: this.orderForm.contactPerson,
+                phone: this.orderForm.phone,
+                email: this.orderForm.email,
+                comment: this.orderForm.comment
+              },
+              items: this.items.map(item => ({
+                id: item.id,
+                article: item.article,
+                productTitle: item.productTitle,
+                manufacturerBrand: item.manufacturerBrand,
+                commutationType: item.commutationType,
+                nominalCurrent: item.nominalCurrent,
+                inputsCount: item.inputsCount,
+                polesCount: item.polesCount,
+                cableConnection: item.cableConnection,
+                climateVersion: item.climateVersion,
+                controlType: item.controlType,
+                motorPower: item.motorPower,
+                pumpCount: item.pumpCount,
+                regulationType: item.regulationType,
+                reactivePower: item.reactivePower,
+                quantity: item.quantity,
+                unitPrice: item.totalPrice,
+                totalPrice: item.totalPrice * item.quantity
+              })),
+              totalItems: this.totalItems,
+              totalPrice: this.totalPrice
+            };
+            
+            // Создаем компонент оплаты
+            this.payment = window.createPaymentComponent(orderData);
+            
+            // Инициализируем компонент
+            await this.payment.init();
+          },
+
+          async sendTo1C() {
+            // Формируем полные данные заказа для отправки в 1С
+            const orderData = {
+              orderDate: new Date().toISOString(),
+              clientType: this.clientType,
+              clientInfo: this.clientType === 'individual' ? {
+                fullName: this.orderForm.fullName,
+                phone: this.orderForm.phone,
+                email: this.orderForm.email,
+                address: this.orderForm.address,
+                comment: this.orderForm.comment
+              } : {
+                companyName: this.orderForm.companyName,
+                inn: this.orderForm.inn,
+                kpp: this.orderForm.kpp,
+                legalAddress: this.orderForm.legalAddress,
+                contactPerson: this.orderForm.contactPerson,
+                phone: this.orderForm.phone,
+                email: this.orderForm.email,
+                comment: this.orderForm.comment
+              },
+              items: this.items.map(item => ({
+                id: item.id,
+                article: item.article,
+                productTitle: item.productTitle,
+                manufacturerBrand: item.manufacturerBrand,
+                commutationType: item.commutationType,
+                nominalCurrent: item.nominalCurrent,
+                inputsCount: item.inputsCount,
+                polesCount: item.polesCount,
+                cableConnection: item.cableConnection,
+                climateVersion: item.climateVersion,
+                controlType: item.controlType,
+                motorPower: item.motorPower,
+                pumpCount: item.pumpCount,
+                regulationType: item.regulationType,
+                reactivePower: item.reactivePower,
+                quantity: item.quantity,
+                unitPrice: item.totalPrice,
+                totalPrice: item.totalPrice * item.quantity
+              })),
+              totalItems: this.totalItems,
+              totalPrice: this.totalPrice
+            };
+
+            // Формируем текст для email
             let emailContent = '';
             
             if (this.clientType === 'individual') {
@@ -771,12 +997,12 @@ ${this.items.map((item, index) =>
                 // Показываем уведомление об успехе
                 this.showModal({
                   type: 'success',
-                  title: 'Заказ оформлен!',
-                  message: 'Ваш заказ успешно отправлен. Мы свяжемся с вами в ближайшее время.',
+                  title: 'Оплата подтверждена!',
+                  message: 'Ваш заказ успешно оплачен и отправлен в обработку. Мы свяжемся с вами в ближайшее время.',
                   showCancel: false,
                   confirmText: 'OK',
                   onConfirm: () => {
-                    this.showCheckoutModal = false;
+                    this.showPaymentModal = false;
                     // Очищаем форму
                     this.orderForm = {
                       fullName: '',
@@ -804,7 +1030,7 @@ ${this.items.map((item, index) =>
               this.showModal({
                 type: 'warning',
                 title: 'Ошибка отправки',
-                message: 'Не удалось отправить заказ. Проверьте подключение к интернету или свяжитесь с нами по телефону 8 (800) 55-11-052',
+                message: 'Не удалось отправить заказ в 1С. Проверьте подключение к интернету или свяжитесь с нами по телефону 8 (800) 55-11-052',
                 showCancel: false,
                 confirmText: 'OK'
               });
@@ -816,6 +1042,69 @@ ${this.items.map((item, index) =>
           }
         };
         
+        // Сохраняем глобальную ссылку для использования в модальных окнах
+        window.cartData = data;
+        return data;
+      });
+    });
+  </script>
+</body>
+</html>
+            }
+
+            try {
+              // Отправляем через Formspree
+              const response = await fetch('https://formspree.io/f/xgvewpqb', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                  ...orderData,
+                  message: emailContent
+                })
+              });
+
+              if (response.ok) {
+                // Закрываем модальное окно оплаты
+                this.showPaymentModal = false;
+
+                // Показываем успех
+                this.showModal({
+                  type: 'success',
+                  title: 'Оплата подтверждена!',
+                  message: 'Ваш заказ успешно оформлен и отправлен в обработку. Мы свяжемся с вами в ближайшее время.',
+                  showCancel: false,
+                  confirmText: 'OK',
+                  onConfirm: () => {
+                    // Очищаем корзину
+                    this.clearCart();
+                    // Перенаправляем на главную
+                    window.location.href = '../index.html';
+                  }
+                });
+              } else {
+                throw new Error('Ошибка отправки');
+              }
+            } catch (error) {
+              console.error('Ошибка отправки заказа:', error);
+
+              // Показываем ошибку
+              this.showModal({
+                type: 'warning',
+                title: 'Ошибка отправки',
+                message: 'Не удалось отправить заказ в 1С. Проверьте подключение к интернету или свяжитесь с нами по телефону 8 (800) 55-11-052',
+                showCancel: false,
+                confirmText: 'OK'
+              });
+            }
+          },
+
+          formatPrice(price) {
+            return new Intl.NumberFormat('ru-RU').format(price) + ' ₽';
+          }
+        };
+
         // Сохраняем глобальную ссылку для использования в модальных окнах
         window.cartData = data;
         return data;

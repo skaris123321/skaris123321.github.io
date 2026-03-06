@@ -4900,3 +4900,13 @@ h1.category-title {
 [x-cloak] {
   display: none !important;
 }
+
+/* Анимация загрузки для модального окна оплаты */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -12,6 +12,10 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// Подключаем роуты для платежей
+const paymentsRouter = require('./routes/payments');
+app.use('/api/payments', paymentsRouter);
+
 // Создаем транспорт для отправки email через Gmail
 let transporter = null;
 
