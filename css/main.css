@@ -4481,6 +4481,7 @@ h1.category-title {
   .footer-phone-social {
     width: 100%;
     justify-content: space-between;
+    align-items: center;
   }
   
   .footer-phone {
@@ -4672,7 +4673,7 @@ h1.category-title {
   }
   
   .footer-phone-social {
-    align-items: flex-start;
+    align-items: center;
   }
   
   .footer-phone {
