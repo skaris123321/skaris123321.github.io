@@ -2164,6 +2164,7 @@ h1.category-title {
 
 .cart-items {
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .cart-item {
@@ -2359,7 +2360,7 @@ h1.category-title {
   padding: 2rem;
   margin-top: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  width: 100%;
+  width: 100% !important;
   box-sizing: border-box;
 }
 
