@@ -906,14 +906,21 @@ h1.category-title {
   }
   
   .product-gallery-row {
-    height: 400px;
-    min-height: 400px;
+    height: auto;
+    min-height: auto;
+    flex-direction: column;
   }
   
   .product-main-image {
-    height: 400px;
-    min-height: 400px;
+    height: 300px;
+    min-height: 300px;
     padding: 1rem;
+    order: 1;
+  }
+  
+  .product-thumbnails-wrapper {
+    order: 2;
+    margin-top: 0.75rem;
   }
 }
 
