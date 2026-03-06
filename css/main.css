@@ -3167,7 +3167,7 @@ h1.category-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 0.5rem;
   flex-shrink: 0;
   border-radius: 0;
   box-shadow: none;
@@ -3181,7 +3181,7 @@ h1.category-title {
     width: 240px;
     height: 100%;
     border-radius: 0;
-    padding: 2rem;
+    padding: 0.75rem;
   }
 }
 
