@@ -3166,8 +3166,7 @@ h1.category-title {
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
-  height: auto;
-  min-height: 320px;
+  height: 400px;
   border: 1px solid #f3f4f6;
 }
 
@@ -3272,6 +3271,15 @@ h1.category-title {
   display: flex;
   flex-direction: column;
   gap: 0.375rem;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+@media (min-width: 768px) {
+  .catalog-category-list {
+    overflow-y: visible;
+    max-height: none;
+  }
 }
 
 .catalog-category-item {
