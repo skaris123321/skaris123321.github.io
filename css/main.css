@@ -916,6 +916,8 @@ h1.category-title {
     min-height: 300px;
     padding: 1rem;
     order: 1;
+    display: flex;
+    width: 100%;
   }
   
   .product-thumbnails-wrapper {
@@ -3841,8 +3843,10 @@ h1.category-title {
   width: fit-content;
 }
 
-.brands-scroll:hover {
-  animation-play-state: paused;
+@media (min-width: 1024px) {
+  .brands-scroll:hover {
+    animation-play-state: paused;
+  }
 }
 
 @keyframes scroll {
@@ -3864,8 +3868,10 @@ h1.category-title {
   transition: all 0.3s ease;
 }
 
-.brand-logo-card:hover {
-  transform: scale(1.05);
+@media (min-width: 1024px) {
+  .brand-logo-card:hover {
+    transform: scale(1.05);
+  }
 }
 
 .brand-logo-card img {
