@@ -2174,6 +2174,8 @@ h1.category-title {
   margin-bottom: 1.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .cart-item:hover {
@@ -2355,8 +2357,10 @@ h1.category-title {
   border-radius: 1rem;
   border: 1px solid #e5e7eb;
   padding: 2rem;
-  margin-top: 2rem;
+  margin-top: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .cart-summary-row {
