@@ -918,26 +918,31 @@ h1.category-title {
 }
 
 .product-thumbnails-wrapper {
-  display: none;
-  flex-direction: column;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 0.5rem;
   position: relative;
-  margin-top: 0;
+  margin-top: 0.75rem;
   padding-top: 0;
   flex-shrink: 0;
-  overflow: visible;
-  top: 0;
-  width: 80px;
-  align-self: stretch;
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
   justify-content: flex-start;
-  height: 100%;
 }
 
 @media (min-width: 1024px) {
   .product-thumbnails-wrapper {
     display: flex;
+    flex-direction: column;
     margin-top: 0;
+    width: 80px;
+    align-self: stretch;
+    height: 100%;
+    overflow-x: visible;
+    overflow-y: visible;
   }
 }
 
@@ -959,23 +964,30 @@ h1.category-title {
 
 .product-thumbnails {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0.5rem;
   align-items: center;
   justify-content: flex-start;
   margin: 0;
   padding: 0;
   transition: transform 0.3s ease;
-  width: 80px;
+  width: auto;
   position: relative;
   box-sizing: border-box;
   will-change: transform;
 }
 
+@media (min-width: 1024px) {
+  .product-thumbnails {
+    flex-direction: column;
+    width: 80px;
+  }
+}
+
 .thumbnail-nav-btn {
-  width: 80px;
-  height: 32px;
-  display: flex;
+  width: 32px;
+  height: 80px;
+  display: none;
   align-items: center;
   justify-content: center;
   background: #f3f4f6;
@@ -985,6 +997,14 @@ h1.category-title {
   color: #6b7280;
   transition: all 0.2s;
   flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .thumbnail-nav-btn {
+    width: 80px;
+    height: 32px;
+    display: flex;
+  }
 }
 
 .thumbnail-nav-btn:hover:not(:disabled) {
@@ -1345,6 +1365,8 @@ h1.category-title {
 .product-tabs {
   border-bottom: 1px solid #f3f4f6;
   margin-top: 3rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .product-tabs-list {
@@ -1355,6 +1377,7 @@ h1.category-title {
   margin: 0;
   overflow-x: visible;
   overflow-y: visible;
+  min-width: min-content;
 }
 
 .product-tab {
@@ -1367,6 +1390,14 @@ h1.category-title {
   transition: all 0.2s;
   margin-bottom: -1px;
   position: relative;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .product-tab {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+  }
 }
 
 .product-tab:hover {
