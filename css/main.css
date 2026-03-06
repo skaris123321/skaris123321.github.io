@@ -3195,7 +3195,6 @@ h1.category-title {
   object-fit: contain;
   transition: transform 0.3s ease;
 }
-}
 
 .catalog-category-card:hover .catalog-category-image {
   transform: scale(1.02);
