@@ -1,59 +1,65 @@
 @echo off
+chcp 65001 >nul
 echo ========================================
-echo   ROSEK Order Server - Запуск
+echo   ROSEK Order Server - Zapusk
 echo ========================================
 echo.
 
-REM Проверяем установлен ли Node.js
+REM Proveryaem ustanovlen li Node.js
 where node >nul 2>nul
 if %ERRORLEVEL% NEQ 0 (
-    echo [ОШИБКА] Node.js не установлен!
+    echo [OSHIBKA] Node.js ne ustanovlen!
     echo.
-    echo Скачайте и установите Node.js с https://nodejs.org/
-    echo Рекомендуемая версия: 18 LTS или выше
+    echo Skachayte i ustanovite Node.js s https://nodejs.org/
+    echo Rekomenduemaya versiya: 18 LTS ili vyshe
     echo.
     pause
     exit /b 1
 )
 
-echo [OK] Node.js установлен
+echo [OK] Node.js ustanovlen
 node --version
 echo.
 
-REM Проверяем установлены ли зависимости
+REM Proveryaem ustanovleny li zavisimosti
 if not exist "node_modules\" (
-    echo [INFO] Устанавливаем зависимости...
+    echo [INFO] Ustanavlivaem zavisimosti...
     echo.
     call npm install
     echo.
 )
 
-REM Проверяем настроен ли .env файл
-findstr /C:"your-app-password-here" .env >nul 2>nul
-if %ERRORLEVEL% EQU 0 (
-    echo [ВНИМАНИЕ] Файл .env не настроен!
+REM Proveryaem nastroen li .env fayl
+if exist ".env" (
+    findstr /C:"your-app-password-here" .env >nul 2>nul
+    if %ERRORLEVEL% EQU 0 (
+        echo [VNIMANIE] Email ne nastroen, no server zapustitsya!
+        echo.
+        echo Dlya otpravki zakazov na pochtu nastroyte .env fayl:
+        echo   EMAIL_PASS=vash-parol-prilozheniya-gmail
+        echo.
+        echo Obnovlenie tsen rabotaet bez email!
+        echo.
+    )
+) else (
+    echo [VNIMANIE] Fayl .env ne nayden, sozdaem...
+    echo PORT=3000 > .env
+    echo EMAIL_USER=enogovicina167@gmail.com >> .env
+    echo EMAIL_PASS=your-app-password-here >> .env
+    echo ORDER_EMAIL=enogovicina167@gmail.com >> .env
     echo.
-    echo Откройте файл server/.env и укажите:
-    echo   EMAIL_PASS=ваш-пароль-приложения-gmail
+    echo [OK] Fayl .env sozdan
     echo.
-    echo Инструкция по получению пароля приложения:
-    echo   1. Откройте https://myaccount.google.com/security
-    echo   2. Включите двухфакторную аутентификацию
-    echo   3. Создайте "Пароль приложения"
-    echo   4. Вставьте его в .env файл
-    echo.
-    pause
-    exit /b 1
 )
 
-echo [OK] Конфигурация настроена
+echo [OK] Konfiguratsiya nastroena
 echo.
 echo ========================================
-echo   Запускаем сервер...
+echo   Zapuskaem server...
 echo ========================================
 echo.
 
-REM Запускаем сервер
+REM Zapuskaem server
 node server.js
 
 pause

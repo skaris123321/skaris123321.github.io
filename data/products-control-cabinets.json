@@ -587,7 +587,7 @@
             "control_type": "soft_start",
             "inputs_count": "1",
             "phases_count": "3",
-            "base_price": 82450,
+            "base_price": 85000,
             "main_image": "images/pls.jpg",
             "images": [
                 "images/pls.jpg",
@@ -1165,7 +1165,7 @@
             "control_type": "soft_start",
             "inputs_count": "1",
             "phases_count": "3",
-            "base_price": 79050,
+            "base_price": 85000,
             "main_image": "images/pls.jpg",
             "images": [
                 "images/pls.jpg",
@@ -1743,7 +1743,7 @@
             "control_type": "soft_start",
             "inputs_count": "1",
             "phases_count": "3",
-            "base_price": 80750,
+            "base_price": 85000,
             "main_image": "images/pls.jpg",
             "images": [
                 "images/pls.jpg",
@@ -2321,7 +2321,7 @@
             "control_type": "soft_start",
             "inputs_count": "1",
             "phases_count": "3",
-            "base_price": 76500,
+            "base_price": 85000,
             "main_image": "images/pls.jpg",
             "images": [
                 "images/pls.jpg",
@@ -2899,7 +2899,7 @@
             "control_type": "soft_start",
             "inputs_count": "1",
             "phases_count": "3",
-            "base_price": 89250,
+            "base_price": 85000,
             "main_image": "images/pls.jpg",
             "images": [
                 "images/pls.jpg",
@@ -3477,7 +3477,7 @@
             "control_type": "soft_start",
             "inputs_count": "1",
             "phases_count": "3",
-            "base_price": 97750,
+            "base_price": 85000,
             "main_image": "images/pls.jpg",
             "images": [
                 "images/pls.jpg",
@@ -4054,7 +4054,7 @@
             "commutation_type": "control_cabinet",
             "control_type": "soft_start",
             "inputs_count": "1",
-            "base_price": 45000,
+            "base_price": 85000,
             "main_image": "images/pls.jpg",
             "images": [
                 "images/pls.jpg",
@@ -4615,7 +4615,7 @@
             "commutation_type": "control_cabinet",
             "control_type": "soft_start",
             "inputs_count": "1",
-            "base_price": 45000,
+            "base_price": 85000,
             "main_image": "images/pls.jpg",
             "images": [
                 "images/pls.jpg",

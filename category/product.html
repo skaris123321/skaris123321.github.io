@@ -7,7 +7,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -49,7 +49,7 @@
         ">
           <div class="cart-icon-wrapper">
             <svg class="cart-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5-6m0 0h15M17 21a2 2 0 100-4 2 2 0 000 4zM9 21a2 2 0 100-4 2 2 0 000 4z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 7.5h15l-1.5 9h-12l-1.5-9z M9 7.5V6a3 3 0 616 0v1.5"/>
             </svg>
             <span x-show="cartCount > 0" x-text="cartCount" class="cart-badge"></span>
           </div>
@@ -57,7 +57,6 @@
         </a>
         <a href="tel:+78005511052" class="phone hidden sm:block">8 (800) 55-11-052</a>
         <a href="mailto:zakaz@rosek.tech" class="email hidden md:block">zakaz@rosek.tech</a>
-        <button class="btn-login">Войти</button>
       </div>
     </div>
   </header>
@@ -172,7 +171,7 @@
         <div class="product-spec-row">
           <span class="product-spec-label-inline">Артикул:</span>
           <span class="product-spec-value-inline" x-text="dynamicArticle"></span>
-          <button class="copy-article-btn" type="button" title="Копировать артикул" @click="copyArticle()">>
+          <button class="copy-article-btn" type="button" title="Копировать артикул" @click="copyArticle()">
             <svg class="copy-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
             </svg>

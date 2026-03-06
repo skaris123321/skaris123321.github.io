@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -49,7 +49,7 @@
         ">
           <div class="cart-icon-wrapper">
             <svg class="cart-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5-6m0 0h15M17 21a2 2 0 100-4 2 2 0 000 4zM9 21a2 2 0 100-4 2 2 0 000 4z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 7.5h15l-1.5 9h-12l-1.5-9z M9 7.5V6a3 3 0 016 0v1.5"/>
             </svg>
             <span x-show="cartCount > 0" x-text="cartCount" class="cart-badge"></span>
           </div>
@@ -57,7 +57,6 @@
         </a>
         <a href="tel:+78005511052" class="phone hidden sm:block">8 (800) 55-11-052</a>
         <a href="mailto:zakaz@rosek.tech" class="email hidden md:block">zakaz@rosek.tech</a>
-        <button class="btn-login">Войти</button>
       </div>
     </div>
   </header>
@@ -303,7 +302,7 @@
 
           <div class="form-actions">
             <button type="button" @click="showCheckoutModal = false" class="btn-cancel">Отмена</button>
-            <button type="submit" class="btn-submit">Отправить заказ</button>
+            <button type="submit" class="btn-submit">Оплатить</button>
           </div>
         </form>
 
@@ -379,11 +378,12 @@
 
           <div class="form-actions">
             <button type="button" @click="showCheckoutModal = false" class="btn-cancel">Отмена</button>
-            <button type="submit" class="btn-submit">Отправить заказ</button>
+            <button type="submit" class="btn-submit">Оплатить</button>
           </div>
         </form>
       </div>
     </div>
+
   </div>
 
   <!-- Футер -->
@@ -423,6 +423,7 @@
     </div>
   </footer>
 
+  <script src="../js/products-api.js"></script>
   <script src="../js/cart.js"></script>
   <script src="../js/search.js"></script>
   <script>
@@ -687,130 +688,26 @@
           },
 
           async submitOrder() {
-            // Формируем данные заказа в зависимости от типа клиента
-            let emailContent = '';
+            // Закрываем модальное окно оформления
+            this.showCheckoutModal = false;
             
-            if (this.clientType === 'individual') {
-              // Формат для физического лица
-              emailContent = `
-НОВЫЙ ЗАКАЗ - ФИЗИЧЕСКОЕ ЛИЦО
-================================
-
-Дата заказа: ${new Date().toLocaleString('ru-RU')}
-
-ИНФОРМАЦИЯ О КЛИЕНТЕ:
-ФИО: ${this.orderForm.fullName}
-Телефон: ${this.orderForm.phone}
-Email: ${this.orderForm.email}
-Адрес доставки: ${this.orderForm.address}
-Комментарий: ${this.orderForm.comment || 'Нет'}
-
-ТОВАРЫ В ЗАКАЗЕ:
-${this.items.map((item, index) => 
-  `${index + 1}. ${item.productTitle}
-   Артикул: ${item.article}
-   Производитель: ${item.manufacturerBrand}
-   Количество: ${item.quantity} шт.
-   Цена за единицу: ${this.formatPrice(item.totalPrice)}
-   Сумма: ${this.formatPrice(item.totalPrice * item.quantity)}`
-).join('\n\n')}
-
-ИТОГО:
-Количество товаров: ${this.totalItems} шт.
-Общая сумма: ${this.formatPrice(this.totalPrice)}
-              `;
-            } else {
-              // Формат для юридического лица
-              emailContent = `
-НОВЫЙ ЗАКАЗ - ЮРИДИЧЕСКОЕ ЛИЦО
-================================
-
-Дата заказа: ${new Date().toLocaleString('ru-RU')}
-
-ИНФОРМАЦИЯ ОБ ОРГАНИЗАЦИИ:
-Название организации: ${this.orderForm.companyName}
-ИНН: ${this.orderForm.inn}
-КПП: ${this.orderForm.kpp}
-Юридический адрес: ${this.orderForm.legalAddress}
-
-КОНТАКТНОЕ ЛИЦО:
-ФИО: ${this.orderForm.contactPerson}
-Телефон: ${this.orderForm.phone}
-Email: ${this.orderForm.email}
-Комментарий: ${this.orderForm.comment || 'Нет'}
-
-ТОВАРЫ В ЗАКАЗЕ:
-${this.items.map((item, index) => 
-  `${index + 1}. ${item.productTitle}
-   Артикул: ${item.article}
-   Производитель: ${item.manufacturerBrand}
-   Количество: ${item.quantity} шт.
-   Цена за единицу: ${this.formatPrice(item.totalPrice)}
-   Сумма: ${this.formatPrice(item.totalPrice * item.quantity)}`
-).join('\n\n')}
-
-ИТОГО:
-Количество товаров: ${this.totalItems} шт.
-Общая сумма: ${this.formatPrice(this.totalPrice)}
-              `;
-            }
-
-            try {
-              // Отправляем через Formspree
-              const response = await fetch('https://formspree.io/f/xwvnwqdo', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                  email: this.orderForm.email,
-                  message: emailContent
-                })
-              });
-
-              if (response.ok) {
-                // Показываем уведомление об успехе
-                this.showModal({
-                  type: 'success',
-                  title: 'Заказ оформлен!',
-                  message: 'Ваш заказ успешно отправлен. Мы свяжемся с вами в ближайшее время.',
-                  showCancel: false,
-                  confirmText: 'OK',
-                  onConfirm: () => {
-                    this.showCheckoutModal = false;
-                    // Очищаем форму
-                    this.orderForm = {
-                      fullName: '',
-                      phone: '',
-                      email: '',
-                      address: '',
-                      comment: '',
-                      companyName: '',
-                      inn: '',
-                      kpp: '',
-                      legalAddress: '',
-                      contactPerson: ''
-                    };
-                    // Очищаем корзину
-                    this.clearCart();
-                  }
-                });
-              } else {
-                throw new Error('Ошибка отправки');
+            // Показываем сообщение с инструкцией по оплате
+            this.showModal({
+              type: 'success',
+              title: 'Заказ оформлен!',
+              message: `Спасибо за заказ на сумму ${this.formatPrice(this.totalPrice)}!\n\nДля оплаты свяжитесь с нами:\n📞 8 (800) 55-11-052\n📧 zakaz@rosek.ru\n\nМы отправим вам QR-код для оплаты.`,
+              showCancel: false,
+              confirmText: 'OK',
+              onConfirm: () => {
+                // Очищаем корзину
+                this.clearCart();
+                // Перенаправляем на главную
+                window.location.href = '../index.html';
               }
-            } catch (error) {
-              console.error('Ошибка отправки заказа:', error);
-              
-              // Показываем ошибку
-              this.showModal({
-                type: 'warning',
-                title: 'Ошибка отправки',
-                message: 'Не удалось отправить заказ. Проверьте подключение к интернету или свяжитесь с нами по телефону 8 (800) 55-11-052',
-                showCancel: false,
-                confirmText: 'OK'
-              });
-            }
+            });
           },
+
+
 
           formatPrice(price) {
             return new Intl.NumberFormat('ru-RU').format(price) + ' ₽';
@@ -823,5 +720,7 @@ ${this.items.map((item, index) =>
       });
     });
   </script>
+</body>
+</html>
 </body>
 </html>

@@ -12,23 +12,36 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// Создаем транспорт для отправки email через Gmail
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
-  }
-});
+// Подключаем роуты для платежей
+const paymentsRouter = require('./routes/payments');
+app.use('/api/payments', paymentsRouter);
 
-// Проверяем подключение к email при старте
-transporter.verify((error, success) => {
-  if (error) {
-    console.error('❌ Ошибка подключения к email:', error);
-  } else {
-    console.log('✅ Email сервис готов к отправке писем');
-  }
-});
+// Создаем транспорт для отправки email через Gmail
+let transporter = null;
+
+// Проверяем настройки email
+if (process.env.EMAIL_USER && process.env.EMAIL_PASS && process.env.EMAIL_PASS !== 'your-app-password-here') {
+  transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
+    }
+  });
+
+  // Проверяем подключение к email при старте
+  transporter.verify((error, success) => {
+    if (error) {
+      console.error('❌ Ошибка подключения к email:', error);
+      console.log('⚠️  Email не настроен, но сервер работает. Обновление цен доступно!');
+    } else {
+      console.log('✅ Email сервис готов к отправке писем');
+    }
+  });
+} else {
+  console.log('⚠️  Email не настроен. Для отправки заказов настройте .env файл');
+  console.log('✅ Обновление цен работает без email!');
+}
 
 // Функция для форматирования цены
 function formatPrice(price) {
@@ -175,48 +188,62 @@ app.post('/api/orders', async (req, res) => {
     // Сохраняем заказ в файл
     const filename = await saveOrder(orderData);
 
-    // Формируем письмо
-    const emailHTML = generateEmailHTML(orderData);
-    const emailSubject = `Новый заказ с сайта РОСЭК от ${orderData.orderDate}`;
+    // Отправляем email только если настроен
+    if (transporter) {
+      // Формируем письмо
+      const emailHTML = generateEmailHTML(orderData);
+      const emailSubject = `Новый заказ с сайта РОСЭК от ${orderData.orderDate}`;
 
-    // Отправляем email
-    const mailOptions = {
-      from: `"РОСЭК - Заказы" <${process.env.EMAIL_USER}>`,
-      to: process.env.ORDER_EMAIL,
-      subject: emailSubject,
-      html: emailHTML
-    };
-
-    await transporter.sendMail(mailOptions);
-    console.log('✅ Email отправлен на:', process.env.ORDER_EMAIL);
-
-    // Отправляем подтверждение клиенту
-    if (orderData.email) {
-      const clientMailOptions = {
-        from: `"РОСЭК" <${process.env.EMAIL_USER}>`,
-        to: orderData.email,
-        subject: 'Ваш заказ принят - РОСЭК',
-        html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-            <h2 style="color: #92400e;">Спасибо за ваш заказ!</h2>
-            <p>Ваш заказ успешно принят и передан в обработку.</p>
-            <p><strong>Номер заказа:</strong> ${filename.replace('.json', '')}</p>
-            <p><strong>Дата:</strong> ${orderData.orderDate}</p>
-            <p><strong>Сумма:</strong> ${formatPrice(orderData.totalPrice)}</p>
-            <p>Мы свяжемся с вами в ближайшее время для уточнения деталей.</p>
-            <hr style="margin: 30px 0; border: none; border-top: 1px solid #ddd;">
-            <p style="color: #666; font-size: 0.9em;">
-              С уважением,<br>
-              Команда РОСЭК<br>
-              Телефон: 8 (800) 55-11-052<br>
-              Email: zakaz@rosek.tech
-            </p>
-          </div>
-        `
+      // Отправляем email
+      const mailOptions = {
+        from: `"РОСЭК - Заказы" <${process.env.EMAIL_USER}>`,
+        to: process.env.ORDER_EMAIL,
+        subject: emailSubject,
+        html: emailHTML
       };
-      
-      await transporter.sendMail(clientMailOptions);
-      console.log('✅ Подтверждение отправлено клиенту:', orderData.email);
+
+      try {
+        await transporter.sendMail(mailOptions);
+        console.log('✅ Email отправлен на:', process.env.ORDER_EMAIL);
+      } catch (emailError) {
+        console.error('⚠️  Ошибка отправки email:', emailError.message);
+        console.log('✅ Заказ сохранен в файл, но email не отправлен');
+      }
+
+      // Отправляем подтверждение клиенту
+      if (orderData.email) {
+        const clientMailOptions = {
+          from: `"РОСЭК" <${process.env.EMAIL_USER}>`,
+          to: orderData.email,
+          subject: 'Ваш заказ принят - РОСЭК',
+          html: `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+              <h2 style="color: #92400e;">Спасибо за ваш заказ!</h2>
+              <p>Ваш заказ успешно принят и передан в обработку.</p>
+              <p><strong>Номер заказа:</strong> ${filename.replace('.json', '')}</p>
+              <p><strong>Дата:</strong> ${orderData.orderDate}</p>
+              <p><strong>Сумма:</strong> ${formatPrice(orderData.totalPrice)}</p>
+              <p>Мы свяжемся с вами в ближайшее время для уточнения деталей.</p>
+              <hr style="margin: 30px 0; border: none; border-top: 1px solid #ddd;">
+              <p style="color: #666; font-size: 0.9em;">
+                С уважением,<br>
+                Команда РОСЭК<br>
+                Телефон: 8 (800) 55-11-052<br>
+                Email: zakaz@rosek.tech
+              </p>
+            </div>
+          `
+        };
+        
+        try {
+          await transporter.sendMail(clientMailOptions);
+          console.log('✅ Подтверждение отправлено клиенту:', orderData.email);
+        } catch (emailError) {
+          console.log('⚠️  Не удалось отправить подтверждение клиенту');
+        }
+      }
+    } else {
+      console.log('⚠️  Email не настроен. Заказ сохранен в файл:', filename);
     }
 
     // Отправляем успешный ответ
@@ -243,6 +270,113 @@ app.get('/api/health', (req, res) => {
     message: 'Сервер работает',
     timestamp: new Date().toISOString()
   });
+});
+
+// Endpoint для обновления цен из 1С (только артикул + цена)
+app.post('/api/products/update-prices', async (req, res) => {
+  try {
+    const { prices } = req.body; // Массив { article, price }
+    
+    if (!Array.isArray(prices)) {
+      return res.status(400).json({ 
+        success: false, 
+        error: 'Поле prices должно быть массивом' 
+      });
+    }
+
+    console.log(`📦 Получен запрос на обновление цен: ${prices.length} товаров`);
+
+    // Все файлы с товарами
+    const categoryFiles = [
+      'data/products-avr.json',
+      'data/products-control-cabinets.json',
+      'data/products-motor-control-boxes.json',
+      'data/products-reactive-power.json'
+    ];
+
+    let updatedCount = 0;
+    let notFoundArticles = [];
+
+    // Обрабатываем каждый файл категории
+    for (const categoryFile of categoryFiles) {
+      const filePath = path.join(__dirname, '..', categoryFile);
+      
+      try {
+        // Читаем файл
+        const fileContent = await fs.readFile(filePath, 'utf8');
+        const data = JSON.parse(fileContent);
+        
+        // Обновляем цены
+        let fileUpdated = false;
+        
+        data.products.forEach(product => {
+          const priceUpdate = prices.find(p => p.article === product.article);
+          
+          if (priceUpdate) {
+            const oldPrice = product.base_price;
+            product.base_price = priceUpdate.price;
+            
+            if (oldPrice !== priceUpdate.price) {
+              console.log(`  ✅ ${product.article}: ${oldPrice} → ${priceUpdate.price} ₽`);
+              updatedCount++;
+              fileUpdated = true;
+            }
+          }
+        });
+        
+        // Сохраняем файл только если были изменения
+        if (fileUpdated) {
+          await fs.writeFile(filePath, JSON.stringify(data, null, 4), 'utf8');
+          console.log(`  💾 Сохранен файл: ${categoryFile}`);
+        }
+        
+      } catch (error) {
+        console.error(`❌ Ошибка обработки файла ${categoryFile}:`, error.message);
+      }
+    }
+
+    // Проверяем, какие артикулы не найдены
+    prices.forEach(priceItem => {
+      let found = false;
+      
+      for (const categoryFile of categoryFiles) {
+        const filePath = path.join(__dirname, '..', categoryFile);
+        try {
+          const fileContent = require('fs').readFileSync(filePath, 'utf8');
+          const data = JSON.parse(fileContent);
+          if (data.products.some(p => p.article === priceItem.article)) {
+            found = true;
+            break;
+          }
+        } catch (e) {}
+      }
+      
+      if (!found) {
+        notFoundArticles.push(priceItem.article);
+      }
+    });
+
+    console.log(`✅ Обновлено цен: ${updatedCount}`);
+    
+    if (notFoundArticles.length > 0) {
+      console.log(`⚠️  Не найдены артикулы: ${notFoundArticles.join(', ')}`);
+    }
+
+    res.json({
+      success: true,
+      message: 'Цены обновлены',
+      updated: updatedCount,
+      notFound: notFoundArticles
+    });
+
+  } catch (error) {
+    console.error('❌ Ошибка обновления цен:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Ошибка при обновлении цен',
+      error: error.message
+    });
+  }
 });
 
 // Запуск сервера

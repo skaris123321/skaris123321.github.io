@@ -1402,7 +1402,7 @@ document.addEventListener('alpine:init', () => {
             const normalizedValue = this.normalizeSpecValue(translatedKey, value);
             specs[translatedKey] = normalizedValue;
           }
-          return specs;
+          return this.sortSpecs(specs);
         }
         
         // Для ящиков управления электродвигателями Я5000 возвращаем specs из базы данных
@@ -1433,7 +1433,7 @@ document.addEventListener('alpine:init', () => {
           // Добавляем артикул и производителя
           specs['Артикул'] = this.dynamicArticle;
           specs['Производитель'] = this.manufacturerBrand || '';
-          return specs;
+          return this.sortSpecs(specs);
         }
         
         // Если это контактор и у него нет specs или specs пустая, добавляем дефолтные характеристики
@@ -1508,7 +1508,60 @@ document.addEventListener('alpine:init', () => {
           specs['Климатическое исполнение'] = this.climateVersion === 'UXL4' ? 'УХЛ4 - сухие теплые помещения' : 'У2 - уличное с обогревом';
         }
         
-        return specs;
+        return this.sortSpecs(specs);
+      },
+      
+      // Функция для сортировки характеристик в правильном порядке
+      sortSpecs(specs) {
+        // Определяем порядок общих полей
+        const order = [
+          'Артикул',
+          'Производитель',
+          'Номинальный ток',
+          'Номинальный ток щитка, А',
+          'Мощность двигателя',
+          'Мощность, кВАр',
+          'Ток, Iном. А',
+          'Тип коммутации',
+          'Тип управления',
+          'Тип ящика',
+          'Тип регулирования',
+          'Тип',
+          'Количество вводов',
+          'Количество полюсов',
+          'Количество фидеров',
+          'Количество фаз',
+          'Количество насосов',
+          'Номинальное рабочее напряжение',
+          'Подключение кабеля',
+          'Климатическое исполнение',
+          'Габариты',
+          'Габариты (ВхШхГ), мм',
+          'Ширина, мм',
+          'Высота, мм',
+          'Глубина, мм',
+          'Вес, кг',
+          'Степень защиты корпуса',
+          'Степень защиты'
+        ];
+        
+        const sorted = {};
+        
+        // Сначала добавляем поля в заданном порядке
+        order.forEach(key => {
+          if (specs[key] !== undefined) {
+            sorted[key] = specs[key];
+          }
+        });
+        
+        // Затем добавляем остальные поля (которых нет в order)
+        Object.keys(specs).forEach(key => {
+          if (!order.includes(key)) {
+            sorted[key] = specs[key];
+          }
+        });
+        
+        return sorted;
       },
 
       // Генерируем новый артикул по формуле
