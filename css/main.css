@@ -17,6 +17,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -31,6 +32,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 main {
@@ -4380,6 +4382,8 @@ h1.category-title {
   background: linear-gradient(90deg, #d4e8f0 0%, #f0e4e8 100%);
   padding: 3rem 0 1.5rem;
   margin-top: 4rem;
+  width: 100%;
+  position: relative;
 }
 
 .footer-content {
