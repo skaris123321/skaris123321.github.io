@@ -692,20 +692,40 @@
             // Закрываем модальное окно оформления
             this.showCheckoutModal = false;
             
-            // Показываем сообщение с инструкцией по оплате
-            this.showModal({
-              type: 'success',
-              title: 'Заказ оформлен!',
-              message: `Спасибо за заказ на сумму ${this.formatPrice(this.totalPrice)}!\n\nДля оплаты свяжитесь с нами:\nТелефон: 8 (800) 55-11-052\nEmail: zakaz@rosek.ru\n\nМы отправим вам QR-код для оплаты.`,
-              showCancel: false,
-              confirmText: 'OK',
-              onConfirm: () => {
-                // Очищаем корзину
-                this.clearCart();
-                // Перенаправляем на главную
-                window.location.href = '../index.html';
-              }
-            });
+            // Показываем модальное окно с QR-кодом для оплаты
+            const modal = document.createElement('div');
+            modal.className = 'modal-overlay';
+            modal.innerHTML = `
+              <div class="modal-content" style="max-width: 500px;">
+                <div class="modal-header" style="background: #10b981; color: white;">
+                  <h2 style="margin: 0;">Заказ успешно оформлен!</h2>
+                </div>
+                <div class="modal-body" style="text-align: center; padding: 30px;">
+                  <p style="font-size: 1.1em; margin-bottom: 20px;">
+                    Спасибо за заказ на сумму <strong>${this.formatPrice(this.totalPrice)}</strong>
+                  </p>
+                  
+                  <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h3 style="margin-top: 0;">Оплата по QR-коду</h3>
+                    <img src="../images/qr-payment.png" alt="QR-код для оплаты" style="max-width: 250px; margin: 15px auto; display: block; border: 2px solid #ddd; border-radius: 8px;">
+                    <p style="color: #666; font-size: 0.9em;">Отсканируйте QR-код в приложении вашего банка</p>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #f59e0b;">
+                    <p style="margin: 0; color: #92400e;">
+                      <strong>Важно:</strong> После оплаты сохраните чек и отправьте на<br>
+                      <strong>zakaz@rosek.tech</strong> или WhatsApp: <strong>8 (800) 55-11-052</strong>
+                    </p>
+                  </div>
+                  
+                  <button onclick="this.closest('.modal-overlay').remove(); window.cartData.clearCart(); window.location.href='../index.html';" 
+                          class="btn-add-to-cart" style="width: 100%; margin-top: 20px;">
+                    Понятно
+                  </button>
+                </div>
+              </div>
+            `;
+            document.body.appendChild(modal);
           },
 
 

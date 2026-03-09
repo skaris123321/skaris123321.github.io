@@ -11,9 +11,6 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-const paymentsRouter = require('./routes/payments');
-app.use('/api/payments', paymentsRouter);
-
 let transporter = null;
 
 if (process.env.EMAIL_USER && process.env.EMAIL_PASS && process.env.EMAIL_PASS !== 'your-app-password-here') {
@@ -261,9 +258,20 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Endpoint для обновления цен из 1С (только артикул + цена)
+// Endpoint для обновления цен из 1С
 app.post('/api/products/update-prices', async (req, res) => {
   try {
+    // Проверка токена авторизации
+    const authHeader = req.headers['authorization'];
+    const expectedToken = process.env.API_TOKEN || 'default-token-change-me';
+    
+    if (!authHeader || authHeader !== `Bearer ${expectedToken}`) {
+      return res.status(401).json({ 
+        success: false, 
+        error: 'Unauthorized: Invalid or missing API token' 
+      });
+    }
+
     const { prices } = req.body; // Массив { article, price }
     
     if (!Array.isArray(prices)) {
