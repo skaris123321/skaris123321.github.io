@@ -308,6 +308,8 @@ document.addEventListener('alpine:init', () => {
       activeTab: 'specs',
       // Все возможные мощности для реактивной мощности
       allReactivePowers: [5, 10, 15, 25, 35, 40, 50, 75, 80, 90, 100, 125, 140, 150, 160, 175, 180, 200, 225, 250, 275, 300, 325, 350, 375, 400, 425, 450, 475, 500, 525, 550, 575, 600],
+      // Все возможные мощности для шкафов управления
+      allMotorPowers: [0.75, 1.5, 2.2, 3, 3.7, 4, 5.5, 7.5, 11, 15, 18.5, 22, 30, 37, 45, 55, 75, 90, 110, 132, 160, 185, 200, 220, 250],
       // Все возможные ступени для автоматически регулируемых установок
       allSteps: [1, 5, 10, 15, 20, 25, 30, 50],
       availableOptions: {
@@ -598,6 +600,14 @@ document.addEventListener('alpine:init', () => {
           return false;
         }
         return this.availableOptions.reactive_power.includes(parseFloat(power));
+      },
+      
+      // Проверка доступности мощности двигателя для шкафов управления
+      isMotorPowerAvailable(power) {
+        if (!this.availableOptions.motor_power || !Array.isArray(this.availableOptions.motor_power)) {
+          return false;
+        }
+        return this.availableOptions.motor_power.includes(parseFloat(power));
       },
       
       // Проверка доступности ступени
