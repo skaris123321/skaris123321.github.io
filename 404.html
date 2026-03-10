@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница не найдена - РОСЭК</title>
+    <link rel="icon" type="image/svg+xml" href="images/ul--main.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="css/main.css?v=32">
+</head>
+<body class="bg-light text-dark">
+    <header class="header">
+        <div class="container flex-wrap justify-between items-center">
+            <a href="index.html" class="logo">
+                <img src="images/logo-main-1.svg?v=2" alt="РОСЭК" class="logo-image">
+            </a>
+
+            <div class="header-controls">
+                <div class="search-wrapper">
+                    <input type="search" placeholder="Поиск по товарам..." class="search-input" id="searchInput">
+                    <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                </div>
+
+                <div class="relative" x-data="{ open: false }">
+                    <a href="category/catalog.html" class="btn-catalog">
+                        Каталог
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-group">
+                <a href="category/cart.html" class="cart-link" x-data="{ cartCount: 0 }" x-init="
+                    cartCount = window.cart ? window.cart.getTotalItems() : 0;
+                    window.addEventListener('cartChanged', (e) => cartCount = e.detail.totalItems);
+                ">
+                    <div class="cart-icon-wrapper">
+                        <svg class="cart-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 7.5h15l-1.5 9h-12l-1.5-9z M9 7.5V6a3 3 0 016 0v1.5"/>
+                        </svg>
+                        <span x-show="cartCount > 0" x-text="cartCount" class="cart-badge"></span>
+                    </div>
+                    <span class="cart-text">Корзина</span>
+                </a>
+                <a href="tel:+78005511052" class="phone hidden sm:block">8 (800) 55-11-052</a>
+                <a href="https://vk.com/rosek" target="_blank" class="vk-header-link hidden sm:flex" aria-label="ВКонтакте">
+                    <img src="images/vk_icon.png" alt="ВКонтакте" class="vk-header-icon">
+                </a>
+                <a href="mailto:zakaz@rosek.tech" class="email hidden md:block">zakaz@rosek.tech</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="error-page-section">
+            <div class="container">
+                <div class="error-content">
+                    <div class="error-code">404</div>
+                    <h1 class="error-title">Страница не найдена</h1>
+                    <p class="error-description">
+                        К сожалению, запрашиваемая страница не существует или была перемещена.
+                    </p>
+                    <div class="error-actions">
+                        <a href="index.html" class="btn-error-primary">На главную</a>
+                        <a href="category/catalog.html" class="btn-error-secondary">Каталог товаров</a>
+                    </div>
+                    <div class="error-help">
+                        <h3>Что можно сделать:</h3>
+                        <ul>
+                            <li>Проверьте правильность введенного адреса</li>
+                            <li>Воспользуйтесь поиском по сайту</li>
+                            <li>Перейдите в каталог товаров</li>
+                            <li>Свяжитесь с нами по телефону 8 (800) 55-11-052</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo-main">
+                        <a href="index.html">
+                            <img src="images/logo-main-1.svg" alt="РОСЭК" class="footer-logo-image">
+                        </a>
+                    </div>
+                    <div class="footer-contacts">
+                        <a href="mailto:zakaz@rosek.ru" class="footer-email">zakaz@rosek.ru</a>
+                        <a href="mailto:info@rosek.ru" class="footer-email">info@rosek.ru</a>
+                        <a href="#" class="footer-feedback">Обратная связь</a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-phone-social">
+                        <a href="tel:+78005511052" class="footer-phone">8 (800) 55-11-052</a>
+                        <a href="https://vk.com/rosek" target="_blank" class="footer-vk-link" aria-label="ВКонтакте">
+                            <img src="images/vk_icon.png?v=2" alt="ВКонтакте" class="footer-vk-icon">
+                        </a>
+                    </div>
+                    <div class="footer-logos">
+                        <img src="images/1.png" alt="Партнер 1" class="footer-logo">
+                        <img src="images/2.png" alt="Партнер 2" class="footer-logo">
+                        <img src="images/4.png" alt="Партнер 4" class="footer-logo">
+                        <img src="images/5.png" alt="Партнер 5" class="footer-logo">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">Политика конфиденциальности</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .error-page-section {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 0;
+        }
+
+        .error-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            color: #e74c3c;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .error-title {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .error-description {
+            font-size: 18px;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .error-actions {
+            margin-bottom: 40px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-error-primary,
+        .btn-error-secondary {
+            display: inline-block;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        .btn-error-primary {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .btn-error-primary:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .btn-error-secondary {
+            background-color: #95a5a6;
+            color: white;
+        }
+
+        .btn-error-secondary:hover {
+            background-color: #7f8c8d;
+            transform: translateY(-2px);
+        }
+
+        .error-help {
+            text-align: left;
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        .error-help h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .error-help ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .error-help li {
+            padding: 8px 0;
+            color: #5a6c7d;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .error-help li:before {
+            content: "→";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 80px;
+            }
+            
+            .error-title {
+                font-size: 24px;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+            }
+
+            .btn-error-primary,
+            .btn-error-secondary {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

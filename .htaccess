@@ -1,6 +1,11 @@
 # Включаем mod_rewrite
 RewriteEngine On
 
+# Настройка страниц ошибок
+ErrorDocument 404 /404.html
+ErrorDocument 500 /404.html
+ErrorDocument 503 /404.html
+
 # Разрешаем доступ к API
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
