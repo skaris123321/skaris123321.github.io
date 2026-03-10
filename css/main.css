@@ -4910,3 +4910,286 @@ h1.category-title {
     transform: rotate(360deg);
   }
 }
+
+
+/* ===== УНИФИЦИРОВАННЫЕ УВЕДОМЛЕНИЯ И МОДАЛЬНЫЕ ОКНА ===== */
+
+/* Фон для модальных окон */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* Основной стиль модального окна */
+.modal-dialog {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Иконка в модальном окне */
+.modal-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 32px;
+}
+
+.modal-icon.success {
+  background-color: #e8f5e9;
+  color: #4caf50;
+}
+
+.modal-icon.error {
+  background-color: #ffebee;
+  color: #f44336;
+}
+
+.modal-icon.warning {
+  background-color: #fff3e0;
+  color: #ff9800;
+}
+
+.modal-icon.info {
+  background-color: #e3f2fd;
+  color: #2196f3;
+}
+
+/* Заголовок модального окна */
+.modal-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 12px 0;
+}
+
+/* Описание в модальном окне */
+.modal-description {
+  font-size: 16px;
+  color: #5a6c7d;
+  margin: 0 0 24px 0;
+  line-height: 1.6;
+}
+
+/* Дополнительная информация */
+.modal-info {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin: 12px 0 0 0;
+  padding-top: 12px;
+  border-top: 1px solid #ecf0f1;
+}
+
+/* Кнопки в модальном окне */
+.modal-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.modal-btn {
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.modal-btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.modal-btn-primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.modal-btn-secondary {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.modal-btn-secondary:hover {
+  background-color: #7f8c8d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(149, 165, 166, 0.3);
+}
+
+.modal-btn-danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.modal-btn-danger:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.modal-btn-success {
+  background-color: #4caf50;
+  color: white;
+}
+
+.modal-btn-success:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+/* Тосты (всплывающие уведомления) */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+  max-width: 400px;
+}
+
+.toast {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: slideInRight 0.3s ease-out;
+  border-left: 4px solid;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.toast.success {
+  border-left-color: #4caf50;
+}
+
+.toast.success .toast-icon {
+  color: #4caf50;
+}
+
+.toast.error {
+  border-left-color: #f44336;
+}
+
+.toast.error .toast-icon {
+  color: #f44336;
+}
+
+.toast.warning {
+  border-left-color: #ff9800;
+}
+
+.toast.warning .toast-icon {
+  color: #ff9800;
+}
+
+.toast.info {
+  border-left-color: #2196f3;
+}
+
+.toast.info .toast-icon {
+  color: #2196f3;
+}
+
+.toast-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.toast-message {
+  font-size: 14px;
+  color: #2d3748;
+  flex: 1;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: #95a5a6;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.toast-close:hover {
+  color: #7f8c8d;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .modal-dialog {
+    padding: 30px 20px;
+    max-width: 90%;
+  }
+
+  .modal-title {
+    font-size: 20px;
+  }
+
+  .modal-description {
+    font-size: 14px;
+  }
+
+  .modal-btn {
+    min-width: 100px;
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+
+  .toast-container {
+    left: 20px;
+    right: 20px;
+    max-width: none;
+  }
+
+  .toast {
+    padding: 12px 16px;
+  }
+}
