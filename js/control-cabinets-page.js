@@ -5,10 +5,8 @@ function controlCabinetsCatalog() {
     loading: true,
     selectedControlType: null, // 'soft_start', 'frequency_converter', 'direct_start'
     selectedBrand: null,
-    selectedMotorPower: null,
     sortBy: 'price_asc',
     uniqueBrands: [],
-    uniqueMotorPowers: [],
 
     async init() {
       await this.loadProducts();
@@ -22,7 +20,6 @@ function controlCabinetsCatalog() {
       // Читаем параметры из URL
       const brand = urlParams.get('brand');
       const controlType = urlParams.get('controlType');
-      const motorPower = urlParams.get('motorPower');
       
       // Применяем фильтры
       if (brand) {
@@ -31,10 +28,6 @@ function controlCabinetsCatalog() {
       
       if (controlType) {
         this.selectedControlType = controlType;
-      }
-      
-      if (motorPower) {
-        this.selectedMotorPower = motorPower;
       }
     },
 
@@ -69,10 +62,6 @@ function controlCabinetsCatalog() {
         this.uniqueBrands = [...new Set(this.products.map(p => p.brand))].sort();
         console.log('Уникальные бренды:', this.uniqueBrands);
         
-        // Получаем уникальные мощности
-        this.uniqueMotorPowers = [...new Set(this.products.map(p => p.motor_power))].sort((a, b) => a - b);
-        console.log('Уникальные мощности:', this.uniqueMotorPowers);
-        
         this.loading = false;
       } catch (error) {
         console.error('Error loading products:', error);
@@ -84,7 +73,6 @@ function controlCabinetsCatalog() {
       console.log('Фильтруем по типу управления:', controlType);
       this.selectedControlType = controlType;
       this.selectedBrand = null; // Сбрасываем фильтр по бренду
-      this.selectedMotorPower = null; // Сбрасываем фильтр по мощности
       this.applyFilters();
     },
 
@@ -97,21 +85,11 @@ function controlCabinetsCatalog() {
       this.applyFilters();
     },
 
-    filterByMotorPower(power) {
-      if (this.selectedMotorPower === power) {
-        this.selectedMotorPower = null; // Убираем фильтр если кликнули на уже выбранный
-      } else {
-        this.selectedMotorPower = power;
-      }
-      this.applyFilters();
-    },
-
     applyFilters() {
       let filtered = [...this.products];
       console.log('Применяем фильтры. Всего товаров:', filtered.length);
       console.log('Выбранный тип управления:', this.selectedControlType);
       console.log('Выбранный бренд:', this.selectedBrand);
-      console.log('Выбранная мощность:', this.selectedMotorPower);
 
       // Фильтр по типу управления
       if (this.selectedControlType) {
@@ -127,21 +105,11 @@ function controlCabinetsCatalog() {
         console.log('После фильтра по бренду:', filtered.length);
       }
 
-      // Фильтр по мощности
-      if (this.selectedMotorPower) {
-        filtered = filtered.filter(product => product.motor_power === this.selectedMotorPower);
-        console.log('После фильтра по мощности:', filtered.length);
-      }
-
       // Сортировка
       if (this.sortBy === 'price_asc') {
         filtered.sort((a, b) => (a.base_price || 0) - (b.base_price || 0));
       } else if (this.sortBy === 'price_desc') {
         filtered.sort((a, b) => (b.base_price || 0) - (a.base_price || 0));
-      } else if (this.sortBy === 'power_asc') {
-        filtered.sort((a, b) => (a.motor_power || 0) - (b.motor_power || 0));
-      } else if (this.sortBy === 'power_desc') {
-        filtered.sort((a, b) => (b.motor_power || 0) - (a.motor_power || 0));
       }
 
       this.filteredProducts = filtered;

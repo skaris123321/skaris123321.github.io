@@ -108,21 +108,6 @@
   <section class="sort-section">
     <div class="container sort-controls">
       <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start; width: 100%;">
-        <!-- Мощность двигателя -->
-        <div style="min-width: 300px;">
-          <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Мощность двигателя</span>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <template x-for="power in uniqueMotorPowers" :key="power">
-              <button 
-                @click="filterByMotorPower(power)"
-                :class="{ active: selectedMotorPower === power }"
-                class="brand-filter-btn"
-                x-text="power + ' кВт'"
-              ></button>
-            </template>
-          </div>
-        </div>
-        
         <!-- Бренды -->
         <div style="min-width: 300px;">
           <span style="font-weight: 500; color: #6b7280; font-size: 0.875rem; display: block; margin-bottom: 0.5rem;">Бренды</span>
