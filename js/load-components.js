@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   const footerPlaceholder = document.getElementById('footer-placeholder');
   if (footerPlaceholder) {
     try {
-      const response = await fetch('includes/footer.html');
+      const response = await fetch('includes/footer.html?v=' + Date.now());
       const html = await response.text();
       footerPlaceholder.outerHTML = html;
     } catch (error) {
