@@ -4629,11 +4629,12 @@ h1.category-title {
   width: 28px;
   height: 28px;
   display: block;
+  filter: grayscale(100%);
   transition: filter 0.2s;
 }
 
 .footer-vk-link:hover .footer-vk-icon {
-  filter: brightness(0) saturate(100%) invert(45%) sepia(72%) saturate(1000%) hue-rotate(346deg);
+  filter: grayscale(0%) brightness(0.8) saturate(1.2);
 }
 
 .footer-logos {
