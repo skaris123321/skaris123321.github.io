@@ -4596,6 +4596,15 @@ h1.category-title {
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-phone-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 
 .footer-phone:hover {
