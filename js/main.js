@@ -1765,7 +1765,9 @@ document.addEventListener('alpine:init', () => {
             const newArticle = `АВР-${this.inputsCount}-${this.nominalCurrent}-М-РОСЭК`;
             
             return {
+              id: newArticle,
               article: newArticle,
+              name: this.productTitle || 'Товар',
               manufacturerBrand: this.manufacturerBrand,
               commutationType: this.commutationType,
               nominalCurrent: this.nominalCurrent,

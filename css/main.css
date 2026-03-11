@@ -2605,27 +2605,28 @@ h1.category-title {
 }
 /* Стили для модального окна подтверждения */
 .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 99999 !important;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
               visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1),
               backdrop-filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1rem;
 }
 
 .modal-overlay.show {
-  opacity: 1;
-  visibility: visible;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .modal-content {
@@ -2634,10 +2635,13 @@ h1.category-title {
   padding: 2rem;
   max-width: 400px;
   width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   transform: scale(0.9) translateY(20px);
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
               box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
 .modal-overlay.show .modal-content {
