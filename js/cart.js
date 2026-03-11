@@ -54,10 +54,10 @@ class Cart {
     this.saveToStorage();
     this.notifyChange();
     
-    // Показываем уведомление
-    if (typeof Notification !== 'undefined') {
-      Notification.toastSuccess(`${product.name} добавлен в корзину!`);
-    }
+    // Показываем уведомление - ОТКЛЮЧЕНО, используется модальное окно
+    // if (typeof Notification !== 'undefined') {
+    //   Notification.toastSuccess(`${product.name} добавлен в корзину!`);
+    // }
   }
 
   // Обновляем количество товара
