@@ -2534,3 +2534,84 @@ document.addEventListener('alpine:init', () => {
     };
   });
 });
+
+// Parallax эффект при скролле
+document.addEventListener('DOMContentLoaded', () => {
+  const parallaxElements = document.querySelectorAll('[data-parallax]');
+  
+  if (parallaxElements.length === 0) return;
+  
+  const handleParallax = () => {
+    const scrollY = window.scrollY;
+    
+    parallaxElements.forEach(element => {
+      const speed = parseFloat(element.getAttribute('data-parallax')) || 0.5;
+      const offset = scrollY * speed;
+      element.style.transform = `translateY(${offset}px)`;
+    });
+  };
+  
+  // Используем requestAnimationFrame для плавной анимации
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(handleParallax);
+      ticking = true;
+      setTimeout(() => { ticking = false; }, 16);
+    }
+  });
+});
+
+// Плавное появление элементов при скролле
+document.addEventListener('DOMContentLoaded', () => {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  
+  // Добавляем класс для элементов, которые должны появляться при скролле
+  document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+});
+
+// VK icon hover color change
+document.addEventListener('DOMContentLoaded', () => {
+  const vkLinks = document.querySelectorAll('.footer-vk-link');
+  
+  vkLinks.forEach(link => {
+    const icon = link.querySelector('.footer-vk-icon');
+    if (!icon) return;
+    
+    // Store original color
+    const originalColor = '#707F9A';
+    const hoverColor = '#F16664';
+    
+    link.addEventListener('mouseenter', () => {
+      const paths = icon.querySelectorAll('path');
+      paths.forEach(path => {
+        path.setAttribute('fill', hoverColor);
+      });
+    });
+    
+    link.addEventListener('mouseleave', () => {
+      const paths = icon.querySelectorAll('path');
+      paths.forEach(path => {
+        path.setAttribute('fill', originalColor);
+      });
+    });
+  });
+});
