@@ -112,6 +112,7 @@ button {
   height: 32px !important;
   width: auto !important;
   display: block !important;
+  padding: 4px 8px !important;
 }
 
 a.logo {
@@ -382,6 +383,7 @@ a.logo {
 @media (max-width: 480px) {
   .logo-image {
     height: 28px !important;
+    padding: 3px 6px !important;
   }
   
   .header .container {
@@ -4525,6 +4527,7 @@ h1.category-title {
 .footer-logo-image {
   height: 40px;
   width: auto;
+  padding: 6px 10px;
 }
 
 .footer-contacts {
@@ -4650,6 +4653,7 @@ h1.category-title {
 .footer-logo-image {
   height: 30px;
   width: auto;
+  padding: 5px 8px;
 }
 
 .footer-copyright {
