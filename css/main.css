@@ -4637,6 +4637,10 @@ h1.category-title {
   filter: grayscale(0%) brightness(0.8) saturate(1.2);
 }
 
+.footer-vk-link:hover .footer-vk-icon {
+  filter: grayscale(0%) brightness(0.8) saturate(1.2);
+}
+
 .footer-logos {
   display: flex;
   align-items: center;
