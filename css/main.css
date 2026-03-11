@@ -4632,13 +4632,11 @@ h1.category-title {
   width: 28px;
   height: 28px;
   display: block;
-  filter: grayscale(100%);
-  transition: filter 0.2s;
-  color: #9CA3AF;
+  transition: all 0.2s;
 }
 
 .footer-vk-link:hover .footer-vk-icon {
-  filter: invert(20%) sepia(90%) saturate(2000%) hue-rotate(345deg) brightness(1.1);
+  /* SVG имеет встроенный стиль для hover */
 }
 
 .footer-logos {
