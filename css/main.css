@@ -4605,6 +4605,8 @@ h1.category-title {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
+  margin-right: 0.5rem;
+  display: inline-block;
 }
 
 .footer-phone:hover {
@@ -4634,7 +4636,7 @@ h1.category-title {
 }
 
 .footer-vk-link:hover .footer-vk-icon {
-  filter: grayscale(0%) brightness(0.8) saturate(1.2);
+  filter: invert(24%) sepia(72%) saturate(1000%) hue-rotate(346deg);
 }
 
 .footer-logos {
