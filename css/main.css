@@ -2650,19 +2650,26 @@ h1.category-title {
 
 .modal-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .modal-icon {
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+.modal-icon svg {
+  width: 2rem;
+  height: 2rem;
 }
 
 .modal-icon-success {
@@ -2681,7 +2688,7 @@ h1.category-title {
 }
 
 .modal-title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #111827;
   margin: 0;
@@ -2691,22 +2698,24 @@ h1.category-title {
   color: #6b7280;
   margin-bottom: 2rem;
   line-height: 1.5;
+  text-align: center;
 }
 
 .modal-actions {
   display: flex;
   gap: 1rem;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .modal-btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
+  padding: 0.875rem 2rem;
+  border-radius: 0.75rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
-  font-size: 0.875rem;
+  font-size: 1rem;
+  min-width: 120px;
 }
 
 .modal-btn-cancel {
@@ -2717,6 +2726,8 @@ h1.category-title {
 
 .modal-btn-cancel:hover {
   background: #f3f4f6;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .modal-btn-confirm {
@@ -2726,9 +2737,11 @@ h1.category-title {
 
 .modal-btn-confirm:hover {
   background: var(--red-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(241, 102, 100, 0.3);
 }
 
-/* Анимация для модального окна */
+/* Анимация для модального окна *//* Анимация для модального окна */
 @keyframes modalFadeIn {
   from {
     opacity: 0;
