@@ -1845,7 +1845,7 @@ document.addEventListener('alpine:init', () => {
 
         // Создаем модальное окно
         const modal = document.createElement('div');
-        modal.className = 'universal-modal modal-overlay show';
+        modal.className = 'universal-modal show';
         
         const iconSvg = type === 'success' ? 
           '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>' :
