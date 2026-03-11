@@ -2588,7 +2588,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// VK icon hover color change
+
+
+// VK icon hover color change - for pages where footer is embedded in HTML
 document.addEventListener('DOMContentLoaded', () => {
   const vkLinks = document.querySelectorAll('.footer-vk-link');
   
