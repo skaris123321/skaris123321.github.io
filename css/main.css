@@ -330,6 +330,13 @@ a.logo {
   width: 24px;
   height: 24px;
   display: block;
+  filter: grayscale(100%);
+  transition: filter 0.2s;
+}
+
+.vk-header-link:hover .vk-header-icon {
+  filter: grayscale(0%) brightness(0.8) saturate(1.2);
+  color: #F16664;
 }
 
 .btn-login {
@@ -4613,6 +4620,12 @@ h1.category-title {
   width: 28px;
   height: 28px;
   display: block;
+  filter: grayscale(100%);
+  transition: filter 0.2s;
+}
+
+.footer-vk-link:hover .footer-vk-icon {
+  filter: grayscale(0%) brightness(0.8) saturate(1.2);
 }
 
 .footer-logos {
