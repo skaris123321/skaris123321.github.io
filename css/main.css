@@ -4742,6 +4742,17 @@ h1.category-title {
   font-weight: 400;
 }
 
+.footer-privacy-link {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-privacy-link:hover {
+  color: #F16664;
+  text-decoration: underline;
+}
+
 @media (max-width: 1024px) {
   .footer-content {
     flex-direction: column;
