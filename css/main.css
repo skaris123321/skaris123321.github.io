@@ -4382,7 +4382,7 @@ h1.category-title {
 
 /* Футер */
 .footer {
-  background: linear-gradient(90deg, #d4e8f0 0%, #f0e4e8 100%);
+  background: #f8f9fa;
   padding: 3rem 0 1.5rem;
   margin-top: 2rem;
   width: 100%;
