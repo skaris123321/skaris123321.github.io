@@ -4280,13 +4280,29 @@ h1.category-title {
 .projects-slide {
   flex: 0 0 100%;
   height: 600px;
+  position: relative;
+  overflow: hidden;
+  background: #111;
 }
 
-.projects-slide img {
+/* Размытый фон - та же картинка растянута */
+.projects-slide .slide-bg {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  filter: blur(20px) brightness(0.6) saturate(1.2);
+  transform: scale(1.1);
+}
+
+/* Основная картинка по центру, не обрезается */
+.projects-slide .slide-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* Стрелки */
@@ -4350,13 +4366,13 @@ h1.category-title {
 }
 
 @media (max-width: 768px) {
-  .projects-slide { height: 320px; }
+  .projects-slide { height: 360px; }
   .projects-viewport { margin: 0 3rem; }
   .projects-arrow { width: 2.75rem; height: 2.75rem; }
 }
 
 @media (max-width: 480px) {
-  .projects-slide { height: 240px; }
+  .projects-slide { height: 260px; }
   .projects-viewport { margin: 0 2.5rem; }
 }
 
