@@ -4264,10 +4264,10 @@ h1.category-title {
   margin-top: 2.5rem;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 0 1rem;
-  height: 820px;
+  min-height: 400px;
 }
 
 .trio-stage {
@@ -4294,9 +4294,7 @@ h1.category-title {
 
 .trio-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
   display: block;
   pointer-events: none;
 }
@@ -4336,11 +4334,11 @@ h1.category-title {
 .trio-hidden { pointer-events: none; }
 
 @media (max-width: 900px) {
-  .trio-wrap { height: 580px; }
+  .trio-wrap { min-height: 300px; }
 }
 
 @media (max-width: 600px) {
-  .trio-wrap { height: 520px; }
+  .trio-wrap { min-height: 200px; }
 }
 
 
