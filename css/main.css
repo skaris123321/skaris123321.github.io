@@ -4264,6 +4264,10 @@ h1.category-title {
 .strip-wrap {
   margin-top: 2.5rem;
   position: relative;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
 }
 
 .strip-viewport {
@@ -4285,7 +4289,7 @@ h1.category-title {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-  height: 520px;
+  height: 360px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
