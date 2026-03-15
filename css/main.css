@@ -4255,155 +4255,70 @@ h1.category-title {
 }
 
 
-/* Секция реализованных проектов */
+/* Секция реализованных проектов - слайдер */
 .projects-section {
   padding: 4rem 0;
   background: white;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-@media (min-width: 640px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.project-card {
-  background: white;
-  border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  border: 1px solid #e5e7eb;
 }
 
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.project-image {
+.projects-slider-wrap {
   position: relative;
-  width: 100%;
-  height: 250px;
+  margin-top: 2.5rem;
+  overflow: hidden;
+  /* Плавное затухание по краям */
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.projects-slider {
   overflow: hidden;
 }
 
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover .project-image img {
-  transform: scale(1.05);
-}
-
-.project-category {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: rgba(255, 255, 255, 0.95);
-  color: #6b7280;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.project-title {
-  padding: 1.5rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #111827;
-  margin: 0;
-  text-align: center;
-  line-height: 1.4;
-}
-
-.project-card-all {
-  background: white;
-  border: 2px dashed #e5e7eb;
+.projects-track {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 300px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.project-card-all:hover {
-  border-color: #F16664;
-  background: #fef2f2;
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(241, 102, 100, 0.1);
-}
-
-.project-all-content {
-  text-align: center;
-  color: #6b7280;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 1rem;
+  animation: projectsScroll 60s linear infinite;
+  width: max-content;
 }
 
-.project-all-icon {
-  width: 4rem;
-  height: 4rem;
-  color: #F16664;
-  margin-bottom: 0.5rem;
+.projects-track:hover {
+  animation-play-state: paused;
 }
 
-.project-card-all:hover .project-all-icon {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
+@keyframes projectsScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-.project-all-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0;
-  color: #111827;
+.projects-slide {
+  flex-shrink: 0;
+  height: 280px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-all-subtitle {
-  font-size: 0.875rem;
-  color: #6b7280;
-  margin: 0;
+.projects-slide:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
-.project-card-all:hover .project-all-title {
-  color: #F16664;
+.projects-slide img {
+  height: 100%;
+  width: auto;
+  max-width: none;
+  object-fit: cover;
+  display: block;
 }
 
 @media (max-width: 640px) {
-  .project-image {
+  .projects-slide {
     height: 200px;
   }
-  
-  .project-title {
-    font-size: 1rem;
-    padding: 1.25rem;
-  }
 }
+
 
 
 /* Компактный список преимуществ */
