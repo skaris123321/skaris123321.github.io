@@ -218,8 +218,11 @@
       });
 
       function updateDots() {
-        dotsContainer.querySelectorAll('.trio-dot').forEach((dot, i) => {
+        const dots = dotsContainer.querySelectorAll('.trio-dot');
+        dots.forEach((dot, i) => {
           dot.classList.toggle('active', i === current);
+          const dist = Math.min(Math.abs(i - current), total - Math.abs(i - current));
+          dot.classList.toggle('hidden', dist > 2);
         });
       }
 
@@ -271,6 +274,7 @@
       });
 
       render();
+      updateDots();
     })();
     </script>
 
