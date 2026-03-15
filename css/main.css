@@ -4267,7 +4267,7 @@ h1.category-title {
   align-items: center;
   justify-content: center;
   padding: 0 1rem;
-  height: 760px;
+  height: 820px;
 }
 
 .trio-stage {
@@ -4337,11 +4337,11 @@ h1.category-title {
 .trio-hidden { pointer-events: none; }
 
 @media (max-width: 900px) {
-  .trio-wrap { height: 500px; }
+  .trio-wrap { height: 580px; }
 }
 
 @media (max-width: 600px) {
-  .trio-wrap { height: 360px; }
+  .trio-wrap { height: 520px; }
 }
 
 
