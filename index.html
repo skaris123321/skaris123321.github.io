@@ -142,20 +142,18 @@
       let current = 0;
       let isAnimating = false;
 
-      // Точки (показываем только 7 штук для компактности)
-      const dotsCount = Math.min(total, 7);
-      for (let i = 0; i < dotsCount; i++) {
+      // Точки — одна на каждое фото
+      for (let i = 0; i < total; i++) {
         const d = document.createElement('button');
         d.className = 'carousel-dot';
-        d.addEventListener('click', () => goTo(Math.round(i * (total - 1) / (dotsCount - 1))));
+        d.addEventListener('click', () => goTo(i));
         dotsWrap.appendChild(d);
       }
 
       function updateDots() {
-        const dots = dotsWrap.querySelectorAll('.carousel-dot');
-        const ratio = current / (total - 1);
-        const activeDot = Math.round(ratio * (dotsCount - 1));
-        dots.forEach((d, i) => d.classList.toggle('active', i === activeDot));
+        dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === current);
+        });
       }
 
       function render() {
