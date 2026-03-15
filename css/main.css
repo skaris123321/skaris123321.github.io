@@ -4255,65 +4255,81 @@ h1.category-title {
 }
 
 
-/* Секция реализованных проектов - лента */
+/* Секция реализованных проектов - trio */
 .projects-section {
   padding: 4rem 0 3rem;
   background: white;
 }
 
-.strip-wrap {
+.trio-wrap {
   margin-top: 2.5rem;
   position: relative;
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1rem;
-}
-
-.strip-viewport {
-  overflow: hidden;
-  width: 100%;
-}
-
-.strip-track {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
-  padding: 0 1rem 1rem;
-  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
+  padding: 0 4rem;
+  height: 420px;
 }
 
-.strip-item {
-  flex-shrink: 0;
+.trio-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trio-item {
+  position: absolute;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-  height: 360px;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-.strip-item:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-  transform: translateY(-4px);
-}
-
-.strip-item img {
+.trio-item img {
+  width: 100%;
   height: 100%;
-  width: auto;
+  object-fit: cover;
   display: block;
   pointer-events: none;
-  user-select: none;
+}
+
+/* Центральное — большое */
+.trio-center {
+  width: 520px;
+  height: 390px;
+  z-index: 10;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  opacity: 1;
+}
+
+/* Боковые — меньше и затемнены */
+.trio-side {
+  width: 380px;
+  height: 310px;
+  z-index: 5;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  opacity: 0.7;
+  filter: brightness(0.85);
+}
+
+.trio-hidden {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Кнопки */
-.strip-btn {
+.trio-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-60%);
-  z-index: 10;
-  width: 3.25rem;
-  height: 3.25rem;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   background: white;
   border: none;
@@ -4324,27 +4340,31 @@ h1.category-title {
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   color: #374151;
+  flex-shrink: 0;
 }
 
-.strip-btn svg { width: 1.4rem; height: 1.4rem; }
+.trio-btn svg { width: 1.3rem; height: 1.3rem; }
 
-.strip-btn:hover {
+.trio-btn:hover {
   background: var(--red-main);
   color: white;
   box-shadow: 0 6px 20px rgba(241,102,100,0.4);
-  transform: translateY(-60%) scale(1.1);
+  transform: translateY(-50%) scale(1.1);
 }
 
-.strip-btn-left  { left: 0.75rem; }
-.strip-btn-right { right: 0.75rem; }
+.trio-btn-left  { left: 0.5rem; }
+.trio-btn-right { right: 0.5rem; }
 
-@media (max-width: 768px) {
-  .strip-item { height: 340px; }
-  .strip-btn { width: 2.5rem; height: 2.5rem; }
+@media (max-width: 900px) {
+  .trio-center { width: 360px; height: 270px; }
+  .trio-side   { width: 260px; height: 210px; }
+  .trio-wrap   { height: 300px; }
 }
 
-@media (max-width: 480px) {
-  .strip-item { height: 240px; }
+@media (max-width: 600px) {
+  .trio-center { width: 260px; height: 200px; }
+  .trio-side   { width: 180px; height: 150px; }
+  .trio-wrap   { height: 220px; padding: 0 2.5rem; }
 }
 
 
