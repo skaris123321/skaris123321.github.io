@@ -4329,8 +4329,6 @@ h1.category-title {
   display: none;
 }
 
-.trio-center { }
-.trio-side   { }
 .trio-hidden { pointer-events: none; }
 
 @media (max-width: 900px) {
