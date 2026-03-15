@@ -199,12 +199,29 @@
         </div>
       </div>
     </section>
+    <div class="trio-dots" id="trioDots"></div>
 
     <script>
     (function() {
       const items = Array.from(document.querySelectorAll('.trio-item'));
       const total = items.length;
       let current = 0;
+
+      // Создаём точки
+      const dotsContainer = document.getElementById('trioDots');
+      items.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'trio-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Фото ' + (i + 1));
+        dot.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(dot);
+      });
+
+      function updateDots() {
+        dotsContainer.querySelectorAll('.trio-dot').forEach((dot, i) => {
+          dot.classList.toggle('active', i === current);
+        });
+      }
 
       function render() {
         const w = window.innerWidth;
@@ -231,6 +248,7 @@
       function goTo(index) {
         current = (index + total) % total;
         render();
+        updateDots();
       }
 
       items.forEach((item, i) => {
