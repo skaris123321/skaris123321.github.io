@@ -229,9 +229,9 @@
       function render() {
         const w = window.innerWidth;
         const cW = w < 600 ? 300 : w < 900 ? 440 : 680;
-        const cH = w < 600 ? 260 : w < 900 ? 390 : 620;
+        const cH = w < 600 ? 300 : w < 900 ? 440 : 700;
         const sW = w < 600 ? 210 : w < 900 ? 310 : 490;
-        const sH = w < 600 ? 200 : w < 900 ? 300 : 500;
+        const sH = w < 600 ? 230 : w < 900 ? 350 : 580;
         const sX = w < 600 ? 230 : w < 900 ? 340 : 520;
 
         items.forEach((item, i) => {
@@ -239,9 +239,9 @@
           if (offset === 0) {
             item.style.cssText = `width:${cW}px;height:${cH}px;z-index:10;opacity:1;filter:none;transform:translateX(0);box-shadow:0 12px 40px rgba(0,0,0,0.2);border-radius:1rem;overflow:hidden;position:absolute;cursor:pointer;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);`;
           } else if (offset === 1) {
-            item.style.cssText = `width:${sW}px;height:${sH}px;z-index:5;opacity:0.75;filter:brightness(0.85);transform:translateX(${sX}px);box-shadow:0 6px 20px rgba(0,0,0,0.12);border-radius:1rem;overflow:hidden;position:absolute;cursor:pointer;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);`;
+            item.style.cssText = `width:${sW}px;height:${sH}px;z-index:5;opacity:0.55;filter:brightness(0.6) blur(1px);transform:translateX(${sX}px);box-shadow:0 6px 20px rgba(0,0,0,0.12);border-radius:1rem;overflow:hidden;position:absolute;cursor:pointer;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);`;
           } else if (offset === total - 1) {
-            item.style.cssText = `width:${sW}px;height:${sH}px;z-index:5;opacity:0.75;filter:brightness(0.85);transform:translateX(-${sX}px);box-shadow:0 6px 20px rgba(0,0,0,0.12);border-radius:1rem;overflow:hidden;position:absolute;cursor:pointer;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);`;
+            item.style.cssText = `width:${sW}px;height:${sH}px;z-index:5;opacity:0.55;filter:brightness(0.6) blur(1px);transform:translateX(-${sX}px);box-shadow:0 6px 20px rgba(0,0,0,0.12);border-radius:1rem;overflow:hidden;position:absolute;cursor:pointer;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);`;
           } else {
             item.style.cssText = `width:${sW}px;height:${sH}px;opacity:0;pointer-events:none;z-index:1;transform:translateX(0);border-radius:1rem;overflow:hidden;position:absolute;transition:all 0.5s cubic-bezier(0.4,0,0.2,1);`;
           }
