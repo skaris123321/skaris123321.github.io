@@ -4256,7 +4256,7 @@ h1.category-title {
 
 /* Секция реализованных проектов - trio */
 .projects-section {
-  padding: 4rem 0 3rem;
+  padding: 4rem 0 0;
   background: white;
 }
 
@@ -4384,7 +4384,7 @@ h1.category-title {
 .footer {
   background: linear-gradient(90deg, #d4e8f0 0%, #f0e4e8 100%);
   padding: 3rem 0 1.5rem;
-  margin-top: 2rem;
+  margin-top: 0;
   width: 100%;
   position: relative;
 }
