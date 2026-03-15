@@ -4262,14 +4262,27 @@ h1.category-title {
 }
 
 .projects-slider-wrap {
-  position: relative;
   margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.projects-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  justify-content: center;
 }
 
 .projects-viewport {
   overflow: hidden;
   border-radius: 1rem;
-  margin: 0 4rem;
+  max-width: 700px;
+  width: 100%;
+  flex: 1;
 }
 
 .projects-track {
@@ -4279,7 +4292,7 @@ h1.category-title {
 
 .projects-slide {
   flex: 0 0 100%;
-  height: 600px;
+  height: 750px;
   position: relative;
   overflow: hidden;
   background: #111;
@@ -4307,12 +4320,12 @@ h1.category-title {
 
 /* Стрелки */
 .projects-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-60%);
+  position: static;
+  transform: none;
   z-index: 10;
   width: 3.5rem;
   height: 3.5rem;
+  flex-shrink: 0;
   border-radius: 50%;
   background: white;
   border: none;
@@ -4334,18 +4347,17 @@ h1.category-title {
   background: var(--red-main);
   color: white;
   box-shadow: 0 6px 20px rgba(241, 102, 100, 0.4);
-  transform: translateY(-60%) scale(1.1);
+  transform: scale(1.1);
 }
 
-.projects-arrow-left { left: 0.5rem; }
-.projects-arrow-right { right: 0.5rem; }
+.projects-arrow-left { }
+.projects-arrow-right { }
 
 /* Точки */
 .projects-dots {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  margin-top: 1.5rem;
 }
 
 .projects-dot {
@@ -4366,13 +4378,13 @@ h1.category-title {
 }
 
 @media (max-width: 768px) {
-  .projects-slide { height: 360px; }
-  .projects-viewport { margin: 0 3rem; }
+  .projects-slide { height: 480px; }
+  .projects-viewport { margin: 0 3rem; max-width: none; }
   .projects-arrow { width: 2.75rem; height: 2.75rem; }
 }
 
 @media (max-width: 480px) {
-  .projects-slide { height: 260px; }
+  .projects-slide { height: 340px; }
   .projects-viewport { margin: 0 2.5rem; }
 }
 
