@@ -215,7 +215,12 @@
         <h2 class="section-title">Наши реализованные проекты</h2>
       </div>
       <div class="projects-slider-wrap">
-        <div class="projects-slider" id="projectsSlider">
+        <button class="projects-arrow projects-arrow-left" id="projectsPrev" aria-label="Назад">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <div class="projects-viewport" id="projectsViewport">
           <div class="projects-track" id="projectsTrack">
             <div class="projects-slide"><img src="projects/IMG_0216.JPG" alt="Проект"></div>
             <div class="projects-slide"><img src="projects/IMG_0575.JPG" alt="Проект"></div>
@@ -244,20 +249,59 @@
             <div class="projects-slide"><img src="projects/attachment (35).jpeg" alt="Проект"></div>
             <div class="projects-slide"><img src="projects/attachment (37).jpeg" alt="Проект"></div>
             <div class="projects-slide"><img src="projects/attachment (44).jpeg" alt="Проект"></div>
-            <!-- Дублируем для бесконечной прокрутки -->
-            <div class="projects-slide"><img src="projects/IMG_0216.JPG" alt="Проект"></div>
-            <div class="projects-slide"><img src="projects/IMG_0575.JPG" alt="Проект"></div>
-            <div class="projects-slide"><img src="projects/IMG_1594.JPG" alt="Проект"></div>
-            <div class="projects-slide"><img src="projects/IMG_2290.JPG" alt="Проект"></div>
-            <div class="projects-slide"><img src="projects/IMG_2461.JPG" alt="Проект"></div>
-            <div class="projects-slide"><img src="projects/IMG_2566.JPG" alt="Проект"></div>
-            <div class="projects-slide"><img src="projects/IMG_2640.JPG" alt="Проект"></div>
-            <div class="projects-slide"><img src="projects/IMG_2661.JPG" alt="Проект"></div>
-            <div class="projects-slide"><img src="projects/IMG_3048.JPG" alt="Проект"></div>
           </div>
         </div>
+        <button class="projects-arrow projects-arrow-right" id="projectsNext" aria-label="Вперёд">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+        <div class="projects-dots" id="projectsDots"></div>
       </div>
     </section>
+
+    <script>
+    (function() {
+      const track = document.getElementById('projectsTrack');
+      const viewport = document.getElementById('projectsViewport');
+      const slides = track.querySelectorAll('.projects-slide');
+      const dotsContainer = document.getElementById('projectsDots');
+      const total = slides.length;
+      let current = 0;
+
+      // Создаём точки
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'projects-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(dot);
+      });
+
+      function goTo(index) {
+        current = (index + total) % total;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dotsContainer.querySelectorAll('.projects-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === current);
+        });
+      }
+
+      document.getElementById('projectsPrev').addEventListener('click', () => goTo(current - 1));
+      document.getElementById('projectsNext').addEventListener('click', () => goTo(current + 1));
+
+      // Автопрокрутка
+      let timer = setInterval(() => goTo(current + 1), 5000);
+      viewport.addEventListener('mouseenter', () => clearInterval(timer));
+      viewport.addEventListener('mouseleave', () => { timer = setInterval(() => goTo(current + 1), 5000); });
+
+      // Свайп на мобильных
+      let startX = 0;
+      viewport.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+      viewport.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
+      });
+    })();
+    </script>
 
   </main>
 
