@@ -8,7 +8,7 @@
     sortBy: 'price_asc',
     uniqueBrands: [],
     currentPage: 1,
-    itemsPerPage: 8,
+    itemsPerPage: 16,
 
     async init() {
       await this.loadProducts();
