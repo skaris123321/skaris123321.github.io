@@ -5439,3 +5439,14 @@ body {
   opacity: 0.35;
   cursor: default;
 }
+
+.pagination-dots {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2rem;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  user-select: none;
+}

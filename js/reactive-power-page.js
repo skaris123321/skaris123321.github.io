@@ -153,9 +153,21 @@
     },
 
     get pageNumbers() {
-      const pages = [];
-      for (let i = 1; i <= this.totalPages; i++) pages.push(i);
-      return pages;
+      const total = this.totalPages;
+      const cur = this.currentPage;
+      if (total <= 7) {
+        return Array.from({length: total}, (_, i) => i + 1);
+      }
+      const pages = new Set([1, total, cur]);
+      if (cur > 1) pages.add(cur - 1);
+      if (cur < total) pages.add(cur + 1);
+      const sorted = [...pages].sort((a, b) => a - b);
+      const result = [];
+      for (let i = 0; i < sorted.length; i++) {
+        if (i > 0 && sorted[i] - sorted[i - 1] > 1) result.push('...');
+        result.push(sorted[i]);
+      }
+      return result;
     },
 
     formatPrice(price) {
