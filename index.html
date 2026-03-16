@@ -19,7 +19,7 @@
     }
   </script>
 
-  <link rel="stylesheet" href="css/main.css?v=43">
+  <link rel="stylesheet" href="css/main.css?v=44">
 </head>
 <body class="bg-light text-dark">
   <header class="header">
@@ -279,10 +279,10 @@
       document.getElementById('heroSliderNext').addEventListener('click', () => goTo(current + 1));
 
       // Auto-advance
-      let timer = setInterval(() => goTo(current + 1), 4000);
+      let timer = setInterval(() => goTo(current + 1), 7000);
       const wrap = document.querySelector('.hero-slider-wrap');
       wrap.addEventListener('mouseenter', () => clearInterval(timer));
-      wrap.addEventListener('mouseleave', () => { timer = setInterval(() => goTo(current + 1), 4000); });
+      wrap.addEventListener('mouseleave', () => { timer = setInterval(() => goTo(current + 1), 7000); });
 
       // Touch
       let startX = 0;
