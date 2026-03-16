@@ -5452,3 +5452,9 @@ body {
   pointer-events: none;
   cursor: default;
 }
+
+.pagination-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
