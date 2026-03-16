@@ -291,6 +291,16 @@
         const diff = startX - e.changedTouches[0].clientX;
         if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
       });
+
+      // Wheel scroll
+      let wheelCooldown = false;
+      wrap.addEventListener('wheel', e => {
+        e.preventDefault();
+        if (wheelCooldown) return;
+        wheelCooldown = true;
+        goTo(current + (e.deltaY > 0 ? 1 : -1));
+        setTimeout(() => { wheelCooldown = false; }, 700);
+      }, { passive: false });
     })();
   </script>
 
