@@ -1,4 +1,4 @@
-// JavaScript для страницы каталога АВР
+﻿// JavaScript для страницы каталога АВР
 if (typeof window.solveSimpleChallenge === 'undefined') {
   window.solveSimpleChallenge = () => null;
 }
@@ -18,7 +18,7 @@ document.addEventListener('alpine:init', () => {
       loading: true,
       searchQuery: '',
       currentPage: 1,
-      itemsPerPage: 10,
+      itemsPerPage: 8,
       
       async init() {
         await this.loadProducts();

@@ -1,4 +1,4 @@
-function controlCabinetsCatalog() {
+﻿function controlCabinetsCatalog() {
   return {
     products: [],
     filteredProducts: [],
@@ -8,7 +8,7 @@ function controlCabinetsCatalog() {
     sortBy: 'price_asc',
     uniqueBrands: [],
     currentPage: 1,
-    itemsPerPage: 10,
+    itemsPerPage: 8,
 
     async init() {
       await this.loadProducts();

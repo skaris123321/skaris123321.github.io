@@ -1,4 +1,4 @@
-document.addEventListener('alpine:init', () => {
+﻿document.addEventListener('alpine:init', () => {
   Alpine.data('motorControlBoxesCatalog', () => ({
     products: [],
     filteredProducts: [],
@@ -9,7 +9,7 @@ document.addEventListener('alpine:init', () => {
     sortBy: 'price_asc',
     uniqueBrands: [],
     currentPage: 1,
-    itemsPerPage: 10,
+    itemsPerPage: 8,
 
     async init() {
       await this.loadProducts();

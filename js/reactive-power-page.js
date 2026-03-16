@@ -13,7 +13,7 @@
     uniqueSteps: [],
     availablePowers: [],
     currentPage: 1,
-    itemsPerPage: 10,
+    itemsPerPage: 8,
 
     async init() {
       await this.loadProducts();
