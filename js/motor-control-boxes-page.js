@@ -8,6 +8,8 @@ document.addEventListener('alpine:init', () => {
     selectedReversible: null, // true, false, null
     sortBy: 'price_asc',
     uniqueBrands: [],
+    currentPage: 1,
+    itemsPerPage: 10,
 
     async init() {
       await this.loadProducts();
@@ -111,6 +113,22 @@ document.addEventListener('alpine:init', () => {
       }
 
       this.filteredProducts = filtered;
+      this.currentPage = 1;
+    },
+
+    get totalPages() {
+      return Math.ceil(this.filteredProducts.length / this.itemsPerPage);
+    },
+
+    get paginatedProducts() {
+      const start = (this.currentPage - 1) * this.itemsPerPage;
+      return this.filteredProducts.slice(start, start + this.itemsPerPage);
+    },
+
+    get pageNumbers() {
+      const pages = [];
+      for (let i = 1; i <= this.totalPages; i++) pages.push(i);
+      return pages;
     },
 
     formatPrice(price) {
