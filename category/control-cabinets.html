@@ -179,8 +179,9 @@
     <!-- Пагинация -->
     <div class="pagination" x-show="!loading && totalPages > 1">
       <button class="pagination-btn" :disabled="currentPage === 1" @click="currentPage--; window.scrollTo({top: 0, behavior: 'smooth'})">&#8592;</button>
-      <template x-for="page in pageNumbers" :key="page">
-        <button class="pagination-btn" :class="{ active: currentPage === page }" @click="currentPage = page; window.scrollTo({top: 0, behavior: 'smooth'})" x-text="page"></button>
+      <template x-for="(page, i) in pageNumbers" :key="i">
+        <span x-show="page === '...'" class="pagination-dots">…</span>
+        <button x-show="page !== '...'" class="pagination-btn" :class="{ active: currentPage === page }" @click="currentPage = page; window.scrollTo({top: 0, behavior: 'smooth'})" x-text="page"></button>
       </template>
       <button class="pagination-btn" :disabled="currentPage === totalPages" @click="currentPage++; window.scrollTo({top: 0, behavior: 'smooth'})">&#8594;</button>
     </div>
