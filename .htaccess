@@ -39,4 +39,5 @@ RewriteRule ^api/(.*)$ api/$1 [L]
     ExpiresByType image/svg+xml "access plus 1 month"
     ExpiresByType text/css "access plus 1 week"
     ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType application/json "access plus 1 day"
 </IfModule>
