@@ -5,6 +5,11 @@ class ProductsAPI {
     this.loadPromise = null;
     this.categoryCache = {};
     this.imageVersion = '5';
+
+    // Переключатель: 'json' = читать из файлов, 'php' = читать из базы данных
+    // Поменяй на 'php' когда настроишь хостинг с MySQL
+    this.mode = 'json';
+    this.apiBase = '/api';
   }
 
   addImageVersion(imageUrl) {
