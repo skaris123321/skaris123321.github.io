@@ -268,14 +268,7 @@
         <!-- Форма для физического лица -->
         <div x-show="clientType === 'individual'" class="checkout-form">
           <!-- Блок ошибок -->
-          <div x-show="formErrors.length > 0" style="background:#fee2e2;border:1px solid #fca5a5;border-radius:8px;padding:12px 16px;margin-bottom:16px;">
-            <p style="margin:0 0 6px;font-weight:600;color:#dc2626;">Пожалуйста, исправьте ошибки:</p>
-            <ul style="margin:0;padding-left:18px;color:#dc2626;">
-              <template x-for="err in formErrors" :key="err">
-                <li x-text="err"></li>
-              </template>
-            </ul>
-          </div>
+          <div id="form-errors-individual" style="display:none;background:#fee2e2;border:1px solid #fca5a5;border-radius:8px;padding:12px 16px;margin-bottom:16px;"></div>
 
           <div class="form-group">
             <label class="form-label">ФИО *</label>
@@ -305,21 +298,14 @@
 
           <div class="form-actions">
             <button type="button" @click="showCheckoutModal = false" class="btn-cancel">Отмена</button>
-            <button type="button" @click="submitOrder()" class="btn-submit">Оплатить</button>
+            <button type="button" onclick="window.cartData && window.cartData.submitOrder()" class="btn-submit">Оплатить</button>
           </div>
         </div>
 
         <!-- Форма для юридического лица -->
         <div x-show="clientType === 'legal'" class="checkout-form">
           <!-- Блок ошибок -->
-          <div x-show="formErrors.length > 0" style="background:#fee2e2;border:1px solid #fca5a5;border-radius:8px;padding:12px 16px;margin-bottom:16px;">
-            <p style="margin:0 0 6px;font-weight:600;color:#dc2626;">Пожалуйста, исправьте ошибки:</p>
-            <ul style="margin:0;padding-left:18px;color:#dc2626;">
-              <template x-for="err in formErrors" :key="err">
-                <li x-text="err"></li>
-              </template>
-            </ul>
-          </div>
+          <div id="form-errors-legal" style="display:none;background:#fee2e2;border:1px solid #fca5a5;border-radius:8px;padding:12px 16px;margin-bottom:16px;"></div>
 
           <div class="form-group">
             <label class="form-label">Название организации *</label>
@@ -365,7 +351,7 @@
 
           <div class="form-actions">
             <button type="button" @click="showCheckoutModal = false" class="btn-cancel">Отмена</button>
-            <button type="button" @click="submitOrder()" class="btn-submit">Оплатить</button>
+            <button type="button" onclick="window.cartData && window.cartData.submitOrder()" class="btn-submit">Оплатить</button>
           </div>
         </div>
       </div>
@@ -425,6 +411,7 @@
           showCheckoutModal: false,
           formErrors: [],
           clientType: 'individual',
+          orderForm: {
           orderForm: {
             // Для физических лиц
             fullName: '',
@@ -676,33 +663,44 @@
 
           async submitOrder() {
             // Валидация
-            this.formErrors = [];
+            const errors = [];
             if (this.clientType === 'individual') {
               if (!this.orderForm.fullName || this.orderForm.fullName.trim().length < 3)
-                this.formErrors.push('Введите ФИО (минимум 3 символа)');
+                errors.push('Введите ФИО (минимум 3 символа)');
               if (!this.orderForm.phone || this.orderForm.phone.trim().length < 5)
-                this.formErrors.push('Введите номер телефона');
+                errors.push('Введите номер телефона');
               if (!this.orderForm.email || !this.orderForm.email.includes('@'))
-                this.formErrors.push('Введите корректный email');
+                errors.push('Введите корректный email');
             } else {
               if (!this.orderForm.companyName || this.orderForm.companyName.trim().length < 3)
-                this.formErrors.push('Введите название организации');
+                errors.push('Введите название организации');
               if (!this.orderForm.inn || this.orderForm.inn.replace(/\D/g,'').length < 10)
-                this.formErrors.push('Введите ИНН (10 или 12 цифр)');
+                errors.push('Введите ИНН (10 или 12 цифр)');
               if (!this.orderForm.kpp || this.orderForm.kpp.replace(/\D/g,'').length < 9)
-                this.formErrors.push('Введите КПП (9 цифр)');
+                errors.push('Введите КПП (9 цифр)');
               if (!this.orderForm.contactPerson || this.orderForm.contactPerson.trim().length < 3)
-                this.formErrors.push('Введите контактное лицо');
+                errors.push('Введите контактное лицо');
               if (!this.orderForm.phone || this.orderForm.phone.trim().length < 5)
-                this.formErrors.push('Введите номер телефона');
+                errors.push('Введите номер телефона');
               if (!this.orderForm.email || !this.orderForm.email.includes('@'))
-                this.formErrors.push('Введите корректный email');
+                errors.push('Введите корректный email');
             }
-            if (this.formErrors.length > 0) return;
+
+            // Показываем ошибки через DOM
+            const errId = this.clientType === 'individual' ? 'form-errors-individual' : 'form-errors-legal';
+            const errBlock = document.getElementById(errId);
+            if (errors.length > 0) {
+              if (errBlock) {
+                errBlock.style.display = 'block';
+                errBlock.innerHTML = '<p style="margin:0 0 6px;font-weight:600;color:#dc2626;">Пожалуйста, исправьте ошибки:</p><ul style="margin:0;padding-left:18px;color:#dc2626;">' +
+                  errors.map(e => `<li>${e}</li>`).join('') + '</ul>';
+              }
+              return;
+            }
+            if (errBlock) errBlock.style.display = 'none';
 
             // Закрываем модальное окно оформления
             this.showCheckoutModal = false;
-            this.formErrors = [];
 
             // Генерируем номер заказа
             const now = new Date();
