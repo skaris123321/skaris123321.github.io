@@ -11,8 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
   <script>
     if (typeof window.solveSimpleChallenge === 'undefined') {
       window.solveSimpleChallenge = () => null;
@@ -298,7 +296,7 @@
 
           <div class="form-actions">
             <button type="button" @click="showCheckoutModal = false" class="btn-cancel">Отмена</button>
-            <button type="button" onclick="window.cartData && window.cartData.submitOrder()" class="btn-submit">Оплатить</button>
+            <button type="button" @click="submitOrder()" class="btn-submit">Оплатить</button>
           </div>
         </div>
 
@@ -351,7 +349,7 @@
 
           <div class="form-actions">
             <button type="button" @click="showCheckoutModal = false" class="btn-cancel">Отмена</button>
-            <button type="button" onclick="window.cartData && window.cartData.submitOrder()" class="btn-submit">Оплатить</button>
+            <button type="button" @click="submitOrder()" class="btn-submit">Оплатить</button>
           </div>
         </div>
       </div>
@@ -399,10 +397,22 @@
   <script src="../js/products-api.js"></script>
   <script src="../js/cart.js"></script>
   <script src="../js/search.js"></script>
-  <script>    // Глобальная ссылка на данные корзины для использования в модальных окнах
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    // Глобальная ссылка на данные корзины для использования в модальных окнах
     window.cartData = null;
     
-    document.addEventListener('alpine:init', () => {
+    // Ждем загрузки Alpine.js и инициализируем данные
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.Alpine) {
+        initCartData();
+      } else {
+        // Если Alpine.js еще не загружен, ждем его
+        window.addEventListener('alpine:init', initCartData);
+      }
+    });
+    
+    function initCartData() {
       Alpine.data('cartData', () => {
         const data = {
           items: [],
@@ -747,7 +757,7 @@
         window.cartData = data;
         return data;
       });
-    });
+    }
   </script>
   <script src="../js/notifications.js"></script>
 </body>
