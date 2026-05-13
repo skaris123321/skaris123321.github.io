@@ -1,6 +1,6 @@
-// Система унифицированных уведомлений
+﻿// Система унифицированных уведомлений
 
-class Notification {
+class AppNotification {
   /**
    * Показать модальное окно
    * @param {string} title - Заголовок
@@ -185,7 +185,7 @@ class Notification {
 }
 
 // Примеры использования:
-// Notification.success('Успешно!', 'Товар добавлен в корзину!');
-// Notification.error('Ошибка', 'Не удалось добавить товар');
-// Notification.toastSuccess('Товар добавлен в корзину!');
-// Notification.confirm('Удалить?', 'Вы уверены?', () => console.log('Удалено'), () => console.log('Отменено'));
+// AppNotification.success('Успешно!', 'Товар добавлен в корзину!');
+// AppNotification.error('Ошибка', 'Не удалось добавить товар');
+// AppNotification.toastSuccess('Товар добавлен в корзину!');
+// AppNotification.confirm('Удалить?', 'Вы уверены?', () => console.log('Удалено'), () => console.log('Отменено'));
