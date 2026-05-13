@@ -266,26 +266,30 @@
         </div>
 
         <!-- Форма для физического лица -->
-        <form x-show="clientType === 'individual'" @submit.prevent="submitOrder" class="checkout-form">
+        <div x-show="clientType === 'individual'" class="checkout-form">
+          <!-- Блок ошибок -->
+          <div x-show="formErrors.length > 0" style="background:#fee2e2;border:1px solid #fca5a5;border-radius:8px;padding:12px 16px;margin-bottom:16px;">
+            <p style="margin:0 0 6px;font-weight:600;color:#dc2626;">Пожалуйста, исправьте ошибки:</p>
+            <ul style="margin:0;padding-left:18px;color:#dc2626;">
+              <template x-for="err in formErrors" :key="err">
+                <li x-text="err"></li>
+              </template>
+            </ul>
+          </div>
+
           <div class="form-group">
             <label class="form-label">ФИО *</label>
-            <input type="text" x-model="orderForm.fullName" required class="form-input" placeholder="Иванов Иван Иванович" minlength="3">
+            <input type="text" x-model="orderForm.fullName" class="form-input" placeholder="Иванов Иван Иванович">
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">Телефон *</label>
-              <input 
-                type="tel" 
-                x-model="orderForm.phone" 
-                @input="formatPhone($event)" 
-                required 
-                class="form-input" 
-                placeholder="+7 (___) ___-__-__">
+              <input type="tel" x-model="orderForm.phone" @input="formatPhone($event)" class="form-input" placeholder="+7 (___) ___-__-__">
             </div>
             <div class="form-group">
               <label class="form-label">Email *</label>
-              <input type="email" x-model="orderForm.email" required class="form-input" placeholder="example@mail.ru">
+              <input type="email" x-model="orderForm.email" class="form-input" placeholder="example@mail.ru">
             </div>
           </div>
 
@@ -301,39 +305,35 @@
 
           <div class="form-actions">
             <button type="button" @click="showCheckoutModal = false" class="btn-cancel">Отмена</button>
-            <button type="submit" class="btn-submit">Оплатить</button>
+            <button type="button" @click="submitOrder()" class="btn-submit">Оплатить</button>
           </div>
-        </form>
+        </div>
 
         <!-- Форма для юридического лица -->
-        <form x-show="clientType === 'legal'" @submit.prevent="submitOrder" class="checkout-form">
+        <div x-show="clientType === 'legal'" class="checkout-form">
+          <!-- Блок ошибок -->
+          <div x-show="formErrors.length > 0" style="background:#fee2e2;border:1px solid #fca5a5;border-radius:8px;padding:12px 16px;margin-bottom:16px;">
+            <p style="margin:0 0 6px;font-weight:600;color:#dc2626;">Пожалуйста, исправьте ошибки:</p>
+            <ul style="margin:0;padding-left:18px;color:#dc2626;">
+              <template x-for="err in formErrors" :key="err">
+                <li x-text="err"></li>
+              </template>
+            </ul>
+          </div>
+
           <div class="form-group">
             <label class="form-label">Название организации *</label>
-            <input type="text" x-model="orderForm.companyName" required class="form-input" placeholder="ООО «Компания»" minlength="3">
+            <input type="text" x-model="orderForm.companyName" class="form-input" placeholder="ООО «Компания»">
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">ИНН *</label>
-              <input 
-                type="text" 
-                x-model="orderForm.inn" 
-                @input="formatINN($event)" 
-                required 
-                class="form-input" 
-                placeholder="1234567890"
-                maxlength="12">
+              <input type="text" x-model="orderForm.inn" @input="formatINN($event)" class="form-input" placeholder="1234567890" maxlength="12">
             </div>
             <div class="form-group">
               <label class="form-label">КПП *</label>
-              <input 
-                type="text" 
-                x-model="orderForm.kpp" 
-                @input="formatKPP($event)" 
-                required 
-                class="form-input" 
-                placeholder="123456789"
-                maxlength="9">
+              <input type="text" x-model="orderForm.kpp" @input="formatKPP($event)" class="form-input" placeholder="123456789" maxlength="9">
             </div>
           </div>
 
@@ -344,23 +344,17 @@
 
           <div class="form-group">
             <label class="form-label">Контактное лицо *</label>
-            <input type="text" x-model="orderForm.contactPerson" required class="form-input" placeholder="ФИО контактного лица" minlength="3">
+            <input type="text" x-model="orderForm.contactPerson" class="form-input" placeholder="ФИО контактного лица">
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">Телефон *</label>
-              <input 
-                type="tel" 
-                x-model="orderForm.phone" 
-                @input="formatPhone($event)" 
-                required 
-                class="form-input" 
-                placeholder="+7 (___) ___-__-__">
+              <input type="tel" x-model="orderForm.phone" @input="formatPhone($event)" class="form-input" placeholder="+7 (___) ___-__-__">
             </div>
             <div class="form-group">
               <label class="form-label">Email *</label>
-              <input type="email" x-model="orderForm.email" required class="form-input" placeholder="example@mail.ru">
+              <input type="email" x-model="orderForm.email" class="form-input" placeholder="example@mail.ru">
             </div>
           </div>
 
@@ -371,9 +365,9 @@
 
           <div class="form-actions">
             <button type="button" @click="showCheckoutModal = false" class="btn-cancel">Отмена</button>
-            <button type="submit" class="btn-submit">Оплатить</button>
+            <button type="button" @click="submitOrder()" class="btn-submit">Оплатить</button>
           </div>
-        </form>
+        </div>
       </div>
     </div>
 
@@ -429,7 +423,8 @@
           totalItems: 0,
           totalPrice: 0,
           showCheckoutModal: false,
-          clientType: 'individual', // 'individual' или 'legal'
+          formErrors: [],
+          clientType: 'individual',
           orderForm: {
             // Для физических лиц
             fullName: '',
@@ -680,8 +675,34 @@
           },
 
           async submitOrder() {
+            // Валидация
+            this.formErrors = [];
+            if (this.clientType === 'individual') {
+              if (!this.orderForm.fullName || this.orderForm.fullName.trim().length < 3)
+                this.formErrors.push('Введите ФИО (минимум 3 символа)');
+              if (!this.orderForm.phone || this.orderForm.phone.trim().length < 5)
+                this.formErrors.push('Введите номер телефона');
+              if (!this.orderForm.email || !this.orderForm.email.includes('@'))
+                this.formErrors.push('Введите корректный email');
+            } else {
+              if (!this.orderForm.companyName || this.orderForm.companyName.trim().length < 3)
+                this.formErrors.push('Введите название организации');
+              if (!this.orderForm.inn || this.orderForm.inn.replace(/\D/g,'').length < 10)
+                this.formErrors.push('Введите ИНН (10 или 12 цифр)');
+              if (!this.orderForm.kpp || this.orderForm.kpp.replace(/\D/g,'').length < 9)
+                this.formErrors.push('Введите КПП (9 цифр)');
+              if (!this.orderForm.contactPerson || this.orderForm.contactPerson.trim().length < 3)
+                this.formErrors.push('Введите контактное лицо');
+              if (!this.orderForm.phone || this.orderForm.phone.trim().length < 5)
+                this.formErrors.push('Введите номер телефона');
+              if (!this.orderForm.email || !this.orderForm.email.includes('@'))
+                this.formErrors.push('Введите корректный email');
+            }
+            if (this.formErrors.length > 0) return;
+
             // Закрываем модальное окно оформления
             this.showCheckoutModal = false;
+            this.formErrors = [];
 
             // Генерируем номер заказа
             const now = new Date();
