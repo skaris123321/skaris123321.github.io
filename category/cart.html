@@ -412,7 +412,6 @@
           formErrors: [],
           clientType: 'individual',
           orderForm: {
-          orderForm: {
             // Для физических лиц
             fullName: '',
             phone: '',
@@ -738,8 +737,6 @@
             `;
             document.body.appendChild(modal);
           },
-
-
 
           formatPrice(price) {
             return new Intl.NumberFormat('ru-RU').format(price) + ' ₽';
