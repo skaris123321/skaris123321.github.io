@@ -693,7 +693,7 @@
               if (errBlock) {
                 errBlock.style.display = 'block';
                 errBlock.innerHTML = '<p style="margin:0 0 6px;font-weight:600;color:#dc2626;">Пожалуйста, исправьте ошибки:</p><ul style="margin:0;padding-left:18px;color:#dc2626;">' +
-                  errors.map(e => `<li>${e}</li>`).join('') + '</ul>';
+                  errors.map(function(e) { return '<li>' + e + '</li>'; }).join('') + '</ul>';
               }
               return;
             }
