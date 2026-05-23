@@ -17,6 +17,8 @@
     }
   </script>
 
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
   <link rel="stylesheet" href="../css/main.css?v=47">
 </head>
 <body class="bg-light text-dark">
@@ -397,22 +399,11 @@
   <script src="../js/products-api.js"></script>
   <script src="../js/cart.js"></script>
   <script src="../js/search.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script>
     // Глобальная ссылка на данные корзины для использования в модальных окнах
     window.cartData = null;
-    
-    // Ждем загрузки Alpine.js и инициализируем данные
-    document.addEventListener('DOMContentLoaded', () => {
-      if (window.Alpine) {
-        initCartData();
-      } else {
-        // Если Alpine.js еще не загружен, ждем его
-        window.addEventListener('alpine:init', initCartData);
-      }
-    });
-    
-    function initCartData() {
+
+    document.addEventListener('alpine:init', () => {
       Alpine.data('cartData', () => {
         const data = {
           items: [],
@@ -757,7 +748,7 @@
         window.cartData = data;
         return data;
       });
-    }
+    });
   </script>
   <script src="../js/notifications.js"></script>
 </body>
