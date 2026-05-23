@@ -2175,6 +2175,7 @@ h1.category-title {
 /* Стили для страницы корзины */
 .cart-page-container {
   max-width: 1280px;
+  flex: 1;
 }
 
 .cart-items {
