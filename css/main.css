@@ -43,6 +43,8 @@ body {
 
 main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -2443,6 +2445,12 @@ h1.category-title {
 .empty-cart {
   text-align: center;
   padding: 4rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
 }
 
 .empty-cart-icon {
@@ -5473,4 +5481,73 @@ body {
   font-weight: 500;
   letter-spacing: 0.02em;
   pointer-events: none;
+}
+
+/* ===== МОБИЛЬНЫЕ СТИЛИ ДЛЯ МОДАЛЬНОГО ОКНА ОФОРМЛЕНИЯ ЗАКАЗА ===== */
+@media (max-width: 640px) {
+  .checkout-modal {
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    max-height: 95vh;
+  }
+
+  .modal-title {
+    font-size: 1.375rem;
+    margin-bottom: 1rem;
+  }
+
+  .client-type-selector {
+    gap: 0.625rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .client-type-btn {
+    padding: 1rem 0.75rem;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .client-type-btn svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .btn-cancel,
+  .btn-submit {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* ===== МОБИЛЬНЫЕ СТИЛИ ДЛЯ СТРАНИЦЫ ТОВАРА ===== */
+@media (max-width: 640px) {
+  .product-main-image {
+    height: 240px;
+    min-height: 240px;
+  }
+
+  .product-price-main {
+    font-size: 1.75rem;
+  }
+
+  .product-tabs-list {
+    gap: 0;
+  }
+
+  .product-tab {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+}
+
+/* ===== МОБИЛЬНЫЕ СТИЛИ ДЛЯ 404 СТРАНИЦЫ ===== */
+@media (max-width: 640px) {
+  .error-page-section {
+    padding: 3rem 1rem;
+  }
 }
