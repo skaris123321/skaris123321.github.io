@@ -15,7 +15,7 @@
     <header class="header">
         <div class="container flex-wrap justify-between items-center">
             <a href="index.html" class="logo">
-                <img src="images/logo-main-1.svg?v=2" alt="РОСЭК" class="logo-image">про
+                <img src="images/logo-main-1.svg?v=2" alt="РОСЭК" class="logo-image">
             </a>
 
             <div class="header-controls">
@@ -56,27 +56,45 @@
     </header>
 
     <main>
-        <section class="error-page-section">
+        <section style="flex: 1; display: flex; align-items: center; padding: 4rem 0; min-height: 60vh;">
             <div class="container">
-                <div class="error-content">
-                    <div class="error-code">404</div>
-                    <h1 class="error-title">Страница не найдена</h1>
-                    <p class="error-description">
+                <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+
+                    <div style="font-size: 8rem; font-weight: 700; color: var(--red-main); line-height: 1; margin-bottom: 1.5rem; font-family: 'Jost', sans-serif;">404</div>
+
+                    <h1 style="font-size: 2rem; font-weight: 600; color: #1a1a1a; margin-bottom: 1rem; font-family: 'Jost', sans-serif;">Страница не найдена</h1>
+
+                    <p style="font-size: 1.125rem; color: #6b7280; margin-bottom: 2.5rem; line-height: 1.6;">
                         К сожалению, запрашиваемая страница не существует или была перемещена.
                     </p>
-                    <div class="error-actions">
-                        <a href="index.html" class="btn-error-primary">На главную</a>
-                        <a href="category/catalog.html" class="btn-error-secondary">Каталог товаров</a>
+
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                        <a href="index.html" class="btn-add-to-cart" style="width: auto; padding: 0.875rem 2rem; text-decoration: none; display: inline-flex; align-items: center;">На главную</a>
+                        <a href="category/catalog.html" style="display: inline-flex; align-items: center; padding: 0.875rem 2rem; background: white; color: #374151; border: 2px solid #e5e7eb; border-radius: 0.5rem; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all 0.2s; font-family: 'Jost', sans-serif;">Каталог товаров</a>
                     </div>
-                    <div class="error-help">
-                        <h3>Что можно сделать:</h3>
-                        <ul>
-                            <li>Проверьте правильность введенного адреса</li>
-                            <li>Воспользуйтесь поиском по сайту</li>
-                            <li>Перейдите в каталог товаров</li>
-                            <li>Свяжитесь с нами по телефону +7 (343) 301-99-91</li>
+
+                    <div style="text-align: left; background: white; padding: 1.5rem 2rem; border-radius: 1rem; border: 1px solid #e5e7eb; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                        <h3 style="color: #1a1a1a; margin-bottom: 1rem; font-size: 1.125rem; font-weight: 600; font-family: 'Jost', sans-serif;">Что можно сделать:</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.625rem;">
+                            <li style="color: #4a5568; display: flex; align-items: center; gap: 0.75rem; font-family: 'Jost', sans-serif;">
+                                <span style="color: var(--red-main); font-weight: 700; flex-shrink: 0;">→</span>
+                                Проверьте правильность введённого адреса
+                            </li>
+                            <li style="color: #4a5568; display: flex; align-items: center; gap: 0.75rem; font-family: 'Jost', sans-serif;">
+                                <span style="color: var(--red-main); font-weight: 700; flex-shrink: 0;">→</span>
+                                Воспользуйтесь поиском по сайту
+                            </li>
+                            <li style="color: #4a5568; display: flex; align-items: center; gap: 0.75rem; font-family: 'Jost', sans-serif;">
+                                <span style="color: var(--red-main); font-weight: 700; flex-shrink: 0;">→</span>
+                                <a href="category/catalog.html" style="color: var(--red-main); text-decoration: none;">Перейдите в каталог товаров</a>
+                            </li>
+                            <li style="color: #4a5568; display: flex; align-items: center; gap: 0.75rem; font-family: 'Jost', sans-serif;">
+                                <span style="color: var(--red-main); font-weight: 700; flex-shrink: 0;">→</span>
+                                Свяжитесь с нами по телефону <a href="tel:+73433019991" style="color: var(--red-main); text-decoration: none;">+7 (343) 301-99-91</a>
+                            </li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -128,137 +146,6 @@
             </div>
         </div>
     </footer>
-
-    <style>
-        .error-page-section {
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-            padding: 60px 0;
-        }
-
-        .error-content {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .error-code {
-            font-size: 120px;
-            font-weight: bold;
-            color: #e74c3c;
-            line-height: 1;
-            margin-bottom: 20px;
-        }
-
-        .error-title {
-            font-size: 32px;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .error-description {
-            font-size: 18px;
-            color: #7f8c8d;
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
-
-        .error-actions {
-            margin-bottom: 40px;
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-error-primary,
-        .btn-error-secondary {
-            display: inline-block;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            font-size: 16px;
-        }
-
-        .btn-error-primary {
-            background-color: #3498db;
-            color: white;
-        }
-
-        .btn-error-primary:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-        }
-
-        .btn-error-secondary {
-            background-color: #95a5a6;
-            color: white;
-        }
-
-        .btn-error-secondary:hover {
-            background-color: #7f8c8d;
-            transform: translateY(-2px);
-        }
-
-        .error-help {
-            text-align: left;
-            background-color: #f8f9fa;
-            padding: 30px;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-        }
-
-        .error-help h3 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 20px;
-            font-weight: 600;
-        }
-
-        .error-help ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .error-help li {
-            padding: 8px 0;
-            color: #5a6c7d;
-            position: relative;
-            padding-left: 25px;
-        }
-
-        .error-help li:before {
-            content: "→";
-            color: #3498db;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        @media (max-width: 768px) {
-            .error-code {
-                font-size: 80px;
-            }
-            
-            .error-title {
-                font-size: 24px;
-            }
-            
-            .error-actions {
-                flex-direction: column;
-            }
-
-            .btn-error-primary,
-            .btn-error-secondary {
-                width: 100%;
-            }
-        }
-    </style>
 
     <script src="js/cart.js"></script>
     <script src="js/main.js?v=43"></script>

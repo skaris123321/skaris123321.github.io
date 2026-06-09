@@ -61,6 +61,7 @@
     </div>
   </header>
 
+  <div style="flex: 1; display: flex; flex-direction: column;">
   <section class="section">
     <div class="container">
       <div class="breadcrumbs">
@@ -211,6 +212,7 @@
       <button class="pagination-btn" :disabled="currentPage === totalPages" @click="currentPage++; window.scrollTo({top: 0, behavior: 'smooth'})">&#8594;</button>
     </div>
   </main>
+  </div>
   </div>
 
   <!-- Футер -->
