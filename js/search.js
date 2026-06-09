@@ -68,7 +68,11 @@ class UniversalSearch {
   getSuggestions(query) {
     if (!this.productsData) return [];
 
-    const searchLower = query.toLowerCase();
+    // Нормализуем запрос — убираем «А» после числа (40А → 40)
+    const searchLower = query.toLowerCase()
+      .replace(/(\d+)\s*а\b/g, '$1') // «40А» → «40»
+      .replace(/(\d+)\s*a\b/gi, '$1') // «40A» → «40»
+      .trim();
     const suggestions = [];
     const maxSuggestions = 50;
     const addedArticles = new Set();
@@ -283,15 +287,16 @@ class UniversalSearch {
       return;
     }
 
-    const searchQuery = query.toLowerCase();
+    const searchQuery = query.toLowerCase().trim()
+      .replace(/(\d+)\s*а\b/g, '$1')  // «40А» → «40»
+      .replace(/(\d+)\s*a\b/gi, '$1'); // «40A» → «40»
     
-    // Сначала проверяем, есть ли точное совпадение по артикулу
+    // Сначала проверяем точное совпадение по артикулу
     const exactArticleMatch = this.productsData.find(product => 
       product.article && product.article.toLowerCase() === searchQuery
     );
     
     if (exactArticleMatch) {
-      // Если найден товар по артикулу, перенаправляем на его страницу
       const currentPath = window.location.pathname;
       const isInCategory = currentPath.includes('/category/');
       const productPath = isInCategory ? 'product.html' : 'category/product.html';
@@ -299,17 +304,33 @@ class UniversalSearch {
       return;
     }
     
-    // Проверяем точное совпадение по полному названию товара
+    // Точное совпадение по описанию
     const exactDescriptionMatch = this.productsData.find(product => 
       product.description && product.description.toLowerCase() === searchQuery
     );
     
     if (exactDescriptionMatch) {
-      // Если найден товар по названию, перенаправляем на его страницу
       const currentPath = window.location.pathname;
       const isInCategory = currentPath.includes('/category/');
       const productPath = isInCategory ? 'product.html' : 'category/product.html';
       window.location.href = `${productPath}?id=${exactDescriptionMatch.id}`;
+      return;
+    }
+
+    // Нечёткий поиск — ищем все товары, описание или артикул которых содержит запрос
+    const fuzzyMatches = this.productsData.filter(product => {
+      const desc = (product.description || '').toLowerCase();
+      const article = (product.article || '').toLowerCase();
+      const fullDesc = (product.full_description || '').toLowerCase();
+      return desc.includes(searchQuery) || article.includes(searchQuery) || fullDesc.includes(searchQuery);
+    });
+
+    // Если найден ровно один товар — сразу на его страницу
+    if (fuzzyMatches.length === 1) {
+      const currentPath = window.location.pathname;
+      const isInCategory = currentPath.includes('/category/');
+      const productPath = isInCategory ? 'product.html' : 'category/product.html';
+      window.location.href = `${productPath}?id=${fuzzyMatches[0].id}`;
       return;
     }
     
