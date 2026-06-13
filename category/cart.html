@@ -272,7 +272,7 @@
 
           <div class="form-group">
             <label class="form-label">ФИО *</label>
-            <input type="text" x-model="orderForm.fullName" class="form-input" placeholder="Иванов Иван Иванович">
+            <input type="text" x-model="orderForm.fullName" @input="formatFullName($event)" class="form-input" placeholder="Иванов Иван Иванович">
           </div>
 
           <div class="form-row">
@@ -287,7 +287,7 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label">Адрес доставки</label>
+            <label class="form-label">Адрес доставки *</label>
             <textarea x-model="orderForm.address" class="form-textarea" rows="2" placeholder="Укажите адрес доставки"></textarea>
           </div>
 
@@ -324,7 +324,7 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label">Юридический адрес</label>
+            <label class="form-label">Юридический адрес *</label>
             <textarea x-model="orderForm.legalAddress" class="form-textarea" rows="2" placeholder="Юридический адрес организации"></textarea>
           </div>
 
@@ -435,7 +435,13 @@
             });
           },
 
-          // Форматирование телефона
+          // Форматирование ФИО — только буквы (кириллица/латиница), пробелы и дефисы
+          formatFullName(event) {
+            const value = event.target.value.replace(/[^a-zA-Zа-яА-ЯёЁ\s\-]/g, '');
+            this.orderForm.fullName = value;
+            event.target.value = value;
+          },
+
           formatPhone(event) {
             let value = event.target.value.replace(/\D/g, '');
             
@@ -660,14 +666,19 @@
 
           async submitOrder() {
             // Валидация
+            const onlyLettersRegex = /^[a-zA-Zа-яА-ЯёЁ\s\-]+$/;
             const errors = [];
             if (this.clientType === 'individual') {
               if (!this.orderForm.fullName || this.orderForm.fullName.trim().length < 3)
                 errors.push('Введите ФИО (минимум 3 символа)');
+              else if (!onlyLettersRegex.test(this.orderForm.fullName.trim()))
+                errors.push('ФИО должно содержать только буквы');
               if (!this.orderForm.phone || this.orderForm.phone.trim().length < 5)
                 errors.push('Введите номер телефона');
               if (!this.orderForm.email || !this.orderForm.email.includes('@'))
                 errors.push('Введите корректный email');
+              if (!this.orderForm.address || this.orderForm.address.trim().length < 5)
+                errors.push('Введите адрес доставки');
             } else {
               if (!this.orderForm.companyName || this.orderForm.companyName.trim().length < 3)
                 errors.push('Введите название организации');
@@ -677,10 +688,14 @@
                 errors.push('Введите КПП (9 цифр)');
               if (!this.orderForm.contactPerson || this.orderForm.contactPerson.trim().length < 3)
                 errors.push('Введите контактное лицо');
+              else if (!onlyLettersRegex.test(this.orderForm.contactPerson.trim()))
+                errors.push('Контактное лицо должно содержать только буквы');
               if (!this.orderForm.phone || this.orderForm.phone.trim().length < 5)
                 errors.push('Введите номер телефона');
               if (!this.orderForm.email || !this.orderForm.email.includes('@'))
                 errors.push('Введите корректный email');
+              if (!this.orderForm.legalAddress || this.orderForm.legalAddress.trim().length < 5)
+                errors.push('Введите юридический адрес');
             }
 
             // Показываем ошибки через DOM
